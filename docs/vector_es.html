@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -365,7 +385,7 @@ En términos simples
 </section>
 <section id="estimación-de-la-covarianza-ledoit-wolf" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="estimación-de-la-covarianza-ledoit-wolf"><span class="header-section-number">4.3.2</span> Estimación de la covarianza: Ledoit-Wolf</h3>
-<p>La estructura de correlación entre variables se captura mediante una matriz de covarianza <span class="math inline">\hat{\Sigma}</span> estimada con el método de <strong>contracción de Ledoit-Wolf</strong> <span class="citation" data-cites="ledoitwolf2004">(<a href="references.html#ref-ledoitwolf2004" role="doc-biblioref"><strong>ledoitwolf2004?</strong></a>)</span>. Este estimador combina la covarianza muestral con una estimación estructurada (un múltiplo de la identidad), reduciendo la varianza de estimación cuando el número de observaciones es moderado respecto de la dimensión del vector.</p>
+<p>La estructura de correlación entre variables se captura mediante una matriz de covarianza <span class="math inline">\hat{\Sigma}</span> estimada con el método de <strong>contracción de Ledoit-Wolf</strong> <span class="citation" data-cites="ledoitwolf2004">(<a href="references.html#ref-ledoitwolf2004" role="doc-biblioref">Ledoit and Wolf 2004</a>)</span>. Este estimador combina la covarianza muestral con una estimación estructurada (un múltiplo de la identidad), reduciendo la varianza de estimación cuando el número de observaciones es moderado respecto de la dimensión del vector.</p>
 <p>El grado de contracción se determina analíticamente, sin hiperparámetros adicionales. El resultado es una matriz de covarianza mejor condicionada que la muestral, lo que mejora la estabilidad numérica de la distancia de Mahalanobis.</p>
 <p>Si la matriz resultante aún presenta un número de condición superior a <span class="math inline">10^6</span>, se aplica una regularización adicional sumando <span class="math inline">10^{-3}\mathbf{I}</span> a la diagonal.</p>
 </section>
@@ -408,6 +428,11 @@ En términos simples
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-ledoitwolf2004" class="csl-entry" role="listitem">
+Ledoit, Olivier, and Michael Wolf. 2004. <span>“A Well-Conditioned Estimator for Large-Dimensional Covariance Matrices.”</span> <em>Journal of Multivariate Analysis</em> 88 (2): 365–411. <a href="https://doi.org/10.1016/S0047-259X(03)00096-4">https://doi.org/10.1016/S0047-259X(03)00096-4</a>.
+</div>
+</div>
 </section>
 </section>
 

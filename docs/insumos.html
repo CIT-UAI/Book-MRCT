@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -278,7 +298,7 @@ window.Quarto = {
 <p>Este capítulo describe la fuente de datos utilizada, las seis variables que componen el flujo anual, los criterios de control de calidad y el procedimiento de alineamiento que garantiza coherencia entre capas.</p>
 <section id="región-de-estudio" class="level2 page-columns page-full" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="región-de-estudio"><span class="header-section-number">2.1</span> Región de Estudio</h2>
-<p>La Región de Magallanes y de la Antártica Chilena se ubica en el extremo austral de Chile y constituye uno de los territorios más extensos, remotos y ambientalmente heterogéneos del país. Su sector sudamericano se extiende aproximadamente entre los 48°36’ y 56°30’ de latitud sur, y entre los 66°25’ y 75°40’ de longitud oeste. Administrativamente se organiza en cuatro provincias —Última Esperanza, Magallanes, Tierra del Fuego y Antártica Chilena— y once comunas, con Punta Arenas como capital regional.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>La Región de Magallanes y de la Antártica Chilena se ubica en el extremo austral de Chile y constituye uno de los territorios más extensos, remotos y ambientalmente heterogéneos del país. Su sector sudamericano se extiende aproximadamente entre los 48°36’ y 56°30’ de latitud sur, y entre los 66°25’ y 75°40’ de longitud oeste. Administrativamente se organiza en cuatro provincias —Última Esperanza, Magallanes, Tierra del Fuego y Antártica Chilena— y once comunas, con Punta Arenas como capital regional <span class="citation" data-cites="bcn_magallanes_region">(<a href="references.html#ref-bcn_magallanes_region" role="doc-biblioref">Biblioteca del Congreso Nacional de Chile 2026b</a>)</span>.</p>
 <div id="fig-mapa-region-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-mapa-region-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -289,7 +309,7 @@ Figure&nbsp;2.1: Localización general de la Región de Magallanes y de la Antá
 </figcaption>
 </figure>
 </div>
-<p>La región posee una superficie total de <strong>1.382.291,10 km²</strong>, de los cuales <strong>132.291,10 km²</strong> corresponden al territorio sudamericano y <strong>1.250.000 km²</strong> al Territorio Chileno Antártico. Para efectos de este libro, el levantamiento satelital y la construcción de indicadores se concentran en las cuencas hidrográficas del sector sudamericano. Esta delimitación permite trabajar sobre unidades territoriales comparables, con continuidad espacial y pertinencia para el análisis ecosistémico regional.</p>
+<p>La región posee una superficie total de <strong>1.382.291,10 km²</strong>, de los cuales <strong>132.291,10 km²</strong> corresponden al territorio sudamericano y <strong>1.250.000 km²</strong> al Territorio Chileno Antártico <span class="citation" data-cites="bcn_magallanes_region">(<a href="references.html#ref-bcn_magallanes_region" role="doc-biblioref">Biblioteca del Congreso Nacional de Chile 2026b</a>)</span>. Para efectos de este libro, el levantamiento satelital y la construcción de indicadores se concentran en las cuencas hidrográficas del sector sudamericano. Esta delimitación permite trabajar sobre unidades territoriales comparables, con continuidad espacial y pertinencia para el análisis ecosistémico regional.</p>
 <p>Desde el punto de vista físico, Magallanes reúne archipiélagos, fiordos, canales, cordones montañosos, campos de hielo, estepas frías, turberas, bosques subantárticos, lagos, glaciares y extensas zonas costeras. Esta diversidad produce contrastes marcados entre el occidente húmedo y fragmentado por canales, el eje cordillerano y glaciar, y el oriente más seco y estepario. Para la MRCT, esa heterogeneidad es central: los indicadores de vegetación, agua, nieve, aridez, temperatura y estructura del paisaje se leen dentro de un mosaico ecológico de alta variabilidad interna.</p>
 <div id="fig-fiordos-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
@@ -301,9 +321,9 @@ Figure&nbsp;2.2: Fiordos, canales y relieve austral de Magallanes.
 </figcaption>
 </figure>
 </div>
-<p>El clima regional es templado frío, ventoso y de baja amplitud térmica, con abundante nubosidad y máximos invernales de precipitación. Hacia el oriente de la cordillera predominan condiciones estepáricas frías, con menor humedad y mayor exposición al viento. Esta gradiente climática incide directamente en la lectura satelital: la nubosidad reduce ventanas de observación; la nieve y el hielo modifican la reflectancia superficial; las diferencias de humedad alteran la señal hídrica y vegetal; y los contrastes térmicos se expresan en la temperatura superficial observada.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>La hidrografía regional presenta una organización singular. Buena parte de los cursos principales se ubican hacia el sector oriental o transandino y varios sistemas drenan finalmente hacia el Atlántico. Entre las hoyas relevantes se encuentran los ríos Serrano, Gallegos, Chico o Ciaike, San Juan y otras cuencas menores al sur del Estrecho de Magallanes. El río Serrano, asociado al Campo de Hielo Sur y al sistema de lagos Toro, Sarmiento, Pehoé y Nordenskjöld, es un ejemplo de la conexión entre criósfera, lagos, escorrentía y paisaje glaciar.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>La criósfera es uno de los componentes ambientales más importantes para comprender la resiliencia regional. Según el Inventario Público de Glaciares informado por la Dirección General de Aguas, Magallanes concentra <strong>7.055 glaciares</strong> y una superficie glaciarizada de <strong>10.426,6 km²</strong>, equivalente a casi la mitad de la superficie glaciarizada nacional. Por esta razón, la fracción nival, el albedo, la temperatura superficial y los cambios en agua superficial son variables especialmente relevantes para seguir transformaciones ecosistémicas asociadas a pérdida de hielo, variabilidad hídrica y cambios de cobertura.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>El clima regional es templado frío, ventoso y de baja amplitud térmica, con abundante nubosidad y máximos invernales de precipitación. Hacia el oriente de la cordillera predominan condiciones estepáricas frías, con menor humedad y mayor exposición al viento <span class="citation" data-cites="mma_sinca_magallanes">(<a href="references.html#ref-mma_sinca_magallanes" role="doc-biblioref">Ministerio del Medio Ambiente 2015</a>)</span>. Esta gradiente climática incide directamente en la lectura satelital: la nubosidad reduce ventanas de observación; la nieve y el hielo modifican la reflectancia superficial; las diferencias de humedad alteran la señal hídrica y vegetal; y los contrastes térmicos se expresan en la temperatura superficial observada.</p>
+<p>La hidrografía regional presenta una organización singular. Buena parte de los cursos principales se ubican hacia el sector oriental o transandino y varios sistemas drenan finalmente hacia el Atlántico. Entre las hoyas relevantes se encuentran los ríos Serrano, Gallegos, Chico o Ciaike, San Juan y otras cuencas menores al sur del Estrecho de Magallanes. El río Serrano, asociado al Campo de Hielo Sur y al sistema de lagos Toro, Sarmiento, Pehoé y Nordenskjöld, es un ejemplo de la conexión entre criósfera, lagos, escorrentía y paisaje glaciar <span class="citation" data-cites="bcn_magallanes_hidrografia">(<a href="references.html#ref-bcn_magallanes_hidrografia" role="doc-biblioref">Biblioteca del Congreso Nacional de Chile 2026a</a>)</span>.</p>
+<p>La criósfera es uno de los componentes ambientales más importantes para comprender la resiliencia regional. Según el Inventario Público de Glaciares informado por la Dirección General de Aguas, Magallanes concentra <strong>7.055 glaciares</strong> y una superficie glaciarizada de <strong>10.426,6 km²</strong>, equivalente a casi la mitad de la superficie glaciarizada nacional <span class="citation" data-cites="dga_magallanes_glaciares">(<a href="references.html#ref-dga_magallanes_glaciares" role="doc-biblioref">Dirección General de Aguas 2026</a>)</span>. Por esta razón, la fracción nival, el albedo, la temperatura superficial y los cambios en agua superficial son variables especialmente relevantes para seguir transformaciones ecosistémicas asociadas a pérdida de hielo, variabilidad hídrica y cambios de cobertura.</p>
 <div id="fig-iceberg-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-iceberg-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -314,7 +334,7 @@ Figure&nbsp;2.3: Iceberg y ambiente glaciar en la Patagonia austral.
 </figcaption>
 </figure>
 </div>
-<p>El valor ecológico de Magallanes también se expresa en su alto nivel de protección ambiental. La región concentra la mayor extensión de territorio protegido de Chile y contiene áreas de conservación, parques nacionales, reservas, monumentos naturales, ecosistemas marinos, bosques subantárticos, turberas y ambientes glaciares. Esta condición refuerza la necesidad de indicadores reproducibles que permitan observar cambios territoriales sin depender únicamente de campañas de terreno, especialmente en zonas de difícil acceso.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>El valor ecológico de Magallanes también se expresa en su alto nivel de protección ambiental. La región concentra la mayor extensión de territorio protegido de Chile y contiene áreas de conservación, parques nacionales, reservas, monumentos naturales, ecosistemas marinos, bosques subantárticos, turberas y ambientes glaciares <span class="citation" data-cites="sbap_magallanes_2026">(<a href="references.html#ref-sbap_magallanes_2026" role="doc-biblioref">Servicio de Biodiversidad y Áreas Protegidas 2026</a>)</span>. Esta condición refuerza la necesidad de indicadores reproducibles que permitan observar cambios territoriales sin depender únicamente de campañas de terreno, especialmente en zonas de difícil acceso.</p>
 <div id="fig-pinguinos-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-pinguinos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -325,7 +345,7 @@ Figure&nbsp;2.4: Fauna costera y ecosistemas subantárticos de Magallanes.
 </figcaption>
 </figure>
 </div>
-<p>La dimensión social y demográfica agrega otra capa de contexto. El Censo 2024 registró <strong>166.537 personas</strong> en la región, con una estructura altamente concentrada en centros urbanos y una densidad muy baja si se considera la superficie total regional. Punta Arenas y Natales concentran la mayor parte de la población, mientras amplios sectores rurales, insulares y de estepa presentan baja ocupación permanente. Este patrón de poblamiento influye en la presión territorial, en la accesibilidad para validación de campo y en la forma en que los resultados de la MRCT pueden apoyar decisiones públicas.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>La dimensión social y demográfica agrega otra capa de contexto. El Censo 2024 registró <strong>166.537 personas</strong> en la región, con una estructura altamente concentrada en centros urbanos y una densidad muy baja si se considera la superficie total regional <span class="citation" data-cites="ine_censo2024_magallanes bcn_magallanes_region">(<a href="references.html#ref-ine_censo2024_magallanes" role="doc-biblioref">Instituto Nacional de Estadísticas 2025</a>; <a href="references.html#ref-bcn_magallanes_region" role="doc-biblioref">Biblioteca del Congreso Nacional de Chile 2026b</a>)</span>. Punta Arenas y Natales concentran la mayor parte de la población, mientras amplios sectores rurales, insulares y de estepa presentan baja ocupación permanente. Este patrón de poblamiento influye en la presión territorial, en la accesibilidad para validación de campo y en la forma en que los resultados de la MRCT pueden apoyar decisiones públicas.</p>
 <p>La base económica regional combina actividades urbanas, portuarias, logísticas, turísticas, ganaderas, energéticas e industriales. La extracción de hidrocarburos y gas natural, la ganadería ovina, el turismo de naturaleza y los servicios asociados a conectividad austral conviven con áreas de alto valor ecológico y baja intervención directa. En términos de resiliencia territorial, esta combinación exige distinguir entre cambios ecosistémicos propios de la variabilidad climática, transformaciones asociadas a presión productiva y dinámicas espaciales vinculadas a infraestructura, accesibilidad y ocupación humana.</p>
 <p>En este contexto, los insumos satelitales cumplen una función metodológica clave. Permiten observar de manera homogénea un territorio extenso, climáticamente complejo y con fuertes restricciones logísticas. La MRCT usa esa observación anual para construir una lectura integrada de las cuencas: primero como señal física de superficie, luego como indicadores ecosistémicos y finalmente como trayectoria de resiliencia territorial.</p>
 <table class="caption-top table">
@@ -411,7 +431,7 @@ En términos simples
 <section id="nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" class="level3" data-number="2.3.4">
 <h3 data-number="2.3.4" class="anchored" data-anchor-id="nddi-índice-de-déficit-hídrico-de-diferencia-normalizada"><span class="header-section-number">2.3.4</span> NDDI — Índice de Déficit Hídrico de Diferencia Normalizada</h3>
 <p><span class="math display">\text{NDDI} = \frac{\text{NDVI} - \text{NDWI}}{\text{NDVI} + \text{NDWI}}</span></p>
-<p>El NDDI combina la señal vegetal y la hídrica para capturar tensión hídrica o condiciones de aridez relativa <span class="citation" data-cites="gu2007">(<a href="references.html#ref-gu2007" role="doc-biblioref"><strong>gu2007?</strong></a>)</span>. Cuando la vegetación es activa pero el agua escasa, el NDDI toma valores altos. Es el insumo del indicador de aridez (IA) y participa también en la estimación de sensibilidad climática.</p>
+<p>El NDDI combina la señal vegetal y la hídrica para capturar tensión hídrica o condiciones de aridez relativa <span class="citation" data-cites="gu2007">(<a href="references.html#ref-gu2007" role="doc-biblioref">Gu et al. 2007</a>)</span>. Cuando la vegetación es activa pero el agua escasa, el NDDI toma valores altos. Es el insumo del indicador de aridez (IA) y participa también en la estimación de sensibilidad climática.</p>
 </section>
 <section id="alb-albedo-superficial" class="level3" data-number="2.3.5">
 <h3 data-number="2.3.5" class="anchored" data-anchor-id="alb-albedo-superficial"><span class="header-section-number">2.3.5</span> ALB — Albedo superficial</h3>
@@ -520,17 +540,29 @@ Table&nbsp;2.1: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a 
 </div>
 
 
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Biblioteca del Congreso Nacional de Chile, <a href="https://www.bcn.cl/siit/siit/nuestropais/region12">Región de Magallanes y Antártica Chilena</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Ministerio del Medio Ambiente, SINCA, <a href="https://sinca.mma.gob.cl/index.php/region/info/id/XII">Información general de la Región de Magallanes y Antártica Chilena</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Biblioteca del Congreso Nacional de Chile, <a href="https://www.bcn.cl/siit/nuestropais/region12/hidrografia.htm">Hidrografía Región de Magallanes</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Dirección General de Aguas, <a href="https://dga.mop.gob.cl/dga-magallanes-destaca-crecimiento-de-la-red-de-estaciones-de-monitoreo-de-aguas-subterraneas-y-glaciares-en-la-region/">DGA Magallanes destaca crecimiento de la red de estaciones de monitoreo de aguas subterráneas y glaciares</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Servicio de Biodiversidad y Áreas Protegidas, <a href="https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes">SBAP comienza a operar en la región de Magallanes</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Instituto Nacional de Estadísticas, <a href="https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf">Resultados regionales Censo 2024: Magallanes y de la Antártica Chilena</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bcn_magallanes_hidrografia" class="csl-entry" role="listitem">
+Biblioteca del Congreso Nacional de Chile. 2026a. <span>“Hidrograf<span>í</span>a Regi<span>ó</span>n de Magallanes.”</span> <a href="https://www.bcn.cl/siit/nuestropais/region12/hidrografia.htm">https://www.bcn.cl/siit/nuestropais/region12/hidrografia.htm</a>.
+</div>
+<div id="ref-bcn_magallanes_region" class="csl-entry" role="listitem">
+———. 2026b. <span>“Regi<span>ó</span>n de Magallanes y Ant<span>á</span>rtica Chilena.”</span> <a href="https://www.bcn.cl/siit/siit/nuestropais/region12">https://www.bcn.cl/siit/siit/nuestropais/region12</a>.
+</div>
+<div id="ref-dga_magallanes_glaciares" class="csl-entry" role="listitem">
+Dirección General de Aguas. 2026. <span>“DGA Magallanes Destaca Crecimiento de La Red de Estaciones de Monitoreo de Aguas Subterr<span>á</span>neas y Glaciares En La Regi<span>ó</span>n.”</span> <a href="https://dga.mop.gob.cl/dga-magallanes-destaca-crecimiento-de-la-red-de-estaciones-de-monitoreo-de-aguas-subterraneas-y-glaciares-en-la-region/">https://dga.mop.gob.cl/dga-magallanes-destaca-crecimiento-de-la-red-de-estaciones-de-monitoreo-de-aguas-subterraneas-y-glaciares-en-la-region/</a>.
+</div>
+<div id="ref-gu2007" class="csl-entry" role="listitem">
+Gu, Yingxin, Jesslyn F. Brown, James P. Verdin, and Brian Wardlow. 2007. <span>“A Five-Year Analysis of MODIS NDVI and NDWI for Grassland Drought Assessment over the Central Great Plains of the United States.”</span> <em>Geophysical Research Letters</em> 34 (6): L06407. <a href="https://doi.org/10.1029/2006GL029127">https://doi.org/10.1029/2006GL029127</a>.
+</div>
+<div id="ref-ine_censo2024_magallanes" class="csl-entry" role="listitem">
+Instituto Nacional de Estadísticas. 2025. <span>“Resultados Regionales Censo 2024: Magallanes y de La Ant<span>á</span>rtica Chilena.”</span> <a href="https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf">https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf</a>.
+</div>
+<div id="ref-mma_sinca_magallanes" class="csl-entry" role="listitem">
+Ministerio del Medio Ambiente. 2015. <span>“Regi<span>ó</span>n de Magallanes y Ant<span>á</span>rtica Chilena: Informaci<span>ó</span>n General.”</span> <a href="https://sinca.mma.gob.cl/index.php/region/info/id/XII">https://sinca.mma.gob.cl/index.php/region/info/id/XII</a>.
+</div>
+<div id="ref-sbap_magallanes_2026" class="csl-entry" role="listitem">
+Servicio de Biodiversidad y Áreas Protegidas. 2026. <span>“Servicio de Biodiversidad y <span>Á</span>reas Protegidas Comienza a Operar En La Regi<span>ó</span>n de Magallanes.”</span> <a href="https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes">https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
