@@ -120,7 +120,7 @@ window.Quarto = {
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -236,23 +236,24 @@ window.Quarto = {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#fuente-de-datos" id="toc-fuente-de-datos" class="nav-link active" data-scroll-target="#fuente-de-datos"><span class="header-section-number">2.1</span> Fuente de datos</a></li>
-  <li><a href="#variables-de-entrada" id="toc-variables-de-entrada" class="nav-link" data-scroll-target="#variables-de-entrada"><span class="header-section-number">2.2</span> Variables de entrada</a>
+  <li><a href="#región-de-estudio" id="toc-región-de-estudio" class="nav-link active" data-scroll-target="#región-de-estudio"><span class="header-section-number">2.1</span> Región de Estudio</a></li>
+  <li><a href="#fuente-de-datos" id="toc-fuente-de-datos" class="nav-link" data-scroll-target="#fuente-de-datos"><span class="header-section-number">2.2</span> Fuente de datos</a></li>
+  <li><a href="#variables-de-entrada" id="toc-variables-de-entrada" class="nav-link" data-scroll-target="#variables-de-entrada"><span class="header-section-number">2.3</span> Variables de entrada</a>
   <ul class="collapse">
-  <li><a href="#ndvi-índice-de-vegetación-de-diferencia-normalizada" id="toc-ndvi-índice-de-vegetación-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndvi-índice-de-vegetación-de-diferencia-normalizada"><span class="header-section-number">2.2.1</span> NDVI — Índice de Vegetación de Diferencia Normalizada</a></li>
-  <li><a href="#ndwi-índice-de-agua-de-diferencia-normalizada" id="toc-ndwi-índice-de-agua-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndwi-índice-de-agua-de-diferencia-normalizada"><span class="header-section-number">2.2.2</span> NDWI — Índice de Agua de Diferencia Normalizada</a></li>
-  <li><a href="#ndsi-índice-de-nieve-de-diferencia-normalizada" id="toc-ndsi-índice-de-nieve-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndsi-índice-de-nieve-de-diferencia-normalizada"><span class="header-section-number">2.2.3</span> NDSI — Índice de Nieve de Diferencia Normalizada</a></li>
-  <li><a href="#nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" id="toc-nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" class="nav-link" data-scroll-target="#nddi-índice-de-déficit-hídrico-de-diferencia-normalizada"><span class="header-section-number">2.2.4</span> NDDI — Índice de Déficit Hídrico de Diferencia Normalizada</a></li>
-  <li><a href="#alb-albedo-superficial" id="toc-alb-albedo-superficial" class="nav-link" data-scroll-target="#alb-albedo-superficial"><span class="header-section-number">2.2.5</span> ALB — Albedo superficial</a></li>
-  <li><a href="#tb-temperatura-de-brillo" id="toc-tb-temperatura-de-brillo" class="nav-link" data-scroll-target="#tb-temperatura-de-brillo"><span class="header-section-number">2.2.6</span> TB — Temperatura de brillo</a></li>
+  <li><a href="#ndvi-índice-de-vegetación-de-diferencia-normalizada" id="toc-ndvi-índice-de-vegetación-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndvi-índice-de-vegetación-de-diferencia-normalizada"><span class="header-section-number">2.3.1</span> NDVI — Índice de Vegetación de Diferencia Normalizada</a></li>
+  <li><a href="#ndwi-índice-de-agua-de-diferencia-normalizada" id="toc-ndwi-índice-de-agua-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndwi-índice-de-agua-de-diferencia-normalizada"><span class="header-section-number">2.3.2</span> NDWI — Índice de Agua de Diferencia Normalizada</a></li>
+  <li><a href="#ndsi-índice-de-nieve-de-diferencia-normalizada" id="toc-ndsi-índice-de-nieve-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndsi-índice-de-nieve-de-diferencia-normalizada"><span class="header-section-number">2.3.3</span> NDSI — Índice de Nieve de Diferencia Normalizada</a></li>
+  <li><a href="#nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" id="toc-nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" class="nav-link" data-scroll-target="#nddi-índice-de-déficit-hídrico-de-diferencia-normalizada"><span class="header-section-number">2.3.4</span> NDDI — Índice de Déficit Hídrico de Diferencia Normalizada</a></li>
+  <li><a href="#alb-albedo-superficial" id="toc-alb-albedo-superficial" class="nav-link" data-scroll-target="#alb-albedo-superficial"><span class="header-section-number">2.3.5</span> ALB — Albedo superficial</a></li>
+  <li><a href="#tb-temperatura-de-brillo" id="toc-tb-temperatura-de-brillo" class="nav-link" data-scroll-target="#tb-temperatura-de-brillo"><span class="header-section-number">2.3.6</span> TB — Temperatura de brillo</a></li>
   </ul></li>
-  <li><a href="#control-de-calidad" id="toc-control-de-calidad" class="nav-link" data-scroll-target="#control-de-calidad"><span class="header-section-number">2.3</span> Control de calidad</a></li>
-  <li><a href="#alineamiento-espacial" id="toc-alineamiento-espacial" class="nav-link" data-scroll-target="#alineamiento-espacial"><span class="header-section-number">2.4</span> Alineamiento espacial</a></li>
+  <li><a href="#control-de-calidad" id="toc-control-de-calidad" class="nav-link" data-scroll-target="#control-de-calidad"><span class="header-section-number">2.4</span> Control de calidad</a></li>
+  <li><a href="#alineamiento-espacial" id="toc-alineamiento-espacial" class="nav-link" data-scroll-target="#alineamiento-espacial"><span class="header-section-number">2.5</span> Alineamiento espacial</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -275,10 +276,105 @@ window.Quarto = {
 
 <p>El modelo parte de la superficie terrestre. Antes de construir cualquier indicador necesita una representación física del territorio, año a año, en términos espectrales y radiométricos. Esa representación son los mosaicos satelitales.</p>
 <p>Este capítulo describe la fuente de datos utilizada, las seis variables que componen el flujo anual, los criterios de control de calidad y el procedimiento de alineamiento que garantiza coherencia entre capas.</p>
-<section id="fuente-de-datos" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="fuente-de-datos"><span class="header-section-number">2.1</span> Fuente de datos</h2>
+<section id="región-de-estudio" class="level2 page-columns page-full" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="región-de-estudio"><span class="header-section-number">2.1</span> Región de Estudio</h2>
+<p>La Región de Magallanes y de la Antártica Chilena se ubica en el extremo austral de Chile y constituye uno de los territorios más extensos, remotos y ambientalmente heterogéneos del país. Su sector sudamericano se extiende aproximadamente entre los 48°36’ y 56°30’ de latitud sur, y entre los 66°25’ y 75°40’ de longitud oeste. Administrativamente se organiza en cuatro provincias —Última Esperanza, Magallanes, Tierra del Fuego y Antártica Chilena— y once comunas, con Punta Arenas como capital regional.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div id="fig-mapa-region-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-mapa-region-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/mapa_magallanes.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-mapa-region-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Localización general de la Región de Magallanes y de la Antártica Chilena.
+</figcaption>
+</figure>
+</div>
+<p>La región posee una superficie total de <strong>1.382.291,10 km²</strong>, de los cuales <strong>132.291,10 km²</strong> corresponden al territorio sudamericano y <strong>1.250.000 km²</strong> al Territorio Chileno Antártico. Para efectos de este libro, el levantamiento satelital y la construcción de indicadores se concentran en las cuencas hidrográficas del sector sudamericano. Esta delimitación permite trabajar sobre unidades territoriales comparables, con continuidad espacial y pertinencia para el análisis ecosistémico regional.</p>
+<p>Desde el punto de vista físico, Magallanes reúne archipiélagos, fiordos, canales, cordones montañosos, campos de hielo, estepas frías, turberas, bosques subantárticos, lagos, glaciares y extensas zonas costeras. Esta diversidad produce contrastes marcados entre el occidente húmedo y fragmentado por canales, el eje cordillerano y glaciar, y el oriente más seco y estepario. Para la MRCT, esa heterogeneidad es central: los indicadores de vegetación, agua, nieve, aridez, temperatura y estructura del paisaje se leen dentro de un mosaico ecológico de alta variabilidad interna.</p>
+<div id="fig-fiordos-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-fiordos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ballenas-parque-marino-francisco-coloane.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-fiordos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Fiordos, canales y relieve austral de Magallanes.
+</figcaption>
+</figure>
+</div>
+<p>El clima regional es templado frío, ventoso y de baja amplitud térmica, con abundante nubosidad y máximos invernales de precipitación. Hacia el oriente de la cordillera predominan condiciones estepáricas frías, con menor humedad y mayor exposición al viento. Esta gradiente climática incide directamente en la lectura satelital: la nubosidad reduce ventanas de observación; la nieve y el hielo modifican la reflectancia superficial; las diferencias de humedad alteran la señal hídrica y vegetal; y los contrastes térmicos se expresan en la temperatura superficial observada.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>La hidrografía regional presenta una organización singular. Buena parte de los cursos principales se ubican hacia el sector oriental o transandino y varios sistemas drenan finalmente hacia el Atlántico. Entre las hoyas relevantes se encuentran los ríos Serrano, Gallegos, Chico o Ciaike, San Juan y otras cuencas menores al sur del Estrecho de Magallanes. El río Serrano, asociado al Campo de Hielo Sur y al sistema de lagos Toro, Sarmiento, Pehoé y Nordenskjöld, es un ejemplo de la conexión entre criósfera, lagos, escorrentía y paisaje glaciar.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>La criósfera es uno de los componentes ambientales más importantes para comprender la resiliencia regional. Según el Inventario Público de Glaciares informado por la Dirección General de Aguas, Magallanes concentra <strong>7.055 glaciares</strong> y una superficie glaciarizada de <strong>10.426,6 km²</strong>, equivalente a casi la mitad de la superficie glaciarizada nacional. Por esta razón, la fracción nival, el albedo, la temperatura superficial y los cambios en agua superficial son variables especialmente relevantes para seguir transformaciones ecosistémicas asociadas a pérdida de hielo, variabilidad hídrica y cambios de cobertura.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div id="fig-iceberg-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-iceberg-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/region-de-magallanes-y-de-la-antartica-chilena.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-iceberg-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Iceberg y ambiente glaciar en la Patagonia austral.
+</figcaption>
+</figure>
+</div>
+<p>El valor ecológico de Magallanes también se expresa en su alto nivel de protección ambiental. La región concentra la mayor extensión de territorio protegido de Chile y contiene áreas de conservación, parques nacionales, reservas, monumentos naturales, ecosistemas marinos, bosques subantárticos, turberas y ambientes glaciares. Esta condición refuerza la necesidad de indicadores reproducibles que permitan observar cambios territoriales sin depender únicamente de campañas de terreno, especialmente en zonas de difícil acceso.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<div id="fig-pinguinos-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-pinguinos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pinguino-de-magallanes.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-pinguinos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Fauna costera y ecosistemas subantárticos de Magallanes.
+</figcaption>
+</figure>
+</div>
+<p>La dimensión social y demográfica agrega otra capa de contexto. El Censo 2024 registró <strong>166.537 personas</strong> en la región, con una estructura altamente concentrada en centros urbanos y una densidad muy baja si se considera la superficie total regional. Punta Arenas y Natales concentran la mayor parte de la población, mientras amplios sectores rurales, insulares y de estepa presentan baja ocupación permanente. Este patrón de poblamiento influye en la presión territorial, en la accesibilidad para validación de campo y en la forma en que los resultados de la MRCT pueden apoyar decisiones públicas.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>La base económica regional combina actividades urbanas, portuarias, logísticas, turísticas, ganaderas, energéticas e industriales. La extracción de hidrocarburos y gas natural, la ganadería ovina, el turismo de naturaleza y los servicios asociados a conectividad austral conviven con áreas de alto valor ecológico y baja intervención directa. En términos de resiliencia territorial, esta combinación exige distinguir entre cambios ecosistémicos propios de la variabilidad climática, transformaciones asociadas a presión productiva y dinámicas espaciales vinculadas a infraestructura, accesibilidad y ocupación humana.</p>
+<p>En este contexto, los insumos satelitales cumplen una función metodológica clave. Permiten observar de manera homogénea un territorio extenso, climáticamente complejo y con fuertes restricciones logísticas. La MRCT usa esa observación anual para construir una lectura integrada de las cuencas: primero como señal física de superficie, luego como indicadores ecosistémicos y finalmente como trayectoria de resiliencia territorial.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimensión regional</th>
+<th>Relevancia para la MRCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gran extensión y baja densidad poblacional</td>
+<td>Requiere monitoreo remoto sistemático y comparable.</td>
+</tr>
+<tr class="even">
+<td>Gradiente oeste-este de humedad y estepa</td>
+<td>Afecta vegetación, agua superficial, aridez y temperatura.</td>
+</tr>
+<tr class="odd">
+<td>Presencia de glaciares, nieve y campos de hielo</td>
+<td>Hace centrales los indicadores de criósfera, albedo y agua.</td>
+</tr>
+<tr class="even">
+<td>Alta nubosidad y clima ventoso</td>
+<td>Condiciona la construcción de mosaicos anuales robustos.</td>
+</tr>
+<tr class="odd">
+<td>Cuencas con drenajes complejos</td>
+<td>Justifica trabajar con unidades hidrográficas como base territorial.</td>
+</tr>
+<tr class="even">
+<td>Áreas protegidas y ecosistemas sensibles</td>
+<td>Exige trazabilidad y cautela en la interpretación de cambios.</td>
+</tr>
+<tr class="odd">
+<td>Poblamiento concentrado y territorios aislados</td>
+<td>Refuerza el valor de productos cartográficos para gestión pública.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fuente-de-datos" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="fuente-de-datos"><span class="header-section-number">2.2</span> Fuente de datos</h2>
 <p>La fuente principal son los mosaicos <strong>Landsat 8</strong> del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (<em>Operational Land Imager</em>) y el sensor TIRS (<em>Thermal Infrared Sensor</em>), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y temperatura superficial a <strong>30 metros de resolución</strong>.</p>
-<p>El modelo cubre el período <strong>2013–2025</strong>, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Aysén (Patagonia chilena), un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.</p>
+<p>El modelo cubre el período <strong>2013–2025</strong>, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Magallanes y de la Antártica Chilena, un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.</p>
 <p>La frecuencia de revisita de Landsat 8 es de 16 días. Los mosaicos anuales se construyen como composites de mediana temporal: para cada píxel se toma la mediana de todos los valores observados durante el año. Esto reduce el efecto de perturbaciones puntuales como nubes o sombras residuales y entrega una representación estable del estado superficial anual.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -294,35 +390,35 @@ En términos simples
 </div>
 </div>
 </section>
-<section id="variables-de-entrada" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="variables-de-entrada"><span class="header-section-number">2.2</span> Variables de entrada</h2>
+<section id="variables-de-entrada" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="variables-de-entrada"><span class="header-section-number">2.3</span> Variables de entrada</h2>
 <p>El flujo anual trabaja con seis capas espectrales derivadas de los mosaicos Landsat 8. Cada una captura un aspecto diferente de la superficie y es la base de uno o más indicadores del modelo.</p>
-<section id="ndvi-índice-de-vegetación-de-diferencia-normalizada" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="ndvi-índice-de-vegetación-de-diferencia-normalizada"><span class="header-section-number">2.2.1</span> NDVI — Índice de Vegetación de Diferencia Normalizada</h3>
+<section id="ndvi-índice-de-vegetación-de-diferencia-normalizada" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="ndvi-índice-de-vegetación-de-diferencia-normalizada"><span class="header-section-number">2.3.1</span> NDVI — Índice de Vegetación de Diferencia Normalizada</h3>
 <p><span class="math display">\text{NDVI} = \frac{\rho_{NIR} - \rho_{Red}}{\rho_{NIR} + \rho_{Red}}</span></p>
 <p>Donde <span class="math inline">\rho_{NIR}</span> y <span class="math inline">\rho_{Red}</span> son las reflectancias de superficie en la banda infrarroja cercana (Banda 5) y en la banda roja (Banda 4) respectivamente. La vegetación activa refleja con intensidad en el infrarrojo y absorbe en el rojo, lo que produce valores altos. Rangos típicos van de −1 a 1; valores por encima de 0,2 son consistentes con presencia de vegetación activa.</p>
 </section>
-<section id="ndwi-índice-de-agua-de-diferencia-normalizada" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="ndwi-índice-de-agua-de-diferencia-normalizada"><span class="header-section-number">2.2.2</span> NDWI — Índice de Agua de Diferencia Normalizada</h3>
+<section id="ndwi-índice-de-agua-de-diferencia-normalizada" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="ndwi-índice-de-agua-de-diferencia-normalizada"><span class="header-section-number">2.3.2</span> NDWI — Índice de Agua de Diferencia Normalizada</h3>
 <p><span class="math display">\text{NDWI} = \frac{\rho_{Green} - \rho_{NIR}}{\rho_{Green} + \rho_{NIR}}</span></p>
 <p>El NDWI amplifica la señal de agua superficial usando la banda verde (Banda 3) y el infrarrojo cercano. Valores positivos indican presencia de agua o humedad; valores negativos corresponden a suelos secos o vegetación sin estrés hídrico. Es la capa base para los indicadores hídricos del modelo.</p>
 </section>
-<section id="ndsi-índice-de-nieve-de-diferencia-normalizada" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="ndsi-índice-de-nieve-de-diferencia-normalizada"><span class="header-section-number">2.2.3</span> NDSI — Índice de Nieve de Diferencia Normalizada</h3>
+<section id="ndsi-índice-de-nieve-de-diferencia-normalizada" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="ndsi-índice-de-nieve-de-diferencia-normalizada"><span class="header-section-number">2.3.3</span> NDSI — Índice de Nieve de Diferencia Normalizada</h3>
 <p><span class="math display">\text{NDSI} = \frac{\rho_{Green} - \rho_{SWIR}}{\rho_{Green} + \rho_{SWIR}}</span></p>
 <p>El NDSI aprovecha la alta reflectancia de la nieve en el verde visible (Banda 3) y su baja reflectancia en el infrarrojo de onda corta (Banda 6). Valores superiores a 0,4 son consistentes con cobertura de nieve o hielo. Es el insumo directo del indicador de criósfera.</p>
 </section>
-<section id="nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="nddi-índice-de-déficit-hídrico-de-diferencia-normalizada"><span class="header-section-number">2.2.4</span> NDDI — Índice de Déficit Hídrico de Diferencia Normalizada</h3>
+<section id="nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="nddi-índice-de-déficit-hídrico-de-diferencia-normalizada"><span class="header-section-number">2.3.4</span> NDDI — Índice de Déficit Hídrico de Diferencia Normalizada</h3>
 <p><span class="math display">\text{NDDI} = \frac{\text{NDVI} - \text{NDWI}}{\text{NDVI} + \text{NDWI}}</span></p>
 <p>El NDDI combina la señal vegetal y la hídrica para capturar tensión hídrica o condiciones de aridez relativa <span class="citation" data-cites="gu2007">(<a href="references.html#ref-gu2007" role="doc-biblioref"><strong>gu2007?</strong></a>)</span>. Cuando la vegetación es activa pero el agua escasa, el NDDI toma valores altos. Es el insumo del indicador de aridez (IA) y participa también en la estimación de sensibilidad climática.</p>
 </section>
-<section id="alb-albedo-superficial" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="alb-albedo-superficial"><span class="header-section-number">2.2.5</span> ALB — Albedo superficial</h3>
+<section id="alb-albedo-superficial" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="alb-albedo-superficial"><span class="header-section-number">2.3.5</span> ALB — Albedo superficial</h3>
 <p>El albedo mide la fracción de radiación solar incidente que la superficie refleja. Se calcula como una combinación ponderada de las reflectancias en las bandas del visible e infrarrojo cercano. Superficies como nieve o suelo desnudo claro presentan albedo alto; vegetación densa y agua presentan albedo bajo. Variaciones en el albedo medio de una cuenca reflejan cambios en la composición superficial.</p>
 </section>
-<section id="tb-temperatura-de-brillo" class="level3" data-number="2.2.6">
-<h3 data-number="2.2.6" class="anchored" data-anchor-id="tb-temperatura-de-brillo"><span class="header-section-number">2.2.6</span> TB — Temperatura de brillo</h3>
+<section id="tb-temperatura-de-brillo" class="level3" data-number="2.3.6">
+<h3 data-number="2.3.6" class="anchored" data-anchor-id="tb-temperatura-de-brillo"><span class="header-section-number">2.3.6</span> TB — Temperatura de brillo</h3>
 <p>La temperatura de brillo corresponde a la señal térmica de la Banda 10 del sensor TIRS, convertida a grados Celsius. Es la temperatura aparente que tendría un cuerpo negro emitiendo la misma radiancia que la superficie observada. Constituye el proxy directo de la carga térmica superficial de cada unidad territorial.</p>
 <hr>
 <p>La <a href="#tbl-capas" class="quarto-xref">Tabla&nbsp;<span>2.1</span></a> resume las características de cada capa y sus usos en el modelo.</p>
@@ -391,8 +487,8 @@ Table&nbsp;2.1: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a 
 </div>
 </section>
 </section>
-<section id="control-de-calidad" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="control-de-calidad"><span class="header-section-number">2.3</span> Control de calidad</h2>
+<section id="control-de-calidad" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="control-de-calidad"><span class="header-section-number">2.4</span> Control de calidad</h2>
 <p>Primero se limpia la señal. Después se calcula. Esa es la regla que estructura el preprocesamiento.</p>
 <p>Antes de derivar cualquier indicador, el modelo aplica una secuencia de filtros sobre las capas de cada año.</p>
 <p><strong>Verificación de disponibilidad.</strong> Se comprueba que las seis capas existan para el año en cuestión. Si falta cualquiera de ellas, el año se descarta en su totalidad. No se interpola ni se sustituye desde años adyacentes.</p>
@@ -400,8 +496,8 @@ Table&nbsp;2.1: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a 
 <p><strong>Recorte de valores anómalos en NDDI.</strong> El NDDI puede producir valores extremos cuando ambos índices son simultáneamente cercanos a cero. Para mitigarlo, se registran los percentiles 1 y 99 de la distribución anual y se aplica un recorte simétrico a ±5, reteniendo más del 98% de la distribución observada y eliminando artefactos numéricos.</p>
 <p><strong>Umbral de cobertura mínima.</strong> Una vez aplicadas las máscaras territoriales, se cuenta el número de píxeles válidos dentro del área de análisis. Si ese número es inferior a 1.000 píxeles, el año se omite. Este umbral garantiza que los estadísticos por cuenca tengan representatividad mínima.</p>
 </section>
-<section id="alineamiento-espacial" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="alineamiento-espacial"><span class="header-section-number">2.4</span> Alineamiento espacial</h2>
+<section id="alineamiento-espacial" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="alineamiento-espacial"><span class="header-section-number">2.5</span> Alineamiento espacial</h2>
 <p>Todos los rasters deben compartir exactamente la misma grilla espacial: igual resolución, mismo origen, misma proyección cartográfica y misma extensión. Sin esa condición, la comparación píxel a píxel entre capas introduce errores de registro que contaminan los indicadores derivados.</p>
 <p>La grilla de referencia es la del raster de cuencas (<code>basins_aligned.tif</code>). Al cargar cada capa anual, el modelo compara automáticamente su grilla con la de referencia. Si coinciden, la capa se usa directamente. Si no, se reproyecta usando el método de vecino más cercano, que conserva los valores originales sin introducir interpolaciones artificiales entre clases espectrales.</p>
 <div class="cell" data-layout-align="center">
@@ -424,6 +520,17 @@ Table&nbsp;2.1: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a 
 </div>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Biblioteca del Congreso Nacional de Chile, <a href="https://www.bcn.cl/siit/siit/nuestropais/region12">Región de Magallanes y Antártica Chilena</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Ministerio del Medio Ambiente, SINCA, <a href="https://sinca.mma.gob.cl/index.php/region/info/id/XII">Información general de la Región de Magallanes y Antártica Chilena</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Biblioteca del Congreso Nacional de Chile, <a href="https://www.bcn.cl/siit/nuestropais/region12/hidrografia.htm">Hidrografía Región de Magallanes</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Dirección General de Aguas, <a href="https://dga.mop.gob.cl/dga-magallanes-destaca-crecimiento-de-la-red-de-estaciones-de-monitoreo-de-aguas-subterraneas-y-glaciares-en-la-region/">DGA Magallanes destaca crecimiento de la red de estaciones de monitoreo de aguas subterráneas y glaciares</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Servicio de Biodiversidad y Áreas Protegidas, <a href="https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes">SBAP comienza a operar en la región de Magallanes</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Instituto Nacional de Estadísticas, <a href="https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf">Resultados regionales Censo 2024: Magallanes y de la Antártica Chilena</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

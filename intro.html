@@ -69,12 +69,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -190,14 +193,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#objetivos" id="toc-objetivos" class="nav-link active" data-scroll-target="#objetivos"><span class="header-section-number">1.1</span> Objetivos</a></li>
-  <li><a href="#objetivo-general" id="toc-objetivo-general" class="nav-link" data-scroll-target="#objetivo-general"><span class="header-section-number">1.2</span> Objetivo general</a></li>
-  <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos"><span class="header-section-number">1.3</span> Objetivos específicos</a></li>
+  <li><a href="#por-qué-una-matriz-de-resiliencia-territorial" id="toc-por-qué-una-matriz-de-resiliencia-territorial" class="nav-link active" data-scroll-target="#por-qué-una-matriz-de-resiliencia-territorial"><span class="header-section-number">1.1</span> Por qué una matriz de resiliencia territorial</a></li>
+  <li><a href="#la-idea-central" id="toc-la-idea-central" class="nav-link" data-scroll-target="#la-idea-central"><span class="header-section-number">1.2</span> La idea central</a></li>
+  <li><a href="#cómo-leer-este-libro" id="toc-cómo-leer-este-libro" class="nav-link" data-scroll-target="#cómo-leer-este-libro"><span class="header-section-number">1.3</span> Cómo leer este libro</a></li>
+  <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos"><span class="header-section-number">1.4</span> Objetivos</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-general" id="toc-objetivo-general" class="nav-link" data-scroll-target="#objetivo-general"><span class="header-section-number">1.4.1</span> Objetivo general</a></li>
+  <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos"><span class="header-section-number">1.4.2</span> Objetivos específicos</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -218,30 +226,120 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>La MRCT es un sistema para describir cómo cambian las unidades territoriales en el tiempo a partir de señales satelitales e indicadores derivados.</p>
-<p>La idea central es simple. Un territorio no se interpreta como una imagen aislada, sino como una trayectoria dentro de un espacio de estados. Por eso el modelo no solo pregunta qué cambió, sino también cuánto se alejó, con qué velocidad y en qué contexto.</p>
-<p>Una analogía útil es la de una ruta. Los indicadores base describen la posición del sistema. La línea base fija el punto de referencia. La trayectoria muestra si la cuenca se mantiene cerca, se aleja o comienza a reorganizarse.</p>
-<p>Este capítulo debe explicar el problema que aborda la MRCT, la lógica del enfoque y la estructura general del libro.</p>
-<section id="objetivos" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="objetivos"><span class="header-section-number">1.1</span> Objetivos</h2>
+<p>El cambio climático se expresa en el territorio como una acumulación de señales: variaciones en la vegetación, pérdida o expansión de agua superficial, cambios en la nieve, aumento de temperatura, fragmentación del paisaje y modificaciones en la forma en que las cuencas se relacionan con su entorno. Mirar cada señal por separado ayuda a describir una parte del proceso, pero dificulta reconocer cuándo el sistema completo empieza a desplazarse hacia una condición distinta.</p>
+<p>La Matriz de Resiliencia Climática Territorial (MRCT) organiza esas señales en una lectura integrada. Su punto de partida son mosaicos satelitales anuales; su resultado es una representación del estado ecosistémico de cada cuenca hidrográfica, de su evolución temporal, de su coherencia espacial y de su propensión a transición.</p>
+<p>La pregunta que guía el modelo es directa: ¿qué tan cerca o lejos se encuentra una unidad territorial de su régimen de referencia, cómo se está moviendo en el tiempo y qué tan expuesta aparece frente a presiones climáticas persistentes?</p>
+<p>La evaluación se aplica en la Región de Magallanes y de la Antártica Chilena, un territorio austral donde convergen campos de hielo, fiordos, estepas frías, bosques subantárticos, turberas y cuencas de alta sensibilidad climática. Esta diversidad convierte a Magallanes en un caso adecuado para observar cómo las señales satelitales permiten describir cambios ecosistémicos en territorios extensos, remotos y ambientalmente contrastados.</p>
+<div id="fig-region-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-region-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/estrecho-de-magallanes.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-region-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Región de Magallanes y de la Antártica Chilena.
+</figcaption>
+</figure>
+</div>
+<section id="por-qué-una-matriz-de-resiliencia-territorial" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="por-qué-una-matriz-de-resiliencia-territorial"><span class="header-section-number">1.1</span> Por qué una matriz de resiliencia territorial</h2>
+<p>La planificación territorial necesita distinguir entre cambios puntuales y transformaciones persistentes. Un año seco, una anomalía térmica o una reducción temporal de vegetación pueden ser parte de la variabilidad normal del sistema. La señal relevante aparece cuando esas variaciones se acumulan, se sostienen o se combinan con cambios espaciales y climáticos que aumentan la posibilidad de transición.</p>
+<p>La MRCT aborda ese problema mediante una secuencia reproducible. Primero transforma información satelital en indicadores interpretables. Luego integra esos indicadores en un vector de estado ecosistémico. A partir de ese vector define una línea base, mide distancias respecto de ella, calcula trayectorias temporales, incorpora el contexto espacial y estima sensibilidad frente a aridez, albedo y temperatura superficial.</p>
+<p>El valor de esta arquitectura está en conectar preguntas que suelen analizarse por separado:</p>
+<ul>
+<li>¿cuál es el estado ecosistémico actual de la cuenca?;</li>
+<li>¿cuánto se aleja de su comportamiento de referencia?;</li>
+<li>¿ese alejamiento aumenta, disminuye o se estabiliza?;</li>
+<li>¿la cuenca se comporta como sus vecinas o aparece como una anomalía local?;</li>
+<li>¿qué tan reactiva es frente a condiciones más secas, reflectantes o cálidas?;</li>
+<li>¿cómo se sintetiza todo eso en una lectura operativa de resiliencia?</li>
+</ul>
 </section>
-<section id="objetivo-general" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="objetivo-general"><span class="header-section-number">1.2</span> Objetivo general</h2>
+<section id="la-idea-central" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="la-idea-central"><span class="header-section-number">1.2</span> La idea central</h2>
+<p>Cada cuenca se representa como un punto dentro de un espacio de estados. Ese punto reúne indicadores que describen vegetación, agua, humedad, criósfera, estructura del paisaje, energía y aridez.</p>
+<p>La línea base define el dominio de referencia: el rango de condiciones observadas durante el período usado como comparación. Desde allí, el modelo mide la distancia de cada cuenca-año al comportamiento de referencia. Una distancia baja indica cercanía con el régimen histórico; una distancia alta indica mayor alejamiento estructural.</p>
+<p>La trayectoria agrega movimiento a esa lectura. La velocidad muestra si la cuenca se acerca o se aleja de su referencia. La aceleración indica si ese movimiento se intensifica o se amortigua. El jerk permite detectar cambios bruscos en la dinámica. Con estas piezas, la lectura deja de ser una fotografía anual y pasa a describir una secuencia temporal.</p>
+<p>La dimensión espacial completa el cuadro. Una cuenca puede estar lejos de su línea base y, al mismo tiempo, formar parte de un patrón regional amplio. También puede parecer estable frente al conjunto regional, pero diferenciarse fuertemente de sus vecinas inmediatas. Por eso la MRCT incorpora dominio local y gradientes espaciales: la resiliencia territorial depende tanto del estado interno de la unidad como del contexto en que se inserta.</p>
+<p>Finalmente, la sensibilidad climática permite reconocer cuencas más reactivas ante presiones persistentes. Dos unidades pueden tener una distancia similar respecto de la línea base, pero responder de manera muy distinta frente a aridez, albedo o temperatura. Esa diferencia importa para priorizar seguimiento, focalizar análisis y anticipar trayectorias de mayor presión.</p>
+</section>
+<section id="cómo-leer-este-libro" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="cómo-leer-este-libro"><span class="header-section-number">1.3</span> Cómo leer este libro</h2>
+<p>Este libro está organizado como una cadena metodológica. Cada capítulo toma el producto del capítulo anterior y lo transforma en una nueva capa de interpretación.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Insumos satelitales] --&gt; B[Indicadores base]
+    B --&gt; C[Vector de estado&lt;br/&gt;y línea base]
+    C --&gt; D[Trayectoria temporal]
+    D --&gt; E[Integración espacial]
+    E --&gt; F[Sensibilidad climática]
+    F --&gt; G[Potencial de transición&lt;br/&gt;y resiliencia]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>El capítulo de insumos describe las capas satelitales, el período de análisis y los criterios de control de calidad. El capítulo de indicadores base muestra cómo esas capas se convierten en métricas por cuenca y año. El capítulo de vector de estado integra los indicadores y define el dominio de referencia. Los capítulos de trayectoria e integración espacial incorporan dinámica temporal y contexto territorial. El capítulo de sensibilidad estima la reactividad frente a presiones climáticas. La síntesis final combina estas señales en el Potencial de Transición y en la resiliencia operativa.</p>
+<p>La lectura puede hacerse de dos formas. Quien necesite entender la arquitectura completa debe seguir el orden del libro. Quien busque una etapa específica puede entrar por el capítulo correspondiente, siempre teniendo presente que los productos finales dependen de la coherencia de toda la cadena.</p>
+</section>
+<section id="objetivos" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="objetivos"><span class="header-section-number">1.4</span> Objetivos</h2>
+<section id="objetivo-general" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="objetivo-general"><span class="header-section-number">1.4.1</span> Objetivo general</h3>
 <p>Construir una matriz de resiliencia climática territorial que represente el estado ecosistémico de cada unidad territorial, su evolución temporal, su coherencia espacial y su propensión a transición, usando señales satelitales e indicadores derivados.</p>
 </section>
-<section id="objetivos-específicos" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="objetivos-específicos"><span class="header-section-number">1.3</span> Objetivos específicos</h2>
-<ul>
-<li>Derivar indicadores base a partir de mosaicos satelitales anuales.</li>
-<li>Integrar los indicadores en un vector de estado ecosistémico por unidad territorial y año.</li>
-<li>Definir una línea base o dominio de referencia.</li>
-<li>Medir la trayectoria temporal del sistema con derivadas discretas.</li>
-<li>Incorporar la dimensión espacial mediante dominio local.</li>
-<li>Estimar la sensibilidad del sistema frente a presiones persistentes.</li>
-<li>Sintetizar la información en métricas de transición y resiliencia territorial.</li>
-</ul>
+<section id="objetivos-específicos" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="objetivos-específicos"><span class="header-section-number">1.4.2</span> Objetivos específicos</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Objetivo específico</th>
+<th>Producto asociado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Derivar indicadores base a partir de mosaicos satelitales anuales.</td>
+<td>Indicadores por cuenca y año.</td>
+</tr>
+<tr class="even">
+<td>Integrar los indicadores en un vector de estado ecosistémico.</td>
+<td>Panel longitudinal cuenca × año.</td>
+</tr>
+<tr class="odd">
+<td>Definir una línea base o dominio de referencia.</td>
+<td>Distancia estructural al dominio.</td>
+</tr>
+<tr class="even">
+<td>Medir la trayectoria temporal del sistema con derivadas discretas.</td>
+<td>Velocidad, aceleración, jerk y estado dinámico.</td>
+</tr>
+<tr class="odd">
+<td>Incorporar la dimensión espacial mediante dominio local.</td>
+<td>Distancia local y lectura de vecindad.</td>
+</tr>
+<tr class="even">
+<td>Estimar la sensibilidad del sistema frente a presiones persistentes.</td>
+<td>Índice de sensibilidad climática.</td>
+</tr>
+<tr class="odd">
+<td>Sintetizar la información en métricas de transición y resiliencia territorial.</td>
+<td>Potencial de Transición, resiliencia operativa y tipologías asociadas.</td>
+</tr>
+</tbody>
+</table>
+<p>En conjunto, estos objetivos permiten pasar desde observaciones satelitales anuales hacia una lectura territorial integrada, comparable y trazable. La MRCT ordena la evidencia disponible para formular mejores preguntas, identificar territorios prioritarios y apoyar decisiones con una base técnica explícita.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
