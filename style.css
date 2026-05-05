@@ -1,0 +1,115 @@
+body {
+  text-align: justify;
+}
+
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p{
+  font-size: 16px
+}
+
+
+dl {
+  font-size: 13px
+}
+p code {
+  white-space: inherit;
+}
+
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+  font-size: 14px
+}
+
+ul, li{
+  font-size: 16px
+}
+
+
+h1{
+  font-size: 28px
+}
+
+h2{
+  font-size: 25px
+}
+
+h3{
+  font-size: 22px
+}
+
+h4{
+  font-size: 18px
+}
+figcaption.figure-caption{
+  font-size: 15px
+}
+.tabla-indicador {
+  max-width: 400px;
+  margin: 1em auto;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed; /* importante para forzar anchos */
+}
+
+.tabla-indicador th,
+.tabla-indicador td {
+  border: 1px solid #ccc;
+  padding-bottom: 5px;
+  line-height: 1;     /* compacta verticalmente */
+}
+
+/* Establecer ancho relativo de columnas (etapa amplia, estado angosta) */
+.tabla-indicador td:first-child,
+.tabla-indicador th:first-child {
+  width: 75%;            /* Etapa: más ancha */
+  font-size: 15px;    /* opcional: ajustar tamaño de letra */
+}
+
+.tabla-indicador td:last-child,
+.tabla-indicador th:last-child {
+  width: 25%;           /* Estado: más angosta */
+  text-align: center;
+  font-size: 15px;   /* íconos emoji más visibles */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.tabla-reuniones {
+  max-width: 600px;
+  margin: 1em auto;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px
+  table-layout: fixed; /* importante para forzar anchos */
+}
+
+
+.tabla-reuniones td:last-child,
+.tabla-reuniones th:last-child {
+  width: 55%;           /* Estado: más angosta */
+  /*  font-size: 15px;   /* íconos emoji más visibles */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+
+/* Aplica a tablas con clase 'tabla-avance' */
+.tabla-avance td {
+  font-size: 13px;        /* Tamaño general del texto */
+}
+
+.tabla-avance thead th {
+  font-size: 14px;        /* Tamaño de letra del encabezado */
+  font-weight: bold;
+}
+
