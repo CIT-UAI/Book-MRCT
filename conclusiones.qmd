@@ -1,0 +1,109 @@
+---
+title: "Conclusiones"
+subtitle: "Lectura metodológica y uso territorial de la MRCT"
+---
+
+La Matriz de Resiliencia Climática Territorial organiza señales satelitales en un sistema de lectura multivariado para cuencas hidrográficas. Su aporte principal no está en producir un indicador aislado, sino en construir una secuencia coherente: insumos, indicadores base, vector de estado, línea base, trayectoria temporal, contexto espacial, sensibilidad y síntesis operativa de resiliencia.
+
+El resultado es una metodología que permite observar el territorio como un sistema dinámico. Cada cuenca se representa por su estado ecosistémico anual, se compara con una referencia histórica, se evalúa en su trayectoria, se contrasta con sus vecinas y se analiza frente a forzantes persistentes. A partir de esa arquitectura, la MRCT traduce señales complejas en métricas operativas como $D$, $V$, $A$, $J$, $D_{local}$, $SENS$, $PT$ y $RES$.
+
+El cierre metodológico del libro debe leerse con una precaución central: la MRCT mide patrones observables y relaciones operativas dentro de un marco estadístico definido. No reemplaza la validación ecológica de terreno, ni identifica causalidad por sí sola. Su valor está en ordenar evidencia territorial, detectar contrastes, priorizar preguntas y apoyar decisiones con una base reproducible.
+
+::: {.callout-note}
+## Para tomadores de decisión
+
+La MRCT no entrega una sentencia final sobre el estado ecológico de una cuenca. Entrega una lectura integrada de señales: qué cambió, cuánto se alejó del régimen de referencia, con qué ritmo se mueve, si su entorno acompaña ese cambio y qué tan sensible parece frente a presiones climáticas. Esa lectura permite orientar dónde mirar primero y qué tipo de pregunta territorial formular.
+:::
+
+## Qué construye la MRCT {#sec-que-construye-mrct}
+
+La MRCT construye una cadena de información territorial con tres capas principales.
+
+Primero, una capa descriptiva. Los indicadores base resumen vegetación, agua, nieve, humedales, aridez, energía superficial y estructura del paisaje a partir de mosaicos Landsat anuales. Esta capa responde qué se observa en cada cuenca y año.
+
+Segundo, una capa dinámica. El vector de estado integra esos indicadores en una representación multivariada, define una línea base y calcula la distancia al dominio de referencia. Luego, las derivadas temporales agregan ritmo, dirección e intensidad del cambio.
+
+Tercero, una capa de síntesis. El dominio local agrega contexto espacial; la sensibilidad climática estima respuesta a forzantes persistentes; y el Potencial de Transición transforma esas señales en una métrica operativa de resiliencia territorial.
+
+```{mermaid}
+flowchart TD
+    n1["Insumos satelitales<br/>Landsat anual"] --> n2["Indicadores base<br/>vegetación agua nieve <br/>paisaje energía"]
+    n2 --> n3["Vector de estado<br/>cuenca por año"]
+    n3 --> n4["Línea base<br/>2013 a 2022"]
+    n4 --> n5["Dominio global<br/>D"]
+    n5 --> n6["Trayectoria temporal<br/>V A J"]
+    n3 --> n7["Dominio local<br/>D local"]
+    n5 --> n8["Sensibilidad<br/>SENS"]
+    n6 --> n9["Síntesis<br/>PT y RES"]
+    n7 --> n9
+    n8 --> n9
+```
+
+## Qué mide y qué interpreta {#sec-mide-interpreta}
+
+Una lectura responsable exige separar medición directa, inferencia estadística e interpretación territorial. La tabla siguiente resume esa distinción.
+
+| Elemento | Qué mide directamente | Qué puede apoyar como interpretación |
+|---|---|---|
+| Indicadores base | Valores derivados de rasters por cuenca y año. | Condiciones de cobertura, humedad, nieve, fragmentación o energía superficial. |
+| Vector de estado | Combinación multivariada de indicadores estructurales. | Estado ecosistémico integrado de cada unidad territorial. |
+| Dominio global $D$ | Distancia al régimen de referencia de la línea base. | Alejamiento respecto de un comportamiento histórico esperado. |
+| Velocidad, aceleración y jerk | Cambios discretos en la serie de $D$. | Ritmo, intensificación o reversión de la trayectoria. |
+| Dominio local $D_{local}$ | Diferencia multivariada frente a cuencas vecinas. | Anomalías locales o coherencia espacial del cambio. |
+| Sensibilidad $SENS$ | Relación estadística entre $D$ y forzantes IA, ALB y TB. | Mayor o menor reactividad frente a presiones climáticas persistentes. |
+| $PT$ | Combinación operativa de distancia, dinámica, sensibilidad y contexto espacial. | Propensión relativa a transición ecosistémica. |
+| $RES$ | Transformación inversa de $PT$ en escala 0-1. | Resiliencia operativa comparada entre cuencas y años. |
+
+: Alcance de medición e interpretación de los principales productos MRCT. {#tbl-alcance-mrct}
+
+La columna de interpretación no debe leerse como causalidad automática. Por ejemplo, un $SENS$ alto indica que la serie de dominio se asocia fuertemente con los forzantes incluidos, pero no prueba por sí solo el mecanismo ecológico específico. Del mismo modo, un $PT$ alto no confirma una transición irreversible; indica una combinación de señales que justifica revisión prioritaria.
+
+## Integración entre capítulos y productos {#sec-tabla-integracion}
+
+Cada capítulo aporta una pieza de la arquitectura metodológica. La utilidad del libro está en que esas piezas no quedan separadas, sino conectadas en un flujo de cálculo e interpretación.
+
+| Capítulo | Producto principal | Función dentro de la MRCT |
+|---|---|---|
+| [Introducción](intro.qmd#sec-intro) | Esquema general del modelo | Presenta el problema, el enfoque y la lógica de lectura territorial. |
+| [Insumos satelitales](insumos.qmd#fuente-de-datos) | Capas anuales y control de calidad | Define las fuentes, la grilla espacial y las condiciones mínimas de uso. |
+| [Indicadores base](inds_base.qmd#sec-veg-energia) | Variables ecosistémicas por cuenca y año | Construye la capa descriptiva del sistema. |
+| [Vector de estado](vector_es.qmd#sec-hipercubo) | Hipercubo, panel, línea base y dominio | Integra variables y define la referencia multivariada. |
+| [Trayectoria del estado](trayectoria.qmd#sec-derivadas) | $D$, $V$, $A$ y $J$ | Agrega movimiento, ritmo e intensificación temporal. |
+| [Integración espacial](integracion_espacial.qmd#sec-dominio-global-local) | $D_{local}$ y $DIV$ | Incorpora vecindad y coherencia territorial. |
+| [Sensibilidad del sistema](sensibilidad.qmd#sec-forzantes-climaticos) | $SENS$ | Estima respuesta frente a aridez, albedo y temperatura. |
+| [Potencial de transición y resiliencia](pt_resiliencia.qmd#sec-potencial-transicion) | $PT$, $RES$, `RES_STATE`, `RES_TYPE` y `RES_GRAD` | Sintetiza transición y resiliencia operativa. |
+| [Conclusiones](conclusiones.qmd#sec-que-construye-mrct) | Síntesis metodológica y operativa | Ordena alcances, límites y recomendaciones de lectura. |
+
+: Relación entre capítulos, productos y función metodológica. {#tbl-capitulos-productos}
+
+## Recomendaciones de lectura {#sec-recomendaciones-lectura}
+
+Los resultados deben leerse de forma secuencial. Primero conviene revisar la calidad y disponibilidad de los insumos. Luego se interpretan los indicadores base para entender qué dimensión ecosistémica explica las diferencias entre cuencas. Después se analiza $D$ para identificar alejamiento respecto de la línea base.
+
+La trayectoria temporal agrega una segunda pregunta: no solo dónde está la cuenca, sino hacia dónde se mueve. Una cuenca con $D$ alto y velocidad negativa puede estar iniciando recuperación; una cuenca con $D$ moderado y velocidad positiva puede estar entrando en tensión.
+
+La integración espacial debe usarse para separar señales locales de patrones regionales. Un valor alto de $D_{local}$ puede indicar una discontinuidad territorial relevante, mientras que un valor bajo puede sugerir que la condición observada forma parte de un patrón compartido por el entorno.
+
+La sensibilidad debe interpretarse como reactividad estadística, no como causalidad cerrada. Su función principal es identificar cuencas donde las variaciones de aridez, albedo y temperatura se asocian con cambios importantes en el dominio ecosistémico.
+
+Finalmente, $PT$ y $RES$ deben usarse como síntesis operativa. Son útiles para ordenar prioridades, comparar cuencas y comunicar resultados en escala común. Sin embargo, siempre deben volver a leerse junto con sus componentes: $D$, $V$, $SENS$ y $D_{local}$.
+
+## Aplicaciones territoriales {#sec-aplicaciones-territoriales}
+
+La MRCT puede apoyar distintos usos de planificación y gestión territorial:
+
+- priorización de cuencas para monitoreo ecológico;
+- identificación de zonas con señales tempranas de transición;
+- comparación entre unidades territoriales bajo una referencia común;
+- seguimiento anual de trayectorias ecosistémicas;
+- evaluación de coherencia espacial de cambios observados;
+- apoyo a escenarios prospectivos de presión antrópica o climática;
+- comunicación técnica entre equipos de teledetección, planificación y toma de decisiones.
+
+Estas aplicaciones requieren mantener trazabilidad entre datos, parámetros y resultados. La interpretación debe documentar el período de línea base, los años disponibles, los umbrales de clasificación, los pesos $\alpha$ y $\beta_{local}$, y cualquier cambio metodológico aplicado durante el procesamiento.
+
+## Cierre {#sec-cierre}
+
+La MRCT propone una forma ordenada de transformar observaciones satelitales en lectura territorial. Su fortaleza está en combinar evidencia multivariada, comparación histórica, dinámica temporal, contexto espacial y sensibilidad climática dentro de un mismo flujo.
+
+Como toda herramienta de modelación, su utilidad depende de una lectura disciplinada. Los mapas y métricas no deben interpretarse como verdades aisladas, sino como señales organizadas para orientar análisis, priorización y conversación técnica. En ese sentido, la MRCT no sustituye el juicio experto ni el trabajo de terreno; los hace más focalizados, trazables y comparables.

@@ -1,0 +1,168 @@
+---
+title: "Integración Espacial"
+subtitle: "Dominio local y coherencia territorial"
+---
+
+Hasta aquí, el modelo ha descrito el estado ecosistémico de cada cuenca y su trayectoria temporal respecto de una línea base. Esa lectura es necesaria, pero todavía incompleta: una unidad territorial no existe aislada. Su condición ecológica se interpreta mejor cuando se compara también con el entorno que la rodea.
+
+La integración espacial incorpora esa segunda referencia. El dominio global responde cuánto se aleja una cuenca del régimen histórico del conjunto territorial. El dominio local responde si esa misma cuenca es coherente o anómala respecto de sus vecinas inmediatas. Esta diferencia es relevante para la toma de decisiones, porque permite distinguir entre procesos extendidos, que afectan a un sector territorial completo, y señales localizadas, que pueden requerir intervención focalizada.
+
+::: {.callout-note}
+## Para tomadores de decisión
+
+Dos cuencas pueden tener el mismo valor de distancia al dominio global, pero representar situaciones territoriales distintas. Si una cuenca degradada está rodeada de cuencas igualmente degradadas, el problema parece formar parte de una condición regional. Si está rodeada de cuencas en mejor estado, la señal apunta a una anomalía local. La MRCT usa el dominio local para separar estas dos lecturas.
+:::
+
+## Dominio global y dominio local {#sec-dominio-global-local}
+
+El dominio global $D$ se calcula respecto de la línea base del sistema completo. Para cada observación $\mathbf{x}_{i,t}$, donde $i$ identifica la cuenca y $t$ el año, $D$ mide la distancia al centro y a la estructura de covarianza del régimen de referencia:
+
+$$
+D(\mathbf{x}_{i,t}) =
+\frac{
+\sqrt{(\mathbf{x}_{i,t} - \boldsymbol{\mu})^\top \hat{\Sigma}^{-1}(\mathbf{x}_{i,t} - \boldsymbol{\mu})}
+}{\sqrt{d}}
+$$
+
+donde $\boldsymbol{\mu}$ y $\hat{\Sigma}$ se estiman durante la línea base, y $d$ es el número de variables estructurales incluidas. Esta métrica permite saber si una cuenca se aleja del comportamiento histórico general.
+
+Sin embargo, el territorio puede tener gradientes naturales muy marcados. En una región extensa, una cuenca de montaña, una cuenca lacustre y una cuenca de transición pueden no ser directamente equivalentes aunque pertenezcan al mismo sistema regional. Por eso se introduce un segundo dominio, construido a partir de las cuencas vecinas. Este dominio no reemplaza al global: lo complementa.
+
+## Vecindad espacial KNN {#sec-vecindad-knn}
+
+La vecindad espacial se define mediante los $k$ vecinos más cercanos de cada cuenca. En la configuración por defecto se usa:
+
+$$
+k = 8
+$$
+
+El cálculo se realiza sobre puntos representativos de las geometrías de cuenca. Si el archivo vectorial está en coordenadas geográficas, primero se reproyecta a UTM zona 19S (EPSG:32719), de modo que las distancias se calculen en unidades métricas. Luego, para cada cuenca $i$, se identifica el conjunto:
+
+$$
+N_k(i) = \{j_1, j_2, \ldots, j_k\}
+$$
+
+donde $N_k(i)$ contiene las $k$ cuencas más cercanas a $i$, excluyendo la propia cuenca. Esta exclusión es importante: el dominio local debe representar el entorno, no repetir la observación que se está evaluando.
+
+La contribución de cada vecino se pondera con un kernel gaussiano. Los vecinos más cercanos tienen mayor peso, pero los demás no desaparecen abruptamente:
+
+$$
+w_{ij} =
+\exp\!\left(
+-\frac{d_{ij}^{2}}{2\sigma_i^{2}}
+\right)
+$$
+
+donde $d_{ij}$ es la distancia entre la cuenca $i$ y el vecino $j$. El parámetro de escala se define localmente como:
+
+$$
+\sigma_i = \max\left(\text{mediana}\{d_{ij}: j \in N_k(i)\}, 10^{-6}\right)
+$$
+
+Luego los pesos se normalizan para que sumen uno:
+
+$$
+\tilde{w}_{ij} = \frac{w_{ij}}{\sum_{j \in N_k(i)} w_{ij}}
+$$
+
+Esta normalización permite interpretar cada peso como la participación relativa del vecino $j$ en la referencia local de la cuenca $i$.
+
+## Construcción del dominio local {#sec-dominio-local}
+
+La intuición del dominio local puede expresarse como una media ponderada del entorno: una cuenca se compara contra lo que ocurre alrededor de ella. En una versión simplificada, esa idea se escribiría como:
+
+$$
+\bar{D}_{local,i,t} =
+\sum_{j \in N_k(i)} \tilde{w}_{ij} D_{j,t}
+$$
+
+Esta expresión es útil para comunicar la lógica espacial, pero la implementación de la MRCT usa una versión más informativa. En lugar de promediar solo el valor escalar $D$ de los vecinos, compara el vector estructural completo de la cuenca con el vector estructural de su vecindad. Así se conserva la información multivariable de vegetación, agua, nieve, humedales y estructura del paisaje.
+
+Para cada año $t$, se toma la matriz de variables estructurales de los vecinos válidos de la cuenca $i$:
+
+$$
+\mathbf{X}_{N_k(i),t} =
+\{\mathbf{x}_{j,t}: j \in N_k(i)\}
+$$
+
+Con los pesos espaciales normalizados se calcula la media local:
+
+$$
+\boldsymbol{\mu}_{local,i,t} =
+\sum_{j \in N_k(i)} \tilde{w}_{ij}\mathbf{x}_{j,t}
+$$
+
+También se estima una covarianza local regularizada:
+
+$$
+\hat{\Sigma}_{local,i,t} =
+\text{Cov}\left(\mathbf{X}_{N_k(i),t}\right) + 10^{-3}\mathbf{I}
+$$
+
+La regularización diagonal evita que la matriz sea singular cuando los vecinos son muy parecidos entre sí o cuando el número efectivo de observaciones válidas es bajo. Con esa media y esa covarianza, el dominio local se calcula como una distancia de Mahalanobis local:
+
+$$
+D_{local,i,t} =
+\sqrt{
+(\mathbf{x}_{i,t} - \boldsymbol{\mu}_{local,i,t})^\top
+\hat{\Sigma}_{local,i,t}^{-1}
+(\mathbf{x}_{i,t} - \boldsymbol{\mu}_{local,i,t})
+}
+$$
+
+El cálculo se realiza por año, porque la comparación debe hacerse entre cuencas observadas bajo el mismo contexto temporal. Si una cuenca o sus vecinos no tienen datos finitos para todas las variables estructurales requeridas, la observación se marca como no disponible. Además, se exige al menos dos vecinos válidos para estimar la covarianza local.
+
+## Divergencia local {#sec-divergencia-local}
+
+Además de $D_{local}$, el pipeline calcula una medida auxiliar de divergencia entre la lectura local y la lectura global:
+
+$$
+DIV_{i,t} =
+\frac{D_{local,i,t} - D_{i,t}}{D_{i,t} + 10^{-6}}
+$$
+
+Esta razón ayuda a identificar si la presión local es mayor o menor que la distancia global de la cuenca. Valores positivos indican que la cuenca se diferencia más de sus vecinas que del régimen global. Valores negativos indican que, aunque pueda estar lejos del dominio global, su entorno inmediato presenta una condición similar o incluso más extrema.
+
+La interpretación debe hacerse con cuidado. $DIV$ no reemplaza a $D$ ni a $D_{local}$; es una señal comparativa. Su utilidad principal es ordenar casos de contraste para análisis territorial: unidades que parecen normales en la lectura global pero anómalas localmente, o unidades con deterioro regionalizado que no destacan como anomalía espacial.
+
+## Interpretación territorial {#sec-interpretacion-espacial}
+
+La combinación entre dominio global y dominio local permite construir una matriz cualitativa de lectura territorial:
+
+| Dominio global | Dominio local | Lectura territorial |
+|---|---|---|
+| Bajo | Bajo | Cuenca cercana a su referencia histórica y coherente con su entorno. |
+| Alto | Bajo | Alejamiento general compartido por el entorno; posible señal regional. |
+| Bajo | Alto | Anomalía local: la cuenca difiere de vecinas aunque no se aleje fuertemente del dominio global. |
+| Alto | Alto | Alejamiento estructural y discontinuidad espacial; caso prioritario de revisión. |
+
+: Lectura integrada de dominio global y dominio local. {#tbl-dominio-local}
+
+Esta tabla no es una regla automática de decisión. Es un marco de interpretación para leer mapas y priorizar preguntas. En la práctica, una cuenca con $D$ alto y $D_{local}$ bajo puede ser parte de un frente regional de cambio, mientras que una cuenca con $D$ bajo y $D_{local}$ alto puede revelar una perturbación localizada, un error de medición o una condición ecológica singular que merece revisión.
+
+El dominio local también cumple una función dentro del Potencial de Transición. En el capítulo siguiente, $D_{local}$ entra como un factor multiplicativo que aumenta el PT cuando el contexto espacial refuerza la presión ecosistémica. De este modo, la resiliencia final no depende solo del estado interno de la cuenca, sino también de la estructura territorial en la que se inserta.
+
+## Diagrama de integración espacial {#sec-diagrama-integracion-espacial}
+
+```{mermaid}
+flowchart TD
+    A[Geometrías de cuenca<br/>RID y polígonos] --> B[Punto representativo<br/>por cuenca]
+    B --> C[KNN espacial<br/>k = 8 vecinos]
+    C --> D[Pesos gaussianos<br/>según distancia]
+    E[Vector estructural<br/>por cuenca y año] --> F[Media y covarianza<br/>del vecindario]
+    D --> F
+    F --> G[Dominio local<br/>D_local]
+    H[Dominio global<br/>D] --> I[Lectura integrada<br/>global vs local]
+    G --> I
+    I --> J[PT y resiliencia<br/>capítulos siguientes]
+```
+
+## Productos esperados {#sec-productos-integracion-espacial}
+
+La integración espacial genera tres productos principales para análisis y comunicación:
+
+- mapa de $D_{local}$ por cuenca y año, especialmente para el año más reciente;
+- mapa o tabla de $DIV$, útil para seleccionar casos de contraste entre lectura global y lectura local;
+- visualización del vecindario KNN para cuencas seleccionadas, mostrando vecinos, distancias y pesos relativos.
+
+Estos productos deben leerse junto con los mapas de $D$, velocidad y sensibilidad climática. El valor de la integración espacial no está en producir una capa adicional aislada, sino en conectar la trayectoria ecosistémica con la estructura territorial que la rodea.

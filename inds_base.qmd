@@ -1,0 +1,227 @@
+---
+title: "Indicadores Base"
+---
+
+Los mosaicos satelitales son señal física bruta. Este capítulo describe cómo esa señal se transforma en métricas interpretables a escala de cuenca.
+
+El proceso de cálculo opera sobre un área filtrada. No todos los píxeles de una cuenca participan: se excluyen las zonas con intervención antrópica significativa (índice antrópico superior a 0,2) y los píxeles sin datos válidos de NDVI. Esto garantiza que los indicadores reflejen el estado del ecosistema natural, no la huella de la actividad humana.
+
+Los indicadores se organizan en tres grupos: **vegetación y energía**, **agua, humedad y criósfera**, y **estructura del paisaje**. Cada grupo captura una dimensión diferente del estado ecosistémico de la unidad territorial.
+
+```{mermaid}
+flowchart LR
+    A[Capas satelitales<br/>anuales] --> B[Índices<br/>espectrales]
+    B --> C1[Vegetación<br/>y energía]
+    B --> C2[Agua, humedad<br/>y criósfera]
+    B --> C3[Estructura<br/>del paisaje]
+    C1 --> D[Indicadores base<br/>por cuenca · año]
+    C2 --> D
+    C3 --> D
+```
+
+## Vegetación y energía {#sec-veg-energia}
+
+::: {.callout-note}
+## Para tomadores de decisión
+
+Este grupo responde a la pregunta: ¿cuánta vegetación activa hay en la cuenca y en qué condiciones está? Incluye también la carga térmica y la aridez del territorio, dos señales que complementan la lectura vegetal con información sobre el balance energético e hídrico superficial.
+:::
+
+### VEG — Cobertura vegetal activa
+
+VEG expresa la fracción del área de la cuenca cubierta por vegetación activa. Un píxel se clasifica como vegetado cuando su NDVI supera el umbral $\theta_{veg}$ (valor por defecto: 0,2).
+
+$$\text{VEG} = \frac{\displaystyle\sum_{p \in C} \mathbf{1}[\text{NDVI}_p \geq \theta_{veg}]}{|C|}$$
+
+donde $C$ es el conjunto de píxeles válidos de la cuenca y $\mathbf{1}[\cdot]$ es la función indicadora. El resultado es un valor entre 0 y 1.
+
+**Interpretación.** Valores altos indican mayor presencia de vegetación activa. La serie temporal de VEG permite detectar procesos de expansión, retracción o estabilidad de la cobertura vegetal en cada cuenca.
+
+---
+
+### IRV — Índice de Vigor Vegetativo
+
+IRV mide la intensidad del verdor exclusivamente en los píxeles clasificados como vegetados. Complementa a VEG: una cuenca puede tener baja cobertura pero alta intensidad si la vegetación remanente es densa y vigorosa, o alta cobertura con bajo vigor si atraviesa estrés.
+
+$$\text{IRV} = \frac{\displaystyle\sum_{p:\,\text{NDVI}_p \geq \theta_{veg}} \text{NDVI}_p}{\left|\{p : \text{NDVI}_p \geq \theta_{veg}\}\right|}$$
+
+Es el promedio de NDVI calculado solo sobre los píxeles efectivamente vegetados.
+
+**Interpretación.** Valores altos indican vegetación más densa o en mejor estado fisiológico. Valores bajos, próximos al umbral, sugieren vegetación en el límite de actividad o bajo estrés.
+
+---
+
+### ALB — Albedo superficial medio
+
+ALB es el promedio del albedo dentro de la cuenca, calculado sobre todos los píxeles válidos del mosaico.
+
+$$\text{ALB} = \frac{1}{|C|} \sum_{p \in C} \alpha_p$$
+
+donde $\alpha_p$ es el valor de albedo del píxel $p$.
+
+**Interpretación.** El albedo refleja la composición superficial del territorio. Valores altos pueden asociarse a mayor presencia de nieve, suelos expuestos o vegetación degradada. Cambios sostenidos en el albedo medio de una cuenca son señal de transformación estructural de la superficie.
+
+---
+
+### TB — Temperatura de brillo media
+
+TB es el promedio de la señal térmica superficial de la cuenca, en grados Celsius.
+
+$$\text{TB} = \frac{1}{|C|} \sum_{p \in C} T_p$$
+
+donde $T_p$ es la temperatura de brillo del píxel $p$.
+
+**Interpretación.** Valores altos indican mayor carga térmica media en la cuenca. La serie temporal de TB permite identificar tendencias de calentamiento superficial o cambios estacionales atípicos.
+
+---
+
+### IA — Índice de Aridez
+
+IA es el promedio del índice NDDI dentro de la cuenca. Captura la tensión hídrica relativa al estado de la vegetación.
+
+$$\text{IA} = \frac{1}{|C|} \sum_{p \in C} \text{NDDI}_p$$
+
+**Interpretación.** Valores altos señalan mayor contraste entre señal vegetal y disponibilidad hídrica, lo que se interpreta como condiciones más secas o mayor presión sobre los recursos hídricos del ecosistema. IA también participa en la estimación de sensibilidad climática del modelo.
+
+---
+
+## Agua, humedad y criósfera {#sec-hidro}
+
+::: {.callout-note}
+## Para tomadores de decisión
+
+Este grupo describe el componente hídrico y nival de las cuencas. Responde a preguntas como: ¿cuánta agua superficial hay?, ¿qué fracción corresponde a humedales?, ¿cuán heterogénea es la distribución del agua dentro de la cuenca? y ¿qué fracción de la cuenca está cubierta por nieve?
+:::
+
+### WA — Fracción de agua superficial
+
+WA es la proporción de píxeles con señal de agua abierta, definida como aquellos con NDWI superior al umbral $\theta_w$ (valor por defecto: 0,2).
+
+$$\text{WA} = \frac{\displaystyle\sum_{p \in C} \mathbf{1}[\text{NDWI}_p \geq \theta_w]}{|C|}$$
+
+**Interpretación.** Valores altos indican mayor fracción de agua superficial detectable. Variaciones interanuales en WA pueden reflejar cambios en el régimen de precipitaciones, derretimiento glaciar o alteraciones en el balance hídrico de la cuenca.
+
+---
+
+### HUM — Fracción de humedales
+
+HUM captura la zona de transición hídrica: píxeles con NDWI en un rango intermedio, entre el umbral de humedal $\theta_{hum}$ y el de agua abierta $\theta_w$.
+
+$$\text{HUM} = \frac{\displaystyle\sum_{p \in C} \mathbf{1}[\theta_{hum} \leq \text{NDWI}_p < \theta_w]}{|C|}$$
+
+**Interpretación.** HUM representa la extensión relativa de humedales, vegas o superficies saturadas. Estas zonas tienen alta relevancia ecológica como reguladores hídricos y refugios de biodiversidad. Su reducción puede ser señal de desecación o pérdida de funciones reguladoras.
+
+---
+
+### IEH — Índice de Estructura Hídrica
+
+IEH mide la variabilidad interna de la señal NDWI en los píxeles con agua superficial. Se calcula como la desviación estándar de NDWI sobre el subconjunto hídrico de la cuenca.
+
+$$\text{IEH} = \sqrt{\frac{1}{N_w} \sum_{p:\,\text{NDWI}_p \geq \theta_w} \left(\text{NDWI}_p - \overline{\text{NDWI}}_w\right)^2}$$
+
+donde $N_w$ es el número de píxeles hídricos y $\overline{\text{NDWI}}_w$ es su media. Cuando una cuenca no tiene ningún píxel hídrico, IEH se registra como no disponible.
+
+**Interpretación.** Una cuenca con un único lago homogéneo tendrá IEH bajo. Una con múltiples ríos, lagunas y zonas de inundación distribuidas presentará IEH alto. Valores altos sugieren mayor diversidad de expresiones hídricas, lo que suele asociarse a mayor riqueza ecosistémica.
+
+---
+
+### PN — Fracción nival
+
+PN es la proporción de píxeles con señal de nieve o hielo, definida mediante un umbral de NDSI $\theta_{snow}$ (valor por defecto: 0,4).
+
+$$\text{PN} = \frac{\displaystyle\sum_{p \in C} \mathbf{1}[\text{NDSI}_p \geq \theta_{snow}]}{|C|}$$
+
+**Interpretación.** En la Patagonia chilena, PN refleja la extensión de los campos de hielo y la cobertura nival estacional. Variaciones en PN a lo largo de la serie temporal son una señal directa de cambios en el criósfera de la cuenca.
+
+---
+
+## Estructura del paisaje {#sec-paisaje}
+
+::: {.callout-note}
+## Para tomadores de decisión
+
+Este grupo no pregunta cuánta vegetación hay, sino cómo está organizada espacialmente. Una cuenca puede tener la misma cobertura vegetal que otra pero con una estructura completamente diferente: concentrada en un solo bloque o fragmentada en muchos parches pequeños. Esa diferencia importa para la resiliencia ecológica.
+:::
+
+Las métricas de estructura del paisaje se calculan sobre la distribución espacial de los parches de vegetación activa dentro de cada cuenca. Un parche es un conjunto de píxeles vegetados contiguos, usando conectividad de 8 vecinos.
+
+### NP — Número de parches
+
+NP es el conteo total de parches de vegetación identificados en la cuenca.
+
+$$\text{NP} = \text{número de componentes conectadas en la máscara de vegetación}$$
+
+**Interpretación.** A igual cobertura, una cuenca con muchos parches pequeños está más fragmentada que una con pocos parches grandes. NP crece con la fragmentación del ecosistema.
+
+---
+
+### MPA — Tamaño medio de parche
+
+MPA es el promedio del tamaño de los parches, expresado en píxeles.
+
+$$\text{MPA} = \frac{\displaystyle\sum_{k=1}^{NP} A_k}{NP}$$
+
+donde $A_k$ es el área del $k$-ésimo parche.
+
+**Interpretación.** Valores bajos indican predominancia de parches pequeños, lo que se asocia a mayor fragmentación. Valores altos sugieren una estructura más compacta y continua.
+
+---
+
+### PATCH\_DENSITY — Densidad de parches
+
+PATCH_DENSITY es el número de parches por hectárea de paisaje efectivo.
+
+$$\text{PATCH\_DENSITY} = \frac{NP}{A_{ha}}$$
+
+donde $A_{ha}$ es el área total de la cuenca en hectáreas, calculada a partir del tamaño de píxel.
+
+**Interpretación.** Normaliza NP por el tamaño de la cuenca, permitiendo comparar entre unidades territoriales de diferente extensión. Valores altos indican fragmentación densa.
+
+---
+
+### LPI — Índice del parche más grande
+
+LPI es la proporción del área de la cuenca ocupada por el parche de vegetación dominante.
+
+$$\text{LPI} = \frac{A_{max}}{|C|}$$
+
+donde $A_{max}$ es el área en píxeles del parche más grande.
+
+**Interpretación.** Valores altos indican que la vegetación está concentrada en una estructura dominante. Valores bajos sugieren que no existe un parche principal y que la cobertura está dispersa en fragmentos de tamaño similar.
+
+---
+
+### CONNECTIVITY — Conectividad ecológica
+
+CONNECTIVITY es un índice compuesto que integra la cobertura vegetal y la estructura de los parches en una sola métrica de continuidad.
+
+$$\text{CONNECTIVITY} = \text{VEG} \times \sqrt{\frac{\overline{A}_{patch}}{N_{veg}}}$$
+
+donde $\overline{A}_{patch}$ es el tamaño medio de parche en píxeles y $N_{veg}$ es el número total de píxeles vegetados en la cuenca. Puede reescribirse como:
+
+$$\text{CONNECTIVITY} = \sqrt{\frac{N_{veg} \cdot \overline{A}_{patch}}{|C|^2}}$$
+
+**Interpretación.** El índice combina dos condiciones necesarias para la conectividad ecológica: suficiente cobertura vegetal y parches lo bastante grandes como para sostener flujos de energía y materia. Una cuenca puede tener cobertura moderada pero conectividad alta si sus parches son grandes y coherentes; o cobertura alta con conectividad baja si esa cobertura está muy fragmentada.
+
+---
+
+La @tbl-indicadores sintetiza los 14 indicadores base, sus insumos directos y su unidad de medida.
+
+| Indicador | Grupo | Insumo | Unidad |
+|-----------|-------|--------|--------|
+| VEG | Vegetación | NDVI | Fracción [0–1] |
+| IRV | Vegetación | NDVI | Adimensional |
+| ALB | Energía | ALB | Fracción [0–1] |
+| TB | Energía | TB | °C |
+| IA | Aridez | NDDI | Adimensional |
+| WA | Agua | NDWI | Fracción [0–1] |
+| HUM | Agua | NDWI | Fracción [0–1] |
+| IEH | Agua | NDWI | Adimensional |
+| PN | Criósfera | NDSI | Fracción [0–1] |
+| NP | Paisaje | NDVI | Número |
+| MPA | Paisaje | NDVI | Píxeles |
+| PATCH_DENSITY | Paisaje | NDVI | Parches/ha |
+| LPI | Paisaje | NDVI | Fracción [0–1] |
+| CONNECTIVITY | Paisaje | NDVI | Adimensional |
+
+: Indicadores base del modelo MRCT, organizados por grupo. {#tbl-indicadores}

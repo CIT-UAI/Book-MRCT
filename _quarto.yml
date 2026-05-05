@@ -1,0 +1,70 @@
+project:
+  type: book
+  output-dir: docs
+
+
+book:
+  title: "Guía Técnica MRCT"
+  subtitle: "Para la Construcción de la Matriz de Resiliencia Climática Territorial"
+  author:
+    - name: John Treimun Ríos
+      url: https://cit.uai.cl/john-treimun-rios/
+      affiliation: Centro de Inteligencia Territorial
+      affiliation-url: https://cit.uai.cl
+      email: john.treimun.r@uai.cl
+    - name: Denis Berroeta González
+      url: https://cit.uai.cl/denis-berroeta/
+      affiliation: Centro de Inteligencia Territorial
+      affiliation-url: https://cit.uai.cl
+      email: denis.berroeta@uai.cl
+  date: "2026-04-28"
+  page-footer:
+    left: "Copyright 2026, {{< var cit.name >}}"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - insumos.qmd
+    - inds_base.qmd
+    - vector_es.qmd
+    - trayectoria.qmd
+    - integracion_espacial.qmd
+    - sensibilidad.qmd
+    - pt_resiliencia.qmd
+    - conclusiones.qmd
+    
+    # - part: dimensiones.qmd
+      # chapters: 
+      # - dim_soc.qmd
+      # - dim_amb.qmd
+      # - dim_seg.qmd
+    # - proyectos.qmd
+    # - recomendaciones.qmd
+    # - part: "Marco de Referencia"
+      # chapters:
+        # - marco_ref.qmd
+        # - def_claves.qmd
+        # - dim_mbht.qmd
+        # - clas_institucionales.qmd
+    - references.qmd
+    - anexos.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: katex
+    css: style.css
+    toc: true
+    toc-expand: 1
+    toc-title: "Contenidos"
+    fig-cap-location: "margin"
+    tab-cap-location: "bottom"
+    fig-align: "center"
+    mailto: "denis.berroeta@uai.cl"
+    crossref:
+      fig-prefix: Figura   # (default is "Figure")
+      tbl-prefix: Tabla # (default is "Table")
+      eq-prefix: Ecuación 
+
+

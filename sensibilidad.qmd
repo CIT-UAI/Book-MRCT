@@ -1,0 +1,153 @@
+---
+title: "Sensibilidad del Sistema"
+subtitle: "Respuesta del dominio ecosistémico a forzantes climáticos"
+---
+
+Después de incorporar el contexto espacial, el modelo mide una propiedad distinta: la sensibilidad del sistema. Ya no se pregunta solo qué tan lejos está una cuenca de su dominio de referencia, ni si esa condición es coherente con sus vecinas. La pregunta ahora es cuánto responde esa distancia cuando cambian forzantes persistentes del ambiente físico.
+
+En la MRCT, la sensibilidad climática resume la relación entre el dominio ecosistémico y tres variables de presión: aridez, albedo y temperatura de brillo. Estas variables no forman parte del dominio estructural de referencia, porque no describen directamente la composición ecológica de la cuenca. En cambio, se usan para estimar qué tan reactivo es el estado ecosistémico frente a condiciones ambientales más secas, más reflectantes o térmicamente más exigentes.
+
+::: {.callout-note}
+## Para tomadores de decisión
+
+Dos cuencas pueden estar igual de alejadas de su línea base, pero no responder igual ante un año seco o cálido. Una puede cambiar poco porque su estructura amortigua la presión; otra puede desplazarse fuertemente ante el mismo estímulo. La sensibilidad permite reconocer territorios donde una presión climática persistente tiene mayor capacidad de empujar al sistema fuera de su régimen habitual.
+:::
+
+## Forzantes climáticos usados {#sec-forzantes-climaticos}
+
+La sensibilidad se estima a partir de tres variables anuales:
+
+| Variable | Nombre | Rol en la sensibilidad |
+|---|---|---|
+| IA | Índice de aridez | Representa condiciones de estrés hídrico relativo. |
+| ALB | Albedo | Resume cambios en la reflectancia superficial y en el balance radiativo. |
+| TB | Temperatura de brillo | Aproxima la señal térmica superficial observada por Landsat. |
+
+: Forzantes usados para estimar sensibilidad climática. {#tbl-forzantes-sensibilidad}
+
+Estas variables se interpretan como presiones o condiciones externas al vector estructural principal. IA captura aridez relativa; ALB registra cambios en la energía reflejada por la superficie; TB representa la señal térmica anual. En conjunto, describen dimensiones del ambiente físico que pueden modificar la posición de una cuenca en el espacio de estados.
+
+La variable de respuesta es el dominio global:
+
+$$
+D_{i,t}
+$$
+
+donde $i$ identifica la cuenca y $t$ el año. Usar $D$ como respuesta tiene una ventaja metodológica: la sensibilidad se estima sobre el desplazamiento del sistema completo, no sobre un indicador aislado. Así, una respuesta alta significa que la estructura ecosistémica integrada de la cuenca cambia cuando cambian los forzantes.
+
+## Normalización por cuenca {#sec-normalizacion-sensibilidad}
+
+Antes de ajustar el modelo, IA, ALB y TB se estandarizan dentro de cada cuenca. Para cada forzante $z \in \{\text{IA}, \text{ALB}, \text{TB}\}$ se calcula:
+
+$$
+\tilde{z}_{i,t} =
+\frac{z_{i,t} - \bar{z}_i}{s_{z,i}}
+$$
+
+donde $\bar{z}_i$ es la media temporal del forzante en la cuenca $i$ y $s_{z,i}$ es su desviación estándar temporal. Si la desviación estándar es menor que $10^{-6}$, se reemplaza por 1 para evitar divisiones inestables.
+
+Esta normalización cumple dos funciones. Primero, pone los tres forzantes en unidades comparables, de modo que el tamaño de los coeficientes no dependa de la escala original de cada variable. Segundo, hace que la sensibilidad sea propia de cada cuenca: se mide cómo responde la cuenca frente a variaciones respecto de su propio rango histórico observado.
+
+## Modelo de sensibilidad {#sec-modelo-sensibilidad}
+
+Para cada cuenca se ajusta una regresión lineal múltiple entre el dominio global y los tres forzantes estandarizados:
+
+$$
+D_{i,t} =
+\beta_{0,i}
++ \beta_{\text{IA},i}\tilde{\text{IA}}_{i,t}
++ \beta_{\text{ALB},i}\tilde{\text{ALB}}_{i,t}
++ \beta_{\text{TB},i}\tilde{\text{TB}}_{i,t}
++ \varepsilon_{i,t}
+$$
+
+El intercepto $\beta_{0,i}$ representa el nivel medio esperado de $D$ para la cuenca cuando los forzantes están en su valor medio estandarizado. Los coeficientes $\beta_{\text{IA},i}$, $\beta_{\text{ALB},i}$ y $\beta_{\text{TB},i}$ indican cuánto cambia $D$ ante una variación de una desviación estándar en cada forzante, manteniendo los otros constantes.
+
+El ajuste se realiza con mínimos cuadrados ordinarios usando solo observaciones finitas. Si una cuenca tiene menos de cuatro años válidos, la sensibilidad no se estima y queda en cero por defecto en la implementación. Esta regla evita ajustar un modelo con menos información que los parámetros necesarios para representar intercepto y tres coeficientes.
+
+## Índice SENS {#sec-sens}
+
+La sensibilidad climática se resume en un único valor por cuenca:
+
+$$
+SENS_i =
+\frac{
+\left\|
+\boldsymbol{\beta}_{1:3,i}
+\right\|_2
+}{
+\sigma_{D,i} + 10^{-9}
+}
+$$
+
+donde:
+
+$$
+\boldsymbol{\beta}_{1:3,i}
+=
+(\beta_{\text{IA},i},\beta_{\text{ALB},i},\beta_{\text{TB},i})
+$$
+
+y $\sigma_{D,i}$ es la desviación estándar temporal del dominio $D$ para la cuenca $i$. El término $10^{-9}$ evita una división por cero cuando $D$ tiene variabilidad prácticamente nula.
+
+La norma euclidiana $\|\boldsymbol{\beta}_{1:3,i}\|_2$ integra la magnitud conjunta de la respuesta frente a los tres forzantes:
+
+$$
+\left\|
+\boldsymbol{\beta}_{1:3,i}
+\right\|_2
+=
+\sqrt{
+\beta_{\text{IA},i}^{2}
++ \beta_{\text{ALB},i}^{2}
++ \beta_{\text{TB},i}^{2}
+}
+$$
+
+Dividir por $\sigma_{D,i}$ transforma esa magnitud en una medida relativa a la variabilidad propia del dominio de la cuenca. Por eso $SENS$ no debe leerse como una unidad física directa, sino como una medida adimensional de reactividad relativa.
+
+## Interpretación {#sec-interpretacion-sensibilidad}
+
+Una cuenca con $SENS$ alto muestra una relación fuerte entre sus cambios de dominio y las variaciones de aridez, albedo y temperatura. En términos prácticos, significa que su estado ecosistémico integrado es más reactivo ante presiones climáticas persistentes.
+
+Una cuenca con $SENS$ bajo no necesariamente está en buen estado. Puede estar degradada, pero no mostrar una relación clara con los forzantes usados. También puede ser una cuenca estable, donde las variaciones de IA, ALB y TB no se traducen en grandes desplazamientos del dominio.
+
+La lectura correcta combina nivel y sensibilidad. $D$ indica posición respecto de la línea base; velocidad indica cambio temporal; $D_{local}$ indica coherencia espacial; $SENS$ indica cuánto puede amplificarse la trayectoria ante condiciones climáticas. Una cuenca con $D$ moderado pero $SENS$ alto puede convertirse en prioritaria si además muestra velocidad positiva o se ubica en un entorno local presionado.
+
+## Uso dentro del Potencial de Transición {#sec-sens-pt}
+
+La sensibilidad entra en el Potencial de Transición como un factor de amplificación:
+
+$$
+1 + \alpha \cdot SENS_i
+$$
+
+donde $\alpha$ controla el peso de la sensibilidad climática dentro de la síntesis final. Con $\alpha = 0$, el modelo ignora este componente. Con valores mayores, las cuencas más sensibles aumentan su PT incluso si su distancia estructural actual no es extrema.
+
+Esta forma multiplicativa refleja una idea simple: la sensibilidad no reemplaza al estado ecosistémico, sino que modifica su riesgo de transición. Un sistema alejado, dinámico y sensible acumula mayor potencial de transición que un sistema igualmente alejado pero poco reactivo ante los forzantes climáticos observados.
+
+## Diagrama de sensibilidad {#sec-diagrama-sensibilidad}
+
+```{mermaid}
+flowchart LR
+    A[IA<br/>aridez] --> D[Normalización<br/>por cuenca]
+    B[ALB<br/>albedo] --> D
+    C[TB<br/>temperatura de brillo] --> D
+    D --> E[Regresión anual<br/>Domain ~ IA + ALB + TB]
+    F[Serie temporal<br/>Domain] --> E
+    E --> G[Coeficientes beta<br/>respuesta multivariable]
+    G --> H[SENS<br/>norma beta / sigma Domain]
+    H --> I[Amplificación<br/>del PT]
+```
+
+## Productos esperados {#sec-productos-sensibilidad}
+
+La etapa de sensibilidad genera un valor $SENS$ por cuenca, que puede comunicarse mediante:
+
+- mapa regional de sensibilidad climática;
+- distribución de $SENS$ para identificar cuencas altamente reactivas;
+- tabla de cuencas con mayor sensibilidad;
+- gráficos de casos seleccionados entre $D$ y los forzantes IA, ALB y TB;
+- comparación entre $SENS$, $D$, velocidad y $D_{local}$ para priorización integrada.
+
+Estos productos deben usarse como lectura complementaria, no como diagnóstico aislado. La sensibilidad cobra sentido cuando se interpreta junto con la trayectoria y el contexto espacial del sistema.

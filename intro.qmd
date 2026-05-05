@@ -1,0 +1,26 @@
+# Introducción {#sec-intro}
+
+La MRCT es un sistema para describir cómo cambian las unidades territoriales en el tiempo a partir de señales satelitales e indicadores derivados.
+
+La idea central es simple. Un territorio no se interpreta como una imagen aislada, sino como una trayectoria dentro de un espacio de estados. Por eso el modelo no solo pregunta qué cambió, sino también cuánto se alejó, con qué velocidad y en qué contexto.
+
+Una analogía útil es la de una ruta. Los indicadores base describen la posición del sistema. La línea base fija el punto de referencia. La trayectoria muestra si la cuenca se mantiene cerca, se aleja o comienza a reorganizarse.
+
+Este capítulo debe explicar el problema que aborda la MRCT, la lógica del enfoque y la estructura general del libro.
+
+
+## Objetivos
+
+## Objetivo general
+
+Construir una matriz de resiliencia climática territorial que represente el estado ecosistémico de cada unidad territorial, su evolución temporal, su coherencia espacial y su propensión a transición, usando señales satelitales e indicadores derivados.
+
+## Objetivos específicos
+
+- Derivar indicadores base a partir de mosaicos satelitales anuales.
+- Integrar los indicadores en un vector de estado ecosistémico por unidad territorial y año.
+- Definir una línea base o dominio de referencia.
+- Medir la trayectoria temporal del sistema con derivadas discretas.
+- Incorporar la dimensión espacial mediante dominio local.
+- Estimar la sensibilidad del sistema frente a presiones persistentes.
+- Sintetizar la información en métricas de transición y resiliencia territorial.

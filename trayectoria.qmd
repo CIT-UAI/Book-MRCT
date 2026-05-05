@@ -1,0 +1,102 @@
+---
+title: "Trayectoria del estado"
+subtitle: "Trayectoria del estado sistémico"
+---
+
+Con el dominio definido, el modelo puede medir trayectoria. Saber dónde está una cuenca no es suficiente: también importa si se está alejando de su estado de referencia, con qué velocidad lo hace y si ese movimiento se está acelerando o amortiguando.
+
+Esta etapa transforma la serie temporal de distancias $D$ en derivadas discretas, clasifica el régimen dinámico de cada cuenca y extiende la noción de dominio al espacio geográfico mediante vecindad espacial.
+
+## Derivadas temporales {#sec-derivadas}
+
+::: {.callout-note}
+## Para tomadores de decisión
+
+Las derivadas describen el *movimiento* del sistema, no solo su posición. Una cuenca puede estar lejos de su referencia pero estabilizándose, o cerca pero acelerando su alejamiento. Esa diferencia es crucial para anticipar trayectorias y priorizar intervenciones.
+:::
+
+La base de cálculo es la serie temporal de $D$ por cuenca, ordenada por año. Cada derivada se calcula como una diferencia discreta sobre la dimensión temporal.
+
+### Velocidad
+
+La velocidad mide la tasa de cambio de la distancia al dominio entre años consecutivos:
+
+$$V_t = \frac{D_t - D_{t-1}}{\Delta t}$$
+
+donde $\Delta t = 1$ año. Valores positivos indican alejamiento del dominio de referencia; valores negativos indican retorno o recuperación. Para evitar que valores extremos producto de años faltantes distorsionen el análisis, $V$ se recorta al rango $[-5, 5]$.
+
+### Aceleración
+
+La aceleración mide el cambio en la velocidad:
+
+$$A_t = V_t - V_{t-1}$$
+
+Captura si el movimiento se está intensificando ($A > 0$ con $V > 0$), desacelerando ($A < 0$ con $V > 0$) o invirtiendo su dirección. Una cuenca con velocidad moderada pero aceleración positiva sostenida representa mayor riesgo que una con velocidad alta pero aceleración negativa.
+
+### Jerk
+
+El jerk es la derivada de la aceleración:
+
+$$J_t = A_t - A_{t-1}$$
+
+Detecta cambios bruscos en el régimen dinámico: transiciones rápidas, reversiones súbitas o señales de reorganización estructural que no serían visibles solo con $V$ y $A$.
+
+## Tipología dinámica {#sec-tipologia}
+
+Las tres derivadas se combinan para asignar a cada cuenca-año un **estado dinámico** y etiquetas semánticas por variable.
+
+### Estado dinámico
+
+El estado dinámico se determina a partir del signo de $V$ y $A$, con umbrales adaptativos $\varepsilon_V$ y $\varepsilon_A$ definidos como el percentil 25 de $|V|$ y $|A|$ en el año más reciente disponible. Valores por debajo del umbral se tratan como cero funcional.
+
+| Velocidad | Aceleración | Estado |
+|-----------|-------------|--------|
+| $V \approx 0$ | $A \approx 0$ | Estable |
+| $V > 0$ | $A > 0$ | Transición Acelerada |
+| $V > 0$ | $A \approx 0$ | Transición Lenta |
+| $V < 0$ | $A < 0$ | Recuperación |
+| Mixto | Mixto | Inestable |
+
+: Clasificación de estado dinámico por cuenca y año. {#tbl-estados}
+
+### Etiquetas semánticas
+
+Cada derivada se clasifica de forma independiente usando un *z*-score robusto calculado dentro de cada año, lo que hace la clasificación relativa al comportamiento del conjunto de cuencas en ese momento:
+
+$$z = \frac{x - \text{med}_{año}(x)}{\text{MAD}_{año}(x) \times 1{,}4826}$$
+
+Los umbrales de corte son $z < -1$, $-1 \leq z < -0{,}25$, $|z| \leq 0{,}25$, $0{,}25 < z \leq 1$ y $z > 1$, produciendo cinco categorías por derivada:
+
+| Variable | Categorías (de menor a mayor *z*) |
+|----------|----------------------------------|
+| Velocidad (VEL_CLASS) | Decrecimiento Rápido · Decrecimiento Lento · Estable · Crecimiento Lento · Crecimiento Rápido |
+| Aceleración (ACC_CLASS) | Desaceleración Fuerte · Desaceleración Leve · Régimen Lineal · Intensificación Leve · Intensificación Fuerte |
+| Jerk (JERK_CLASS) | Reversión Fuerte · Reversión Leve · Neutro · Intensificación Leve · Intensificación Fuerte |
+
+: Etiquetas semánticas por derivada. {#tbl-etiquetas}
+
+Estas etiquetas permiten comunicar el régimen dinámico en términos interpretables sin perder la información cuantitativa de las derivadas.
+
+## Dominio local {#sec-dominio-local}
+
+El dominio global $D$ mide la distancia de cada cuenca a la referencia del conjunto completo. El **dominio local** extiende ese concepto al espacio geográfico: mide cuán diferente es una cuenca respecto de sus vecinas inmediatas.
+
+Para cada cuenca se identifican los $k = 8$ vecinos más cercanos en términos de distancia euclidiana entre los centroides de las cuencas. La vecindad se pondera con un kernel gaussiano:
+
+$$w_j = \exp\!\left(-\frac{d_j^2}{2\sigma^2}\right), \quad \sigma = \text{med}(d_j)$$
+
+donde $d_j$ es la distancia geográfica al vecino $j$. Con esos pesos se calcula una media local ponderada $\boldsymbol{\mu}_{local}$ y una covarianza local regularizada $\hat{\Sigma}_{local}$, y la distancia del dominio local es:
+
+$$D_{local,i} = \sqrt{(\mathbf{x}_i - \boldsymbol{\mu}_{local})^\top \hat{\Sigma}_{local}^{-1} (\mathbf{x}_i - \boldsymbol{\mu}_{local})}$$
+
+**Interpretación.** Un valor alto de $D_{local}$ indica que la cuenca es un *outlier* ecológico en su vecindad: su estado difiere marcadamente del de las cuencas que la rodean, independientemente de si está cerca o lejos del dominio global. Esto puede señalar una transición local aislada o una discontinuidad ecosistémica que el dominio global no captura.
+
+```{mermaid}
+flowchart LR
+    A[D por cuenca · año] --> B[Velocidad V<br/>ΔD/Δt]
+    B --> C[Aceleración A<br/>ΔV/Δt]
+    C --> E[Jerk J<br/>ΔA/Δt]
+    B --> F[Estado dinámico: <br/>Estable · Transición <br/>· Recuperación]
+    B --> G[Etiquetas semánticas<br/>VEL · ACC · JERK class]
+    A --> H[Dominio local<br/>KNN <br/>k=8 · kernel gaussiano]
+```
