@@ -10,81 +10,6 @@
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introducción",
-    "section": "",
-    "text": "1.1 Objetivos\nLa MRCT es un sistema para describir cómo cambian las unidades territoriales en el tiempo a partir de señales satelitales e indicadores derivados.\nLa idea central es simple. Un territorio no se interpreta como una imagen aislada, sino como una trayectoria dentro de un espacio de estados. Por eso el modelo no solo pregunta qué cambió, sino también cuánto se alejó, con qué velocidad y en qué contexto.\nUna analogía útil es la de una ruta. Los indicadores base describen la posición del sistema. La línea base fija el punto de referencia. La trayectoria muestra si la cuenca se mantiene cerca, se aleja o comienza a reorganizarse.\nEste capítulo debe explicar el problema que aborda la MRCT, la lógica del enfoque y la estructura general del libro.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
-    ]
-  },
-  {
-    "objectID": "dim_amb.html",
-    "href": "dim_amb.html",
-    "title": "5  Dimensión Ambiental",
-    "section": "",
-    "text": "5.1 Presentación de la dimensión\nLa dimensión ambiental de la Matriz de Bienestar Humano Territorial (MBHT) busca capturar la calidad del entorno natural que rodea a las personas en sus territorios de vida cotidiana. A diferencia de otras dimensiones que se nutren principalmente de registros administrativos o encuestas, esta dimensión se construye a partir de imágenes satelitales de acceso libre, lo que permite actualizar los indicadores de forma periódica y con cobertura nacional completa, incluyendo localidades rurales que carecen de estadísticas convencionales.\nLa dimensión se compone de dos indicadores complementarios que, juntos, ofrecen una lectura del bienestar ambiental a escala de barrio. El primero mide la presencia de vegetación en el entorno inmediato de cada unidad territorial, entendida como un bien que regula el microclima, reduce el estrés urbano y proporciona servicios ecosistémicos. El segundo mide la amplitud con que oscila la temperatura superficial entre las estaciones extremas del año, como expresión de la resiliencia o vulnerabilidad térmica del territorio. Ambos indicadores se calculan de forma independiente y para cada región del país por separado, siguiendo la misma lógica de construcción.\nLa unidad de análisis es la manzana en zonas urbanas y la entidad en zonas rurales, abarcando así la totalidad del territorio regional. Esta escala mínima permite detectar desigualdades ambientales incluso dentro de una misma ciudad o localidad.",
-    "crumbs": [
-      "dimensiones.qmd",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dimensión Ambiental</span>"
-    ]
-  },
-  {
-    "objectID": "dim_amb.html#sec-icv",
-    "href": "dim_amb.html#sec-icv",
-    "title": "5  Dimensión Ambiental",
-    "section": "5.2 Indicador de Cobertura Vegetal (ICV)",
-    "text": "5.2 Indicador de Cobertura Vegetal (ICV)\n\n5.2.1 Fundamento conceptual\nEl Índice de Cobertura Vegetal (ICV) expresa qué fracción del área de cada manzana está cubierta por vegetación. La cobertura vegetal urbana y periurbana cumple múltiples funciones que inciden directamente en el bienestar de las personas: modera la temperatura local, filtra contaminantes, reduce el ruido, provee sombra y, en términos psicológicos, ha sido asociada sistemáticamente con mejores indicadores de salud mental y percepción de seguridad. La distribución de este bien no es neutral: tiende a concentrarse en zonas de mayor ingreso, por lo que su medición sistemática permite identificar territorios en desventaja ambiental y orientar políticas de recuperación del espacio verde.\nEl indicador asume un rango continuo de 0 a 100, donde 0 representa la ausencia completa de vegetación en la manzana y 100 indica que toda su superficie está cubierta. Esta escala facilita la comparación entre territorios y la construcción de percentiles regionales para la normalización posterior dentro de la MBHT.\n\n\n5.2.2 Fuente de datos y criterio de detección\nLa fuente principal es la colección de imágenes satelitales Sentinel-2 del programa Copernicus, de la Agencia Espacial Europea. Esta plataforma ofrece imágenes multiespectrales con una resolución espacial de 10 metros y una frecuencia de revisita de aproximadamente cinco días, condiciones que la hacen idónea para el monitoreo de cobertura vegetal a escala de barrio.\nLa detección de vegetación se basa en el Índice de Vegetación de Diferencia Normalizada (NDVI, por sus siglas en inglés). El NDVI aprovecha la propiedad de la vegetación activa de reflejar intensamente la radiación infrarroja cercana y absorber la radiación roja visible: cuanto mayor es la diferencia entre ambas bandas espectrales, mayor es la cantidad y vigor de la vegetación presente. Formalmente, el índice se define como:\n\n\\text{NDVI} = \\frac{\\rho_{NIR} - \\rho_{Red}}{\\rho_{NIR} + \\rho_{Red}}\n\ndonde \\rho_{NIR} y \\rho_{Red} son las reflectancias superficiales en las bandas infrarroja cercana (Banda 8, 842 nm) y roja (Banda 4, 665 nm) de Sentinel-2, respectivamente.\nPara clasificar un píxel como “cubierto por vegetación”, se aplica un umbral de NDVI diferenciado por estación del año. Dado que el análisis corresponde a Chile, los periodos respetan los meses estándar de verano e invierno del hemisferio sur. Se requiere que el píxel supere el umbral mínimo de NDVI en al menos uno de los dos periodos:\n\nEn el período estival, se utiliza un umbral regional definido a partir de la experiencia analítica y la inspección visual de la respuesta espectral de la cobertura vegetal en cada territorio.\nEn el período invernal, se aplica igualmente un umbral regional, ajustado según la experiencia y la inspección visual, para distinguir con mayor certeza la vegetación persistente respecto de otras coberturas con comportamiento espectral similar en la estación fría.\n\nLa combinación de ambos periodos es deliberada: permite capturar tanto la vegetación de ciclo anual, que sólo es detectable en verano, como la vegetación perenne o de floración invernal, que domina en las zonas templadas y lluviosas del país. Un píxel que supera el umbral en cualquiera de los dos periodos queda clasificado como cubierto.\n\n\n5.2.3 Etapas de construcción regional\nEl proceso de cálculo se organiza en cinco etapas sucesivas que se repiten para cada región del país. La Figura 5.1 resume el flujo completo.\n\n\n\n\n\n\nFigura 5.1: Diagrama de etapas de construcción del ICV\n\n\n\nEtapa 1 — Composición de imágenes satelitales. Para cada periodo (estival e invernal), se reúne en la plataforma Google Earth Engine (GEE) el conjunto de escenas Sentinel-2 disponibles dentro de las fechas de análisis, filtradas por la región de interés. Cada escena pasa por un filtro de calidad que descarta aquellas con alto porcentaje de cobertura nubosa global, y luego se aplica una máscara de nubes píxel a píxel usando la banda de clasificación de escena (SCL) que provee el propio sensor. A partir de las escenas limpias se calcula un composite de mediana temporal: para cada píxel, el valor de NDVI resultante es la mediana de todos los valores válidos observados durante el periodo. El uso de la mediana —en lugar del promedio— garantiza robustez frente a valores atípicos ocasionales que pueden persistir aun después del enmascaramiento de nubes.\nEtapa 2 — Binarización. El raster de NDVI mediano se descarga localmente y se convierte en una imagen binaria: cada píxel recibe el valor 1 si supera el umbral correspondiente al periodo, y 0 en caso contrario. Esta operación se repite de forma independiente para el periodo estival y el invernal.\nEtapa 3 — Fusión de periodos. Las dos imágenes binarias se suman píxel a píxel. Todo píxel que sume 1 o más (es decir, que haya superado el umbral en al menos un periodo) queda clasificado como vegetado en la máscara final. Esta imagen binaria consolidada representa la distribución espacial de la vegetación activa a lo largo del año.\nEtapa 4 — Extracción por manzana. Usando herramientas de extracción de estadísticas zonales, se calcula para cada manzana la proporción del área interna cubierta por píxeles con valor 1 en la máscara binaria. El resultado es el ICV de esa manzana, expresado como porcentaje:\n\n\\text{ICV} = \\frac{\\text{Área de píxeles con vegetación}}{\\text{Área total de la manzana}} \\times 100\n\nEtapa 5 — Exportación. Los resultados se almacenan vinculados a la geometría de cada manzana, lo que permite su visualización cartográfica directa y su incorporación posterior a la MBHT.\nLa Figura 5.2 muestra el resultado del ICV para la Región de Los Ríos (R14) como ejemplo de los productos cartográficos generados.\n\n\n\n\n\n\nFigura 5.2: Mapa de ICV para la Región de Los Ríos (R14), año 2025",
-    "crumbs": [
-      "dimensiones.qmd",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dimensión Ambiental</span>"
-    ]
-  },
-  {
-    "objectID": "dim_amb.html#sec-iata",
-    "href": "dim_amb.html#sec-iata",
-    "title": "5  Dimensión Ambiental",
-    "section": "5.3 Indicador de Amplitud Térmica Anual (IATA)",
-    "text": "5.3 Indicador de Amplitud Térmica Anual (IATA)\n\n5.3.1 Fundamento conceptual\nEl Índice de Amplitud Térmica Anual (IATA) mide la diferencia entre la temperatura superficial del territorio (TST) en el verano y en el invierno. Esta diferencia refleja cuánto oscila térmicamente la superficie de cada unidad territorial a lo largo del ciclo anual, y constituye un indicador del estrés térmico que experimenta ese territorio y, por extensión, la población que lo habita.\nUna amplitud elevada señala zonas con alta inercia térmica negativa: superficies que se calientan intensamente en verano y se enfrían abruptamente en invierno. Esto es característico de áreas con alta densidad de superficies impermeables —pavimento, cubiertas metálicas, techos de hormigón— y escasa vegetación, condición frecuente en barrios vulnerables con déficit de espacio verde. Por el contrario, una amplitud reducida indica mayor estabilidad térmica estacional, asociada a suelos permeables, arbolado denso y buenas condiciones de regulación hídrica del entorno.\nEl IATA se define como:\n\n\\text{IATA} = \\overline{TST}_{verano} - \\overline{TST}_{invierno} \\quad [°C]\n\ndonde \\overline{TST} es la temperatura superficial promedio dentro de cada manzana para el periodo correspondiente. Al igual que en el ICV, los periodos de referencia corresponden a los meses estándar de verano e invierno del hemisferio sur. Valores positivos —los habituales en cualquier punto del territorio nacional— indican que la superficie es más cálida en el verano austral que en el invierno austral. El interés analítico no está en el signo sino en la magnitud relativa entre territorios: una manzana con IATA de 25 °C experimenta un régimen térmico mucho más extremo que una con IATA de 12 °C en la misma ciudad.\n\n\n5.3.2 Fuente de datos y método de cálculo de la temperatura superficial\nLa fuente de datos es la colección de imágenes Landsat 8 y 9 (USGS), que dispone de una banda térmica de onda larga (Banda 10) con resolución espacial de 30 metros y frecuencia de revisita de 16 días. Si bien la resolución es menor que la de Sentinel-2, la banda térmica de Landsat es el sensor de acceso libre con mejor balance entre resolución, cobertura temporal y profundidad histórica del archivo disponible.\nLa temperatura superficial del territorio (TST) no se obtiene directamente de la radiancia registrada por el sensor, sino que debe calcularse corrigiendo el efecto de la emisividad de la superficie, que varía según el tipo de cubierta. El procedimiento aplica un algoritmo monoventana simplificado basado en el trabajo de Sobrino et al. (2004), ampliamente utilizado en la literatura de teledetección urbana. Los pasos son los siguientes:\n\nA partir de la Banda 10 (radiancia TOA), se calcula la temperatura de brillo (BT), que corresponde a la temperatura que tendría un cuerpo negro que emitiese la misma radiancia.\nSe calcula el NDVI desde las bandas 4 (roja) y 5 (infrarroja cercana) del mismo sensor, para estimar la fracción de cobertura vegetal (FV) de cada píxel.\nLa emisividad superficial (\\varepsilon) se estima a partir de FV mediante la expresión lineal: \\varepsilon = 0{,}004 \\cdot FV + 0{,}986, que asigna mayor emisividad a los píxeles con mayor presencia vegetal.\nCon la temperatura de brillo y la emisividad estimada, se corrige la temperatura superficial real (TST) convirtiendo el resultado a grados Celsius.\n\nEste cálculo se realiza íntegramente en la plataforma GEE antes de exportar los rasters, lo que reduce el volumen de datos transferidos y concentra el procesamiento en la infraestructura de nube del proveedor.\n\n\n5.3.3 Etapas de construcción regional\nLa construcción del IATA sigue una secuencia similar a la del ICV, pero incorpora etapas adicionales para la corrección de anomalías térmicas y la imputación espacial de datos faltantes. La Figura 5.3 resume el flujo completo, que consta de seis pasos.\n\n\n\n\n\n\nFigura 5.3: Diagrama de etapas de construcción del IATA\n\n\n\nEtapa 1 — Composición de imágenes y cálculo de TST. Para cada periodo (estival e invernal), se reúnen las escenas Landsat disponibles sobre la región, se filtran por cobertura nubosa global y se aplica una máscara de nubes píxel a píxel usando la banda de calidad QA_PIXEL. A partir de las escenas válidas se genera un composite de mediana temporal, sobre el cual se calcula la TST según el procedimiento descrito anteriormente. El composite resultante es un raster continuo de temperaturas superficiales en grados Celsius.\nEtapa 2 — Corrección de valores extremos. Los composites de temperatura pueden contener píxeles con valores físicamente imposibles, producidos por saturación del sensor, reflexión especular de nubes no enmascaradas o artefactos en los bordes de las escenas. Para eliminar estas anomalías sin afectar la distribución real de temperaturas, se aplica un criterio de recorte por percentiles extremos: los píxeles que caen por debajo del percentil 0,001 % o por encima del percentil 99,999 % se marcan como valores faltantes. La elección de percentiles tan extremos —que en un raster de 40 millones de píxeles equivale a los 400 valores más alejados de cada cola— garantiza que sólo se eliminen anomalías claras, sin alterar la distribución estadística del indicador.\nEtapa 3 — Cálculo de la amplitud térmica. Los rasters de TST estival e invernal, ya corregidos, se restan píxel a píxel para obtener un raster de amplitud térmica anual. Esta operación es directa y produce valores positivos en prácticamente todo el territorio nacional.\nEtapa 4 — Suavizado espacial e imputación de faltantes. Los píxeles marcados como faltantes —ya sea por nubes persistentes o por corrección de outliers— se imputan mediante un kernel circular de 200 metros de radio: para cada píxel faltante se calcula el promedio ponderado de los píxeles válidos en su vecindad. Esta técnica de interpolación local es adecuada para la temperatura superficial porque la variable tiene alta autocorrelación espacial: la temperatura de un punto tiende a ser muy similar a la de sus vecinos inmediatos. El radio de 200 metros equivale a poco más de seis píxeles de Landsat, lo que garantiza que la imputación use información de la misma unidad de paisaje y no de sectores con condiciones de superficie distintas.\nEtapa 5 — Extracción por manzana y exportación. Para cada manzana, se calcula el promedio de los valores de amplitud térmica de todos los píxeles contenidos en ella. Este valor medio constituye el IATA de la manzana. Los resultados se exportan vinculados a la geometría de cada manzana, en el mismo formato que el ICV.\nLa Figura 5.4 muestra el resultado del IATA para la Región de Los Ríos (R14) como ejemplo de los productos cartográficos generados.\n\n\n\n\n\n\nFigura 5.4: Mapa de IATA para la Región de Los Ríos (R14), año 2025",
-    "crumbs": [
-      "dimensiones.qmd",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dimensión Ambiental</span>"
-    ]
-  },
-  {
-    "objectID": "dim_amb.html#sec-regional",
-    "href": "dim_amb.html#sec-regional",
-    "title": "5  Dimensión Ambiental",
-    "section": "5.4 Construcción regional y criterios de homologación",
-    "text": "5.4 Construcción regional y criterios de homologación\nAmbos indicadores se calculan de forma independiente para cada una de las 16 regiones del país. Esta decisión no es meramente operativa: responde a criterios de coherencia metodológica. Las condiciones ambientales, la fenología de la vegetación y el régimen térmico varían sustancialmente entre regiones. Calcular umbrales o distribuciones de referencia a nivel nacional produciría comparaciones distorsionadas entre territorios cuyas condiciones naturales de base son incomparables. Al construir los indicadores por región, los valores resultantes son coherentes dentro de cada contexto biogeográfico.\nUna vez calculados los indicadores brutos, la incorporación a la MBHT requiere una normalización que permita comparar territorios entre sí y agregar los valores dentro de la dimensión ambiental. Este proceso de normalización, que transforma los indicadores a una escala común, se describe en el capítulo metodológico transversal de la matriz.",
-    "crumbs": [
-      "dimensiones.qmd",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dimensión Ambiental</span>"
-    ]
-  },
-  {
-    "objectID": "dim_amb.html#sec-actualizaciones",
-    "href": "dim_amb.html#sec-actualizaciones",
-    "title": "5  Dimensión Ambiental",
-    "section": "5.5 Actualizaciones de la versión 2025",
-    "text": "5.5 Actualizaciones de la versión 2025\nLa versión 2025 de los indicadores ambientales incorpora un conjunto de mejoras respecto de la versión anterior, motivadas tanto por la necesidad de ampliar la cobertura geográfica hacia las regiones australes del país como por la incorporación de nuevas estrategias de robustez frente a la pérdida de datos por nubosidad.\n\n5.5.1 Adaptación a regiones con alta nubosidad persistente\nLas regiones de Los Lagos (R10), Aysén (R11), Magallanes (R12) y Los Ríos (R14) presentan un régimen climático caracterizado por precipitaciones frecuentes y cobertura nubosa elevada durante gran parte del año. Esta condición hacía que con los umbrales de nubosidad aplicados en versiones anteriores, una fracción importante de las escenas disponibles fuera descartada, llegando en algunos casos a periodos sin ninguna observación válida. Para dar respuesta a este desafío, la versión 2025 implementa umbrales diferenciados: mientras que en el resto del país se admiten escenas con hasta un 10 % de cobertura nubosa global en el periodo estival y un 30 % en el invernal, en las regiones australes estos límites se elevan a 50 % y 60 % respectivamente, lo que amplía significativamente el conjunto de escenas disponibles para construir el composite.\nEl mismo ajuste se aplica para los composites de temperatura (IATA): en las regiones australes se acepta hasta un 50 % de cobertura nubosa en verano y un 60 % en invierno, frente al 30 % y 40 % que rigen en el resto del país.\n\n\n5.5.2 Procesamiento por unidades comunales\nLas regiones de gran extensión territorial —en particular Aysén y Magallanes— superan los límites prácticos del procesamiento como una única tarea en GEE, lo que generaba errores de tiempo de espera y dificultaba la descarga de imágenes. La solución adoptada consiste en dividir el territorio regional en sus comunas constituyentes y procesar cada una de forma independiente. Para cada comuna se construye un composite propio con el conjunto de escenas disponibles en su área de influencia, lo que además permite que el filtrado por nubosidad sea sensible a las condiciones locales de cobertura. Los rasters comunales se ensamblan posteriormente en un mosaico regional único, que es el insumo para la extracción de estadísticas por manzana. Este esquema no sólo resuelve el problema de escala sino que mejora la calidad de los composites en regiones con heterogeneidad climática interna.\n\n\n5.5.3 Mecanismo de respaldo por año anterior (fallback)\nIncluso con umbrales ampliados y procesamiento comunal, algunas zonas pueden no contar con ninguna observación libre de nubes en el periodo de análisis. Para evitar que estas zonas queden sin valor en el indicador, se implementó un mecanismo de respaldo automático: cuando un píxel carece de observación válida en el año de análisis, se sustituye por el valor del composite del mismo periodo del año inmediatamente anterior. Esta sustitución opera a nivel de píxel y de forma transparente: sólo reemplaza los valores ausentes, sin modificar los píxeles que sí cuentan con dato del año en curso. El supuesto subyacente —que la cobertura vegetal y el régimen térmico estacional son relativamente estables de un año a otro en estas zonas— es plausible dado que la vegetación dominante en las regiones australes es bosque nativo adulto, con ciclos plurianuales. Tras la aplicación del respaldo, los porcentajes residuales de valores faltantes reportados han sido inferiores al 0,05 % en todas las regiones procesadas.\n\n\n5.5.4 Actualización del año de referencia y selección de sensor\nLos periodos de análisis corresponden al ciclo climático 2024–2025 y respetan el calendario estacional del hemisferio sur. Para la totalidad de las regiones del país, ambos indicadores se construyen usando los meses estándar de verano e invierno. De forma excepcional, en las regiones australes con cobertura nubosa persistente estas ventanas pueden ampliarse para incorporar un mayor número de píxeles satelitales útiles para el cálculo, sin que ello modifique el significado estacional del indicador.\nEn cuanto a la selección del sensor, ambos satélites de la serie Landsat actualmente operativos —Landsat 8 y Landsat 9, lanzado en septiembre de 2021— se consideran intercambiables para este propósito. Los datos de Landsat 9 son virtualmente idénticos en calibración a los de Landsat 8, por lo que la elección entre uno y otro en cada ejecución depende de la disponibilidad de escenas en el año de análisis.\n\n\n\n\n\n\n\nNota sobre la escala de análisis\n\n\n\nAmbos indicadores se calculan a la escala de la manzana en zonas urbanas y de la entidad en zonas rurales, cubriendo la totalidad del territorio regional. Estas son las unidades territoriales mínimas de trabajo y son las mismas que las del resto de indicadores de la MBHT, lo que garantiza la coherencia espacial al momento de agregar la dimensión ambiental a la matriz.\n\n\n\n\n\n\n\n\nSobre la comparabilidad interanual\n\n\n\nAl actualizar los indicadores en ediciones futuras de la MBHT, es importante mantener los mismos periodos estacionales de referencia y los mismos umbrales de clasificación para garantizar la comparabilidad de los resultados a lo largo del tiempo. Cambios en los umbrales de NDVI o en las ventanas temporales de los composites pueden producir variaciones en los valores del indicador que no reflejan cambios reales en el territorio.",
-    "crumbs": [
-      "dimensiones.qmd",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Dimensión Ambiental</span>"
-    ]
-  },
-  {
-    "objectID": "anexos.html",
-    "href": "anexos.html",
-    "title": "4  Anexos",
-    "section": "",
-    "text": "4.1 Fichas",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anexos</span>"
-    ]
-  },
-  {
     "objectID": "index.html#propósito",
     "href": "index.html#propósito",
     "title": "Guía Técnica MRCT",
@@ -115,6 +40,16 @@
     ]
   },
   {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introducción",
+    "section": "",
+    "text": "1.1 Por qué una matriz de resiliencia territorial\nEl cambio climático se expresa en el territorio como una acumulación de señales: variaciones en la vegetación, pérdida o expansión de agua superficial, cambios en la nieve, aumento de temperatura, fragmentación del paisaje y modificaciones en la forma en que las cuencas se relacionan con su entorno. Mirar cada señal por separado ayuda a describir una parte del proceso, pero dificulta reconocer cuándo el sistema completo empieza a desplazarse hacia una condición distinta.\nLa Matriz de Resiliencia Climática Territorial (MRCT) organiza esas señales en una lectura integrada. Su punto de partida son mosaicos satelitales anuales; su resultado es una representación del estado ecosistémico de cada cuenca hidrográfica, de su evolución temporal, de su coherencia espacial y de su propensión a transición.\nLa pregunta que guía el modelo es directa: ¿qué tan cerca o lejos se encuentra una unidad territorial de su régimen de referencia, cómo se está moviendo en el tiempo y qué tan expuesta aparece frente a presiones climáticas persistentes?\nLa evaluación se aplica en la Región de Magallanes y de la Antártica Chilena, un territorio austral donde convergen campos de hielo, fiordos, estepas frías, bosques subantárticos, turberas y cuencas de alta sensibilidad climática. Esta diversidad convierte a Magallanes en un caso adecuado para observar cómo las señales satelitales permiten describir cambios ecosistémicos en territorios extensos, remotos y ambientalmente contrastados.\nLa planificación territorial necesita distinguir entre cambios puntuales y transformaciones persistentes. Un año seco, una anomalía térmica o una reducción temporal de vegetación pueden ser parte de la variabilidad normal del sistema. La señal relevante aparece cuando esas variaciones se acumulan, se sostienen o se combinan con cambios espaciales y climáticos que aumentan la posibilidad de transición.\nLa MRCT aborda ese problema mediante una secuencia reproducible. Primero transforma información satelital en indicadores interpretables. Luego integra esos indicadores en un vector de estado ecosistémico. A partir de ese vector define una línea base, mide distancias respecto de ella, calcula trayectorias temporales, incorpora el contexto espacial y estima sensibilidad frente a aridez, albedo y temperatura superficial.\nEl valor de esta arquitectura está en conectar preguntas que suelen analizarse por separado:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
     "objectID": "intro.html#objetivo-general",
     "href": "intro.html#objetivo-general",
     "title": "1  Introducción",
@@ -139,27 +74,27 @@
     "href": "insumos.html",
     "title": "2  Insumos e índices Satelitales",
     "section": "",
-    "text": "2.1 Fuente de datos\nEl modelo parte de la superficie terrestre. Antes de construir cualquier indicador necesita una representación física del territorio, año a año, en términos espectrales y radiométricos. Esa representación son los mosaicos satelitales.\nEste capítulo describe la fuente de datos utilizada, las seis variables que componen el flujo anual, los criterios de control de calidad y el procedimiento de alineamiento que garantiza coherencia entre capas.\nLa fuente principal son los mosaicos Landsat 8 del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (Operational Land Imager) y el sensor TIRS (Thermal Infrared Sensor), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y temperatura superficial a 30 metros de resolución.\nEl modelo cubre el período 2013–2025, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Aysén (Patagonia chilena), un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.\nLa frecuencia de revisita de Landsat 8 es de 16 días. Los mosaicos anuales se construyen como composites de mediana temporal: para cada píxel se toma la mediana de todos los valores observados durante el año. Esto reduce el efecto de perturbaciones puntuales como nubes o sombras residuales y entrega una representación estable del estado superficial anual.",
+    "text": "2.1 Región de Estudio\nEl modelo parte de la superficie terrestre. Antes de construir cualquier indicador necesita una representación física del territorio, año a año, en términos espectrales y radiométricos. Esa representación son los mosaicos satelitales.\nEste capítulo describe la fuente de datos utilizada, las seis variables que componen el flujo anual, los criterios de control de calidad y el procedimiento de alineamiento que garantiza coherencia entre capas.\nLa Región de Magallanes y de la Antártica Chilena se ubica en el extremo austral de Chile y constituye uno de los territorios más extensos, remotos y ambientalmente heterogéneos del país. Su sector sudamericano se extiende aproximadamente entre los 48°36’ y 56°30’ de latitud sur, y entre los 66°25’ y 75°40’ de longitud oeste. Administrativamente se organiza en cuatro provincias —Última Esperanza, Magallanes, Tierra del Fuego y Antártica Chilena— y once comunas, con Punta Arenas como capital regional.1\nLa región posee una superficie total de 1.382.291,10 km², de los cuales 132.291,10 km² corresponden al territorio sudamericano y 1.250.000 km² al Territorio Chileno Antártico. Para efectos de este libro, el levantamiento satelital y la construcción de indicadores se concentran en las cuencas hidrográficas del sector sudamericano. Esta delimitación permite trabajar sobre unidades territoriales comparables, con continuidad espacial y pertinencia para el análisis ecosistémico regional.\nDesde el punto de vista físico, Magallanes reúne archipiélagos, fiordos, canales, cordones montañosos, campos de hielo, estepas frías, turberas, bosques subantárticos, lagos, glaciares y extensas zonas costeras. Esta diversidad produce contrastes marcados entre el occidente húmedo y fragmentado por canales, el eje cordillerano y glaciar, y el oriente más seco y estepario. Para la MRCT, esa heterogeneidad es central: los indicadores de vegetación, agua, nieve, aridez, temperatura y estructura del paisaje se leen dentro de un mosaico ecológico de alta variabilidad interna.\nEl clima regional es templado frío, ventoso y de baja amplitud térmica, con abundante nubosidad y máximos invernales de precipitación. Hacia el oriente de la cordillera predominan condiciones estepáricas frías, con menor humedad y mayor exposición al viento. Esta gradiente climática incide directamente en la lectura satelital: la nubosidad reduce ventanas de observación; la nieve y el hielo modifican la reflectancia superficial; las diferencias de humedad alteran la señal hídrica y vegetal; y los contrastes térmicos se expresan en la temperatura superficial observada.2\nLa hidrografía regional presenta una organización singular. Buena parte de los cursos principales se ubican hacia el sector oriental o transandino y varios sistemas drenan finalmente hacia el Atlántico. Entre las hoyas relevantes se encuentran los ríos Serrano, Gallegos, Chico o Ciaike, San Juan y otras cuencas menores al sur del Estrecho de Magallanes. El río Serrano, asociado al Campo de Hielo Sur y al sistema de lagos Toro, Sarmiento, Pehoé y Nordenskjöld, es un ejemplo de la conexión entre criósfera, lagos, escorrentía y paisaje glaciar.3\nLa criósfera es uno de los componentes ambientales más importantes para comprender la resiliencia regional. Según el Inventario Público de Glaciares informado por la Dirección General de Aguas, Magallanes concentra 7.055 glaciares y una superficie glaciarizada de 10.426,6 km², equivalente a casi la mitad de la superficie glaciarizada nacional. Por esta razón, la fracción nival, el albedo, la temperatura superficial y los cambios en agua superficial son variables especialmente relevantes para seguir transformaciones ecosistémicas asociadas a pérdida de hielo, variabilidad hídrica y cambios de cobertura.4\nEl valor ecológico de Magallanes también se expresa en su alto nivel de protección ambiental. La región concentra la mayor extensión de territorio protegido de Chile y contiene áreas de conservación, parques nacionales, reservas, monumentos naturales, ecosistemas marinos, bosques subantárticos, turberas y ambientes glaciares. Esta condición refuerza la necesidad de indicadores reproducibles que permitan observar cambios territoriales sin depender únicamente de campañas de terreno, especialmente en zonas de difícil acceso.5\nLa dimensión social y demográfica agrega otra capa de contexto. El Censo 2024 registró 166.537 personas en la región, con una estructura altamente concentrada en centros urbanos y una densidad muy baja si se considera la superficie total regional. Punta Arenas y Natales concentran la mayor parte de la población, mientras amplios sectores rurales, insulares y de estepa presentan baja ocupación permanente. Este patrón de poblamiento influye en la presión territorial, en la accesibilidad para validación de campo y en la forma en que los resultados de la MRCT pueden apoyar decisiones públicas.6\nLa base económica regional combina actividades urbanas, portuarias, logísticas, turísticas, ganaderas, energéticas e industriales. La extracción de hidrocarburos y gas natural, la ganadería ovina, el turismo de naturaleza y los servicios asociados a conectividad austral conviven con áreas de alto valor ecológico y baja intervención directa. En términos de resiliencia territorial, esta combinación exige distinguir entre cambios ecosistémicos propios de la variabilidad climática, transformaciones asociadas a presión productiva y dinámicas espaciales vinculadas a infraestructura, accesibilidad y ocupación humana.\nEn este contexto, los insumos satelitales cumplen una función metodológica clave. Permiten observar de manera homogénea un territorio extenso, climáticamente complejo y con fuertes restricciones logísticas. La MRCT usa esa observación anual para construir una lectura integrada de las cuencas: primero como señal física de superficie, luego como indicadores ecosistémicos y finalmente como trayectoria de resiliencia territorial.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos  e índices Satelitales</span>"
     ]
   },
   {
-    "objectID": "insumos.html#propuesta-de-objetivos-específicos",
-    "href": "insumos.html#propuesta-de-objetivos-específicos",
-    "title": "2  Insumos Satelitales",
-    "section": "",
-    "text": "Derivar indicadores base a partir de mosaicos satelitales anuales.\nIntegrar los indicadores en un vector de estado ecosistémico por unidad territorial y año.\nDefinir una línea base o dominio de referencia.\nMedir la trayectoria temporal del sistema con derivadas discretas.\nIncorporar la dimensión espacial mediante dominio local.\nEstimar la sensibilidad del sistema frente a presiones persistentes.\nSintetizar la información en métricas de transición y resiliencia territorial.",
+    "objectID": "insumos.html#fuente-de-datos",
+    "href": "insumos.html#fuente-de-datos",
+    "title": "2  Insumos e índices Satelitales",
+    "section": "2.2 Fuente de datos",
+    "text": "2.2 Fuente de datos\nLa fuente principal son los mosaicos Landsat 8 del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (Operational Land Imager) y el sensor TIRS (Thermal Infrared Sensor), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y temperatura superficial a 30 metros de resolución.\nEl modelo cubre el período 2013–2025, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Magallanes y de la Antártica Chilena, un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.\nLa frecuencia de revisita de Landsat 8 es de 16 días. Los mosaicos anuales se construyen como composites de mediana temporal: para cada píxel se toma la mediana de todos los valores observados durante el año. Esto reduce el efecto de perturbaciones puntuales como nubes o sombras residuales y entrega una representación estable del estado superficial anual.\n\n\n\n\n\n\nEn términos simples\n\n\n\nCada año, el satélite registra múltiples veces las mismas cuencas. Se sintetiza toda esa información en un único mapa anual por variable, usando la mediana de los valores observados. El resultado es una imagen robusta, representativa del comportamiento promedio del ecosistema durante ese año.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos Satelitales</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos  e índices Satelitales</span>"
     ]
   },
   {
     "objectID": "insumos.html#variables-de-entrada",
     "href": "insumos.html#variables-de-entrada",
     "title": "2  Insumos e índices Satelitales",
-    "section": "2.2 Variables de entrada",
-    "text": "2.2 Variables de entrada\nEl flujo anual trabaja con seis capas espectrales derivadas de los mosaicos Landsat 8. Cada una captura un aspecto diferente de la superficie y es la base de uno o más indicadores del modelo.\n\n2.2.1 NDVI — Índice de Vegetación de Diferencia Normalizada\n\\text{NDVI} = \\frac{\\rho_{NIR} - \\rho_{Red}}{\\rho_{NIR} + \\rho_{Red}}\nDonde \\rho_{NIR} y \\rho_{Red} son las reflectancias de superficie en la banda infrarroja cercana (Banda 5) y en la banda roja (Banda 4) respectivamente. La vegetación activa refleja con intensidad en el infrarrojo y absorbe en el rojo, lo que produce valores altos. Rangos típicos van de −1 a 1; valores por encima de 0,2 son consistentes con presencia de vegetación activa.\n\n\n2.2.2 NDWI — Índice de Agua de Diferencia Normalizada\n\\text{NDWI} = \\frac{\\rho_{Green} - \\rho_{NIR}}{\\rho_{Green} + \\rho_{NIR}}\nEl NDWI amplifica la señal de agua superficial usando la banda verde (Banda 3) y el infrarrojo cercano. Valores positivos indican presencia de agua o humedad; valores negativos corresponden a suelos secos o vegetación sin estrés hídrico. Es la capa base para los indicadores hídricos del modelo.\n\n\n2.2.3 NDSI — Índice de Nieve de Diferencia Normalizada\n\\text{NDSI} = \\frac{\\rho_{Green} - \\rho_{SWIR}}{\\rho_{Green} + \\rho_{SWIR}}\nEl NDSI aprovecha la alta reflectancia de la nieve en el verde visible (Banda 3) y su baja reflectancia en el infrarrojo de onda corta (Banda 6). Valores superiores a 0,4 son consistentes con cobertura de nieve o hielo. Es el insumo directo del indicador de criósfera.\n\n\n2.2.4 NDDI — Índice de Déficit Hídrico de Diferencia Normalizada\n\\text{NDDI} = \\frac{\\text{NDVI} - \\text{NDWI}}{\\text{NDVI} + \\text{NDWI}}\nEl NDDI combina la señal vegetal y la hídrica para capturar tensión hídrica o condiciones de aridez relativa (gu2007?). Cuando la vegetación es activa pero el agua escasa, el NDDI toma valores altos. Es el insumo del indicador de aridez (IA) y participa también en la estimación de sensibilidad climática.\n\n\n2.2.5 ALB — Albedo superficial\nEl albedo mide la fracción de radiación solar incidente que la superficie refleja. Se calcula como una combinación ponderada de las reflectancias en las bandas del visible e infrarrojo cercano. Superficies como nieve o suelo desnudo claro presentan albedo alto; vegetación densa y agua presentan albedo bajo. Variaciones en el albedo medio de una cuenca reflejan cambios en la composición superficial.\n\n\n2.2.6 TB — Temperatura de brillo\nLa temperatura de brillo corresponde a la señal térmica de la Banda 10 del sensor TIRS, convertida a grados Celsius. Es la temperatura aparente que tendría un cuerpo negro emitiendo la misma radiancia que la superficie observada. Constituye el proxy directo de la carga térmica superficial de cada unidad territorial.\n\nLa Tabla 2.1 resume las características de cada capa y sus usos en el modelo.\n\n\n\nTable 2.1: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a ±5 durante el control de calidad.\n\n\n\n\n\n\n\n\n\n\n\nCapa\nBandas Landsat 8\nRango utilizado\nIndicadores derivados\n\n\n\n\nNDVI\nBanda 5 (NIR), Banda 4 (Red)\n−1 a 1\nVEG, IRV, estructura del paisaje\n\n\nNDWI\nBanda 3 (Green), Banda 5 (NIR)\n−1 a 1\nWA, HUM, IEH\n\n\nNDSI\nBanda 3 (Green), Banda 6 (SWIR)\n−1 a 1\nPN\n\n\nNDDI\nDerivado de NDVI y NDWI\n−5 a 5\nIA\n\n\nALB\nCombinación multibanda\n0 a 1\nALB\n\n\nTB\nBanda 10 (TIRS)\n°C\nTB",
+    "section": "2.3 Variables de entrada",
+    "text": "2.3 Variables de entrada\nEl flujo anual trabaja con seis capas espectrales derivadas de los mosaicos Landsat 8. Cada una captura un aspecto diferente de la superficie y es la base de uno o más indicadores del modelo.\n\n2.3.1 NDVI — Índice de Vegetación de Diferencia Normalizada\n\\text{NDVI} = \\frac{\\rho_{NIR} - \\rho_{Red}}{\\rho_{NIR} + \\rho_{Red}}\nDonde \\rho_{NIR} y \\rho_{Red} son las reflectancias de superficie en la banda infrarroja cercana (Banda 5) y en la banda roja (Banda 4) respectivamente. La vegetación activa refleja con intensidad en el infrarrojo y absorbe en el rojo, lo que produce valores altos. Rangos típicos van de −1 a 1; valores por encima de 0,2 son consistentes con presencia de vegetación activa.\n\n\n2.3.2 NDWI — Índice de Agua de Diferencia Normalizada\n\\text{NDWI} = \\frac{\\rho_{Green} - \\rho_{NIR}}{\\rho_{Green} + \\rho_{NIR}}\nEl NDWI amplifica la señal de agua superficial usando la banda verde (Banda 3) y el infrarrojo cercano. Valores positivos indican presencia de agua o humedad; valores negativos corresponden a suelos secos o vegetación sin estrés hídrico. Es la capa base para los indicadores hídricos del modelo.\n\n\n2.3.3 NDSI — Índice de Nieve de Diferencia Normalizada\n\\text{NDSI} = \\frac{\\rho_{Green} - \\rho_{SWIR}}{\\rho_{Green} + \\rho_{SWIR}}\nEl NDSI aprovecha la alta reflectancia de la nieve en el verde visible (Banda 3) y su baja reflectancia en el infrarrojo de onda corta (Banda 6). Valores superiores a 0,4 son consistentes con cobertura de nieve o hielo. Es el insumo directo del indicador de criósfera.\n\n\n2.3.4 NDDI — Índice de Déficit Hídrico de Diferencia Normalizada\n\\text{NDDI} = \\frac{\\text{NDVI} - \\text{NDWI}}{\\text{NDVI} + \\text{NDWI}}\nEl NDDI combina la señal vegetal y la hídrica para capturar tensión hídrica o condiciones de aridez relativa (gu2007?). Cuando la vegetación es activa pero el agua escasa, el NDDI toma valores altos. Es el insumo del indicador de aridez (IA) y participa también en la estimación de sensibilidad climática.\n\n\n2.3.5 ALB — Albedo superficial\nEl albedo mide la fracción de radiación solar incidente que la superficie refleja. Se calcula como una combinación ponderada de las reflectancias en las bandas del visible e infrarrojo cercano. Superficies como nieve o suelo desnudo claro presentan albedo alto; vegetación densa y agua presentan albedo bajo. Variaciones en el albedo medio de una cuenca reflejan cambios en la composición superficial.\n\n\n2.3.6 TB — Temperatura de brillo\nLa temperatura de brillo corresponde a la señal térmica de la Banda 10 del sensor TIRS, convertida a grados Celsius. Es la temperatura aparente que tendría un cuerpo negro emitiendo la misma radiancia que la superficie observada. Constituye el proxy directo de la carga térmica superficial de cada unidad territorial.\n\nLa Tabla 2.1 resume las características de cada capa y sus usos en el modelo.\n\n\n\nTable 2.1: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a ±5 durante el control de calidad.\n\n\n\n\n\n\n\n\n\n\n\nCapa\nBandas Landsat 8\nRango utilizado\nIndicadores derivados\n\n\n\n\nNDVI\nBanda 5 (NIR), Banda 4 (Red)\n−1 a 1\nVEG, IRV, estructura del paisaje\n\n\nNDWI\nBanda 3 (Green), Banda 5 (NIR)\n−1 a 1\nWA, HUM, IEH\n\n\nNDSI\nBanda 3 (Green), Banda 6 (SWIR)\n−1 a 1\nPN\n\n\nNDDI\nDerivado de NDVI y NDWI\n−5 a 5\nIA\n\n\nALB\nCombinación multibanda\n0 a 1\nALB\n\n\nTB\nBanda 10 (TIRS)\n°C\nTB",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos  e índices Satelitales</span>"
     ]
@@ -168,8 +103,8 @@
     "objectID": "insumos.html#control-de-calidad",
     "href": "insumos.html#control-de-calidad",
     "title": "2  Insumos e índices Satelitales",
-    "section": "2.3 Control de calidad",
-    "text": "2.3 Control de calidad\nPrimero se limpia la señal. Después se calcula. Esa es la regla que estructura el preprocesamiento.\nAntes de derivar cualquier indicador, el modelo aplica una secuencia de filtros sobre las capas de cada año.\nVerificación de disponibilidad. Se comprueba que las seis capas existan para el año en cuestión. Si falta cualquiera de ellas, el año se descarta en su totalidad. No se interpola ni se sustituye desde años adyacentes.\nPropagación de valores no válidos. Todos los rasters se leen como valores de punto flotante de 32 bits. Los valores NaN —producidos por nubes, sombras no enmascaradas o bordes de escena— se propagan a lo largo del procesamiento y nunca participan en el cálculo de indicadores.\nRecorte de valores anómalos en NDDI. El NDDI puede producir valores extremos cuando ambos índices son simultáneamente cercanos a cero. Para mitigarlo, se registran los percentiles 1 y 99 de la distribución anual y se aplica un recorte simétrico a ±5, reteniendo más del 98% de la distribución observada y eliminando artefactos numéricos.\nUmbral de cobertura mínima. Una vez aplicadas las máscaras territoriales, se cuenta el número de píxeles válidos dentro del área de análisis. Si ese número es inferior a 1.000 píxeles, el año se omite. Este umbral garantiza que los estadísticos por cuenca tengan representatividad mínima.",
+    "section": "2.4 Control de calidad",
+    "text": "2.4 Control de calidad\nPrimero se limpia la señal. Después se calcula. Esa es la regla que estructura el preprocesamiento.\nAntes de derivar cualquier indicador, el modelo aplica una secuencia de filtros sobre las capas de cada año.\nVerificación de disponibilidad. Se comprueba que las seis capas existan para el año en cuestión. Si falta cualquiera de ellas, el año se descarta en su totalidad. No se interpola ni se sustituye desde años adyacentes.\nPropagación de valores no válidos. Todos los rasters se leen como valores de punto flotante de 32 bits. Los valores NaN —producidos por nubes, sombras no enmascaradas o bordes de escena— se propagan a lo largo del procesamiento y nunca participan en el cálculo de indicadores.\nRecorte de valores anómalos en NDDI. El NDDI puede producir valores extremos cuando ambos índices son simultáneamente cercanos a cero. Para mitigarlo, se registran los percentiles 1 y 99 de la distribución anual y se aplica un recorte simétrico a ±5, reteniendo más del 98% de la distribución observada y eliminando artefactos numéricos.\nUmbral de cobertura mínima. Una vez aplicadas las máscaras territoriales, se cuenta el número de píxeles válidos dentro del área de análisis. Si ese número es inferior a 1.000 píxeles, el año se omite. Este umbral garantiza que los estadísticos por cuenca tengan representatividad mínima.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos  e índices Satelitales</span>"
     ]
@@ -178,20 +113,10 @@
     "objectID": "insumos.html#alineamiento-espacial",
     "href": "insumos.html#alineamiento-espacial",
     "title": "2  Insumos e índices Satelitales",
-    "section": "2.4 Alineamiento espacial",
-    "text": "2.4 Alineamiento espacial\nTodos los rasters deben compartir exactamente la misma grilla espacial: igual resolución, mismo origen, misma proyección cartográfica y misma extensión. Sin esa condición, la comparación píxel a píxel entre capas introduce errores de registro que contaminan los indicadores derivados.\nLa grilla de referencia es la del raster de cuencas (basins_aligned.tif). Al cargar cada capa anual, el modelo compara automáticamente su grilla con la de referencia. Si coinciden, la capa se usa directamente. Si no, se reproyecta usando el método de vecino más cercano, que conserva los valores originales sin introducir interpolaciones artificiales entre clases espectrales.\n\n\n\n\n\nflowchart LR\n    A[Imágenes satelitales&lt;br/&gt;Landsat 8] --&gt; B[Selección temporal&lt;br/&gt;2013–2025]\n    B --&gt; C[Control de disponibilidad&lt;br/&gt;6 capas por año]\n    C --&gt; D[Filtrado de NaN&lt;br/&gt;y recorte de outliers]\n    D --&gt; E[Alineamiento espacial&lt;br/&gt;a grilla de referencia]\n    E --&gt; F[Mosaicos anuales&lt;br/&gt;validados]\n    F --&gt; G[Capas listas&lt;br/&gt;para indicadores]",
+    "section": "2.5 Alineamiento espacial",
+    "text": "2.5 Alineamiento espacial\nTodos los rasters deben compartir exactamente la misma grilla espacial: igual resolución, mismo origen, misma proyección cartográfica y misma extensión. Sin esa condición, la comparación píxel a píxel entre capas introduce errores de registro que contaminan los indicadores derivados.\nLa grilla de referencia es la del raster de cuencas (basins_aligned.tif). Al cargar cada capa anual, el modelo compara automáticamente su grilla con la de referencia. Si coinciden, la capa se usa directamente. Si no, se reproyecta usando el método de vecino más cercano, que conserva los valores originales sin introducir interpolaciones artificiales entre clases espectrales.\n\n\n\n\n\nflowchart LR\n    A[Imágenes satelitales&lt;br/&gt;Landsat 8] --&gt; B[Selección temporal&lt;br/&gt;2013–2025]\n    B --&gt; C[Control de disponibilidad&lt;br/&gt;6 capas por año]\n    C --&gt; D[Filtrado de NaN&lt;br/&gt;y recorte de outliers]\n    D --&gt; E[Alineamiento espacial&lt;br/&gt;a grilla de referencia]\n    E --&gt; F[Mosaicos anuales&lt;br/&gt;validados]\n    F --&gt; G[Capas listas&lt;br/&gt;para indicadores]",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos  e índices Satelitales</span>"
-    ]
-  },
-  {
-    "objectID": "insumos.html#diagrama-de-flujo-del-preprocesamiento",
-    "href": "insumos.html#diagrama-de-flujo-del-preprocesamiento",
-    "title": "2  Insumos Satelitales (TO-DO)",
-    "section": "2.5 Diagrama de flujo del preprocesamiento",
-    "text": "2.5 Diagrama de flujo del preprocesamiento\n\n\n\n\n\nflowchart LR\n    A[Imágenes satelitales] --&gt; B[Selección temporal]\n    B --&gt; C[Control de calidad]\n    C --&gt; D[Máscaras y filtrado]\n    D --&gt; E[Alineamiento espacial]\n    E --&gt; F[Mosaicos anuales]\n    F --&gt; G[Capas listas para indicadores]",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos Satelitales (TO-DO)</span>"
     ]
   },
   {
@@ -202,66 +127,6 @@
     "text": "3.1 Vegetación y energía\nLos mosaicos satelitales son señal física bruta. Este capítulo describe cómo esa señal se transforma en métricas interpretables a escala de cuenca.\nEl proceso de cálculo opera sobre un área filtrada. No todos los píxeles de una cuenca participan: se excluyen las zonas con intervención antrópica significativa (índice antrópico superior a 0,2) y los píxeles sin datos válidos de NDVI. Esto garantiza que los indicadores reflejen el estado del ecosistema natural, no la huella de la actividad humana.\nLos indicadores se organizan en tres grupos: vegetación y energía, agua, humedad y criósfera, y estructura del paisaje. Cada grupo captura una dimensión diferente del estado ecosistémico de la unidad territorial.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Indicadores Base</span>"
-    ]
-  },
-  {
-    "objectID": "inds_base.html#diagrama-general-de-indicadores-base",
-    "href": "inds_base.html#diagrama-general-de-indicadores-base",
-    "title": "3  Indicadores Base (TO-DO)",
-    "section": "",
-    "text": "flowchart TD\n    A[Capas satelitales anuales] --&gt; B[Índices espectrales]\n    B --&gt; C1[Vegetación y energía]\n    B --&gt; C2[Agua, humedad y criósfera]\n    B --&gt; C3[Estructura del paisaje]\n    C1 --&gt; D[Indicadores base por unidad territorial]\n    C2 --&gt; D\n    C3 --&gt; D",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Indicadores Base (TO-DO)</span>"
-    ]
-  },
-  {
-    "objectID": "inds_base.html#vegetación-y-energía",
-    "href": "inds_base.html#vegetación-y-energía",
-    "title": "3  Indicadores Base (TO-DO)",
-    "section": "3.2 4.1 Vegetación y energía",
-    "text": "3.2 4.1 Vegetación y energía\n\n3.2.1 VEG\nVEG representa la fracción de vegetación activa dentro de la unidad territorial.\nLa fórmula utilizada combina NDVI y un umbral de vegetación activa:\nNDVI = \\frac{(\\rho_{NIR} - \\rho_{Red})}{ (\\rho_{NIR} + \\rho_{Red})}\nVEG = \\frac{\\sum_{p \\in C} \\mathbb{1}[NDVI_p \\geq \\theta_{veg}]}{|C|}\nAquí, C es el conjunto de píxeles válidos de la cuenca y \\theta_{veg} es el umbral utilizado.\nEl procesamiento consiste en calcular NDVI, aplicar el umbral y obtener la proporción de píxeles vegetados por unidad territorial.\nLa interpretación es directa. Valores altos indican mayor presencia de vegetación activa.\nResultados a incorporar: mapa anual, histograma y tabla resumen.\n\n\n3.2.2 IRV\nIRV representa el vigor relativo de la vegetación, mide la intensidad del verdor solo en píxeles efectivamente vegetados. Una cuenca puede tener baja VEG pero alto IRV si la vegetación remanente es densa y saludable.\nIRV — Índice de Rigor Vegetativo (vigor):\n\\text{IRV} = \\frac{\\sum_{p: NDVI_p \\geq \\theta_{veg}} NDVI_p}{|\\{p: NDVI_p \\geq \\theta_{veg}\\}|}\nFórmula utilizada: incorporar la ecuación exacta aplicada en el modelo.\nProcesamiento: resumir el vigor relativo a escala de unidad territorial.\nInterpretación: valores altos indican mayor intensidad vegetacional relativa.\nResultados a incorporar: distribución, mapa y comparación temporal.\n\n\n3.2.3 ALB\nALB representa el albedo superficial medio.\nEl albedo resume cuánta radiación refleja la superficie. En términos simples, superficies más claras reflejan más y superficies más oscuras reflejan menos.\nFórmula utilizada: incorporar la definición exacta aplicada.\nProcesamiento: usar la capa anual de albedo y agregarla por unidad territorial.\nInterpretación: valores altos pueden asociarse a suelos expuestos, nieve u otras cubiertas reflectantes.\nResultados a incorporar: mapa, distribución y percentiles.\n\n\n3.2.4 TB\nTB representa la temperatura de brillo media.\nEs la señal térmica superficial agregada por unidad territorial.\nFórmula utilizada: incorporar la definición exacta aplicada.\nProcesamiento: usar la capa térmica anual y resumirla por unidad territorial.\nInterpretación: valores altos indican mayor carga térmica relativa.\nResultados a incorporar: mapa, serie temporal y comparación regional.\n\n\n3.2.5 IA\nIA representa aridificación o presión seca relativa.\nSe construye a partir de NDDI y además se utiliza como parte del componente de sensibilidad del sistema.\nFórmula utilizada: incorporar la ecuación exacta aplicada.\nProcesamiento: calcular o cargar NDDI anual y agregarlo por unidad territorial.\nInterpretación: valores altos indican condiciones más secas o mayor tensión hídrica.\nResultados a incorporar: mapa, evolución temporal y contraste con vegetación.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Indicadores Base (TO-DO)</span>"
-    ]
-  },
-  {
-    "objectID": "inds_base.html#agua-humedad-y-criósfera",
-    "href": "inds_base.html#agua-humedad-y-criósfera",
-    "title": "3  Indicadores Base (TO-DO)",
-    "section": "3.3 4.2 Agua, humedad y criósfera",
-    "text": "3.3 4.2 Agua, humedad y criósfera\n\n3.3.1 NDWI\nNDWI es el índice base del componente hídrico.\nLa fórmula utilizada es:\nNDWI = (\\rho_{Green} - \\rho_{NIR}) / (\\rho_{Green} + \\rho_{NIR})\nProcesamiento: cálculo raster anual y agregación territorial.\nInterpretación: valores altos reflejan mayor presencia relativa de agua o humedad superficial.\n\n\n3.3.2 WA\nWA representa la fracción de agua superficial por unidad territorial.\nLa forma general utilizada es:\nWA = \\frac{|\\{p: NDWI \\geq \\theta_w\\}|}{|C|}\nProcesamiento: aplicar el umbral de agua sobre NDWI y calcular la fracción por unidad territorial.\nInterpretación: valores altos indican mayor presencia de agua superficial.\n\n\n3.3.3 HUM\nHUM representa fracción de humedales o zona de transición hídrica.\nSe define usando un rango intermedio de NDWI entre un umbral húmedo y el umbral de agua abierta.\nProcesamiento: clasificar píxeles intermedios y calcular la proporción por unidad territorial.\nInterpretación: valores altos sugieren mayor presencia de humedales o superficies saturadas.\n\n\n3.3.4 IEH\nIEH mide heterogeneidad hídrica.\nSe define como la desviación estándar de NDWI en el subconjunto de píxeles hídricos:\nIEH = std(NDWI_{p: NDWI \\geq \\theta_w})\nUna analogía útil es pensar IEH como dispersión interna del agua. Una cuenca con agua concentrada en un solo cuerpo grande tiende a tener menor heterogeneidad que una cuenca con múltiples expresiones hídricas distribuidas.\nResultados a incorporar: mapa, distribución y ejemplos contrastados.\n\n\n3.3.5 NDSI\nNDSI es el índice base del componente nival.\nLa fórmula utilizada es:\nNDSI = (\\rho_{Green} - \\rho_{SWIR}) / (\\rho_{Green} + \\rho_{SWIR})\nProcesamiento: cálculo raster anual.\nInterpretación: valores altos indican mayor señal de nieve o hielo.\n\n\n3.3.6 PN\nPN representa persistencia o fracción nival por unidad territorial.\nSu cálculo sigue la forma:\nPN = \\frac{|\\{p: NDSI \\geq \\theta_{snow}\\}|}{|C|}\nProcesamiento: aplicar el umbral nival y agregar por unidad territorial.\nInterpretación: valores altos indican mayor presencia relativa de nieve.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Indicadores Base (TO-DO)</span>"
-    ]
-  },
-  {
-    "objectID": "inds_base.html#estructura-del-paisaje",
-    "href": "inds_base.html#estructura-del-paisaje",
-    "title": "3  Indicadores Base (TO-DO)",
-    "section": "3.4 4.3 Estructura del paisaje",
-    "text": "3.4 4.3 Estructura del paisaje\nEstas métricas describen el patrón espacial interno de la vegetación. No solo indican cuánto hay, sino cómo está organizada.\n\n3.4.1 NP\nNP es el número de parches de vegetación.\nProcesamiento: etiquetado de componentes conectadas.\nInterpretación: más parches suele indicar mayor fragmentación.\n\n\n3.4.2 MPA\nMPA es el tamaño medio de parche.\nProcesamiento: calcular el área de cada parche y promediar por unidad territorial.\nInterpretación: valores bajos sugieren una estructura más fragmentada.\n\n\n3.4.3 LPI\nLPI es la proporción del área que concentra el parche dominante.\nProcesamiento: identificar el parche mayor y expresar su peso relativo.\nInterpretación: valores altos indican dominancia espacial de una estructura principal.\n\n\n3.4.4 CONNECTIVITY\nCONNECTIVITY es un proxy de continuidad ecológica.\nLa expresión utilizada es:\nCONNECTIVITY = VEG \\cdot \\sqrt{MPA / VEG_{pix}}\nProcesamiento: combinar cobertura vegetal y tamaño medio de parche.\nInterpretación: valores altos sugieren mayor continuidad entre parches.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Indicadores Base (TO-DO)</span>"
-    ]
-  },
-  {
-    "objectID": "inds_base.html#resultados-a-incorporar-en-este-capítulo",
-    "href": "inds_base.html#resultados-a-incorporar-en-este-capítulo",
-    "title": "3  Indicadores Base (TO-DO)",
-    "section": "3.5 Resultados a incorporar en este capítulo",
-    "text": "3.5 Resultados a incorporar en este capítulo\n\nficha técnica por indicador;\nfórmula utilizada;\ninsumos necesarios;\nmapa por indicador;\ndistribución estadística;\nejemplo breve de interpretación.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Indicadores Base (TO-DO)</span>"
-    ]
-  },
-  {
-    "objectID": "insumos.html#fuente-de-datos",
-    "href": "insumos.html#fuente-de-datos",
-    "title": "2  Insumos e índices Satelitales",
-    "section": "",
-    "text": "En términos simples\n\n\n\nCada año, el satélite registra múltiples veces las mismas cuencas. Se sintetiza toda esa información en un único mapa anual por variable, usando la mediana de los valores observados. El resultado es una imagen robusta, representativa del comportamiento promedio del ecosistema durante ese año.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos  e índices Satelitales</span>"
     ]
   },
   {
@@ -305,56 +170,6 @@
     ]
   },
   {
-    "objectID": "vector_es.html#hipercubo-y-panel",
-    "href": "vector_es.html#hipercubo-y-panel",
-    "title": "4  Vector de estado",
-    "section": "",
-    "text": "T \\in \\mathbb{R}^{N_{unidades} \\times N_{años} \\times d}",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector de estado</span>"
-    ]
-  },
-  {
-    "objectID": "vector_es.html#línea-base",
-    "href": "vector_es.html#línea-base",
-    "title": "4  Vector de estado",
-    "section": "4.2 5.2 Línea base",
-    "text": "4.2 5.2 Línea base\nLa línea base define el estado de referencia del sistema.\nNo es un valor ideal. Es el régimen respecto del cual se medirá la distancia posterior.\nLa línea base debe describirse con precisión: período usado, criterio de selección y rol analítico.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector de estado</span>"
-    ]
-  },
-  {
-    "objectID": "vector_es.html#dominio-de-referencia",
-    "href": "vector_es.html#dominio-de-referencia",
-    "title": "4  Vector de estado",
-    "section": "4.3 5.3 Dominio de referencia",
-    "text": "4.3 5.3 Dominio de referencia\nEl dominio se construye con variables estructurales seleccionadas, normalización robusta y una matriz de covarianza regularizada.\nLa intuición aquí es sencilla. Si el vector de estado es la posición de la cuenca, el dominio es la región donde esa posición todavía se considera consistente con su referencia histórica.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector de estado</span>"
-    ]
-  },
-  {
-    "objectID": "vector_es.html#diagrama-del-vector-de-estado-y-baseline",
-    "href": "vector_es.html#diagrama-del-vector-de-estado-y-baseline",
-    "title": "4  Vector de estado",
-    "section": "4.4 Diagrama del vector de estado y baseline",
-    "text": "4.4 Diagrama del vector de estado y baseline\nflowchart LR\n    A[Indicadores base] --&gt; B[Vector de estado ecosistémico]\n    B --&gt; C[Panel unidad x año]\n    C --&gt; D[Línea base]\n    D --&gt; E[Dominio de referencia]\n    E --&gt; F[Distancia al dominio D]",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector de estado</span>"
-    ]
-  },
-  {
-    "objectID": "vector_es.html#resultados-a-incorporar",
-    "href": "vector_es.html#resultados-a-incorporar",
-    "title": "4  Vector de estado",
-    "section": "4.5 Resultados a incorporar",
-    "text": "4.5 Resultados a incorporar\n\ntabla del vector de estado;\nvariables incluidas en el dominio;\nresumen del período baseline;\nvisualización del panel temporal;\nfigura del dominio de referencia.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector de estado</span>"
-    ]
-  },
-  {
     "objectID": "vector_es.html#sec-hipercubo",
     "href": "vector_es.html#sec-hipercubo",
     "title": "4  Vector de Estado",
@@ -390,36 +205,6 @@
     "title": "5  Trayectoria del estado",
     "section": "",
     "text": "5.1 Derivadas temporales\nCon el dominio definido, el modelo puede medir trayectoria. Saber dónde está una cuenca no es suficiente: también importa si se está alejando de su estado de referencia, con qué velocidad lo hace y si ese movimiento se está acelerando o amortiguando.\nEsta etapa transforma la serie temporal de distancias D en derivadas discretas, clasifica el régimen dinámico de cada cuenca y extiende la noción de dominio al espacio geográfico mediante vecindad espacial.\nLa base de cálculo es la serie temporal de D por cuenca, ordenada por año. Cada derivada se calcula como una diferencia discreta sobre la dimensión temporal.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trayectoria del estado</span>"
-    ]
-  },
-  {
-    "objectID": "trayectoria.html#derivadas-temporales",
-    "href": "trayectoria.html#derivadas-temporales",
-    "title": "5  Trayectoria del estado",
-    "section": "5.2 6.2 Derivadas temporales",
-    "text": "5.2 6.2 Derivadas temporales\nSe trabaja con tres derivadas:\nV = \\Delta D / \\Delta t\nA = \\Delta V / \\Delta t\nJerk = \\Delta A / \\Delta t\nCada una responde a una pregunta distinta:\n\nVelocidad: si el sistema se aleja o se recupera.\nAceleración: si el cambio se intensifica o se amortigua.\nJerk: si aparece una señal más brusca de reorganización.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trayectoria del estado</span>"
-    ]
-  },
-  {
-    "objectID": "trayectoria.html#diagrama-de-trayectoria-temporal",
-    "href": "trayectoria.html#diagrama-de-trayectoria-temporal",
-    "title": "5  Trayectoria del estado",
-    "section": "5.3 Diagrama de trayectoria temporal",
-    "text": "5.3 Diagrama de trayectoria temporal\nflowchart LR\n    A[Vector de estado] --&gt; B[D]\n    B --&gt; C[V]\n    C --&gt; D[A]\n    D --&gt; E[Jerk]",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trayectoria del estado</span>"
-    ]
-  },
-  {
-    "objectID": "trayectoria.html#resultados-a-incorporar",
-    "href": "trayectoria.html#resultados-a-incorporar",
-    "title": "5  Trayectoria del estado",
-    "section": "5.4 Resultados a incorporar",
-    "text": "5.4 Resultados a incorporar\n\nseries temporales por unidad territorial;\ndistribución anual de D;\ngráficos de V, A y Jerk;\ntipologías temporales de ejemplo.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trayectoria del estado</span>"
     ]
@@ -462,156 +247,6 @@
     "text": "6.1 Dominio global y dominio local\nHasta aquí, el modelo ha descrito el estado ecosistémico de cada cuenca y su trayectoria temporal respecto de una línea base. Esa lectura es necesaria, pero todavía incompleta: una unidad territorial no existe aislada. Su condición ecológica se interpreta mejor cuando se compara también con el entorno que la rodea.\nLa integración espacial incorpora esa segunda referencia. El dominio global responde cuánto se aleja una cuenca del régimen histórico del conjunto territorial. El dominio local responde si esa misma cuenca es coherente o anómala respecto de sus vecinas inmediatas. Esta diferencia es relevante para la toma de decisiones, porque permite distinguir entre procesos extendidos, que afectan a un sector territorial completo, y señales localizadas, que pueden requerir intervención focalizada.\nEl dominio global D se calcula respecto de la línea base del sistema completo. Para cada observación \\mathbf{x}_{i,t}, donde i identifica la cuenca y t el año, D mide la distancia al centro y a la estructura de covarianza del régimen de referencia:\nD(\\mathbf{x}_{i,t}) =\n\\frac{\n\\sqrt{(\\mathbf{x}_{i,t} - \\boldsymbol{\\mu})^\\top \\hat{\\Sigma}^{-1}(\\mathbf{x}_{i,t} - \\boldsymbol{\\mu})}\n}{\\sqrt{d}}\ndonde \\boldsymbol{\\mu} y \\hat{\\Sigma} se estiman durante la línea base, y d es el número de variables estructurales incluidas. Esta métrica permite saber si una cuenca se aleja del comportamiento histórico general.\nSin embargo, el territorio puede tener gradientes naturales muy marcados. En una región extensa, una cuenca de montaña, una cuenca lacustre y una cuenca de transición pueden no ser directamente equivalentes aunque pertenezcan al mismo sistema regional. Por eso se introduce un segundo dominio, construido a partir de las cuencas vecinas. Este dominio no reemplaza al global: lo complementa.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Integración Espacial</span>"
-    ]
-  },
-  {
-    "objectID": "integracion_espacial.html#dominio-local",
-    "href": "integracion_espacial.html#dominio-local",
-    "title": "6  Integración Espacial",
-    "section": "",
-    "text": "D_{local,i} = \\frac{\\sum_{j \\in N_k(i)} w_{ij} \\cdot D_j}{\\sum_{j \\in N_k(i)} w_{ij}}",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Integración Espacial</span>"
-    ]
-  },
-  {
-    "objectID": "integracion_espacial.html#interpretación",
-    "href": "integracion_espacial.html#interpretación",
-    "title": "6  Integración Espacial",
-    "section": "6.2 7.2 Interpretación",
-    "text": "6.2 7.2 Interpretación\nEl dominio global mide distancia respecto al régimen general de referencia.\nEl dominio local mide coherencia respecto al entorno inmediato.\nLa combinación de ambos permite distinguir problemas regionales de anomalías locales.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Integración Espacial</span>"
-    ]
-  },
-  {
-    "objectID": "integracion_espacial.html#diagrama-de-integración-espacial",
-    "href": "integracion_espacial.html#diagrama-de-integración-espacial",
-    "title": "6  Integración Espacial",
-    "section": "6.3 Diagrama de integración espacial",
-    "text": "6.3 Diagrama de integración espacial\nflowchart TD\n    A[Dominio global D] --&gt; B[Vecindario espacial]\n    B --&gt; C[Dominio local D_local]\n    C --&gt; D[Comparación regional vs local]",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Integración Espacial</span>"
-    ]
-  },
-  {
-    "objectID": "integracion_espacial.html#resultados-a-incorporar",
-    "href": "integracion_espacial.html#resultados-a-incorporar",
-    "title": "6  Integración Espacial",
-    "section": "6.4 Resultados a incorporar",
-    "text": "6.4 Resultados a incorporar\n\nmapa de dominio local;\nexplicación del criterio de vecindad;\ncasos de contraste entre dominio global y local;\nfiguras de vecindario espacial.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Integración Espacial</span>"
-    ]
-  },
-  {
-    "objectID": "sensibilidad.html",
-    "href": "sensibilidad.html",
-    "title": "7  Sensibilidad del Sistema",
-    "section": "",
-    "text": "7.1 Forzantes climáticos usados\nDespués de incorporar el contexto espacial, el modelo mide una propiedad distinta: la sensibilidad del sistema. Ya no se pregunta solo qué tan lejos está una cuenca de su dominio de referencia, ni si esa condición es coherente con sus vecinas. La pregunta ahora es cuánto responde esa distancia cuando cambian forzantes persistentes del ambiente físico.\nEn la MRCT, la sensibilidad climática resume la relación entre el dominio ecosistémico y tres variables de presión: aridez, albedo y temperatura de brillo. Estas variables no forman parte del dominio estructural de referencia, porque no describen directamente la composición ecológica de la cuenca. En cambio, se usan para estimar qué tan reactivo es el estado ecosistémico frente a condiciones ambientales más secas, más reflectantes o térmicamente más exigentes.\nLa sensibilidad se estima a partir de tres variables anuales:\nEstas variables se interpretan como presiones o condiciones externas al vector estructural principal. IA captura aridez relativa; ALB registra cambios en la energía reflejada por la superficie; TB representa la señal térmica anual. En conjunto, describen dimensiones del ambiente físico que pueden modificar la posición de una cuenca en el espacio de estados.\nLa variable de respuesta es el dominio global:\nD_{i,t}\ndonde i identifica la cuenca y t el año. Usar D como respuesta tiene una ventaja metodológica: la sensibilidad se estima sobre el desplazamiento del sistema completo, no sobre un indicador aislado. Así, una respuesta alta significa que la estructura ecosistémica integrada de la cuenca cambia cuando cambian los forzantes.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sensibilidad del Sistema</span>"
-    ]
-  },
-  {
-    "objectID": "sensibilidad.html#modelo-de-sensibilidad",
-    "href": "sensibilidad.html#modelo-de-sensibilidad",
-    "title": "7  Sensibilidad del Sistema",
-    "section": "",
-    "text": "D_t = \\beta_0 + \\beta_1 IA_t + \\beta_2 ALB_t + \\beta_3 TB_t + \\epsilon_t\n\nSENS = ||\\beta_{1:3}|| / \\sigma_D",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sensibilidad del Sistema</span>"
-    ]
-  },
-  {
-    "objectID": "sensibilidad.html#interpretación",
-    "href": "sensibilidad.html#interpretación",
-    "title": "7  Sensibilidad del Sistema",
-    "section": "7.2 8.2 Interpretación",
-    "text": "7.2 8.2 Interpretación\nUna unidad con alta sensibilidad reacciona más ante cambios de aridez, energía superficial o temperatura.\nUna analogía útil es la de un sistema más o menos sensible al empuje externo. Dos unidades pueden tener el mismo estado actual, pero distinta capacidad de amortiguación frente a un mismo forzante.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sensibilidad del Sistema</span>"
-    ]
-  },
-  {
-    "objectID": "sensibilidad.html#diagrama-de-sensibilidad",
-    "href": "sensibilidad.html#diagrama-de-sensibilidad",
-    "title": "7  Sensibilidad del Sistema",
-    "section": "7.3 Diagrama de sensibilidad",
-    "text": "7.3 Diagrama de sensibilidad\nflowchart LR\n    A[IA] --&gt; D[SENS]\n    B[ALB] --&gt; D\n    C[TB] --&gt; D\n    E[Serie temporal de D] --&gt; D",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sensibilidad del Sistema</span>"
-    ]
-  },
-  {
-    "objectID": "sensibilidad.html#resultados-a-incorporar",
-    "href": "sensibilidad.html#resultados-a-incorporar",
-    "title": "7  Sensibilidad del Sistema",
-    "section": "7.4 Resultados a incorporar",
-    "text": "7.4 Resultados a incorporar\n\ndistribución de SENS;\nmapas regionales de sensibilidad;\nejemplos de unidades contrastantes;\ngráficos entre D y forzantes climáticos.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sensibilidad del Sistema</span>"
-    ]
-  },
-  {
-    "objectID": "pt_resiliencia.html",
-    "href": "pt_resiliencia.html",
-    "title": "8  Potencial de Transición y Resiliencia",
-    "section": "",
-    "text": "8.1 Potencial de Transición\nEste capítulo integra las señales construidas en las etapas anteriores. Hasta aquí, la MRCT ha estimado la posición de cada cuenca respecto de su línea base, su trayectoria temporal, su coherencia espacial y su sensibilidad frente a forzantes climáticos. El Potencial de Transición reúne esas piezas en una sola métrica de propensión al cambio de estado.\nLa idea central es directa: una cuenca tiene mayor potencial de transición cuando está lejos de su régimen histórico, cambia con rapidez, responde fuertemente a presiones climáticas y se ubica en un contexto espacial también presionado. Ninguno de estos componentes por sí solo describe completamente la resiliencia territorial. Su valor está en la lectura conjunta.\nEl Potencial de Transición, denotado como PT, se calcula para cada cuenca i y año t mediante una combinación multiplicativa:\nPT_{i,t} =\nD_{i,t}\n\\cdot\n\\left(1 + |V_{i,t}|\\right)\n\\cdot\n\\left(1 + \\alpha \\cdot SENS_i\\right)\n\\cdot\n\\left(1 + \\beta_{local} \\cdot D_{local,i,t}\\right)\ndonde D es la distancia estructural al dominio de referencia, V es la velocidad temporal del dominio, SENS es la sensibilidad climática de la cuenca y D_{local} es la distancia respecto del dominio local de vecindad.\nLa forma multiplicativa tiene una interpretación importante. Cada factor amplifica la presión de transición cuando aporta evidencia adicional de riesgo. Si una cuenca está cerca de su línea base, D será bajo y el PT se mantiene bajo. Si además se mueve rápido, es sensible al clima o se ubica en un entorno local presionado, esos factores elevan el potencial de transición.\nEn la implementación, los valores faltantes de D, V, SENS y D_{local} se tratan como cero dentro del cálculo de PT. Esta decisión evita que una observación incompleta propague valores no disponibles a toda la síntesis, pero también exige interpretar con cautela las cuencas con baja cobertura de datos.",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Potencial de Transición y Resiliencia</span>"
-    ]
-  },
-  {
-    "objectID": "pt_resiliencia.html#potencial-de-transición",
-    "href": "pt_resiliencia.html#potencial-de-transición",
-    "title": "8  P. de Transición y Resiliencia",
-    "section": "",
-    "text": "PT = D \\cdot (1 + |V|) \\cdot (1 + \\alpha \\cdot SENS) \\cdot (1 + \\beta_{local} \\cdot D_{local})\n\n\nD: distancia estructural al baseline.\n|V|: intensidad del cambio.\nSENS: amplificación por sensibilidad climática.\nD_local: presión o coherencia del contexto espacial.",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>P. de Transición y Resiliencia</span>"
-    ]
-  },
-  {
-    "objectID": "pt_resiliencia.html#resiliencia-operativa",
-    "href": "pt_resiliencia.html#resiliencia-operativa",
-    "title": "8  P. de Transición y Resiliencia",
-    "section": "8.2 9.2 Resiliencia operativa",
-    "text": "8.2 9.2 Resiliencia operativa\nLa resiliencia operativa debe presentarse como una transformación monotónica de PT en una escala interpretable.\nSu lectura es simple. PT representa propensión a transición. RES representa la lectura inversa en clave de resiliencia operativa.\nLa fórmula exacta utilizada debe indicarse aquí.",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>P. de Transición y Resiliencia</span>"
-    ]
-  },
-  {
-    "objectID": "pt_resiliencia.html#lectura-integrada",
-    "href": "pt_resiliencia.html#lectura-integrada",
-    "title": "8  P. de Transición y Resiliencia",
-    "section": "8.3 9.3 Lectura integrada",
-    "text": "8.3 9.3 Lectura integrada\nEste es el punto donde el libro debe mostrar con claridad qué entrega el modelo.\nLa MRCT no solo indica qué cambió. También permite responder:\n\ncuánto se alejó el sistema;\ncon qué rapidez cambia;\nsi el cambio se intensifica;\nsi el entorno espacial acompaña o amortigua;\ncuánta sensibilidad muestra frente a forzantes persistentes.",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>P. de Transición y Resiliencia</span>"
-    ]
-  },
-  {
-    "objectID": "pt_resiliencia.html#diagrama-de-síntesis",
-    "href": "pt_resiliencia.html#diagrama-de-síntesis",
-    "title": "8  P. de Transición y Resiliencia",
-    "section": "8.4 Diagrama de síntesis",
-    "text": "8.4 Diagrama de síntesis\nflowchart LR\n    A[D] --&gt; E[PT]\n    B[V] --&gt; E\n    C[SENS] --&gt; E\n    D[D_local] --&gt; E\n    E --&gt; F[RES]",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>P. de Transición y Resiliencia</span>"
-    ]
-  },
-  {
-    "objectID": "pt_resiliencia.html#resultados-a-incorporar",
-    "href": "pt_resiliencia.html#resultados-a-incorporar",
-    "title": "8  P. de Transición y Resiliencia",
-    "section": "8.5 Resultados a incorporar",
-    "text": "8.5 Resultados a incorporar\n\nmapa de PT;\nmapa de RES;\ntabla de unidades con mayor y menor resiliencia;\ncomparación entre componentes;\nejemplos narrativos de interpretación integrada.",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>P. de Transición y Resiliencia</span>"
     ]
   },
   {
@@ -672,6 +307,16 @@
     "text": "6.7 Productos esperados\nLa integración espacial genera tres productos principales para análisis y comunicación:\n\nmapa de D_{local} por cuenca y año, especialmente para el año más reciente;\nmapa o tabla de DIV, útil para seleccionar casos de contraste entre lectura global y lectura local;\nvisualización del vecindario KNN para cuencas seleccionadas, mostrando vecinos, distancias y pesos relativos.\n\nEstos productos deben leerse junto con los mapas de D, velocidad y sensibilidad climática. El valor de la integración espacial no está en producir una capa adicional aislada, sino en conectar la trayectoria ecosistémica con la estructura territorial que la rodea.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Integración Espacial</span>"
+    ]
+  },
+  {
+    "objectID": "sensibilidad.html",
+    "href": "sensibilidad.html",
+    "title": "7  Sensibilidad del Sistema",
+    "section": "",
+    "text": "7.1 Forzantes climáticos usados\nDespués de incorporar el contexto espacial, el modelo mide una propiedad distinta: la sensibilidad del sistema. Ya no se pregunta solo qué tan lejos está una cuenca de su dominio de referencia, ni si esa condición es coherente con sus vecinas. La pregunta ahora es cuánto responde esa distancia cuando cambian forzantes persistentes del ambiente físico.\nEn la MRCT, la sensibilidad climática resume la relación entre el dominio ecosistémico y tres variables de presión: aridez, albedo y temperatura de brillo. Estas variables no forman parte del dominio estructural de referencia, porque no describen directamente la composición ecológica de la cuenca. En cambio, se usan para estimar qué tan reactivo es el estado ecosistémico frente a condiciones ambientales más secas, más reflectantes o térmicamente más exigentes.\nLa sensibilidad se estima a partir de tres variables anuales:\nEstas variables se interpretan como presiones o condiciones externas al vector estructural principal. IA captura aridez relativa; ALB registra cambios en la energía reflejada por la superficie; TB representa la señal térmica anual. En conjunto, describen dimensiones del ambiente físico que pueden modificar la posición de una cuenca en el espacio de estados.\nLa variable de respuesta es el dominio global:\nD_{i,t}\ndonde i identifica la cuenca y t el año. Usar D como respuesta tiene una ventaja metodológica: la sensibilidad se estima sobre el desplazamiento del sistema completo, no sobre un indicador aislado. Así, una respuesta alta significa que la estructura ecosistémica integrada de la cuenca cambia cuando cambian los forzantes.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sensibilidad del Sistema</span>"
     ]
   },
   {
@@ -752,6 +397,16 @@
     "text": "7.8 Productos esperados\nLa etapa de sensibilidad genera un valor SENS por cuenca, que puede comunicarse mediante:\n\nmapa regional de sensibilidad climática;\ndistribución de SENS para identificar cuencas altamente reactivas;\ntabla de cuencas con mayor sensibilidad;\ngráficos de casos seleccionados entre D y los forzantes IA, ALB y TB;\ncomparación entre SENS, D, velocidad y D_{local} para priorización integrada.\n\nEstos productos deben usarse como lectura complementaria, no como diagnóstico aislado. La sensibilidad cobra sentido cuando se interpreta junto con la trayectoria y el contexto espacial del sistema.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Sensibilidad del Sistema</span>"
+    ]
+  },
+  {
+    "objectID": "pt_resiliencia.html",
+    "href": "pt_resiliencia.html",
+    "title": "8  Potencial de Transición y Resiliencia",
+    "section": "",
+    "text": "8.1 Potencial de Transición\nEste capítulo integra las señales construidas en las etapas anteriores. Hasta aquí, la MRCT ha estimado la posición de cada cuenca respecto de su línea base, su trayectoria temporal, su coherencia espacial y su sensibilidad frente a forzantes climáticos. El Potencial de Transición reúne esas piezas en una sola métrica de propensión al cambio de estado.\nLa idea central es directa: una cuenca tiene mayor potencial de transición cuando está lejos de su régimen histórico, cambia con rapidez, responde fuertemente a presiones climáticas y se ubica en un contexto espacial también presionado. Ninguno de estos componentes por sí solo describe completamente la resiliencia territorial. Su valor está en la lectura conjunta.\nEl Potencial de Transición, denotado como PT, se calcula para cada cuenca i y año t mediante una combinación multiplicativa:\nPT_{i,t} =\nD_{i,t}\n\\cdot\n\\left(1 + |V_{i,t}|\\right)\n\\cdot\n\\left(1 + \\alpha \\cdot SENS_i\\right)\n\\cdot\n\\left(1 + \\beta_{local} \\cdot D_{local,i,t}\\right)\ndonde D es la distancia estructural al dominio de referencia, V es la velocidad temporal del dominio, SENS es la sensibilidad climática de la cuenca y D_{local} es la distancia respecto del dominio local de vecindad.\nLa forma multiplicativa tiene una interpretación importante. Cada factor amplifica la presión de transición cuando aporta evidencia adicional de riesgo. Si una cuenca está cerca de su línea base, D será bajo y el PT se mantiene bajo. Si además se mueve rápido, es sensible al clima o se ubica en un entorno local presionado, esos factores elevan el potencial de transición.\nEn la implementación, los valores faltantes de D, V, SENS y D_{local} se tratan como cero dentro del cálculo de PT. Esta decisión evita que una observación incompleta propague valores no disponibles a toda la síntesis, pero también exige interpretar con cautela las cuencas con baja cobertura de datos.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Potencial de Transición y Resiliencia</span>"
     ]
   },
   {
@@ -845,46 +500,6 @@
     ]
   },
   {
-    "objectID": "conclusiones.html#puntos-de-cierre-recomendados",
-    "href": "conclusiones.html#puntos-de-cierre-recomendados",
-    "title": "9  Conclusiones",
-    "section": "",
-    "text": "La MRCT organiza señales satelitales en un sistema de lectura territorial multivariado.\nLos indicadores base son la capa descriptiva del modelo.\nEl vector de estado y la línea base permiten construir una referencia coherente.\nLa trayectoria temporal agrega ritmo y dirección.\nLa integración espacial agrega contexto.\nLa sensibilidad agrega respuesta a forzantes persistentes.\nLa síntesis final traduce todo lo anterior en métricas operativas de resiliencia territorial.",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Conclusiones</span>"
-    ]
-  },
-  {
-    "objectID": "conclusiones.html#resultados-a-incorporar",
-    "href": "conclusiones.html#resultados-a-incorporar",
-    "title": "9  Conclusiones",
-    "section": "9.2 Resultados a incorporar",
-    "text": "9.2 Resultados a incorporar\n\nesquema final del sistema completo;\ntabla resumen de productos por capítulo;\nrecomendaciones de lectura e interpretación;\nconexión con posibles aplicaciones territoriales.",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Conclusiones</span>"
-    ]
-  },
-  {
-    "objectID": "conclusiones.html#tabla-de-integración-entre-capítulos-y-productos",
-    "href": "conclusiones.html#tabla-de-integración-entre-capítulos-y-productos",
-    "title": "9  Conclusiones",
-    "section": "9.3 Tabla de integración entre capítulos y productos",
-    "text": "9.3 Tabla de integración entre capítulos y productos\n\n\n\n\n\n\n\n\nCapítulo\nProducto principal\nContenido a integrar\n\n\n\n\nIntroducción\nEsquema general del modelo\nproblema, enfoque, flujo general\n\n\nObjetivos\nTabla de objetivos y productos\nobjetivos y correspondencia metodológica\n\n\nInsumos satelitales\nTabla de capas y QA\nfuentes, capas y control de calidad\n\n\nIndicadores base\nFórmulas, mapas y distribuciones\ndefinición, cálculo e interpretación\n\n\nVector de estado y línea base\nPanel, baseline y dominio\nintegración multivariada y referencia\n\n\nTrayectoria del estado sistémico\nD, V, A y Jerk\ndistancia y dinámica temporal\n\n\nIntegración espacial\nD_local y mapas\nvecindad y coherencia espacial\n\n\nSensibilidad del sistema\nSENS y relaciones con forzantes\nrespuesta a presiones persistentes\n\n\nSíntesis de resiliencia territorial\nPT, RES, tablas y mapas\nsíntesis de transición y resiliencia\n\n\nConclusiones\nSíntesis metodológica y operativa\ncierre e interpretación final",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Conclusiones</span>"
-    ]
-  },
-  {
-    "objectID": "conclusiones.html#uso-recomendado-de-fórmulas-parámetros-y-resultados-dentro-del-libro",
-    "href": "conclusiones.html#uso-recomendado-de-fórmulas-parámetros-y-resultados-dentro-del-libro",
-    "title": "9  Conclusiones",
-    "section": "9.4 Uso recomendado de fórmulas, parámetros y resultados dentro del libro",
-    "text": "9.4 Uso recomendado de fórmulas, parámetros y resultados dentro del libro\nEl libro debe utilizar cuatro tipos de insumos metodológicos ya definidos en el proyecto:\n\nFórmulas: incorporar las ecuaciones efectivamente utilizadas.\nProcesamiento: explicar con claridad cómo se calcula cada variable o etapa.\nResultados: integrar mapas, series, histogramas y tablas en cada capítulo.\nParámetros: documentar umbrales, baseline y pesos usados en las métricas sintéticas.",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Conclusiones</span>"
-    ]
-  },
-  {
     "objectID": "conclusiones.html#sec-mide-interpreta",
     "href": "conclusiones.html#sec-mide-interpreta",
     "title": "9  Conclusiones",
@@ -932,6 +547,76 @@
     "text": "9.6 Cierre\nLa MRCT propone una forma ordenada de transformar observaciones satelitales en lectura territorial. Su fortaleza está en combinar evidencia multivariada, comparación histórica, dinámica temporal, contexto espacial y sensibilidad climática dentro de un mismo flujo.\nComo toda herramienta de modelación, su utilidad depende de una lectura disciplinada. Los mapas y métricas no deben interpretarse como verdades aisladas, sino como señales organizadas para orientar análisis, priorización y conversación técnica. En ese sentido, la MRCT no sustituye el juicio experto ni el trabajo de terreno; los hace más focalizados, trazables y comparables.",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Conclusiones</span>"
+    ]
+  },
+  {
+    "objectID": "anexos.html",
+    "href": "anexos.html",
+    "title": "11  Anexos",
+    "section": "",
+    "text": "11.1 Fichas",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Anexos</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#por-qué-una-matriz-de-resiliencia-territorial",
+    "href": "intro.html#por-qué-una-matriz-de-resiliencia-territorial",
+    "title": "1  Introducción",
+    "section": "",
+    "text": "¿cuál es el estado ecosistémico actual de la cuenca?;\n¿cuánto se aleja de su comportamiento de referencia?;\n¿ese alejamiento aumenta, disminuye o se estabiliza?;\n¿la cuenca se comporta como sus vecinas o aparece como una anomalía local?;\n¿qué tan reactiva es frente a condiciones más secas, reflectantes o cálidas?;\n¿cómo se sintetiza todo eso en una lectura operativa de resiliencia?",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#la-idea-central",
+    "href": "intro.html#la-idea-central",
+    "title": "1  Introducción",
+    "section": "1.2 La idea central",
+    "text": "1.2 La idea central\nCada cuenca se representa como un punto dentro de un espacio de estados. Ese punto reúne indicadores que describen vegetación, agua, humedad, criósfera, estructura del paisaje, energía y aridez.\nLa línea base define el dominio de referencia: el rango de condiciones observadas durante el período usado como comparación. Desde allí, el modelo mide la distancia de cada cuenca-año al comportamiento de referencia. Una distancia baja indica cercanía con el régimen histórico; una distancia alta indica mayor alejamiento estructural.\nLa trayectoria agrega movimiento a esa lectura. La velocidad muestra si la cuenca se acerca o se aleja de su referencia. La aceleración indica si ese movimiento se intensifica o se amortigua. El jerk permite detectar cambios bruscos en la dinámica. Con estas piezas, la lectura deja de ser una fotografía anual y pasa a describir una secuencia temporal.\nLa dimensión espacial completa el cuadro. Una cuenca puede estar lejos de su línea base y, al mismo tiempo, formar parte de un patrón regional amplio. También puede parecer estable frente al conjunto regional, pero diferenciarse fuertemente de sus vecinas inmediatas. Por eso la MRCT incorpora dominio local y gradientes espaciales: la resiliencia territorial depende tanto del estado interno de la unidad como del contexto en que se inserta.\nFinalmente, la sensibilidad climática permite reconocer cuencas más reactivas ante presiones persistentes. Dos unidades pueden tener una distancia similar respecto de la línea base, pero responder de manera muy distinta frente a aridez, albedo o temperatura. Esa diferencia importa para priorizar seguimiento, focalizar análisis y anticipar trayectorias de mayor presión.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#cómo-leer-este-libro",
+    "href": "intro.html#cómo-leer-este-libro",
+    "title": "1  Introducción",
+    "section": "1.3 Cómo leer este libro",
+    "text": "1.3 Cómo leer este libro\nEste libro está organizado como una cadena metodológica. Cada capítulo toma el producto del capítulo anterior y lo transforma en una nueva capa de interpretación.\n\n\n\n\n\nflowchart LR\n    A[Insumos satelitales] --&gt; B[Indicadores base]\n    B --&gt; C[Vector de estado&lt;br/&gt;y línea base]\n    C --&gt; D[Trayectoria temporal]\n    D --&gt; E[Integración espacial]\n    E --&gt; F[Sensibilidad climática]\n    F --&gt; G[Potencial de transición&lt;br/&gt;y resiliencia]\n\n\n\n\n\n\nEl capítulo de insumos describe las capas satelitales, el período de análisis y los criterios de control de calidad. El capítulo de indicadores base muestra cómo esas capas se convierten en métricas por cuenca y año. El capítulo de vector de estado integra los indicadores y define el dominio de referencia. Los capítulos de trayectoria e integración espacial incorporan dinámica temporal y contexto territorial. El capítulo de sensibilidad estima la reactividad frente a presiones climáticas. La síntesis final combina estas señales en el Potencial de Transición y en la resiliencia operativa.\nLa lectura puede hacerse de dos formas. Quien necesite entender la arquitectura completa debe seguir el orden del libro. Quien busque una etapa específica puede entrar por el capítulo correspondiente, siempre teniendo presente que los productos finales dependen de la coherencia de toda la cadena.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#objetivos",
+    "href": "intro.html#objetivos",
+    "title": "1  Introducción",
+    "section": "1.4 Objetivos",
+    "text": "1.4 Objetivos\n\n1.4.1 Objetivo general\nConstruir una matriz de resiliencia climática territorial que represente el estado ecosistémico de cada unidad territorial, su evolución temporal, su coherencia espacial y su propensión a transición, usando señales satelitales e indicadores derivados.\n\n\n1.4.2 Objetivos específicos\n\n\n\n\n\n\n\nObjetivo específico\nProducto asociado\n\n\n\n\nDerivar indicadores base a partir de mosaicos satelitales anuales.\nIndicadores por cuenca y año.\n\n\nIntegrar los indicadores en un vector de estado ecosistémico.\nPanel longitudinal cuenca × año.\n\n\nDefinir una línea base o dominio de referencia.\nDistancia estructural al dominio.\n\n\nMedir la trayectoria temporal del sistema con derivadas discretas.\nVelocidad, aceleración, jerk y estado dinámico.\n\n\nIncorporar la dimensión espacial mediante dominio local.\nDistancia local y lectura de vecindad.\n\n\nEstimar la sensibilidad del sistema frente a presiones persistentes.\nÍndice de sensibilidad climática.\n\n\nSintetizar la información en métricas de transición y resiliencia territorial.\nPotencial de Transición, resiliencia operativa y tipologías asociadas.\n\n\n\nEn conjunto, estos objetivos permiten pasar desde observaciones satelitales anuales hacia una lectura territorial integrada, comparable y trazable. La MRCT ordena la evidencia disponible para formular mejores preguntas, identificar territorios prioritarios y apoyar decisiones con una base técnica explícita.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "insumos.html#región-de-estudio",
+    "href": "insumos.html#región-de-estudio",
+    "title": "2  Insumos e índices Satelitales",
+    "section": "",
+    "text": "Figure 2.1: Localización general de la Región de Magallanes y de la Antártica Chilena.\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: Fiordos, canales y relieve austral de Magallanes.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.3: Iceberg y ambiente glaciar en la Patagonia austral.\n\n\n\n\n\n\n\n\n\n\nFigure 2.4: Fauna costera y ecosistemas subantárticos de Magallanes.\n\n\n\n\n\n\n\n\n\n\n\n\n\nDimensión regional\nRelevancia para la MRCT\n\n\n\n\nGran extensión y baja densidad poblacional\nRequiere monitoreo remoto sistemático y comparable.\n\n\nGradiente oeste-este de humedad y estepa\nAfecta vegetación, agua superficial, aridez y temperatura.\n\n\nPresencia de glaciares, nieve y campos de hielo\nHace centrales los indicadores de criósfera, albedo y agua.\n\n\nAlta nubosidad y clima ventoso\nCondiciona la construcción de mosaicos anuales robustos.\n\n\nCuencas con drenajes complejos\nJustifica trabajar con unidades hidrográficas como base territorial.\n\n\nÁreas protegidas y ecosistemas sensibles\nExige trazabilidad y cautela en la interpretación de cambios.\n\n\nPoblamiento concentrado y territorios aislados\nRefuerza el valor de productos cartográficos para gestión pública.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos  e índices Satelitales</span>"
+    ]
+  },
+  {
+    "objectID": "insumos.html#footnotes",
+    "href": "insumos.html#footnotes",
+    "title": "2  Insumos e índices Satelitales",
+    "section": "",
+    "text": "Biblioteca del Congreso Nacional de Chile, Región de Magallanes y Antártica Chilena.↩︎\nMinisterio del Medio Ambiente, SINCA, Información general de la Región de Magallanes y Antártica Chilena.↩︎\nBiblioteca del Congreso Nacional de Chile, Hidrografía Región de Magallanes.↩︎\nDirección General de Aguas, DGA Magallanes destaca crecimiento de la red de estaciones de monitoreo de aguas subterráneas y glaciares.↩︎\nServicio de Biodiversidad y Áreas Protegidas, SBAP comienza a operar en la región de Magallanes.↩︎\nInstituto Nacional de Estadísticas, Resultados regionales Censo 2024: Magallanes y de la Antártica Chilena.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Insumos  e índices Satelitales</span>"
     ]
   }
 ]

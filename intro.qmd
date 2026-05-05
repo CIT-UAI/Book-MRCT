@@ -1,26 +1,76 @@
 # Introducción {#sec-intro}
 
-La MRCT es un sistema para describir cómo cambian las unidades territoriales en el tiempo a partir de señales satelitales e indicadores derivados.
+El cambio climático se expresa en el territorio como una acumulación de señales: variaciones en la vegetación, pérdida o expansión de agua superficial, cambios en la nieve, aumento de temperatura, fragmentación del paisaje y modificaciones en la forma en que las cuencas se relacionan con su entorno. Mirar cada señal por separado ayuda a describir una parte del proceso, pero dificulta reconocer cuándo el sistema completo empieza a desplazarse hacia una condición distinta.
 
-La idea central es simple. Un territorio no se interpreta como una imagen aislada, sino como una trayectoria dentro de un espacio de estados. Por eso el modelo no solo pregunta qué cambió, sino también cuánto se alejó, con qué velocidad y en qué contexto.
+La Matriz de Resiliencia Climática Territorial (MRCT) organiza esas señales en una lectura integrada. Su punto de partida son mosaicos satelitales anuales; su resultado es una representación del estado ecosistémico de cada cuenca hidrográfica, de su evolución temporal, de su coherencia espacial y de su propensión a transición.
 
-Una analogía útil es la de una ruta. Los indicadores base describen la posición del sistema. La línea base fija el punto de referencia. La trayectoria muestra si la cuenca se mantiene cerca, se aleja o comienza a reorganizarse.
+La pregunta que guía el modelo es directa: ¿qué tan cerca o lejos se encuentra una unidad territorial de su régimen de referencia, cómo se está moviendo en el tiempo y qué tan expuesta aparece frente a presiones climáticas persistentes?
 
-Este capítulo debe explicar el problema que aborda la MRCT, la lógica del enfoque y la estructura general del libro.
+La evaluación se aplica en la Región de Magallanes y de la Antártica Chilena, un territorio austral donde convergen campos de hielo, fiordos, estepas frías, bosques subantárticos, turberas y cuencas de alta sensibilidad climática. Esta diversidad convierte a Magallanes en un caso adecuado para observar cómo las señales satelitales permiten describir cambios ecosistémicos en territorios extensos, remotos y ambientalmente contrastados.
 
+![Región de Magallanes y de la Antártica Chilena.](images/estrecho-de-magallanes.jpg){#fig-region-magallanes fig-align="center" width="90%"}
+
+## Por qué una matriz de resiliencia territorial
+
+La planificación territorial necesita distinguir entre cambios puntuales y transformaciones persistentes. Un año seco, una anomalía térmica o una reducción temporal de vegetación pueden ser parte de la variabilidad normal del sistema. La señal relevante aparece cuando esas variaciones se acumulan, se sostienen o se combinan con cambios espaciales y climáticos que aumentan la posibilidad de transición.
+
+La MRCT aborda ese problema mediante una secuencia reproducible. Primero transforma información satelital en indicadores interpretables. Luego integra esos indicadores en un vector de estado ecosistémico. A partir de ese vector define una línea base, mide distancias respecto de ella, calcula trayectorias temporales, incorpora el contexto espacial y estima sensibilidad frente a aridez, albedo y temperatura superficial.
+
+El valor de esta arquitectura está en conectar preguntas que suelen analizarse por separado:
+
+- ¿cuál es el estado ecosistémico actual de la cuenca?;
+- ¿cuánto se aleja de su comportamiento de referencia?;
+- ¿ese alejamiento aumenta, disminuye o se estabiliza?;
+- ¿la cuenca se comporta como sus vecinas o aparece como una anomalía local?;
+- ¿qué tan reactiva es frente a condiciones más secas, reflectantes o cálidas?;
+- ¿cómo se sintetiza todo eso en una lectura operativa de resiliencia?
+
+## La idea central
+
+Cada cuenca se representa como un punto dentro de un espacio de estados. Ese punto reúne indicadores que describen vegetación, agua, humedad, criósfera, estructura del paisaje, energía y aridez.
+
+La línea base define el dominio de referencia: el rango de condiciones observadas durante el período usado como comparación. Desde allí, el modelo mide la distancia de cada cuenca-año al comportamiento de referencia. Una distancia baja indica cercanía con el régimen histórico; una distancia alta indica mayor alejamiento estructural.
+
+La trayectoria agrega movimiento a esa lectura. La velocidad muestra si la cuenca se acerca o se aleja de su referencia. La aceleración indica si ese movimiento se intensifica o se amortigua. El jerk permite detectar cambios bruscos en la dinámica. Con estas piezas, la lectura deja de ser una fotografía anual y pasa a describir una secuencia temporal.
+
+La dimensión espacial completa el cuadro. Una cuenca puede estar lejos de su línea base y, al mismo tiempo, formar parte de un patrón regional amplio. También puede parecer estable frente al conjunto regional, pero diferenciarse fuertemente de sus vecinas inmediatas. Por eso la MRCT incorpora dominio local y gradientes espaciales: la resiliencia territorial depende tanto del estado interno de la unidad como del contexto en que se inserta.
+
+Finalmente, la sensibilidad climática permite reconocer cuencas más reactivas ante presiones persistentes. Dos unidades pueden tener una distancia similar respecto de la línea base, pero responder de manera muy distinta frente a aridez, albedo o temperatura. Esa diferencia importa para priorizar seguimiento, focalizar análisis y anticipar trayectorias de mayor presión.
+
+## Cómo leer este libro
+
+Este libro está organizado como una cadena metodológica. Cada capítulo toma el producto del capítulo anterior y lo transforma en una nueva capa de interpretación.
+
+```{mermaid}
+flowchart LR
+    A[Insumos satelitales] --> B[Indicadores base]
+    B --> C[Vector de estado<br/>y línea base]
+    C --> D[Trayectoria temporal]
+    D --> E[Integración espacial]
+    E --> F[Sensibilidad climática]
+    F --> G[Potencial de transición<br/>y resiliencia]
+```
+
+El capítulo de insumos describe las capas satelitales, el período de análisis y los criterios de control de calidad. El capítulo de indicadores base muestra cómo esas capas se convierten en métricas por cuenca y año. El capítulo de vector de estado integra los indicadores y define el dominio de referencia. Los capítulos de trayectoria e integración espacial incorporan dinámica temporal y contexto territorial. El capítulo de sensibilidad estima la reactividad frente a presiones climáticas. La síntesis final combina estas señales en el Potencial de Transición y en la resiliencia operativa.
+
+La lectura puede hacerse de dos formas. Quien necesite entender la arquitectura completa debe seguir el orden del libro. Quien busque una etapa específica puede entrar por el capítulo correspondiente, siempre teniendo presente que los productos finales dependen de la coherencia de toda la cadena.
 
 ## Objetivos
 
-## Objetivo general
+### Objetivo general
 
 Construir una matriz de resiliencia climática territorial que represente el estado ecosistémico de cada unidad territorial, su evolución temporal, su coherencia espacial y su propensión a transición, usando señales satelitales e indicadores derivados.
 
-## Objetivos específicos
+### Objetivos específicos
 
-- Derivar indicadores base a partir de mosaicos satelitales anuales.
-- Integrar los indicadores en un vector de estado ecosistémico por unidad territorial y año.
-- Definir una línea base o dominio de referencia.
-- Medir la trayectoria temporal del sistema con derivadas discretas.
-- Incorporar la dimensión espacial mediante dominio local.
-- Estimar la sensibilidad del sistema frente a presiones persistentes.
-- Sintetizar la información en métricas de transición y resiliencia territorial.
+| Objetivo específico | Producto asociado |
+|---|---|
+| Derivar indicadores base a partir de mosaicos satelitales anuales. | Indicadores por cuenca y año. |
+| Integrar los indicadores en un vector de estado ecosistémico. | Panel longitudinal cuenca × año. |
+| Definir una línea base o dominio de referencia. | Distancia estructural al dominio. |
+| Medir la trayectoria temporal del sistema con derivadas discretas. | Velocidad, aceleración, jerk y estado dinámico. |
+| Incorporar la dimensión espacial mediante dominio local. | Distancia local y lectura de vecindad. |
+| Estimar la sensibilidad del sistema frente a presiones persistentes. | Índice de sensibilidad climática. |
+| Sintetizar la información en métricas de transición y resiliencia territorial. | Potencial de Transición, resiliencia operativa y tipologías asociadas. |
+
+En conjunto, estos objetivos permiten pasar desde observaciones satelitales anuales hacia una lectura territorial integrada, comparable y trazable. La MRCT ordena la evidencia disponible para formular mejores preguntas, identificar territorios prioritarios y apoyar decisiones con una base técnica explícita.

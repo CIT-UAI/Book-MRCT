@@ -6,11 +6,51 @@ El modelo parte de la superficie terrestre. Antes de construir cualquier indicad
 
 Este capítulo describe la fuente de datos utilizada, las seis variables que componen el flujo anual, los criterios de control de calidad y el procedimiento de alineamiento que garantiza coherencia entre capas.
 
+## Región de Estudio
+
+La Región de Magallanes y de la Antártica Chilena se ubica en el extremo austral de Chile y constituye uno de los territorios más extensos, remotos y ambientalmente heterogéneos del país. Su sector sudamericano se extiende aproximadamente entre los 48°36' y 56°30' de latitud sur, y entre los 66°25' y 75°40' de longitud oeste. Administrativamente se organiza en cuatro provincias —Última Esperanza, Magallanes, Tierra del Fuego y Antártica Chilena— y once comunas, con Punta Arenas como capital regional.[^mag-bcn]
+
+![Localización general de la Región de Magallanes y de la Antártica Chilena.](images/mapa_magallanes.jpg){#fig-mapa-region-magallanes fig-align="center" width="90%"}
+
+La región posee una superficie total de **1.382.291,10 km²**, de los cuales **132.291,10 km²** corresponden al territorio sudamericano y **1.250.000 km²** al Territorio Chileno Antártico. Para efectos de este libro, el levantamiento satelital y la construcción de indicadores se concentran en las cuencas hidrográficas del sector sudamericano. Esta delimitación permite trabajar sobre unidades territoriales comparables, con continuidad espacial y pertinencia para el análisis ecosistémico regional.
+
+Desde el punto de vista físico, Magallanes reúne archipiélagos, fiordos, canales, cordones montañosos, campos de hielo, estepas frías, turberas, bosques subantárticos, lagos, glaciares y extensas zonas costeras. Esta diversidad produce contrastes marcados entre el occidente húmedo y fragmentado por canales, el eje cordillerano y glaciar, y el oriente más seco y estepario. Para la MRCT, esa heterogeneidad es central: los indicadores de vegetación, agua, nieve, aridez, temperatura y estructura del paisaje se leen dentro de un mosaico ecológico de alta variabilidad interna.
+
+![Fiordos, canales y relieve austral de Magallanes.](images/ballenas-parque-marino-francisco-coloane.jpg){#fig-fiordos-magallanes fig-align="center" width="90%"}
+
+El clima regional es templado frío, ventoso y de baja amplitud térmica, con abundante nubosidad y máximos invernales de precipitación. Hacia el oriente de la cordillera predominan condiciones estepáricas frías, con menor humedad y mayor exposición al viento. Esta gradiente climática incide directamente en la lectura satelital: la nubosidad reduce ventanas de observación; la nieve y el hielo modifican la reflectancia superficial; las diferencias de humedad alteran la señal hídrica y vegetal; y los contrastes térmicos se expresan en la temperatura superficial observada.[^mag-sinca]
+
+La hidrografía regional presenta una organización singular. Buena parte de los cursos principales se ubican hacia el sector oriental o transandino y varios sistemas drenan finalmente hacia el Atlántico. Entre las hoyas relevantes se encuentran los ríos Serrano, Gallegos, Chico o Ciaike, San Juan y otras cuencas menores al sur del Estrecho de Magallanes. El río Serrano, asociado al Campo de Hielo Sur y al sistema de lagos Toro, Sarmiento, Pehoé y Nordenskjöld, es un ejemplo de la conexión entre criósfera, lagos, escorrentía y paisaje glaciar.[^mag-hidro]
+
+La criósfera es uno de los componentes ambientales más importantes para comprender la resiliencia regional. Según el Inventario Público de Glaciares informado por la Dirección General de Aguas, Magallanes concentra **7.055 glaciares** y una superficie glaciarizada de **10.426,6 km²**, equivalente a casi la mitad de la superficie glaciarizada nacional. Por esta razón, la fracción nival, el albedo, la temperatura superficial y los cambios en agua superficial son variables especialmente relevantes para seguir transformaciones ecosistémicas asociadas a pérdida de hielo, variabilidad hídrica y cambios de cobertura.[^mag-dga]
+
+![Iceberg y ambiente glaciar en la Patagonia austral. ](images/region-de-magallanes-y-de-la-antartica-chilena.jpg){#fig-iceberg-magallanes fig-align="center" width="90%"}
+
+El valor ecológico de Magallanes también se expresa en su alto nivel de protección ambiental. La región concentra la mayor extensión de territorio protegido de Chile y contiene áreas de conservación, parques nacionales, reservas, monumentos naturales, ecosistemas marinos, bosques subantárticos, turberas y ambientes glaciares. Esta condición refuerza la necesidad de indicadores reproducibles que permitan observar cambios territoriales sin depender únicamente de campañas de terreno, especialmente en zonas de difícil acceso.[^mag-sbap]
+
+![Fauna costera y ecosistemas subantárticos de Magallanes.](images/pinguino-de-magallanes.jpg){#fig-pinguinos-magallanes fig-align="center" width="90%"}
+
+La dimensión social y demográfica agrega otra capa de contexto. El Censo 2024 registró **166.537 personas** en la región, con una estructura altamente concentrada en centros urbanos y una densidad muy baja si se considera la superficie total regional. Punta Arenas y Natales concentran la mayor parte de la población, mientras amplios sectores rurales, insulares y de estepa presentan baja ocupación permanente. Este patrón de poblamiento influye en la presión territorial, en la accesibilidad para validación de campo y en la forma en que los resultados de la MRCT pueden apoyar decisiones públicas.[^mag-ine]
+
+La base económica regional combina actividades urbanas, portuarias, logísticas, turísticas, ganaderas, energéticas e industriales. La extracción de hidrocarburos y gas natural, la ganadería ovina, el turismo de naturaleza y los servicios asociados a conectividad austral conviven con áreas de alto valor ecológico y baja intervención directa. En términos de resiliencia territorial, esta combinación exige distinguir entre cambios ecosistémicos propios de la variabilidad climática, transformaciones asociadas a presión productiva y dinámicas espaciales vinculadas a infraestructura, accesibilidad y ocupación humana.
+
+En este contexto, los insumos satelitales cumplen una función metodológica clave. Permiten observar de manera homogénea un territorio extenso, climáticamente complejo y con fuertes restricciones logísticas. La MRCT usa esa observación anual para construir una lectura integrada de las cuencas: primero como señal física de superficie, luego como indicadores ecosistémicos y finalmente como trayectoria de resiliencia territorial.
+
+| Dimensión regional | Relevancia para la MRCT |
+|---|---|
+| Gran extensión y baja densidad poblacional | Requiere monitoreo remoto sistemático y comparable. |
+| Gradiente oeste-este de humedad y estepa | Afecta vegetación, agua superficial, aridez y temperatura. |
+| Presencia de glaciares, nieve y campos de hielo | Hace centrales los indicadores de criósfera, albedo y agua. |
+| Alta nubosidad y clima ventoso | Condiciona la construcción de mosaicos anuales robustos. |
+| Cuencas con drenajes complejos | Justifica trabajar con unidades hidrográficas como base territorial. |
+| Áreas protegidas y ecosistemas sensibles | Exige trazabilidad y cautela en la interpretación de cambios. |
+| Poblamiento concentrado y territorios aislados | Refuerza el valor de productos cartográficos para gestión pública. |
+
 ## Fuente de datos
 
 La fuente principal son los mosaicos **Landsat 8** del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (*Operational Land Imager*) y el sensor TIRS (*Thermal Infrared Sensor*), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y temperatura superficial a **30 metros de resolución**.
 
-El modelo cubre el período **2013–2025**, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Aysén (Patagonia chilena), un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.
+El modelo cubre el período **2013–2025**, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Magallanes y de la Antártica Chilena, un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.
 
 La frecuencia de revisita de Landsat 8 es de 16 días. Los mosaicos anuales se construyen como composites de mediana temporal: para cada píxel se toma la mediana de todos los valores observados durante el año. Esto reduce el efecto de perturbaciones puntuales como nubes o sombras residuales y entrega una representación estable del estado superficial anual.
 
@@ -100,3 +140,10 @@ flowchart LR
     E --> F[Mosaicos anuales<br/>validados]
     F --> G[Capas listas<br/>para indicadores]
 ```
+
+[^mag-bcn]: Biblioteca del Congreso Nacional de Chile, [Región de Magallanes y Antártica Chilena](https://www.bcn.cl/siit/siit/nuestropais/region12).
+[^mag-sinca]: Ministerio del Medio Ambiente, SINCA, [Información general de la Región de Magallanes y Antártica Chilena](https://sinca.mma.gob.cl/index.php/region/info/id/XII).
+[^mag-hidro]: Biblioteca del Congreso Nacional de Chile, [Hidrografía Región de Magallanes](https://www.bcn.cl/siit/nuestropais/region12/hidrografia.htm).
+[^mag-dga]: Dirección General de Aguas, [DGA Magallanes destaca crecimiento de la red de estaciones de monitoreo de aguas subterráneas y glaciares](https://dga.mop.gob.cl/dga-magallanes-destaca-crecimiento-de-la-red-de-estaciones-de-monitoreo-de-aguas-subterraneas-y-glaciares-en-la-region/).
+[^mag-sbap]: Servicio de Biodiversidad y Áreas Protegidas, [SBAP comienza a operar en la región de Magallanes](https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes).
+[^mag-ine]: Instituto Nacional de Estadísticas, [Resultados regionales Censo 2024: Magallanes y de la Antártica Chilena](https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf).

@@ -88,3 +88,6 @@ processed/
 # Keep docs/ tracked if GitHub Pages publishes from /docs on the main branch.
 # If you publish with GitHub Actions or gh-pages instead, uncomment this:
 # docs/
+.positai
+
+/.quarto/
