@@ -1,0 +1,90 @@
+# =============================================================
+# Quarto local state and preview cache
+# =============================================================
+.quarto/
+_freeze/
+*_cache/
+*_files/
+.jupyter_cache/
+
+# Temporary render/session artifacts
+quarto-session-*/
+quarto-session-temp*/
+.quarto-session*/
+
+# =============================================================
+# R / RStudio local state
+# =============================================================
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj.user/
+*.Rcheck/
+*-Ex.R
+
+# Keep the project file if you want collaborators to open the book in RStudio.
+# Uncomment the next line if you prefer not to version RStudio project files.
+# *.Rproj
+
+# =============================================================
+# Python / Jupyter local state
+# =============================================================
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =============================================================
+# OS and editor noise
+# =============================================================
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# =============================================================
+# Logs and temporary files
+# =============================================================
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# =============================================================
+# Large local data or generated analysis artifacts
+# =============================================================
+data/
+outputs/
+output/
+processed/
+*.nc
+*.tif
+*.tiff
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+*.gpkg
+
+# =============================================================
+# GitHub Pages output
+# =============================================================
+# This book is configured with `output-dir: docs` in _quarto.yml.
+# Keep docs/ tracked if GitHub Pages publishes from /docs on the main branch.
+# If you publish with GitHub Actions or gh-pages instead, uncomment this:
+# docs/
