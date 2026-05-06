@@ -391,9 +391,139 @@ Figure&nbsp;2.4: Fauna costera y ecosistemas subantárticos de Magallanes.
 </tbody>
 </table>
 </section>
-<section id="fuente-de-datos" class="level2" data-number="2.2">
+<section id="fuente-de-datos" class="level2 page-columns page-full" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="fuente-de-datos"><span class="header-section-number">2.2</span> Fuente de datos</h2>
-<p>La fuente principal son los mosaicos <strong>Landsat 8</strong> del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (<em>Operational Land Imager</em>) y el sensor TIRS (<em>Thermal Infrared Sensor</em>), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y temperatura superficial a <strong>30 metros de resolución</strong>.</p>
+<p>La fuente principal son los mosaicos <strong>Landsat 8</strong> del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (<em>Operational Land Imager</em>) y el sensor TIRS (<em>Thermal Infrared Sensor</em>), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y señal térmica superficial. Las bandas ópticas de OLI tienen resolución espacial de <strong>30 metros</strong>, la banda pancromática opera a <strong>15 metros</strong> y las bandas térmicas de TIRS tienen resolución nativa de <strong>100 metros</strong>, remuestreada a 30 metros en los productos distribuidos <span class="citation" data-cites="usgs_landsat8_bands">(<a href="references.html#ref-usgs_landsat8_bands" role="doc-biblioref">U.S. Geological Survey 2025</a>)</span>.</p>
+<div id="fig-landsat8" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-landsat8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/landsat8.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-landsat8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Satélite Landsat 8, plataforma de observación terrestre equipada con los sensores OLI y TIRS. OLI registra información visible, infrarroja cercana e infrarroja de onda corta; TIRS registra radiancia térmica, que luego puede transformarse en temperatura de brillo.
+</figcaption>
+</figure>
+</div>
+<p>La <a href="#tbl-bandas-landsat8" class="quarto-xref">Tabla&nbsp;<span>2.1</span></a> resume las bandas de Landsat 8 y su función dentro del flujo MRCT. Aunque el modelo no utiliza todas las bandas como variables finales, la tabla permite ubicar cada índice dentro del sistema espectral del sensor.</p>
+<div id="tbl-bandas-landsat8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bandas-landsat8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Bandas espectrales de Landsat 8 OLI/TIRS y uso dentro del flujo MRCT. Las bandas térmicas tienen resolución nativa de 100 m y se distribuyen remuestreadas a 30 m en los productos Landsat.
+</figcaption>
+<div aria-describedby="tbl-bandas-landsat8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sensor</th>
+<th style="text-align: right;">Banda</th>
+<th>Nombre espectral</th>
+<th style="text-align: right;">Longitud de onda (µm)</th>
+<th style="text-align: right;">Resolución</th>
+<th>Uso dentro de la MRCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OLI</td>
+<td style="text-align: right;">1</td>
+<td>Aerosol costero</td>
+<td style="text-align: right;">0,43-0,45</td>
+<td style="text-align: right;">30 m</td>
+<td>No se usa directamente en los indicadores base.</td>
+</tr>
+<tr class="even">
+<td>OLI</td>
+<td style="text-align: right;">2</td>
+<td>Azul</td>
+<td style="text-align: right;">0,45-0,51</td>
+<td style="text-align: right;">30 m</td>
+<td>Participa en la estimación de albedo superficial.</td>
+</tr>
+<tr class="odd">
+<td>OLI</td>
+<td style="text-align: right;">3</td>
+<td>Verde</td>
+<td style="text-align: right;">0,53-0,59</td>
+<td style="text-align: right;">30 m</td>
+<td>Participa en NDWI, NDSI y albedo superficial.</td>
+</tr>
+<tr class="even">
+<td>OLI</td>
+<td style="text-align: right;">4</td>
+<td>Rojo</td>
+<td style="text-align: right;">0,64-0,67</td>
+<td style="text-align: right;">30 m</td>
+<td>Participa en NDVI y albedo superficial.</td>
+</tr>
+<tr class="odd">
+<td>OLI</td>
+<td style="text-align: right;">5</td>
+<td>Infrarrojo cercano (NIR)</td>
+<td style="text-align: right;">0,85-0,88</td>
+<td style="text-align: right;">30 m</td>
+<td>Participa en NDVI, NDWI, NDDI y albedo superficial.</td>
+</tr>
+<tr class="even">
+<td>OLI</td>
+<td style="text-align: right;">6</td>
+<td>Infrarrojo de onda corta 1 (SWIR 1)</td>
+<td style="text-align: right;">1,57-1,65</td>
+<td style="text-align: right;">30 m</td>
+<td>Participa en NDSI y albedo superficial.</td>
+</tr>
+<tr class="odd">
+<td>OLI</td>
+<td style="text-align: right;">7</td>
+<td>Infrarrojo de onda corta 2 (SWIR 2)</td>
+<td style="text-align: right;">2,11-2,29</td>
+<td style="text-align: right;">30 m</td>
+<td>Participa en la estimación de albedo superficial.</td>
+</tr>
+<tr class="even">
+<td>OLI</td>
+<td style="text-align: right;">8</td>
+<td>Pancromática</td>
+<td style="text-align: right;">0,50-0,68</td>
+<td style="text-align: right;">15 m</td>
+<td>No se usa directamente en los indicadores base.</td>
+</tr>
+<tr class="odd">
+<td>OLI</td>
+<td style="text-align: right;">9</td>
+<td>Cirrus</td>
+<td style="text-align: right;">1,36-1,38</td>
+<td style="text-align: right;">30 m</td>
+<td>Apoya el control de nubosidad; no entra como indicador final.</td>
+</tr>
+<tr class="even">
+<td>TIRS</td>
+<td style="text-align: right;">10</td>
+<td>Infrarrojo térmico 1</td>
+<td style="text-align: right;">10,60-11,19</td>
+<td style="text-align: right;">100 m</td>
+<td>Insumo principal para temperatura de brillo.</td>
+</tr>
+<tr class="odd">
+<td>TIRS</td>
+<td style="text-align: right;">11</td>
+<td>Infrarrojo térmico 2</td>
+<td style="text-align: right;">11,50-12,51</td>
+<td style="text-align: right;">100 m</td>
+<td>No se usa directamente en el flujo base.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 <p>El modelo cubre el período <strong>2013–2025</strong>, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Magallanes y de la Antártica Chilena, un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.</p>
 <p>La frecuencia de revisita de Landsat 8 es de 16 días. Los mosaicos anuales se construyen como composites de mediana temporal: para cada píxel se toma la mediana de todos los valores observados durante el año. Esto reduce el efecto de perturbaciones puntuales como nubes o sombras residuales y entrega una representación estable del estado superficial anual.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -435,17 +565,39 @@ En términos simples
 </section>
 <section id="alb-albedo-superficial" class="level3" data-number="2.3.5">
 <h3 data-number="2.3.5" class="anchored" data-anchor-id="alb-albedo-superficial"><span class="header-section-number">2.3.5</span> ALB — Albedo superficial</h3>
-<p>El albedo mide la fracción de radiación solar incidente que la superficie refleja. Se calcula como una combinación ponderada de las reflectancias en las bandas del visible e infrarrojo cercano. Superficies como nieve o suelo desnudo claro presentan albedo alto; vegetación densa y agua presentan albedo bajo. Variaciones en el albedo medio de una cuenca reflejan cambios en la composición superficial.</p>
+<p>El albedo mide la fracción de radiación solar incidente que la superficie refleja. En el flujo MRCT se aproxima como albedo de onda corta a partir de una combinación ponderada de reflectancias de superficie Landsat. La forma funcional usada sigue la conversión estrecha-a-ancha propuesta para sensores multiespectrales por <span class="citation" data-cites="liang2001">Liang (<a href="references.html#ref-liang2001" role="doc-biblioref">2001</a>)</span>. La expresión aplicada es:</p>
+<p><span class="math display">
+\text{ALB} =
+0{,}356\rho_{Blue}
++ 0{,}130\rho_{Red}
++ 0{,}373\rho_{NIR}
++ 0{,}085\rho_{SWIR1}
++ 0{,}072\rho_{SWIR2}
+- 0{,}0018
+</span></p>
+<p>donde <span class="math inline">\rho_{Blue}</span>, <span class="math inline">\rho_{Red}</span>, <span class="math inline">\rho_{NIR}</span>, <span class="math inline">\rho_{SWIR1}</span> y <span class="math inline">\rho_{SWIR2}</span> corresponden a las reflectancias de superficie de las bandas 2, 4, 5, 6 y 7 de Landsat 8, respectivamente. El resultado es adimensional y se interpreta en el rango físico esperado de 0 a 1, aunque durante el control de calidad pueden revisarse valores fuera de rango producidos por ruido, sombra, nieve extrema o errores residuales de corrección.</p>
+<p>Superficies como nieve, hielo o suelo desnudo claro presentan albedo alto; vegetación densa y agua presentan albedo bajo. Variaciones en el albedo medio de una cuenca reflejan cambios en la composición superficial y en el balance radiativo del territorio.</p>
 </section>
 <section id="tb-temperatura-de-brillo" class="level3" data-number="2.3.6">
 <h3 data-number="2.3.6" class="anchored" data-anchor-id="tb-temperatura-de-brillo"><span class="header-section-number">2.3.6</span> TB — Temperatura de brillo</h3>
-<p>La temperatura de brillo corresponde a la señal térmica de la Banda 10 del sensor TIRS, convertida a grados Celsius. Es la temperatura aparente que tendría un cuerpo negro emitiendo la misma radiancia que la superficie observada. Constituye el proxy directo de la carga térmica superficial de cada unidad territorial.</p>
+<p>La temperatura de brillo corresponde a la señal térmica de la Banda 10 del sensor TIRS. Es la temperatura aparente que tendría un cuerpo negro emitiendo la misma radiancia que la superficie observada. En términos radiométricos, la conversión desde radiancia espectral a temperatura de brillo se define como <span class="citation" data-cites="usgs_landsat_level1">(<a href="references.html#ref-usgs_landsat_level1" role="doc-biblioref">U.S. Geological Survey 2026</a>)</span>:</p>
+<p><span class="math display">
+T_{B,K} =
+\frac{K_2}{\ln\left(\frac{K_1}{L_{\lambda}} + 1\right)}
+</span></p>
+<p>donde <span class="math inline">T_{B,K}</span> es la temperatura de brillo en Kelvin, <span class="math inline">L_{\lambda}</span> es la radiancia espectral de la banda térmica y <span class="math inline">K_1</span> y <span class="math inline">K_2</span> son las constantes térmicas específicas de la banda, provistas en el archivo de metadatos del producto Landsat.</p>
+<p>Como el modelo trabaja la variable térmica en grados Celsius, la conversión final es:</p>
+<p><span class="math display">
+\text{TB} = T_{B,K} - 273{,}15
+</span></p>
+<p>Por tanto, si el raster térmico de entrada ya viene expresado como temperatura de brillo en Kelvin, el procesamiento solo aplica la resta de <strong>273,15</strong> para obtener grados Celsius. Si el insumo inicial corresponde a radiancia, primero se aplica la ecuación radiométrica y luego la conversión de Kelvin a Celsius.</p>
+<p>Esta variable no equivale a una temperatura de superficie terrestre plenamente corregida por emisividad y atmósfera. En la MRCT se usa como un proxy radiométrico consistente de carga térmica superficial, adecuado para comparar unidades territoriales bajo el mismo flujo de procesamiento.</p>
 <hr>
-<p>La <a href="#tbl-capas" class="quarto-xref">Tabla&nbsp;<span>2.1</span></a> resume las características de cada capa y sus usos en el modelo.</p>
+<p>La <a href="#tbl-capas" class="quarto-xref">Tabla&nbsp;<span>2.2</span></a> resume las características de cada capa y sus usos en el modelo.</p>
 <div id="tbl-capas" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-capas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.1: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a ±5 durante el control de calidad.
+Table&nbsp;2.2: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a ±5 durante el control de calidad.
 </figcaption>
 <div aria-describedby="tbl-capas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -556,11 +708,20 @@ Gu, Yingxin, Jesslyn F. Brown, James P. Verdin, and Brian Wardlow. 2007. <span>�
 <div id="ref-ine_censo2024_magallanes" class="csl-entry" role="listitem">
 Instituto Nacional de Estadísticas. 2025. <span>“Resultados Regionales Censo 2024: Magallanes y de La Ant<span>á</span>rtica Chilena.”</span> <a href="https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf">https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf</a>.
 </div>
+<div id="ref-liang2001" class="csl-entry" role="listitem">
+Liang, Shunlin. 2001. <span>“Narrowband to Broadband Conversions of Land Surface Albedo i: Algorithms.”</span> <em>Remote Sensing of Environment</em> 76 (2): 213–38. <a href="https://doi.org/10.1016/S0034-4257(00)00205-4">https://doi.org/10.1016/S0034-4257(00)00205-4</a>.
+</div>
 <div id="ref-mma_sinca_magallanes" class="csl-entry" role="listitem">
 Ministerio del Medio Ambiente. 2015. <span>“Regi<span>ó</span>n de Magallanes y Ant<span>á</span>rtica Chilena: Informaci<span>ó</span>n General.”</span> <a href="https://sinca.mma.gob.cl/index.php/region/info/id/XII">https://sinca.mma.gob.cl/index.php/region/info/id/XII</a>.
 </div>
 <div id="ref-sbap_magallanes_2026" class="csl-entry" role="listitem">
 Servicio de Biodiversidad y Áreas Protegidas. 2026. <span>“Servicio de Biodiversidad y <span>Á</span>reas Protegidas Comienza a Operar En La Regi<span>ó</span>n de Magallanes.”</span> <a href="https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes">https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes</a>.
+</div>
+<div id="ref-usgs_landsat8_bands" class="csl-entry" role="listitem">
+U.S. Geological Survey. 2025. <span>“What Are the Band Designations for the Landsat Satellites?”</span> <a href="https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites">https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites</a>.
+</div>
+<div id="ref-usgs_landsat_level1" class="csl-entry" role="listitem">
+———. 2026. <span>“Using the USGS Landsat Level-1 Data Product.”</span> <a href="https://www.usgs.gov/landsat-missions/using-usgs-landsat-level-1-data-product">https://www.usgs.gov/landsat-missions/using-usgs-landsat-level-1-data-product</a>.
 </div>
 </div>
 </section>
