@@ -48,7 +48,27 @@ En este contexto, los insumos satelitales cumplen una función metodológica cla
 
 ## Fuente de datos
 
-La fuente principal son los mosaicos **Landsat 8** del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (*Operational Land Imager*) y el sensor TIRS (*Thermal Infrared Sensor*), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y temperatura superficial a **30 metros de resolución**.
+La fuente principal son los mosaicos **Landsat 8** del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (*Operational Land Imager*) y el sensor TIRS (*Thermal Infrared Sensor*), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y señal térmica superficial. Las bandas ópticas de OLI tienen resolución espacial de **30 metros**, la banda pancromática opera a **15 metros** y las bandas térmicas de TIRS tienen resolución nativa de **100 metros**, remuestreada a 30 metros en los productos distribuidos [@usgs_landsat8_bands].
+
+![Satélite Landsat 8, plataforma de observación terrestre equipada con los sensores OLI y TIRS. OLI registra información visible, infrarroja cercana e infrarroja de onda corta; TIRS registra radiancia térmica, que luego puede transformarse en temperatura de brillo.](images/landsat8.jpg){#fig-landsat8 fig-align="center" width="90%"}
+
+La @tbl-bandas-landsat8 resume las bandas de Landsat 8 y su función dentro del flujo MRCT. Aunque el modelo no utiliza todas las bandas como variables finales, la tabla permite ubicar cada índice dentro del sistema espectral del sensor.
+
+| Sensor | Banda | Nombre espectral | Longitud de onda (µm) | Resolución | Uso dentro de la MRCT |
+|---|---:|---|---:|---:|---|
+| OLI | 1 | Aerosol costero | 0,43-0,45 | 30 m | No se usa directamente en los indicadores base. |
+| OLI | 2 | Azul | 0,45-0,51 | 30 m | Participa en la estimación de albedo superficial. |
+| OLI | 3 | Verde | 0,53-0,59 | 30 m | Participa en NDWI, NDSI y albedo superficial. |
+| OLI | 4 | Rojo | 0,64-0,67 | 30 m | Participa en NDVI y albedo superficial. |
+| OLI | 5 | Infrarrojo cercano (NIR) | 0,85-0,88 | 30 m | Participa en NDVI, NDWI, NDDI y albedo superficial. |
+| OLI | 6 | Infrarrojo de onda corta 1 (SWIR 1) | 1,57-1,65 | 30 m | Participa en NDSI y albedo superficial. |
+| OLI | 7 | Infrarrojo de onda corta 2 (SWIR 2) | 2,11-2,29 | 30 m | Participa en la estimación de albedo superficial. |
+| OLI | 8 | Pancromática | 0,50-0,68 | 15 m | No se usa directamente en los indicadores base. |
+| OLI | 9 | Cirrus | 1,36-1,38 | 30 m | Apoya el control de nubosidad; no entra como indicador final. |
+| TIRS | 10 | Infrarrojo térmico 1 | 10,60-11,19 | 100 m | Insumo principal para temperatura de brillo. |
+| TIRS | 11 | Infrarrojo térmico 2 | 11,50-12,51 | 100 m | No se usa directamente en el flujo base. |
+
+: Bandas espectrales de Landsat 8 OLI/TIRS y uso dentro del flujo MRCT. Las bandas térmicas tienen resolución nativa de 100 m y se distribuyen remuestreadas a 30 m en los productos Landsat. {#tbl-bandas-landsat8}
 
 El modelo cubre el período **2013–2025**, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Magallanes y de la Antártica Chilena, un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.
 
@@ -90,11 +110,42 @@ El NDDI combina la señal vegetal y la hídrica para capturar tensión hídrica 
 
 ### ALB — Albedo superficial
 
-El albedo mide la fracción de radiación solar incidente que la superficie refleja. Se calcula como una combinación ponderada de las reflectancias en las bandas del visible e infrarrojo cercano. Superficies como nieve o suelo desnudo claro presentan albedo alto; vegetación densa y agua presentan albedo bajo. Variaciones en el albedo medio de una cuenca reflejan cambios en la composición superficial.
+El albedo mide la fracción de radiación solar incidente que la superficie refleja. En el flujo MRCT se aproxima como albedo de onda corta a partir de una combinación ponderada de reflectancias de superficie Landsat. La forma funcional usada sigue la conversión estrecha-a-ancha propuesta para sensores multiespectrales por @liang2001. La expresión aplicada es:
+
+$$
+\text{ALB} =
+0{,}356\rho_{Blue}
++ 0{,}130\rho_{Red}
++ 0{,}373\rho_{NIR}
++ 0{,}085\rho_{SWIR1}
++ 0{,}072\rho_{SWIR2}
+- 0{,}0018
+$$
+
+donde $\rho_{Blue}$, $\rho_{Red}$, $\rho_{NIR}$, $\rho_{SWIR1}$ y $\rho_{SWIR2}$ corresponden a las reflectancias de superficie de las bandas 2, 4, 5, 6 y 7 de Landsat 8, respectivamente. El resultado es adimensional y se interpreta en el rango físico esperado de 0 a 1, aunque durante el control de calidad pueden revisarse valores fuera de rango producidos por ruido, sombra, nieve extrema o errores residuales de corrección.
+
+Superficies como nieve, hielo o suelo desnudo claro presentan albedo alto; vegetación densa y agua presentan albedo bajo. Variaciones en el albedo medio de una cuenca reflejan cambios en la composición superficial y en el balance radiativo del territorio.
 
 ### TB — Temperatura de brillo
 
-La temperatura de brillo corresponde a la señal térmica de la Banda 10 del sensor TIRS, convertida a grados Celsius. Es la temperatura aparente que tendría un cuerpo negro emitiendo la misma radiancia que la superficie observada. Constituye el proxy directo de la carga térmica superficial de cada unidad territorial.
+La temperatura de brillo corresponde a la señal térmica de la Banda 10 del sensor TIRS. Es la temperatura aparente que tendría un cuerpo negro emitiendo la misma radiancia que la superficie observada. En términos radiométricos, la conversión desde radiancia espectral a temperatura de brillo se define como [@usgs_landsat_level1]:
+
+$$
+T_{B,K} =
+\frac{K_2}{\ln\left(\frac{K_1}{L_{\lambda}} + 1\right)}
+$$
+
+donde $T_{B,K}$ es la temperatura de brillo en Kelvin, $L_{\lambda}$ es la radiancia espectral de la banda térmica y $K_1$ y $K_2$ son las constantes térmicas específicas de la banda, provistas en el archivo de metadatos del producto Landsat.
+
+Como el modelo trabaja la variable térmica en grados Celsius, la conversión final es:
+
+$$
+\text{TB} = T_{B,K} - 273{,}15
+$$
+
+Por tanto, si el raster térmico de entrada ya viene expresado como temperatura de brillo en Kelvin, el procesamiento solo aplica la resta de **273,15** para obtener grados Celsius. Si el insumo inicial corresponde a radiancia, primero se aplica la ecuación radiométrica y luego la conversión de Kelvin a Celsius.
+
+Esta variable no equivale a una temperatura de superficie terrestre plenamente corregida por emisividad y atmósfera. En la MRCT se usa como un proxy radiométrico consistente de carga térmica superficial, adecuado para comparar unidades territoriales bajo el mismo flujo de procesamiento.
 
 ---
 

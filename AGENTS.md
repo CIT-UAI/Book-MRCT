@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [book-mrct] recent context, 2026-05-05 6:47pm GMT-4
+# [book-mrct] recent context, 2026-05-05 10:21pm GMT-4
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 13 obs (5,779t read) | 93,976t work | 94% savings
+Stats: 14 obs (6,072t read) | 95,436t work | 94% savings
 
 ### May 5, 2026
 70 6:07p ⚖️ MRCT Digital Book — intro.qmd Editorial Revision Requested
@@ -23,6 +23,7 @@ Stats: 13 obs (5,779t read) | 93,976t work | 94% savings
 83 6:43p 🔄 MRCT Digital Book — insumos.qmd Citations Migrated from Markdown Footnotes to BibTeX Pandoc References
 84 " ✅ MRCT Digital Book — references.bib Populated with 8 Missing BibTeX Entries
 85 " 🔵 MRCT Digital Book — Full Citation Audit Confirms All Bibliography Keys Resolved; 3 Orphan Entries Identified
+86 6:47p ✅ MRCT Digital Book — Academic BibTeX Entries gu2007 and ledoitwolf2004 Enriched with Full Metadata
 
-Access 94k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 95k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>
