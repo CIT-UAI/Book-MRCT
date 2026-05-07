@@ -65,7 +65,8 @@ Cada capítulo aporta una pieza de la arquitectura metodológica. La utilidad de
 | Capítulo | Producto principal | Función dentro de la MRCT |
 |---|---|---|
 | [Introducción](intro.qmd#sec-intro) | Esquema general del modelo | Presenta el problema, el enfoque y la lógica de lectura territorial. |
-| [Insumos satelitales](insumos.qmd#fuente-de-datos) | Capas anuales y control de calidad | Define las fuentes, la grilla espacial y las condiciones mínimas de uso. |
+| [Región de estudio y unidades de análisis](region_estudio.qmd) | Cuencas, grilla territorial y huella antrópica | Define el territorio, la unidad espacial de análisis y los filtros territoriales. |
+| [Insumos satelitales](insumos.qmd#fuente-de-datos) | Capas anuales e índices espectrales | Define las fuentes satelitales, las variables de entrada y las condiciones mínimas de uso. |
 | [Indicadores base](inds_base.qmd#sec-veg-energia) | Variables ecosistémicas por cuenca y año | Construye la capa descriptiva del sistema. |
 | [Vector de estado](vector_es.qmd#sec-hipercubo) | Hipercubo, panel, línea base y dominio | Integra variables y define la referencia multivariada. |
 | [Trayectoria del estado](trayectoria.qmd#sec-derivadas) | $D$, $V$, $A$ y $J$ | Agrega movimiento, ritmo e intensificación temporal. |

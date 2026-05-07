@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [book-mrct] recent context, 2026-05-07 12:36pm GMT-4
+# [book-mrct] recent context, 2026-05-07 4:35pm GMT-4
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 21 obs (9,672t read) | 322,207t work | 97% savings
+Stats: 23 obs (10,650t read) | 335,135t work | 97% savings
 
 ### May 5, 2026
 70 6:07p ⚖️ MRCT Digital Book — intro.qmd Editorial Revision Requested
@@ -32,6 +32,8 @@ Stats: 21 obs (9,672t read) | 322,207t work | 97% savings
 105 12:30p 🔵 MRCT Digital Book — Full Project Structure and Chapter Content Mapped
 106 12:31p 🔵 MRCT Tutorial Notebook — Complete 12-Section Architecture and Output Formats Documented
 107 " 🔵 MRCT Digital Book — BibTeX Bibliography Entries in references.bib
+108 12:36p 🔵 MRCT Digital Book — conclusiones.qmd Full Content and Chapter Architecture Confirmed
+109 " 🔵 MRCT Digital Book — Current Git Diff Shows Active Work on insumos.qmd and references.bib
 
-Access 322k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 335k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>

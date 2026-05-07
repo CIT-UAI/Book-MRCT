@@ -23,6 +23,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - region_estudio.qmd
     - insumos.qmd
     - inds_base.qmd
     - vector_es.qmd
@@ -66,5 +67,4 @@ format:
       fig-prefix: Figura   # (default is "Figure")
       tbl-prefix: Tabla # (default is "Table")
       eq-prefix: Ecuación 
-
 
