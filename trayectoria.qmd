@@ -5,7 +5,7 @@ subtitle: "Trayectoria del estado sistémico"
 
 Con el dominio definido, el modelo puede medir trayectoria. Saber dónde está una cuenca no es suficiente: también importa si se está alejando de su estado de referencia, con qué velocidad lo hace y si ese movimiento se está acelerando o amortiguando.
 
-Esta etapa transforma la serie temporal de distancias $D$ en derivadas discretas, clasifica el régimen dinámico de cada cuenca y extiende la noción de dominio al espacio geográfico mediante vecindad espacial.
+Esta etapa transforma la serie temporal de distancias $D$ en derivadas discretas y clasifica el régimen dinámico de cada cuenca. La pregunta espacial se aborda en el capítulo siguiente, donde la trayectoria se conecta con la estructura territorial que rodea a cada unidad de análisis.
 
 ## Derivadas temporales {#sec-derivadas}
 
@@ -77,19 +77,11 @@ Los umbrales de corte son $z < -1$, $-1 \leq z < -0{,}25$, $|z| \leq 0{,}25$, $0
 
 Estas etiquetas permiten comunicar el régimen dinámico en términos interpretables sin perder la información cuantitativa de las derivadas.
 
-## Dominio local {#sec-dominio-local}
+## Cierre de la lectura temporal {#sec-cierre-trayectoria}
 
-El dominio global $D$ mide la distancia de cada cuenca a la referencia del conjunto completo. El **dominio local** extiende ese concepto al espacio geográfico: mide cuán diferente es una cuenca respecto de sus vecinas inmediatas.
+El resultado de esta etapa es una lectura dinámica del cambio ecosistémico: $D$ indica la posición de cada cuenca respecto de la línea base, mientras que $V$, $A$ y $J$ describen la dirección, intensidad y regularidad de su movimiento. Esta información permite distinguir cuencas estables, cuencas en recuperación y cuencas que muestran señales de transición.
 
-Para cada cuenca se identifican los $k = 8$ vecinos más cercanos en términos de distancia euclidiana entre los centroides de las cuencas. La vecindad se pondera con un kernel gaussiano:
-
-$$w_j = \exp\!\left(-\frac{d_j^2}{2\sigma^2}\right), \quad \sigma = \text{med}(d_j)$$
-
-donde $d_j$ es la distancia geográfica al vecino $j$. Con esos pesos se calcula una media local ponderada $\boldsymbol{\mu}_{local}$ y una covarianza local regularizada $\hat{\Sigma}_{local}$, y la distancia del dominio local es:
-
-$$D_{local,i} = \sqrt{(\mathbf{x}_i - \boldsymbol{\mu}_{local})^\top \hat{\Sigma}_{local}^{-1} (\mathbf{x}_i - \boldsymbol{\mu}_{local})}$$
-
-**Interpretación.** Un valor alto de $D_{local}$ indica que la cuenca es un *outlier* ecológico en su vecindad: su estado difiere marcadamente del de las cuencas que la rodean, independientemente de si está cerca o lejos del dominio global. Esto puede señalar una transición local aislada o una discontinuidad ecosistémica que el dominio global no captura.
+La trayectoria, sin embargo, todavía no indica si ese cambio es compartido por el entorno o si corresponde a una discontinuidad localizada. Esa comparación se desarrolla en la integración territorial, donde las métricas temporales se leen junto con la vecindad espacial de cada cuenca.
 
 ```{mermaid}
 flowchart LR
@@ -98,5 +90,5 @@ flowchart LR
     C --> E[Jerk J<br/>ΔA/Δt]
     B --> F[Estado dinámico: <br/>Estable · Transición <br/>· Recuperación]
     B --> G[Etiquetas semánticas<br/>VEL · ACC · JERK class]
-    A --> H[Dominio local<br/>KNN <br/>k=8 · kernel gaussiano]
+    G --> H[Insumo para integración<br/>territorial]
 ```

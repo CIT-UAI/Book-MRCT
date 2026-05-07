@@ -82,7 +82,7 @@ Los resultados deben leerse de forma secuencial. Primero conviene revisar la cal
 
 La trayectoria temporal agrega una segunda pregunta: no solo dónde está la cuenca, sino hacia dónde se mueve. Una cuenca con $D$ alto y velocidad negativa puede estar iniciando recuperación; una cuenca con $D$ moderado y velocidad positiva puede estar entrando en tensión.
 
-La integración espacial debe usarse para separar señales locales de patrones regionales. Un valor alto de $D_{local}$ puede indicar una discontinuidad territorial relevante, mientras que un valor bajo puede sugerir que la condición observada forma parte de un patrón compartido por el entorno.
+La integración territorial debe usarse para separar señales locales de patrones regionales. Un valor alto de $D_{local}$ puede indicar una discontinuidad territorial relevante, mientras que un valor bajo puede sugerir que la condición observada forma parte de un patrón compartido por el entorno.
 
 La sensibilidad debe interpretarse como reactividad estadística, no como causalidad cerrada. Su función principal es identificar cuencas donde las variaciones de aridez, albedo y temperatura se asocian con cambios importantes en el dominio ecosistémico.
 

@@ -1,11 +1,11 @@
 ---
-title: "Integración Espacial"
-subtitle: "Dominio local y coherencia territorial"
+title: "Integración Territorial"
+subtitle: "Dominio local y coherencia espacial"
 ---
 
 Hasta aquí, el modelo ha descrito el estado ecosistémico de cada cuenca y su trayectoria temporal respecto de una línea base. Esa lectura es necesaria, pero todavía incompleta: una unidad territorial no existe aislada. Su condición ecológica se interpreta mejor cuando se compara también con el entorno que la rodea.
 
-La integración espacial incorpora esa segunda referencia. El dominio global responde cuánto se aleja una cuenca del régimen histórico del conjunto territorial. El dominio local responde si esa misma cuenca es coherente o anómala respecto de sus vecinas inmediatas. Esta diferencia es relevante para la toma de decisiones, porque permite distinguir entre procesos extendidos, que afectan a un sector territorial completo, y señales localizadas, que pueden requerir intervención focalizada.
+La integración territorial incorpora esa segunda referencia. El dominio global responde a cuánto se aleja una cuenca del régimen histórico del conjunto territorial. El dominio local responde si esa misma cuenca es coherente o anómala respecto de sus vecinas inmediatas. Esta diferencia es relevante para la toma de decisiones, porque permite distinguir entre procesos extendidos, que afectan a un sector territorial completo, y señales localizadas, que pueden requerir intervención focalizada.
 
 ::: {.callout-note}
 ## Para tomadores de decisión
@@ -142,7 +142,7 @@ Esta tabla no es una regla automática de decisión. Es un marco de interpretaci
 
 El dominio local también cumple una función dentro del Potencial de Transición. En el capítulo siguiente, $D_{local}$ entra como un factor multiplicativo que aumenta el PT cuando el contexto espacial refuerza la presión ecosistémica. De este modo, la resiliencia final no depende solo del estado interno de la cuenca, sino también de la estructura territorial en la que se inserta.
 
-## Diagrama de integración espacial {#sec-diagrama-integracion-espacial}
+## Diagrama de integración territorial {#sec-diagrama-integracion-espacial}
 
 ```{mermaid}
 flowchart TD
@@ -159,10 +159,10 @@ flowchart TD
 
 ## Productos esperados {#sec-productos-integracion-espacial}
 
-La integración espacial genera tres productos principales para análisis y comunicación:
+La integración territorial genera tres productos principales para análisis y comunicación:
 
 - mapa de $D_{local}$ por cuenca y año, especialmente para el año más reciente;
 - mapa o tabla de $DIV$, útil para seleccionar casos de contraste entre lectura global y lectura local;
 - visualización del vecindario KNN para cuencas seleccionadas, mostrando vecinos, distancias y pesos relativos.
 
-Estos productos deben leerse junto con los mapas de $D$, velocidad y sensibilidad climática. El valor de la integración espacial no está en producir una capa adicional aislada, sino en conectar la trayectoria ecosistémica con la estructura territorial que la rodea.
+Estos productos deben leerse junto con los mapas de $D$, velocidad y sensibilidad climática. El valor de la integración territorial no está en producir una capa adicional aislada, sino en conectar la trayectoria ecosistémica con la estructura territorial que la rodea.

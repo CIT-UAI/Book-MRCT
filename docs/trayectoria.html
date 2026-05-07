@@ -247,7 +247,7 @@ window.Quarto = {
   <li><a href="#estado-dinámico" id="toc-estado-dinámico" class="nav-link" data-scroll-target="#estado-dinámico"><span class="header-section-number">5.2.1</span> Estado dinámico</a></li>
   <li><a href="#etiquetas-semánticas" id="toc-etiquetas-semánticas" class="nav-link" data-scroll-target="#etiquetas-semánticas"><span class="header-section-number">5.2.2</span> Etiquetas semánticas</a></li>
   </ul></li>
-  <li><a href="#sec-dominio-local" id="toc-sec-dominio-local" class="nav-link" data-scroll-target="#sec-dominio-local"><span class="header-section-number">5.3</span> Dominio local</a></li>
+  <li><a href="#sec-cierre-trayectoria" id="toc-sec-cierre-trayectoria" class="nav-link" data-scroll-target="#sec-cierre-trayectoria"><span class="header-section-number">5.3</span> Cierre de la lectura temporal</a></li>
   </ul>
 </nav>
     </div>
@@ -275,7 +275,7 @@ window.Quarto = {
 
 
 <p>Con el dominio definido, el modelo puede medir trayectoria. Saber dónde está una cuenca no es suficiente: también importa si se está alejando de su estado de referencia, con qué velocidad lo hace y si ese movimiento se está acelerando o amortiguando.</p>
-<p>Esta etapa transforma la serie temporal de distancias <span class="math inline">D</span> en derivadas discretas, clasifica el régimen dinámico de cada cuenca y extiende la noción de dominio al espacio geográfico mediante vecindad espacial.</p>
+<p>Esta etapa transforma la serie temporal de distancias <span class="math inline">D</span> en derivadas discretas y clasifica el régimen dinámico de cada cuenca. La pregunta espacial se aborda en el capítulo siguiente, donde la trayectoria se conecta con la estructura territorial que rodea a cada unidad de análisis.</p>
 <section id="sec-derivadas" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="sec-derivadas"><span class="header-section-number">5.1</span> Derivadas temporales</h2>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -406,14 +406,10 @@ Table&nbsp;5.2: Etiquetas semánticas por derivada.
 <p>Estas etiquetas permiten comunicar el régimen dinámico en términos interpretables sin perder la información cuantitativa de las derivadas.</p>
 </section>
 </section>
-<section id="sec-dominio-local" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="sec-dominio-local"><span class="header-section-number">5.3</span> Dominio local</h2>
-<p>El dominio global <span class="math inline">D</span> mide la distancia de cada cuenca a la referencia del conjunto completo. El <strong>dominio local</strong> extiende ese concepto al espacio geográfico: mide cuán diferente es una cuenca respecto de sus vecinas inmediatas.</p>
-<p>Para cada cuenca se identifican los <span class="math inline">k = 8</span> vecinos más cercanos en términos de distancia euclidiana entre los centroides de las cuencas. La vecindad se pondera con un kernel gaussiano:</p>
-<p><span class="math display">w_j = \exp\!\left(-\frac{d_j^2}{2\sigma^2}\right), \quad \sigma = \text{med}(d_j)</span></p>
-<p>donde <span class="math inline">d_j</span> es la distancia geográfica al vecino <span class="math inline">j</span>. Con esos pesos se calcula una media local ponderada <span class="math inline">\boldsymbol{\mu}_{local}</span> y una covarianza local regularizada <span class="math inline">\hat{\Sigma}_{local}</span>, y la distancia del dominio local es:</p>
-<p><span class="math display">D_{local,i} = \sqrt{(\mathbf{x}_i - \boldsymbol{\mu}_{local})^\top \hat{\Sigma}_{local}^{-1} (\mathbf{x}_i - \boldsymbol{\mu}_{local})}</span></p>
-<p><strong>Interpretación.</strong> Un valor alto de <span class="math inline">D_{local}</span> indica que la cuenca es un <em>outlier</em> ecológico en su vecindad: su estado difiere marcadamente del de las cuencas que la rodean, independientemente de si está cerca o lejos del dominio global. Esto puede señalar una transición local aislada o una discontinuidad ecosistémica que el dominio global no captura.</p>
+<section id="sec-cierre-trayectoria" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-cierre-trayectoria"><span class="header-section-number">5.3</span> Cierre de la lectura temporal</h2>
+<p>El resultado de esta etapa es una lectura dinámica del cambio ecosistémico: <span class="math inline">D</span> indica la posición de cada cuenca respecto de la línea base, mientras que <span class="math inline">V</span>, <span class="math inline">A</span> y <span class="math inline">J</span> describen la dirección, intensidad y regularidad de su movimiento. Esta información permite distinguir cuencas estables, cuencas en recuperación y cuencas que muestran señales de transición.</p>
+<p>La trayectoria, sin embargo, todavía no indica si ese cambio es compartido por el entorno o si corresponde a una discontinuidad localizada. Esa comparación se desarrolla en la integración territorial, donde las métricas temporales se leen junto con la vecindad espacial de cada cuenca.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
@@ -425,7 +421,7 @@ Table&nbsp;5.2: Etiquetas semánticas por derivada.
     C --&gt; E[Jerk J&lt;br/&gt;ΔA/Δt]
     B --&gt; F[Estado dinámico: &lt;br/&gt;Estable · Transición &lt;br/&gt;· Recuperación]
     B --&gt; G[Etiquetas semánticas&lt;br/&gt;VEL · ACC · JERK class]
-    A --&gt; H[Dominio local&lt;br/&gt;KNN &lt;br/&gt;k=8 · kernel gaussiano]
+    G --&gt; H[Insumo para integración&lt;br/&gt;territorial]
 </pre>
 </div>
 <p></p></figure><p></p>

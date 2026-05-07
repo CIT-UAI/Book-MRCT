@@ -51,7 +51,7 @@ flowchart LR
     F --> G[Potencial de transición<br/>y resiliencia]
 ```
 
-El capítulo de insumos describe las capas satelitales, el período de análisis y los criterios de control de calidad. El capítulo de indicadores base muestra cómo esas capas se convierten en métricas por cuenca y año. El capítulo de vector de estado integra los indicadores y define el dominio de referencia. Los capítulos de trayectoria e integración espacial incorporan dinámica temporal y contexto territorial. El capítulo de sensibilidad estima la reactividad frente a presiones climáticas. La síntesis final combina estas señales en el Potencial de Transición y en la resiliencia operativa.
+El capítulo de insumos describe las capas satelitales, el período de análisis y los criterios de control de calidad. El capítulo de indicadores base muestra cómo esas capas se convierten en métricas por cuenca y año. El capítulo de vector de estado integra los indicadores y define el dominio de referencia. Los capítulos de trayectoria e integración territorial incorporan dinámica temporal y contexto espacial. El capítulo de sensibilidad estima la reactividad frente a presiones climáticas. La síntesis final combina estas señales en el Potencial de Transición y en la resiliencia operativa.
 
 La lectura puede hacerse de dos formas. Quien necesite entender la arquitectura completa debe seguir el orden del libro. Quien busque una etapa específica puede entrar por el capítulo correspondiente, siempre teniendo presente que los productos finales dependen de la coherencia de toda la cadena.
 
