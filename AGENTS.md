@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [book-mrct] recent context, 2026-05-07 12:14am GMT-4
+# [book-mrct] recent context, 2026-05-07 12:36pm GMT-4
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 14 obs (6,072t read) | 95,436t work | 94% savings
+Stats: 21 obs (9,672t read) | 322,207t work | 97% savings
 
 ### May 5, 2026
 70 6:07p ⚖️ MRCT Digital Book — intro.qmd Editorial Revision Requested
@@ -24,6 +24,14 @@ Stats: 14 obs (6,072t read) | 95,436t work | 94% savings
 84 " ✅ MRCT Digital Book — references.bib Populated with 8 Missing BibTeX Entries
 85 " 🔵 MRCT Digital Book — Full Citation Audit Confirms All Bibliography Keys Resolved; 3 Orphan Entries Identified
 86 6:47p ✅ MRCT Digital Book — Academic BibTeX Entries gu2007 and ledoitwolf2004 Enriched with Full Metadata
+### May 7, 2026
+93 12:14a 🔵 MRCT Digital Book — Chapter Structure and File Inventory Confirmed
+94 12:15a ✅ MRCT Digital Book — Redundancia de "Dominio local" eliminada entre trayectoria.qmd e integracion_espacial.qmd
+95 12:16a 🔵 MRCT Digital Book — Redundancia detectada entre trayectoria.qmd e integracion_espacial.qmd sobre "Dominio Local"
+96 " ✅ MRCT Digital Book — "Integración espacial" renombrada a "integración territorial" en intro.qmd y conclusiones.qmd
+105 12:30p 🔵 MRCT Digital Book — Full Project Structure and Chapter Content Mapped
+106 12:31p 🔵 MRCT Tutorial Notebook — Complete 12-Section Architecture and Output Formats Documented
+107 " 🔵 MRCT Digital Book — BibTeX Bibliography Entries in references.bib
 
-Access 95k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 322k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>

@@ -102,6 +102,17 @@ La MRCT puede apoyar distintos usos de planificación y gestión territorial:
 
 Estas aplicaciones requieren mantener trazabilidad entre datos, parámetros y resultados. La interpretación debe documentar el período de línea base, los años disponibles, los umbrales de clasificación, los pesos $\alpha$ y $\beta_{local}$, y cualquier cambio metodológico aplicado durante el procesamiento.
 
+## Resiliencia territorial y personas {#sec-resiliencia-personas}
+
+La MRCT no debe entenderse sólo como una matriz que entrega un valor del paisaje o del clima. Su lectura territorial también puede servir como base para aproximarse a la resiliencia de las personas frente a decisiones bajo riesgo, especialmente cuando sus resultados se cruzan con información de población, asentamientos, infraestructura crítica, conectividad y exposición a amenazas. Una cuenca con baja resiliencia operativa no implica automáticamente que una comunidad sea socialmente vulnerable, pero sí identifica un contexto ambiental donde la toma de decisiones puede volverse más exigente: menor margen ecosistémico, mayor presión de transición o mayor sensibilidad frente a cambios climáticos y antrópicos.
+
+![Ejemplo de reforestación en la Región de Magallanes tras un incendio forestal del 2011. Fuente: [Fundación Reforestemos](https://www.threads.com/@fundacionreforestemos/post/CwVyWVUpziW?xmt=AQG0itAwCJ1GyPnXTvMgHrg9RFU01IwrhS4QrZJF8qKFQg)](images/reforestacion-tp.jpg){#fig-reforestacion fig-align="center" width="90%"}
+
+
+Esta conexión es especialmente relevante ante desastres naturales o perturbaciones de origen humano. Inundaciones, incendios, remociones en masa, sequías, eventos extremos de temperatura o cambios abruptos en la ocupación del territorio pueden alterar rápidamente la condición de una cuenca. En ese marco, el análisis de **jerk** $J$ (derivada de la Aceleración de cambio) aporta una señal útil: al medir cambios abruptos en la aceleración de la trayectoria ecosistémica, ayuda a detectar discontinuidades que podrían estar asociadas a eventos repentinos o a respuestas territoriales no graduales. No prueba por sí solo la ocurrencia de un desastre, pero permite señalar años y cuencas donde conviene revisar antecedentes de emergencia, daños, presión antrópica o cambios ambientales extremos.
+
+Por esta razón, la MRCT puede funcionar como un puente entre monitoreo ambiental y gestión pública orientada a personas. Sus productos permiten priorizar dónde observar, dónde levantar información social complementaria y dónde fortalecer capacidades de adaptación, prevención o respuesta. Así, la resiliencia operativa del territorio se convierte en una entrada para preguntas más amplias: qué comunidades podrían estar expuestas a paisajes menos estables, qué zonas requieren monitoreo temprano y dónde las decisiones frente a desastres necesitan integrar simultáneamente clima, ecosistemas y presencia humana.
+
 ## Cierre {#sec-cierre}
 
 La MRCT propone una forma ordenada de transformar observaciones satelitales en lectura territorial. Su fortaleza está en combinar evidencia multivariada, comparación histórica, dinámica temporal, contexto espacial y sensibilidad climática dentro de un mismo flujo.

@@ -4,7 +4,7 @@ title: "Insumos  e índices Satelitales"
 
 El modelo parte de la superficie terrestre. Antes de construir cualquier indicador necesita una representación física del territorio, año a año, en términos espectrales y radiométricos. Esa representación son los mosaicos satelitales.
 
-Este capítulo describe la fuente de datos utilizada, las seis variables que componen el flujo anual, los criterios de control de calidad y el procedimiento de alineamiento que garantiza coherencia entre capas.
+Este capítulo describe la fuente de datos utilizada, las seis variables que componen el flujo anual, la máscara territorial de huella antrópica, los criterios de control de calidad y el procedimiento de alineamiento que garantiza coherencia entre capas.
 
 ## Región de Estudio
 
@@ -79,6 +79,24 @@ La frecuencia de revisita de Landsat 8 es de 16 días. Los mosaicos anuales se c
 
 Cada año, el satélite registra múltiples veces las mismas cuencas. Se sintetiza toda esa información en un único mapa anual por variable, usando la mediana de los valores observados. El resultado es una imagen robusta, representativa del comportamiento promedio del ecosistema durante ese año.
 :::
+
+## Huella antrópica y población
+
+Además de los mosaicos Landsat, el flujo MRCT incorpora una capa territorial de **huella antrópica** (`anthropic_aligned.tif`). Esta capa no reemplaza a los índices espectrales; opera como una máscara previa que define qué píxeles se consideran válidos para estimar los indicadores base por cuenca.
+
+La huella antrópica se construyó integrando tres fuentes oficiales de ocupación y uso del territorio: el Catastro de Uso de la Tierra y Recursos Vegetacionales de Chile disponible en el Sistema de Información Territorial de CONAF [@conaf_sit_2020], el Continuo de Construcciones Urbanas del Geoportal Open Data MINVU [@minvu_ccu_2021] y la Carta de Ocupación de Tierras consultada desde el GEOPORTAL SIMBIO del Ministerio del Medio Ambiente [@mma_simbio_2026]. En conjunto, estas capas permiten representar la presencia de infraestructura, áreas urbanas, coberturas intervenidas y patrones de ocupación humana que pueden modificar la señal ecosistémica observada por el satélite.
+
+La cobertura resultante se expresa como un raster continuo normalizado entre **0 y 1**. Valores cercanos a **0** representan píxeles sin intervención humana relevante o con intervención muy baja; valores intermedios indican presencia parcial o difusa de ocupación antrópica; y valores cercanos a **1** representan intervención alta, como construcciones urbanas, infraestructura o coberturas fuertemente transformadas. En la configuración por defecto del modelo, el umbral seleccionado es:
+
+$$
+\theta_{ant} = 0{,}2
+$$
+
+Con este criterio, se conserva para el cálculo de índices base sólo el subconjunto de píxeles con huella antrópica **menor o igual a 0,2**. Los píxeles con valores superiores a 0,2 se excluyen de la estimación de los indicadores ecosistémicos, aunque siguen siendo información territorial relevante para interpretar presión humana, escenarios prospectivos y decisiones de gestión.
+
+Este filtro es importante porque la MRCT busca medir resiliencia ecosistémica y no confundirla con cambios producidos directamente por urbanización, infraestructura o uso intensivo del suelo. Sin esta máscara, una cuenca con mayor proporción de asentamientos humanos podría mostrar menor vegetación, mayor temperatura superficial, fragmentación o cambios hídricos por razones asociadas al poblamiento y no necesariamente por pérdida de resiliencia ecológica. Al separar la señal natural de la señal antrópica directa, el modelo mantiene una lectura más consistente de la condición ecosistémica.
+
+La decisión también permite incorporar explícitamente el **factor humano**. La población no se trata como un elemento externo al territorio: su distribución, concentración urbana e infraestructura asociada forman parte de la presión territorial que debe ser considerada. En Magallanes, donde la población se concentra principalmente en Punta Arenas, Natales y otros centros urbanos, este filtro ayuda a distinguir entre cuencas dominadas por procesos naturales y sectores donde la ocupación humana tiene mayor peso en la señal observada.
 
 ## Variables de entrada
 
@@ -171,6 +189,8 @@ Antes de derivar cualquier indicador, el modelo aplica una secuencia de filtros 
 **Verificación de disponibilidad.** Se comprueba que las seis capas existan para el año en cuestión. Si falta cualquiera de ellas, el año se descarta en su totalidad. No se interpola ni se sustituye desde años adyacentes.
 
 **Propagación de valores no válidos.** Todos los rasters se leen como valores de punto flotante de 32 bits. Los valores `NaN` —producidos por nubes, sombras no enmascaradas o bordes de escena— se propagan a lo largo del procesamiento y nunca participan en el cálculo de indicadores.
+
+**Filtro por huella antrópica.** Antes de calcular los indicadores base, se aplica la máscara natural derivada del raster de huella antrópica. Los píxeles con valor mayor a **0,2** se excluyen del área de análisis; los píxeles con valor menor o igual a **0,2** se mantienen como superficie natural o de baja intervención. Este filtro se aplica junto con la máscara de cuenca y la disponibilidad de datos válidos, por lo que los estadísticos anuales se calculan sólo sobre píxeles que pertenecen a una cuenca, tienen datos satelitales válidos y no superan el umbral de intervención humana.
 
 **Recorte de valores anómalos en NDDI.** El NDDI puede producir valores extremos cuando ambos índices son simultáneamente cercanos a cero. Para mitigarlo, se registran los percentiles 1 y 99 de la distribución anual y se aplica un recorte simétrico a ±5, reteniendo más del 98% de la distribución observada y eliminando artefactos numéricos.
 
