@@ -68,6 +68,7 @@ Desktop.ini
 # Large local data or generated analysis artifacts
 # =============================================================
 data/
+jupyter-notebook/
 outputs/
 output/
 processed/
