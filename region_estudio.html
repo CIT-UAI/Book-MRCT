@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Insumos satelitales e índices espectrales – Guía Técnica MRCT</title>
+<title>2&nbsp; Región de estudio y unidades de análisis – Guía Técnica MRCT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./inds_base.html" rel="next">
-<link href="./region_estudio.html" rel="prev">
+<link href="./insumos.html" rel="next">
+<link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -149,7 +149,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./insumos.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Insumos satelitales e índices espectrales</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./region_estudio.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Región de estudio y unidades de análisis</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -188,13 +188,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./region_estudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./region_estudio.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Región de estudio y unidades de análisis</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./insumos.html" class="sidebar-item-text sidebar-link active">
+  <a href="./insumos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Insumos satelitales e índices espectrales</span></span></a>
   </div>
 </li>
@@ -262,18 +262,10 @@ window.Quarto = {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#fuente-de-datos" id="toc-fuente-de-datos" class="nav-link active" data-scroll-target="#fuente-de-datos"><span class="header-section-number">3.1</span> Fuente de datos</a></li>
-  <li><a href="#variables-de-entrada" id="toc-variables-de-entrada" class="nav-link" data-scroll-target="#variables-de-entrada"><span class="header-section-number">3.2</span> Variables de entrada</a>
-  <ul class="collapse">
-  <li><a href="#ndvi-índice-de-vegetación-de-diferencia-normalizada" id="toc-ndvi-índice-de-vegetación-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndvi-índice-de-vegetación-de-diferencia-normalizada"><span class="header-section-number">3.2.1</span> NDVI — Índice de Vegetación de Diferencia Normalizada</a></li>
-  <li><a href="#ndwi-índice-de-agua-de-diferencia-normalizada" id="toc-ndwi-índice-de-agua-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndwi-índice-de-agua-de-diferencia-normalizada"><span class="header-section-number">3.2.2</span> NDWI — Índice de Agua de Diferencia Normalizada</a></li>
-  <li><a href="#ndsi-índice-de-nieve-de-diferencia-normalizada" id="toc-ndsi-índice-de-nieve-de-diferencia-normalizada" class="nav-link" data-scroll-target="#ndsi-índice-de-nieve-de-diferencia-normalizada"><span class="header-section-number">3.2.3</span> NDSI — Índice de Nieve de Diferencia Normalizada</a></li>
-  <li><a href="#nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" id="toc-nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" class="nav-link" data-scroll-target="#nddi-índice-de-déficit-hídrico-de-diferencia-normalizada"><span class="header-section-number">3.2.4</span> NDDI — Índice de Déficit Hídrico de Diferencia Normalizada</a></li>
-  <li><a href="#alb-albedo-superficial" id="toc-alb-albedo-superficial" class="nav-link" data-scroll-target="#alb-albedo-superficial"><span class="header-section-number">3.2.5</span> ALB — Albedo superficial</a></li>
-  <li><a href="#tb-temperatura-de-brillo" id="toc-tb-temperatura-de-brillo" class="nav-link" data-scroll-target="#tb-temperatura-de-brillo"><span class="header-section-number">3.2.6</span> TB — Temperatura de brillo</a></li>
-  </ul></li>
-  <li><a href="#control-de-calidad" id="toc-control-de-calidad" class="nav-link" data-scroll-target="#control-de-calidad"><span class="header-section-number">3.3</span> Control de calidad</a></li>
-  <li><a href="#alineamiento-espacial" id="toc-alineamiento-espacial" class="nav-link" data-scroll-target="#alineamiento-espacial"><span class="header-section-number">3.4</span> Alineamiento espacial</a></li>
+  <li><a href="#región-de-estudio" id="toc-región-de-estudio" class="nav-link active" data-scroll-target="#región-de-estudio"><span class="header-section-number">2.1</span> Región de estudio</a></li>
+  <li><a href="#cuencas-hidrográficas-como-unidad-territorial" id="toc-cuencas-hidrográficas-como-unidad-territorial" class="nav-link" data-scroll-target="#cuencas-hidrográficas-como-unidad-territorial"><span class="header-section-number">2.2</span> Cuencas hidrográficas como unidad territorial</a></li>
+  <li><a href="#grilla-espacial-y-atributos-de-análisis" id="toc-grilla-espacial-y-atributos-de-análisis" class="nav-link" data-scroll-target="#grilla-espacial-y-atributos-de-análisis"><span class="header-section-number">2.3</span> Grilla espacial y atributos de análisis</a></li>
+  <li><a href="#huella-antrópica-y-población" id="toc-huella-antrópica-y-población" class="nav-link" data-scroll-target="#huella-antrópica-y-población"><span class="header-section-number">2.4</span> Huella antrópica y población</a></li>
   </ul>
 </nav>
     </div>
@@ -282,7 +274,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Insumos satelitales e índices espectrales</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Región de estudio y unidades de análisis</span></h1>
 </div>
 
 
@@ -299,268 +291,103 @@ window.Quarto = {
 </header>
 
 
-<p>El modelo parte de la superficie terrestre. Antes de construir cualquier indicador necesita una representación física del territorio, año a año, en términos espectrales y radiométricos. Esa representación son los mosaicos satelitales.</p>
-<p>Este capítulo describe la fuente de datos utilizada, las seis variables espectrales que componen el flujo anual, los criterios de control de calidad y el procedimiento de alineamiento que garantiza coherencia entre capas. La región de estudio, las cuencas hidrográficas y las máscaras territoriales se describen en el capítulo anterior.</p>
-<section id="fuente-de-datos" class="level2 page-columns page-full" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="fuente-de-datos"><span class="header-section-number">3.1</span> Fuente de datos</h2>
-<p>La fuente principal son los mosaicos <strong>Landsat 8</strong> del Servicio Geológico de los Estados Unidos (USGS). Landsat 8 opera desde 2013 con el sensor OLI (<em>Operational Land Imager</em>) y el sensor TIRS (<em>Thermal Infrared Sensor</em>), lo que lo hace el sensor de acceso libre con capacidad simultánea de registrar información óptica multibandal y señal térmica superficial. Las bandas ópticas de OLI tienen resolución espacial de <strong>30 metros</strong>, la banda pancromática opera a <strong>15 metros</strong> y las bandas térmicas de TIRS tienen resolución nativa de <strong>100 metros</strong>, remuestreada a 30 metros en los productos distribuidos <span class="citation" data-cites="usgs_landsat8_bands">(<a href="references.html#ref-usgs_landsat8_bands" role="doc-biblioref">U.S. Geological Survey 2025</a>)</span>.</p>
-<div id="fig-landsat8" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<p>Antes de describir los índices espectrales, es necesario precisar el territorio sobre el que opera la MRCT y la unidad espacial que organiza sus resultados. El modelo no trabaja sobre píxeles aislados ni sobre divisiones administrativas: agrega la información satelital a cuencas hidrográficas, entendidas como unidades funcionales donde se conectan relieve, escorrentía, cobertura terrestre, criósfera, ecosistemas y presencia humana.</p>
+<section id="región-de-estudio" class="level2 page-columns page-full" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="región-de-estudio"><span class="header-section-number">2.1</span> Región de estudio</h2>
+<p>La Región de Magallanes y de la Antártica Chilena se ubica en el extremo austral de Chile y constituye uno de los territorios más extensos, remotos y ambientalmente heterogéneos del país. Su sector sudamericano se extiende aproximadamente entre los 48°36’ y 56°30’ de latitud sur, y entre los 66°25’ y 75°40’ de longitud oeste. Administrativamente se organiza en cuatro provincias —Última Esperanza, Magallanes, Tierra del Fuego y Antártica Chilena— y once comunas, con Punta Arenas como capital regional <span class="citation" data-cites="bcn_magallanes_region">(<a href="references.html#ref-bcn_magallanes_region" role="doc-biblioref">Biblioteca del Congreso Nacional de Chile 2026b</a>)</span>.</p>
+<div id="fig-mapa-region-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-landsat8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/landsat8.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<div aria-describedby="fig-mapa-region-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/mapa_magallanes.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-landsat8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.1: Satélite Landsat 8, plataforma de observación terrestre equipada con los sensores OLI y TIRS. OLI registra información visible, infrarroja cercana e infrarroja de onda corta; TIRS registra radiancia térmica, que luego puede transformarse en temperatura de brillo.
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-mapa-region-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Localización general de la Región de Magallanes y de la Antártica Chilena.
 </figcaption>
 </figure>
 </div>
-<p>La <a href="#tbl-bandas-landsat8" class="quarto-xref">Tabla&nbsp;<span>3.1</span></a> resume las bandas de Landsat 8 y su función dentro del flujo MRCT. Aunque el modelo no utiliza todas las bandas como variables finales, la tabla permite ubicar cada índice dentro del sistema espectral del sensor.</p>
-<div id="tbl-bandas-landsat8" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bandas-landsat8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.1: Bandas espectrales de Landsat 8 OLI/TIRS y uso dentro del flujo MRCT. Las bandas térmicas tienen resolución nativa de 100 m y se distribuyen remuestreadas a 30 m en los productos Landsat.
+<p>La región posee una superficie total de <strong>1.382.291,10 km²</strong>, de los cuales <strong>132.291,10 km²</strong> corresponden al territorio sudamericano y <strong>1.250.000 km²</strong> al Territorio Chileno Antártico <span class="citation" data-cites="bcn_magallanes_region">(<a href="references.html#ref-bcn_magallanes_region" role="doc-biblioref">Biblioteca del Congreso Nacional de Chile 2026b</a>)</span>. Para efectos de este libro, el levantamiento satelital y la construcción de indicadores se concentran en las cuencas hidrográficas del sector sudamericano. Esta delimitación permite trabajar sobre unidades territoriales comparables, con continuidad espacial y pertinencia para el análisis ecosistémico regional.</p>
+<p>Desde el punto de vista físico, Magallanes reúne archipiélagos, fiordos, canales, cordones montañosos, campos de hielo, estepas frías, turberas, bosques subantárticos, lagos, glaciares y extensas zonas costeras. Esta diversidad produce contrastes marcados entre el occidente húmedo y fragmentado por canales, el eje cordillerano y glaciar, y el oriente más seco y estepario. Para la MRCT, esa heterogeneidad es central: los indicadores de vegetación, agua, nieve, aridez, temperatura y estructura del paisaje se leen dentro de un mosaico ecológico de alta variabilidad interna.</p>
+<div id="fig-fiordos-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-fiordos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ballenas-parque-marino-francisco-coloane.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-fiordos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Fiordos, canales y relieve austral de Magallanes.
 </figcaption>
-<div aria-describedby="tbl-bandas-landsat8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figure>
+</div>
+<p>El clima regional es templado frío, ventoso y de baja amplitud térmica, con abundante nubosidad y máximos invernales de precipitación. Hacia el oriente de la cordillera predominan condiciones estepáricas frías, con menor humedad y mayor exposición al viento <span class="citation" data-cites="mma_sinca_magallanes">(<a href="references.html#ref-mma_sinca_magallanes" role="doc-biblioref">Ministerio del Medio Ambiente 2015</a>)</span>. Esta gradiente climática incide directamente en la lectura satelital: la nubosidad reduce ventanas de observación; la nieve y el hielo modifican la reflectancia superficial; las diferencias de humedad alteran la señal hídrica y vegetal; y los contrastes térmicos se expresan en la temperatura superficial observada.</p>
+<p>La hidrografía regional presenta una organización singular. Buena parte de los cursos principales se ubican hacia el sector oriental o transandino y varios sistemas drenan finalmente hacia el Atlántico. Entre las hoyas relevantes se encuentran los ríos Serrano, Gallegos, Chico o Ciaike, San Juan y otras cuencas menores al sur del Estrecho de Magallanes. El río Serrano, asociado al Campo de Hielo Sur y al sistema de lagos Toro, Sarmiento, Pehoé y Nordenskjöld, es un ejemplo de la conexión entre criósfera, lagos, escorrentía y paisaje glaciar <span class="citation" data-cites="bcn_magallanes_hidrografia">(<a href="references.html#ref-bcn_magallanes_hidrografia" role="doc-biblioref">Biblioteca del Congreso Nacional de Chile 2026a</a>)</span>.</p>
+<p>La criósfera es uno de los componentes ambientales más importantes para comprender la resiliencia regional. Según el Inventario Público de Glaciares informado por la Dirección General de Aguas, Magallanes concentra <strong>7.055 glaciares</strong> y una superficie glaciarizada de <strong>10.426,6 km²</strong>, equivalente a casi la mitad de la superficie glaciarizada nacional <span class="citation" data-cites="dga_magallanes_glaciares">(<a href="references.html#ref-dga_magallanes_glaciares" role="doc-biblioref">Dirección General de Aguas 2026a</a>)</span>. Por esta razón, la fracción nival, el albedo, la temperatura superficial y los cambios en agua superficial son variables especialmente relevantes para seguir transformaciones ecosistémicas asociadas a pérdida de hielo, variabilidad hídrica y cambios de cobertura.</p>
+<div id="fig-iceberg-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-iceberg-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/region-de-magallanes-y-de-la-antartica-chilena.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-iceberg-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Iceberg y ambiente glaciar en la Patagonia austral.
+</figcaption>
+</figure>
+</div>
+<p>El valor ecológico de Magallanes también se expresa en su alto nivel de protección ambiental. La región concentra la mayor extensión de territorio protegido de Chile y contiene áreas de conservación, parques nacionales, reservas, monumentos naturales, ecosistemas marinos, bosques subantárticos, turberas y ambientes glaciares <span class="citation" data-cites="sbap_magallanes_2026">(<a href="references.html#ref-sbap_magallanes_2026" role="doc-biblioref">Servicio de Biodiversidad y Áreas Protegidas 2026</a>)</span>. Esta condición refuerza la necesidad de indicadores reproducibles que permitan observar cambios territoriales sin depender únicamente de campañas de terreno, especialmente en zonas de difícil acceso.</p>
+<div id="fig-pinguinos-magallanes" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-pinguinos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pinguino-de-magallanes.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-pinguinos-magallanes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Fauna costera y ecosistemas subantárticos de Magallanes.
+</figcaption>
+</figure>
+</div>
+<p>La dimensión social y demográfica agrega otra capa de contexto. El Censo 2024 registró <strong>166.537 personas</strong> en la región, con una estructura altamente concentrada en centros urbanos y una densidad muy baja si se considera la superficie total regional <span class="citation" data-cites="ine_censo2024_magallanes bcn_magallanes_region">(<a href="references.html#ref-ine_censo2024_magallanes" role="doc-biblioref">Instituto Nacional de Estadísticas 2025</a>; <a href="references.html#ref-bcn_magallanes_region" role="doc-biblioref">Biblioteca del Congreso Nacional de Chile 2026b</a>)</span>. Punta Arenas y Natales concentran la mayor parte de la población, mientras amplios sectores rurales, insulares y de estepa presentan baja ocupación permanente. Este patrón de poblamiento influye en la presión territorial, en la accesibilidad para validación de campo y en la forma en que los resultados de la MRCT pueden apoyar decisiones públicas.</p>
+<p>La base económica regional combina actividades urbanas, portuarias, logísticas, turísticas, ganaderas, energéticas e industriales. La extracción de hidrocarburos y gas natural, la ganadería ovina, el turismo de naturaleza y los servicios asociados a conectividad austral conviven con áreas de alto valor ecológico y baja intervención directa. En términos de resiliencia territorial, esta combinación exige distinguir entre cambios ecosistémicos propios de la variabilidad climática, transformaciones asociadas a presión productiva y dinámicas espaciales vinculadas a infraestructura, accesibilidad y ocupación humana.</p>
+<div id="tbl-dimensiones-region" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dimensiones-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Dimensiones regionales relevantes para la lectura territorial de la MRCT.
+</figcaption>
+<div aria-describedby="tbl-dimensiones-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 19%">
-<col style="width: 14%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 14%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Sensor</th>
-<th style="text-align: right;">Banda</th>
-<th>Nombre espectral</th>
-<th style="text-align: right;">Longitud de onda (µm)</th>
-<th style="text-align: right;">Resolución</th>
-<th>Uso dentro de la MRCT</th>
+<th>Dimensión regional</th>
+<th>Relevancia para la MRCT</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>OLI</td>
-<td style="text-align: right;">1</td>
-<td>Aerosol costero</td>
-<td style="text-align: right;">0,43-0,45</td>
-<td style="text-align: right;">30 m</td>
-<td>No se usa directamente en los indicadores base.</td>
+<td>Gran extensión y baja densidad poblacional</td>
+<td>Requiere monitoreo remoto sistemático y comparable.</td>
 </tr>
 <tr class="even">
-<td>OLI</td>
-<td style="text-align: right;">2</td>
-<td>Azul</td>
-<td style="text-align: right;">0,45-0,51</td>
-<td style="text-align: right;">30 m</td>
-<td>Participa en la estimación de albedo superficial.</td>
+<td>Gradiente oeste-este de humedad y estepa</td>
+<td>Afecta vegetación, agua superficial, aridez y temperatura.</td>
 </tr>
 <tr class="odd">
-<td>OLI</td>
-<td style="text-align: right;">3</td>
-<td>Verde</td>
-<td style="text-align: right;">0,53-0,59</td>
-<td style="text-align: right;">30 m</td>
-<td>Participa en NDWI, NDSI y albedo superficial.</td>
+<td>Presencia de glaciares, nieve y campos de hielo</td>
+<td>Hace centrales los indicadores de criósfera, albedo y agua.</td>
 </tr>
 <tr class="even">
-<td>OLI</td>
-<td style="text-align: right;">4</td>
-<td>Rojo</td>
-<td style="text-align: right;">0,64-0,67</td>
-<td style="text-align: right;">30 m</td>
-<td>Participa en NDVI y albedo superficial.</td>
+<td>Alta nubosidad y clima ventoso</td>
+<td>Condiciona la construcción de mosaicos anuales robustos.</td>
 </tr>
 <tr class="odd">
-<td>OLI</td>
-<td style="text-align: right;">5</td>
-<td>Infrarrojo cercano (NIR)</td>
-<td style="text-align: right;">0,85-0,88</td>
-<td style="text-align: right;">30 m</td>
-<td>Participa en NDVI, NDWI, NDDI y albedo superficial.</td>
+<td>Cuencas con drenajes complejos</td>
+<td>Justifica trabajar con unidades hidrográficas como base territorial.</td>
 </tr>
 <tr class="even">
-<td>OLI</td>
-<td style="text-align: right;">6</td>
-<td>Infrarrojo de onda corta 1 (SWIR 1)</td>
-<td style="text-align: right;">1,57-1,65</td>
-<td style="text-align: right;">30 m</td>
-<td>Participa en NDSI y albedo superficial.</td>
+<td>Áreas protegidas y ecosistemas sensibles</td>
+<td>Exige trazabilidad y cautela en la interpretación de cambios.</td>
 </tr>
 <tr class="odd">
-<td>OLI</td>
-<td style="text-align: right;">7</td>
-<td>Infrarrojo de onda corta 2 (SWIR 2)</td>
-<td style="text-align: right;">2,11-2,29</td>
-<td style="text-align: right;">30 m</td>
-<td>Participa en la estimación de albedo superficial.</td>
-</tr>
-<tr class="even">
-<td>OLI</td>
-<td style="text-align: right;">8</td>
-<td>Pancromática</td>
-<td style="text-align: right;">0,50-0,68</td>
-<td style="text-align: right;">15 m</td>
-<td>No se usa directamente en los indicadores base.</td>
-</tr>
-<tr class="odd">
-<td>OLI</td>
-<td style="text-align: right;">9</td>
-<td>Cirrus</td>
-<td style="text-align: right;">1,36-1,38</td>
-<td style="text-align: right;">30 m</td>
-<td>Apoya el control de nubosidad; no entra como indicador final.</td>
-</tr>
-<tr class="even">
-<td>TIRS</td>
-<td style="text-align: right;">10</td>
-<td>Infrarrojo térmico 1</td>
-<td style="text-align: right;">10,60-11,19</td>
-<td style="text-align: right;">100 m</td>
-<td>Insumo principal para temperatura de brillo.</td>
-</tr>
-<tr class="odd">
-<td>TIRS</td>
-<td style="text-align: right;">11</td>
-<td>Infrarrojo térmico 2</td>
-<td style="text-align: right;">11,50-12,51</td>
-<td style="text-align: right;">100 m</td>
-<td>No se usa directamente en el flujo base.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p>El modelo cubre el período <strong>2013–2025</strong>, con un mosaico por año. La cobertura territorial corresponde a las cuencas hidrográficas de la Región de Magallanes y de la Antártica Chilena, un territorio con alta variabilidad ecosistémica y sensibilidad a los efectos del cambio climático sobre hielo, vegetación y régimen hídrico.</p>
-<p>La frecuencia de revisita de Landsat 8 es de 16 días. Los mosaicos anuales se construyen como composites de mediana temporal: para cada píxel se toma la mediana de todos los valores observados durante el año. Esto reduce el efecto de perturbaciones puntuales como nubes o sombras residuales y entrega una representación estable del estado superficial anual.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-En términos simples
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Cada año, el satélite registra múltiples veces las mismas cuencas. Se sintetiza toda esa información en un único mapa anual por variable, usando la mediana de los valores observados. El resultado es una imagen robusta, representativa del comportamiento promedio del ecosistema durante ese año.</p>
-</div>
-</div>
-</section>
-<section id="variables-de-entrada" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="variables-de-entrada"><span class="header-section-number">3.2</span> Variables de entrada</h2>
-<p>El flujo anual trabaja con seis capas espectrales derivadas de los mosaicos Landsat 8. Cada una captura un aspecto diferente de la superficie y es la base de uno o más indicadores del modelo.</p>
-<section id="ndvi-índice-de-vegetación-de-diferencia-normalizada" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="ndvi-índice-de-vegetación-de-diferencia-normalizada"><span class="header-section-number">3.2.1</span> NDVI — Índice de Vegetación de Diferencia Normalizada</h3>
-<p><span class="math display">\text{NDVI} = \frac{\rho_{NIR} - \rho_{Red}}{\rho_{NIR} + \rho_{Red}}</span></p>
-<p>Donde <span class="math inline">\rho_{NIR}</span> y <span class="math inline">\rho_{Red}</span> son las reflectancias de superficie en la banda infrarroja cercana (Banda 5) y en la banda roja (Banda 4) respectivamente. La vegetación activa refleja con intensidad en el infrarrojo y absorbe en el rojo, lo que produce valores altos. Rangos típicos van de −1 a 1; valores por encima de 0,2 son consistentes con presencia de vegetación activa.</p>
-</section>
-<section id="ndwi-índice-de-agua-de-diferencia-normalizada" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="ndwi-índice-de-agua-de-diferencia-normalizada"><span class="header-section-number">3.2.2</span> NDWI — Índice de Agua de Diferencia Normalizada</h3>
-<p><span class="math display">\text{NDWI} = \frac{\rho_{Green} - \rho_{NIR}}{\rho_{Green} + \rho_{NIR}}</span></p>
-<p>El NDWI amplifica la señal de agua superficial usando la banda verde (Banda 3) y el infrarrojo cercano. Valores positivos indican presencia de agua o humedad; valores negativos corresponden a suelos secos o vegetación sin estrés hídrico. Es la capa base para los indicadores hídricos del modelo.</p>
-</section>
-<section id="ndsi-índice-de-nieve-de-diferencia-normalizada" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="ndsi-índice-de-nieve-de-diferencia-normalizada"><span class="header-section-number">3.2.3</span> NDSI — Índice de Nieve de Diferencia Normalizada</h3>
-<p><span class="math display">\text{NDSI} = \frac{\rho_{Green} - \rho_{SWIR}}{\rho_{Green} + \rho_{SWIR}}</span></p>
-<p>El NDSI aprovecha la alta reflectancia de la nieve en el verde visible (Banda 3) y su baja reflectancia en el infrarrojo de onda corta (Banda 6). Valores superiores a 0,4 son consistentes con cobertura de nieve o hielo. Es el insumo directo del indicador de criósfera.</p>
-</section>
-<section id="nddi-índice-de-déficit-hídrico-de-diferencia-normalizada" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="nddi-índice-de-déficit-hídrico-de-diferencia-normalizada"><span class="header-section-number">3.2.4</span> NDDI — Índice de Déficit Hídrico de Diferencia Normalizada</h3>
-<p><span class="math display">\text{NDDI} = \frac{\text{NDVI} - \text{NDWI}}{\text{NDVI} + \text{NDWI}}</span></p>
-<p>El NDDI combina la señal vegetal y la hídrica para capturar tensión hídrica o condiciones de aridez relativa <span class="citation" data-cites="gu2007">(<a href="references.html#ref-gu2007" role="doc-biblioref">Gu et al. 2007</a>)</span>. Cuando la vegetación es activa pero el agua escasa, el NDDI toma valores altos. Es el insumo del indicador de aridez (IA) y participa también en la estimación de sensibilidad climática.</p>
-</section>
-<section id="alb-albedo-superficial" class="level3" data-number="3.2.5">
-<h3 data-number="3.2.5" class="anchored" data-anchor-id="alb-albedo-superficial"><span class="header-section-number">3.2.5</span> ALB — Albedo superficial</h3>
-<p>El albedo mide la fracción de radiación solar incidente que la superficie refleja. En el flujo MRCT se aproxima como albedo de onda corta a partir de una combinación ponderada de reflectancias de superficie Landsat. La forma funcional usada sigue la conversión estrecha-a-ancha propuesta para sensores multiespectrales por <span class="citation" data-cites="liang2001">Liang (<a href="references.html#ref-liang2001" role="doc-biblioref">2001</a>)</span>. La expresión aplicada es:</p>
-<p><span class="math display">
-\text{ALB} =
-0{,}356\rho_{Blue}
-+ 0{,}130\rho_{Red}
-+ 0{,}373\rho_{NIR}
-+ 0{,}085\rho_{SWIR1}
-+ 0{,}072\rho_{SWIR2}
-- 0{,}0018
-</span></p>
-<p>donde <span class="math inline">\rho_{Blue}</span>, <span class="math inline">\rho_{Red}</span>, <span class="math inline">\rho_{NIR}</span>, <span class="math inline">\rho_{SWIR1}</span> y <span class="math inline">\rho_{SWIR2}</span> corresponden a las reflectancias de superficie de las bandas 2, 4, 5, 6 y 7 de Landsat 8, respectivamente. El resultado es adimensional y se interpreta en el rango físico esperado de 0 a 1, aunque durante el control de calidad pueden revisarse valores fuera de rango producidos por ruido, sombra, nieve extrema o errores residuales de corrección.</p>
-<p>Superficies como nieve, hielo o suelo desnudo claro presentan albedo alto; vegetación densa y agua presentan albedo bajo. Variaciones en el albedo medio de una cuenca reflejan cambios en la composición superficial y en el balance radiativo del territorio.</p>
-</section>
-<section id="tb-temperatura-de-brillo" class="level3" data-number="3.2.6">
-<h3 data-number="3.2.6" class="anchored" data-anchor-id="tb-temperatura-de-brillo"><span class="header-section-number">3.2.6</span> TB — Temperatura de brillo</h3>
-<p>La temperatura de brillo corresponde a la señal térmica de la Banda 10 del sensor TIRS. Es la temperatura aparente que tendría un cuerpo negro emitiendo la misma radiancia que la superficie observada. En términos radiométricos, la conversión desde radiancia espectral a temperatura de brillo se define como <span class="citation" data-cites="usgs_landsat_level1">(<a href="references.html#ref-usgs_landsat_level1" role="doc-biblioref">U.S. Geological Survey 2026</a>)</span>:</p>
-<p><span class="math display">
-T_{B,K} =
-\frac{K_2}{\ln\left(\frac{K_1}{L_{\lambda}} + 1\right)}
-</span></p>
-<p>donde <span class="math inline">T_{B,K}</span> es la temperatura de brillo en Kelvin, <span class="math inline">L_{\lambda}</span> es la radiancia espectral de la banda térmica y <span class="math inline">K_1</span> y <span class="math inline">K_2</span> son las constantes térmicas específicas de la banda, provistas en el archivo de metadatos del producto Landsat.</p>
-<p>Como el modelo trabaja la variable térmica en grados Celsius, la conversión final es:</p>
-<p><span class="math display">
-\text{TB} = T_{B,K} - 273{,}15
-</span></p>
-<p>Por tanto, si el raster térmico de entrada ya viene expresado como temperatura de brillo en Kelvin, el procesamiento solo aplica la resta de <strong>273,15</strong> para obtener grados Celsius. Si el insumo inicial corresponde a radiancia, primero se aplica la ecuación radiométrica y luego la conversión de Kelvin a Celsius.</p>
-<p>Esta variable no equivale a una temperatura de superficie terrestre plenamente corregida por emisividad y atmósfera. En la MRCT se usa como un proxy radiométrico consistente de carga térmica superficial, adecuado para comparar unidades territoriales bajo el mismo flujo de procesamiento.</p>
-<hr>
-<p>La <a href="#tbl-capas" class="quarto-xref">Tabla&nbsp;<span>3.2</span></a> resume las características de cada capa y sus usos en el modelo.</p>
-<div id="tbl-capas" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-capas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.2: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a ±5 durante el control de calidad.
-</figcaption>
-<div aria-describedby="tbl-capas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Capa</th>
-<th>Bandas Landsat 8</th>
-<th>Rango utilizado</th>
-<th>Indicadores derivados</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>NDVI</td>
-<td>Banda 5 (NIR), Banda 4 (Red)</td>
-<td>−1 a 1</td>
-<td>VEG, IRV, estructura del paisaje</td>
-</tr>
-<tr class="even">
-<td>NDWI</td>
-<td>Banda 3 (Green), Banda 5 (NIR)</td>
-<td>−1 a 1</td>
-<td>WA, HUM, IEH</td>
-</tr>
-<tr class="odd">
-<td>NDSI</td>
-<td>Banda 3 (Green), Banda 6 (SWIR)</td>
-<td>−1 a 1</td>
-<td>PN</td>
-</tr>
-<tr class="even">
-<td>NDDI</td>
-<td>Derivado de NDVI y NDWI</td>
-<td>−5 a 5</td>
-<td>IA</td>
-</tr>
-<tr class="odd">
-<td>ALB</td>
-<td>Combinación multibanda</td>
-<td>0 a 1</td>
-<td>ALB</td>
-</tr>
-<tr class="even">
-<td>TB</td>
-<td>Banda 10 (TIRS)</td>
-<td>°C</td>
-<td>TB</td>
+<td>Poblamiento concentrado y territorios aislados</td>
+<td>Refuerza el valor de productos cartográficos para gestión pública.</td>
 </tr>
 </tbody>
 </table>
@@ -568,53 +395,88 @@ Table&nbsp;3.2: Capas satelitales anuales del modelo MRCT. El NDDI se recorta a 
 </figure>
 </div>
 </section>
+<section id="cuencas-hidrográficas-como-unidad-territorial" class="level2 page-columns page-full" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="cuencas-hidrográficas-como-unidad-territorial"><span class="header-section-number">2.2</span> Cuencas hidrográficas como unidad territorial</h2>
+<p>Una cuenca hidrográfica es el territorio que drena sus aguas hacia un punto o sistema común. Sus límites se definen por divisorias de agua y no por límites administrativos. Por eso es una unidad adecuada para integrar variables de vegetación, humedad, nieve, temperatura, escorrentía y estructura del paisaje: todos esos componentes participan en una misma organización física del territorio.</p>
+<p>En la MRCT, cada cuenca funciona como unidad mínima de agregación territorial. Los píxeles satelitales se procesan en su grilla original, pero los indicadores finales se resumen por cuenca y año. Esta decisión reduce el ruido propio del píxel individual, permite comparar unidades de tamaño y comportamiento distintos, y mantiene una lectura coherente con procesos hidrológicos y ecosistémicos.</p>
+<p>El enfoque se apoya en una lectura de <strong>panarquía territorial</strong>: los sistemas ecológicos no operan en una sola escala ni como unidades cerradas. Una cuenca local se conecta con subcuencas, cursos principales, zonas lacustres, fiordos, borde costero y océano. Por ello, la MRCT entiende lo hidrológico como un continuo entre continente y océano, donde los cambios de cobertura, nieve, agua superficial o temperatura pueden propagarse entre niveles espaciales y afectar la resiliencia del sistema completo.</p>
+<div id="fig-cuenca" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-cuenca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/cuenca_hidro.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-cuenca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Representación general de una cuenca hidrgráfica.
+</figcaption>
+</figure>
+</div>
+<p>Esta lectura también orientó la construcción geométrica de las unidades. Se usó batimetría extensa para mantener la continuidad espacial del camino del agua y evitar artefactos producidos por recortes de insumos altimétricos, como puede ocurrir cuando un modelo de elevación terrestre se corta abruptamente en la línea de costa. En territorios australes con fiordos, canales, islas y drenajes complejos, ese recorte puede generar límites artificiales o interrumpir conexiones hidrológicas reales. La extensión batimétrica permite conservar la relación funcional entre continente, borde costero y cuerpos marinos interiores, manteniendo la coherencia espacial del flujo hídrico con independencia de fronteras administrativas, recortes técnicos o límites naturales aparentes.</p>
+<p>Las cuencas utilizadas por el Centro de Inteligencia Territorial mantienen atributos de referencia con los códigos oficiales de cuencas y subcuencas de la Dirección General de Aguas. Es decir, cada cuenca CIT conserva como atributos los códigos DGA correspondientes, lo que permite conectar el análisis MRCT con el Inventario Público de Cuencas Hidrográficas y Lagos <span class="citation" data-cites="dga_inventario_cuencas_lagos">(<a href="references.html#ref-dga_inventario_cuencas_lagos" role="doc-biblioref">Dirección General de Aguas 2026b</a>)</span>. Esta trazabilidad facilita el cruce con información pública, reportes sectoriales y marcos oficiales de gestión hídrica.</p>
 </section>
-<section id="control-de-calidad" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="control-de-calidad"><span class="header-section-number">3.3</span> Control de calidad</h2>
-<p>Primero se limpia la señal. Después se calcula. Esa es la regla que estructura el preprocesamiento.</p>
-<p>Antes de derivar cualquier indicador, el modelo aplica una secuencia de filtros sobre las capas de cada año.</p>
-<p><strong>Verificación de disponibilidad.</strong> Se comprueba que las seis capas existan para el año en cuestión. Si falta cualquiera de ellas, el año se descarta en su totalidad. No se interpola ni se sustituye desde años adyacentes.</p>
-<p><strong>Propagación de valores no válidos.</strong> Todos los rasters se leen como valores de punto flotante de 32 bits. Los valores <code>NaN</code> —producidos por nubes, sombras no enmascaradas o bordes de escena— se propagan a lo largo del procesamiento y nunca participan en el cálculo de indicadores.</p>
-<p><strong>Filtro por huella antrópica.</strong> Antes de calcular los indicadores base, se aplica la máscara natural derivada del raster de huella antrópica. Los píxeles con valor mayor a <strong>0,2</strong> se excluyen del área de análisis; los píxeles con valor menor o igual a <strong>0,2</strong> se mantienen como superficie natural o de baja intervención. Este filtro se aplica junto con la máscara de cuenca y la disponibilidad de datos válidos, por lo que los estadísticos anuales se calculan sólo sobre píxeles que pertenecen a una cuenca, tienen datos satelitales válidos y no superan el umbral de intervención humana.</p>
-<p><strong>Recorte de valores anómalos en NDDI.</strong> El NDDI puede producir valores extremos cuando ambos índices son simultáneamente cercanos a cero. Para mitigarlo, se registran los percentiles 1 y 99 de la distribución anual y se aplica un recorte simétrico a ±5, reteniendo más del 98% de la distribución observada y eliminando artefactos numéricos.</p>
-<p><strong>Umbral de cobertura mínima.</strong> Una vez aplicadas las máscaras territoriales, se cuenta el número de píxeles válidos dentro del área de análisis. Si ese número es inferior a 1.000 píxeles, el año se omite. Este umbral garantiza que los estadísticos por cuenca tengan representatividad mínima.</p>
-</section>
-<section id="alineamiento-espacial" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="alineamiento-espacial"><span class="header-section-number">3.4</span> Alineamiento espacial</h2>
-<p>Todos los rasters deben compartir exactamente la misma grilla espacial: igual resolución, mismo origen, misma proyección cartográfica y misma extensión. Sin esa condición, la comparación píxel a píxel entre capas introduce errores de registro que contaminan los indicadores derivados.</p>
-<p>La grilla de referencia es la del raster de cuencas (<code>basins_aligned.tif</code>). Al cargar cada capa anual, el modelo compara automáticamente su grilla con la de referencia. Si coinciden, la capa se usa directamente. Si no, se reproyecta usando el método de vecino más cercano, que conserva los valores originales sin introducir interpolaciones artificiales entre clases espectrales.</p>
+<section id="grilla-espacial-y-atributos-de-análisis" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="grilla-espacial-y-atributos-de-análisis"><span class="header-section-number">2.3</span> Grilla espacial y atributos de análisis</h2>
+<p>El flujo MRCT trabaja con un raster de cuencas alineado (<code>basins_aligned.tif</code>). En esta capa, cada píxel contiene el identificador de la cuenca a la que pertenece. Ese identificador, denominado <code>RID</code>, permite agregar los valores de los índices espectrales desde la grilla satelital hacia una tabla longitudinal de cuenca por año.</p>
+<p>La grilla de cuencas actúa como referencia espacial del modelo. Todas las capas anuales se alinean a esa geometría para asegurar que cada píxel de NDVI, NDWI, NDSI, NDDI, albedo o temperatura de brillo corresponda exactamente a la misma unidad territorial. Sin esta condición, la comparación entre capas podría mezclar píxeles de cuencas distintas o introducir errores de borde.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-    A[Imágenes satelitales&lt;br/&gt;Landsat 8] --&gt; B[Selección temporal&lt;br/&gt;2013–2025]
-    B --&gt; C[Control de disponibilidad&lt;br/&gt;6 capas por año]
-    C --&gt; D[Filtrado de NaN&lt;br/&gt;y recorte de outliers]
-    D --&gt; E[Alineamiento espacial&lt;br/&gt;a grilla de referencia]
-    E --&gt; F[Mosaicos anuales&lt;br/&gt;validados]
-    F --&gt; G[Capas listas&lt;br/&gt;para indicadores]
+    A[Cuencas CIT&lt;br/&gt;con atributos DGA] --&gt; B[Raster de cuencas&lt;br/&gt;basins_aligned.tif]
+    B --&gt; C[Identificador RID&lt;br/&gt;por píxel]
+    C --&gt; D[Agregación anual&lt;br/&gt;por cuenca]
+    D --&gt; E[Panel RID × año&lt;br/&gt;para la MRCT]
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+</section>
+<section id="huella-antrópica-y-población" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="huella-antrópica-y-población"><span class="header-section-number">2.4</span> Huella antrópica y población</h2>
+<p>Además de la grilla de cuencas, el flujo MRCT incorpora una capa territorial de <strong>huella antrópica</strong> (<code>anthropic_aligned.tif</code>). Esta capa no reemplaza a los índices espectrales; opera como una máscara previa que define qué píxeles se consideran válidos para estimar los indicadores base por cuenca.</p>
+<p>La huella antrópica se construyó integrando tres fuentes oficiales de ocupación y uso del territorio: el Catastro de Uso de la Tierra y Recursos Vegetacionales de Chile disponible en el Sistema de Información Territorial de CONAF <span class="citation" data-cites="conaf_sit_2020">(<a href="references.html#ref-conaf_sit_2020" role="doc-biblioref">Corporación Nacional Forestal 2020</a>)</span>, el Continuo de Construcciones Urbanas del Geoportal Open Data MINVU <span class="citation" data-cites="minvu_ccu_2021">(<a href="references.html#ref-minvu_ccu_2021" role="doc-biblioref">Ministerio de Vivienda y Urbanismo 2021</a>)</span> y la Carta de Ocupación de Tierras consultada desde el GEOPORTAL SIMBIO del Ministerio del Medio Ambiente <span class="citation" data-cites="mma_simbio_2026">(<a href="references.html#ref-mma_simbio_2026" role="doc-biblioref">Ministerio del Medio Ambiente 2026</a>)</span>. En conjunto, estas capas permiten representar la presencia de infraestructura, áreas urbanas, coberturas intervenidas y patrones de ocupación humana que pueden modificar la señal ecosistémica observada por el satélite.</p>
+<p>La cobertura resultante se expresa como un raster continuo normalizado entre <strong>0 y 1</strong>. Valores cercanos a <strong>0</strong> representan píxeles sin intervención humana relevante o con intervención muy baja; valores intermedios indican presencia parcial o difusa de ocupación antrópica; y valores cercanos a <strong>1</strong> representan intervención alta, como construcciones urbanas, infraestructura o coberturas fuertemente transformadas. En la configuración por defecto del modelo, el umbral seleccionado es:</p>
+<p><span class="math display">
+\theta_{ant} = 0{,}2
+</span></p>
+<p>Con este criterio, se conserva para el cálculo de índices base sólo el subconjunto de píxeles con huella antrópica <strong>menor o igual a 0,2</strong>. Los píxeles con valores superiores a 0,2 se excluyen de la estimación de los indicadores ecosistémicos, aunque siguen siendo información territorial relevante para interpretar presión humana, escenarios prospectivos y decisiones de gestión.</p>
+<p>Este filtro es importante porque la MRCT busca medir resiliencia ecosistémica y no confundirla con cambios producidos directamente por urbanización, infraestructura o uso intensivo del suelo. Sin esta máscara, una cuenca con mayor proporción de asentamientos humanos podría mostrar menor vegetación, mayor temperatura superficial, fragmentación o cambios hídricos por razones asociadas al poblamiento y no necesariamente por pérdida de resiliencia ecológica. Al separar la señal natural de la señal antrópica directa, el modelo mantiene una lectura más consistente de la condición ecosistémica.</p>
+<p>La decisión también permite incorporar explícitamente el <strong>factor humano</strong>. La población no se trata como un elemento externo al territorio: su distribución, concentración urbana e infraestructura asociada forman parte de la presión territorial que debe ser considerada. En Magallanes, donde la población se concentra principalmente en Punta Arenas, Natales y otros centros urbanos, este filtro ayuda a distinguir entre cuencas dominadas por procesos naturales y sectores donde la ocupación humana tiene mayor peso en la señal observada.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-gu2007" class="csl-entry" role="listitem">
-Gu, Yingxin, Jesslyn F. Brown, James P. Verdin, and Brian Wardlow. 2007. <span>“A Five-Year Analysis of MODIS NDVI and NDWI for Grassland Drought Assessment over the Central Great Plains of the United States.”</span> <em>Geophysical Research Letters</em> 34 (6): L06407. <a href="https://doi.org/10.1029/2006GL029127">https://doi.org/10.1029/2006GL029127</a>.
+<div id="ref-bcn_magallanes_hidrografia" class="csl-entry" role="listitem">
+Biblioteca del Congreso Nacional de Chile. 2026a. <span>“Hidrograf<span>í</span>a Regi<span>ó</span>n de Magallanes.”</span> <a href="https://www.bcn.cl/siit/nuestropais/region12/hidrografia.htm">https://www.bcn.cl/siit/nuestropais/region12/hidrografia.htm</a>.
 </div>
-<div id="ref-liang2001" class="csl-entry" role="listitem">
-Liang, Shunlin. 2001. <span>“Narrowband to Broadband Conversions of Land Surface Albedo i: Algorithms.”</span> <em>Remote Sensing of Environment</em> 76 (2): 213–38. <a href="https://doi.org/10.1016/S0034-4257(00)00205-4">https://doi.org/10.1016/S0034-4257(00)00205-4</a>.
+<div id="ref-bcn_magallanes_region" class="csl-entry" role="listitem">
+———. 2026b. <span>“Regi<span>ó</span>n de Magallanes y Ant<span>á</span>rtica Chilena.”</span> <a href="https://www.bcn.cl/siit/siit/nuestropais/region12">https://www.bcn.cl/siit/siit/nuestropais/region12</a>.
 </div>
-<div id="ref-usgs_landsat8_bands" class="csl-entry" role="listitem">
-U.S. Geological Survey. 2025. <span>“What Are the Band Designations for the Landsat Satellites?”</span> <a href="https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites">https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites</a>.
+<div id="ref-conaf_sit_2020" class="csl-entry" role="listitem">
+Corporación Nacional Forestal. 2020. <span>“Sistema de Informaci<span>ó</span>n Territorial SIT CONAF.”</span> <a href="https://sit.conaf.cl/">https://sit.conaf.cl/</a>.
 </div>
-<div id="ref-usgs_landsat_level1" class="csl-entry" role="listitem">
-———. 2026. <span>“Using the USGS Landsat Level-1 Data Product.”</span> <a href="https://www.usgs.gov/landsat-missions/using-usgs-landsat-level-1-data-product">https://www.usgs.gov/landsat-missions/using-usgs-landsat-level-1-data-product</a>.
+<div id="ref-dga_magallanes_glaciares" class="csl-entry" role="listitem">
+Dirección General de Aguas. 2026a. <span>“DGA Magallanes Destaca Crecimiento de La Red de Estaciones de Monitoreo de Aguas Subterr<span>á</span>neas y Glaciares En La Regi<span>ó</span>n.”</span> <a href="https://dga.mop.gob.cl/dga-magallanes-destaca-crecimiento-de-la-red-de-estaciones-de-monitoreo-de-aguas-subterraneas-y-glaciares-en-la-region/">https://dga.mop.gob.cl/dga-magallanes-destaca-crecimiento-de-la-red-de-estaciones-de-monitoreo-de-aguas-subterraneas-y-glaciares-en-la-region/</a>.
+</div>
+<div id="ref-dga_inventario_cuencas_lagos" class="csl-entry" role="listitem">
+———. 2026b. <span>“Inventario p<span>ú</span>blico de Cuencas Hidrogr<span>á</span>ficas y Lagos.”</span> <a href="https://dga.mop.gob.cl/servicios-de-informacion/catastro-publico-de-aguas/inventario-publico-de-cuencas-hidrograficas-y-lagos/">https://dga.mop.gob.cl/servicios-de-informacion/catastro-publico-de-aguas/inventario-publico-de-cuencas-hidrograficas-y-lagos/</a>.
+</div>
+<div id="ref-ine_censo2024_magallanes" class="csl-entry" role="listitem">
+Instituto Nacional de Estadísticas. 2025. <span>“Resultados Regionales Censo 2024: Magallanes y de La Ant<span>á</span>rtica Chilena.”</span> <a href="https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf">https://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf</a>.
+</div>
+<div id="ref-minvu_ccu_2021" class="csl-entry" role="listitem">
+Ministerio de Vivienda y Urbanismo. 2021. <span>“Continuo de Construcciones Urbanas.”</span> <a href="https://ide.minvu.cl/maps/MINVU::continuo-de-construcciones-urbanas/about">https://ide.minvu.cl/maps/MINVU::continuo-de-construcciones-urbanas/about</a>.
+</div>
+<div id="ref-mma_sinca_magallanes" class="csl-entry" role="listitem">
+Ministerio del Medio Ambiente. 2015. <span>“Regi<span>ó</span>n de Magallanes y Ant<span>á</span>rtica Chilena: Informaci<span>ó</span>n General.”</span> <a href="https://sinca.mma.gob.cl/index.php/region/info/id/XII">https://sinca.mma.gob.cl/index.php/region/info/id/XII</a>.
+</div>
+<div id="ref-mma_simbio_2026" class="csl-entry" role="listitem">
+———. 2026. <span>“GEOPORTAL SIMBIO.”</span> <a href="https://apps.mma.gob.cl/visorsimbio">https://apps.mma.gob.cl/visorsimbio</a>.
+</div>
+<div id="ref-sbap_magallanes_2026" class="csl-entry" role="listitem">
+Servicio de Biodiversidad y Áreas Protegidas. 2026. <span>“Servicio de Biodiversidad y <span>Á</span>reas Protegidas Comienza a Operar En La Regi<span>ó</span>n de Magallanes.”</span> <a href="https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes">https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes</a>.
 </div>
 </div>
 </section>
@@ -1021,13 +883,13 @@ U.S. Geological Survey. 2025. <span>“What Are the Band Designations for the La
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./region_estudio.html" class="pagination-link" aria-label="Región de estudio y unidades de análisis">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Región de estudio y unidades de análisis</span></span>
+      <a href="./intro.html" class="pagination-link" aria-label="Introducción">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./inds_base.html" class="pagination-link" aria-label="Indicadores Base">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Base</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./insumos.html" class="pagination-link" aria-label="Insumos satelitales e índices espectrales">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Insumos satelitales e índices espectrales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
