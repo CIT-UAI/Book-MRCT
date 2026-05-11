@@ -31,12 +31,11 @@ book:
     - integracion_espacial.qmd
     - sensibilidad.qmd
     - pt_resiliencia.qmd
+    - resultados.qmd
     - conclusiones.qmd
-    
-    # - part: dimensiones.qmd
-      # chapters: 
-      # - dim_soc.qmd
-      # - dim_amb.qmd
+    - part: trabajo_terreno.qmd
+      chapters:
+      - jerk.qmd
       # - dim_seg.qmd
     # - proyectos.qmd
     # - recomendaciones.qmd

@@ -1,0 +1,425 @@
+---
+title: "Selección de Cuencas Prioritarias"
+subtitle: "Plan de trabajo para identificar cuencas mediante análisis de jerk y validar en terreno"
+---
+
+Este capítulo define una planificación de trabajo para seleccionar cuencas prioritarias de validación en terreno a partir del análisis de **jerk** de la Matriz de Resiliencia Climática Territorial. Su función es conectar el hipercubo espacio-temporal generado por la MRCT con un sistema de consultas reproducible, capaz de identificar cambios abruptos en el tiempo y transformar esas señales en una lista concreta de cuencas visitables.
+
+La planificación está orientada al equipo de análisis espacial y desarrollo. El resultado esperado no es solo un mapa final, sino una base de datos estructurada, un conjunto de consultas documentadas, criterios de selección transparentes y una tabla priorizada de diez cuencas candidatas para mediciones y validación en la Región de Magallanes y de la Antártica Chilena.
+
+El flujo toma como referencia el notebook `jupyter-notebook/MRCT_Tutorial_Academico.ipynb`, donde se construyen el hipercubo tensorial, el panel `RID × Year` y las variables de trayectoria temporal: velocidad, aceleración y jerk.
+
+::: {.callout-note}
+## Objetivo operativo
+
+Seleccionar cuencas con cambios abruptos detectados por jerk, cruzarlas con criterios de accesibilidad y cercanía a Punta Arenas, y preparar una lista priorizada para trabajo de terreno con trazabilidad completa entre datos, consulta, año crítico y razón de selección.
+:::
+
+## Pregunta de trabajo {#sec-pregunta-jerk-terreno}
+
+La pregunta principal para el equipo es:
+
+> ¿Qué cuencas muestran cambios abruptos en su trayectoria ecosistémica, en qué años ocurren esos cambios y cuáles de ellas son viables para medición y validación en terreno dentro de las restricciones logísticas del estudio?
+
+Esta pregunta se descompone en cinco preguntas técnicas:
+
+- ¿cómo almacenar el hipercubo y el panel MRCT para hacer consultas espacio-temporales eficientes?;
+- ¿qué base de datos conviene usar para combinar métricas temporales, geometrías de cuencas, comunas, accesibilidad y cercanía a Punta Arenas?;
+- ¿cómo definir una señal de jerk suficientemente robusta para evitar seleccionar ruido?;
+- ¿cómo priorizar cuencas considerando magnitud del cambio, recurrencia temporal, relevancia territorial y factibilidad de visita?;
+- ¿cómo documentar una tabla final de diez cuencas con año crítico, magnitud del cambio y razón de prioridad?
+
+## Criterio metodológico: por qué jerk {#sec-criterio-jerk}
+
+El jerk $J$ mide el cambio de la aceleración de la distancia al dominio:
+
+$$
+J_t = A_t - A_{t-1}
+$$
+
+Dentro de la MRCT, $D$ indica la posición de una cuenca respecto de su línea base, $V$ describe si se acerca o se aleja de esa referencia, $A$ indica si ese movimiento se intensifica o se amortigua, y $J$ permite detectar cambios abruptos en el régimen dinámico.
+
+Para trabajo de terreno, el jerk es útil porque ayuda a encontrar cuencas donde ocurrió una discontinuidad temporal. Una cuenca puede no tener el peor valor de resiliencia regional, pero sí mostrar un quiebre repentino que merece revisión. Ese quiebre puede estar asociado a cambios climáticos, variación nival, incendios, inundaciones, sequías, cambios de cobertura, eventos extremos, errores de observación o cambios metodológicos en los insumos. Por eso el análisis de jerk no reemplaza la validación: la orienta.
+
+La selección debe evitar una lectura mecánica. Un $J$ alto no prueba degradación, desastre ni transición irreversible. Indica que la trayectoria cambió bruscamente y que conviene revisar el caso con datos complementarios, imágenes, contexto territorial y terreno.
+
+## Flujo general de trabajo {#sec-flujo-jerk-terreno}
+
+El desarrollo debería organizarse en diez etapas.
+
+| Etapa | Propósito | Producto técnico |
+|---|---|---|
+| 1. Inventario de insumos | Identificar tablas, rasters, geometrías y variables disponibles. | Diccionario de datos MRCT y rutas de archivos. |
+| 2. Selección de base de datos | Definir tecnología para consultas espacio-temporales. | Decisión técnica documentada y esquema inicial. |
+| 3. Construcción del modelo de datos | Convertir hipercubo y panel en tablas consultables por `RID` y `Year`. | Base estructurada con índices, geometrías y métricas. |
+| 4. Control de calidad | Detectar faltantes, duplicados, años incompletos y valores extremos. | Reporte de completitud y filtros aplicados. |
+| 5. Consultas de jerk | Calcular magnitud, signo, percentiles y ranking de eventos abruptos. | Tabla de eventos `RID × Year` con métricas de jerk. |
+| 6. Cruce territorial | Incorporar comuna, provincia, superficie, accesibilidad y cercanía urbana. | Tabla enriquecida para priorización logística. |
+| 7. Priorización regional | Seleccionar cuencas con mayor señal de cambio abrupto. | Ranking regional de cuencas candidatas. |
+| 8. Filtro Punta Arenas | Asegurar casos cercanos al centro urbano por restricción de desplazamiento. | Subranking de cuencas del entorno de Punta Arenas. |
+| 9. Selección final | Escoger diez cuencas combinando señal MRCT y factibilidad de terreno. | Tabla final de cuencas prioritarias. |
+| 10. Paquete de terreno | Preparar mapas, fichas y consultas reproducibles para campaña. | Fichas por cuenca, mapas y scripts de consulta. |
+
+: Flujo de trabajo para seleccionar cuencas prioritarias mediante análisis de jerk. {#tbl-flujo-jerk-terreno}
+
+## Etapa 1: inventario de insumos {#sec-inventario-insumos-jerk}
+
+El primer paso es identificar qué datos existen, dónde están almacenados y qué nivel de procesamiento tienen. La selección de cuencas prioritarias no debe comenzar con mapas, sino con una auditoría de datos.
+
+Los insumos mínimos son:
+
+- panel MRCT `RID × Year` generado desde el hipercubo;
+- variables estructurales e indicadores base por cuenca y año;
+- métricas de trayectoria: `Domain` o $D$, `Velocidad`, `Aceleracion` y `Jerk`;
+- métricas complementarias: `Domain_local`, `SENS`, `PT`, `RES`, `RES_STATE`, `RES_TYPE` y `RES_GRAD`;
+- geometría de cuencas con campo `RID`;
+- límites comunales y regionales;
+- capa de caminos, huella urbana o puntos de acceso si está disponible;
+- ubicación del centro urbano de Punta Arenas;
+- atributos de superficie, provincia, comuna y pertenencia territorial.
+
+El equipo debe generar un diccionario de datos con nombre de variable, tipo, unidad, escala temporal, fuente, regla de cálculo, porcentaje de completitud y uso previsto dentro del ranking.
+
+## Etapa 2: selección de base de datos {#sec-base-datos-jerk}
+
+La base de datos debe permitir consultas sobre tres dimensiones: cuenca, tiempo y espacio. Además, debe ser fácil de reproducir desde el notebook MRCT y suficientemente liviana para análisis exploratorio.
+
+### Alternativas evaluadas
+
+| Alternativa | Ventajas | Limitaciones | Uso recomendado |
+|---|---|---|---|
+| Archivos Parquet + GeoParquet | Rápidos, portables, eficientes para paneles grandes, fáciles de versionar. | No son por sí solos un motor de consultas espaciales complejo. | Almacenamiento base e intercambio de datos. |
+| DuckDB + extensión espacial | Consulta SQL directa sobre Parquet/GeoParquet, rápido, local, reproducible, sin servidor. | Menos robusto que PostGIS para operaciones espaciales multiusuario o muy complejas. | Opción recomendada para esta etapa. |
+| PostGIS | Excelente para análisis espacial avanzado, índices espaciales maduros, multiusuario. | Requiere servidor, administración, carga de datos y más infraestructura. | Opción futura si el flujo pasa a producción institucional. |
+| SQLite/GeoPackage | Simple, portable, ampliamente compatible con SIG. | Menor rendimiento para consultas analíticas grandes y series temporales extensas. | Entrega de productos o intercambio SIG. |
+| Dataframes en Python/R | Muy flexibles para exploración y gráficos. | Menor trazabilidad como sistema de consultas persistente. | Prototipado y análisis posterior. |
+
+: Alternativas de almacenamiento y consulta para el análisis de jerk. {#tbl-bases-datos-jerk}
+
+### Decisión propuesta
+
+La recomendación es usar **DuckDB con Parquet/GeoParquet como base analítica local**.
+
+Esta opción se justifica por cuatro razones. Primero, el flujo MRCT ya produce una tabla longitudinal `RID × Year`, que calza naturalmente con Parquet. Segundo, DuckDB permite consultar directamente archivos Parquet sin levantar un servidor. Tercero, SQL facilita dejar consultas reproducibles para el equipo y para el libro digital. Cuarto, la extensión espacial de DuckDB permite cruces con geometrías, distancias, intersecciones y agregaciones territoriales suficientes para esta fase.
+
+PostGIS debe quedar como alternativa de escalamiento si el proyecto necesita edición multiusuario, servicios web, integración con infraestructura institucional o consultas espaciales más pesadas. Para la planificación actual, DuckDB reduce fricción y acelera el paso desde notebook a análisis territorial.
+
+## Etapa 3: modelo de datos propuesto {#sec-modelo-datos-jerk}
+
+La base debe separar métricas temporales, atributos espaciales y resultados de priorización. Se propone el siguiente esquema mínimo.
+
+| Tabla | Llave | Contenido | Función |
+|---|---|---|---|
+| `mrct_panel` | `RID`, `Year` | Indicadores base y métricas MRCT por cuenca-año. | Tabla principal de consulta temporal. |
+| `basins` | `RID` | Geometría, superficie, centroides y atributos hidrográficos. | Unidad espacial de análisis. |
+| `communes` | `COM_ID` | Geometría y nombre de comuna. | Agregación administrativa. |
+| `basin_commune` | `RID`, `COM_ID` | Intersección o asignación principal de cuenca a comuna. | Cruce entre cuencas y gestión comunal. |
+| `accessibility` | `RID` | Distancia a caminos, distancia a Punta Arenas, tiempo estimado si existe. | Factibilidad logística de terreno. |
+| `jerk_events` | `RID`, `Year` | Eventos abruptos detectados, magnitud, signo y ranking. | Priorización por cambio temporal. |
+| `field_priority` | `RID` | Puntaje final, categoría de prioridad y justificación. | Lista final para campaña. |
+
+: Esquema mínimo de base de datos para consultas espacio-temporales. {#tbl-modelo-datos-jerk}
+
+La tabla `mrct_panel` debe mantener una fila por cuenca y año. La tabla `jerk_events` no reemplaza al panel; resume los años donde el jerk supera criterios de prioridad. Esto permite consultar tanto la serie completa como los eventos destacados.
+
+## Etapa 4: preparación del panel consultable {#sec-panel-consultable-jerk}
+
+El equipo debe transformar la salida del notebook en una estructura estable de consulta.
+
+Tareas mínimas:
+
+- exportar el panel MRCT completo a Parquet;
+- exportar las geometrías de cuencas a GeoParquet;
+- normalizar nombres de columnas para evitar ambigüedad entre `Domain`, `D`, `Domain_local`, `Jerk` y otros nombres equivalentes;
+- asegurar tipos de datos correctos: `RID` entero, `Year` entero, métricas numéricas, clases como texto;
+- verificar que cada combinación `RID × Year` sea única;
+- marcar observaciones con datos incompletos;
+- generar columnas auxiliares como `abs_jerk`, `jerk_sign`, `jerk_rank_year`, `jerk_percentile_year` y `jerk_percentile_global`;
+- registrar el último año disponible y la ventana de análisis.
+
+La base debe conservar tanto valores crudos como valores estandarizados. Para selección regional, conviene usar percentiles o *z*-scores robustos por año, porque el jerk puede tener distribuciones distintas entre años.
+
+## Etapa 5: sistema de consultas {#sec-consultas-jerk}
+
+El sistema de consultas debe permitir responder preguntas directas sin reejecutar todo el notebook. Se propone construir consultas SQL parametrizadas y funciones auxiliares en Python o R.
+
+Consultas mínimas:
+
+| Consulta | Pregunta que responde | Salida |
+|---|---|---|
+| `top_jerk_events` | ¿Cuáles son los eventos con mayor magnitud de jerk? | `RID`, `Year`, `Jerk`, percentil, comuna y geometría. |
+| `top_jerk_by_year` | ¿Qué cuencas destacan dentro de cada año? | Ranking anual de eventos abruptos. |
+| `top_jerk_by_commune` | ¿Qué comunas concentran eventos abruptos? | Resumen comunal y lista de cuencas. |
+| `near_punta_arenas` | ¿Qué cuencas prioritarias están cerca del centro urbano? | Candidatas logísticamente viables. |
+| `jerk_with_resilience` | ¿El cambio abrupto coincide con baja resiliencia o alto PT? | Tabla cruzada con `RES`, `PT`, `RES_TYPE`. |
+| `jerk_series` | ¿Cómo se comportó la cuenca antes y después del año crítico? | Serie temporal de $D$, $V$, $A$, $J$ y `RES`. |
+| `field_candidates` | ¿Qué cuencas cumplen criterios técnicos y logísticos? | Ranking final para terreno. |
+
+: Consultas mínimas para el sistema de selección de cuencas. {#tbl-consultas-jerk}
+
+### Criterios de eficiencia
+
+Para que las consultas sean rápidas y reproducibles, se recomienda:
+
+- particionar o agrupar el panel por `Year` cuando se exporte a Parquet;
+- mantener índices o llaves lógicas sobre `RID` y `Year`;
+- precalcular `abs_jerk` y percentiles por año;
+- evitar reprocesar geometrías pesadas en cada consulta;
+- guardar centroides de cuencas como columnas auxiliares;
+- separar geometría completa y tabla analítica cuando solo se necesiten rankings;
+- materializar `jerk_events` como tabla derivada;
+- documentar cada consulta con parámetros, filtros y fecha de generación.
+
+## Etapa 6: definición de evento abrupto {#sec-evento-abrupto-jerk}
+
+No todo valor alto de jerk debe convertirse automáticamente en prioridad de terreno. Se propone clasificar eventos abruptos con criterios combinados.
+
+Un evento candidato ocurre cuando una cuenca-año cumple al menos una de estas condiciones:
+
+- `abs_jerk` se ubica sobre el percentil 95 regional del año;
+- `abs_jerk` se ubica sobre el percentil 99 global de toda la serie;
+- `JERK_CLASS` corresponde a `Intensificación Fuerte` o `Reversión Fuerte`;
+- el evento coincide con aumento de $D$ o deterioro de `RES`;
+- el evento aparece en una cuenca con alta sensibilidad $SENS$ o alto $D_{local}$.
+
+Para terreno, se recomienda separar dos tipos de eventos:
+
+| Tipo de evento | Condición dinámica | Interpretación para terreno |
+|---|---|---|
+| Intensificación abrupta | $J > 0$ alto y trayectoria con $V$ o $A$ positiva | Posible aceleración de alejamiento del dominio. |
+| Reversión abrupta | $J < 0$ bajo extremo o cambio brusco de signo | Posible recuperación, estabilización o cambio de régimen que debe verificarse. |
+
+: Tipos de evento de jerk relevantes para validación territorial. {#tbl-tipos-evento-jerk}
+
+Ambos tipos son útiles. La intensificación abrupta puede indicar presión o deterioro emergente. La reversión abrupta puede indicar recuperación, efecto de un evento puntual, cambio hidrológico, variación nival o incluso artefactos de datos que conviene auditar.
+
+## Etapa 7: criterios de priorización {#sec-priorizacion-jerk}
+
+La selección final debe combinar señal MRCT y factibilidad de terreno. Se propone construir un puntaje de prioridad compuesto por cinco dimensiones.
+
+| Dimensión | Variable sugerida | Lectura |
+|---|---|---|
+| Magnitud del cambio abrupto | Percentil anual y global de `abs_jerk` | Prioriza discontinuidades fuertes. |
+| Consistencia temporal | Persistencia de $D$, $V$, $A$ y `RES` antes/después del evento | Evita seleccionar picos aislados sin contexto. |
+| Relevancia ecosistémica | $D$, $PT$, `RES`, `RES_TYPE`, $SENS$ | Relaciona jerk con resiliencia y transición. |
+| Contraste espacial | $D_{local}$, `RES_GRAD` | Identifica cuencas distintas a su entorno. |
+| Factibilidad logística | Distancia a Punta Arenas, caminos, accesibilidad, tiempo de visita | Asegura posibilidad real de validación en terreno. |
+
+: Dimensiones sugeridas para el puntaje de prioridad de terreno. {#tbl-dimensiones-prioridad-jerk}
+
+Una formulación simple podría ser:
+
+$$
+P_i =
+0{,}35 \cdot J^\*_{i}
++ 0{,}20 \cdot R^\*_{i}
++ 0{,}15 \cdot E^\*_{i}
++ 0{,}15 \cdot L^\*_{i}
++ 0{,}15 \cdot A^\*_{i}
+$$
+
+donde $J^\*$ resume magnitud de jerk, $R^\*$ resume relevancia en resiliencia, $E^\*$ resume contraste espacial, $L^\*$ resume factibilidad logística y $A^\*$ representa accesibilidad o cercanía a Punta Arenas. Los pesos son una propuesta inicial y deben quedar parametrizados para sensibilidad.
+
+## Etapa 8: restricción logística Punta Arenas {#sec-punta-arenas-jerk}
+
+Como el trabajo de terreno tendrá restricciones de desplazamiento, el sistema debe incluir una consulta específica para cuencas cercanas al centro urbano de Punta Arenas.
+
+Esta consulta debe:
+
+- identificar cuencas dentro de la comuna de Punta Arenas;
+- identificar cuencas que intersectan un radio operativo alrededor del centro urbano;
+- calcular distancia desde el centroide de la cuenca al centro urbano;
+- calcular distancia a caminos o puntos de acceso cuando la información esté disponible;
+- filtrar cuencas con eventos de jerk relevantes;
+- ordenar primero por factibilidad y luego por magnitud de señal, o producir ambos rankings.
+
+Se recomienda definir tres anillos logísticos:
+
+| Anillo | Criterio sugerido | Uso |
+|---|---|---|
+| Cercano | Hasta 30 km desde el centro urbano o acceso principal | Visitas rápidas, bajo costo logístico. |
+| Intermedio | 30 a 80 km | Visitas de media jornada o jornada completa. |
+| Extendido | Más de 80 km | Solo si la señal MRCT justifica el desplazamiento. |
+
+: Clasificación logística preliminar para el entorno de Punta Arenas. {#tbl-anillos-punta-arenas}
+
+Los umbrales deben ajustarse con el equipo de terreno. La distancia euclidiana sirve como primera aproximación, pero la priorización final debe usar accesibilidad real cuando existan caminos, permisos, estacionalidad o restricciones climáticas.
+
+## Etapa 9: selección de diez cuencas prioritarias {#sec-diez-cuencas-jerk}
+
+El producto central para el libro y para la campaña será una tabla de diez cuencas prioritarias. La tabla debe ser generada por consulta reproducible, no por selección manual.
+
+La estructura mínima de la tabla debe ser:
+
+| Prioridad | RID | Cuenca | Comuna | Año crítico | Jerk | Magnitud relativa | Tipo de evento | RES año crítico | Distancia a Punta Arenas | Razón de prioridad |
+|---|---:|---|---|---:|---:|---|---|---:|---:|---|
+| 1 | Por definir | Por definir | Por definir | Por definir | Por definir | p99 anual/global | Intensificación o reversión | Por definir | Por definir | Mayor señal abrupta y alta factibilidad. |
+| 2 | Por definir | Por definir | Por definir | Por definir | Por definir | p95 anual/global | Intensificación o reversión | Por definir | Por definir | Cambio abrupto asociado a baja resiliencia. |
+| 3 | Por definir | Por definir | Por definir | Por definir | Por definir | p95 anual/global | Intensificación o reversión | Por definir | Por definir | Contraste espacial frente a cuencas vecinas. |
+| 4 | Por definir | Por definir | Por definir | Por definir | Por definir | p95 anual/global | Intensificación o reversión | Por definir | Por definir | Caso cercano a Punta Arenas. |
+| 5 | Por definir | Por definir | Por definir | Por definir | Por definir | p95 anual/global | Intensificación o reversión | Por definir | Por definir | Alta sensibilidad climática. |
+| 6 | Por definir | Por definir | Por definir | Por definir | Por definir | p90 anual/global | Intensificación o reversión | Por definir | Por definir | Señal persistente en serie temporal. |
+| 7 | Por definir | Por definir | Por definir | Por definir | Por definir | p90 anual/global | Intensificación o reversión | Por definir | Por definir | Representa patrón regional relevante. |
+| 8 | Por definir | Por definir | Por definir | Por definir | Por definir | p90 anual/global | Intensificación o reversión | Por definir | Por definir | Caso comunal complementario. |
+| 9 | Por definir | Por definir | Por definir | Por definir | Por definir | p90 anual/global | Intensificación o reversión | Por definir | Por definir | Accesible para verificación rápida. |
+| 10 | Por definir | Por definir | Por definir | Por definir | Por definir | p90 anual/global | Intensificación o reversión | Por definir | Por definir | Control o contraste frente a cuencas críticas. |
+
+: Plantilla de tabla final para diez cuencas prioritarias de validación en terreno. {#tbl-diez-cuencas-prioritarias}
+
+La columna "Razón de prioridad" debe ser breve y verificable. No basta decir "jerk alto"; debe explicar si la cuenca fue seleccionada por magnitud extrema, cercanía a Punta Arenas, baja resiliencia, alta sensibilidad, contraste local o combinación de factores.
+
+## Etapa 10: fichas por cuenca {#sec-fichas-cuenca-jerk}
+
+Cada una de las diez cuencas seleccionadas debe tener una ficha técnica para terreno. La ficha debe incluir:
+
+- identificador `RID`;
+- nombre de cuenca si existe;
+- comuna y provincia;
+- mapa de ubicación regional;
+- mapa de detalle con acceso preliminar;
+- año crítico de jerk;
+- serie temporal de $D$, $V$, $A$, $J$ y `RES`;
+- indicadores base que más cambiaron alrededor del año crítico;
+- clasificación `RES_STATE` y `RES_TYPE`;
+- distancia a Punta Arenas y ruta estimada si existe;
+- observaciones para terreno;
+- hipótesis preliminar a validar;
+- fotografías o puntos sugeridos de observación si se definen posteriormente.
+
+Estas fichas permiten que el equipo de terreno no reciba solo una lista de coordenadas, sino una pregunta de validación por cada cuenca.
+
+## Consultas SQL orientativas {#sec-sql-jerk}
+
+Las consultas finales deben ajustarse al nombre real de tablas y columnas, pero el equipo puede partir con una lógica similar a la siguiente.
+
+```sql
+-- Eventos de jerk extremos por año
+CREATE OR REPLACE TABLE jerk_events AS
+SELECT
+  RID,
+  Year,
+  Jerk,
+  abs(Jerk) AS abs_jerk,
+  CASE
+    WHEN Jerk > 0 THEN 'Intensificacion'
+    WHEN Jerk < 0 THEN 'Reversion'
+    ELSE 'Neutro'
+  END AS jerk_sign,
+  percent_rank() OVER (
+    PARTITION BY Year
+    ORDER BY abs(Jerk)
+  ) AS jerk_percentile_year
+FROM mrct_panel
+WHERE Jerk IS NOT NULL;
+```
+
+```sql
+-- Candidatas regionales con resiliencia y comuna
+SELECT
+  e.RID,
+  e.Year AS critical_year,
+  e.Jerk,
+  e.abs_jerk,
+  e.jerk_percentile_year,
+  p.RES,
+  p.PT,
+  p.Domain,
+  p.Velocidad,
+  p.Aceleracion,
+  p.Domain_local,
+  p.SENS,
+  bc.commune_name
+FROM jerk_events e
+JOIN mrct_panel p
+  ON e.RID = p.RID AND e.Year = p.Year
+LEFT JOIN basin_commune bc
+  ON e.RID = bc.RID
+WHERE e.jerk_percentile_year >= 0.95
+ORDER BY e.abs_jerk DESC;
+```
+
+```sql
+-- Candidatas cercanas a Punta Arenas
+SELECT
+  c.*,
+  a.distance_punta_arenas_km,
+  a.distance_road_km,
+  a.access_ring
+FROM candidate_events c
+LEFT JOIN accessibility a
+  ON c.RID = a.RID
+WHERE a.access_ring IN ('Cercano', 'Intermedio')
+ORDER BY
+  c.jerk_percentile_year DESC,
+  a.distance_punta_arenas_km ASC;
+```
+
+Estas consultas deben transformarse en scripts versionados para que el ranking pueda regenerarse cuando cambien los datos, el año de análisis o los pesos de priorización.
+
+## Productos para el libro digital {#sec-productos-libro-jerk}
+
+El capítulo final del libro debería incluir productos seleccionados de este flujo, no todo el detalle técnico de implementación.
+
+Productos sugeridos:
+
+- diagrama del flujo base de datos, consultas y selección de cuencas;
+- mapa regional de eventos extremos de jerk;
+- mapa de cuencas candidatas cercanas a Punta Arenas;
+- gráfico de distribución anual de `abs_jerk`;
+- tabla de diez cuencas prioritarias;
+- serie temporal de dos o tres cuencas representativas;
+- ficha resumida del caso Punta Arenas;
+- nota metodológica sobre límites de interpretación del jerk.
+
+## Diagrama del flujo operativo {#sec-diagrama-jerk-terreno}
+
+```{mermaid}
+flowchart TD
+    A["Notebook MRCT<br/>hipercubo y panel RID por año"] --> B["Exportacion<br/>Parquet y GeoParquet"]
+    B --> C["DuckDB espacial<br/>base analitica local"]
+    C --> D["Tabla mrct_panel<br/>D V A J RES PT"]
+    C --> E["Tabla basins<br/>geometria RID"]
+    C --> F["Tabla accesibilidad<br/>Punta Arenas y caminos"]
+    D --> G["Eventos de jerk<br/>abs J percentiles clases"]
+    E --> H["Cruce territorial<br/>comuna provincia superficie"]
+    F --> H
+    G --> I["Ranking tecnico<br/>magnitud cambio resiliencia contexto"]
+    H --> I
+    I --> J["Filtro logistico<br/>entorno Punta Arenas"]
+    J --> K["10 cuencas prioritarias<br/>terreno y validacion"]
+    K --> L["Fichas de terreno<br/>mapa serie temporal hipotesis"]
+```
+
+## Criterios de aceptación para el equipo {#sec-criterios-aceptacion-jerk}
+
+El trabajo puede considerarse completo cuando existan los siguientes entregables:
+
+- base DuckDB o conjunto reproducible DuckDB + Parquet/GeoParquet;
+- script de carga de datos desde salidas del notebook MRCT;
+- diccionario de datos del panel `RID × Year`;
+- tabla `jerk_events` con magnitud, signo, percentiles y año crítico;
+- consulta reproducible de ranking regional;
+- consulta reproducible de candidatas cercanas a Punta Arenas;
+- tabla final de diez cuencas prioritarias;
+- mapas de revisión para región y Punta Arenas;
+- fichas técnicas por cuenca;
+- breve informe de supuestos, filtros y limitaciones.
+
+## Riesgos y controles {#sec-riesgos-controles-jerk}
+
+| Riesgo | Efecto posible | Control recomendado |
+|---|---|---|
+| Jerk alto por dato faltante o interpolación | Falsa prioridad de terreno. | Revisar completitud antes y después del año crítico. |
+| Cambio abrupto por nubosidad o mosaico débil | Señal satelital poco confiable. | Cruzar con métricas de calidad y cobertura anual. |
+| Cuenca prioritaria inaccesible | Pérdida de tiempo en planificación de terreno. | Incorporar distancia a caminos y anillos logísticos. |
+| Ranking dominado por cuencas remotas | Baja factibilidad de campaña. | Forzar subranking cercano a Punta Arenas. |
+| Lectura causal prematura | Interpretación incorrecta del resultado. | Presentar jerk como señal de alerta, no como prueba causal. |
+| Agregación comunal ambigua | Confusión entre cuenca y administración. | Documentar regla de asignación cuenca-comuna. |
+
+: Riesgos principales del flujo de selección y controles sugeridos. {#tbl-riesgos-jerk}
+
+## Cierre operativo {#sec-cierre-jerk}
+
+La selección de cuencas por jerk debe funcionar como un puente entre análisis computacional y observación territorial. El hipercubo MRCT permite detectar discontinuidades temporales que no son evidentes en una lectura estática de resiliencia. La base de datos y el sistema de consultas convierten esa señal en un procedimiento reproducible. La restricción logística de Punta Arenas asegura que el resultado sea viable para una campaña real.
+
+El producto final para el libro digital será una lectura trazable: desde el panel `RID × Year`, pasando por eventos de jerk, filtros espaciales y criterios de accesibilidad, hasta una lista de diez cuencas priorizadas con año crítico y razón técnica de selección.
