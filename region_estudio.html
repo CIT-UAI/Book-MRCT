@@ -236,20 +236,43 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
+  <a href="./resultados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Análisis de Resultados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./trabajo_terreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trabajo en Terreno</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./jerk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./anexos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
   </div>
 </li>
     </ul>
@@ -413,10 +436,20 @@ Figure&nbsp;2.5: Representación general de una cuenca hidrgráfica.
 <p>Esta lectura también orientó la construcción geométrica de las unidades. Se usó batimetría extensa para mantener la continuidad espacial del camino del agua y evitar artefactos producidos por recortes de insumos altimétricos, como puede ocurrir cuando un modelo de elevación terrestre se corta abruptamente en la línea de costa. En territorios australes con fiordos, canales, islas y drenajes complejos, ese recorte puede generar límites artificiales o interrumpir conexiones hidrológicas reales. La extensión batimétrica permite conservar la relación funcional entre continente, borde costero y cuerpos marinos interiores, manteniendo la coherencia espacial del flujo hídrico con independencia de fronteras administrativas, recortes técnicos o límites naturales aparentes.</p>
 <p>Las cuencas utilizadas por el Centro de Inteligencia Territorial mantienen atributos de referencia con los códigos oficiales de cuencas y subcuencas de la Dirección General de Aguas. Es decir, cada cuenca CIT conserva como atributos los códigos DGA correspondientes, lo que permite conectar el análisis MRCT con el Inventario Público de Cuencas Hidrográficas y Lagos <span class="citation" data-cites="dga_inventario_cuencas_lagos">(<a href="references.html#ref-dga_inventario_cuencas_lagos" role="doc-biblioref">Dirección General de Aguas 2026b</a>)</span>. Esta trazabilidad facilita el cruce con información pública, reportes sectoriales y marcos oficiales de gestión hídrica.</p>
 </section>
-<section id="grilla-espacial-y-atributos-de-análisis" class="level2" data-number="2.3">
+<section id="grilla-espacial-y-atributos-de-análisis" class="level2 page-columns page-full" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="grilla-espacial-y-atributos-de-análisis"><span class="header-section-number">2.3</span> Grilla espacial y atributos de análisis</h2>
 <p>El flujo MRCT trabaja con un raster de cuencas alineado (<code>basins_aligned.tif</code>). En esta capa, cada píxel contiene el identificador de la cuenca a la que pertenece. Ese identificador, denominado <code>RID</code>, permite agregar los valores de los índices espectrales desde la grilla satelital hacia una tabla longitudinal de cuenca por año.</p>
 <p>La grilla de cuencas actúa como referencia espacial del modelo. Todas las capas anuales se alinean a esa geometría para asegurar que cada píxel de NDVI, NDWI, NDSI, NDDI, albedo o temperatura de brillo corresponda exactamente a la misma unidad territorial. Sin esta condición, la comparación entre capas podría mezclar píxeles de cuencas distintas o introducir errores de borde.</p>
+<div id="fig-grilla-huella-antropica" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-grilla-huella-antropica-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/metodologia/grilla_cuencas_huella_antropica.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-grilla-huella-antropica-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: Grilla raster de cuencas usada para asignar cada píxel a un <code>RID</code> y capa de huella antrópica normalizada entre 0 y 1. Elaboración propia.
+</figcaption>
+</figure>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>

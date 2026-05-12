@@ -140,7 +140,7 @@ window.Quarto = {
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -236,20 +236,43 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
+  <a href="./resultados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Análisis de Resultados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./trabajo_terreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trabajo en Terreno</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./jerk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./anexos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
   </div>
 </li>
     </ul>
@@ -274,7 +297,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -379,7 +402,7 @@ En términos simples
 </div>
 </div>
 </section>
-<section id="sec-dominio" class="level2" data-number="5.3">
+<section id="sec-dominio" class="level2 page-columns page-full" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="sec-dominio"><span class="header-section-number">5.3</span> Dominio de referencia</h2>
 <p>El dominio de referencia es la región del espacio de estados que el sistema ocupó durante la línea base. Se construye en tres pasos: normalización robusta, estimación de la estructura de covarianza y cálculo de la distancia de cada observación al dominio.</p>
 <section id="normalización-robusta" class="level3" data-number="5.3.1">
@@ -395,12 +418,22 @@ En términos simples
 <p>El grado de contracción se determina analíticamente, sin hiperparámetros adicionales. El resultado es una matriz de covarianza mejor condicionada que la muestral, lo que mejora la estabilidad numérica de la distancia de Mahalanobis.</p>
 <p>Si la matriz resultante aún presenta un número de condición superior a <span class="math inline">10^6</span>, se aplica una regularización adicional sumando <span class="math inline">10^{-3}\mathbf{I}</span> a la diagonal.</p>
 </section>
-<section id="distancia-al-dominio" class="level3" data-number="5.3.3">
+<section id="distancia-al-dominio" class="level3 page-columns page-full" data-number="5.3.3">
 <h3 data-number="5.3.3" class="anchored" data-anchor-id="distancia-al-dominio"><span class="header-section-number">5.3.3</span> Distancia al dominio</h3>
 <p>Con la media de referencia <span class="math inline">\boldsymbol{\mu}</span> y la inversa de la covarianza <span class="math inline">\hat{\Sigma}^{-1}</span>, la distancia de cada observación al dominio se calcula como la <strong>distancia de Mahalanobis normalizada por la dimensión</strong>:</p>
 <p><span class="math display">D(\mathbf{x}) = \frac{\sqrt{(\mathbf{x} - \boldsymbol{\mu})^\top \hat{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu})}}{\sqrt{d}}</span></p>
 <p>donde <span class="math inline">d</span> es el número de variables estructurales incluidas. La normalización por <span class="math inline">\sqrt{d}</span> hace que <span class="math inline">D</span> sea comparable entre configuraciones con diferente número de variables.</p>
 <p><span class="math inline">D = 0</span> corresponde a una observación idéntica a la media de referencia. Valores crecientes indican mayor alejamiento del régimen ecosistémico de la línea base. Esta distancia es el insumo directo de las etapas de dinámica temporal que siguen.</p>
+<div id="fig-distribucion-domain-series" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-distribucion-domain-series-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/metodologia/distribucion_domain_series.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-distribucion-domain-series-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Distribución anual de la distancia al dominio y ejemplos de series temporales por cuenca. El área sombreada indica el período de línea base 2013-2022. Elaboración propia.
+</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

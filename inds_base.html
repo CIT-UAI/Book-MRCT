@@ -120,7 +120,7 @@ window.Quarto = {
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -216,20 +216,43 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
+  <a href="./resultados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Análisis de Resultados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./trabajo_terreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trabajo en Terreno</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./jerk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./anexos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
   </div>
 </li>
     </ul>
@@ -269,7 +292,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -293,6 +316,17 @@ window.Quarto = {
 <p>Los mosaicos satelitales son señal física bruta. Este capítulo describe cómo esa señal se transforma en métricas interpretables a escala de cuenca.</p>
 <p>El proceso de cálculo opera sobre un área filtrada. No todos los píxeles de una cuenca participan: se excluyen las zonas con intervención antrópica significativa (índice antrópico superior a 0,2) y los píxeles sin datos válidos de NDVI. Esto garantiza que los indicadores reflejen el estado del ecosistema natural, no la huella de la actividad humana.</p>
 <p>Los indicadores se organizan en tres grupos: <strong>vegetación y energía</strong>, <strong>agua, humedad y criósfera</strong>, y <strong>estructura del paisaje</strong>. Cada grupo captura una dimensión diferente del estado ecosistémico de la unidad territorial.</p>
+<p>La forma más útil de leer estos indicadores no es como valores aislados, sino como series temporales por cuenca. La misma unidad territorial puede mostrar estabilidad en vegetación, pulsos hídricos, variación nival o cambios térmicos abruptos. Esa lectura longitudinal es la que luego alimenta el vector de estado y las derivadas temporales.</p>
+<div id="fig-series-indicadores-base" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-series-indicadores-base-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/metodologia/series_indicadores_base.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-series-indicadores-base-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Ejemplo de series temporales de indicadores anuales para cuencas seleccionadas. Elaboración propia.
+</figcaption>
+</figure>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>

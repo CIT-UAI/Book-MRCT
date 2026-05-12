@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>10&nbsp; Análisis de Resultados – Guía Técnica MRCT</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./conclusiones.html" rel="next">
+<link href="./pt_resiliencia.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-485d01fc63b59abcd3ee1bf1e8e2748d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./resultados.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Análisis de Resultados</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Guía Técnica MRCT</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./region_estudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Región de estudio y unidades de análisis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./insumos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Insumos satelitales e índices espectrales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inds_base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores Base</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector_es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vector de Estado</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trayectoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Trayectoria del estado</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integracion_espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sensibilidad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pt_resiliencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Potencial de Transición y Resiliencia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resultados.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Análisis de Resultados</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./trabajo_terreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trabajo en Terreno</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./jerk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./anexos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#sec-base-resultados" id="toc-sec-base-resultados" class="nav-link active" data-scroll-target="#sec-base-resultados"><span class="header-section-number">10.1</span> Base de resultados y cobertura</a></li>
+  <li><a href="#sec-lectura-regional-2025" id="toc-sec-lectura-regional-2025" class="nav-link" data-scroll-target="#sec-lectura-regional-2025"><span class="header-section-number">10.2</span> Lectura regional 2025</a></li>
+  <li><a href="#sec-trayectoria-regional-resultados" id="toc-sec-trayectoria-regional-resultados" class="nav-link" data-scroll-target="#sec-trayectoria-regional-resultados"><span class="header-section-number">10.3</span> Trayectoria regional 2013-2025</a></li>
+  <li><a href="#sec-comparacion-comunal-resultados" id="toc-sec-comparacion-comunal-resultados" class="nav-link" data-scroll-target="#sec-comparacion-comunal-resultados"><span class="header-section-number">10.4</span> Comparación comunal</a></li>
+  <li><a href="#sec-componentes-explicativos-resultados" id="toc-sec-componentes-explicativos-resultados" class="nav-link" data-scroll-target="#sec-componentes-explicativos-resultados"><span class="header-section-number">10.5</span> Componentes explicativos</a></li>
+  <li><a href="#sec-punta-arenas-resultados" id="toc-sec-punta-arenas-resultados" class="nav-link" data-scroll-target="#sec-punta-arenas-resultados"><span class="header-section-number">10.6</span> Doble clic sobre Punta Arenas</a></li>
+  <li><a href="#sec-sintesis-resultados" id="toc-sec-sintesis-resultados" class="nav-link" data-scroll-target="#sec-sintesis-resultados"><span class="header-section-number">10.7</span> Síntesis de hallazgos</a></li>
+  <li><a href="#sec-preguntas-validacion-resultados" id="toc-sec-preguntas-validacion-resultados" class="nav-link" data-scroll-target="#sec-preguntas-validacion-resultados"><span class="header-section-number">10.8</span> Preguntas para validación territorial</a></li>
+  <li><a href="#sec-notas-resultados" id="toc-sec-notas-resultados" class="nav-link" data-scroll-target="#sec-notas-resultados"><span class="header-section-number">10.9</span> Notas metodológicas</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Análisis de Resultados</span></h1>
+<p class="subtitle lead">Lectura territorial de la MRCT en la Región de Magallanes</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Este capítulo presenta los resultados de la Matriz de Resiliencia Climática Territorial para la Región de Magallanes y de la Antártica Chilena. La lectura se construye a partir del panel temporal consolidado, las tablas de síntesis comunal y las salidas cartográficas generadas para el análisis territorial.</p>
+<p>La estructura sigue el flujo general de análisis definido para el libro: primero se revisa la cobertura de datos, luego se describe el comportamiento regional, después se traduce la información a escala comunal, se descomponen los componentes que explican el resultado final y finalmente se realiza un doble clic sobre Punta Arenas.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Clave de lectura
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>RES</code> resume la resiliencia operativa en escala 0-1. Valores altos indican menor presión de transición; valores bajos indican mayor presión sistémica. Su interpretación debe volver siempre a los componentes que lo generan: distancia estructural <span class="math inline">D</span>, velocidad <span class="math inline">V</span>, sensibilidad climática <span class="math inline">SENS</span>, dominio local <span class="math inline">D_{local}</span> y Potencial de Transición <span class="math inline">PT</span>.</p>
+</div>
+</div>
+<section id="sec-base-resultados" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="sec-base-resultados"><span class="header-section-number">10.1</span> Base de resultados y cobertura</h2>
+<p>El panel maestro contiene <strong>273.520 registros</strong>, organizados como <strong>21.040 cuencas</strong> observadas durante <strong>13 años</strong>, entre <strong>2013 y 2025</strong>. La capa espacial asociada contiene las mismas 21.040 cuencas y utiliza el sistema de referencia EPSG:32719. Para 2025, el análisis cubre diez comunas: Punta Arenas, Laguna Blanca, Río Verde, San Gregorio, Cabo de Hornos, Porvenir, Primavera, Timaukel, Puerto Natales y Torres del Paine.</p>
+<p>La cobertura temporal por cuenca es completa: las 21.040 cuencas tienen registros para los 13 años del período. Sin embargo, no todas las variables derivadas tienen la misma disponibilidad en 2025, porque algunas dependen de diferencias temporales consecutivas, series válidas o cálculos espaciales que requieren datos suficientes.</p>
+<div id="tbl-cobertura-resultados" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cobertura-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10.1: Cobertura de variables MRCT para el año 2025.
+</figcaption>
+<div aria-describedby="tbl-cobertura-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 30%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Grupo</th>
+<th>Variable</th>
+<th style="text-align: right;">Cobertura 2025</th>
+<th>Lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Indicadores base</td>
+<td>VEG, IRV, NP, MPA, PATCH_DENSITY, LPI, CONNECTIVITY, HUM, PN, WA, IA, ALB, TB</td>
+<td style="text-align: right;">100,0%</td>
+<td>Base descriptiva completa para la lectura regional.</td>
+</tr>
+<tr class="even">
+<td>Indicador con disponibilidad parcial</td>
+<td>IEH</td>
+<td style="text-align: right;">56,4%</td>
+<td>Debe interpretarse con cautela en comparaciones finas.</td>
+</tr>
+<tr class="odd">
+<td>Dominio estructural</td>
+<td><span class="math inline">D</span></td>
+<td style="text-align: right;">56,4%</td>
+<td>Disponible para 11.858 cuencas en 2025.</td>
+</tr>
+<tr class="even">
+<td>Contexto espacial</td>
+<td><span class="math inline">D_{local}</span></td>
+<td style="text-align: right;">54,6%</td>
+<td>Disponible para 11.495 cuencas en 2025.</td>
+</tr>
+<tr class="odd">
+<td>Trayectoria temporal</td>
+<td><span class="math inline">V</span></td>
+<td style="text-align: right;">40,3%</td>
+<td>Disponible para 8.483 cuencas en 2025.</td>
+</tr>
+<tr class="even">
+<td>Trayectoria temporal</td>
+<td><span class="math inline">A</span></td>
+<td style="text-align: right;">27,4%</td>
+<td>Disponible para 5.761 cuencas en 2025.</td>
+</tr>
+<tr class="odd">
+<td>Trayectoria temporal</td>
+<td><span class="math inline">J</span></td>
+<td style="text-align: right;">17,9%</td>
+<td>Disponible para 3.770 cuencas en 2025.</td>
+</tr>
+<tr class="even">
+<td>Síntesis MRCT</td>
+<td><span class="math inline">SENS</span>, <span class="math inline">PT</span>, <code>RES</code>, <code>RES_TYPE</code>, <code>RES_STATE</code>, <code>RES_GRAD</code>, <code>DECISION_ZONE</code>, <code>TRI</code>, <code>ETEI</code></td>
+<td style="text-align: right;">100,0%</td>
+<td>Base principal para comunicación y priorización.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Esta diferencia de cobertura es relevante para la lectura de trayectoria. <code>RES</code> y <span class="math inline">PT</span> están disponibles para toda la región en 2025, pero las derivadas <span class="math inline">V</span>, <span class="math inline">A</span> y <span class="math inline">J</span> deben leerse sólo en las cuencas donde la serie temporal permite estimarlas.</p>
+</section>
+<section id="sec-lectura-regional-2025" class="level2 page-columns page-full" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="sec-lectura-regional-2025"><span class="header-section-number">10.2</span> Lectura regional 2025</h2>
+<p>En 2025, la región muestra una distribución muy polarizada de resiliencia operativa. La mediana regional de <code>RES</code> es <strong>0,094</strong>, mientras la media alcanza <strong>0,462</strong>. Esta diferencia indica que existe un grupo amplio de cuencas con valores bajos y, al mismo tiempo, un conjunto importante de cuencas con resiliencia alta o máxima.</p>
+<div id="tbl-sintesis-regional-2025" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sintesis-regional-2025-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10.2: Síntesis regional MRCT para 2025.
+</figcaption>
+<div aria-describedby="tbl-sintesis-regional-2025-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Indicador regional 2025</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cuencas evaluadas</td>
+<td style="text-align: right;">21.040</td>
+</tr>
+<tr class="even">
+<td>Mediana regional de <code>RES</code></td>
+<td style="text-align: right;">0,094</td>
+</tr>
+<tr class="odd">
+<td>Media regional de <code>RES</code></td>
+<td style="text-align: right;">0,462</td>
+</tr>
+<tr class="even">
+<td>Mediana de <span class="math inline">PT</span></td>
+<td style="text-align: right;">9,622</td>
+</tr>
+<tr class="odd">
+<td>Media de <span class="math inline">PT</span></td>
+<td style="text-align: right;">290,975</td>
+</tr>
+<tr class="even">
+<td>Cuencas en <code>Alta_Resiliencia</code></td>
+<td style="text-align: right;">43,7%</td>
+</tr>
+<tr class="odd">
+<td>Cuencas en <code>Colapso_Potencial</code></td>
+<td style="text-align: right;">54,5%</td>
+</tr>
+<tr class="even">
+<td>Cuencas en <code>Transicion</code></td>
+<td style="text-align: right;">59,7%</td>
+</tr>
+<tr class="odd">
+<td>Cuencas en <code>Degradacion_Activa</code></td>
+<td style="text-align: right;">4,8%</td>
+</tr>
+<tr class="even">
+<td>Cuencas en <code>Zona_No_Apta</code></td>
+<td style="text-align: right;">5,7%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El Potencial de Transición presenta una distribución altamente asimétrica. Su mediana regional es <strong>9,622</strong>, pero el valor máximo supera <strong>1.508.000</strong>. Por esta razón, los mapas y gráficos de <span class="math inline">PT</span> usan escala logarítmica <code>log1p(PT)</code>, mientras que las tablas reportan el valor original.</p>
+<div id="fig-mapa-res-pt-2025" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-mapa-res-pt-2025-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/resultados/mapa_res_pt_2025.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-mapa-res-pt-2025-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.1: Distribución espacial de <code>RES</code> y <span class="math inline">PT</span> para 2025. Elaboración propia.
+</figcaption>
+</figure>
+</div>
+<p>La lectura espacial muestra que las cuencas con menor resiliencia no deben interpretarse como un único bloque homogéneo. Hay zonas con alta presión de transición, cuencas con comportamiento extremo y áreas con resiliencia alta que permanecen cercanas al estado de referencia. La combinación entre mapa, distribución de estados y tipologías dinámicas permite separar nivel, trayectoria y contexto.</p>
+<div id="fig-distribucion-res-state-type" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-distribucion-res-state-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/resultados/distribucion_res_state_type.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-distribucion-res-state-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.2: Distribución anual de <code>RES_STATE</code> y composición de <code>RES_TYPE</code> en 2025.
+</figcaption>
+</figure>
+</div>
+<p>Las cuencas con menor <code>RES</code> en 2025 se concentran principalmente en Cabo de Hornos, Timaukel, Puerto Natales, Río Verde y algunos casos de Punta Arenas. La tabla siguiente muestra los diez casos más extremos ordenados por menor resiliencia operativa.</p>
+<div id="tbl-cuencas-menor-res" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cuencas-menor-res-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10.3: Diez cuencas con menor resiliencia operativa en 2025.
+</figcaption>
+<div aria-describedby="tbl-cuencas-menor-res-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ranking</th>
+<th style="text-align: right;">RID</th>
+<th>Comuna</th>
+<th style="text-align: right;"><code>RES</code></th>
+<th style="text-align: right;"><span class="math inline">PT</span></th>
+<th><code>RES_TYPE</code></th>
+<th style="text-align: right;"><span class="math inline">SENS</span></th>
+<th style="text-align: right;"><span class="math inline">V</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6067</td>
+<td>Cabo de Hornos</td>
+<td style="text-align: right;">0,000001</td>
+<td style="text-align: right;">1.508.758</td>
+<td>Degradacion_Activa</td>
+<td style="text-align: right;">8,27</td>
+<td style="text-align: right;">5,00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10256</td>
+<td>Timaukel</td>
+<td style="text-align: right;">0,000002</td>
+<td style="text-align: right;">555.227</td>
+<td>Transicion</td>
+<td style="text-align: right;">8,17</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">14352</td>
+<td>Puerto Natales</td>
+<td style="text-align: right;">0,000002</td>
+<td style="text-align: right;">496.299</td>
+<td>Degradacion_Activa</td>
+<td style="text-align: right;">1,87</td>
+<td style="text-align: right;">5,00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6059</td>
+<td>Cabo de Hornos</td>
+<td style="text-align: right;">0,000004</td>
+<td style="text-align: right;">235.544</td>
+<td>Degradacion_Activa</td>
+<td style="text-align: right;">1,07</td>
+<td style="text-align: right;">3,83</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6646</td>
+<td>Cabo de Hornos</td>
+<td style="text-align: right;">0,000007</td>
+<td style="text-align: right;">152.989</td>
+<td>Transicion</td>
+<td style="text-align: right;">38,35</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6076</td>
+<td>Cabo de Hornos</td>
+<td style="text-align: right;">0,000007</td>
+<td style="text-align: right;">149.191</td>
+<td>Transicion</td>
+<td style="text-align: right;">3,21</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6090</td>
+<td>Cabo de Hornos</td>
+<td style="text-align: right;">0,000009</td>
+<td style="text-align: right;">113.288</td>
+<td>Degradacion_Activa</td>
+<td style="text-align: right;">26,26</td>
+<td style="text-align: right;">0,78</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10329</td>
+<td>Timaukel</td>
+<td style="text-align: right;">0,000014</td>
+<td style="text-align: right;">73.318</td>
+<td>Transicion</td>
+<td style="text-align: right;">1,97</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">4638</td>
+<td>Río Verde</td>
+<td style="text-align: right;">0,000014</td>
+<td style="text-align: right;">69.173</td>
+<td>Transicion</td>
+<td style="text-align: right;">347,29</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">6055</td>
+<td>Cabo de Hornos</td>
+<td style="text-align: right;">0,000018</td>
+<td style="text-align: right;">56.113</td>
+<td>Degradacion_Activa</td>
+<td style="text-align: right;">5,69</td>
+<td style="text-align: right;">0,65</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Estos casos no deben leerse sólo como “peores cuencas”. Algunos combinan baja resiliencia con degradación activa; otros aparecen en transición sin velocidad disponible para 2025. La diferencia es importante, porque una misma condición final puede originarse en trayectorias distintas.</p>
+</section>
+<section id="sec-trayectoria-regional-resultados" class="level2 page-columns page-full" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="sec-trayectoria-regional-resultados"><span class="header-section-number">10.3</span> Trayectoria regional 2013-2025</h2>
+<p>La serie regional muestra cambios marcados entre la línea base y los años recientes. La mediana de <code>RES</code> alcanza valores altos en 2017, 2022 y 2023, pero cae en 2024 y vuelve a descender en 2025 hasta <strong>0,094</strong>. En paralelo, la mediana de <span class="math inline">D</span> se reduce desde <strong>0,633</strong> en 2024 a <strong>0,517</strong> en 2025, mientras la velocidad mediana de 2025 es <strong>-0,065</strong>.</p>
+<div id="tbl-trayectoria-regional" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-trayectoria-regional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10.4: Trayectoria regional reciente de indicadores MRCT.
+</figcaption>
+<div aria-describedby="tbl-trayectoria-regional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Año</th>
+<th style="text-align: right;"><code>RES</code> mediana</th>
+<th style="text-align: right;"><code>RES</code> media</th>
+<th style="text-align: right;"><span class="math inline">D</span> mediana</th>
+<th style="text-align: right;"><span class="math inline">D</span> media</th>
+<th style="text-align: right;"><span class="math inline">V</span> mediana</th>
+<th style="text-align: right;"><span class="math inline">V</span> media</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">0,113</td>
+<td style="text-align: right;">0,475</td>
+<td style="text-align: right;">0,505</td>
+<td style="text-align: right;">0,633</td>
+<td style="text-align: right;">-0,005</td>
+<td style="text-align: right;">-0,022</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">0,667</td>
+<td style="text-align: right;">0,595</td>
+<td style="text-align: right;">0,786</td>
+<td style="text-align: right;">0,040</td>
+<td style="text-align: right;">0,104</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2023</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">0,589</td>
+<td style="text-align: right;">0,680</td>
+<td style="text-align: right;">0,832</td>
+<td style="text-align: right;">0,024</td>
+<td style="text-align: right;">0,055</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">0,147</td>
+<td style="text-align: right;">0,494</td>
+<td style="text-align: right;">0,633</td>
+<td style="text-align: right;">0,801</td>
+<td style="text-align: right;">-0,024</td>
+<td style="text-align: right;">-0,035</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2025</td>
+<td style="text-align: right;">0,094</td>
+<td style="text-align: right;">0,462</td>
+<td style="text-align: right;">0,517</td>
+<td style="text-align: right;">0,672</td>
+<td style="text-align: right;">-0,065</td>
+<td style="text-align: right;">-0,121</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-trayectoria-regional-resultados" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-trayectoria-regional-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/resultados/trayectoria_regional_2013_2025.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-trayectoria-regional-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.3: Trayectoria regional MRCT entre 2013 y 2025. La línea continua muestra la mediana y la línea segmentada la media de las cuencas.
+</figcaption>
+</figure>
+</div>
+<p>La caída de <code>RES</code> en 2025 no debe interpretarse automáticamente como deterioro lineal de toda la región. La media y la mediana se comportan de forma distinta, y la distribución es muy asimétrica. Esto confirma que la MRCT debe leerse con mapas, percentiles y tipologías dinámicas, no sólo con promedios regionales.</p>
+</section>
+<section id="sec-comparacion-comunal-resultados" class="level2 page-columns page-full" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="sec-comparacion-comunal-resultados"><span class="header-section-number">10.4</span> Comparación comunal</h2>
+<p>La agregación comunal permite traducir la lectura de cuencas a una escala de gestión pública. Esta agregación usa la asignación comunal disponible en la capa espacial, por lo que debe entenderse como una lectura administrativa de resultados hidrográficos.</p>
+<p>En 2025, las comunas con menor mediana de <code>RES</code> son Río Verde, Torres del Paine y Puerto Natales, todas con medianas cercanas a <strong>0,04</strong>. Cabo de Hornos también muestra una mediana baja (<strong>0,09</strong>), aunque con una proporción mayor de cuencas en alta resiliencia que las tres anteriores. Punta Arenas ocupa una posición intermedia: mediana <strong>0,66</strong>, pero con una heterogeneidad interna fuerte.</p>
+<div id="tbl-comunal-resultados-2025" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comunal-resultados-2025-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10.5: Comparación comunal de resultados MRCT para 2025.
+</figcaption>
+<div aria-describedby="tbl-comunal-resultados-2025-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comuna</th>
+<th style="text-align: right;">Cuencas</th>
+<th style="text-align: right;"><code>RES</code> media</th>
+<th style="text-align: right;"><code>RES</code> mediana</th>
+<th style="text-align: right;"><span class="math inline">PT</span> mediana</th>
+<th style="text-align: right;"><span class="math inline">D</span> mediana</th>
+<th style="text-align: right;"><span class="math inline">V</span> mediana</th>
+<th style="text-align: right;"><span class="math inline">SENS</span> mediana</th>
+<th style="text-align: right;"><code>Colapso_Potencial</code></th>
+<th style="text-align: right;"><code>Alta_Resiliencia</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Puerto Natales</td>
+<td style="text-align: right;">8.574</td>
+<td style="text-align: right;">0,32</td>
+<td style="text-align: right;">0,04</td>
+<td style="text-align: right;">21,33</td>
+<td style="text-align: right;">0,49</td>
+<td style="text-align: right;">-0,17</td>
+<td style="text-align: right;">1,13</td>
+<td style="text-align: right;">69,28%</td>
+<td style="text-align: right;">29,48%</td>
+</tr>
+<tr class="even">
+<td>Río Verde</td>
+<td style="text-align: right;">1.405</td>
+<td style="text-align: right;">0,31</td>
+<td style="text-align: right;">0,04</td>
+<td style="text-align: right;">24,75</td>
+<td style="text-align: right;">0,55</td>
+<td style="text-align: right;">0,02</td>
+<td style="text-align: right;">1,01</td>
+<td style="text-align: right;">70,53%</td>
+<td style="text-align: right;">27,54%</td>
+</tr>
+<tr class="odd">
+<td>Torres del Paine</td>
+<td style="text-align: right;">795</td>
+<td style="text-align: right;">0,30</td>
+<td style="text-align: right;">0,04</td>
+<td style="text-align: right;">21,67</td>
+<td style="text-align: right;">0,81</td>
+<td style="text-align: right;">0,03</td>
+<td style="text-align: right;">0,72</td>
+<td style="text-align: right;">71,82%</td>
+<td style="text-align: right;">26,04%</td>
+</tr>
+<tr class="even">
+<td>Cabo de Hornos</td>
+<td style="text-align: right;">2.791</td>
+<td style="text-align: right;">0,45</td>
+<td style="text-align: right;">0,09</td>
+<td style="text-align: right;">10,50</td>
+<td style="text-align: right;">0,52</td>
+<td style="text-align: right;">-0,04</td>
+<td style="text-align: right;">1,18</td>
+<td style="text-align: right;">55,75%</td>
+<td style="text-align: right;">42,10%</td>
+</tr>
+<tr class="odd">
+<td>Punta Arenas</td>
+<td style="text-align: right;">3.072</td>
+<td style="text-align: right;">0,52</td>
+<td style="text-align: right;">0,66</td>
+<td style="text-align: right;">0,52</td>
+<td style="text-align: right;">0,56</td>
+<td style="text-align: right;">0,03</td>
+<td style="text-align: right;">1,29</td>
+<td style="text-align: right;">47,72%</td>
+<td style="text-align: right;">50,00%</td>
+</tr>
+<tr class="even">
+<td>Laguna Blanca</td>
+<td style="text-align: right;">434</td>
+<td style="text-align: right;">0,93</td>
+<td style="text-align: right;">1,00</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">1,01</td>
+<td style="text-align: right;">0,06</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">5,99%</td>
+<td style="text-align: right;">91,71%</td>
+</tr>
+<tr class="odd">
+<td>Porvenir</td>
+<td style="text-align: right;">959</td>
+<td style="text-align: right;">0,92</td>
+<td style="text-align: right;">1,00</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">0,66</td>
+<td style="text-align: right;">0,01</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">6,78%</td>
+<td style="text-align: right;">91,24%</td>
+</tr>
+<tr class="even">
+<td>Primavera</td>
+<td style="text-align: right;">575</td>
+<td style="text-align: right;">0,92</td>
+<td style="text-align: right;">1,00</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">0,59</td>
+<td style="text-align: right;">0,02</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">6,96%</td>
+<td style="text-align: right;">90,43%</td>
+</tr>
+<tr class="odd">
+<td>San Gregorio</td>
+<td style="text-align: right;">876</td>
+<td style="text-align: right;">0,89</td>
+<td style="text-align: right;">1,00</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">0,72</td>
+<td style="text-align: right;">0,03</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">9,59%</td>
+<td style="text-align: right;">87,67%</td>
+</tr>
+<tr class="even">
+<td>Timaukel</td>
+<td style="text-align: right;">1.559</td>
+<td style="text-align: right;">0,54</td>
+<td style="text-align: right;">1,00</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">0,55</td>
+<td style="text-align: right;">-0,02</td>
+<td style="text-align: right;">0,74</td>
+<td style="text-align: right;">46,57%</td>
+<td style="text-align: right;">50,67%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-res-mediana-comunal-resultados" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-res-mediana-comunal-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/resultados/res_mediana_comunal_2025.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-res-mediana-comunal-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.4: Resiliencia mediana por comuna en 2025. Las barras muestran la mediana y el rango P10-P90 de las cuencas internas.
+</figcaption>
+</figure>
+</div>
+<p>La tabla muestra dos patrones relevantes. Primero, Puerto Natales concentra el mayor número de cuencas evaluadas, con 8.574 unidades, lo que exige interpretar sus promedios junto con percentiles y mapas. Segundo, varias comunas tienen mediana igual a 1,00, pero no por eso carecen de cuencas críticas: Timaukel, por ejemplo, combina mediana alta con <strong>46,57%</strong> de cuencas en <code>Colapso_Potencial</code>, lo que revela una distribución interna fuertemente polarizada.</p>
+</section>
+<section id="sec-componentes-explicativos-resultados" class="level2 page-columns page-full" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="sec-componentes-explicativos-resultados"><span class="header-section-number">10.5</span> Componentes explicativos</h2>
+<p>La interpretación de <code>RES</code> requiere abrir el resultado final. El <span class="math inline">PT</span> combina distancia estructural, intensidad de trayectoria, sensibilidad climática y contexto espacial. En 2025, la distribución regional indica que no existe un único componente explicativo para todas las cuencas.</p>
+<div id="fig-drivers-pt-resultados" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-drivers-pt-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/resultados/drivers_pt_2025.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-drivers-pt-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.5: Descomposición regional del Potencial de Transición y driver dominante por cuenca en 2025.
+</figcaption>
+</figure>
+</div>
+<p>La lectura de componentes permite distinguir cuatro situaciones:</p>
+<ul>
+<li>cuencas con bajo <code>RES</code> por alejamiento estructural alto, donde <span class="math inline">D</span> domina la señal;</li>
+<li>cuencas con bajo <code>RES</code> por trayectoria activa, donde <span class="math inline">V</span> amplifica el <span class="math inline">PT</span>;</li>
+<li>cuencas sensibles a forzantes climáticos, donde <span class="math inline">SENS</span> aumenta la presión de transición;</li>
+<li>cuencas con contraste espacial fuerte, donde <span class="math inline">D_{local}</span> o <code>RES_GRAD</code> muestran una diferencia marcada frente al entorno.</li>
+</ul>
+<p>La combinación de estos componentes evita una interpretación excesivamente simple. Dos cuencas pueden tener <code>RES</code> bajo, pero una estar en degradación activa, otra en recuperación ecológica y otra en transición sin velocidad disponible para el año más reciente. Por eso la priorización territorial debe considerar simultáneamente <code>RES_STATE</code>, <code>RES_TYPE</code>, <span class="math inline">D</span>, <span class="math inline">V</span>, <span class="math inline">SENS</span> y <span class="math inline">D_{local}</span>.</p>
+</section>
+<section id="sec-punta-arenas-resultados" class="level2 page-columns page-full" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="sec-punta-arenas-resultados"><span class="header-section-number">10.6</span> Doble clic sobre Punta Arenas</h2>
+<p>Punta Arenas concentra población, infraestructura, servicios regionales y una parte importante de las decisiones territoriales de Magallanes. En la MRCT 2025, la comuna incluye <strong>3.072 cuencas</strong>, con una superficie total aproximada de <strong>17.402,9 km²</strong> y <strong>39.936 registros</strong> en el período 2013-2025.</p>
+<p>La mediana comunal de <code>RES</code> es <strong>0,664</strong>, superior a la mediana regional. Sin embargo, esta cifra esconde una división interna fuerte: <strong>1.536 cuencas</strong> están en <code>Alta_Resiliencia</code>, mientras <strong>1.466 cuencas</strong> aparecen en <code>Colapso_Potencial</code>. Es decir, Punta Arenas no debe leerse como un promedio comunal homogéneo, sino como un territorio con contrastes internos relevantes.</p>
+<div id="tbl-punta-arenas-perfil" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-punta-arenas-perfil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10.6: Perfil comunal de Punta Arenas en 2025.
+</figcaption>
+<div aria-describedby="tbl-punta-arenas-perfil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Indicador Punta Arenas 2025</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cuencas evaluadas</td>
+<td style="text-align: right;">3.072</td>
+</tr>
+<tr class="even">
+<td>Superficie total aproximada</td>
+<td style="text-align: right;">17.402,9 km²</td>
+</tr>
+<tr class="odd">
+<td><code>RES</code> media</td>
+<td style="text-align: right;">0,520</td>
+</tr>
+<tr class="even">
+<td><code>RES</code> mediana</td>
+<td style="text-align: right;">0,664</td>
+</tr>
+<tr class="odd">
+<td>Cuencas en <code>Alta_Resiliencia</code></td>
+<td style="text-align: right;">1.536</td>
+</tr>
+<tr class="even">
+<td>Cuencas en <code>Colapso_Potencial</code></td>
+<td style="text-align: right;">1.466</td>
+</tr>
+<tr class="odd">
+<td>Cuencas en <code>Resiliencia_Baja</code></td>
+<td style="text-align: right;">35</td>
+</tr>
+<tr class="even">
+<td>Cuencas en <code>Resiliencia_Media</code></td>
+<td style="text-align: right;">35</td>
+</tr>
+<tr class="odd">
+<td>Cuencas en <code>Transicion</code></td>
+<td style="text-align: right;">2.109</td>
+</tr>
+<tr class="even">
+<td>Cuencas en <code>Degradacion_Activa</code></td>
+<td style="text-align: right;">194</td>
+</tr>
+<tr class="odd">
+<td>Cuencas en <code>Zona_Apta</code></td>
+<td style="text-align: right;">2.974</td>
+</tr>
+<tr class="even">
+<td>Cuencas en <code>Zona_No_Apta</code></td>
+<td style="text-align: right;">30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-punta-arenas-mapas-resultados" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-punta-arenas-mapas-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/resultados/punta_arenas_mapas_mrct_2025.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-punta-arenas-mapas-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.6: Mapas de detalle para Punta Arenas: <code>RES</code>, <span class="math inline">PT</span>, <span class="math inline">D</span> y <code>RES_GRAD</code> en 2025.
+</figcaption>
+</figure>
+</div>
+<p>El ranking interno de cuencas prioritarias de Punta Arenas fue construido combinando <span class="math inline">PT</span>, bajo <code>RES</code> y velocidad alta. La mayoría de los casos priorizados están en <code>Zona_Apta</code>, lo que los vuelve especialmente útiles para validación territorial porque combinan señal crítica y factibilidad de revisión.</p>
+<div id="tbl-punta-arenas-prioritarias" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-punta-arenas-prioritarias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10.7: Diez cuencas prioritarias de Punta Arenas según score crítico 2025.
+</figcaption>
+<div aria-describedby="tbl-punta-arenas-prioritarias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Prioridad</th>
+<th style="text-align: right;">RID</th>
+<th style="text-align: right;"><code>RES</code></th>
+<th style="text-align: right;"><span class="math inline">PT</span></th>
+<th style="text-align: right;"><span class="math inline">D</span></th>
+<th style="text-align: right;"><span class="math inline">V</span></th>
+<th style="text-align: right;"><span class="math inline">SENS</span></th>
+<th style="text-align: right;"><span class="math inline">D_{local}</span></th>
+<th><code>RES_TYPE</code></th>
+<th>Zona</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1175</td>
+<td style="text-align: right;">0,0002</td>
+<td style="text-align: right;">5.743,09</td>
+<td style="text-align: right;">1,68</td>
+<td style="text-align: right;">1,27</td>
+<td style="text-align: right;">0,82</td>
+<td style="text-align: right;">1.656,77</td>
+<td>Degradacion_Activa</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2257</td>
+<td style="text-align: right;">0,0000</td>
+<td style="text-align: right;">27.953,16</td>
+<td style="text-align: right;">1,08</td>
+<td style="text-align: right;">-1,07</td>
+<td style="text-align: right;">11,86</td>
+<td style="text-align: right;">1.950,39</td>
+<td>Recuperacion_Ecologica</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">203</td>
+<td style="text-align: right;">0,0001</td>
+<td style="text-align: right;">15.552,58</td>
+<td style="text-align: right;">1,51</td>
+<td style="text-align: right;">1,03</td>
+<td style="text-align: right;">22,40</td>
+<td style="text-align: right;">430,90</td>
+<td>Degradacion_Activa</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1265</td>
+<td style="text-align: right;">0,0004</td>
+<td style="text-align: right;">2.317,18</td>
+<td style="text-align: right;">2,29</td>
+<td style="text-align: right;">1,58</td>
+<td style="text-align: right;">8,19</td>
+<td style="text-align: right;">83,13</td>
+<td>Degradacion_Activa</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1493</td>
+<td style="text-align: right;">0,0005</td>
+<td style="text-align: right;">2.047,66</td>
+<td style="text-align: right;">4,62</td>
+<td style="text-align: right;">4,23</td>
+<td style="text-align: right;">0,97</td>
+<td style="text-align: right;">83,91</td>
+<td>Degradacion_Activa</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">301</td>
+<td style="text-align: right;">0,0002</td>
+<td style="text-align: right;">4.077,71</td>
+<td style="text-align: right;">1,19</td>
+<td style="text-align: right;">-1,12</td>
+<td style="text-align: right;">17,57</td>
+<td style="text-align: right;">171,69</td>
+<td>Recuperacion_Ecologica</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2265</td>
+<td style="text-align: right;">0,0005</td>
+<td style="text-align: right;">2.205,63</td>
+<td style="text-align: right;">1,32</td>
+<td style="text-align: right;">-1,29</td>
+<td style="text-align: right;">7,82</td>
+<td style="text-align: right;">163,12</td>
+<td>Recuperacion_Ecologica</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">255</td>
+<td style="text-align: right;">0,0003</td>
+<td style="text-align: right;">3.978,27</td>
+<td style="text-align: right;">0,50</td>
+<td style="text-align: right;">-1,10</td>
+<td style="text-align: right;">12,58</td>
+<td style="text-align: right;">552,98</td>
+<td>Resiliencia_Estable</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">452</td>
+<td style="text-align: right;">0,0005</td>
+<td style="text-align: right;">2.164,00</td>
+<td style="text-align: right;">1,63</td>
+<td style="text-align: right;">1,23</td>
+<td style="text-align: right;">10,87</td>
+<td style="text-align: right;">98,45</td>
+<td>Degradacion_Activa</td>
+<td>Zona_Apta</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">0,0004</td>
+<td style="text-align: right;">2.772,57</td>
+<td style="text-align: right;">1,70</td>
+<td style="text-align: right;">1,13</td>
+<td style="text-align: right;">3,52</td>
+<td style="text-align: right;">337,98</td>
+<td>Degradacion_Activa</td>
+<td>Zona_Apta</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-punta-arenas-series-resultados" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-punta-arenas-series-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/resultados/punta_arenas_series_prioritarias.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-punta-arenas-series-resultados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.7: Series temporales de cuencas prioritarias de Punta Arenas.
+</figcaption>
+</figure>
+</div>
+<p>La tabla muestra que no todas las cuencas críticas tienen la misma trayectoria. Algunas están clasificadas como <code>Degradacion_Activa</code>, con velocidad positiva y alejamiento del dominio. Otras aparecen como <code>Recuperacion_Ecologica</code>, con velocidad negativa, lo que sugiere retorno relativo aunque mantengan baja resiliencia operativa. Este contraste es clave para terreno: la validación no debe buscar sólo deterioro, sino también casos donde la matriz detecta recuperación o reversión.</p>
+</section>
+<section id="sec-sintesis-resultados" class="level2 page-columns page-full" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="sec-sintesis-resultados"><span class="header-section-number">10.7</span> Síntesis de hallazgos</h2>
+<p>Los resultados de 2025 permiten ordenar cinco hallazgos principales.</p>
+<p>Primero, la región presenta una distribución polarizada. La mediana de <code>RES</code> es baja, pero existe una proporción relevante de cuencas con alta resiliencia. Esto obliga a leer el territorio con percentiles, mapas y tipologías, no sólo con promedios.</p>
+<p>Segundo, el <span class="math inline">PT</span> es altamente asimétrico. Un grupo pequeño de cuencas concentra valores extremos, por lo que la escala logarítmica es necesaria para visualización, pero las decisiones deben revisar los valores originales.</p>
+<p>Tercero, la comparación comunal distingue tres grupos: comunas con baja mediana de resiliencia, como Río Verde, Torres del Paine y Puerto Natales; comunas con resiliencia alta dominante, como Laguna Blanca, Porvenir, Primavera y San Gregorio; y comunas polarizadas, como Punta Arenas y Timaukel.</p>
+<p>Cuarto, Punta Arenas requiere una lectura interna. Su mediana comunal es relativamente alta, pero casi la mitad de sus cuencas aparece en <code>Colapso_Potencial</code>. La selección de cuencas prioritarias muestra casos tanto de degradación activa como de recuperación ecológica.</p>
+<p>Quinto, la MRCT funciona mejor como sistema de preguntas que como sentencia única. Los resultados permiten priorizar dónde mirar, qué cuencas revisar, qué trayectorias contrastar y qué hipótesis llevar a validación territorial.</p>
+<div id="fig-sintesis-resultados-mrct" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-sintesis-resultados-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/resultados/sintesis_resultados_mrct_2025.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-sintesis-resultados-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.8: Síntesis visual de resultados MRCT 2025 para la Región de Magallanes.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-preguntas-validacion-resultados" class="level2" data-number="10.8">
+<h2 data-number="10.8" class="anchored" data-anchor-id="sec-preguntas-validacion-resultados"><span class="header-section-number">10.8</span> Preguntas para validación territorial</h2>
+<p>A partir de estos resultados, se proponen cinco preguntas para trabajo posterior:</p>
+<ul>
+<li>¿las cuencas en <code>Colapso_Potencial</code> coinciden con áreas de alta presión antrópica o con condiciones ecosistémicas particulares?;</li>
+<li>¿los años con mayor jerk corresponden a eventos climáticos, hidrológicos o de cobertura documentados?;</li>
+<li>¿las cuencas prioritarias de Punta Arenas son urbanas, periurbanas o rurales, y qué tan factible es visitarlas?;</li>
+<li>¿la sensibilidad climática <span class="math inline">SENS</span> refleja gradientes regionales de aridez, albedo o temperatura de brillo?;</li>
+<li>¿los gradientes de <code>RES_GRAD</code> identifican discontinuidades espaciales que puedan validarse con observación de terreno?</li>
+</ul>
+</section>
+<section id="sec-notas-resultados" class="level2" data-number="10.9">
+<h2 data-number="10.9" class="anchored" data-anchor-id="sec-notas-resultados"><span class="header-section-number">10.9</span> Notas metodológicas</h2>
+<p>La MRCT opera sobre cuencas hidrográficas, no sobre límites administrativos. La agregación comunal usa la asignación <code>CUT_COM</code> disponible en la capa espacial, por lo que las comunas con muchas cuencas pequeñas pueden mostrar mayor varianza interna que comunas con pocas cuencas grandes.</p>
+<p>El <span class="math inline">PT</span> tiene una distribución muy asimétrica. Para visualizaciones se usa <code>log1p(PT)</code>, pero las tablas mantienen los valores originales. Las cuencas con <span class="math inline">PT = 0</span> corresponden a casos donde <span class="math inline">D</span>, <span class="math inline">V</span>, <span class="math inline">SENS</span> y <span class="math inline">D_{local}</span> no amplifican presión de transición bajo la configuración del modelo.</p>
+<p>La línea base del dominio corresponde al período <strong>2013-2022</strong>. Los años <strong>2023-2025</strong> son años de evaluación posterior respecto de esa referencia. Un aumento de <span class="math inline">D</span> indica alejamiento del régimen de referencia, pero no prueba por sí solo causalidad ecológica.</p>
+<p>Finalmente, <code>RES_STATE</code> indica nivel de resiliencia operativa, mientras <code>RES_TYPE</code>, <span class="math inline">V</span>, <span class="math inline">A</span> y <span class="math inline">J</span> ayudan a leer trayectoria. La interpretación territorial debe integrar ambas dimensiones antes de definir prioridades de monitoreo, validación o gestión.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./pt_resiliencia.html" class="pagination-link" aria-label="Potencial de Transición y Resiliencia">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Potencial de Transición y Resiliencia</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./conclusiones.html" class="pagination-link" aria-label="Conclusiones">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conclusiones</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2026, <a href="https://cit.uai.cl/">Centro de Inteligencia Territorial</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
