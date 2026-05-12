@@ -8,6 +8,10 @@ El proceso de cálculo opera sobre un área filtrada. No todos los píxeles de u
 
 Los indicadores se organizan en tres grupos: **vegetación y energía**, **agua, humedad y criósfera**, y **estructura del paisaje**. Cada grupo captura una dimensión diferente del estado ecosistémico de la unidad territorial.
 
+La forma más útil de leer estos indicadores no es como valores aislados, sino como series temporales por cuenca. La misma unidad territorial puede mostrar estabilidad en vegetación, pulsos hídricos, variación nival o cambios térmicos abruptos. Esa lectura longitudinal es la que luego alimenta el vector de estado y las derivadas temporales.
+
+![Ejemplo de series temporales de indicadores anuales para cuencas seleccionadas. Elaboración propia.](images/metodologia/series_indicadores_base.png){#fig-series-indicadores-base fig-align="center" width="100%"}
+
 ```{mermaid}
 flowchart LR
     A[Capas satelitales<br/>anuales] --> B[Índices<br/>espectrales]

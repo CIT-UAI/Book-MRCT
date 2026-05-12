@@ -65,6 +65,8 @@ El flujo MRCT trabaja con un raster de cuencas alineado (`basins_aligned.tif`). 
 
 La grilla de cuencas actúa como referencia espacial del modelo. Todas las capas anuales se alinean a esa geometría para asegurar que cada píxel de NDVI, NDWI, NDSI, NDDI, albedo o temperatura de brillo corresponda exactamente a la misma unidad territorial. Sin esta condición, la comparación entre capas podría mezclar píxeles de cuencas distintas o introducir errores de borde.
 
+![Grilla raster de cuencas usada para asignar cada píxel a un `RID` y capa de huella antrópica normalizada entre 0 y 1. Elaboración propia.](images/metodologia/grilla_cuencas_huella_antropica.png){#fig-grilla-huella-antropica fig-align="center" width="100%"}
+
 ```{mermaid}
 flowchart LR
     A[Cuencas CIT<br/>con atributos DGA] --> B[Raster de cuencas<br/>basins_aligned.tif]

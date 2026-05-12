@@ -41,6 +41,8 @@ $$J_t = A_t - A_{t-1}$$
 
 Detecta cambios bruscos en el régimen dinámico: transiciones rápidas, reversiones súbitas o señales de reorganización estructural que no serían visibles solo con $V$ y $A$.
 
+![Ejemplo de lectura temporal del dominio: distancia al dominio, velocidad y aceleración para cuencas seleccionadas. Elaboración propia.](images/metodologia/dinamica_temporal_domain.png){#fig-dinamica-temporal-domain fig-align="center" width="100%"}
+
 ## Tipología dinámica {#sec-tipologia}
 
 Las tres derivadas se combinan para asignar a cada cuenca-año un **estado dinámico** y etiquetas semánticas por variable.

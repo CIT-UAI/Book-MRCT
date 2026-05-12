@@ -77,6 +77,8 @@ donde $d$ es el número de variables estructurales incluidas. La normalización 
 
 $D = 0$ corresponde a una observación idéntica a la media de referencia. Valores crecientes indican mayor alejamiento del régimen ecosistémico de la línea base. Esta distancia es el insumo directo de las etapas de dinámica temporal que siguen.
 
+![Distribución anual de la distancia al dominio y ejemplos de series temporales por cuenca. El área sombreada indica el período de línea base 2013-2022. Elaboración propia.](images/metodologia/distribucion_domain_series.png){#fig-distribucion-domain-series fig-align="center" width="100%"}
+
 ::: {.callout-note}
 ## En términos simples
 
