@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [book-mrct] recent context, 2026-05-12 11:52am GMT-4
+# [book-mrct] recent context, 2026-05-12 3:04pm GMT-4
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 29 obs (13,780t read) | 449,009t work | 97% savings
+Stats: 37 obs (17,907t read) | 575,360t work | 97% savings
 
 ### May 5, 2026
 70 6:07p ⚖️ MRCT Digital Book — intro.qmd Editorial Revision Requested
@@ -41,6 +41,15 @@ Stats: 29 obs (13,780t read) | 449,009t work | 97% savings
 131 " 🔵 jerk.qmd Confirmed as Nearly Empty — Only YAML Frontmatter Present
 132 " 🔵 MRCT Notebook Jerk Variable — Panel Structure and Watershed Count Confirmed
 134 12:59p 🟣 jerk.qmd — Full Chapter Written: 10-Stage Workflow for Priority Watershed Selection via Jerk Analysis
+### May 12, 2026
+187 11:53a ⚖️ MRCT Digital Book — trabajo_terreno.qmd Field Work Section Header Planned
+188 11:56a ⚖️ MRCT Digital Book — trabajo_terreno.qmd Section Header Planned
+190 " 🟣 MRCT Digital Book — trabajo_terreno.qmd Full Section Header Authored
+191 " 🔵 Quarto Render Fails in book-mrct — Architecture Detection Error
+192 12:47p ⚖️ MRCT Digital Book — trabajo_terreno.qmd Full Fieldwork Planning Scope Confirmed
+194 " 🔵 jerk.qmd — Full Chapter Structure and Content Confirmed (620 lines)
+195 12:48p 🔵 MRCT_Cuencas_Prioritarias_Jerk.ipynb — Fully Executed; 10 Priority Basins Identified
+196 " 🔵 MRCT Jerk Notebook — Cercano Ring Candidates and Buffer Sensitivity Confirmed
 
-Access 449k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 575k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>

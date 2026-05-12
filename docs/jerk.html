@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; Selección de Cuencas Prioritarias – Guía Técnica MRCT</title>
+<title>12&nbsp; Selección de Cuencas – Guía Técnica MRCT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,9 +69,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -155,7 +117,7 @@ window.Quarto = {
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -164,7 +126,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./jerk.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas Prioritarias</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./jerk.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -273,7 +235,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./jerk.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas Prioritarias</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></span></a>
   </div>
 </li>
       </ul>
@@ -301,41 +263,29 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-pregunta-jerk-terreno" id="toc-sec-pregunta-jerk-terreno" class="nav-link active" data-scroll-target="#sec-pregunta-jerk-terreno"><span class="header-section-number">12.1</span> Pregunta de trabajo</a></li>
-  <li><a href="#sec-criterio-jerk" id="toc-sec-criterio-jerk" class="nav-link" data-scroll-target="#sec-criterio-jerk"><span class="header-section-number">12.2</span> Criterio metodológico: por qué jerk</a></li>
-  <li><a href="#sec-flujo-jerk-terreno" id="toc-sec-flujo-jerk-terreno" class="nav-link" data-scroll-target="#sec-flujo-jerk-terreno"><span class="header-section-number">12.3</span> Flujo general de trabajo</a></li>
-  <li><a href="#sec-inventario-insumos-jerk" id="toc-sec-inventario-insumos-jerk" class="nav-link" data-scroll-target="#sec-inventario-insumos-jerk"><span class="header-section-number">12.4</span> Etapa 1: inventario de insumos</a></li>
-  <li><a href="#sec-base-datos-jerk" id="toc-sec-base-datos-jerk" class="nav-link" data-scroll-target="#sec-base-datos-jerk"><span class="header-section-number">12.5</span> Etapa 2: selección de base de datos</a>
-  <ul class="collapse">
-  <li><a href="#alternativas-evaluadas" id="toc-alternativas-evaluadas" class="nav-link" data-scroll-target="#alternativas-evaluadas"><span class="header-section-number">12.5.1</span> Alternativas evaluadas</a></li>
-  <li><a href="#decisión-propuesta" id="toc-decisión-propuesta" class="nav-link" data-scroll-target="#decisión-propuesta"><span class="header-section-number">12.5.2</span> Decisión propuesta</a></li>
-  </ul></li>
-  <li><a href="#sec-modelo-datos-jerk" id="toc-sec-modelo-datos-jerk" class="nav-link" data-scroll-target="#sec-modelo-datos-jerk"><span class="header-section-number">12.6</span> Etapa 3: modelo de datos propuesto</a></li>
-  <li><a href="#sec-panel-consultable-jerk" id="toc-sec-panel-consultable-jerk" class="nav-link" data-scroll-target="#sec-panel-consultable-jerk"><span class="header-section-number">12.7</span> Etapa 4: preparación del panel consultable</a></li>
-  <li><a href="#sec-consultas-jerk" id="toc-sec-consultas-jerk" class="nav-link" data-scroll-target="#sec-consultas-jerk"><span class="header-section-number">12.8</span> Etapa 5: sistema de consultas</a>
-  <ul class="collapse">
-  <li><a href="#criterios-de-eficiencia" id="toc-criterios-de-eficiencia" class="nav-link" data-scroll-target="#criterios-de-eficiencia"><span class="header-section-number">12.8.1</span> Criterios de eficiencia</a></li>
-  </ul></li>
-  <li><a href="#sec-evento-abrupto-jerk" id="toc-sec-evento-abrupto-jerk" class="nav-link" data-scroll-target="#sec-evento-abrupto-jerk"><span class="header-section-number">12.9</span> Etapa 6: definición de evento abrupto</a></li>
-  <li><a href="#sec-priorizacion-jerk" id="toc-sec-priorizacion-jerk" class="nav-link" data-scroll-target="#sec-priorizacion-jerk"><span class="header-section-number">12.10</span> Etapa 7: criterios de priorización</a></li>
-  <li><a href="#sec-punta-arenas-jerk" id="toc-sec-punta-arenas-jerk" class="nav-link" data-scroll-target="#sec-punta-arenas-jerk"><span class="header-section-number">12.11</span> Etapa 8: restricción logística Punta Arenas</a></li>
-  <li><a href="#sec-diez-cuencas-jerk" id="toc-sec-diez-cuencas-jerk" class="nav-link" data-scroll-target="#sec-diez-cuencas-jerk"><span class="header-section-number">12.12</span> Etapa 9: selección de diez cuencas prioritarias</a></li>
-  <li><a href="#sec-fichas-cuenca-jerk" id="toc-sec-fichas-cuenca-jerk" class="nav-link" data-scroll-target="#sec-fichas-cuenca-jerk"><span class="header-section-number">12.13</span> Etapa 10: fichas por cuenca</a></li>
-  <li><a href="#sec-sql-jerk" id="toc-sec-sql-jerk" class="nav-link" data-scroll-target="#sec-sql-jerk"><span class="header-section-number">12.14</span> Consultas SQL orientativas</a></li>
-  <li><a href="#sec-productos-libro-jerk" id="toc-sec-productos-libro-jerk" class="nav-link" data-scroll-target="#sec-productos-libro-jerk"><span class="header-section-number">12.15</span> Productos para el libro digital</a></li>
-  <li><a href="#sec-diagrama-jerk-terreno" id="toc-sec-diagrama-jerk-terreno" class="nav-link" data-scroll-target="#sec-diagrama-jerk-terreno"><span class="header-section-number">12.16</span> Diagrama del flujo operativo</a></li>
-  <li><a href="#sec-criterios-aceptacion-jerk" id="toc-sec-criterios-aceptacion-jerk" class="nav-link" data-scroll-target="#sec-criterios-aceptacion-jerk"><span class="header-section-number">12.17</span> Criterios de aceptación para el equipo</a></li>
-  <li><a href="#sec-riesgos-controles-jerk" id="toc-sec-riesgos-controles-jerk" class="nav-link" data-scroll-target="#sec-riesgos-controles-jerk"><span class="header-section-number">12.18</span> Riesgos y controles</a></li>
-  <li><a href="#sec-cierre-jerk" id="toc-sec-cierre-jerk" class="nav-link" data-scroll-target="#sec-cierre-jerk"><span class="header-section-number">12.19</span> Cierre operativo</a></li>
+  <li><a href="#sec-criterio-jerk" id="toc-sec-criterio-jerk" class="nav-link" data-scroll-target="#sec-criterio-jerk"><span class="header-section-number">12.2</span> Qué mide el jerk</a></li>
+  <li><a href="#sec-insumos-jerk" id="toc-sec-insumos-jerk" class="nav-link" data-scroll-target="#sec-insumos-jerk"><span class="header-section-number">12.3</span> Insumos analizados</a></li>
+  <li><a href="#sec-estructura-datos-jerk" id="toc-sec-estructura-datos-jerk" class="nav-link" data-scroll-target="#sec-estructura-datos-jerk"><span class="header-section-number">12.4</span> Estructura de datos para consulta posterior</a></li>
+  <li><a href="#sec-control-calidad-jerk" id="toc-sec-control-calidad-jerk" class="nav-link" data-scroll-target="#sec-control-calidad-jerk"><span class="header-section-number">12.5</span> Control de calidad y cobertura</a></li>
+  <li><a href="#sec-eventos-jerk" id="toc-sec-eventos-jerk" class="nav-link" data-scroll-target="#sec-eventos-jerk"><span class="header-section-number">12.6</span> Eventos de jerk</a></li>
+  <li><a href="#sec-cruce-territorial-jerk" id="toc-sec-cruce-territorial-jerk" class="nav-link" data-scroll-target="#sec-cruce-territorial-jerk"><span class="header-section-number">12.7</span> Cruce territorial y accesibilidad preliminar</a></li>
+  <li><a href="#sec-puntaje-jerk" id="toc-sec-puntaje-jerk" class="nav-link" data-scroll-target="#sec-puntaje-jerk"><span class="header-section-number">12.8</span> Puntaje de priorización</a></li>
+  <li><a href="#sec-diez-cuencas-jerk" id="toc-sec-diez-cuencas-jerk" class="nav-link" data-scroll-target="#sec-diez-cuencas-jerk"><span class="header-section-number">12.9</span> Diez cuencas candidatas</a></li>
+  <li><a href="#sec-series-temporales-jerk" id="toc-sec-series-temporales-jerk" class="nav-link" data-scroll-target="#sec-series-temporales-jerk"><span class="header-section-number">12.10</span> Lectura de series temporales</a></li>
+  <li><a href="#sec-uso-terreno-jerk" id="toc-sec-uso-terreno-jerk" class="nav-link" data-scroll-target="#sec-uso-terreno-jerk"><span class="header-section-number">12.11</span> Cómo usar esta selección en la planificación de terreno</a></li>
+  <li><a href="#sec-fichas-jerk" id="toc-sec-fichas-jerk" class="nav-link" data-scroll-target="#sec-fichas-jerk"><span class="header-section-number">12.12</span> Fichas de terreno derivadas</a></li>
+  <li><a href="#sec-limitaciones-jerk" id="toc-sec-limitaciones-jerk" class="nav-link" data-scroll-target="#sec-limitaciones-jerk"><span class="header-section-number">12.13</span> Limitaciones</a></li>
+  <li><a href="#sec-cierre-jerk" id="toc-sec-cierre-jerk" class="nav-link" data-scroll-target="#sec-cierre-jerk"><span class="header-section-number">12.14</span> Cierre operativo</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./jerk.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas Prioritarias</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./jerk.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas Prioritarias</span></h1>
-<p class="subtitle lead">Plan de trabajo para identificar cuencas mediante análisis de jerk y validar en terreno</p>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></h1>
+<p class="subtitle lead">Aproximación para orientar el trabajo de terreno mediante análisis de jerk</p>
 </div>
 
 
@@ -352,400 +302,52 @@ window.Quarto = {
 </header>
 
 
-<p>Este capítulo define una planificación de trabajo para seleccionar cuencas prioritarias de validación en terreno a partir del análisis de <strong>jerk</strong> de la Matriz de Resiliencia Climática Territorial. Su función es conectar el hipercubo espacio-temporal generado por la MRCT con un sistema de consultas reproducible, capaz de identificar cambios abruptos en el tiempo y transformar esas señales en una lista concreta de cuencas visitables.</p>
-<p>La planificación está orientada al equipo de análisis espacial y desarrollo. El resultado esperado no es solo un mapa final, sino una base de datos estructurada, un conjunto de consultas documentadas, criterios de selección transparentes y una tabla priorizada de diez cuencas candidatas para mediciones y validación en la Región de Magallanes y de la Antártica Chilena.</p>
-<p>El flujo toma como referencia el notebook <code>jupyter-notebook/MRCT_Tutorial_Academico.ipynb</code>, donde se construyen el hipercubo tensorial, el panel <code>RID × Year</code> y las variables de trayectoria temporal: velocidad, aceleración y jerk.</p>
+<p>Este capítulo presenta una primera selección de cuencas candidatas para trabajo de terreno a partir del análisis de <strong>jerk</strong> de la Matriz de Resiliencia Climática Territorial. El objetivo no es cerrar una decisión definitiva de campaña, sino construir una lista técnicamente trazable de sitios que merecen revisión con mayor detalle, conversación con actores locales y evaluación logística.</p>
+<p>El flujo de análisis procesó el panel MRCT 2013-2025, materializó una base analítica para consultas posteriores y generó mapas, rankings y series temporales para identificar cuencas con cambios abruptos en su trayectoria ecosistémica durante 2020-2025.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Objetivo operativo
+Alcance de la selección
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Seleccionar cuencas con cambios abruptos detectados por jerk, cruzarlas con criterios de accesibilidad y cercanía a Punta Arenas, y preparar una lista priorizada para trabajo de terreno con trazabilidad completa entre datos, consulta, año crítico y razón de selección.</p>
+<p>La lista de cuencas prioritarias es una <strong>preselección técnica</strong>. Antes de transformarla en itinerario de terreno debe revisarse con análisis espacial detallado, accesos reales, permisos, clima, seguridad, conocimiento local y reunión con personas o instituciones del territorio.</p>
 </div>
 </div>
 <section id="sec-pregunta-jerk-terreno" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="sec-pregunta-jerk-terreno"><span class="header-section-number">12.1</span> Pregunta de trabajo</h2>
-<p>La pregunta principal para el equipo es:</p>
+<p>La pregunta que orienta este análisis es:</p>
 <blockquote class="blockquote">
-<p>¿Qué cuencas muestran cambios abruptos en su trayectoria ecosistémica, en qué años ocurren esos cambios y cuáles de ellas son viables para medición y validación en terreno dentro de las restricciones logísticas del estudio?</p>
+<p>¿Qué cuencas muestran cambios abruptos recientes en su trayectoria ecosistémica y cuáles de ellas pueden convertirse en candidatas razonables para observación, medición y validación en terreno?</p>
 </blockquote>
-<p>Esta pregunta se descompone en cinco preguntas técnicas:</p>
+<p>La pregunta se separa en cuatro componentes:</p>
 <ul>
-<li>¿cómo almacenar el hipercubo y el panel MRCT para hacer consultas espacio-temporales eficientes?;</li>
-<li>¿qué base de datos conviene usar para combinar métricas temporales, geometrías de cuencas, comunas, accesibilidad y cercanía a Punta Arenas?;</li>
-<li>¿cómo definir una señal de jerk suficientemente robusta para evitar seleccionar ruido?;</li>
-<li>¿cómo priorizar cuencas considerando magnitud del cambio, recurrencia temporal, relevancia territorial y factibilidad de visita?;</li>
-<li>¿cómo documentar una tabla final de diez cuencas con año crítico, magnitud del cambio y razón de prioridad?</li>
+<li>Identificar eventos abruptos medidos por jerk en la ventana 2020-2025;</li>
+<li>Distinguir entre intensificación y reversión de la trayectoria;</li>
+<li>Cruzar esos eventos con resiliencia, sensibilidad, contexto territorial y distancia a Punta Arenas;</li>
+<li>Producir una base consultable que permita ajustar la selección cuando se incorporen criterios logísticos o conocimiento local.</li>
 </ul>
 </section>
 <section id="sec-criterio-jerk" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="sec-criterio-jerk"><span class="header-section-number">12.2</span> Criterio metodológico: por qué jerk</h2>
-<p>El jerk <span class="math inline">J</span> mide el cambio de la aceleración de la distancia al dominio:</p>
-<p><span class="math display">
-J_t = A_t - A_{t-1}
-</span></p>
-<p>Dentro de la MRCT, <span class="math inline">D</span> indica la posición de una cuenca respecto de su línea base, <span class="math inline">V</span> describe si se acerca o se aleja de esa referencia, <span class="math inline">A</span> indica si ese movimiento se intensifica o se amortigua, y <span class="math inline">J</span> permite detectar cambios abruptos en el régimen dinámico.</p>
-<p>Para trabajo de terreno, el jerk es útil porque ayuda a encontrar cuencas donde ocurrió una discontinuidad temporal. Una cuenca puede no tener el peor valor de resiliencia regional, pero sí mostrar un quiebre repentino que merece revisión. Ese quiebre puede estar asociado a cambios climáticos, variación nival, incendios, inundaciones, sequías, cambios de cobertura, eventos extremos, errores de observación o cambios metodológicos en los insumos. Por eso el análisis de jerk no reemplaza la validación: la orienta.</p>
-<p>La selección debe evitar una lectura mecánica. Un <span class="math inline">J</span> alto no prueba degradación, desastre ni transición irreversible. Indica que la trayectoria cambió bruscamente y que conviene revisar el caso con datos complementarios, imágenes, contexto territorial y terreno.</p>
-</section>
-<section id="sec-flujo-jerk-terreno" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="sec-flujo-jerk-terreno"><span class="header-section-number">12.3</span> Flujo general de trabajo</h2>
-<p>El desarrollo debería organizarse en diez etapas.</p>
-<div id="tbl-flujo-jerk-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-flujo-jerk-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.1: Flujo de trabajo para seleccionar cuencas prioritarias mediante análisis de jerk.
-</figcaption>
-<div aria-describedby="tbl-flujo-jerk-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Etapa</th>
-<th>Propósito</th>
-<th>Producto técnico</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1. Inventario de insumos</td>
-<td>Identificar tablas, rasters, geometrías y variables disponibles.</td>
-<td>Diccionario de datos MRCT y rutas de archivos.</td>
-</tr>
-<tr class="even">
-<td>2. Selección de base de datos</td>
-<td>Definir tecnología para consultas espacio-temporales.</td>
-<td>Decisión técnica documentada y esquema inicial.</td>
-</tr>
-<tr class="odd">
-<td>3. Construcción del modelo de datos</td>
-<td>Convertir hipercubo y panel en tablas consultables por <code>RID</code> y <code>Year</code>.</td>
-<td>Base estructurada con índices, geometrías y métricas.</td>
-</tr>
-<tr class="even">
-<td>4. Control de calidad</td>
-<td>Detectar faltantes, duplicados, años incompletos y valores extremos.</td>
-<td>Reporte de completitud y filtros aplicados.</td>
-</tr>
-<tr class="odd">
-<td>5. Consultas de jerk</td>
-<td>Calcular magnitud, signo, percentiles y ranking de eventos abruptos.</td>
-<td>Tabla de eventos <code>RID × Year</code> con métricas de jerk.</td>
-</tr>
-<tr class="even">
-<td>6. Cruce territorial</td>
-<td>Incorporar comuna, provincia, superficie, accesibilidad y cercanía urbana.</td>
-<td>Tabla enriquecida para priorización logística.</td>
-</tr>
-<tr class="odd">
-<td>7. Priorización regional</td>
-<td>Seleccionar cuencas con mayor señal de cambio abrupto.</td>
-<td>Ranking regional de cuencas candidatas.</td>
-</tr>
-<tr class="even">
-<td>8. Filtro Punta Arenas</td>
-<td>Asegurar casos cercanos al centro urbano por restricción de desplazamiento.</td>
-<td>Subranking de cuencas del entorno de Punta Arenas.</td>
-</tr>
-<tr class="odd">
-<td>9. Selección final</td>
-<td>Escoger diez cuencas combinando señal MRCT y factibilidad de terreno.</td>
-<td>Tabla final de cuencas prioritarias.</td>
-</tr>
-<tr class="even">
-<td>10. Paquete de terreno</td>
-<td>Preparar mapas, fichas y consultas reproducibles para campaña.</td>
-<td>Fichas por cuenca, mapas y scripts de consulta.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="sec-inventario-insumos-jerk" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="sec-inventario-insumos-jerk"><span class="header-section-number">12.4</span> Etapa 1: inventario de insumos</h2>
-<p>El primer paso es identificar qué datos existen, dónde están almacenados y qué nivel de procesamiento tienen. La selección de cuencas prioritarias no debe comenzar con mapas, sino con una auditoría de datos.</p>
-<p>Los insumos mínimos son:</p>
+<h2 data-number="12.2" class="anchored" data-anchor-id="sec-criterio-jerk"><span class="header-section-number">12.2</span> Qué mide el jerk</h2>
+<p>La MRCT calcula para cada cuenca y año una variable de dominio, <code>Domain</code> o <span class="math inline">D</span>, que representa la distancia de la cuenca respecto de su estado ecosistémico de referencia. A partir de esa trayectoria se calculan derivadas temporales:</p>
 <ul>
-<li>panel MRCT <code>RID × Year</code> generado desde el hipercubo;</li>
-<li>variables estructurales e indicadores base por cuenca y año;</li>
-<li>métricas de trayectoria: <code>Domain</code> o <span class="math inline">D</span>, <code>Velocidad</code>, <code>Aceleracion</code> y <code>Jerk</code>;</li>
-<li>métricas complementarias: <code>Domain_local</code>, <code>SENS</code>, <code>PT</code>, <code>RES</code>, <code>RES_STATE</code>, <code>RES_TYPE</code> y <code>RES_GRAD</code>;</li>
-<li>geometría de cuencas con campo <code>RID</code>;</li>
-<li>límites comunales y regionales;</li>
-<li>capa de caminos, huella urbana o puntos de acceso si está disponible;</li>
-<li>ubicación del centro urbano de Punta Arenas;</li>
-<li>atributos de superficie, provincia, comuna y pertenencia territorial.</li>
+<li><span class="math inline">D</span>: distancia al régimen de referencia;</li>
+<li><span class="math inline">V</span>: velocidad de cambio de esa distancia;</li>
+<li><span class="math inline">A</span>: aceleración del cambio;</li>
+<li><span class="math inline">J</span>: cambio de la aceleración, o jerk.</li>
 </ul>
-<p>El equipo debe generar un diccionario de datos con nombre de variable, tipo, unidad, escala temporal, fuente, regla de cálculo, porcentaje de completitud y uso previsto dentro del ranking.</p>
-</section>
-<section id="sec-base-datos-jerk" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="sec-base-datos-jerk"><span class="header-section-number">12.5</span> Etapa 2: selección de base de datos</h2>
-<p>La base de datos debe permitir consultas sobre tres dimensiones: cuenca, tiempo y espacio. Además, debe ser fácil de reproducir desde el notebook MRCT y suficientemente liviana para análisis exploratorio.</p>
-<section id="alternativas-evaluadas" class="level3" data-number="12.5.1">
-<h3 data-number="12.5.1" class="anchored" data-anchor-id="alternativas-evaluadas"><span class="header-section-number">12.5.1</span> Alternativas evaluadas</h3>
-<div id="tbl-bases-datos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>En términos operativos, el jerk identifica una ruptura en la dinámica. Un valor alto en magnitud indica que la cuenca experimentó un salto abrupto en su trayectoria, aunque ese salto no debe interpretarse automáticamente como degradación, recuperación o causalidad comprobada.</p>
+<p>El signo entrega una primera lectura:</p>
+<div id="tbl-signo-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bases-datos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.2: Alternativas de almacenamiento y consulta para el análisis de jerk.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-signo-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.1: Lectura básica del signo del jerk para selección de cuencas.
 </figcaption>
-<div aria-describedby="tbl-bases-datos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Alternativa</th>
-<th>Ventajas</th>
-<th>Limitaciones</th>
-<th>Uso recomendado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Archivos Parquet + GeoParquet</td>
-<td>Rápidos, portables, eficientes para paneles grandes, fáciles de versionar.</td>
-<td>No son por sí solos un motor de consultas espaciales complejo.</td>
-<td>Almacenamiento base e intercambio de datos.</td>
-</tr>
-<tr class="even">
-<td>DuckDB + extensión espacial</td>
-<td>Consulta SQL directa sobre Parquet/GeoParquet, rápido, local, reproducible, sin servidor.</td>
-<td>Menos robusto que PostGIS para operaciones espaciales multiusuario o muy complejas.</td>
-<td>Opción recomendada para esta etapa.</td>
-</tr>
-<tr class="odd">
-<td>PostGIS</td>
-<td>Excelente para análisis espacial avanzado, índices espaciales maduros, multiusuario.</td>
-<td>Requiere servidor, administración, carga de datos y más infraestructura.</td>
-<td>Opción futura si el flujo pasa a producción institucional.</td>
-</tr>
-<tr class="even">
-<td>SQLite/GeoPackage</td>
-<td>Simple, portable, ampliamente compatible con SIG.</td>
-<td>Menor rendimiento para consultas analíticas grandes y series temporales extensas.</td>
-<td>Entrega de productos o intercambio SIG.</td>
-</tr>
-<tr class="odd">
-<td>Dataframes en Python/R</td>
-<td>Muy flexibles para exploración y gráficos.</td>
-<td>Menor trazabilidad como sistema de consultas persistente.</td>
-<td>Prototipado y análisis posterior.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="decisión-propuesta" class="level3" data-number="12.5.2">
-<h3 data-number="12.5.2" class="anchored" data-anchor-id="decisión-propuesta"><span class="header-section-number">12.5.2</span> Decisión propuesta</h3>
-<p>La recomendación es usar <strong>DuckDB con Parquet/GeoParquet como base analítica local</strong>.</p>
-<p>Esta opción se justifica por cuatro razones. Primero, el flujo MRCT ya produce una tabla longitudinal <code>RID × Year</code>, que calza naturalmente con Parquet. Segundo, DuckDB permite consultar directamente archivos Parquet sin levantar un servidor. Tercero, SQL facilita dejar consultas reproducibles para el equipo y para el libro digital. Cuarto, la extensión espacial de DuckDB permite cruces con geometrías, distancias, intersecciones y agregaciones territoriales suficientes para esta fase.</p>
-<p>PostGIS debe quedar como alternativa de escalamiento si el proyecto necesita edición multiusuario, servicios web, integración con infraestructura institucional o consultas espaciales más pesadas. Para la planificación actual, DuckDB reduce fricción y acelera el paso desde notebook a análisis territorial.</p>
-</section>
-</section>
-<section id="sec-modelo-datos-jerk" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="sec-modelo-datos-jerk"><span class="header-section-number">12.6</span> Etapa 3: modelo de datos propuesto</h2>
-<p>La base debe separar métricas temporales, atributos espaciales y resultados de priorización. Se propone el siguiente esquema mínimo.</p>
-<div id="tbl-modelo-datos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modelo-datos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.3: Esquema mínimo de base de datos para consultas espacio-temporales.
-</figcaption>
-<div aria-describedby="tbl-modelo-datos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tabla</th>
-<th>Llave</th>
-<th>Contenido</th>
-<th>Función</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>mrct_panel</code></td>
-<td><code>RID</code>, <code>Year</code></td>
-<td>Indicadores base y métricas MRCT por cuenca-año.</td>
-<td>Tabla principal de consulta temporal.</td>
-</tr>
-<tr class="even">
-<td><code>basins</code></td>
-<td><code>RID</code></td>
-<td>Geometría, superficie, centroides y atributos hidrográficos.</td>
-<td>Unidad espacial de análisis.</td>
-</tr>
-<tr class="odd">
-<td><code>communes</code></td>
-<td><code>COM_ID</code></td>
-<td>Geometría y nombre de comuna.</td>
-<td>Agregación administrativa.</td>
-</tr>
-<tr class="even">
-<td><code>basin_commune</code></td>
-<td><code>RID</code>, <code>COM_ID</code></td>
-<td>Intersección o asignación principal de cuenca a comuna.</td>
-<td>Cruce entre cuencas y gestión comunal.</td>
-</tr>
-<tr class="odd">
-<td><code>accessibility</code></td>
-<td><code>RID</code></td>
-<td>Distancia a caminos, distancia a Punta Arenas, tiempo estimado si existe.</td>
-<td>Factibilidad logística de terreno.</td>
-</tr>
-<tr class="even">
-<td><code>jerk_events</code></td>
-<td><code>RID</code>, <code>Year</code></td>
-<td>Eventos abruptos detectados, magnitud, signo y ranking.</td>
-<td>Priorización por cambio temporal.</td>
-</tr>
-<tr class="odd">
-<td><code>field_priority</code></td>
-<td><code>RID</code></td>
-<td>Puntaje final, categoría de prioridad y justificación.</td>
-<td>Lista final para campaña.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p>La tabla <code>mrct_panel</code> debe mantener una fila por cuenca y año. La tabla <code>jerk_events</code> no reemplaza al panel; resume los años donde el jerk supera criterios de prioridad. Esto permite consultar tanto la serie completa como los eventos destacados.</p>
-</section>
-<section id="sec-panel-consultable-jerk" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="sec-panel-consultable-jerk"><span class="header-section-number">12.7</span> Etapa 4: preparación del panel consultable</h2>
-<p>El equipo debe transformar la salida del notebook en una estructura estable de consulta.</p>
-<p>Tareas mínimas:</p>
-<ul>
-<li>exportar el panel MRCT completo a Parquet;</li>
-<li>exportar las geometrías de cuencas a GeoParquet;</li>
-<li>normalizar nombres de columnas para evitar ambigüedad entre <code>Domain</code>, <code>D</code>, <code>Domain_local</code>, <code>Jerk</code> y otros nombres equivalentes;</li>
-<li>asegurar tipos de datos correctos: <code>RID</code> entero, <code>Year</code> entero, métricas numéricas, clases como texto;</li>
-<li>verificar que cada combinación <code>RID × Year</code> sea única;</li>
-<li>marcar observaciones con datos incompletos;</li>
-<li>generar columnas auxiliares como <code>abs_jerk</code>, <code>jerk_sign</code>, <code>jerk_rank_year</code>, <code>jerk_percentile_year</code> y <code>jerk_percentile_global</code>;</li>
-<li>registrar el último año disponible y la ventana de análisis.</li>
-</ul>
-<p>La base debe conservar tanto valores crudos como valores estandarizados. Para selección regional, conviene usar percentiles o <em>z</em>-scores robustos por año, porque el jerk puede tener distribuciones distintas entre años.</p>
-</section>
-<section id="sec-consultas-jerk" class="level2" data-number="12.8">
-<h2 data-number="12.8" class="anchored" data-anchor-id="sec-consultas-jerk"><span class="header-section-number">12.8</span> Etapa 5: sistema de consultas</h2>
-<p>El sistema de consultas debe permitir responder preguntas directas sin reejecutar todo el notebook. Se propone construir consultas SQL parametrizadas y funciones auxiliares en Python o R.</p>
-<p>Consultas mínimas:</p>
-<div id="tbl-consultas-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-consultas-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.4: Consultas mínimas para el sistema de selección de cuencas.
-</figcaption>
-<div aria-describedby="tbl-consultas-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Consulta</th>
-<th>Pregunta que responde</th>
-<th>Salida</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>top_jerk_events</code></td>
-<td>¿Cuáles son los eventos con mayor magnitud de jerk?</td>
-<td><code>RID</code>, <code>Year</code>, <code>Jerk</code>, percentil, comuna y geometría.</td>
-</tr>
-<tr class="even">
-<td><code>top_jerk_by_year</code></td>
-<td>¿Qué cuencas destacan dentro de cada año?</td>
-<td>Ranking anual de eventos abruptos.</td>
-</tr>
-<tr class="odd">
-<td><code>top_jerk_by_commune</code></td>
-<td>¿Qué comunas concentran eventos abruptos?</td>
-<td>Resumen comunal y lista de cuencas.</td>
-</tr>
-<tr class="even">
-<td><code>near_punta_arenas</code></td>
-<td>¿Qué cuencas prioritarias están cerca del centro urbano?</td>
-<td>Candidatas logísticamente viables.</td>
-</tr>
-<tr class="odd">
-<td><code>jerk_with_resilience</code></td>
-<td>¿El cambio abrupto coincide con baja resiliencia o alto PT?</td>
-<td>Tabla cruzada con <code>RES</code>, <code>PT</code>, <code>RES_TYPE</code>.</td>
-</tr>
-<tr class="even">
-<td><code>jerk_series</code></td>
-<td>¿Cómo se comportó la cuenca antes y después del año crítico?</td>
-<td>Serie temporal de <span class="math inline">D</span>, <span class="math inline">V</span>, <span class="math inline">A</span>, <span class="math inline">J</span> y <code>RES</code>.</td>
-</tr>
-<tr class="odd">
-<td><code>field_candidates</code></td>
-<td>¿Qué cuencas cumplen criterios técnicos y logísticos?</td>
-<td>Ranking final para terreno.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<section id="criterios-de-eficiencia" class="level3" data-number="12.8.1">
-<h3 data-number="12.8.1" class="anchored" data-anchor-id="criterios-de-eficiencia"><span class="header-section-number">12.8.1</span> Criterios de eficiencia</h3>
-<p>Para que las consultas sean rápidas y reproducibles, se recomienda:</p>
-<ul>
-<li>particionar o agrupar el panel por <code>Year</code> cuando se exporte a Parquet;</li>
-<li>mantener índices o llaves lógicas sobre <code>RID</code> y <code>Year</code>;</li>
-<li>precalcular <code>abs_jerk</code> y percentiles por año;</li>
-<li>evitar reprocesar geometrías pesadas en cada consulta;</li>
-<li>guardar centroides de cuencas como columnas auxiliares;</li>
-<li>separar geometría completa y tabla analítica cuando solo se necesiten rankings;</li>
-<li>materializar <code>jerk_events</code> como tabla derivada;</li>
-<li>documentar cada consulta con parámetros, filtros y fecha de generación.</li>
-</ul>
-</section>
-</section>
-<section id="sec-evento-abrupto-jerk" class="level2" data-number="12.9">
-<h2 data-number="12.9" class="anchored" data-anchor-id="sec-evento-abrupto-jerk"><span class="header-section-number">12.9</span> Etapa 6: definición de evento abrupto</h2>
-<p>No todo valor alto de jerk debe convertirse automáticamente en prioridad de terreno. Se propone clasificar eventos abruptos con criterios combinados.</p>
-<p>Un evento candidato ocurre cuando una cuenca-año cumple al menos una de estas condiciones:</p>
-<ul>
-<li><code>abs_jerk</code> se ubica sobre el percentil 95 regional del año;</li>
-<li><code>abs_jerk</code> se ubica sobre el percentil 99 global de toda la serie;</li>
-<li><code>JERK_CLASS</code> corresponde a <code>Intensificación Fuerte</code> o <code>Reversión Fuerte</code>;</li>
-<li>el evento coincide con aumento de <span class="math inline">D</span> o deterioro de <code>RES</code>;</li>
-<li>el evento aparece en una cuenca con alta sensibilidad <span class="math inline">SENS</span> o alto <span class="math inline">D_{local}</span>.</li>
-</ul>
-<p>Para terreno, se recomienda separar dos tipos de eventos:</p>
-<div id="tbl-tipos-evento-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tipos-evento-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.5: Tipos de evento de jerk relevantes para validación territorial.
-</figcaption>
-<div aria-describedby="tbl-tipos-evento-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-signo-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -755,37 +357,37 @@ Table&nbsp;12.5: Tipos de evento de jerk relevantes para validación territorial
 <thead>
 <tr class="header">
 <th>Tipo de evento</th>
-<th>Condición dinámica</th>
-<th>Interpretación para terreno</th>
+<th>Condición</th>
+<th>Lectura preliminar</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Intensificación abrupta</td>
-<td><span class="math inline">J &gt; 0</span> alto y trayectoria con <span class="math inline">V</span> o <span class="math inline">A</span> positiva</td>
-<td>Posible aceleración de alejamiento del dominio.</td>
+<td>Intensificación</td>
+<td><span class="math inline">J &gt; 0</span></td>
+<td>Aceleración brusca del cambio respecto del dominio de referencia. Puede sugerir perturbación, presión o deterioro emergente.</td>
 </tr>
 <tr class="even">
-<td>Reversión abrupta</td>
-<td><span class="math inline">J &lt; 0</span> bajo extremo o cambio brusco de signo</td>
-<td>Posible recuperación, estabilización o cambio de régimen que debe verificarse.</td>
+<td>Reversión</td>
+<td><span class="math inline">J &lt; 0</span></td>
+<td>Frenada o inversión brusca de la trayectoria. Puede sugerir recuperación, estabilización, cambio de régimen o artefacto de datos.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Ambos tipos son útiles. La intensificación abrupta puede indicar presión o deterioro emergente. La reversión abrupta puede indicar recuperación, efecto de un evento puntual, cambio hidrológico, variación nival o incluso artefactos de datos que conviene auditar.</p>
+<p>Esta distinción es útil para terreno porque permite seleccionar casos con preguntas distintas. Una cuenca con intensificación puede requerir observar señales de presión reciente; una cuenca con reversión puede requerir revisar si existe recuperación visible, cambio hidrológico, variación de nieve, intervención local o inconsistencia en la serie satelital.</p>
 </section>
-<section id="sec-priorizacion-jerk" class="level2" data-number="12.10">
-<h2 data-number="12.10" class="anchored" data-anchor-id="sec-priorizacion-jerk"><span class="header-section-number">12.10</span> Etapa 7: criterios de priorización</h2>
-<p>La selección final debe combinar señal MRCT y factibilidad de terreno. Se propone construir un puntaje de prioridad compuesto por cinco dimensiones.</p>
-<div id="tbl-dimensiones-prioridad-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sec-insumos-jerk" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="sec-insumos-jerk"><span class="header-section-number">12.3</span> Insumos analizados</h2>
+<p>El análisis usó dos insumos principales:</p>
+<div id="tbl-insumos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dimensiones-prioridad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.6: Dimensiones sugeridas para el puntaje de prioridad de terreno.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-insumos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.2: Insumos principales del análisis de cuencas prioritarias por jerk.
 </figcaption>
-<div aria-describedby="tbl-dimensiones-prioridad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-insumos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -794,72 +396,397 @@ Table&nbsp;12.6: Dimensiones sugeridas para el puntaje de prioridad de terreno.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Dimensión</th>
-<th>Variable sugerida</th>
-<th>Lectura</th>
+<th>Insumo</th>
+<th>Contenido</th>
+<th>Uso en el análisis</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Magnitud del cambio abrupto</td>
-<td>Percentil anual y global de <code>abs_jerk</code></td>
-<td>Prioriza discontinuidades fuertes.</td>
+<td><code>MRCT_v1.xlsx</code></td>
+<td>Panel MRCT completo, con 273.520 registros y 74 columnas.</td>
+<td>Base temporal <code>RID × Year</code> para calcular eventos de jerk y cruzarlos con métricas MRCT.</td>
 </tr>
 <tr class="even">
-<td>Consistencia temporal</td>
-<td>Persistencia de <span class="math inline">D</span>, <span class="math inline">V</span>, <span class="math inline">A</span> y <code>RES</code> antes/después del evento</td>
-<td>Evita seleccionar picos aislados sin contexto.</td>
-</tr>
-<tr class="odd">
-<td>Relevancia ecosistémica</td>
-<td><span class="math inline">D</span>, <span class="math inline">PT</span>, <code>RES</code>, <code>RES_TYPE</code>, <span class="math inline">SENS</span></td>
-<td>Relaciona jerk con resiliencia y transición.</td>
-</tr>
-<tr class="even">
-<td>Contraste espacial</td>
-<td><span class="math inline">D_{local}</span>, <code>RES_GRAD</code></td>
-<td>Identifica cuencas distintas a su entorno.</td>
-</tr>
-<tr class="odd">
-<td>Factibilidad logística</td>
-<td>Distancia a Punta Arenas, caminos, accesibilidad, tiempo de visita</td>
-<td>Asegura posibilidad real de validación en terreno.</td>
+<td><code>R12_cuencas_nema_v2.shp</code></td>
+<td>Geometría de 21.040 cuencas de Magallanes.</td>
+<td>Base espacial para centroides, distancias, comunas y mapas.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Una formulación simple podría ser:</p>
-<p><span class="math display">
-P_i =
-0{,}35 \cdot J^\*_{i}
-+ 0{,}20 \cdot R^\*_{i}
-+ 0{,}15 \cdot E^\*_{i}
-+ 0{,}15 \cdot L^\*_{i}
-+ 0{,}15 \cdot A^\*_{i}
-</span></p>
-<p>donde <span class="math inline">J^\*</span> resume magnitud de jerk, <span class="math inline">R^\*</span> resume relevancia en resiliencia, <span class="math inline">E^\*</span> resume contraste espacial, <span class="math inline">L^\*</span> resume factibilidad logística y <span class="math inline">A^\*</span> representa accesibilidad o cercanía a Punta Arenas. Los pesos son una propuesta inicial y deben quedar parametrizados para sensibilidad.</p>
+<p>El panel cubre 21.040 cuencas entre 2013 y 2025. Para el análisis de prioridad se trabajó con la ventana 2020-2025, porque representa la dinámica más reciente y porque el cálculo de jerk requiere años previos suficientes para estimar la tercera derivada discreta.</p>
+<p>La geometría fue transformada al sistema EPSG:32719, que permite trabajar en coordenadas métricas para calcular distancias aproximadas desde Punta Arenas. El punto urbano de referencia se definió en torno a las coordenadas <code>-70,9171</code>, <code>-53,1638</code>, transformadas a UTM 19S.</p>
 </section>
-<section id="sec-punta-arenas-jerk" class="level2" data-number="12.11">
-<h2 data-number="12.11" class="anchored" data-anchor-id="sec-punta-arenas-jerk"><span class="header-section-number">12.11</span> Etapa 8: restricción logística Punta Arenas</h2>
-<p>Como el trabajo de terreno tendrá restricciones de desplazamiento, el sistema debe incluir una consulta específica para cuencas cercanas al centro urbano de Punta Arenas.</p>
-<p>Esta consulta debe:</p>
-<ul>
-<li>identificar cuencas dentro de la comuna de Punta Arenas;</li>
-<li>identificar cuencas que intersectan un radio operativo alrededor del centro urbano;</li>
-<li>calcular distancia desde el centroide de la cuenca al centro urbano;</li>
-<li>calcular distancia a caminos o puntos de acceso cuando la información esté disponible;</li>
-<li>filtrar cuencas con eventos de jerk relevantes;</li>
-<li>ordenar primero por factibilidad y luego por magnitud de señal, o producir ambos rankings.</li>
-</ul>
-<p>Se recomienda definir tres anillos logísticos:</p>
-<div id="tbl-anillos-punta-arenas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sec-estructura-datos-jerk" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="sec-estructura-datos-jerk"><span class="header-section-number">12.4</span> Estructura de datos para consulta posterior</h2>
+<p>Uno de los aportes centrales del análisis no es solo la tabla final, sino la estructura de datos que deja preparada para consultas futuras. El flujo convierte archivos pesados en formatos analíticos rápidos y materializa una base DuckDB local, reutilizable por código, herramientas SIG o aplicaciones web.</p>
+<div id="tbl-productos-datos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-anillos-punta-arenas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.7: Clasificación logística preliminar para el entorno de Punta Arenas.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-productos-datos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.3: Productos de datos generados para consulta y reutilización.
 </figcaption>
-<div aria-describedby="tbl-anillos-punta-arenas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-productos-datos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Componente</th>
+<th>Formato</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mrct_panel.parquet</code></td>
+<td>Parquet</td>
+<td>Copia eficiente del panel MRCT para relecturas rápidas.</td>
+</tr>
+<tr class="even">
+<td><code>mrct_basins.parquet</code></td>
+<td>GeoParquet</td>
+<td>Geometría de cuencas serializada con atributos espaciales.</td>
+</tr>
+<tr class="odd">
+<td><code>mrct_jerk_analysis.db</code></td>
+<td>DuckDB</td>
+<td>Base analítica con tablas consultables sin reprocesar todos los insumos.</td>
+</tr>
+<tr class="even">
+<td><code>cuencas_prioritarias_jerk_10.xlsx</code></td>
+<td>Excel</td>
+<td>Tabla de salida con diez cuencas candidatas.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La base DuckDB queda organizada en cinco tablas:</p>
+<div id="tbl-esquema-duckdb-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-esquema-duckdb-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.4: Esquema de tablas creado para sostener consultas posteriores.
+</figcaption>
+<div aria-describedby="tbl-esquema-duckdb-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tabla</th>
+<th>Contenido</th>
+<th>Uso posterior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mrct_panel</code></td>
+<td>Panel filtrado 2020-2025 con métricas MRCT por <code>RID</code> y <code>Year</code>.</td>
+<td>Consultar trayectorias, resiliencia, dominio, velocidad, aceleración y jerk.</td>
+</tr>
+<tr class="even">
+<td><code>basins</code></td>
+<td>Atributos y geometría de cuencas.</td>
+<td>Construir mapas, cruces espaciales y visualizaciones.</td>
+</tr>
+<tr class="odd">
+<td><code>accessibility</code></td>
+<td>Centroide, distancia a Punta Arenas, comuna y anillo logístico.</td>
+<td>Filtrar cuencas por factibilidad preliminar.</td>
+</tr>
+<tr class="even">
+<td><code>jerk_events</code></td>
+<td>Eventos con jerk válido, percentiles y clasificación.</td>
+<td>Identificar eventos extremos por año, comuna o tipo de evento.</td>
+</tr>
+<tr class="odd">
+<td><code>field_priority</code></td>
+<td>Ranking final de cuencas candidatas.</td>
+<td>Alimentar reportes, fichas de terreno o aplicaciones de consulta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Esta estructura permite que el análisis no dependa de una revisión manual de archivos intermedios. Una aplicación web, un tablero local, un script de actualización o un visor SIG podrían consultar la misma base para responder preguntas como: cuáles son las cuencas más extremas por año, cuáles están dentro de una comuna, cuáles tienen baja resiliencia, cuáles están cerca de un punto operativo o cuáles deben revisarse si cambia el umbral de prioridad.</p>
+</section>
+<section id="sec-control-calidad-jerk" class="level2 page-columns page-full" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="sec-control-calidad-jerk"><span class="header-section-number">12.5</span> Control de calidad y cobertura</h2>
+<p>Antes de priorizar cuencas se revisó la disponibilidad anual de jerk. Como esta métrica depende de derivadas temporales, los primeros años no tienen valores válidos. En la ventana de análisis reciente, la cobertura varía entre años.</p>
+<div id="tbl-disponibilidad-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-disponibilidad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.5: Disponibilidad de jerk en la ventana 2020-2025.
+</figcaption>
+<div aria-describedby="tbl-disponibilidad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Año</th>
+<th style="text-align: right;">Cuencas totales</th>
+<th style="text-align: right;">Cuencas con jerk</th>
+<th style="text-align: right;">Cobertura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">6.921</td>
+<td style="text-align: right;">32,9%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">8.390</td>
+<td style="text-align: right;">39,9%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">4.936</td>
+<td style="text-align: right;">23,5%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">3.833</td>
+<td style="text-align: right;">18,2%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">3.692</td>
+<td style="text-align: right;">17,5%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">3.770</td>
+<td style="text-align: right;">17,9%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La cobertura confirma que el análisis debe interpretarse con cautela. La ausencia de jerk válido en una cuenca no implica estabilidad ecosistémica; puede reflejar falta de datos suficientes, calidad de observación, restricciones de cálculo o problemas de disponibilidad en los insumos anuales.</p>
+<p>También se identificaron casos extremos para revisión. Los diez mayores valores absolutos de jerk incluyen eventos en Natales, Punta Arenas y otras comunas, con magnitudes entre 15,21 y 18,19. Estos casos no se eliminaron automáticamente: se conservaron como señales relevantes que deben revisarse con imágenes, series temporales y terreno.</p>
+<div id="fig-outliers-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-outliers-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_12_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-outliers-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: Distribución de outliers de jerk identificados durante el control de calidad. Elaboración propia.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-eventos-jerk" class="level2 page-columns page-full" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="sec-eventos-jerk"><span class="header-section-number">12.6</span> Eventos de jerk</h2>
+<p>El análisis materializó <strong>31.542 eventos</strong> con jerk válido en 2020-2025. Para cada evento se calcularon dos percentiles:</p>
+<ul>
+<li>percentil anual, que compara una cuenca con otras cuencas del mismo año;</li>
+<li>percentil global, que compara el evento con todos los eventos de la ventana 2020-2025.</li>
+</ul>
+<p>El uso de percentiles evita interpretar el valor bruto de jerk fuera de contexto. Un mismo valor puede ser extremo en un año y moderado en otro. Por eso el ranking usa percentiles y no solo magnitudes absolutas.</p>
+<p>La distribución de clases en 2020-2025 muestra una gran cantidad de eventos neutros y una presencia balanceada de intensificaciones y reversiones fuertes:</p>
+<div id="tbl-clases-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-clases-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.6: Distribución de clases de jerk en la ventana 2020-2025.
+</figcaption>
+<div aria-describedby="tbl-clases-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Clase de jerk</th>
+<th style="text-align: right;">Eventos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Neutro</td>
+<td style="text-align: right;">101.986</td>
+</tr>
+<tr class="even">
+<td>Reversión leve</td>
+<td style="text-align: right;">6.280</td>
+</tr>
+<tr class="odd">
+<td>Intensificación leve</td>
+<td style="text-align: right;">6.239</td>
+</tr>
+<tr class="even">
+<td>Reversión fuerte</td>
+<td style="text-align: right;">5.945</td>
+</tr>
+<tr class="odd">
+<td>Intensificación fuerte</td>
+<td style="text-align: right;">5.790</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-distribucion-jerk-anual" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-distribucion-jerk-anual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_18_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-distribucion-jerk-anual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.2: Distribución anual de la magnitud absoluta de jerk. El gráfico permite comparar la intensidad relativa de eventos entre años.
+</figcaption>
+</figure>
+</div>
+<p>Los eventos regionales más extremos se concentran principalmente en Natales y Punta Arenas. Destacan, por ejemplo, el <code>RID 12614</code> en 2024 con reversión fuerte, el <code>RID 16141</code> en 2025 con intensificación fuerte, y el <code>RID 963</code> en Punta Arenas en 2023 con intensificación fuerte.</p>
+<div id="tbl-top-eventos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top-eventos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.7: Diez eventos regionales de mayor magnitud absoluta de jerk.
+</figcaption>
+<div aria-describedby="tbl-top-eventos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">RID</th>
+<th style="text-align: right;">Año</th>
+<th style="text-align: right;">Jerk</th>
+<th>Tipo</th>
+<th style="text-align: right;">Percentil anual</th>
+<th style="text-align: right;"><code>RES</code></th>
+<th>Comuna</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">12614</td>
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">-18,1910</td>
+<td>Reversión fuerte</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,00042</td>
+<td>Natales</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16666</td>
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">-17,5785</td>
+<td>Reversión fuerte</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,00047</td>
+<td>Natales</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">16141</td>
+<td style="text-align: right;">2025</td>
+<td style="text-align: right;">17,4068</td>
+<td>Intensificación fuerte</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,00022</td>
+<td>Natales</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12614</td>
+<td style="text-align: right;">2025</td>
+<td style="text-align: right;">16,1410</td>
+<td>Intensificación fuerte</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,00043</td>
+<td>Natales</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">12521</td>
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">15,8616</td>
+<td>Intensificación fuerte</td>
+<td style="text-align: right;">99,9</td>
+<td style="text-align: right;">0,00218</td>
+<td>Natales</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">963</td>
+<td style="text-align: right;">2023</td>
+<td style="text-align: right;">15,6354</td>
+<td>Intensificación fuerte</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,10950</td>
+<td>Punta Arenas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19883</td>
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">-15,4961</td>
+<td>Reversión fuerte</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,00015</td>
+<td>Natales</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16666</td>
+<td style="text-align: right;">2025</td>
+<td style="text-align: right;">15,4425</td>
+<td>Intensificación fuerte</td>
+<td style="text-align: right;">99,9</td>
+<td style="text-align: right;">0,00161</td>
+<td>Natales</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">-15,3694</td>
+<td>Reversión fuerte</td>
+<td style="text-align: right;">99,9</td>
+<td style="text-align: right;">0,00130</td>
+<td>Punta Arenas</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">19411</td>
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">-15,2141</td>
+<td>Reversión fuerte</td>
+<td style="text-align: right;">99,9</td>
+<td style="text-align: right;">0,00891</td>
+<td>Natales</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-cruce-territorial-jerk" class="level2 page-columns page-full" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="sec-cruce-territorial-jerk"><span class="header-section-number">12.7</span> Cruce territorial y accesibilidad preliminar</h2>
+<p>El análisis incorporó una primera lectura logística desde Punta Arenas. Esta lectura no reemplaza la revisión de caminos, permisos o tiempos reales de traslado; solo entrega una aproximación inicial basada en centroides, comuna y distancia euclidiana.</p>
+<p>Se usaron tres anillos:</p>
+<div id="tbl-anillos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-anillos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.8: Anillos de accesibilidad preliminar usados en el análisis.
+</figcaption>
+<div aria-describedby="tbl-anillos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -869,409 +796,411 @@ Table&nbsp;12.7: Clasificación logística preliminar para el entorno de Punta A
 <thead>
 <tr class="header">
 <th>Anillo</th>
-<th>Criterio sugerido</th>
-<th>Uso</th>
+<th>Criterio de distancia</th>
+<th>Lectura logística preliminar</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Cercano</td>
-<td>Hasta 30 km desde el centro urbano o acceso principal</td>
-<td>Visitas rápidas, bajo costo logístico.</td>
+<td>0-30 km</td>
+<td>Potencial visita corta si existe acceso real.</td>
 </tr>
 <tr class="even">
 <td>Intermedio</td>
-<td>30 a 80 km</td>
-<td>Visitas de media jornada o jornada completa.</td>
+<td>30-80 km</td>
+<td>Visita de media jornada o jornada completa.</td>
 </tr>
 <tr class="odd">
 <td>Extendido</td>
 <td>Más de 80 km</td>
-<td>Solo si la señal MRCT justifica el desplazamiento.</td>
+<td>Requiere mayor justificación técnica y planificación.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Los umbrales deben ajustarse con el equipo de terreno. La distancia euclidiana sirve como primera aproximación, pero la priorización final debe usar accesibilidad real cuando existan caminos, permisos, estacionalidad o restricciones climáticas.</p>
+<p>El diagnóstico territorial identificó <strong>186 candidatas</strong> en el entorno ampliado de Punta Arenas bajo un umbral de jerk igual o superior al percentil 90. Sin embargo, el resultado muestra una advertencia importante: el territorio comunal de Punta Arenas es muy extenso, por lo que varias cuencas de la comuna están a más de 100 km del centro urbano.</p>
+<p>En el buffer operativo exploratorio de 50 km y umbral p90 se identificaron 130 cuencas calificadas. Aun así, al combinar prioridad regional y prioridad comunal, las diez cuencas seleccionadas quedaron en anillo extendido. Esto obliga a que la fase siguiente revise rutas reales y factibilidad con mayor detalle.</p>
+<div id="fig-buffer-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_25_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.3: Diagnóstico espacial del buffer de estudio y cuencas calificadas bajo criterios de radio y umbral.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="sec-diez-cuencas-jerk" class="level2" data-number="12.12">
-<h2 data-number="12.12" class="anchored" data-anchor-id="sec-diez-cuencas-jerk"><span class="header-section-number">12.12</span> Etapa 9: selección de diez cuencas prioritarias</h2>
-<p>El producto central para el libro y para la campaña será una tabla de diez cuencas prioritarias. La tabla debe ser generada por consulta reproducible, no por selección manual.</p>
-<p>La estructura mínima de la tabla debe ser:</p>
+<section id="sec-puntaje-jerk" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="sec-puntaje-jerk"><span class="header-section-number">12.8</span> Puntaje de priorización</h2>
+<p>Para pasar desde eventos individuales a cuencas candidatas se construyó un puntaje compuesto, denominado <code>P_score</code>. Este puntaje combina dimensiones técnicas y logísticas:</p>
+<div id="tbl-pesos-prioridad-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pesos-prioridad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.9: Componentes del puntaje compuesto de prioridad.
+</figcaption>
+<div aria-describedby="tbl-pesos-prioridad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimensión</th>
+<th style="text-align: right;">Peso</th>
+<th>Qué representa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Magnitud de jerk</td>
+<td style="text-align: right;">0,35</td>
+<td>Intensidad relativa del evento abrupto.</td>
+</tr>
+<tr class="even">
+<td>Resiliencia</td>
+<td style="text-align: right;">0,20</td>
+<td>Prioridad asociada a bajo <code>RES</code> o condición crítica.</td>
+</tr>
+<tr class="odd">
+<td>Relevancia ecosistémica</td>
+<td style="text-align: right;">0,15</td>
+<td>Relación con estado, tipo de resiliencia y señal territorial.</td>
+</tr>
+<tr class="even">
+<td>Sensibilidad o contexto</td>
+<td style="text-align: right;">0,15</td>
+<td>Relación con sensibilidad y contraste local cuando existe información.</td>
+</tr>
+<tr class="odd">
+<td>Accesibilidad preliminar</td>
+<td style="text-align: right;">0,15</td>
+<td>Distancia y pertenencia al entorno operativo definido.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Los pesos son una decisión inicial de trabajo. Deben quedar como parámetros ajustables, especialmente después de revisar logística, rutas, permisos y conocimiento local. En esta etapa el puntaje cumple una función práctica: ordenar las candidatas, no demostrar que una cuenca sea objetivamente más importante que otra en todos los sentidos.</p>
+<p>El ranking regional produjo <strong>1.806 cuencas candidatas únicas</strong>, usando un evento representativo por cuenca. El rango de <code>P_score</code> fue de 0,074 a 0,953. Las primeras posiciones regionales se concentran en Río Verde, Timaukel, Natales y Punta Arenas.</p>
+</section>
+<section id="sec-diez-cuencas-jerk" class="level2 page-columns page-full" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="sec-diez-cuencas-jerk"><span class="header-section-number">12.9</span> Diez cuencas candidatas</h2>
+<p>La tabla siguiente presenta las diez cuencas priorizadas por el flujo de análisis. La selección combinó las cinco mejores candidatas regionales y las mejores candidatas asociadas al entorno/comuna de Punta Arenas para mantener una mezcla entre señal regional fuerte y relevancia logística para la campaña.</p>
 <div id="tbl-diez-cuencas-prioritarias" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-diez-cuencas-prioritarias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.8: Plantilla de tabla final para diez cuencas prioritarias de validación en terreno.
+Table&nbsp;12.10: Diez cuencas candidatas para validación en terreno según análisis de jerk.
 </figcaption>
 <div aria-describedby="tbl-diez-cuencas-prioritarias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
 <col style="width: 7%">
-<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
 <col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 9%">
 <col style="width: 7%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 7%">
+<col style="width: 9%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Prioridad</th>
+<th style="text-align: right;">Prioridad</th>
 <th style="text-align: right;">RID</th>
-<th>Cuenca</th>
 <th>Comuna</th>
 <th style="text-align: right;">Año crítico</th>
 <th style="text-align: right;">Jerk</th>
-<th>Magnitud relativa</th>
+<th style="text-align: right;">Percentil anual</th>
 <th>Tipo de evento</th>
-<th style="text-align: right;">RES año crítico</th>
-<th style="text-align: right;">Distancia a Punta Arenas</th>
-<th>Razón de prioridad</th>
+<th style="text-align: right;"><code>RES</code> año crítico</th>
+<th style="text-align: right;">Distancia a PA (km)</th>
+<th>Anillo</th>
+<th style="text-align: right;"><code>P_score</code></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p99 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Mayor señal abrupta y alta factibilidad.</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3555</td>
+<td>Río Verde</td>
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">7,8550</td>
+<td style="text-align: right;">99,9</td>
+<td>Intensificación</td>
+<td style="text-align: right;">0,00010</td>
+<td style="text-align: right;">160,1</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,9527</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p95 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Cambio abrupto asociado a baja resiliencia.</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4203</td>
+<td>Río Verde</td>
+<td style="text-align: right;">2023</td>
+<td style="text-align: right;">5,4293</td>
+<td style="text-align: right;">98,7</td>
+<td>Intensificación</td>
+<td style="text-align: right;">0,00000</td>
+<td style="text-align: right;">147,3</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,9300</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p95 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Contraste espacial frente a cuencas vecinas.</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10929</td>
+<td>Timaukel</td>
+<td style="text-align: right;">2022</td>
+<td style="text-align: right;">-7,7200</td>
+<td style="text-align: right;">99,8</td>
+<td>Reversión</td>
+<td style="text-align: right;">0,00061</td>
+<td style="text-align: right;">140,8</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,9142</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p95 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Caso cercano a Punta Arenas.</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">13206</td>
+<td>Natales</td>
+<td style="text-align: right;">2023</td>
+<td style="text-align: right;">8,2457</td>
+<td style="text-align: right;">99,7</td>
+<td>Intensificación</td>
+<td style="text-align: right;">0,00007</td>
+<td style="text-align: right;">164,7</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,9136</td>
 </tr>
 <tr class="odd">
-<td>5</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p95 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Alta sensibilidad climática.</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">12754</td>
+<td>Natales</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">5,3564</td>
+<td style="text-align: right;">99,4</td>
+<td>Intensificación</td>
+<td style="text-align: right;">0,00037</td>
+<td style="text-align: right;">211,2</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,9125</td>
 </tr>
 <tr class="even">
-<td>6</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p90 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Señal persistente en serie temporal.</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1340</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">-4,8846</td>
+<td style="text-align: right;">99,2</td>
+<td>Reversión</td>
+<td style="text-align: right;">0,00044</td>
+<td style="text-align: right;">143,3</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,9060</td>
 </tr>
 <tr class="odd">
-<td>7</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p90 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Representa patrón regional relevante.</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">275</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">6,4628</td>
+<td style="text-align: right;">99,8</td>
+<td>Intensificación</td>
+<td style="text-align: right;">0,00205</td>
+<td style="text-align: right;">231,1</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,8699</td>
 </tr>
 <tr class="even">
-<td>8</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p90 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Caso comunal complementario.</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">461</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">3,9040</td>
+<td style="text-align: right;">98,7</td>
+<td>Intensificación</td>
+<td style="text-align: right;">0,00037</td>
+<td style="text-align: right;">126,5</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,8595</td>
 </tr>
 <tr class="odd">
-<td>9</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p90 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Accesible para verificación rápida.</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">43</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">-15,3694</td>
+<td style="text-align: right;">99,9</td>
+<td>Reversión</td>
+<td style="text-align: right;">0,00130</td>
+<td style="text-align: right;">204,5</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,8549</td>
 </tr>
 <tr class="even">
-<td>10</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>p90 anual/global</td>
-<td>Intensificación o reversión</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Control o contraste frente a cuencas críticas.</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">446</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">-4,0726</td>
+<td style="text-align: right;">98,6</td>
+<td>Reversión</td>
+<td style="text-align: right;">0,00259</td>
+<td style="text-align: right;">140,4</td>
+<td>Extendido</td>
+<td style="text-align: right;">0,8442</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>La columna “Razón de prioridad” debe ser breve y verificable. No basta decir “jerk alto”; debe explicar si la cuenca fue seleccionada por magnitud extrema, cercanía a Punta Arenas, baja resiliencia, alta sensibilidad, contraste local o combinación de factores.</p>
-</section>
-<section id="sec-fichas-cuenca-jerk" class="level2" data-number="12.13">
-<h2 data-number="12.13" class="anchored" data-anchor-id="sec-fichas-cuenca-jerk"><span class="header-section-number">12.13</span> Etapa 10: fichas por cuenca</h2>
-<p>Cada una de las diez cuencas seleccionadas debe tener una ficha técnica para terreno. La ficha debe incluir:</p>
-<ul>
-<li>identificador <code>RID</code>;</li>
-<li>nombre de cuenca si existe;</li>
-<li>comuna y provincia;</li>
-<li>mapa de ubicación regional;</li>
-<li>mapa de detalle con acceso preliminar;</li>
-<li>año crítico de jerk;</li>
-<li>serie temporal de <span class="math inline">D</span>, <span class="math inline">V</span>, <span class="math inline">A</span>, <span class="math inline">J</span> y <code>RES</code>;</li>
-<li>indicadores base que más cambiaron alrededor del año crítico;</li>
-<li>clasificación <code>RES_STATE</code> y <code>RES_TYPE</code>;</li>
-<li>distancia a Punta Arenas y ruta estimada si existe;</li>
-<li>observaciones para terreno;</li>
-<li>hipótesis preliminar a validar;</li>
-<li>fotografías o puntos sugeridos de observación si se definen posteriormente.</li>
-</ul>
-<p>Estas fichas permiten que el equipo de terreno no reciba solo una lista de coordenadas, sino una pregunta de validación por cada cuenca.</p>
-</section>
-<section id="sec-sql-jerk" class="level2" data-number="12.14">
-<h2 data-number="12.14" class="anchored" data-anchor-id="sec-sql-jerk"><span class="header-section-number">12.14</span> Consultas SQL orientativas</h2>
-<p>Las consultas finales deben ajustarse al nombre real de tablas y columnas, pero el equipo puede partir con una lógica similar a la siguiente.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Eventos de jerk extremos por año</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> jerk_events <span class="kw">AS</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  RID,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Year</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  Jerk,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abs</span>(Jerk) <span class="kw">AS</span> abs_jerk,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">CASE</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> Jerk <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">THEN</span> <span class="st">'Intensificacion'</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">WHEN</span> Jerk <span class="op">&lt;</span> <span class="dv">0</span> <span class="cf">THEN</span> <span class="st">'Reversion'</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">ELSE</span> <span class="st">'Neutro'</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">END</span> <span class="kw">AS</span> jerk_sign,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">percent_rank</span>() <span class="kw">OVER</span> (</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">PARTITION</span> <span class="kw">BY</span> <span class="dt">Year</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">abs</span>(Jerk)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="kw">AS</span> jerk_percentile_year</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> mrct_panel</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> Jerk <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Candidatas regionales con resiliencia y comuna</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  e.RID,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  e.<span class="dt">Year</span> <span class="kw">AS</span> critical_year,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  e.Jerk,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  e.abs_jerk,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  e.jerk_percentile_year,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  p.RES,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  p.PT,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  p.<span class="kw">Domain</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  p.Velocidad,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  p.Aceleracion,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  p.Domain_local,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  p.SENS,</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  bc.commune_name</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> jerk_events e</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> mrct_panel p</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ON</span> e.RID <span class="op">=</span> p.RID <span class="kw">AND</span> e.<span class="dt">Year</span> <span class="op">=</span> p.<span class="dt">Year</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> basin_commune bc</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ON</span> e.RID <span class="op">=</span> bc.RID</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> e.jerk_percentile_year <span class="op">&gt;=</span> <span class="fl">0.95</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> e.abs_jerk <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Candidatas cercanas a Punta Arenas</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  c.<span class="op">*</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  a.distance_punta_arenas_km,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  a.distance_road_km,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  a.access_ring</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> candidate_events c</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> accessibility a</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ON</span> c.RID <span class="op">=</span> a.RID</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> a.access_ring <span class="kw">IN</span> (<span class="st">'Cercano'</span>, <span class="st">'Intermedio'</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  c.jerk_percentile_year <span class="kw">DESC</span>,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  a.distance_punta_arenas_km <span class="kw">ASC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Estas consultas deben transformarse en scripts versionados para que el ranking pueda regenerarse cuando cambien los datos, el año de análisis o los pesos de priorización.</p>
-</section>
-<section id="sec-productos-libro-jerk" class="level2" data-number="12.15">
-<h2 data-number="12.15" class="anchored" data-anchor-id="sec-productos-libro-jerk"><span class="header-section-number">12.15</span> Productos para el libro digital</h2>
-<p>El capítulo final del libro debería incluir productos seleccionados de este flujo, no todo el detalle técnico de implementación.</p>
-<p>Productos sugeridos:</p>
-<ul>
-<li>diagrama del flujo base de datos, consultas y selección de cuencas;</li>
-<li>mapa regional de eventos extremos de jerk;</li>
-<li>mapa de cuencas candidatas cercanas a Punta Arenas;</li>
-<li>gráfico de distribución anual de <code>abs_jerk</code>;</li>
-<li>tabla de diez cuencas prioritarias;</li>
-<li>serie temporal de dos o tres cuencas representativas;</li>
-<li>ficha resumida del caso Punta Arenas;</li>
-<li>nota metodológica sobre límites de interpretación del jerk.</li>
-</ul>
-</section>
-<section id="sec-diagrama-jerk-terreno" class="level2" data-number="12.16">
-<h2 data-number="12.16" class="anchored" data-anchor-id="sec-diagrama-jerk-terreno"><span class="header-section-number">12.16</span> Diagrama del flujo operativo</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A["Notebook MRCT&lt;br/&gt;hipercubo y panel RID por año"] --&gt; B["Exportacion&lt;br/&gt;Parquet y GeoParquet"]
-    B --&gt; C["DuckDB espacial&lt;br/&gt;base analitica local"]
-    C --&gt; D["Tabla mrct_panel&lt;br/&gt;D V A J RES PT"]
-    C --&gt; E["Tabla basins&lt;br/&gt;geometria RID"]
-    C --&gt; F["Tabla accesibilidad&lt;br/&gt;Punta Arenas y caminos"]
-    D --&gt; G["Eventos de jerk&lt;br/&gt;abs J percentiles clases"]
-    E --&gt; H["Cruce territorial&lt;br/&gt;comuna provincia superficie"]
-    F --&gt; H
-    G --&gt; I["Ranking tecnico&lt;br/&gt;magnitud cambio resiliencia contexto"]
-    H --&gt; I
-    I --&gt; J["Filtro logistico&lt;br/&gt;entorno Punta Arenas"]
-    J --&gt; K["10 cuencas prioritarias&lt;br/&gt;terreno y validacion"]
-    K --&gt; L["Fichas de terreno&lt;br/&gt;mapa serie temporal hipotesis"]
-</pre>
+<p>La tabla debe leerse como un punto de partida. Todas las cuencas seleccionadas aparecen en anillo extendido, lo que significa que la factibilidad real no está resuelta. Antes de ejecutar una campaña se debe verificar acceso por caminos, tiempos de traslado, permisos, condiciones climáticas, seguridad y disponibilidad de puntos de observación.</p>
+<div id="fig-cuencas-buffer-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-cuencas-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_35_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="sec-criterios-aceptacion-jerk" class="level2" data-number="12.17">
-<h2 data-number="12.17" class="anchored" data-anchor-id="sec-criterios-aceptacion-jerk"><span class="header-section-number">12.17</span> Criterios de aceptación para el equipo</h2>
-<p>El trabajo puede considerarse completo cuando existan los siguientes entregables:</p>
-<ul>
-<li>base DuckDB o conjunto reproducible DuckDB + Parquet/GeoParquet;</li>
-<li>script de carga de datos desde salidas del notebook MRCT;</li>
-<li>diccionario de datos del panel <code>RID × Year</code>;</li>
-<li>tabla <code>jerk_events</code> con magnitud, signo, percentiles y año crítico;</li>
-<li>consulta reproducible de ranking regional;</li>
-<li>consulta reproducible de candidatas cercanas a Punta Arenas;</li>
-<li>tabla final de diez cuencas prioritarias;</li>
-<li>mapas de revisión para región y Punta Arenas;</li>
-<li>fichas técnicas por cuenca;</li>
-<li>breve informe de supuestos, filtros y limitaciones.</li>
-</ul>
-</section>
-<section id="sec-riesgos-controles-jerk" class="level2" data-number="12.18">
-<h2 data-number="12.18" class="anchored" data-anchor-id="sec-riesgos-controles-jerk"><span class="header-section-number">12.18</span> Riesgos y controles</h2>
-<div id="tbl-riesgos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-riesgos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.9: Riesgos principales del flujo de selección y controles sugeridos.
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-cuencas-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.4: Cuencas candidatas dentro del buffer de estudio y ranking preliminar asociado.
 </figcaption>
-<div aria-describedby="tbl-riesgos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figure>
+</div>
+<div id="fig-eventos-regionales-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-eventos-regionales-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_37_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-eventos-regionales-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.5: Eventos regionales de jerk iguales o superiores al percentil 95 en la ventana 2020-2025.
+</figcaption>
+</figure>
+</div>
+<div id="fig-top10-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-top10-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_39_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-top10-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.6: Diez cuencas prioritarias en el entorno de análisis. La figura muestra su ubicación relativa y advierte que ninguna queda dentro del radio simple de 50 km desde el centro urbano de Punta Arenas.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-series-temporales-jerk" class="level2 page-columns page-full" data-number="12.10">
+<h2 data-number="12.10" class="anchored" data-anchor-id="sec-series-temporales-jerk"><span class="header-section-number">12.10</span> Lectura de series temporales</h2>
+<p>Para las tres cuencas de mayor puntaje se revisaron series temporales completas 2013-2025 de <code>Domain</code>, <code>Velocidad</code>, <code>Aceleracion</code>, <code>Jerk</code> y <code>RES</code>. Esta lectura es necesaria porque un ranking por jerk puede seleccionar picos aislados. La serie permite distinguir si el evento abrupto aparece como una ruptura puntual, una intensificación dentro de una tendencia o una reversión después de varios años de alejamiento del dominio.</p>
+<div id="fig-series-top3-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-series-top3-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_41_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-series-top3-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.7: Series temporales de las tres cuencas con mayor <code>P_score</code>. La línea vertical roja indica el año crítico de jerk.
+</figcaption>
+</figure>
+</div>
+<p>Esta lectura debe repetirse para cualquier cuenca que pase a planificación de terreno. Una cuenca no debería visitarse solo porque aparece en el top 10; debería visitarse porque su serie temporal formula una pregunta territorial clara.</p>
+</section>
+<section id="sec-uso-terreno-jerk" class="level2" data-number="12.11">
+<h2 data-number="12.11" class="anchored" data-anchor-id="sec-uso-terreno-jerk"><span class="header-section-number">12.11</span> Cómo usar esta selección en la planificación de terreno</h2>
+<p>La selección por jerk debe alimentar una reunión técnica y territorial antes de definir rutas. En esa revisión se recomienda trabajar con tres listas:</p>
+<ul>
+<li><strong>lista prioritaria</strong>, con las diez cuencas del ranking técnico;</li>
+<li><strong>lista logística</strong>, con cuencas cercanas, accesibles o visitables en el mismo recorrido;</li>
+<li><strong>lista de reemplazo</strong>, con cuencas alternativas por si falla el acceso, el clima o el permiso.</li>
+</ul>
+<p>La reunión debe revisar, al menos:</p>
+<ul>
+<li>caminos, huellas, portones, predios y accesos reales;</li>
+<li>restricciones de propiedad, áreas protegidas o infraestructura;</li>
+<li>posibilidad de vuelo de dron según viento, visibilidad y normativa;</li>
+<li>disponibilidad de puntos seguros para medición;</li>
+<li>pertinencia territorial de visitar Río Verde, Timaukel, Natales o Punta Arenas según recursos disponibles;</li>
+<li>conocimiento local sobre eventos recientes: incendios, inundaciones, sequías, obras, cambios de uso, ganadería, extracción, cortes de camino o nieve persistente;</li>
+<li>conveniencia de incorporar cuencas de control con menor señal MRCT.</li>
+</ul>
+<p>El producto esperado de esa reunión no es reemplazar el ranking, sino convertirlo en un plan de campaña realista: qué cuencas se visitan, cuáles quedan como respaldo, qué hipótesis se validan y qué observaciones se necesitan en cada sitio.</p>
+</section>
+<section id="sec-fichas-jerk" class="level2" data-number="12.12">
+<h2 data-number="12.12" class="anchored" data-anchor-id="sec-fichas-jerk"><span class="header-section-number">12.12</span> Fichas de terreno derivadas</h2>
+<p>Cada cuenca que avance a terreno debe tener una ficha técnica. La base generada permite poblar automáticamente buena parte de esa ficha.</p>
+<div id="tbl-ficha-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ficha-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.11: Contenido sugerido para fichas de terreno derivadas del ranking de jerk.
+</figcaption>
+<div aria-describedby="tbl-ficha-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Riesgo</th>
-<th>Efecto posible</th>
-<th>Control recomendado</th>
+<th>Bloque de ficha</th>
+<th>Campos sugeridos</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Jerk alto por dato faltante o interpolación</td>
-<td>Falsa prioridad de terreno.</td>
-<td>Revisar completitud antes y después del año crítico.</td>
+<td>Identificación</td>
+<td><code>RID</code>, comuna, prioridad, año crítico, tipo de evento.</td>
 </tr>
 <tr class="even">
-<td>Cambio abrupto por nubosidad o mosaico débil</td>
-<td>Señal satelital poco confiable.</td>
-<td>Cruzar con métricas de calidad y cobertura anual.</td>
+<td>Señal MRCT</td>
+<td><code>Jerk</code>, percentil anual, <code>RES</code>, <code>RES_STATE</code>, <code>RES_TYPE</code>, <code>Domain</code>, <code>Velocidad</code>, <code>Aceleracion</code>, <code>SENS</code>, <code>Domain_local</code>.</td>
 </tr>
 <tr class="odd">
-<td>Cuenca prioritaria inaccesible</td>
-<td>Pérdida de tiempo en planificación de terreno.</td>
-<td>Incorporar distancia a caminos y anillos logísticos.</td>
+<td>Ubicación</td>
+<td>centroide, distancia a Punta Arenas, anillo, mapa de detalle, ruta preliminar.</td>
 </tr>
 <tr class="even">
-<td>Ranking dominado por cuencas remotas</td>
-<td>Baja factibilidad de campaña.</td>
-<td>Forzar subranking cercano a Punta Arenas.</td>
+<td>Pregunta de terreno</td>
+<td>Qué condición debería observarse según la señal: intensificación, reversión, baja resiliencia o contraste local.</td>
 </tr>
 <tr class="odd">
-<td>Lectura causal prematura</td>
-<td>Interpretación incorrecta del resultado.</td>
-<td>Presentar jerk como señal de alerta, no como prueba causal.</td>
+<td>Observaciones requeridas</td>
+<td>fotografías, dron, temperatura, humedad, agua visible, nieve, cobertura, perturbación, accesibilidad.</td>
 </tr>
 <tr class="even">
-<td>Agregación comunal ambigua</td>
-<td>Confusión entre cuenca y administración.</td>
-<td>Documentar regla de asignación cuenca-comuna.</td>
+<td>Estado de validación</td>
+<td>consistente, parcialmente consistente, no consistente o no evaluable.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
+<p>Estas fichas son el puente entre análisis y campaña. Evitan que el equipo de terreno reciba solo coordenadas y permiten que cada visita tenga una pregunta de validación explícita.</p>
 </section>
-<section id="sec-cierre-jerk" class="level2" data-number="12.19">
-<h2 data-number="12.19" class="anchored" data-anchor-id="sec-cierre-jerk"><span class="header-section-number">12.19</span> Cierre operativo</h2>
-<p>La selección de cuencas por jerk debe funcionar como un puente entre análisis computacional y observación territorial. El hipercubo MRCT permite detectar discontinuidades temporales que no son evidentes en una lectura estática de resiliencia. La base de datos y el sistema de consultas convierten esa señal en un procedimiento reproducible. La restricción logística de Punta Arenas asegura que el resultado sea viable para una campaña real.</p>
-<p>El producto final para el libro digital será una lectura trazable: desde el panel <code>RID × Year</code>, pasando por eventos de jerk, filtros espaciales y criterios de accesibilidad, hasta una lista de diez cuencas priorizadas con año crítico y razón técnica de selección.</p>
+<section id="sec-limitaciones-jerk" class="level2" data-number="12.13">
+<h2 data-number="12.13" class="anchored" data-anchor-id="sec-limitaciones-jerk"><span class="header-section-number">12.13</span> Limitaciones</h2>
+<p>El análisis tiene limitaciones que deben mantenerse visibles:</p>
+<ul>
+<li>el jerk detecta discontinuidades, no causas;</li>
+<li>un evento extremo puede deberse a cambio ecológico real, ruido, nube, nieve, mosaico débil, cambio de cobertura temporal o efecto metodológico;</li>
+<li>la distancia a Punta Arenas se calculó como aproximación euclidiana, no como tiempo real de viaje;</li>
+<li>pertenecer a la comuna de Punta Arenas no implica cercanía al centro urbano;</li>
+<li>las cuencas seleccionadas están en anillo extendido, por lo que la logística puede ser más exigente de lo que sugiere una lectura comunal;</li>
+<li>la selección no incorpora todavía permisos, propiedad, estado de caminos, conocimiento local ni seguridad de vuelo;</li>
+<li>las coberturas de jerk en 2023-2025 son menores que en 2020-2021, lo que obliga a revisar disponibilidad y calidad de datos.</li>
+</ul>
+<p>Estas limitaciones no invalidan el análisis. Definen su uso correcto: una herramienta para orientar dónde mirar primero y qué preguntas llevar a terreno.</p>
+</section>
+<section id="sec-cierre-jerk" class="level2" data-number="12.14">
+<h2 data-number="12.14" class="anchored" data-anchor-id="sec-cierre-jerk"><span class="header-section-number">12.14</span> Cierre operativo</h2>
+<p>La selección de cuencas por jerk convierte el panel MRCT en una agenda preliminar de validación territorial. El procesamiento identificó eventos abruptos recientes, construyó una base consultable, produjo mapas y generó una lista de diez cuencas candidatas.</p>
+<p>El siguiente paso no es salir directamente a esas diez cuencas, sino someter la lista a una revisión aplicada: análisis detallado de accesibilidad, reunión con personas locales, evaluación de rutas, permisos, clima, seguridad y pertinencia territorial. Con esa revisión, el ranking puede transformarse en un plan de terreno con sitios principales, sitios alternativos y preguntas de validación claras.</p>
 
 
 </section>
