@@ -1,4 +1,290 @@
 ---
 title: "Trabajo en Terreno"
+subtitle: "Planificación, levantamiento y validación territorial de cuencas prioritarias"
 ---
 
+Esta sección transforma la lectura analítica de la MRCT en un plan operativo de validación territorial. Su propósito es organizar el paso desde las señales detectadas en gabinete hacia una campaña de terreno capaz de observar, medir y documentar condiciones reales en cuencas seleccionadas de la Región de Magallanes y de la Antártica Chilena.
+
+El trabajo de terreno no busca reemplazar la MRCT ni confirmar mecánicamente sus resultados. Su función es contrastar la señal satelital con evidencia directa: registros fotográficos, vuelos de dron, mediciones ambientales, observación de cobertura, humedad superficial, accesibilidad, presencia de agua, perturbaciones visibles y condiciones locales que no siempre quedan capturadas por los indicadores remotos.
+
+La sección se organiza en tres momentos. Primero, una fase previa de selección de cuencas prioritarias mediante análisis de **jerk**, desarrollada en el capítulo [Selección de Cuencas Prioritarias](jerk.qmd). Segundo, una fase de campaña en terreno, donde se levantan registros comparables en cada cuenca visitada. Tercero, una fase posterior de integración, control de calidad y retroalimentación de la MRCT con la evidencia levantada.
+
+::: {.callout-note}
+## Objetivo de la campaña
+
+Planificar y ejecutar una campaña de terreno trazable para validar cuencas priorizadas por la MRCT, combinando registros fotográficos con dron, mediciones ambientales puntuales, observación directa y fichas estandarizadas por sitio.
+:::
+
+## Enfoque general {#sec-enfoque-trabajo-terreno}
+
+La campaña debe entenderse como una extensión metodológica del modelo MRCT. El análisis satelital identifica cuencas donde la trayectoria ecosistémica muestra señales relevantes; el terreno permite revisar si esas señales se asocian con condiciones observables, eventos recientes, contrastes locales o restricciones de interpretación.
+
+La unidad operativa sigue siendo la cuenca hidrográfica, pero el levantamiento se realiza en puntos visitables dentro o cerca de cada cuenca priorizada. Por esta razón, cada sitio debe quedar asociado a un `RID`, una coordenada, una fecha, una hora de observación, condiciones meteorológicas y una ficha de terreno.
+
+La planificación debe cumplir cuatro criterios:
+
+- **trazabilidad**, para conectar cada observación con la cuenca, el año crítico, las métricas MRCT y la ficha de campaña;
+- **comparabilidad**, para levantar registros similares entre cuencas distintas;
+- **seguridad**, para reducir riesgos logísticos, climáticos, operacionales y de vuelo;
+- **utilidad analítica**, para que los datos levantados puedan volver al sistema MRCT como evidencia de validación, comentario o ajuste metodológico.
+
+## Etapas del trabajo de terreno {#sec-etapas-trabajo-terreno}
+
+El flujo completo se organiza en tres fases principales.
+
+| Fase | Propósito | Productos esperados |
+|---|---|---|
+| 1. Pre-terreno | Seleccionar cuencas, preparar rutas, permisos, fichas, equipos y protocolo de medición. | Lista priorizada de cuencas, mapas, fichas por sitio, plan logístico y checklist de equipos. |
+| 2. Terreno | Registrar evidencia directa en cada cuenca visitada con protocolo común. | Fotografías, vuelos de dron, mediciones ambientales, notas de campo, coordenadas y bitácora diaria. |
+| 3. Post-terreno | Ordenar, respaldar, validar e integrar los datos levantados con la MRCT. | Base de observaciones, repositorio fotográfico, reporte de validación y recomendaciones metodológicas. |
+
+: Fases generales del trabajo de terreno para validación MRCT. {#tbl-fases-trabajo-terreno}
+
+## Fase 1: planificación previa {#sec-planificacion-previa-terreno}
+
+La fase previa debe resolver qué cuencas se visitarán, por qué se eligieron, cómo se llegará a ellas y qué se medirá en cada sitio. Esta planificación reduce improvisación y permite que la campaña sea comparable entre equipos, días y rutas.
+
+### Selección de cuencas
+
+La selección inicial proviene del análisis de jerk descrito en [Selección de Cuencas Prioritarias](jerk.qmd). Ese capítulo define un flujo para identificar cuencas con cambios abruptos en la trayectoria MRCT, cruzarlas con accesibilidad y preparar una lista priorizada para validación.
+
+Antes de salir a terreno, la lista debe revisarse con criterios operativos:
+
+- magnitud y año del evento de jerk;
+- condición actual de `RES`, $PT$, $D$, $V$, $SENS$ y $D_{local}$;
+- cercanía a caminos, huellas, predios, pasos habilitados o puntos de observación seguros;
+- distancia desde Punta Arenas u otra base logística;
+- existencia de alternativas cercanas si una cuenca resulta inaccesible;
+- representatividad de distintos tipos de señal: degradación activa, recuperación ecológica, transición, resiliencia estable o contraste local;
+- restricciones de clima, permisos, propiedad, conectividad y tiempo disponible.
+
+La selección final debe incluir una lista principal y una lista de reemplazo. Para cada cuenca se recomienda preparar una ficha con `RID`, comuna, coordenada objetivo, ruta de acceso, mapa, señal MRCT relevante, año crítico, prioridad, riesgos y observaciones esperadas.
+
+### Diseño de rutas y logística
+
+La logística debe organizarse por jornadas. Cada jornada debe agrupar cuencas cercanas entre sí y considerar tiempos reales de traslado, caminata, instalación de equipos, vuelo de dron, mediciones, pausas, clima y retorno.
+
+El plan mínimo debe incluir:
+
+- punto de partida y retorno;
+- orden de visita de cuencas;
+- coordenadas de acceso y puntos alternativos;
+- estimación de distancia y tiempo por tramo;
+- ventanas horarias de medición y vuelo;
+- disponibilidad de combustible, alimentación, agua y comunicaciones;
+- zonas sin cobertura móvil;
+- contacto de emergencia y protocolo de aviso;
+- condiciones mínimas para suspender una visita o vuelo.
+
+En Magallanes, la planificación debe considerar viento, cambios rápidos de clima, baja temperatura, lluvia, nieve, barro, caminos secundarios, horarios de luz y distancia entre puntos. La bitácora debe registrar cualquier cambio de ruta, sitio no visitado o reemplazo activado.
+
+### Permisos y coordinación
+
+Antes de la campaña se debe revisar si las cuencas o puntos de acceso involucran propiedad privada, áreas protegidas, infraestructura crítica, caminos restringidos, borde costero, zonas de conservación o restricciones de vuelo. La coordinación previa evita pérdidas de jornada y reduce riesgos para el equipo.
+
+La carpeta de campaña debe incluir:
+
+- autorizaciones de ingreso cuando correspondan;
+- revisión de restricciones para operación de dron;
+- identificación de pilotos y responsables de seguridad;
+- seguros, credenciales o documentación institucional si aplica;
+- contactos locales relevantes;
+- protocolo de consentimiento si se registran personas, viviendas o actividades productivas;
+- criterios para no publicar imágenes sensibles de predios, infraestructura o personas.
+
+### Equipamiento mínimo
+
+El equipamiento debe separarse en registro, medición, navegación, seguridad y respaldo de datos.
+
+| Grupo | Equipos o insumos | Uso |
+|---|---|---|
+| Registro visual | Dron, baterías, hélices, tarjetas SD, cámara o teléfono con buena resolución. | Fotografías aéreas, panorámicas, ortofotos simples y evidencia visual del sitio. |
+| Medición ambiental | Termómetro, higrómetro, sensor multiparámetro si existe, medidor de temperatura superficial o de agua, cinta métrica y libreta impermeable. | Temperatura, humedad relativa, temperatura de suelo o agua, observaciones físicas básicas. |
+| Navegación | GPS, teléfono con mapas offline, coordenadas precargadas, mapas impresos. | Ubicación de cuencas, puntos de medición y rutas alternativas. |
+| Seguridad | Botiquín, ropa térmica, cortaviento, impermeable, agua, linterna, radio o teléfono satelital si aplica. | Manejo de riesgo climático, aislamiento y accidentes. |
+| Datos | Discos externos, lector de tarjetas, baterías externas, planilla de respaldo y nomenclatura de archivos. | Respaldo diario y ordenamiento de evidencia. |
+
+: Equipamiento mínimo recomendado para campaña de terreno MRCT. {#tbl-equipamiento-terreno}
+
+## Fase 2: levantamiento en terreno {#sec-levantamiento-terreno}
+
+La fase de terreno debe generar evidencia homogénea por cuenca. Cada visita debe comenzar con una identificación del sitio y cerrar con una revisión rápida de completitud: fotografías, vuelo, mediciones, coordenadas, notas y respaldo.
+
+### Ficha por sitio
+
+Cada cuenca visitada debe tener una ficha única. La ficha puede levantarse en papel, formulario digital o planilla offline, pero debe conservar los mismos campos.
+
+| Campo | Descripción |
+|---|---|
+| Identificación | `RID`, nombre operativo del sitio, comuna, equipo responsable, fecha y hora. |
+| Ubicación | Coordenada del punto de observación, precisión GPS, altitud si está disponible. |
+| Condiciones | Nubosidad, viento, precipitación, temperatura ambiente, humedad relativa y visibilidad. |
+| Registro visual | Código de fotografías, vuelo de dron, orientación de tomas y observaciones de cobertura. |
+| Mediciones | Temperatura, humedad, temperatura de agua o suelo si corresponde, y otros sensores disponibles. |
+| Observación ecológica | Agua visible, nieve, vegetación, suelo expuesto, humedales, erosión, quemas, ganado, infraestructura o intervención antrópica. |
+| Validación MRCT | Si la señal esperada se observa, no se observa o requiere revisión posterior. |
+| Incidencias | Problemas de acceso, clima, permisos, falla de equipo o cambios de punto. |
+
+: Contenido mínimo de la ficha de terreno por cuenca. {#tbl-ficha-terreno}
+
+### Registro fotográfico y vuelos de dron
+
+El registro visual debe ser sistemático. Las fotografías de dron permiten observar continuidad de cobertura, presencia de agua, drenajes, humedales, nieve residual, erosión, caminos, usos de suelo y cambios locales que pueden explicar señales MRCT.
+
+Se recomienda levantar, como mínimo:
+
+- fotografía de contexto desde el punto de acceso;
+- fotografía panorámica de la cuenca o subárea observable;
+- serie de fotografías cardinales: norte, este, sur y oeste;
+- vuelo vertical o nadiral si las condiciones lo permiten;
+- vuelo oblicuo para capturar relieve, pendiente y continuidad espacial;
+- fotografía del punto exacto de medición;
+- registro de condiciones que limiten la interpretación: sombra, nubosidad, viento, lluvia, nieve o baja visibilidad.
+
+Cada archivo debe nombrarse con una convención estable, por ejemplo:
+
+```text
+RID_YYYYMMDD_HHMM_tipo_registro_numero
+```
+
+Ejemplo:
+
+```text
+1175_20260215_1030_dron_oblicua_01.jpg
+```
+
+Los vuelos sólo deben realizarse si las condiciones de viento, visibilidad, batería, permisos y seguridad son adecuadas. Si el vuelo se suspende, la ficha debe indicar la razón y reemplazarlo por fotografías terrestres desde puntos seguros.
+
+### Mediciones ambientales
+
+Las mediciones deben ser simples, repetibles y bien documentadas. Aunque no sustituyen una estación meteorológica, permiten contextualizar la visita y comparar condiciones entre cuencas.
+
+El protocolo mínimo incluye:
+
+- temperatura ambiente;
+- humedad relativa;
+- temperatura superficial del suelo si se cuenta con sensor;
+- temperatura de agua cuando exista curso o cuerpo de agua accesible;
+- observación de humedad superficial del suelo;
+- presencia o ausencia de agua visible;
+- profundidad aproximada, ancho del cauce o estado de flujo si se puede medir sin riesgo;
+- cobertura de nieve o hielo visible;
+- observaciones de viento, nubosidad y precipitación.
+
+Las mediciones deben registrar unidad, instrumento, hora, coordenada y responsable. Si se repite una medición, se debe conservar el valor original y el promedio calculado, no reemplazar datos en terreno sin dejar registro.
+
+### Observación cualitativa
+
+La ficha debe capturar señales que ayudan a interpretar la MRCT:
+
+- cambios recientes de cobertura vegetal;
+- sectores anegados, secos o con humedad contrastante;
+- presencia de turberas, humedales, vegas, matorral, bosque o suelo desnudo;
+- evidencia de erosión, remoción, incendio, tala, pastoreo, caminos, drenajes o infraestructura;
+- diferencias visibles entre la cuenca priorizada y su entorno;
+- obstáculos para que la señal satelital represente bien el sitio: sombra topográfica, nieve persistente, nubes frecuentes, mezcla de coberturas o accesibilidad limitada.
+
+Estas observaciones no deben forzar una explicación causal. Su valor está en documentar condiciones que orienten la interpretación posterior.
+
+## Fase 3: trabajo post-terreno {#sec-post-terreno}
+
+La etapa posterior convierte la campaña en datos utilizables. Debe comenzar el mismo día de cada salida, con respaldo y control de archivos, y continuar con la integración analítica.
+
+### Respaldo y control de calidad
+
+Al cierre de cada jornada se debe:
+
+- copiar fotografías, videos, vuelos y formularios a un repositorio común;
+- verificar que cada archivo tenga `RID`, fecha y tipo de registro;
+- marcar archivos dañados, duplicados o sin coordenada;
+- respaldar tarjetas antes de reutilizarlas;
+- revisar que cada cuenca tenga ficha completa;
+- registrar cuencas no visitadas, reemplazos y causas;
+- consolidar una bitácora diaria con decisiones logísticas y problemas encontrados.
+
+### Integración con MRCT
+
+La información levantada debe volver a la base analítica como una tabla de validación. Esta tabla no modifica automáticamente las métricas MRCT, pero permite clasificar la evidencia asociada a cada cuenca.
+
+| Variable sugerida | Descripción |
+|---|---|
+| `RID` | Identificador de cuenca. |
+| `visit_date` | Fecha de visita. |
+| `field_status` | Visitada, no visitada, reemplazada o acceso parcial. |
+| `drone_status` | Vuelo completo, vuelo parcial, suspendido o no aplica. |
+| `photo_count` | Número de registros fotográficos útiles. |
+| `temp_air_c` | Temperatura ambiente medida en terreno. |
+| `humidity_pct` | Humedad relativa. |
+| `water_present` | Presencia de agua visible. |
+| `snow_present` | Presencia de nieve o hielo visible. |
+| `visible_disturbance` | Perturbación visible registrada en ficha. |
+| `mrct_consistency` | Consistente, parcialmente consistente, no consistente o no evaluable. |
+| `field_notes` | Síntesis cualitativa de la observación. |
+
+: Variables sugeridas para integrar el levantamiento de terreno con la base MRCT. {#tbl-integracion-terreno-mrct}
+
+### Productos finales
+
+La campaña debe cerrar con productos verificables:
+
+- base consolidada de observaciones por cuenca;
+- carpeta fotográfica organizada por `RID`;
+- mosaicos, ortofotos simples o capturas clave de dron cuando corresponda;
+- mapa de cuencas visitadas y no visitadas;
+- tabla de consistencia entre señal MRCT y observación de terreno;
+- reporte de hallazgos por cuenca;
+- recomendaciones para ajustar criterios de selección, umbrales, variables o futuras campañas;
+- anexo metodológico con protocolo, instrumentos, fechas, responsables y limitaciones.
+
+## Criterios de lectura de la validación {#sec-criterios-validacion-terreno}
+
+La validación debe separar cuatro resultados posibles.
+
+| Resultado | Interpretación | Acción recomendada |
+|---|---|---|
+| Consistente | La observación de terreno muestra condiciones compatibles con la señal MRCT. | Documentar evidencia y mantener criterio de priorización. |
+| Parcialmente consistente | Se observan algunas señales, pero existen factores locales o limitaciones de observación. | Revisar series, imágenes y contexto territorial. |
+| No consistente | La señal MRCT no se refleja en la observación disponible. | Auditar insumos, fecha de imágenes, nubes, nieve, clasificación o escala espacial. |
+| No evaluable | El sitio no pudo observarse adecuadamente por acceso, clima, vuelo suspendido o baja visibilidad. | Reprogramar, usar sitio alternativo o marcar limitación. |
+
+: Criterios para interpretar la consistencia entre MRCT y terreno. {#tbl-criterios-validacion-terreno}
+
+Un resultado "no consistente" no invalida la MRCT por sí solo. Puede indicar que el sitio visitado no representa toda la cuenca, que la condición cambió después del año crítico, que hubo limitaciones de observación o que la señal satelital requiere una auditoría específica. Por eso la campaña debe registrar tanto evidencia favorable como dudas, contradicciones y vacíos.
+
+## Checklist operativo {#sec-checklist-terreno}
+
+Antes de salir:
+
+- lista final de cuencas y reemplazos;
+- mapas offline y mapas impresos;
+- fichas precargadas con `RID`, coordenadas y métricas MRCT;
+- permisos y contactos revisados;
+- pronóstico meteorológico revisado;
+- dron, baterías, tarjetas y hélices verificados;
+- sensores calibrados o revisados;
+- protocolo de seguridad y comunicación activo;
+- estructura de carpetas y nomenclatura definida.
+
+Durante la visita:
+
+- registrar hora, coordenada y condiciones del sitio;
+- tomar fotografías terrestres de contexto;
+- realizar vuelo de dron si las condiciones son seguras;
+- medir temperatura, humedad y variables disponibles;
+- completar observaciones de cobertura, agua, nieve, perturbaciones y accesibilidad;
+- anotar cualquier desviación del protocolo;
+- revisar que la ficha esté completa antes de salir del sitio.
+
+Después de la jornada:
+
+- respaldar todos los archivos;
+- revisar nombres, fechas y asociación con `RID`;
+- consolidar formularios y bitácora;
+- marcar datos incompletos;
+- preparar una síntesis diaria de cuencas visitadas, problemas y próximos ajustes.
+
+## Cierre {#sec-cierre-trabajo-terreno}
+
+El trabajo de terreno convierte la MRCT en una herramienta verificable en territorio. La selección por jerk permite priorizar dónde mirar; la campaña permite observar cómo se expresa esa señal en condiciones reales; y el post-terreno permite devolver la evidencia al sistema analítico.
+
+Este flujo es especialmente importante porque la MRCT trabaja con señales multivariadas y series temporales. Sin terreno, esas señales pueden orientar prioridades, pero quedan incompletas como lectura territorial. Con terreno, la interpretación gana contexto, límites, evidencia visual y criterios para mejorar futuras campañas de monitoreo.

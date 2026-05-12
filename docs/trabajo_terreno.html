@@ -70,6 +70,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -214,8 +257,38 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#sec-enfoque-trabajo-terreno" id="toc-sec-enfoque-trabajo-terreno" class="nav-link active" data-scroll-target="#sec-enfoque-trabajo-terreno">Enfoque general</a></li>
+  <li><a href="#sec-etapas-trabajo-terreno" id="toc-sec-etapas-trabajo-terreno" class="nav-link" data-scroll-target="#sec-etapas-trabajo-terreno">Etapas del trabajo de terreno</a></li>
+  <li><a href="#sec-planificacion-previa-terreno" id="toc-sec-planificacion-previa-terreno" class="nav-link" data-scroll-target="#sec-planificacion-previa-terreno">Fase 1: planificación previa</a>
+  <ul class="collapse">
+  <li><a href="#selección-de-cuencas" id="toc-selección-de-cuencas" class="nav-link" data-scroll-target="#selección-de-cuencas">Selección de cuencas</a></li>
+  <li><a href="#diseño-de-rutas-y-logística" id="toc-diseño-de-rutas-y-logística" class="nav-link" data-scroll-target="#diseño-de-rutas-y-logística">Diseño de rutas y logística</a></li>
+  <li><a href="#permisos-y-coordinación" id="toc-permisos-y-coordinación" class="nav-link" data-scroll-target="#permisos-y-coordinación">Permisos y coordinación</a></li>
+  <li><a href="#equipamiento-mínimo" id="toc-equipamiento-mínimo" class="nav-link" data-scroll-target="#equipamiento-mínimo">Equipamiento mínimo</a></li>
+  </ul></li>
+  <li><a href="#sec-levantamiento-terreno" id="toc-sec-levantamiento-terreno" class="nav-link" data-scroll-target="#sec-levantamiento-terreno">Fase 2: levantamiento en terreno</a>
+  <ul class="collapse">
+  <li><a href="#ficha-por-sitio" id="toc-ficha-por-sitio" class="nav-link" data-scroll-target="#ficha-por-sitio">Ficha por sitio</a></li>
+  <li><a href="#registro-fotográfico-y-vuelos-de-dron" id="toc-registro-fotográfico-y-vuelos-de-dron" class="nav-link" data-scroll-target="#registro-fotográfico-y-vuelos-de-dron">Registro fotográfico y vuelos de dron</a></li>
+  <li><a href="#mediciones-ambientales" id="toc-mediciones-ambientales" class="nav-link" data-scroll-target="#mediciones-ambientales">Mediciones ambientales</a></li>
+  <li><a href="#observación-cualitativa" id="toc-observación-cualitativa" class="nav-link" data-scroll-target="#observación-cualitativa">Observación cualitativa</a></li>
+  </ul></li>
+  <li><a href="#sec-post-terreno" id="toc-sec-post-terreno" class="nav-link" data-scroll-target="#sec-post-terreno">Fase 3: trabajo post-terreno</a>
+  <ul class="collapse">
+  <li><a href="#respaldo-y-control-de-calidad" id="toc-respaldo-y-control-de-calidad" class="nav-link" data-scroll-target="#respaldo-y-control-de-calidad">Respaldo y control de calidad</a></li>
+  <li><a href="#integración-con-mrct" id="toc-integración-con-mrct" class="nav-link" data-scroll-target="#integración-con-mrct">Integración con MRCT</a></li>
+  <li><a href="#productos-finales" id="toc-productos-finales" class="nav-link" data-scroll-target="#productos-finales">Productos finales</a></li>
+  </ul></li>
+  <li><a href="#sec-criterios-validacion-terreno" id="toc-sec-criterios-validacion-terreno" class="nav-link" data-scroll-target="#sec-criterios-validacion-terreno">Criterios de lectura de la validación</a></li>
+  <li><a href="#sec-checklist-terreno" id="toc-sec-checklist-terreno" class="nav-link" data-scroll-target="#sec-checklist-terreno">Checklist operativo</a></li>
+  <li><a href="#sec-cierre-trabajo-terreno" id="toc-sec-cierre-trabajo-terreno" class="nav-link" data-scroll-target="#sec-cierre-trabajo-terreno">Cierre</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -223,6 +296,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Trabajo en Terreno</h1>
+<p class="subtitle lead">Planificación, levantamiento y validación territorial de cuencas prioritarias</p>
 </div>
 
 
@@ -239,8 +313,490 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Esta sección transforma la lectura analítica de la MRCT en un plan operativo de validación territorial. Su propósito es organizar el paso desde las señales detectadas en gabinete hacia una campaña de terreno capaz de observar, medir y documentar condiciones reales en cuencas seleccionadas de la Región de Magallanes y de la Antártica Chilena.</p>
+<p>El trabajo de terreno no busca reemplazar la MRCT ni confirmar mecánicamente sus resultados. Su función es contrastar la señal satelital con evidencia directa: registros fotográficos, vuelos de dron, mediciones ambientales, observación de cobertura, humedad superficial, accesibilidad, presencia de agua, perturbaciones visibles y condiciones locales que no siempre quedan capturadas por los indicadores remotos.</p>
+<p>La sección se organiza en tres momentos. Primero, una fase previa de selección de cuencas prioritarias mediante análisis de <strong>jerk</strong>, desarrollada en el capítulo <a href="./jerk.html">Selección de Cuencas Prioritarias</a>. Segundo, una fase de campaña en terreno, donde se levantan registros comparables en cada cuenca visitada. Tercero, una fase posterior de integración, control de calidad y retroalimentación de la MRCT con la evidencia levantada.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objetivo de la campaña
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Planificar y ejecutar una campaña de terreno trazable para validar cuencas priorizadas por la MRCT, combinando registros fotográficos con dron, mediciones ambientales puntuales, observación directa y fichas estandarizadas por sitio.</p>
+</div>
+</div>
+<section id="sec-enfoque-trabajo-terreno" class="level2">
+<h2 class="anchored" data-anchor-id="sec-enfoque-trabajo-terreno">Enfoque general</h2>
+<p>La campaña debe entenderse como una extensión metodológica del modelo MRCT. El análisis satelital identifica cuencas donde la trayectoria ecosistémica muestra señales relevantes; el terreno permite revisar si esas señales se asocian con condiciones observables, eventos recientes, contrastes locales o restricciones de interpretación.</p>
+<p>La unidad operativa sigue siendo la cuenca hidrográfica, pero el levantamiento se realiza en puntos visitables dentro o cerca de cada cuenca priorizada. Por esta razón, cada sitio debe quedar asociado a un <code>RID</code>, una coordenada, una fecha, una hora de observación, condiciones meteorológicas y una ficha de terreno.</p>
+<p>La planificación debe cumplir cuatro criterios:</p>
+<ul>
+<li><strong>trazabilidad</strong>, para conectar cada observación con la cuenca, el año crítico, las métricas MRCT y la ficha de campaña;</li>
+<li><strong>comparabilidad</strong>, para levantar registros similares entre cuencas distintas;</li>
+<li><strong>seguridad</strong>, para reducir riesgos logísticos, climáticos, operacionales y de vuelo;</li>
+<li><strong>utilidad analítica</strong>, para que los datos levantados puedan volver al sistema MRCT como evidencia de validación, comentario o ajuste metodológico.</li>
+</ul>
+</section>
+<section id="sec-etapas-trabajo-terreno" class="level2">
+<h2 class="anchored" data-anchor-id="sec-etapas-trabajo-terreno">Etapas del trabajo de terreno</h2>
+<p>El flujo completo se organiza en tres fases principales.</p>
+<div id="tbl-fases-trabajo-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fases-trabajo-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Fases generales del trabajo de terreno para validación MRCT.
+</figcaption>
+<div aria-describedby="tbl-fases-trabajo-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fase</th>
+<th>Propósito</th>
+<th>Productos esperados</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Pre-terreno</td>
+<td>Seleccionar cuencas, preparar rutas, permisos, fichas, equipos y protocolo de medición.</td>
+<td>Lista priorizada de cuencas, mapas, fichas por sitio, plan logístico y checklist de equipos.</td>
+</tr>
+<tr class="even">
+<td>2. Terreno</td>
+<td>Registrar evidencia directa en cada cuenca visitada con protocolo común.</td>
+<td>Fotografías, vuelos de dron, mediciones ambientales, notas de campo, coordenadas y bitácora diaria.</td>
+</tr>
+<tr class="odd">
+<td>3. Post-terreno</td>
+<td>Ordenar, respaldar, validar e integrar los datos levantados con la MRCT.</td>
+<td>Base de observaciones, repositorio fotográfico, reporte de validación y recomendaciones metodológicas.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-planificacion-previa-terreno" class="level2">
+<h2 class="anchored" data-anchor-id="sec-planificacion-previa-terreno">Fase 1: planificación previa</h2>
+<p>La fase previa debe resolver qué cuencas se visitarán, por qué se eligieron, cómo se llegará a ellas y qué se medirá en cada sitio. Esta planificación reduce improvisación y permite que la campaña sea comparable entre equipos, días y rutas.</p>
+<section id="selección-de-cuencas" class="level3">
+<h3 class="anchored" data-anchor-id="selección-de-cuencas">Selección de cuencas</h3>
+<p>La selección inicial proviene del análisis de jerk descrito en <a href="./jerk.html">Selección de Cuencas Prioritarias</a>. Ese capítulo define un flujo para identificar cuencas con cambios abruptos en la trayectoria MRCT, cruzarlas con accesibilidad y preparar una lista priorizada para validación.</p>
+<p>Antes de salir a terreno, la lista debe revisarse con criterios operativos:</p>
+<ul>
+<li>magnitud y año del evento de jerk;</li>
+<li>condición actual de <code>RES</code>, <span class="math inline">PT</span>, <span class="math inline">D</span>, <span class="math inline">V</span>, <span class="math inline">SENS</span> y <span class="math inline">D_{local}</span>;</li>
+<li>cercanía a caminos, huellas, predios, pasos habilitados o puntos de observación seguros;</li>
+<li>distancia desde Punta Arenas u otra base logística;</li>
+<li>existencia de alternativas cercanas si una cuenca resulta inaccesible;</li>
+<li>representatividad de distintos tipos de señal: degradación activa, recuperación ecológica, transición, resiliencia estable o contraste local;</li>
+<li>restricciones de clima, permisos, propiedad, conectividad y tiempo disponible.</li>
+</ul>
+<p>La selección final debe incluir una lista principal y una lista de reemplazo. Para cada cuenca se recomienda preparar una ficha con <code>RID</code>, comuna, coordenada objetivo, ruta de acceso, mapa, señal MRCT relevante, año crítico, prioridad, riesgos y observaciones esperadas.</p>
+</section>
+<section id="diseño-de-rutas-y-logística" class="level3">
+<h3 class="anchored" data-anchor-id="diseño-de-rutas-y-logística">Diseño de rutas y logística</h3>
+<p>La logística debe organizarse por jornadas. Cada jornada debe agrupar cuencas cercanas entre sí y considerar tiempos reales de traslado, caminata, instalación de equipos, vuelo de dron, mediciones, pausas, clima y retorno.</p>
+<p>El plan mínimo debe incluir:</p>
+<ul>
+<li>punto de partida y retorno;</li>
+<li>orden de visita de cuencas;</li>
+<li>coordenadas de acceso y puntos alternativos;</li>
+<li>estimación de distancia y tiempo por tramo;</li>
+<li>ventanas horarias de medición y vuelo;</li>
+<li>disponibilidad de combustible, alimentación, agua y comunicaciones;</li>
+<li>zonas sin cobertura móvil;</li>
+<li>contacto de emergencia y protocolo de aviso;</li>
+<li>condiciones mínimas para suspender una visita o vuelo.</li>
+</ul>
+<p>En Magallanes, la planificación debe considerar viento, cambios rápidos de clima, baja temperatura, lluvia, nieve, barro, caminos secundarios, horarios de luz y distancia entre puntos. La bitácora debe registrar cualquier cambio de ruta, sitio no visitado o reemplazo activado.</p>
+</section>
+<section id="permisos-y-coordinación" class="level3">
+<h3 class="anchored" data-anchor-id="permisos-y-coordinación">Permisos y coordinación</h3>
+<p>Antes de la campaña se debe revisar si las cuencas o puntos de acceso involucran propiedad privada, áreas protegidas, infraestructura crítica, caminos restringidos, borde costero, zonas de conservación o restricciones de vuelo. La coordinación previa evita pérdidas de jornada y reduce riesgos para el equipo.</p>
+<p>La carpeta de campaña debe incluir:</p>
+<ul>
+<li>autorizaciones de ingreso cuando correspondan;</li>
+<li>revisión de restricciones para operación de dron;</li>
+<li>identificación de pilotos y responsables de seguridad;</li>
+<li>seguros, credenciales o documentación institucional si aplica;</li>
+<li>contactos locales relevantes;</li>
+<li>protocolo de consentimiento si se registran personas, viviendas o actividades productivas;</li>
+<li>criterios para no publicar imágenes sensibles de predios, infraestructura o personas.</li>
+</ul>
+</section>
+<section id="equipamiento-mínimo" class="level3">
+<h3 class="anchored" data-anchor-id="equipamiento-mínimo">Equipamiento mínimo</h3>
+<p>El equipamiento debe separarse en registro, medición, navegación, seguridad y respaldo de datos.</p>
+<div id="tbl-equipamiento-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-equipamiento-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Equipamiento mínimo recomendado para campaña de terreno MRCT.
+</figcaption>
+<div aria-describedby="tbl-equipamiento-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Grupo</th>
+<th>Equipos o insumos</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Registro visual</td>
+<td>Dron, baterías, hélices, tarjetas SD, cámara o teléfono con buena resolución.</td>
+<td>Fotografías aéreas, panorámicas, ortofotos simples y evidencia visual del sitio.</td>
+</tr>
+<tr class="even">
+<td>Medición ambiental</td>
+<td>Termómetro, higrómetro, sensor multiparámetro si existe, medidor de temperatura superficial o de agua, cinta métrica y libreta impermeable.</td>
+<td>Temperatura, humedad relativa, temperatura de suelo o agua, observaciones físicas básicas.</td>
+</tr>
+<tr class="odd">
+<td>Navegación</td>
+<td>GPS, teléfono con mapas offline, coordenadas precargadas, mapas impresos.</td>
+<td>Ubicación de cuencas, puntos de medición y rutas alternativas.</td>
+</tr>
+<tr class="even">
+<td>Seguridad</td>
+<td>Botiquín, ropa térmica, cortaviento, impermeable, agua, linterna, radio o teléfono satelital si aplica.</td>
+<td>Manejo de riesgo climático, aislamiento y accidentes.</td>
+</tr>
+<tr class="odd">
+<td>Datos</td>
+<td>Discos externos, lector de tarjetas, baterías externas, planilla de respaldo y nomenclatura de archivos.</td>
+<td>Respaldo diario y ordenamiento de evidencia.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-levantamiento-terreno" class="level2">
+<h2 class="anchored" data-anchor-id="sec-levantamiento-terreno">Fase 2: levantamiento en terreno</h2>
+<p>La fase de terreno debe generar evidencia homogénea por cuenca. Cada visita debe comenzar con una identificación del sitio y cerrar con una revisión rápida de completitud: fotografías, vuelo, mediciones, coordenadas, notas y respaldo.</p>
+<section id="ficha-por-sitio" class="level3">
+<h3 class="anchored" data-anchor-id="ficha-por-sitio">Ficha por sitio</h3>
+<p>Cada cuenca visitada debe tener una ficha única. La ficha puede levantarse en papel, formulario digital o planilla offline, pero debe conservar los mismos campos.</p>
+<div id="tbl-ficha-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ficha-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Contenido mínimo de la ficha de terreno por cuenca.
+</figcaption>
+<div aria-describedby="tbl-ficha-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Identificación</td>
+<td><code>RID</code>, nombre operativo del sitio, comuna, equipo responsable, fecha y hora.</td>
+</tr>
+<tr class="even">
+<td>Ubicación</td>
+<td>Coordenada del punto de observación, precisión GPS, altitud si está disponible.</td>
+</tr>
+<tr class="odd">
+<td>Condiciones</td>
+<td>Nubosidad, viento, precipitación, temperatura ambiente, humedad relativa y visibilidad.</td>
+</tr>
+<tr class="even">
+<td>Registro visual</td>
+<td>Código de fotografías, vuelo de dron, orientación de tomas y observaciones de cobertura.</td>
+</tr>
+<tr class="odd">
+<td>Mediciones</td>
+<td>Temperatura, humedad, temperatura de agua o suelo si corresponde, y otros sensores disponibles.</td>
+</tr>
+<tr class="even">
+<td>Observación ecológica</td>
+<td>Agua visible, nieve, vegetación, suelo expuesto, humedales, erosión, quemas, ganado, infraestructura o intervención antrópica.</td>
+</tr>
+<tr class="odd">
+<td>Validación MRCT</td>
+<td>Si la señal esperada se observa, no se observa o requiere revisión posterior.</td>
+</tr>
+<tr class="even">
+<td>Incidencias</td>
+<td>Problemas de acceso, clima, permisos, falla de equipo o cambios de punto.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="registro-fotográfico-y-vuelos-de-dron" class="level3">
+<h3 class="anchored" data-anchor-id="registro-fotográfico-y-vuelos-de-dron">Registro fotográfico y vuelos de dron</h3>
+<p>El registro visual debe ser sistemático. Las fotografías de dron permiten observar continuidad de cobertura, presencia de agua, drenajes, humedales, nieve residual, erosión, caminos, usos de suelo y cambios locales que pueden explicar señales MRCT.</p>
+<p>Se recomienda levantar, como mínimo:</p>
+<ul>
+<li>fotografía de contexto desde el punto de acceso;</li>
+<li>fotografía panorámica de la cuenca o subárea observable;</li>
+<li>serie de fotografías cardinales: norte, este, sur y oeste;</li>
+<li>vuelo vertical o nadiral si las condiciones lo permiten;</li>
+<li>vuelo oblicuo para capturar relieve, pendiente y continuidad espacial;</li>
+<li>fotografía del punto exacto de medición;</li>
+<li>registro de condiciones que limiten la interpretación: sombra, nubosidad, viento, lluvia, nieve o baja visibilidad.</li>
+</ul>
+<p>Cada archivo debe nombrarse con una convención estable, por ejemplo:</p>
+<pre class="text"><code>RID_YYYYMMDD_HHMM_tipo_registro_numero</code></pre>
+<p>Ejemplo:</p>
+<pre class="text"><code>1175_20260215_1030_dron_oblicua_01.jpg</code></pre>
+<p>Los vuelos sólo deben realizarse si las condiciones de viento, visibilidad, batería, permisos y seguridad son adecuadas. Si el vuelo se suspende, la ficha debe indicar la razón y reemplazarlo por fotografías terrestres desde puntos seguros.</p>
+</section>
+<section id="mediciones-ambientales" class="level3">
+<h3 class="anchored" data-anchor-id="mediciones-ambientales">Mediciones ambientales</h3>
+<p>Las mediciones deben ser simples, repetibles y bien documentadas. Aunque no sustituyen una estación meteorológica, permiten contextualizar la visita y comparar condiciones entre cuencas.</p>
+<p>El protocolo mínimo incluye:</p>
+<ul>
+<li>temperatura ambiente;</li>
+<li>humedad relativa;</li>
+<li>temperatura superficial del suelo si se cuenta con sensor;</li>
+<li>temperatura de agua cuando exista curso o cuerpo de agua accesible;</li>
+<li>observación de humedad superficial del suelo;</li>
+<li>presencia o ausencia de agua visible;</li>
+<li>profundidad aproximada, ancho del cauce o estado de flujo si se puede medir sin riesgo;</li>
+<li>cobertura de nieve o hielo visible;</li>
+<li>observaciones de viento, nubosidad y precipitación.</li>
+</ul>
+<p>Las mediciones deben registrar unidad, instrumento, hora, coordenada y responsable. Si se repite una medición, se debe conservar el valor original y el promedio calculado, no reemplazar datos en terreno sin dejar registro.</p>
+</section>
+<section id="observación-cualitativa" class="level3">
+<h3 class="anchored" data-anchor-id="observación-cualitativa">Observación cualitativa</h3>
+<p>La ficha debe capturar señales que ayudan a interpretar la MRCT:</p>
+<ul>
+<li>cambios recientes de cobertura vegetal;</li>
+<li>sectores anegados, secos o con humedad contrastante;</li>
+<li>presencia de turberas, humedales, vegas, matorral, bosque o suelo desnudo;</li>
+<li>evidencia de erosión, remoción, incendio, tala, pastoreo, caminos, drenajes o infraestructura;</li>
+<li>diferencias visibles entre la cuenca priorizada y su entorno;</li>
+<li>obstáculos para que la señal satelital represente bien el sitio: sombra topográfica, nieve persistente, nubes frecuentes, mezcla de coberturas o accesibilidad limitada.</li>
+</ul>
+<p>Estas observaciones no deben forzar una explicación causal. Su valor está en documentar condiciones que orienten la interpretación posterior.</p>
+</section>
+</section>
+<section id="sec-post-terreno" class="level2">
+<h2 class="anchored" data-anchor-id="sec-post-terreno">Fase 3: trabajo post-terreno</h2>
+<p>La etapa posterior convierte la campaña en datos utilizables. Debe comenzar el mismo día de cada salida, con respaldo y control de archivos, y continuar con la integración analítica.</p>
+<section id="respaldo-y-control-de-calidad" class="level3">
+<h3 class="anchored" data-anchor-id="respaldo-y-control-de-calidad">Respaldo y control de calidad</h3>
+<p>Al cierre de cada jornada se debe:</p>
+<ul>
+<li>copiar fotografías, videos, vuelos y formularios a un repositorio común;</li>
+<li>verificar que cada archivo tenga <code>RID</code>, fecha y tipo de registro;</li>
+<li>marcar archivos dañados, duplicados o sin coordenada;</li>
+<li>respaldar tarjetas antes de reutilizarlas;</li>
+<li>revisar que cada cuenca tenga ficha completa;</li>
+<li>registrar cuencas no visitadas, reemplazos y causas;</li>
+<li>consolidar una bitácora diaria con decisiones logísticas y problemas encontrados.</li>
+</ul>
+</section>
+<section id="integración-con-mrct" class="level3">
+<h3 class="anchored" data-anchor-id="integración-con-mrct">Integración con MRCT</h3>
+<p>La información levantada debe volver a la base analítica como una tabla de validación. Esta tabla no modifica automáticamente las métricas MRCT, pero permite clasificar la evidencia asociada a cada cuenca.</p>
+<div id="tbl-integracion-terreno-mrct" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-integracion-terreno-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Variables sugeridas para integrar el levantamiento de terreno con la base MRCT.
+</figcaption>
+<div aria-describedby="tbl-integracion-terreno-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable sugerida</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>RID</code></td>
+<td>Identificador de cuenca.</td>
+</tr>
+<tr class="even">
+<td><code>visit_date</code></td>
+<td>Fecha de visita.</td>
+</tr>
+<tr class="odd">
+<td><code>field_status</code></td>
+<td>Visitada, no visitada, reemplazada o acceso parcial.</td>
+</tr>
+<tr class="even">
+<td><code>drone_status</code></td>
+<td>Vuelo completo, vuelo parcial, suspendido o no aplica.</td>
+</tr>
+<tr class="odd">
+<td><code>photo_count</code></td>
+<td>Número de registros fotográficos útiles.</td>
+</tr>
+<tr class="even">
+<td><code>temp_air_c</code></td>
+<td>Temperatura ambiente medida en terreno.</td>
+</tr>
+<tr class="odd">
+<td><code>humidity_pct</code></td>
+<td>Humedad relativa.</td>
+</tr>
+<tr class="even">
+<td><code>water_present</code></td>
+<td>Presencia de agua visible.</td>
+</tr>
+<tr class="odd">
+<td><code>snow_present</code></td>
+<td>Presencia de nieve o hielo visible.</td>
+</tr>
+<tr class="even">
+<td><code>visible_disturbance</code></td>
+<td>Perturbación visible registrada en ficha.</td>
+</tr>
+<tr class="odd">
+<td><code>mrct_consistency</code></td>
+<td>Consistente, parcialmente consistente, no consistente o no evaluable.</td>
+</tr>
+<tr class="even">
+<td><code>field_notes</code></td>
+<td>Síntesis cualitativa de la observación.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="productos-finales" class="level3">
+<h3 class="anchored" data-anchor-id="productos-finales">Productos finales</h3>
+<p>La campaña debe cerrar con productos verificables:</p>
+<ul>
+<li>base consolidada de observaciones por cuenca;</li>
+<li>carpeta fotográfica organizada por <code>RID</code>;</li>
+<li>mosaicos, ortofotos simples o capturas clave de dron cuando corresponda;</li>
+<li>mapa de cuencas visitadas y no visitadas;</li>
+<li>tabla de consistencia entre señal MRCT y observación de terreno;</li>
+<li>reporte de hallazgos por cuenca;</li>
+<li>recomendaciones para ajustar criterios de selección, umbrales, variables o futuras campañas;</li>
+<li>anexo metodológico con protocolo, instrumentos, fechas, responsables y limitaciones.</li>
+</ul>
+</section>
+</section>
+<section id="sec-criterios-validacion-terreno" class="level2">
+<h2 class="anchored" data-anchor-id="sec-criterios-validacion-terreno">Criterios de lectura de la validación</h2>
+<p>La validación debe separar cuatro resultados posibles.</p>
+<div id="tbl-criterios-validacion-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-criterios-validacion-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Criterios para interpretar la consistencia entre MRCT y terreno.
+</figcaption>
+<div aria-describedby="tbl-criterios-validacion-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resultado</th>
+<th>Interpretación</th>
+<th>Acción recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Consistente</td>
+<td>La observación de terreno muestra condiciones compatibles con la señal MRCT.</td>
+<td>Documentar evidencia y mantener criterio de priorización.</td>
+</tr>
+<tr class="even">
+<td>Parcialmente consistente</td>
+<td>Se observan algunas señales, pero existen factores locales o limitaciones de observación.</td>
+<td>Revisar series, imágenes y contexto territorial.</td>
+</tr>
+<tr class="odd">
+<td>No consistente</td>
+<td>La señal MRCT no se refleja en la observación disponible.</td>
+<td>Auditar insumos, fecha de imágenes, nubes, nieve, clasificación o escala espacial.</td>
+</tr>
+<tr class="even">
+<td>No evaluable</td>
+<td>El sitio no pudo observarse adecuadamente por acceso, clima, vuelo suspendido o baja visibilidad.</td>
+<td>Reprogramar, usar sitio alternativo o marcar limitación.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Un resultado “no consistente” no invalida la MRCT por sí solo. Puede indicar que el sitio visitado no representa toda la cuenca, que la condición cambió después del año crítico, que hubo limitaciones de observación o que la señal satelital requiere una auditoría específica. Por eso la campaña debe registrar tanto evidencia favorable como dudas, contradicciones y vacíos.</p>
+</section>
+<section id="sec-checklist-terreno" class="level2">
+<h2 class="anchored" data-anchor-id="sec-checklist-terreno">Checklist operativo</h2>
+<p>Antes de salir:</p>
+<ul>
+<li>lista final de cuencas y reemplazos;</li>
+<li>mapas offline y mapas impresos;</li>
+<li>fichas precargadas con <code>RID</code>, coordenadas y métricas MRCT;</li>
+<li>permisos y contactos revisados;</li>
+<li>pronóstico meteorológico revisado;</li>
+<li>dron, baterías, tarjetas y hélices verificados;</li>
+<li>sensores calibrados o revisados;</li>
+<li>protocolo de seguridad y comunicación activo;</li>
+<li>estructura de carpetas y nomenclatura definida.</li>
+</ul>
+<p>Durante la visita:</p>
+<ul>
+<li>registrar hora, coordenada y condiciones del sitio;</li>
+<li>tomar fotografías terrestres de contexto;</li>
+<li>realizar vuelo de dron si las condiciones son seguras;</li>
+<li>medir temperatura, humedad y variables disponibles;</li>
+<li>completar observaciones de cobertura, agua, nieve, perturbaciones y accesibilidad;</li>
+<li>anotar cualquier desviación del protocolo;</li>
+<li>revisar que la ficha esté completa antes de salir del sitio.</li>
+</ul>
+<p>Después de la jornada:</p>
+<ul>
+<li>respaldar todos los archivos;</li>
+<li>revisar nombres, fechas y asociación con <code>RID</code>;</li>
+<li>consolidar formularios y bitácora;</li>
+<li>marcar datos incompletos;</li>
+<li>preparar una síntesis diaria de cuencas visitadas, problemas y próximos ajustes.</li>
+</ul>
+</section>
+<section id="sec-cierre-trabajo-terreno" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cierre-trabajo-terreno">Cierre</h2>
+<p>El trabajo de terreno convierte la MRCT en una herramienta verificable en territorio. La selección por jerk permite priorizar dónde mirar; la campaña permite observar cómo se expresa esa señal en condiciones reales; y el post-terreno permite devolver la evidencia al sistema analítico.</p>
+<p>Este flujo es especialmente importante porque la MRCT trabaja con señales multivariadas y series temporales. Sin terreno, esas señales pueden orientar prioridades, pero quedan incompletas como lectura territorial. Con terreno, la interpretación gana contexto, límites, evidencia visual y criterios para mejorar futuras campañas de monitoreo.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
