@@ -383,7 +383,7 @@ Alcance de la selección
 <div aria-describedby="fig-derivadas-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-derivadas-jerk">flowchart TB
-  D["Domain (D)&lt;br/&gt;Distancia al estado de referencia"] --&gt; V["Velocidad (dD/dt)&lt;br/&gt;Direccion y ritmo del cambio"]
+  D["Domain (D)&lt;br/&gt;Distancia al &lt;br/&gt;estado de referencia"] --&gt; V["Velocidad (dD/dt)&lt;br/&gt;Direccion y ritmo del cambio"]
   V --&gt; A["Aceleracion (d2D/dt2)&lt;br/&gt;Cambio en el ritmo"]
   A --&gt; J["Jerk (d3D/dt3)&lt;br/&gt;Cambio abrupto en la aceleracion"]
   J --&gt; I["J &gt; 0&lt;br/&gt;Intensificacion"]
@@ -483,7 +483,7 @@ Table&nbsp;12.2: Insumos principales del análisis de cuencas prioritarias por j
 <div aria-describedby="fig-flujo-base-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-flujo-base-jerk">flowchart TB
-  config["Configuracion&lt;br/&gt;rutas, coordenadas y parametros"] --&gt; data["Datos&lt;br/&gt;MRCT y cuencas"]
+  config["Configuracion&lt;br/&gt;rutas, coordenadas  &lt;br/&gt;y parametros"] --&gt; data["Datos&lt;br/&gt;MRCT y cuencas"]
   data --&gt; parquet["Parquet&lt;br/&gt;lectura rapida"]
   parquet --&gt; duck["DuckDB&lt;br/&gt;base analitica local"]
   duck --&gt; qc["Control de calidad&lt;br/&gt;cobertura y clases"]
@@ -917,7 +917,7 @@ Table&nbsp;12.7: Exploración de parámetros para el buffer operativo de Punta A
 <div aria-describedby="fig-ajuste-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-ajuste-buffer-jerk">flowchart TB
-  start["Parametros iniciales&lt;br/&gt;radios 80, 120, 150, 200 km&lt;br/&gt;umbrales p90, p85, p80, p75"] --&gt; count["Contar cuencas calificadas"]
+  start["Parámetros iniciales&lt;br/&gt;radios 80, 120, 150, 200 km&lt;br/&gt;umbrales p90, p85, p80, p75"] --&gt; count["Contar cuencas calificadas"]
   count --&gt; decision{"Hay al menos&lt;br/&gt;10 candidatas?"}
   decision -- "Si" --&gt; choose["Elegir radio menor&lt;br/&gt;con umbral mas exigente"]
   decision -- "No" --&gt; relax["Ampliar radio o relajar umbral"]
