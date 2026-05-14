@@ -42,7 +42,7 @@ En términos operativos, el jerk identifica una ruptura en la dinámica. Un valo
 %%| label: fig-derivadas-jerk
 %%| fig-cap: "Derivadas temporales usadas para interpretar cambios abruptos en la trayectoria ecosistémica."
 flowchart TB
-  D["Domain (D)<br/>Distancia al estado de referencia"] --> V["Velocidad (dD/dt)<br/>Direccion y ritmo del cambio"]
+  D["Domain (D)<br/>Distancia al <br/>estado de referencia"] --> V["Velocidad (dD/dt)<br/>Direccion y ritmo del cambio"]
   V --> A["Aceleracion (d2D/dt2)<br/>Cambio en el ritmo"]
   A --> J["Jerk (d3D/dt3)<br/>Cambio abrupto en la aceleracion"]
   J --> I["J > 0<br/>Intensificacion"]
@@ -79,7 +79,7 @@ La geometría fue transformada al sistema EPSG:32719, que permite trabajar en co
 %%| label: fig-flujo-base-jerk
 %%| fig-cap: "Flujo lineal de construcción de la base analítica y productos de priorización."
 flowchart TB
-  config["Configuracion<br/>rutas, coordenadas y parametros"] --> data["Datos<br/>MRCT y cuencas"]
+  config["Configuracion<br/>rutas, coordenadas  <br/>y parametros"] --> data["Datos<br/>MRCT y cuencas"]
   data --> parquet["Parquet<br/>lectura rapida"]
   parquet --> duck["DuckDB<br/>base analitica local"]
   duck --> qc["Control de calidad<br/>cobertura y clases"]
@@ -193,7 +193,7 @@ El notebook explora combinaciones de radio y percentil anual. La combinación es
 %%| label: fig-ajuste-buffer-jerk
 %%| fig-cap: "Lógica de diagnóstico del buffer operativo y ajuste de parámetros."
 flowchart TB
-  start["Parametros iniciales<br/>radios 80, 120, 150, 200 km<br/>umbrales p90, p85, p80, p75"] --> count["Contar cuencas calificadas"]
+  start["Parámetros iniciales<br/>radios 80, 120, 150, 200 km<br/>umbrales p90, p85, p80, p75"] --> count["Contar cuencas calificadas"]
   count --> decision{"Hay al menos<br/>10 candidatas?"}
   decision -- "Si" --> choose["Elegir radio menor<br/>con umbral mas exigente"]
   decision -- "No" --> relax["Ampliar radio o relajar umbral"]
