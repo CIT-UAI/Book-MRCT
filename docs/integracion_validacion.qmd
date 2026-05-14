@@ -1,0 +1,82 @@
+---
+title: "Integración y Validación MRCT"
+subtitle: "Comparación entre señal analítica y evidencia de terreno"
+---
+
+Este capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico.
+
+::: {.callout-note}
+## Objetivo
+
+Clasificar la consistencia entre la señal MRCT y la observación de terreno, identificar limitaciones de interpretación y proponer ajustes para futuras campañas o consultas.
+:::
+
+## Tabla de validación {#sec-tabla-validacion-mrct-terreno}
+
+La evidencia de terreno debe integrarse como una tabla por cuenca visitada:
+
+| Variable | Descripción |
+|---|---|
+| `RID` | Identificador de cuenca. |
+| `visit_date` | Fecha de visita. |
+| `field_status` | Visitada, no visitada, reemplazada o acceso parcial. |
+| `drone_status` | Vuelo completo, parcial, suspendido o no aplica. |
+| `photo_count` | Número de fotografías útiles. |
+| `temp_air_c` | Temperatura ambiente. |
+| `humidity_pct` | Humedad relativa. |
+| `water_present` | Presencia de agua visible. |
+| `snow_present` | Presencia de nieve o hielo visible. |
+| `visible_disturbance` | Perturbación visible registrada. |
+| `mrct_consistency` | Consistente, parcialmente consistente, no consistente o no evaluable. |
+| `field_notes` | Síntesis cualitativa. |
+
+: Variables sugeridas para integrar terreno y MRCT. {#tbl-validacion-mrct-terreno}
+
+## Criterios de consistencia {#sec-criterios-consistencia-mrct}
+
+La comparación debe separar cuatro resultados:
+
+| Resultado | Interpretación | Acción recomendada |
+|---|---|---|
+| Consistente | La observación muestra condiciones compatibles con la señal MRCT. | Documentar evidencia y mantener criterio de priorización. |
+| Parcialmente consistente | Se observan algunas señales, pero existen factores locales o limitaciones de observación. | Revisar series, imágenes y contexto territorial. |
+| No consistente | La señal MRCT no se refleja en la observación disponible. | Auditar insumos, fechas, nubes, nieve, clasificación o escala espacial. |
+| No evaluable | No hubo observación suficiente por acceso, clima, vuelo suspendido o baja visibilidad. | Reprogramar, usar sitio alternativo o marcar limitación. |
+
+: Criterios para clasificar consistencia entre MRCT y terreno. {#tbl-criterios-consistencia-mrct}
+
+## Lectura de discrepancias {#sec-discrepancias-mrct-terreno}
+
+Una discrepancia no debe interpretarse automáticamente como error. Puede deberse a:
+
+- diferencia entre fecha de imagen satelital y fecha de visita;
+- heterogeneidad interna de la cuenca;
+- punto de observación poco representativo;
+- nieve, sombra, nubosidad o mezcla de coberturas;
+- evento temporal ya superado;
+- señal MRCT asociada a una variable no visible directamente;
+- limitaciones del acceso o del registro fotográfico.
+
+## Retroalimentación metodológica {#sec-retroalimentacion-metodologica}
+
+La integración debe producir aprendizajes para mejorar:
+
+- criterios de selección por jerk;
+- pesos del puntaje compuesto;
+- umbrales de percentil;
+- filtros de accesibilidad;
+- diseño de fichas;
+- variables ambientales medidas;
+- selección de cuencas de control;
+- visualización futura en aplicaciones o tableros.
+
+## Productos finales {#sec-productos-integracion-validacion}
+
+El cierre de validación debe entregar:
+
+- tabla integrada MRCT-terreno;
+- mapa de cuencas visitadas y estado de validación;
+- síntesis de consistencia;
+- casos representativos;
+- recomendaciones para nuevas campañas;
+- limitaciones y decisiones metodológicas documentadas.

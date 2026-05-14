@@ -1,0 +1,75 @@
+---
+title: "Resultados de Terreno"
+subtitle: "Evidencia registrada durante la campaña de terreno"
+---
+
+Este capítulo queda reservado para documentar los resultados de la campaña una vez ejecutada. Debe reunir la evidencia levantada por cuenca, las condiciones de cada jornada y las limitaciones encontradas.
+
+::: {.callout-note}
+## Estado del capítulo
+
+Este capítulo se completará después del trabajo de terreno. Por ahora define la estructura de reporte para ordenar la evidencia futura.
+:::
+
+## Resumen de campaña {#sec-resumen-campana-terreno}
+
+La sección deberá indicar:
+
+- fechas de salida;
+- equipo participante;
+- base logística;
+- comunas visitadas;
+- cuencas visitadas;
+- cuencas no visitadas;
+- cuencas reemplazadas;
+- condiciones generales de clima y acceso.
+
+## Bitácora de jornadas {#sec-bitacora-jornadas-terreno}
+
+Cada jornada debe resumirse en una tabla:
+
+| Fecha | Ruta | Cuencas previstas | Cuencas visitadas | Incidencias | Observación general |
+|---|---|---|---|---|---|
+| Por definir | Por definir | Por definir | Por definir | Por definir | Por definir |
+
+: Plantilla de bitácora de jornadas de terreno. {#tbl-bitacora-jornadas-terreno}
+
+## Resultados por cuenca {#sec-resultados-por-cuenca-terreno}
+
+Para cada cuenca visitada se debe reportar:
+
+- estado de visita;
+- coordenada observada;
+- fotografías disponibles;
+- vuelo de dron completo, parcial o suspendido;
+- mediciones ambientales;
+- observaciones ecológicas principales;
+- problemas de acceso o representatividad;
+- consistencia preliminar con la señal MRCT.
+
+## Síntesis de mediciones {#sec-sintesis-mediciones-terreno}
+
+La tabla de mediciones deberá consolidar:
+
+| `RID` | Fecha | Temperatura aire | Humedad relativa | Agua visible | Nieve visible | Vuelo dron | Estado ficha |
+|---:|---|---:|---:|---|---|---|---|
+| Por definir | Por definir | Por definir | Por definir | Por definir | Por definir | Por definir | Por definir |
+
+: Plantilla de síntesis de mediciones de terreno. {#tbl-sintesis-mediciones-terreno}
+
+## Registro fotográfico {#sec-registro-fotografico-resultados}
+
+Esta sección debe incorporar una selección curada de fotografías y capturas de dron. No debe incluir todo el repositorio visual, sino ejemplos que expliquen condiciones observadas y diferencias entre cuencas.
+
+## Limitaciones de campaña {#sec-limitaciones-campana-terreno}
+
+Las limitaciones deben registrarse explícitamente:
+
+- cuencas no visitadas;
+- vuelos suspendidos;
+- mediciones incompletas;
+- problemas de clima;
+- problemas de acceso;
+- baja visibilidad;
+- puntos poco representativos;
+- restricciones de permiso o seguridad.

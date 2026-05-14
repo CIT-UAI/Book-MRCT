@@ -1,0 +1,67 @@
+---
+title: "Fichas de Cuencas"
+subtitle: "Plantilla para documentar sitios principales y alternativas de terreno"
+---
+
+Este capítulo queda preparado para completar las fichas de las cuencas definitivas. Su función es transformar cada `RID` seleccionado en una pregunta de terreno clara, con ubicación, señal MRCT, hipótesis preliminar, acceso y registros requeridos.
+
+::: {.callout-note}
+## Estado del capítulo
+
+Este capítulo debe completarse cuando la lista final de cuencas haya sido validada técnica y logísticamente.
+:::
+
+## Estructura de ficha {#sec-estructura-ficha-cuenca}
+
+Cada ficha debe incluir:
+
+| Bloque | Contenido |
+|---|---|
+| Identificación | `RID`, comuna, prioridad, año crítico, tipo de evento y estado de selección. |
+| Señal MRCT | Jerk, percentil, `RES`, `PT`, $D$, $V$, $A$, $SENS$, $D_{local}$ y clasificación disponible. |
+| Ubicación | mapa regional, mapa de detalle, coordenada objetivo, distancia a Punta Arenas y anillo logístico. |
+| Pregunta de terreno | Qué condición se espera observar y qué duda debe resolver la visita. |
+| Acceso | ruta preliminar, restricciones, permisos y punto alternativo. |
+| Registros requeridos | fotografías, dron, temperatura, humedad, agua, nieve, cobertura y perturbaciones. |
+| Resultado esperado | criterio para clasificar la observación como consistente, parcialmente consistente, no consistente o no evaluable. |
+
+: Estructura base para fichas de cuencas seleccionadas. {#tbl-estructura-ficha-cuencas}
+
+## Ficha tipo {#sec-ficha-tipo-cuenca}
+
+### Cuenca `RID`: por definir
+
+| Campo | Valor |
+|---|---|
+| Prioridad | Por definir |
+| Comuna | Por definir |
+| Año crítico | Por definir |
+| Tipo de evento | Por definir |
+| Jerk | Por definir |
+| Percentil anual | Por definir |
+| `RES` año crítico | Por definir |
+| Distancia a Punta Arenas | Por definir |
+| Anillo logístico | Por definir |
+| Estado de selección | Principal / reemplazo / descartada |
+
+**Pregunta de terreno:** por definir.
+
+**Ruta preliminar:** por definir.
+
+**Punto de observación sugerido:** por definir.
+
+**Registros obligatorios:** fotografía terrestre, dron si es posible, temperatura, humedad, observación de agua/nieve/cobertura y comentario de consistencia.
+
+**Riesgos o restricciones:** por definir.
+
+## Cuencas principales {#sec-cuencas-principales-fichas}
+
+Esta subsección debe llenarse con las cuencas que entren al itinerario principal.
+
+## Cuencas de reemplazo {#sec-cuencas-reemplazo-fichas}
+
+Esta subsección debe llenarse con alternativas visitables si una cuenca principal no puede ser evaluada.
+
+## Cuencas descartadas {#sec-cuencas-descartadas-fichas}
+
+Las cuencas descartadas también deben registrarse, indicando la causa: acceso, permiso, distancia, baja representatividad, riesgo, clima esperado o cambio de prioridad técnica.

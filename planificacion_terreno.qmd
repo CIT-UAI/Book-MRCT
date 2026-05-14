@@ -1,0 +1,96 @@
+---
+title: "Planificación de Campaña"
+subtitle: "De la preselección técnica al diseño operativo de terreno"
+---
+
+Este capítulo define cómo transformar la preselección de cuencas en una campaña de terreno factible. La selección por jerk entrega una primera lista técnica, pero la decisión final debe incorporar accesibilidad real, permisos, tiempos de traslado, clima, seguridad, conocimiento local y recursos disponibles.
+
+::: {.callout-note}
+## Objetivo
+
+Construir un plan de campaña con cuencas principales, cuencas de reemplazo, rutas preliminares, responsabilidades, permisos, equipamiento y criterios de suspensión o ajuste.
+:::
+
+## Decisión de cuencas finales {#sec-decision-cuencas-finales}
+
+La lista de cuencas candidatas debe revisarse antes de transformarse en itinerario. Esta revisión debe combinar tres fuentes de información:
+
+- señal MRCT: jerk, resiliencia, dominio, velocidad, sensibilidad y contexto espacial;
+- factibilidad logística: caminos, tiempos de traslado, clima, acceso, permisos y seguridad;
+- conocimiento local: antecedentes de eventos, usos del suelo, restricciones territoriales y puntos de observación relevantes.
+
+El resultado esperado es una lista principal y una lista de reemplazo. Cada cuenca debe mantener una razón de selección explícita, evitando decisiones basadas solo en cercanía o solo en ranking.
+
+## Revisión con actores locales {#sec-revision-actores-locales}
+
+Antes de la campaña se recomienda una reunión de revisión con personas o instituciones que conozcan el territorio. Esta instancia debe servir para validar accesos, anticipar restricciones y enriquecer la interpretación de cada cuenca.
+
+Temas mínimos de revisión:
+
+- caminos disponibles, estado estacional y puntos de cierre;
+- propiedad privada, portones, permisos o restricciones de ingreso;
+- zonas con viento fuerte, anegamiento, nieve, barro o baja conectividad;
+- antecedentes recientes de incendios, crecidas, sequías, obras, ganadería, tala, drenajes o cambios de uso;
+- sitios seguros para detenerse, medir y volar dron;
+- cuencas alternativas visitables si falla el sitio principal.
+
+## Diseño de rutas {#sec-diseno-rutas-terreno}
+
+La campaña debe organizarse por jornadas. Cada jornada debe agrupar cuencas cercanas, considerar tiempos realistas y reservar margen para clima, detenciones, mediciones, vuelos y cambios de ruta.
+
+La planificación de cada jornada debe incluir:
+
+- punto de partida y retorno;
+- orden de visita;
+- coordenada objetivo y coordenada alternativa;
+- tiempo estimado de traslado y permanencia;
+- distancia total;
+- ventanas horarias de vuelo;
+- puntos de combustible, alimentación y comunicación;
+- criterio de suspensión por clima, luz, acceso o seguridad.
+
+## Permisos y restricciones {#sec-permisos-terreno}
+
+La carpeta de campaña debe registrar permisos y restricciones antes de salir. Esto incluye propiedad privada, áreas protegidas, infraestructura crítica, caminos interiores, borde costero, vuelos de dron y registro de imágenes sensibles.
+
+Cuando existan dudas sobre ingreso o vuelo, la cuenca debe mantenerse como candidata condicionada hasta resolver la autorización.
+
+## Equipo y roles {#sec-equipo-roles-terreno}
+
+Cada salida debe tener roles definidos:
+
+- responsable de campaña;
+- responsable de navegación y rutas;
+- responsable de ficha y bitácora;
+- piloto o responsable de dron;
+- responsable de mediciones ambientales;
+- responsable de respaldo de datos;
+- contacto de seguridad externo.
+
+Los roles pueden concentrarse en pocas personas, pero deben estar explícitos para evitar pérdida de información en terreno.
+
+## Checklist previo {#sec-checklist-previo-terreno}
+
+Antes de salir:
+
+- cuencas principales y reemplazos definidos;
+- mapas offline e impresos preparados;
+- fichas precargadas con `RID`, comuna, coordenadas y métricas MRCT;
+- permisos revisados;
+- pronóstico meteorológico revisado;
+- dron, baterías, hélices y tarjetas verificadas;
+- sensores y GPS revisados;
+- botiquín, ropa térmica, agua y comunicación disponibles;
+- estructura de carpetas y nomenclatura de archivos definida.
+
+## Producto esperado {#sec-producto-planificacion-terreno}
+
+Este capítulo deberá actualizarse cuando la campaña esté definida con:
+
+- tabla de cuencas principales;
+- tabla de cuencas de reemplazo;
+- mapa de rutas;
+- calendario tentativo;
+- responsables;
+- permisos requeridos;
+- riesgos principales y medidas de control.

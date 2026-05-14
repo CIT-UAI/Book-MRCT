@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Trayectoria del estado – Guía Técnica MRCT</title>
+<title>17&nbsp; Integración y Validación – Guía Técnica MRCT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./integracion_espacial.html" rel="next">
-<link href="./vector_es.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./resultados_terreno.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -69,58 +69,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating slimcontent quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -129,7 +83,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trayectoria.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Trayectoria del estado</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./integracion_validacion.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +146,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./trayectoria.html" class="sidebar-item-text sidebar-link active">
+  <a href="./trayectoria.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Trayectoria del estado</span></span></a>
   </div>
 </li>
@@ -241,18 +195,48 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./planificacion_terreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Planificación de Campaña</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./protocolo_levantamiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Protocolo de Levantamiento</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas_cuencas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resultados_terreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Resultados de Terreno</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integracion_validacion.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./anexos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
   </div>
 </li>
     </ul>
@@ -265,28 +249,21 @@ window.Quarto = {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#sec-derivadas" id="toc-sec-derivadas" class="nav-link active" data-scroll-target="#sec-derivadas"><span class="header-section-number">6.1</span> Derivadas temporales</a>
-  <ul class="collapse">
-  <li><a href="#velocidad" id="toc-velocidad" class="nav-link" data-scroll-target="#velocidad"><span class="header-section-number">6.1.1</span> Velocidad</a></li>
-  <li><a href="#aceleración" id="toc-aceleración" class="nav-link" data-scroll-target="#aceleración"><span class="header-section-number">6.1.2</span> Aceleración</a></li>
-  <li><a href="#jerk" id="toc-jerk" class="nav-link" data-scroll-target="#jerk"><span class="header-section-number">6.1.3</span> Jerk</a></li>
-  </ul></li>
-  <li><a href="#sec-tipologia" id="toc-sec-tipologia" class="nav-link" data-scroll-target="#sec-tipologia"><span class="header-section-number">6.2</span> Tipología dinámica</a>
-  <ul class="collapse">
-  <li><a href="#estado-dinámico" id="toc-estado-dinámico" class="nav-link" data-scroll-target="#estado-dinámico"><span class="header-section-number">6.2.1</span> Estado dinámico</a></li>
-  <li><a href="#etiquetas-semánticas" id="toc-etiquetas-semánticas" class="nav-link" data-scroll-target="#etiquetas-semánticas"><span class="header-section-number">6.2.2</span> Etiquetas semánticas</a></li>
-  </ul></li>
-  <li><a href="#sec-cierre-trayectoria" id="toc-sec-cierre-trayectoria" class="nav-link" data-scroll-target="#sec-cierre-trayectoria"><span class="header-section-number">6.3</span> Cierre de la lectura temporal</a></li>
+  <li><a href="#sec-tabla-validacion-mrct-terreno" id="toc-sec-tabla-validacion-mrct-terreno" class="nav-link active" data-scroll-target="#sec-tabla-validacion-mrct-terreno"><span class="header-section-number">17.1</span> Tabla de validación</a></li>
+  <li><a href="#sec-criterios-consistencia-mrct" id="toc-sec-criterios-consistencia-mrct" class="nav-link" data-scroll-target="#sec-criterios-consistencia-mrct"><span class="header-section-number">17.2</span> Criterios de consistencia</a></li>
+  <li><a href="#sec-discrepancias-mrct-terreno" id="toc-sec-discrepancias-mrct-terreno" class="nav-link" data-scroll-target="#sec-discrepancias-mrct-terreno"><span class="header-section-number">17.3</span> Lectura de discrepancias</a></li>
+  <li><a href="#sec-retroalimentacion-metodologica" id="toc-sec-retroalimentacion-metodologica" class="nav-link" data-scroll-target="#sec-retroalimentacion-metodologica"><span class="header-section-number">17.4</span> Retroalimentación metodológica</a></li>
+  <li><a href="#sec-productos-integracion-validacion" id="toc-sec-productos-integracion-validacion" class="nav-link" data-scroll-target="#sec-productos-integracion-validacion"><span class="header-section-number">17.5</span> Productos finales</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./integracion_validacion.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Trayectoria del estado</span></h1>
-<p class="subtitle lead">Trayectoria del estado sistémico</p>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></h1>
+<p class="subtitle lead">Comparación entre señal analítica y evidencia de terreno</p>
 </div>
 
 
@@ -303,170 +280,182 @@ window.Quarto = {
 </header>
 
 
-<p>Con el dominio definido, el modelo puede medir trayectoria. Saber dónde está una cuenca no es suficiente: también importa si se está alejando de su estado de referencia, con qué velocidad lo hace y si ese movimiento se está acelerando o amortiguando.</p>
-<p>Esta etapa transforma la serie temporal de distancias <span class="math inline">D</span> en derivadas discretas y clasifica el régimen dinámico de cada cuenca. La pregunta espacial se aborda en el capítulo siguiente, donde la trayectoria se conecta con la estructura territorial que rodea a cada unidad de análisis.</p>
-<section id="sec-derivadas" class="level2 page-columns page-full" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="sec-derivadas"><span class="header-section-number">6.1</span> Derivadas temporales</h2>
+<p>Este capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Para tomadores de decisión
+Objetivo
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Las derivadas describen el <em>movimiento</em> del sistema, no solo su posición. Una cuenca puede estar lejos de su referencia pero estabilizándose, o cerca pero acelerando su alejamiento. Esa diferencia es crucial para anticipar trayectorias y priorizar intervenciones.</p>
+<p>Clasificar la consistencia entre la señal MRCT y la observación de terreno, identificar limitaciones de interpretación y proponer ajustes para futuras campañas o consultas.</p>
 </div>
 </div>
-<p>La base de cálculo es la serie temporal de <span class="math inline">D</span> por cuenca, ordenada por año. Cada derivada se calcula como una diferencia discreta sobre la dimensión temporal.</p>
-<section id="velocidad" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="velocidad"><span class="header-section-number">6.1.1</span> Velocidad</h3>
-<p>La velocidad mide la tasa de cambio de la distancia al dominio entre años consecutivos:</p>
-<p><span class="math display">V_t = \frac{D_t - D_{t-1}}{\Delta t}</span></p>
-<p>donde <span class="math inline">\Delta t = 1</span> año. Valores positivos indican alejamiento del dominio de referencia; valores negativos indican retorno o recuperación. Para evitar que valores extremos producto de años faltantes distorsionen el análisis, <span class="math inline">V</span> se recorta al rango <span class="math inline">[-5, 5]</span>.</p>
-</section>
-<section id="aceleración" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="aceleración"><span class="header-section-number">6.1.2</span> Aceleración</h3>
-<p>La aceleración mide el cambio en la velocidad:</p>
-<p><span class="math display">A_t = V_t - V_{t-1}</span></p>
-<p>Captura si el movimiento se está intensificando (<span class="math inline">A &gt; 0</span> con <span class="math inline">V &gt; 0</span>), desacelerando (<span class="math inline">A &lt; 0</span> con <span class="math inline">V &gt; 0</span>) o invirtiendo su dirección. Una cuenca con velocidad moderada pero aceleración positiva sostenida representa mayor riesgo que una con velocidad alta pero aceleración negativa.</p>
-</section>
-<section id="jerk" class="level3 page-columns page-full" data-number="6.1.3">
-<h3 data-number="6.1.3" class="anchored" data-anchor-id="jerk"><span class="header-section-number">6.1.3</span> Jerk</h3>
-<p>El jerk es la derivada de la aceleración:</p>
-<p><span class="math display">J_t = A_t - A_{t-1}</span></p>
-<p>Detecta cambios bruscos en el régimen dinámico: transiciones rápidas, reversiones súbitas o señales de reorganización estructural que no serían visibles solo con <span class="math inline">V</span> y <span class="math inline">A</span>.</p>
-<div id="fig-dinamica-temporal-domain" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-dinamica-temporal-domain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/metodologia/dinamica_temporal_domain.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-dinamica-temporal-domain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.1: Ejemplo de lectura temporal del dominio: distancia al dominio, velocidad y aceleración para cuencas seleccionadas. Elaboración propia.
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="sec-tipologia" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="sec-tipologia"><span class="header-section-number">6.2</span> Tipología dinámica</h2>
-<p>Las tres derivadas se combinan para asignar a cada cuenca-año un <strong>estado dinámico</strong> y etiquetas semánticas por variable.</p>
-<section id="estado-dinámico" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="estado-dinámico"><span class="header-section-number">6.2.1</span> Estado dinámico</h3>
-<p>El estado dinámico se determina a partir del signo de <span class="math inline">V</span> y <span class="math inline">A</span>, con umbrales adaptativos <span class="math inline">\varepsilon_V</span> y <span class="math inline">\varepsilon_A</span> definidos como el percentil 25 de <span class="math inline">|V|</span> y <span class="math inline">|A|</span> en el año más reciente disponible. Valores por debajo del umbral se tratan como cero funcional.</p>
-<div id="tbl-estados" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sec-tabla-validacion-mrct-terreno" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="sec-tabla-validacion-mrct-terreno"><span class="header-section-number">17.1</span> Tabla de validación</h2>
+<p>La evidencia de terreno debe integrarse como una tabla por cuenca visitada:</p>
+<div id="tbl-validacion-mrct-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-estados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;6.1: Clasificación de estado dinámico por cuenca y año.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-validacion-mrct-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;17.1: Variables sugeridas para integrar terreno y MRCT.
 </figcaption>
-<div aria-describedby="tbl-estados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Velocidad</th>
-<th>Aceleración</th>
-<th>Estado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">V \approx 0</span></td>
-<td><span class="math inline">A \approx 0</span></td>
-<td>Estable</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">V &gt; 0</span></td>
-<td><span class="math inline">A &gt; 0</span></td>
-<td>Transición Acelerada</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">V &gt; 0</span></td>
-<td><span class="math inline">A \approx 0</span></td>
-<td>Transición Lenta</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">V &lt; 0</span></td>
-<td><span class="math inline">A &lt; 0</span></td>
-<td>Recuperación</td>
-</tr>
-<tr class="odd">
-<td>Mixto</td>
-<td>Mixto</td>
-<td>Inestable</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="etiquetas-semánticas" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="etiquetas-semánticas"><span class="header-section-number">6.2.2</span> Etiquetas semánticas</h3>
-<p>Cada derivada se clasifica de forma independiente usando un <em>z</em>-score robusto calculado dentro de cada año, lo que hace la clasificación relativa al comportamiento del conjunto de cuencas en ese momento:</p>
-<p><span class="math display">z = \frac{x - \text{med}_{año}(x)}{\text{MAD}_{año}(x) \times 1{,}4826}</span></p>
-<p>Los umbrales de corte son <span class="math inline">z &lt; -1</span>, <span class="math inline">-1 \leq z &lt; -0{,}25</span>, <span class="math inline">|z| \leq 0{,}25</span>, <span class="math inline">0{,}25 &lt; z \leq 1</span> y <span class="math inline">z &gt; 1</span>, produciendo cinco categorías por derivada:</p>
-<div id="tbl-etiquetas" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-etiquetas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;6.2: Etiquetas semánticas por derivada.
-</figcaption>
-<div aria-describedby="tbl-etiquetas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-validacion-mrct-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Variable</th>
-<th>Categorías (de menor a mayor <em>z</em>)</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Velocidad (VEL_CLASS)</td>
-<td>Decrecimiento Rápido · Decrecimiento Lento · Estable · Crecimiento Lento · Crecimiento Rápido</td>
+<td><code>RID</code></td>
+<td>Identificador de cuenca.</td>
 </tr>
 <tr class="even">
-<td>Aceleración (ACC_CLASS)</td>
-<td>Desaceleración Fuerte · Desaceleración Leve · Régimen Lineal · Intensificación Leve · Intensificación Fuerte</td>
+<td><code>visit_date</code></td>
+<td>Fecha de visita.</td>
 </tr>
 <tr class="odd">
-<td>Jerk (JERK_CLASS)</td>
-<td>Reversión Fuerte · Reversión Leve · Neutro · Intensificación Leve · Intensificación Fuerte</td>
+<td><code>field_status</code></td>
+<td>Visitada, no visitada, reemplazada o acceso parcial.</td>
+</tr>
+<tr class="even">
+<td><code>drone_status</code></td>
+<td>Vuelo completo, parcial, suspendido o no aplica.</td>
+</tr>
+<tr class="odd">
+<td><code>photo_count</code></td>
+<td>Número de fotografías útiles.</td>
+</tr>
+<tr class="even">
+<td><code>temp_air_c</code></td>
+<td>Temperatura ambiente.</td>
+</tr>
+<tr class="odd">
+<td><code>humidity_pct</code></td>
+<td>Humedad relativa.</td>
+</tr>
+<tr class="even">
+<td><code>water_present</code></td>
+<td>Presencia de agua visible.</td>
+</tr>
+<tr class="odd">
+<td><code>snow_present</code></td>
+<td>Presencia de nieve o hielo visible.</td>
+</tr>
+<tr class="even">
+<td><code>visible_disturbance</code></td>
+<td>Perturbación visible registrada.</td>
+</tr>
+<tr class="odd">
+<td><code>mrct_consistency</code></td>
+<td>Consistente, parcialmente consistente, no consistente o no evaluable.</td>
+</tr>
+<tr class="even">
+<td><code>field_notes</code></td>
+<td>Síntesis cualitativa.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Estas etiquetas permiten comunicar el régimen dinámico en términos interpretables sin perder la información cuantitativa de las derivadas.</p>
 </section>
+<section id="sec-criterios-consistencia-mrct" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="sec-criterios-consistencia-mrct"><span class="header-section-number">17.2</span> Criterios de consistencia</h2>
+<p>La comparación debe separar cuatro resultados:</p>
+<div id="tbl-criterios-consistencia-mrct" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-criterios-consistencia-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;17.2: Criterios para clasificar consistencia entre MRCT y terreno.
+</figcaption>
+<div aria-describedby="tbl-criterios-consistencia-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resultado</th>
+<th>Interpretación</th>
+<th>Acción recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Consistente</td>
+<td>La observación muestra condiciones compatibles con la señal MRCT.</td>
+<td>Documentar evidencia y mantener criterio de priorización.</td>
+</tr>
+<tr class="even">
+<td>Parcialmente consistente</td>
+<td>Se observan algunas señales, pero existen factores locales o limitaciones de observación.</td>
+<td>Revisar series, imágenes y contexto territorial.</td>
+</tr>
+<tr class="odd">
+<td>No consistente</td>
+<td>La señal MRCT no se refleja en la observación disponible.</td>
+<td>Auditar insumos, fechas, nubes, nieve, clasificación o escala espacial.</td>
+</tr>
+<tr class="even">
+<td>No evaluable</td>
+<td>No hubo observación suficiente por acceso, clima, vuelo suspendido o baja visibilidad.</td>
+<td>Reprogramar, usar sitio alternativo o marcar limitación.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
-<section id="sec-cierre-trayectoria" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="sec-cierre-trayectoria"><span class="header-section-number">6.3</span> Cierre de la lectura temporal</h2>
-<p>El resultado de esta etapa es una lectura dinámica del cambio ecosistémico: <span class="math inline">D</span> indica la posición de cada cuenca respecto de la línea base, mientras que <span class="math inline">V</span>, <span class="math inline">A</span> y <span class="math inline">J</span> describen la dirección, intensidad y regularidad de su movimiento. Esta información permite distinguir cuencas estables, cuencas en recuperación y cuencas que muestran señales de transición.</p>
-<p>La trayectoria, sin embargo, todavía no indica si ese cambio es compartido por el entorno o si corresponde a una discontinuidad localizada. Esa comparación se desarrolla en la integración territorial, donde las métricas temporales se leen junto con la vecindad espacial de cada cuenca.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    A[D por cuenca · año] --&gt; B[Velocidad V&lt;br/&gt;ΔD/Δt]
-    B --&gt; C[Aceleración A&lt;br/&gt;ΔV/Δt]
-    C --&gt; E[Jerk J&lt;br/&gt;ΔA/Δt]
-    B --&gt; F[Estado dinámico: &lt;br/&gt;Estable · Transición &lt;br/&gt;· Recuperación]
-    B --&gt; G[Etiquetas semánticas&lt;br/&gt;VEL · ACC · JERK class]
-    G --&gt; H[Insumo para integración&lt;br/&gt;territorial]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<section id="sec-discrepancias-mrct-terreno" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="sec-discrepancias-mrct-terreno"><span class="header-section-number">17.3</span> Lectura de discrepancias</h2>
+<p>Una discrepancia no debe interpretarse automáticamente como error. Puede deberse a:</p>
+<ul>
+<li>diferencia entre fecha de imagen satelital y fecha de visita;</li>
+<li>heterogeneidad interna de la cuenca;</li>
+<li>punto de observación poco representativo;</li>
+<li>nieve, sombra, nubosidad o mezcla de coberturas;</li>
+<li>evento temporal ya superado;</li>
+<li>señal MRCT asociada a una variable no visible directamente;</li>
+<li>limitaciones del acceso o del registro fotográfico.</li>
+</ul>
+</section>
+<section id="sec-retroalimentacion-metodologica" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="sec-retroalimentacion-metodologica"><span class="header-section-number">17.4</span> Retroalimentación metodológica</h2>
+<p>La integración debe producir aprendizajes para mejorar:</p>
+<ul>
+<li>criterios de selección por jerk;</li>
+<li>pesos del puntaje compuesto;</li>
+<li>umbrales de percentil;</li>
+<li>filtros de accesibilidad;</li>
+<li>diseño de fichas;</li>
+<li>variables ambientales medidas;</li>
+<li>selección de cuencas de control;</li>
+<li>visualización futura en aplicaciones o tableros.</li>
+</ul>
+</section>
+<section id="sec-productos-integracion-validacion" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="sec-productos-integracion-validacion"><span class="header-section-number">17.5</span> Productos finales</h2>
+<p>El cierre de validación debe entregar:</p>
+<ul>
+<li>tabla integrada MRCT-terreno;</li>
+<li>mapa de cuencas visitadas y estado de validación;</li>
+<li>síntesis de consistencia;</li>
+<li>casos representativos;</li>
+<li>recomendaciones para nuevas campañas;</li>
+<li>limitaciones y decisiones metodológicas documentadas.</li>
+</ul>
 
 
 </section>
@@ -873,13 +862,13 @@ Table&nbsp;6.2: Etiquetas semánticas por derivada.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./vector_es.html" class="pagination-link" aria-label="Vector de Estado">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vector de Estado</span></span>
+      <a href="./resultados_terreno.html" class="pagination-link" aria-label="Resultados de Terreno">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Resultados de Terreno</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./integracion_espacial.html" class="pagination-link" aria-label="Integración Territorial">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Bibliografía">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bibliografía</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

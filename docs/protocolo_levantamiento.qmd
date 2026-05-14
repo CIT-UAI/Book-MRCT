@@ -1,0 +1,107 @@
+---
+title: "Protocolo de Levantamiento"
+subtitle: "Registros fotográficos, vuelos de dron y mediciones ambientales"
+---
+
+Este capítulo define el protocolo mínimo para levantar información comparable en las cuencas visitadas. Su contenido puede quedar establecido antes de la campaña, porque describe qué datos registrar y cómo organizarlos, independiente de cuáles sean finalmente las cuencas seleccionadas.
+
+::: {.callout-note}
+## Principio operativo
+
+Cada visita debe producir una ficha completa, fotografías georreferenciadas, registro de condiciones ambientales, observaciones cualitativas y respaldo ordenado por `RID`.
+:::
+
+## Identificación del sitio {#sec-identificacion-sitio-terreno}
+
+Cada cuenca visitada debe registrarse con:
+
+- `RID`;
+- comuna;
+- fecha y hora;
+- equipo responsable;
+- coordenada del punto de observación;
+- precisión del GPS si está disponible;
+- condición de acceso;
+- relación entre el punto visitado y la cuenca completa.
+
+Si el punto visitado no representa adecuadamente la cuenca, se debe indicar en la ficha.
+
+## Registro fotográfico terrestre {#sec-registro-fotografico-terrestre}
+
+El registro terrestre debe capturar contexto y detalle. Como mínimo:
+
+- fotografía general desde el punto de acceso;
+- fotografías hacia norte, este, sur y oeste;
+- fotografía del punto de medición;
+- detalle de agua, suelo, vegetación, nieve, erosión o perturbación visible;
+- fotografía de restricciones o condiciones relevantes de acceso.
+
+Las fotografías deben nombrarse con una convención estable:
+
+```text
+RID_YYYYMMDD_HHMM_tipo_registro_numero
+```
+
+## Vuelos de dron {#sec-vuelos-dron-terreno}
+
+Los vuelos de dron deben realizarse solo si las condiciones de viento, visibilidad, batería, permisos y seguridad lo permiten. El vuelo debe priorizar evidencia útil para interpretar la señal MRCT.
+
+Registros recomendados:
+
+- vista nadiral del punto de observación;
+- vista oblicua del entorno;
+- barrido de continuidad de cobertura;
+- registro de agua, humedales, nieve, cauces, erosión, caminos o intervención antrópica;
+- captura de límites o contrastes visibles entre la cuenca y su entorno.
+
+Si el vuelo se suspende, la ficha debe registrar la causa.
+
+## Mediciones ambientales {#sec-mediciones-ambientales-terreno}
+
+Las mediciones deben ser simples, repetibles y con unidad explícita. El set mínimo considera:
+
+- temperatura ambiente;
+- humedad relativa;
+- temperatura superficial de suelo si existe sensor;
+- temperatura de agua si hay curso o cuerpo de agua accesible;
+- presencia o ausencia de agua visible;
+- humedad superficial observada;
+- presencia de nieve o hielo;
+- nubosidad, viento, precipitación y visibilidad.
+
+Cuando se repita una medición, se debe conservar el valor original y registrar el promedio como dato derivado.
+
+## Observación cualitativa {#sec-observacion-cualitativa-terreno}
+
+La ficha debe registrar condiciones que ayuden a interpretar la MRCT:
+
+- cobertura vegetal dominante;
+- suelo desnudo, erosión o remoción;
+- sectores anegados o secos;
+- humedales, vegas, turberas, matorral o bosque;
+- evidencia de incendio, tala, pastoreo, caminos, drenajes o infraestructura;
+- diferencias visibles entre la cuenca y su entorno;
+- limitaciones de interpretación: sombra, nieve, nubosidad, mezcla de coberturas o baja representatividad del punto.
+
+## Respaldo diario {#sec-respaldo-diario-terreno}
+
+Al cierre de cada jornada se debe:
+
+- copiar fotografías, videos, vuelos y formularios a un repositorio común;
+- verificar asociación con `RID`;
+- revisar que no existan archivos corruptos;
+- respaldar tarjetas antes de reutilizarlas;
+- consolidar la bitácora diaria;
+- registrar cuencas no visitadas, cambios de ruta y problemas encontrados.
+
+## Control de completitud {#sec-control-completitud-terreno}
+
+Una visita se considera completa cuando existen:
+
+- ficha de sitio;
+- coordenada;
+- fotografías terrestres;
+- mediciones mínimas;
+- observaciones cualitativas;
+- estado del vuelo de dron;
+- comentario de consistencia preliminar con la señal MRCT.

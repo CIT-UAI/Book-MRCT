@@ -36,7 +36,11 @@ book:
     - part: trabajo_terreno.qmd
       chapters:
       - jerk.qmd
-      # - dim_seg.qmd
+      - planificacion_terreno.qmd
+      - protocolo_levantamiento.qmd
+      - fichas_cuencas.qmd
+      - resultados_terreno.qmd
+      - integracion_validacion.qmd
     # - proyectos.qmd
     # - recomendaciones.qmd
     # - part: "Marco de Referencia"
@@ -65,5 +69,4 @@ format:
     crossref:
       fig-prefix: Figura   # (default is "Figure")
       tbl-prefix: Tabla # (default is "Table")
-      eq-prefix: Ecuación 
-
+      eq-prefix: Ecuación

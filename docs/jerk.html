@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./planificacion_terreno.html" rel="next">
 <link href="./trabajo_terreno.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -69,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -238,18 +241,48 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./planificacion_terreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Planificación de Campaña</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./protocolo_levantamiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Protocolo de Levantamiento</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fichas_cuencas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resultados_terreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Resultados de Terreno</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./integracion_validacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./anexos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Anexos</span></span></a>
   </div>
 </li>
     </ul>
@@ -264,18 +297,19 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-pregunta-jerk-terreno" id="toc-sec-pregunta-jerk-terreno" class="nav-link active" data-scroll-target="#sec-pregunta-jerk-terreno"><span class="header-section-number">12.1</span> Pregunta de trabajo</a></li>
   <li><a href="#sec-criterio-jerk" id="toc-sec-criterio-jerk" class="nav-link" data-scroll-target="#sec-criterio-jerk"><span class="header-section-number">12.2</span> Qué mide el jerk</a></li>
-  <li><a href="#sec-insumos-jerk" id="toc-sec-insumos-jerk" class="nav-link" data-scroll-target="#sec-insumos-jerk"><span class="header-section-number">12.3</span> Insumos analizados</a></li>
-  <li><a href="#sec-estructura-datos-jerk" id="toc-sec-estructura-datos-jerk" class="nav-link" data-scroll-target="#sec-estructura-datos-jerk"><span class="header-section-number">12.4</span> Estructura de datos para consulta posterior</a></li>
-  <li><a href="#sec-control-calidad-jerk" id="toc-sec-control-calidad-jerk" class="nav-link" data-scroll-target="#sec-control-calidad-jerk"><span class="header-section-number">12.5</span> Control de calidad y cobertura</a></li>
-  <li><a href="#sec-eventos-jerk" id="toc-sec-eventos-jerk" class="nav-link" data-scroll-target="#sec-eventos-jerk"><span class="header-section-number">12.6</span> Eventos de jerk</a></li>
-  <li><a href="#sec-cruce-territorial-jerk" id="toc-sec-cruce-territorial-jerk" class="nav-link" data-scroll-target="#sec-cruce-territorial-jerk"><span class="header-section-number">12.7</span> Cruce territorial y accesibilidad preliminar</a></li>
-  <li><a href="#sec-puntaje-jerk" id="toc-sec-puntaje-jerk" class="nav-link" data-scroll-target="#sec-puntaje-jerk"><span class="header-section-number">12.8</span> Puntaje de priorización</a></li>
-  <li><a href="#sec-diez-cuencas-jerk" id="toc-sec-diez-cuencas-jerk" class="nav-link" data-scroll-target="#sec-diez-cuencas-jerk"><span class="header-section-number">12.9</span> Diez cuencas candidatas</a></li>
-  <li><a href="#sec-series-temporales-jerk" id="toc-sec-series-temporales-jerk" class="nav-link" data-scroll-target="#sec-series-temporales-jerk"><span class="header-section-number">12.10</span> Lectura de series temporales</a></li>
-  <li><a href="#sec-uso-terreno-jerk" id="toc-sec-uso-terreno-jerk" class="nav-link" data-scroll-target="#sec-uso-terreno-jerk"><span class="header-section-number">12.11</span> Cómo usar esta selección en la planificación de terreno</a></li>
+  <li><a href="#sec-estructura-datos-jerk" id="toc-sec-estructura-datos-jerk" class="nav-link" data-scroll-target="#sec-estructura-datos-jerk"><span class="header-section-number">12.3</span> Insumos y base analítica</a></li>
+  <li><a href="#sec-control-calidad-jerk" id="toc-sec-control-calidad-jerk" class="nav-link" data-scroll-target="#sec-control-calidad-jerk"><span class="header-section-number">12.4</span> Control de calidad y cobertura</a></li>
+  <li><a href="#sec-eventos-jerk" id="toc-sec-eventos-jerk" class="nav-link" data-scroll-target="#sec-eventos-jerk"><span class="header-section-number">12.5</span> Eventos extremos de jerk</a></li>
+  <li><a href="#sec-cruce-territorial-jerk" id="toc-sec-cruce-territorial-jerk" class="nav-link" data-scroll-target="#sec-cruce-territorial-jerk"><span class="header-section-number">12.6</span> Buffer operacional de Punta Arenas</a></li>
+  <li><a href="#sec-puntaje-jerk" id="toc-sec-puntaje-jerk" class="nav-link" data-scroll-target="#sec-puntaje-jerk"><span class="header-section-number">12.7</span> Puntaje de priorización</a></li>
+  <li><a href="#sec-diez-cuencas-jerk" id="toc-sec-diez-cuencas-jerk" class="nav-link" data-scroll-target="#sec-diez-cuencas-jerk"><span class="header-section-number">12.8</span> Diez cuencas candidatas</a></li>
+  <li><a href="#sec-series-temporales-jerk" id="toc-sec-series-temporales-jerk" class="nav-link" data-scroll-target="#sec-series-temporales-jerk"><span class="header-section-number">12.9</span> Lectura de series temporales</a></li>
+  <li><a href="#sec-terminales-h2-jerk" id="toc-sec-terminales-h2-jerk" class="nav-link" data-scroll-target="#sec-terminales-h2-jerk"><span class="header-section-number">12.10</span> Terminales estratégicos de hidrógeno verde</a></li>
+  <li><a href="#sec-uso-terreno-jerk" id="toc-sec-uso-terreno-jerk" class="nav-link" data-scroll-target="#sec-uso-terreno-jerk"><span class="header-section-number">12.11</span> Uso en planificación de terreno</a></li>
   <li><a href="#sec-fichas-jerk" id="toc-sec-fichas-jerk" class="nav-link" data-scroll-target="#sec-fichas-jerk"><span class="header-section-number">12.12</span> Fichas de terreno derivadas</a></li>
-  <li><a href="#sec-limitaciones-jerk" id="toc-sec-limitaciones-jerk" class="nav-link" data-scroll-target="#sec-limitaciones-jerk"><span class="header-section-number">12.13</span> Limitaciones</a></li>
-  <li><a href="#sec-cierre-jerk" id="toc-sec-cierre-jerk" class="nav-link" data-scroll-target="#sec-cierre-jerk"><span class="header-section-number">12.14</span> Cierre operativo</a></li>
+  <li><a href="#sec-productos-jerk" id="toc-sec-productos-jerk" class="nav-link" data-scroll-target="#sec-productos-jerk"><span class="header-section-number">12.13</span> Productos exportados</a></li>
+  <li><a href="#sec-limitaciones-jerk" id="toc-sec-limitaciones-jerk" class="nav-link" data-scroll-target="#sec-limitaciones-jerk"><span class="header-section-number">12.14</span> Limitaciones</a></li>
+  <li><a href="#sec-cierre-jerk" id="toc-sec-cierre-jerk" class="nav-link" data-scroll-target="#sec-cierre-jerk"><span class="header-section-number">12.15</span> Cierre operativo</a></li>
   </ul>
 </nav>
     </div>
@@ -285,7 +319,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./jerk.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Selección de Cuencas</span></h1>
-<p class="subtitle lead">Aproximación para orientar el trabajo de terreno mediante análisis de jerk</p>
+<p class="subtitle lead">Priorización para trabajo de terreno mediante análisis de jerk y zonas estratégicas</p>
 </div>
 
 
@@ -302,8 +336,8 @@ window.Quarto = {
 </header>
 
 
-<p>Este capítulo presenta una primera selección de cuencas candidatas para trabajo de terreno a partir del análisis de <strong>jerk</strong> de la Matriz de Resiliencia Climática Territorial. El objetivo no es cerrar una decisión definitiva de campaña, sino construir una lista técnicamente trazable de sitios que merecen revisión con mayor detalle, conversación con actores locales y evaluación logística.</p>
-<p>El flujo de análisis procesó el panel MRCT 2013-2025, materializó una base analítica para consultas posteriores y generó mapas, rankings y series temporales para identificar cuencas con cambios abruptos en su trayectoria ecosistémica durante 2020-2025.</p>
+<p>Este capítulo actualiza la selección de cuencas candidatas para trabajo de terreno a partir de la nueva versión del notebook <code>MRCT_Cuencas_Prioritarias_Jerk.ipynb</code>. El análisis usa el <strong>jerk</strong> de la Matriz de Resiliencia Climática Territorial para detectar cambios abruptos en la trayectoria ecosistémica y concentra la priorización en el entorno operacional de Punta Arenas.</p>
+<p>La versión actual incorpora una mejora importante: además de seleccionar cuencas para validación general, agrega zonas de búsqueda asociadas a <strong>puertos y terminales estratégicos para hidrógeno verde</strong>. Esta capa permite observar cuencas próximas a infraestructura relevante para la transformación energética regional, donde eventuales nuevas intervenciones podrían interactuar con condiciones ecosistémicas ya inestables.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -314,24 +348,25 @@ Alcance de la selección
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>La lista de cuencas prioritarias es una <strong>preselección técnica</strong>. Antes de transformarla en itinerario de terreno debe revisarse con análisis espacial detallado, accesos reales, permisos, clima, seguridad, conocimiento local y reunión con personas o instituciones del territorio.</p>
+<p>La lista de cuencas prioritarias es una <strong>preselección técnica</strong>. No equivale a una ruta final de terreno ni a una evaluación de impacto ambiental. Antes de definir una campaña deben revisarse accesos reales, permisos, seguridad, clima, propiedad, restricciones operativas y conocimiento local.</p>
 </div>
 </div>
 <section id="sec-pregunta-jerk-terreno" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="sec-pregunta-jerk-terreno"><span class="header-section-number">12.1</span> Pregunta de trabajo</h2>
-<p>La pregunta que orienta este análisis es:</p>
+<p>La pregunta que orienta esta versión del análisis es:</p>
 <blockquote class="blockquote">
-<p>¿Qué cuencas muestran cambios abruptos recientes en su trayectoria ecosistémica y cuáles de ellas pueden convertirse en candidatas razonables para observación, medición y validación en terreno?</p>
+<p>¿Qué cuencas del entorno operacional de Punta Arenas muestran cambios abruptos recientes en su trayectoria ecosistémica, y cuáles de ellas se relacionan espacialmente con zonas portuarias o terminales relevantes para el desarrollo de hidrógeno verde?</p>
 </blockquote>
-<p>La pregunta se separa en cuatro componentes:</p>
+<p>La pregunta se separa en cinco componentes:</p>
 <ul>
-<li>Identificar eventos abruptos medidos por jerk en la ventana 2020-2025;</li>
-<li>Distinguir entre intensificación y reversión de la trayectoria;</li>
-<li>Cruzar esos eventos con resiliencia, sensibilidad, contexto territorial y distancia a Punta Arenas;</li>
-<li>Producir una base consultable que permita ajustar la selección cuando se incorporen criterios logísticos o conocimiento local.</li>
+<li>Identificar eventos abruptos medidos por jerk en la serie MRCT 2013-2025;</li>
+<li>distinguir entre intensificación y reversión de la trayectoria;</li>
+<li>filtrar cuencas dentro de un área operacional definida desde Punta Arenas;</li>
+<li>ordenar las candidatas mediante un puntaje compuesto robusto a valores extremos;</li>
+<li>revisar cuencas cercanas a terminales marítimos relevantes para el traslado o exportación de hidrógeno verde y derivados.</li>
 </ul>
 </section>
-<section id="sec-criterio-jerk" class="level2" data-number="12.2">
+<section id="sec-criterio-jerk" class="level2 page-columns page-full" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="sec-criterio-jerk"><span class="header-section-number">12.2</span> Qué mide el jerk</h2>
 <p>La MRCT calcula para cada cuenca y año una variable de dominio, <code>Domain</code> o <span class="math inline">D</span>, que representa la distancia de la cuenca respecto de su estado ecosistémico de referencia. A partir de esa trayectoria se calculan derivadas temporales:</p>
 <ul>
@@ -340,7 +375,29 @@ Alcance de la selección
 <li><span class="math inline">A</span>: aceleración del cambio;</li>
 <li><span class="math inline">J</span>: cambio de la aceleración, o jerk.</li>
 </ul>
-<p>En términos operativos, el jerk identifica una ruptura en la dinámica. Un valor alto en magnitud indica que la cuenca experimentó un salto abrupto en su trayectoria, aunque ese salto no debe interpretarse automáticamente como degradación, recuperación o causalidad comprobada.</p>
+<p>En términos operativos, el jerk identifica una ruptura en la dinámica. Un valor alto en magnitud indica que la cuenca experimentó un salto abrupto en su trayectoria. Esa señal no debe interpretarse automáticamente como degradación, recuperación o causalidad comprobada: funciona como una alerta para mirar con mayor detalle.</p>
+<div class="cell page-columns page-full" data-layout-align="center">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-derivadas-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-derivadas-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-derivadas-jerk">flowchart TB
+  D["Domain (D)&lt;br/&gt;Distancia al estado de referencia"] --&gt; V["Velocidad (dD/dt)&lt;br/&gt;Direccion y ritmo del cambio"]
+  V --&gt; A["Aceleracion (d2D/dt2)&lt;br/&gt;Cambio en el ritmo"]
+  A --&gt; J["Jerk (d3D/dt3)&lt;br/&gt;Cambio abrupto en la aceleracion"]
+  J --&gt; I["J &gt; 0&lt;br/&gt;Intensificacion"]
+  J --&gt; R["J &lt; 0&lt;br/&gt;Reversion"]
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-derivadas-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: Derivadas temporales usadas para interpretar cambios abruptos en la trayectoria ecosistémica.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <p>El signo entrega una primera lectura:</p>
 <div id="tbl-signo-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -365,7 +422,7 @@ Table&nbsp;12.1: Lectura básica del signo del jerk para selección de cuencas.
 <tr class="odd">
 <td>Intensificación</td>
 <td><span class="math inline">J &gt; 0</span></td>
-<td>Aceleración brusca del cambio respecto del dominio de referencia. Puede sugerir perturbación, presión o deterioro emergente.</td>
+<td>Aceleración brusca del cambio respecto del dominio de referencia. Puede sugerir presión, perturbación o deterioro emergente.</td>
 </tr>
 <tr class="even">
 <td>Reversión</td>
@@ -377,11 +434,11 @@ Table&nbsp;12.1: Lectura básica del signo del jerk para selección de cuencas.
 </div>
 </figure>
 </div>
-<p>Esta distinción es útil para terreno porque permite seleccionar casos con preguntas distintas. Una cuenca con intensificación puede requerir observar señales de presión reciente; una cuenca con reversión puede requerir revisar si existe recuperación visible, cambio hidrológico, variación de nieve, intervención local o inconsistencia en la serie satelital.</p>
+<p>Esta distinción es útil para terreno porque permite formular preguntas distintas. Una cuenca con intensificación puede requerir observar señales de presión reciente; una cuenca con reversión puede requerir revisar si existe recuperación visible, cambio hidrológico, variación de nieve, intervención local o inconsistencia en la serie satelital.</p>
 </section>
-<section id="sec-insumos-jerk" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="sec-insumos-jerk"><span class="header-section-number">12.3</span> Insumos analizados</h2>
-<p>El análisis usó dos insumos principales:</p>
+<section id="sec-estructura-datos-jerk" class="level2 page-columns page-full" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="sec-estructura-datos-jerk"><span class="header-section-number">12.3</span> Insumos y base analítica</h2>
+<p>El flujo usa dos insumos principales:</p>
 <div id="tbl-insumos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-insumos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -404,75 +461,53 @@ Table&nbsp;12.2: Insumos principales del análisis de cuencas prioritarias por j
 <tbody>
 <tr class="odd">
 <td><code>MRCT_v1.xlsx</code></td>
-<td>Panel MRCT completo, con 273.520 registros y 74 columnas.</td>
-<td>Base temporal <code>RID × Year</code> para calcular eventos de jerk y cruzarlos con métricas MRCT.</td>
+<td>Panel MRCT completo, con 273.520 registros, 21.040 cuencas y 13 años.</td>
+<td>Base temporal <code>RID x Year</code> para calcular eventos de jerk y cruzarlos con métricas MRCT.</td>
 </tr>
 <tr class="even">
 <td><code>R12_cuencas_nema_v2.shp</code></td>
 <td>Geometría de 21.040 cuencas de Magallanes.</td>
-<td>Base espacial para centroides, distancias, comunas y mapas.</td>
+<td>Base espacial para centroides, distancias, comunas, buffers y mapas.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>El panel cubre 21.040 cuencas entre 2013 y 2025. Para el análisis de prioridad se trabajó con la ventana 2020-2025, porque representa la dinámica más reciente y porque el cálculo de jerk requiere años previos suficientes para estimar la tercera derivada discreta.</p>
-<p>La geometría fue transformada al sistema EPSG:32719, que permite trabajar en coordenadas métricas para calcular distancias aproximadas desde Punta Arenas. El punto urbano de referencia se definió en torno a las coordenadas <code>-70,9171</code>, <code>-53,1638</code>, transformadas a UTM 19S.</p>
-</section>
-<section id="sec-estructura-datos-jerk" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="sec-estructura-datos-jerk"><span class="header-section-number">12.4</span> Estructura de datos para consulta posterior</h2>
-<p>Uno de los aportes centrales del análisis no es solo la tabla final, sino la estructura de datos que deja preparada para consultas futuras. El flujo convierte archivos pesados en formatos analíticos rápidos y materializa una base DuckDB local, reutilizable por código, herramientas SIG o aplicaciones web.</p>
-<div id="tbl-productos-datos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-productos-datos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.3: Productos de datos generados para consulta y reutilización.
+<p>El panel completo cubre 2013-2025. Los primeros años no tienen jerk válido por definición, porque el cálculo necesita años previos para estimar la tercera derivada discreta. El análisis conserva la serie completa para control de calidad y lectura temporal, y luego usa eventos extremos y filtros espaciales para priorizar terreno.</p>
+<p>La geometría fue transformada al sistema EPSG:32719, que permite trabajar en coordenadas métricas para calcular distancias aproximadas desde Punta Arenas y desde cada terminal marítimo.</p>
+<div class="cell page-columns page-full" data-layout-align="center">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-flujo-base-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-flujo-base-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-flujo-base-jerk">flowchart TB
+  config["Configuracion&lt;br/&gt;rutas, coordenadas y parametros"] --&gt; data["Datos&lt;br/&gt;MRCT y cuencas"]
+  data --&gt; parquet["Parquet&lt;br/&gt;lectura rapida"]
+  parquet --&gt; duck["DuckDB&lt;br/&gt;base analitica local"]
+  duck --&gt; qc["Control de calidad&lt;br/&gt;cobertura y clases"]
+  qc --&gt; events["Eventos de jerk&lt;br/&gt;percentiles anual y global"]
+  events --&gt; buffer["Buffer PA&lt;br/&gt;radio adaptativo"]
+  buffer --&gt; score["P_score&lt;br/&gt;puntaje compuesto"]
+  score --&gt; top10["10 cuencas&lt;br/&gt;prioritarias"]
+  top10 --&gt; terminals["Terminales H2&lt;br/&gt;buffers de 50 km"]
+  terminals --&gt; export["Exportacion&lt;br/&gt;Excel, SHP y DuckDB"]
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-flujo-base-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.2: Flujo lineal de construcción de la base analítica y productos de priorización.
 </figcaption>
-<div aria-describedby="tbl-productos-datos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Componente</th>
-<th>Formato</th>
-<th>Función</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>mrct_panel.parquet</code></td>
-<td>Parquet</td>
-<td>Copia eficiente del panel MRCT para relecturas rápidas.</td>
-</tr>
-<tr class="even">
-<td><code>mrct_basins.parquet</code></td>
-<td>GeoParquet</td>
-<td>Geometría de cuencas serializada con atributos espaciales.</td>
-</tr>
-<tr class="odd">
-<td><code>mrct_jerk_analysis.db</code></td>
-<td>DuckDB</td>
-<td>Base analítica con tablas consultables sin reprocesar todos los insumos.</td>
-</tr>
-<tr class="even">
-<td><code>cuencas_prioritarias_jerk_10.xlsx</code></td>
-<td>Excel</td>
-<td>Tabla de salida con diez cuencas candidatas.</td>
-</tr>
-</tbody>
-</table>
-</div>
 </figure>
 </div>
-<p>La base DuckDB queda organizada en cinco tablas:</p>
+</div>
+</div>
+<p>La base DuckDB queda organizada en seis tablas:</p>
 <div id="tbl-esquema-duckdb-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-esquema-duckdb-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.4: Esquema de tablas creado para sostener consultas posteriores.
+Table&nbsp;12.3: Esquema de tablas creado para sostener consultas posteriores.
 </figcaption>
 <div aria-describedby="tbl-esquema-duckdb-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -491,43 +526,47 @@ Table&nbsp;12.4: Esquema de tablas creado para sostener consultas posteriores.
 <tbody>
 <tr class="odd">
 <td><code>mrct_panel</code></td>
-<td>Panel filtrado 2020-2025 con métricas MRCT por <code>RID</code> y <code>Year</code>.</td>
+<td>Panel MRCT completo.</td>
 <td>Consultar trayectorias, resiliencia, dominio, velocidad, aceleración y jerk.</td>
 </tr>
 <tr class="even">
 <td><code>basins</code></td>
-<td>Atributos y geometría de cuencas.</td>
+<td>Atributos y geometría resumida de cuencas.</td>
 <td>Construir mapas, cruces espaciales y visualizaciones.</td>
 </tr>
 <tr class="odd">
 <td><code>accessibility</code></td>
-<td>Centroide, distancia a Punta Arenas, comuna y anillo logístico.</td>
+<td>Centroide, distancia a Punta Arenas, comuna, anillo y pertenencia comunal.</td>
 <td>Filtrar cuencas por factibilidad preliminar.</td>
 </tr>
 <tr class="even">
 <td><code>jerk_events</code></td>
-<td>Eventos con jerk válido, percentiles y clasificación.</td>
+<td>Eventos con jerk no nulo, percentiles, signo y clase.</td>
 <td>Identificar eventos extremos por año, comuna o tipo de evento.</td>
 </tr>
 <tr class="odd">
 <td><code>field_priority</code></td>
-<td>Ranking final de cuencas candidatas.</td>
-<td>Alimentar reportes, fichas de terreno o aplicaciones de consulta.</td>
+<td>Ranking final de las diez cuencas seleccionadas dentro del buffer.</td>
+<td>Alimentar reportes, fichas de terreno y mapas.</td>
+</tr>
+<tr class="even">
+<td><code>terminal_results</code></td>
+<td>Cuencas calificadas por terminal de hidrógeno verde.</td>
+<td>Revisar señales ecosistémicas cerca de infraestructura estratégica.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Esta estructura permite que el análisis no dependa de una revisión manual de archivos intermedios. Una aplicación web, un tablero local, un script de actualización o un visor SIG podrían consultar la misma base para responder preguntas como: cuáles son las cuencas más extremas por año, cuáles están dentro de una comuna, cuáles tienen baja resiliencia, cuáles están cerca de un punto operativo o cuáles deben revisarse si cambia el umbral de prioridad.</p>
 </section>
-<section id="sec-control-calidad-jerk" class="level2 page-columns page-full" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="sec-control-calidad-jerk"><span class="header-section-number">12.5</span> Control de calidad y cobertura</h2>
-<p>Antes de priorizar cuencas se revisó la disponibilidad anual de jerk. Como esta métrica depende de derivadas temporales, los primeros años no tienen valores válidos. En la ventana de análisis reciente, la cobertura varía entre años.</p>
+<section id="sec-control-calidad-jerk" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="sec-control-calidad-jerk"><span class="header-section-number">12.4</span> Control de calidad y cobertura</h2>
+<p>Antes de priorizar cuencas se revisó la disponibilidad anual de jerk. La tabla distingue el total regional de cuencas, las cuencas con jerk válido y el porcentaje de cobertura.</p>
 <div id="tbl-disponibilidad-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-disponibilidad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.5: Disponibilidad de jerk en la ventana 2020-2025.
+Table&nbsp;12.4: Disponibilidad regional de jerk en la serie MRCT 2013-2025.
 </figcaption>
 <div aria-describedby="tbl-disponibilidad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -541,36 +580,78 @@ Table&nbsp;12.5: Disponibilidad de jerk en la ventana 2020-2025.
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0,0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2014</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0,0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0,0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">7.999</td>
+<td style="text-align: right;">38,0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">6.603</td>
+<td style="text-align: right;">31,4%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">6.932</td>
+<td style="text-align: right;">32,9%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: right;">21.040</td>
+<td style="text-align: right;">6.744</td>
+<td style="text-align: right;">32,1%</td>
+</tr>
+<tr class="even">
 <td style="text-align: right;">2020</td>
 <td style="text-align: right;">21.040</td>
 <td style="text-align: right;">6.921</td>
 <td style="text-align: right;">32,9%</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">2021</td>
 <td style="text-align: right;">21.040</td>
 <td style="text-align: right;">8.390</td>
 <td style="text-align: right;">39,9%</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: right;">2022</td>
 <td style="text-align: right;">21.040</td>
 <td style="text-align: right;">4.936</td>
 <td style="text-align: right;">23,5%</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">2023</td>
 <td style="text-align: right;">21.040</td>
 <td style="text-align: right;">3.833</td>
 <td style="text-align: right;">18,2%</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: right;">2024</td>
 <td style="text-align: right;">21.040</td>
 <td style="text-align: right;">3.692</td>
 <td style="text-align: right;">17,5%</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">2025</td>
 <td style="text-align: right;">21.040</td>
 <td style="text-align: right;">3.770</td>
@@ -581,32 +662,12 @@ Table&nbsp;12.5: Disponibilidad de jerk en la ventana 2020-2025.
 </div>
 </figure>
 </div>
-<p>La cobertura confirma que el análisis debe interpretarse con cautela. La ausencia de jerk válido en una cuenca no implica estabilidad ecosistémica; puede reflejar falta de datos suficientes, calidad de observación, restricciones de cálculo o problemas de disponibilidad en los insumos anuales.</p>
-<p>También se identificaron casos extremos para revisión. Los diez mayores valores absolutos de jerk incluyen eventos en Natales, Punta Arenas y otras comunas, con magnitudes entre 15,21 y 18,19. Estos casos no se eliminaron automáticamente: se conservaron como señales relevantes que deben revisarse con imágenes, series temporales y terreno.</p>
-<div id="fig-outliers-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-outliers-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_12_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-outliers-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.1: Distribución de outliers de jerk identificados durante el control de calidad. Elaboración propia.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="sec-eventos-jerk" class="level2 page-columns page-full" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="sec-eventos-jerk"><span class="header-section-number">12.6</span> Eventos de jerk</h2>
-<p>El análisis materializó <strong>31.542 eventos</strong> con jerk válido en 2020-2025. Para cada evento se calcularon dos percentiles:</p>
-<ul>
-<li>percentil anual, que compara una cuenca con otras cuencas del mismo año;</li>
-<li>percentil global, que compara el evento con todos los eventos de la ventana 2020-2025.</li>
-</ul>
-<p>El uso de percentiles evita interpretar el valor bruto de jerk fuera de contexto. Un mismo valor puede ser extremo en un año y moderado en otro. Por eso el ranking usa percentiles y no solo magnitudes absolutas.</p>
-<p>La distribución de clases en 2020-2025 muestra una gran cantidad de eventos neutros y una presencia balanceada de intensificaciones y reversiones fuertes:</p>
+<p>La baja cobertura relativa obliga a usar percentiles con cautela. La ausencia de jerk válido en una cuenca no implica estabilidad ecosistémica; puede reflejar falta de datos suficientes, calidad de observación, restricciones de cálculo o problemas de disponibilidad en los insumos anuales.</p>
+<p>La distribución completa de clases en el panel es:</p>
 <div id="tbl-clases-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-clases-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.6: Distribución de clases de jerk en la ventana 2020-2025.
+Table&nbsp;12.5: Distribución de clases de jerk en el panel MRCT.
 </figcaption>
 <div aria-describedby="tbl-clases-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -619,44 +680,42 @@ Table&nbsp;12.6: Distribución de clases de jerk en la ventana 2020-2025.
 <tbody>
 <tr class="odd">
 <td>Neutro</td>
-<td style="text-align: right;">101.986</td>
+<td style="text-align: right;">227.365</td>
 </tr>
 <tr class="even">
-<td>Reversión leve</td>
-<td style="text-align: right;">6.280</td>
+<td>Intensificación leve</td>
+<td style="text-align: right;">12.107</td>
 </tr>
 <tr class="odd">
-<td>Intensificación leve</td>
-<td style="text-align: right;">6.239</td>
+<td>Reversión leve</td>
+<td style="text-align: right;">12.000</td>
 </tr>
 <tr class="even">
 <td>Reversión fuerte</td>
-<td style="text-align: right;">5.945</td>
+<td style="text-align: right;">11.205</td>
 </tr>
 <tr class="odd">
 <td>Intensificación fuerte</td>
-<td style="text-align: right;">5.790</td>
+<td style="text-align: right;">10.843</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<div id="fig-distribucion-jerk-anual" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-distribucion-jerk-anual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_18_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-distribucion-jerk-anual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.2: Distribución anual de la magnitud absoluta de jerk. El gráfico permite comparar la intensidad relativa de eventos entre años.
-</figcaption>
-</figure>
-</div>
-<p>Los eventos regionales más extremos se concentran principalmente en Natales y Punta Arenas. Destacan, por ejemplo, el <code>RID 12614</code> en 2024 con reversión fuerte, el <code>RID 16141</code> en 2025 con intensificación fuerte, y el <code>RID 963</code> en Punta Arenas en 2023 con intensificación fuerte.</p>
+</section>
+<section id="sec-eventos-jerk" class="level2 page-columns page-full" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="sec-eventos-jerk"><span class="header-section-number">12.5</span> Eventos extremos de jerk</h2>
+<p>El análisis materializó <strong>59.820 eventos</strong> con jerk no nulo en <strong>11.517 cuencas</strong>. Para cada evento se calcularon dos percentiles:</p>
+<ul>
+<li>percentil anual, que compara una cuenca con otras cuencas del mismo año;</li>
+<li>percentil global, que compara el evento con todos los eventos de la serie.</li>
+</ul>
+<p>El percentil anual es el criterio principal de selección porque permite interpretar cada evento dentro de su contexto temporal. Un evento en p90 anual es relevante aunque el año completo haya sido menos activo que otros.</p>
 <div id="tbl-top-eventos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top-eventos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.7: Diez eventos regionales de mayor magnitud absoluta de jerk.
+Table&nbsp;12.6: Diez eventos regionales de mayor magnitud absoluta de jerk.
 </figcaption>
 <div aria-describedby="tbl-top-eventos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -682,93 +741,93 @@ Table&nbsp;12.7: Diez eventos regionales de mayor magnitud absoluta de jerk.
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">20780</td>
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">-19,3385</td>
+<td>Reversión</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,00202</td>
+<td>Torres del Paine</td>
+</tr>
+<tr class="even">
 <td style="text-align: right;">12614</td>
 <td style="text-align: right;">2024</td>
 <td style="text-align: right;">-18,1910</td>
-<td>Reversión fuerte</td>
+<td>Reversión</td>
 <td style="text-align: right;">100,0</td>
 <td style="text-align: right;">0,00042</td>
 <td>Natales</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">16666</td>
 <td style="text-align: right;">2024</td>
 <td style="text-align: right;">-17,5785</td>
-<td>Reversión fuerte</td>
+<td>Reversión</td>
 <td style="text-align: right;">100,0</td>
 <td style="text-align: right;">0,00047</td>
 <td>Natales</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: right;">16141</td>
 <td style="text-align: right;">2025</td>
 <td style="text-align: right;">17,4068</td>
-<td>Intensificación fuerte</td>
+<td>Intensificación</td>
 <td style="text-align: right;">100,0</td>
 <td style="text-align: right;">0,00022</td>
 <td>Natales</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">12614</td>
-<td style="text-align: right;">2025</td>
-<td style="text-align: right;">16,1410</td>
-<td>Intensificación fuerte</td>
-<td style="text-align: right;">100,0</td>
-<td style="text-align: right;">0,00043</td>
-<td>Natales</td>
-</tr>
 <tr class="odd">
+<td style="text-align: right;">6537</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">-16,3079</td>
+<td>Reversión</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,00321</td>
+<td>Cabo de Hornos</td>
+</tr>
+<tr class="even">
 <td style="text-align: right;">12521</td>
 <td style="text-align: right;">2024</td>
 <td style="text-align: right;">15,8616</td>
-<td>Intensificación fuerte</td>
+<td>Intensificación</td>
 <td style="text-align: right;">99,9</td>
 <td style="text-align: right;">0,00218</td>
 <td>Natales</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: right;">963</td>
 <td style="text-align: right;">2023</td>
 <td style="text-align: right;">15,6354</td>
-<td>Intensificación fuerte</td>
+<td>Intensificación</td>
 <td style="text-align: right;">100,0</td>
 <td style="text-align: right;">0,10950</td>
 <td>Punta Arenas</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: right;">19883</td>
 <td style="text-align: right;">2021</td>
 <td style="text-align: right;">-15,4961</td>
-<td>Reversión fuerte</td>
+<td>Reversión</td>
 <td style="text-align: right;">100,0</td>
 <td style="text-align: right;">0,00015</td>
-<td>Natales</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">16666</td>
-<td style="text-align: right;">2025</td>
-<td style="text-align: right;">15,4425</td>
-<td>Intensificación fuerte</td>
-<td style="text-align: right;">99,9</td>
-<td style="text-align: right;">0,00161</td>
 <td>Natales</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">43</td>
 <td style="text-align: right;">2024</td>
 <td style="text-align: right;">-15,3694</td>
-<td>Reversión fuerte</td>
+<td>Reversión</td>
 <td style="text-align: right;">99,9</td>
 <td style="text-align: right;">0,00130</td>
 <td>Punta Arenas</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">19411</td>
-<td style="text-align: right;">2024</td>
-<td style="text-align: right;">-15,2141</td>
-<td>Reversión fuerte</td>
-<td style="text-align: right;">99,9</td>
-<td style="text-align: right;">0,00891</td>
+<td style="text-align: right;">20069</td>
+<td style="text-align: right;">2019</td>
+<td style="text-align: right;">15,3110</td>
+<td>Intensificación</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">0,02494</td>
 <td>Natales</td>
 </tr>
 </tbody>
@@ -776,127 +835,195 @@ Table&nbsp;12.7: Diez eventos regionales de mayor magnitud absoluta de jerk.
 </div>
 </figure>
 </div>
-</section>
-<section id="sec-cruce-territorial-jerk" class="level2 page-columns page-full" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="sec-cruce-territorial-jerk"><span class="header-section-number">12.7</span> Cruce territorial y accesibilidad preliminar</h2>
-<p>El análisis incorporó una primera lectura logística desde Punta Arenas. Esta lectura no reemplaza la revisión de caminos, permisos o tiempos reales de traslado; solo entrega una aproximación inicial basada en centroides, comuna y distancia euclidiana.</p>
-<p>Se usaron tres anillos:</p>
-<div id="tbl-anillos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-anillos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.8: Anillos de accesibilidad preliminar usados en el análisis.
+<div id="fig-top-eventos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-top-eventos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_11_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-top-eventos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.3: Eventos regionales de mayor magnitud absoluta de jerk en la serie MRCT.
 </figcaption>
-<div aria-describedby="tbl-anillos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figure>
+</div>
+<div id="fig-eventos-regionales-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-eventos-regionales-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_11_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-eventos-regionales-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.4: Eventos regionales de jerk iguales o superiores al percentil 95. El mapa entrega contexto espacial antes de filtrar por el entorno operacional de Punta Arenas.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-cruce-territorial-jerk" class="level2 page-columns page-full" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="sec-cruce-territorial-jerk"><span class="header-section-number">12.6</span> Buffer operacional de Punta Arenas</h2>
+<p>La nueva versión del análisis abandona la selección regional 5+5 y usa un criterio único: <strong>top 10 por <code>P_score</code> dentro del área operacional de Punta Arenas</strong>.</p>
+<p>Una cuenca entra al conjunto candidato si cumple al menos una de estas condiciones:</p>
+<ul>
+<li>pertenece a la comuna de Punta Arenas (<code>CUT_COM = 12101</code>);</li>
+<li>su centroide está dentro del radio operativo adaptativo desde el centro urbano de Punta Arenas.</li>
+</ul>
+<p>El notebook explora combinaciones de radio y percentil anual. La combinación escogida fue <strong>80 km</strong> y <strong>jerk igual o superior al p90 anual</strong>, porque es el radio más pequeño evaluado que garantiza más de diez cuencas calificadas con el umbral más exigente.</p>
+<div id="tbl-parametros-buffer-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-parametros-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.7: Exploración de parámetros para el buffer operativo de Punta Arenas.
+</figcaption>
+<div aria-describedby="tbl-parametros-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Anillo</th>
-<th>Criterio de distancia</th>
-<th>Lectura logística preliminar</th>
+<th style="text-align: right;">Radio</th>
+<th style="text-align: right;">Umbral anual</th>
+<th style="text-align: right;">Cuencas calificadas</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Cercano</td>
-<td>0-30 km</td>
-<td>Potencial visita corta si existe acceso real.</td>
+<td style="text-align: right;">80 km</td>
+<td style="text-align: right;">p90</td>
+<td style="text-align: right;">364</td>
 </tr>
 <tr class="even">
-<td>Intermedio</td>
-<td>30-80 km</td>
-<td>Visita de media jornada o jornada completa.</td>
+<td style="text-align: right;">80 km</td>
+<td style="text-align: right;">p85</td>
+<td style="text-align: right;">484</td>
 </tr>
 <tr class="odd">
-<td>Extendido</td>
-<td>Más de 80 km</td>
-<td>Requiere mayor justificación técnica y planificación.</td>
+<td style="text-align: right;">120 km</td>
+<td style="text-align: right;">p90</td>
+<td style="text-align: right;">443</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">150 km</td>
+<td style="text-align: right;">p90</td>
+<td style="text-align: right;">634</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">200 km</td>
+<td style="text-align: right;">p90</td>
+<td style="text-align: right;">1.100</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>El diagnóstico territorial identificó <strong>186 candidatas</strong> en el entorno ampliado de Punta Arenas bajo un umbral de jerk igual o superior al percentil 90. Sin embargo, el resultado muestra una advertencia importante: el territorio comunal de Punta Arenas es muy extenso, por lo que varias cuencas de la comuna están a más de 100 km del centro urbano.</p>
-<p>En el buffer operativo exploratorio de 50 km y umbral p90 se identificaron 130 cuencas calificadas. Aun así, al combinar prioridad regional y prioridad comunal, las diez cuencas seleccionadas quedaron en anillo extendido. Esto obliga a que la fase siguiente revise rutas reales y factibilidad con mayor detalle.</p>
+<div class="cell page-columns page-full" data-layout-align="center">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-ajuste-buffer-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-ajuste-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-ajuste-buffer-jerk">flowchart TB
+  start["Parametros iniciales&lt;br/&gt;radios 80, 120, 150, 200 km&lt;br/&gt;umbrales p90, p85, p80, p75"] --&gt; count["Contar cuencas calificadas"]
+  count --&gt; decision{"Hay al menos&lt;br/&gt;10 candidatas?"}
+  decision -- "Si" --&gt; choose["Elegir radio menor&lt;br/&gt;con umbral mas exigente"]
+  decision -- "No" --&gt; relax["Ampliar radio o relajar umbral"]
+  relax --&gt; count
+  choose --&gt; result["Resultado usado&lt;br/&gt;80 km + p90 anual&lt;br/&gt;364 cuencas"]
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-ajuste-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.5: Lógica de diagnóstico del buffer operativo y ajuste de parámetros.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <div id="fig-buffer-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_25_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_14_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.3: Diagnóstico espacial del buffer de estudio y cuencas calificadas bajo criterios de radio y umbral.
+Figure&nbsp;12.6: Cuencas calificadas dentro del entorno operacional de Punta Arenas. La visualización se concentra en el área de análisis y no en toda la región.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="sec-puntaje-jerk" class="level2" data-number="12.8">
-<h2 data-number="12.8" class="anchored" data-anchor-id="sec-puntaje-jerk"><span class="header-section-number">12.8</span> Puntaje de priorización</h2>
-<p>Para pasar desde eventos individuales a cuencas candidatas se construyó un puntaje compuesto, denominado <code>P_score</code>. Este puntaje combina dimensiones técnicas y logísticas:</p>
+<section id="sec-puntaje-jerk" class="level2 page-columns page-full" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="sec-puntaje-jerk"><span class="header-section-number">12.7</span> Puntaje de priorización</h2>
+<p>Para pasar desde eventos individuales a cuencas candidatas se construyó un puntaje compuesto, denominado <code>P_score</code>. En esta versión, el puntaje se calcula <strong>exclusivamente sobre las 364 cuencas calificadas del buffer</strong>, no sobre todo el conjunto regional.</p>
+<p><span class="math display">P = 0,35 \cdot J^* + 0,20 \cdot R^* + 0,15 \cdot E^* + 0,15 \cdot L^* + 0,15 \cdot A^*</span></p>
 <div id="tbl-pesos-prioridad-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pesos-prioridad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.9: Componentes del puntaje compuesto de prioridad.
+Table&nbsp;12.8: Componentes del puntaje compuesto de prioridad.
 </figcaption>
 <div aria-describedby="tbl-pesos-prioridad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
 <col style="width: 30%">
-<col style="width: 40%">
-<col style="width: 30%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Dimensión</th>
+<th>Componente</th>
+<th>Variable base</th>
 <th style="text-align: right;">Peso</th>
 <th>Qué representa</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Magnitud de jerk</td>
+<td><span class="math inline">J^*</span></td>
+<td><code>jerk_pct_global</code></td>
 <td style="text-align: right;">0,35</td>
-<td>Intensidad relativa del evento abrupto.</td>
+<td>Magnitud relativa del evento abrupto.</td>
 </tr>
 <tr class="even">
-<td>Resiliencia</td>
+<td><span class="math inline">R^*</span></td>
+<td><code>PT</code></td>
 <td style="text-align: right;">0,20</td>
-<td>Prioridad asociada a bajo <code>RES</code> o condición crítica.</td>
+<td>Potencial de transición o vulnerabilidad ecosistémica.</td>
 </tr>
 <tr class="odd">
-<td>Relevancia ecosistémica</td>
+<td><span class="math inline">E^*</span></td>
+<td><code>Domain_local</code></td>
 <td style="text-align: right;">0,15</td>
-<td>Relación con estado, tipo de resiliencia y señal territorial.</td>
+<td>Diferencia de la cuenca respecto de su entorno local.</td>
 </tr>
 <tr class="even">
-<td>Sensibilidad o contexto</td>
+<td><span class="math inline">L^*</span></td>
+<td><code>SENS</code></td>
 <td style="text-align: right;">0,15</td>
-<td>Relación con sensibilidad y contraste local cuando existe información.</td>
+<td>Sensibilidad climática o exposición a forzantes.</td>
 </tr>
 <tr class="odd">
-<td>Accesibilidad preliminar</td>
+<td><span class="math inline">A^*</span></td>
+<td><code>1 - dist_pa_km</code></td>
 <td style="text-align: right;">0,15</td>
-<td>Distancia y pertenencia al entorno operativo definido.</td>
+<td>Accesibilidad relativa dentro del conjunto candidato.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Los pesos son una decisión inicial de trabajo. Deben quedar como parámetros ajustables, especialmente después de revisar logística, rutas, permisos y conocimiento local. En esta etapa el puntaje cumple una función práctica: ordenar las candidatas, no demostrar que una cuenca sea objetivamente más importante que otra en todos los sentidos.</p>
-<p>El ranking regional produjo <strong>1.806 cuencas candidatas únicas</strong>, usando un evento representativo por cuenca. El rango de <code>P_score</code> fue de 0,074 a 0,953. Las primeras posiciones regionales se concentran en Río Verde, Timaukel, Natales y Punta Arenas.</p>
+<p>Los componentes se normalizan por rango percentil dentro del buffer. Esto evita que valores extremos dominen la escala y hace que las dimensiones sean comparables. El rango observado de <code>P_score</code> fue de <strong>0,078 a 0,886</strong>.</p>
+<div id="fig-pscore-buffer-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-pscore-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_17_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-pscore-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.7: Distribución espacial del <code>P_score</code> dentro del buffer operativo de Punta Arenas.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="sec-diez-cuencas-jerk" class="level2 page-columns page-full" data-number="12.9">
-<h2 data-number="12.9" class="anchored" data-anchor-id="sec-diez-cuencas-jerk"><span class="header-section-number">12.9</span> Diez cuencas candidatas</h2>
-<p>La tabla siguiente presenta las diez cuencas priorizadas por el flujo de análisis. La selección combinó las cinco mejores candidatas regionales y las mejores candidatas asociadas al entorno/comuna de Punta Arenas para mantener una mezcla entre señal regional fuerte y relevancia logística para la campaña.</p>
+<section id="sec-diez-cuencas-jerk" class="level2 page-columns page-full" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="sec-diez-cuencas-jerk"><span class="header-section-number">12.8</span> Diez cuencas candidatas</h2>
+<p>La tabla siguiente presenta las diez cuencas priorizadas por el flujo actualizado. Todas pertenecen a la comuna de Punta Arenas y fueron seleccionadas por <code>P_score</code> dentro del conjunto candidato.</p>
 <div id="tbl-diez-cuencas-prioritarias" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-diez-cuencas-prioritarias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.10: Diez cuencas candidatas para validación en terreno según análisis de jerk.
+Table&nbsp;12.9: Diez cuencas candidatas para validación en terreno según el flujo actualizado.
 </figcaption>
 <div aria-describedby="tbl-diez-cuencas-prioritarias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -922,7 +1049,7 @@ Table&nbsp;12.10: Diez cuencas candidatas para validación en terreno según an�
 <th style="text-align: right;">Jerk</th>
 <th style="text-align: right;">Percentil anual</th>
 <th>Tipo de evento</th>
-<th style="text-align: right;"><code>RES</code> año crítico</th>
+<th style="text-align: right;"><code>RES</code></th>
 <th style="text-align: right;">Distancia a PA (km)</th>
 <th>Anillo</th>
 <th style="text-align: right;"><code>P_score</code></th>
@@ -931,205 +1058,433 @@ Table&nbsp;12.10: Diez cuencas candidatas para validación en terreno según an�
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">3555</td>
-<td>Río Verde</td>
-<td style="text-align: right;">2021</td>
-<td style="text-align: right;">7,8550</td>
-<td style="text-align: right;">99,9</td>
+<td style="text-align: right;">1641</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2019</td>
+<td style="text-align: right;">4,2523</td>
+<td style="text-align: right;">97,1</td>
 <td>Intensificación</td>
-<td style="text-align: right;">0,00010</td>
-<td style="text-align: right;">160,1</td>
-<td>Extendido</td>
-<td style="text-align: right;">0,9527</td>
+<td style="text-align: right;">0,00014</td>
+<td style="text-align: right;">51,7</td>
+<td>Intermedio</td>
+<td style="text-align: right;">0,8856</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">4203</td>
-<td>Río Verde</td>
-<td style="text-align: right;">2023</td>
-<td style="text-align: right;">5,4293</td>
-<td style="text-align: right;">98,7</td>
-<td>Intensificación</td>
-<td style="text-align: right;">0,00000</td>
-<td style="text-align: right;">147,3</td>
-<td>Extendido</td>
-<td style="text-align: right;">0,9300</td>
+<td style="text-align: right;">1298</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">-4,4038</td>
+<td style="text-align: right;">99,3</td>
+<td>Reversión</td>
+<td style="text-align: right;">0,00028</td>
+<td style="text-align: right;">65,7</td>
+<td>Intermedio</td>
+<td style="text-align: right;">0,8701</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
-<td style="text-align: right;">10929</td>
-<td>Timaukel</td>
-<td style="text-align: right;">2022</td>
-<td style="text-align: right;">-7,7200</td>
-<td style="text-align: right;">99,8</td>
+<td style="text-align: right;">1602</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">-8,0053</td>
+<td style="text-align: right;">99,9</td>
 <td>Reversión</td>
-<td style="text-align: right;">0,00061</td>
-<td style="text-align: right;">140,8</td>
-<td>Extendido</td>
-<td style="text-align: right;">0,9142</td>
+<td style="text-align: right;">0,00050</td>
+<td style="text-align: right;">37,8</td>
+<td>Cercano</td>
+<td style="text-align: right;">0,8567</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
-<td style="text-align: right;">13206</td>
-<td>Natales</td>
-<td style="text-align: right;">2023</td>
-<td style="text-align: right;">8,2457</td>
-<td style="text-align: right;">99,7</td>
+<td style="text-align: right;">440</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: right;">6,2027</td>
+<td style="text-align: right;">98,9</td>
 <td>Intensificación</td>
-<td style="text-align: right;">0,00007</td>
-<td style="text-align: right;">164,7</td>
-<td>Extendido</td>
-<td style="text-align: right;">0,9136</td>
+<td style="text-align: right;">0,00099</td>
+<td style="text-align: right;">83,2</td>
+<td>Intermedio</td>
+<td style="text-align: right;">0,8539</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">12754</td>
-<td>Natales</td>
-<td style="text-align: right;">2020</td>
-<td style="text-align: right;">5,3564</td>
-<td style="text-align: right;">99,4</td>
-<td>Intensificación</td>
-<td style="text-align: right;">0,00037</td>
-<td style="text-align: right;">211,2</td>
+<td style="text-align: right;">244</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">-5,7977</td>
+<td style="text-align: right;">99,6</td>
+<td>Reversión</td>
+<td style="text-align: right;">0,00001</td>
+<td style="text-align: right;">166,4</td>
 <td>Extendido</td>
-<td style="text-align: right;">0,9125</td>
+<td style="text-align: right;">0,8485</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
-<td style="text-align: right;">1340</td>
+<td style="text-align: right;">2712</td>
 <td>Punta Arenas</td>
-<td style="text-align: right;">2020</td>
-<td style="text-align: right;">-4,8846</td>
-<td style="text-align: right;">99,2</td>
-<td>Reversión</td>
-<td style="text-align: right;">0,00044</td>
-<td style="text-align: right;">143,3</td>
-<td>Extendido</td>
-<td style="text-align: right;">0,9060</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: right;">4,8345</td>
+<td style="text-align: right;">98,0</td>
+<td>Intensificación</td>
+<td style="text-align: right;">0,00144</td>
+<td style="text-align: right;">83,2</td>
+<td>Intermedio</td>
+<td style="text-align: right;">0,8271</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">7</td>
-<td style="text-align: right;">275</td>
+<td style="text-align: right;">465</td>
 <td>Punta Arenas</td>
-<td style="text-align: right;">2020</td>
-<td style="text-align: right;">6,4628</td>
-<td style="text-align: right;">99,8</td>
-<td>Intensificación</td>
-<td style="text-align: right;">0,00205</td>
-<td style="text-align: right;">231,1</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">-4,8793</td>
+<td style="text-align: right;">99,2</td>
+<td>Reversión</td>
+<td style="text-align: right;">0,00012</td>
+<td style="text-align: right;">153,9</td>
 <td>Extendido</td>
-<td style="text-align: right;">0,8699</td>
+<td style="text-align: right;">0,8043</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">8</td>
-<td style="text-align: right;">461</td>
+<td style="text-align: right;">783</td>
 <td>Punta Arenas</td>
-<td style="text-align: right;">2021</td>
-<td style="text-align: right;">3,9040</td>
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">-3,8285</td>
 <td style="text-align: right;">98,7</td>
-<td>Intensificación</td>
-<td style="text-align: right;">0,00037</td>
-<td style="text-align: right;">126,5</td>
-<td>Extendido</td>
-<td style="text-align: right;">0,8595</td>
+<td>Reversión</td>
+<td style="text-align: right;">0,00053</td>
+<td style="text-align: right;">78,4</td>
+<td>Intermedio</td>
+<td style="text-align: right;">0,8026</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">9</td>
-<td style="text-align: right;">43</td>
+<td style="text-align: right;">1553</td>
 <td>Punta Arenas</td>
-<td style="text-align: right;">2024</td>
-<td style="text-align: right;">-15,3694</td>
-<td style="text-align: right;">99,9</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: right;">-3,3516</td>
+<td style="text-align: right;">94,7</td>
 <td>Reversión</td>
-<td style="text-align: right;">0,00130</td>
-<td style="text-align: right;">204,5</td>
-<td>Extendido</td>
-<td style="text-align: right;">0,8549</td>
+<td style="text-align: right;">0,00049</td>
+<td style="text-align: right;">59,3</td>
+<td>Intermedio</td>
+<td style="text-align: right;">0,8025</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">10</td>
-<td style="text-align: right;">446</td>
+<td style="text-align: right;">1635</td>
 <td>Punta Arenas</td>
 <td style="text-align: right;">2020</td>
-<td style="text-align: right;">-4,0726</td>
-<td style="text-align: right;">98,6</td>
+<td style="text-align: right;">-3,2286</td>
+<td style="text-align: right;">97,1</td>
 <td>Reversión</td>
-<td style="text-align: right;">0,00259</td>
-<td style="text-align: right;">140,4</td>
-<td>Extendido</td>
-<td style="text-align: right;">0,8442</td>
+<td style="text-align: right;">0,00003</td>
+<td style="text-align: right;">53,6</td>
+<td>Intermedio</td>
+<td style="text-align: right;">0,7966</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>La tabla debe leerse como un punto de partida. Todas las cuencas seleccionadas aparecen en anillo extendido, lo que significa que la factibilidad real no está resuelta. Antes de ejecutar una campaña se debe verificar acceso por caminos, tiempos de traslado, permisos, condiciones climáticas, seguridad y disponibilidad de puntos de observación.</p>
-<div id="fig-cuencas-buffer-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-cuencas-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_35_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-cuencas-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.4: Cuencas candidatas dentro del buffer de estudio y ranking preliminar asociado.
-</figcaption>
-</figure>
-</div>
-<div id="fig-eventos-regionales-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-eventos-regionales-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_37_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-eventos-regionales-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.5: Eventos regionales de jerk iguales o superiores al percentil 95 en la ventana 2020-2025.
-</figcaption>
-</figure>
-</div>
+<p>La selección muestra una mezcla de intensificaciones y reversiones fuertes, con predominio de cuencas de resiliencia muy baja o <code>Colapso_Potencial</code>. Aunque varias cuencas están en anillo intermedio, dos permanecen en anillo extendido por pertenecer a la comuna de Punta Arenas pese a estar lejos del centro urbano. Esa diferencia debe quedar visible en la planificación logística.</p>
 <div id="fig-top10-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-top10-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_39_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_20_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-top10-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.6: Diez cuencas prioritarias en el entorno de análisis. La figura muestra su ubicación relativa y advierte que ninguna queda dentro del radio simple de 50 km desde el centro urbano de Punta Arenas.
+Figure&nbsp;12.8: Diez cuencas prioritarias dentro del entorno operacional de Punta Arenas, numeradas según <code>P_score</code>.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="sec-series-temporales-jerk" class="level2 page-columns page-full" data-number="12.10">
-<h2 data-number="12.10" class="anchored" data-anchor-id="sec-series-temporales-jerk"><span class="header-section-number">12.10</span> Lectura de series temporales</h2>
+<section id="sec-series-temporales-jerk" class="level2 page-columns page-full" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="sec-series-temporales-jerk"><span class="header-section-number">12.9</span> Lectura de series temporales</h2>
 <p>Para las tres cuencas de mayor puntaje se revisaron series temporales completas 2013-2025 de <code>Domain</code>, <code>Velocidad</code>, <code>Aceleracion</code>, <code>Jerk</code> y <code>RES</code>. Esta lectura es necesaria porque un ranking por jerk puede seleccionar picos aislados. La serie permite distinguir si el evento abrupto aparece como una ruptura puntual, una intensificación dentro de una tendencia o una reversión después de varios años de alejamiento del dominio.</p>
 <div id="fig-series-top3-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-series-top3-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_41_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_21_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-series-top3-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.7: Series temporales de las tres cuencas con mayor <code>P_score</code>. La línea vertical roja indica el año crítico de jerk.
+Figure&nbsp;12.9: Series temporales de las tres cuencas con mayor <code>P_score</code>. La línea vertical roja indica el año crítico de jerk.
 </figcaption>
 </figure>
 </div>
 <p>Esta lectura debe repetirse para cualquier cuenca que pase a planificación de terreno. Una cuenca no debería visitarse solo porque aparece en el top 10; debería visitarse porque su serie temporal formula una pregunta territorial clara.</p>
 </section>
+<section id="sec-terminales-h2-jerk" class="level2 page-columns page-full" data-number="12.10">
+<h2 data-number="12.10" class="anchored" data-anchor-id="sec-terminales-h2-jerk"><span class="header-section-number">12.10</span> Terminales estratégicos de hidrógeno verde</h2>
+<p>La nueva versión del notebook agrega una lectura específica para terminales marítimos asociados al potencial traslado o exportación de hidrógeno verde y derivados. La lógica es preventiva: las cuencas cercanas a infraestructura estratégica que ya muestran jerk elevado constituyen zonas donde conviene levantar una línea base territorial más cuidadosa.</p>
+<div id="tbl-terminales-h2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-terminales-h2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.10: Terminales estratégicos incorporados al análisis de hidrógeno verde.
+</figcaption>
+<div aria-describedby="tbl-terminales-h2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Terminal</th>
+<th style="text-align: right;">Latitud</th>
+<th style="text-align: right;">Longitud</th>
+<th>Rol preliminar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Muelle Laredo</td>
+<td style="text-align: right;">-52,9558</td>
+<td style="text-align: right;">-70,8202</td>
+<td>Puerto mixto al norte de Punta Arenas; candidato a exportación de hidrógeno o amoníaco.</td>
+</tr>
+<tr class="even">
+<td>Terminal Cabo Negro</td>
+<td style="text-align: right;">-52,9394</td>
+<td style="text-align: right;">-70,8105</td>
+<td>Terminal de combustibles y plataforma potencial para transformación energética.</td>
+</tr>
+<tr class="odd">
+<td>Terminal Marítimo San Gregorio</td>
+<td style="text-align: right;">-52,6232</td>
+<td style="text-align: right;">-70,2007</td>
+<td>Terminal en el Estrecho de Magallanes, próximo a zonas de menor intervención antrópica relativa.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Para cada terminal se construyó un buffer de <strong>50 km</strong>. Dentro de ese radio se seleccionaron cuencas con jerk igual o superior al <strong>p85 anual</strong> y se ordenaron por <code>P_score</code>. Las cuencas compartidas entre terminales se mantienen explícitas, porque Laredo y Cabo Negro están espacialmente próximos y pueden capturar señales similares.</p>
+<div id="tbl-resumen-terminales-h2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-resumen-terminales-h2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.11: Resumen de cuencas calificadas por terminal estratégico.
+</figcaption>
+<div aria-describedby="tbl-resumen-terminales-h2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Terminal</th>
+<th style="text-align: right;">Cuencas en buffer</th>
+<th style="text-align: right;">Cuencas con jerk &gt;= p85</th>
+<th style="text-align: right;">RID superior</th>
+<th style="text-align: right;">Jerk del RID superior</th>
+<th style="text-align: right;"><code>RES</code></th>
+<th>Clase</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Muelle Laredo</td>
+<td style="text-align: right;">597</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">1808</td>
+<td style="text-align: right;">4,0692</td>
+<td style="text-align: right;">0,00208</td>
+<td>Intensificación fuerte</td>
+</tr>
+<tr class="even">
+<td>Terminal Cabo Negro</td>
+<td style="text-align: right;">607</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">1808</td>
+<td style="text-align: right;">4,0692</td>
+<td style="text-align: right;">0,00208</td>
+<td>Intensificación fuerte</td>
+</tr>
+<tr class="odd">
+<td>Terminal Marítimo San Gregorio</td>
+<td style="text-align: right;">693</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5258</td>
+<td style="text-align: right;">-2,3849</td>
+<td style="text-align: right;">0,00075</td>
+<td>Reversión fuerte</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="tbl-top-terminales-h2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top-terminales-h2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.12: Primeras cuencas calificadas por terminal de hidrógeno verde.
+</figcaption>
+<div aria-describedby="tbl-top-terminales-h2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Terminal</th>
+<th style="text-align: right;">Ranking</th>
+<th style="text-align: right;">RID</th>
+<th>Comuna</th>
+<th style="text-align: right;">Año crítico</th>
+<th style="text-align: right;">Jerk</th>
+<th>Tipo</th>
+<th style="text-align: right;">Distancia al terminal (km)</th>
+<th style="text-align: right;"><code>P_score</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Muelle Laredo</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1808</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">4,0692</td>
+<td>Intensificación</td>
+<td style="text-align: right;">30,4</td>
+<td style="text-align: right;">0,7032</td>
+</tr>
+<tr class="even">
+<td>Muelle Laredo</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2213</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2023</td>
+<td style="text-align: right;">3,6748</td>
+<td>Intensificación</td>
+<td style="text-align: right;">21,4</td>
+<td style="text-align: right;">0,6766</td>
+</tr>
+<tr class="odd">
+<td>Muelle Laredo</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9116</td>
+<td>Porvenir</td>
+<td style="text-align: right;">2019</td>
+<td style="text-align: right;">3,6215</td>
+<td>Intensificación</td>
+<td style="text-align: right;">33,1</td>
+<td style="text-align: right;">0,6739</td>
+</tr>
+<tr class="even">
+<td>Terminal Cabo Negro</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1808</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">4,0692</td>
+<td>Intensificación</td>
+<td style="text-align: right;">32,2</td>
+<td style="text-align: right;">0,7032</td>
+</tr>
+<tr class="odd">
+<td>Terminal Cabo Negro</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2213</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2023</td>
+<td style="text-align: right;">3,6748</td>
+<td>Intensificación</td>
+<td style="text-align: right;">20,1</td>
+<td style="text-align: right;">0,6766</td>
+</tr>
+<tr class="even">
+<td>Terminal Cabo Negro</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9116</td>
+<td>Porvenir</td>
+<td style="text-align: right;">2019</td>
+<td style="text-align: right;">3,6215</td>
+<td>Intensificación</td>
+<td style="text-align: right;">33,3</td>
+<td style="text-align: right;">0,6739</td>
+</tr>
+<tr class="odd">
+<td>Terminal Marítimo San Gregorio</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5258</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">-2,3849</td>
+<td>Reversión</td>
+<td style="text-align: right;">33,5</td>
+<td style="text-align: right;">0,5343</td>
+</tr>
+<tr class="even">
+<td>Terminal Marítimo San Gregorio</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9061</td>
+<td>Porvenir</td>
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">-2,7341</td>
+<td>Reversión</td>
+<td style="text-align: right;">45,3</td>
+<td style="text-align: right;">0,5010</td>
+</tr>
+<tr class="odd">
+<td>Terminal Marítimo San Gregorio</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5247</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">-3,1516</td>
+<td>Reversión</td>
+<td style="text-align: right;">15,4</td>
+<td style="text-align: right;">0,3651</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-terminales-h2-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-terminales-h2-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_25_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-terminales-h2-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.10: Cuencas con jerk elevado en buffers de 50 km alrededor de terminales estratégicos de hidrógeno verde.
+</figcaption>
+</figure>
+</div>
+</section>
 <section id="sec-uso-terreno-jerk" class="level2" data-number="12.11">
-<h2 data-number="12.11" class="anchored" data-anchor-id="sec-uso-terreno-jerk"><span class="header-section-number">12.11</span> Cómo usar esta selección en la planificación de terreno</h2>
-<p>La selección por jerk debe alimentar una reunión técnica y territorial antes de definir rutas. En esa revisión se recomienda trabajar con tres listas:</p>
+<h2 data-number="12.11" class="anchored" data-anchor-id="sec-uso-terreno-jerk"><span class="header-section-number">12.11</span> Uso en planificación de terreno</h2>
+<p>La selección por jerk debe alimentar una reunión técnica y territorial antes de definir rutas. En esa revisión se recomienda trabajar con cuatro listas:</p>
 <ul>
-<li><strong>lista prioritaria</strong>, con las diez cuencas del ranking técnico;</li>
-<li><strong>lista logística</strong>, con cuencas cercanas, accesibles o visitables en el mismo recorrido;</li>
+<li><strong>lista prioritaria</strong>, con las diez cuencas del ranking del buffer de Punta Arenas;</li>
+<li><strong>lista logística</strong>, con cuencas cercanas o visitables dentro del mismo recorrido;</li>
+<li><strong>lista estratégica H2</strong>, con cuencas próximas a Muelle Laredo, Cabo Negro y San Gregorio;</li>
 <li><strong>lista de reemplazo</strong>, con cuencas alternativas por si falla el acceso, el clima o el permiso.</li>
 </ul>
-<p>La reunión debe revisar, al menos:</p>
-<ul>
-<li>caminos, huellas, portones, predios y accesos reales;</li>
-<li>restricciones de propiedad, áreas protegidas o infraestructura;</li>
-<li>posibilidad de vuelo de dron según viento, visibilidad y normativa;</li>
-<li>disponibilidad de puntos seguros para medición;</li>
-<li>pertinencia territorial de visitar Río Verde, Timaukel, Natales o Punta Arenas según recursos disponibles;</li>
-<li>conocimiento local sobre eventos recientes: incendios, inundaciones, sequías, obras, cambios de uso, ganadería, extracción, cortes de camino o nieve persistente;</li>
-<li>conveniencia de incorporar cuencas de control con menor señal MRCT.</li>
-</ul>
-<p>El producto esperado de esa reunión no es reemplazar el ranking, sino convertirlo en un plan de campaña realista: qué cuencas se visitan, cuáles quedan como respaldo, qué hipótesis se validan y qué observaciones se necesitan en cada sitio.</p>
+<p>La reunión debe revisar caminos, huellas, portones, predios, restricciones de propiedad, áreas protegidas, infraestructura, posibilidad de vuelo de dron, puntos seguros de medición, pertinencia territorial y antecedentes locales de incendios, inundaciones, sequías, obras, ganadería, extracción, cortes de camino o nieve persistente.</p>
+<p>El producto esperado no es reemplazar el ranking, sino convertirlo en un plan de campaña realista: qué cuencas se visitan, cuáles quedan como respaldo, qué hipótesis se validan y qué observaciones se necesitan en cada sitio.</p>
 </section>
 <section id="sec-fichas-jerk" class="level2" data-number="12.12">
 <h2 data-number="12.12" class="anchored" data-anchor-id="sec-fichas-jerk"><span class="header-section-number">12.12</span> Fichas de terreno derivadas</h2>
@@ -1137,7 +1492,7 @@ Figure&nbsp;12.7: Series temporales de las tres cuencas con mayor <code>P_score<
 <div id="tbl-ficha-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ficha-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.11: Contenido sugerido para fichas de terreno derivadas del ranking de jerk.
+Table&nbsp;12.13: Contenido sugerido para fichas de terreno derivadas del ranking de jerk.
 </figcaption>
 <div aria-describedby="tbl-ficha-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1165,14 +1520,18 @@ Table&nbsp;12.11: Contenido sugerido para fichas de terreno derivadas del rankin
 <td>centroide, distancia a Punta Arenas, anillo, mapa de detalle, ruta preliminar.</td>
 </tr>
 <tr class="even">
+<td>Contexto H2</td>
+<td>terminal cercano, distancia al terminal, pertenencia a buffer de 50 km, ranking por terminal.</td>
+</tr>
+<tr class="odd">
 <td>Pregunta de terreno</td>
 <td>Qué condición debería observarse según la señal: intensificación, reversión, baja resiliencia o contraste local.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Observaciones requeridas</td>
 <td>fotografías, dron, temperatura, humedad, agua visible, nieve, cobertura, perturbación, accesibilidad.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Estado de validación</td>
 <td>consistente, parcialmente consistente, no consistente o no evaluable.</td>
 </tr>
@@ -1183,24 +1542,73 @@ Table&nbsp;12.11: Contenido sugerido para fichas de terreno derivadas del rankin
 </div>
 <p>Estas fichas son el puente entre análisis y campaña. Evitan que el equipo de terreno reciba solo coordenadas y permiten que cada visita tenga una pregunta de validación explícita.</p>
 </section>
-<section id="sec-limitaciones-jerk" class="level2" data-number="12.13">
-<h2 data-number="12.13" class="anchored" data-anchor-id="sec-limitaciones-jerk"><span class="header-section-number">12.13</span> Limitaciones</h2>
+<section id="sec-productos-jerk" class="level2" data-number="12.13">
+<h2 data-number="12.13" class="anchored" data-anchor-id="sec-productos-jerk"><span class="header-section-number">12.13</span> Productos exportados</h2>
+<p>La nueva versión del flujo exporta productos tabulares, espaciales y consultables:</p>
+<div id="tbl-productos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-productos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12.14: Productos exportados por el notebook actualizado.
+</figcaption>
+<div aria-describedby="tbl-productos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Producto</th>
+<th>Formato</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>cuencas_prioritarias_jerk_10.xlsx</code></td>
+<td>Excel</td>
+<td>Hojas <code>Buffer_top10</code>, <code>Terminales_H2</code> y <code>Eventos_reg_p95</code>.</td>
+</tr>
+<tr class="even">
+<td><code>cuencas_prioritarias_top10.shp</code></td>
+<td>Shapefile</td>
+<td>Geometría de las diez cuencas prioritarias.</td>
+</tr>
+<tr class="odd">
+<td><code>cuencas_terminales_h2.shp</code></td>
+<td>Shapefile</td>
+<td>Geometría de cuencas calificadas por terminal.</td>
+</tr>
+<tr class="even">
+<td><code>mrct_jerk_analysis.db</code></td>
+<td>DuckDB</td>
+<td>Tablas analíticas para consulta posterior.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-limitaciones-jerk" class="level2" data-number="12.14">
+<h2 data-number="12.14" class="anchored" data-anchor-id="sec-limitaciones-jerk"><span class="header-section-number">12.14</span> Limitaciones</h2>
 <p>El análisis tiene limitaciones que deben mantenerse visibles:</p>
 <ul>
 <li>el jerk detecta discontinuidades, no causas;</li>
 <li>un evento extremo puede deberse a cambio ecológico real, ruido, nube, nieve, mosaico débil, cambio de cobertura temporal o efecto metodológico;</li>
-<li>la distancia a Punta Arenas se calculó como aproximación euclidiana, no como tiempo real de viaje;</li>
+<li>la distancia a Punta Arenas y a terminales se calculó como aproximación euclidiana, no como tiempo real de viaje;</li>
 <li>pertenecer a la comuna de Punta Arenas no implica cercanía al centro urbano;</li>
-<li>las cuencas seleccionadas están en anillo extendido, por lo que la logística puede ser más exigente de lo que sugiere una lectura comunal;</li>
+<li>el análisis de terminales es una lectura espacial preliminar y no reemplaza evaluación ambiental, modelación hidrológica ni línea base de proyecto;</li>
 <li>la selección no incorpora todavía permisos, propiedad, estado de caminos, conocimiento local ni seguridad de vuelo;</li>
-<li>las coberturas de jerk en 2023-2025 son menores que en 2020-2021, lo que obliga a revisar disponibilidad y calidad de datos.</li>
+<li>las coberturas anuales de jerk son incompletas, por lo que los percentiles deben interpretarse como señales de priorización y no como diagnóstico definitivo.</li>
 </ul>
-<p>Estas limitaciones no invalidan el análisis. Definen su uso correcto: una herramienta para orientar dónde mirar primero y qué preguntas llevar a terreno.</p>
+<p>Estas limitaciones no invalidan el análisis. Definen su uso correcto: una herramienta para orientar dónde mirar primero, qué preguntas llevar a terreno y dónde conviene anticipar una línea base más fina.</p>
 </section>
-<section id="sec-cierre-jerk" class="level2" data-number="12.14">
-<h2 data-number="12.14" class="anchored" data-anchor-id="sec-cierre-jerk"><span class="header-section-number">12.14</span> Cierre operativo</h2>
-<p>La selección de cuencas por jerk convierte el panel MRCT en una agenda preliminar de validación territorial. El procesamiento identificó eventos abruptos recientes, construyó una base consultable, produjo mapas y generó una lista de diez cuencas candidatas.</p>
-<p>El siguiente paso no es salir directamente a esas diez cuencas, sino someter la lista a una revisión aplicada: análisis detallado de accesibilidad, reunión con personas locales, evaluación de rutas, permisos, clima, seguridad y pertinencia territorial. Con esa revisión, el ranking puede transformarse en un plan de terreno con sitios principales, sitios alternativos y preguntas de validación claras.</p>
+<section id="sec-cierre-jerk" class="level2" data-number="12.15">
+<h2 data-number="12.15" class="anchored" data-anchor-id="sec-cierre-jerk"><span class="header-section-number">12.15</span> Cierre operativo</h2>
+<p>La selección actualizada convierte el panel MRCT en una agenda preliminar de validación territorial. El procesamiento identificó eventos abruptos, construyó una base consultable, priorizó diez cuencas del entorno operacional de Punta Arenas y agregó una lectura estratégica para terminales vinculados al hidrógeno verde.</p>
+<p>El siguiente paso no es salir directamente a esas diez cuencas ni asumir impacto por proximidad a infraestructura. El paso correcto es someter la lista a revisión aplicada: accesibilidad real, conversación con actores locales, evaluación de rutas, permisos, clima, seguridad, pertinencia territorial y contraste con antecedentes de proyectos energéticos. Con esa revisión, el ranking puede transformarse en un plan de terreno con sitios principales, sitios alternativos y preguntas de validación claras.</p>
 
 
 </section>
@@ -1612,8 +2020,8 @@ Table&nbsp;12.11: Contenido sugerido para fichas de terreno derivadas del rankin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="Bibliografía">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bibliografía</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./planificacion_terreno.html" class="pagination-link" aria-label="Planificación de Campaña">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Planificación de Campaña</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
