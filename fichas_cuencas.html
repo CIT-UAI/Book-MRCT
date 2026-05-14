@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Integración Territorial – Guía Técnica MRCT</title>
+<title>15&nbsp; Fichas de Cuencas – Guía Técnica MRCT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./sensibilidad.html" rel="next">
-<link href="./trayectoria.html" rel="prev">
+<link href="./resultados_terreno.html" rel="next">
+<link href="./protocolo_levantamiento.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -69,9 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -129,7 +126,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./integracion_espacial.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./fichas_cuencas.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -198,7 +195,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integracion_espacial.html" class="sidebar-item-text sidebar-link active">
+  <a href="./integracion_espacial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></span></a>
   </div>
 </li>
@@ -255,7 +252,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fichas_cuencas.html" class="sidebar-item-text sidebar-link">
+  <a href="./fichas_cuencas.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></span></a>
   </div>
 </li>
@@ -295,23 +292,24 @@ window.Quarto = {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#sec-dominio-global-local" id="toc-sec-dominio-global-local" class="nav-link active" data-scroll-target="#sec-dominio-global-local"><span class="header-section-number">7.1</span> Dominio global y dominio local</a></li>
-  <li><a href="#sec-vecindad-knn" id="toc-sec-vecindad-knn" class="nav-link" data-scroll-target="#sec-vecindad-knn"><span class="header-section-number">7.2</span> Vecindad espacial KNN</a></li>
-  <li><a href="#sec-dominio-local" id="toc-sec-dominio-local" class="nav-link" data-scroll-target="#sec-dominio-local"><span class="header-section-number">7.3</span> Construcción del dominio local</a></li>
-  <li><a href="#sec-divergencia-local" id="toc-sec-divergencia-local" class="nav-link" data-scroll-target="#sec-divergencia-local"><span class="header-section-number">7.4</span> Divergencia local</a></li>
-  <li><a href="#sec-interpretacion-espacial" id="toc-sec-interpretacion-espacial" class="nav-link" data-scroll-target="#sec-interpretacion-espacial"><span class="header-section-number">7.5</span> Interpretación territorial</a></li>
-  <li><a href="#sec-diagrama-integracion-espacial" id="toc-sec-diagrama-integracion-espacial" class="nav-link" data-scroll-target="#sec-diagrama-integracion-espacial"><span class="header-section-number">7.6</span> Diagrama de integración territorial</a></li>
-  <li><a href="#sec-productos-integracion-espacial" id="toc-sec-productos-integracion-espacial" class="nav-link" data-scroll-target="#sec-productos-integracion-espacial"><span class="header-section-number">7.7</span> Productos esperados</a></li>
+  <li><a href="#sec-estructura-ficha-cuenca" id="toc-sec-estructura-ficha-cuenca" class="nav-link active" data-scroll-target="#sec-estructura-ficha-cuenca"><span class="header-section-number">15.1</span> Estructura de ficha</a></li>
+  <li><a href="#sec-ficha-tipo-cuenca" id="toc-sec-ficha-tipo-cuenca" class="nav-link" data-scroll-target="#sec-ficha-tipo-cuenca"><span class="header-section-number">15.2</span> Ficha tipo</a>
+  <ul class="collapse">
+  <li><a href="#cuenca-rid-por-definir" id="toc-cuenca-rid-por-definir" class="nav-link" data-scroll-target="#cuenca-rid-por-definir"><span class="header-section-number">15.2.1</span> Cuenca <code>RID</code>: por definir</a></li>
+  </ul></li>
+  <li><a href="#sec-cuencas-principales-fichas" id="toc-sec-cuencas-principales-fichas" class="nav-link" data-scroll-target="#sec-cuencas-principales-fichas"><span class="header-section-number">15.3</span> Cuencas principales</a></li>
+  <li><a href="#sec-cuencas-reemplazo-fichas" id="toc-sec-cuencas-reemplazo-fichas" class="nav-link" data-scroll-target="#sec-cuencas-reemplazo-fichas"><span class="header-section-number">15.4</span> Cuencas de reemplazo</a></li>
+  <li><a href="#sec-cuencas-descartadas-fichas" id="toc-sec-cuencas-descartadas-fichas" class="nav-link" data-scroll-target="#sec-cuencas-descartadas-fichas"><span class="header-section-number">15.5</span> Cuencas descartadas</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./fichas_cuencas.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></h1>
-<p class="subtitle lead">Dominio local y coherencia espacial</p>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></h1>
+<p class="subtitle lead">Plantilla para documentar sitios principales y alternativas de terreno</p>
 </div>
 
 
@@ -328,189 +326,147 @@ window.Quarto = {
 </header>
 
 
-<p>Hasta aquí, el modelo ha descrito el estado ecosistémico de cada cuenca y su trayectoria temporal respecto de una línea base. Esa lectura es necesaria, pero todavía incompleta: una unidad territorial no existe aislada. Su condición ecológica se interpreta mejor cuando se compara también con el entorno que la rodea.</p>
-<p>La integración territorial incorpora esa segunda referencia. El dominio global responde a cuánto se aleja una cuenca del régimen histórico del conjunto territorial. El dominio local responde si esa misma cuenca es coherente o anómala respecto de sus vecinas inmediatas. Esta diferencia es relevante para la toma de decisiones, porque permite distinguir entre procesos extendidos, que afectan a un sector territorial completo, y señales localizadas, que pueden requerir intervención focalizada.</p>
+<p>Este capítulo queda preparado para completar las fichas de las cuencas definitivas. Su función es transformar cada <code>RID</code> seleccionado en una pregunta de terreno clara, con ubicación, señal MRCT, hipótesis preliminar, acceso y registros requeridos.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Para tomadores de decisión
+Estado del capítulo
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Dos cuencas pueden tener el mismo valor de distancia al dominio global, pero representar situaciones territoriales distintas. Si una cuenca degradada está rodeada de cuencas igualmente degradadas, el problema parece formar parte de una condición regional. Si está rodeada de cuencas en mejor estado, la señal apunta a una anomalía local. La MRCT usa el dominio local para separar estas dos lecturas.</p>
+<p>Este capítulo debe completarse cuando la lista final de cuencas haya sido validada técnica y logísticamente.</p>
 </div>
 </div>
-<section id="sec-dominio-global-local" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="sec-dominio-global-local"><span class="header-section-number">7.1</span> Dominio global y dominio local</h2>
-<p>El dominio global <span class="math inline">D</span> se calcula respecto de la línea base del sistema completo. Para cada observación <span class="math inline">\mathbf{x}_{i,t}</span>, donde <span class="math inline">i</span> identifica la cuenca y <span class="math inline">t</span> el año, <span class="math inline">D</span> mide la distancia al centro y a la estructura de covarianza del régimen de referencia:</p>
-<p><span class="math display">
-D(\mathbf{x}_{i,t}) =
-\frac{
-\sqrt{(\mathbf{x}_{i,t} - \boldsymbol{\mu})^\top \hat{\Sigma}^{-1}(\mathbf{x}_{i,t} - \boldsymbol{\mu})}
-}{\sqrt{d}}
-</span></p>
-<p>donde <span class="math inline">\boldsymbol{\mu}</span> y <span class="math inline">\hat{\Sigma}</span> se estiman durante la línea base, y <span class="math inline">d</span> es el número de variables estructurales incluidas. Esta métrica permite saber si una cuenca se aleja del comportamiento histórico general.</p>
-<p>Sin embargo, el territorio puede tener gradientes naturales muy marcados. En una región extensa, una cuenca de montaña, una cuenca lacustre y una cuenca de transición pueden no ser directamente equivalentes aunque pertenezcan al mismo sistema regional. Por eso se introduce un segundo dominio, construido a partir de las cuencas vecinas. Este dominio no reemplaza al global: lo complementa.</p>
-</section>
-<section id="sec-vecindad-knn" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="sec-vecindad-knn"><span class="header-section-number">7.2</span> Vecindad espacial KNN</h2>
-<p>La vecindad espacial se define mediante los <span class="math inline">k</span> vecinos más cercanos de cada cuenca. En la configuración por defecto se usa:</p>
-<p><span class="math display">
-k = 8
-</span></p>
-<p>El cálculo se realiza sobre puntos representativos de las geometrías de cuenca. Si el archivo vectorial está en coordenadas geográficas, primero se reproyecta a UTM zona 19S (EPSG:32719), de modo que las distancias se calculen en unidades métricas. Luego, para cada cuenca <span class="math inline">i</span>, se identifica el conjunto:</p>
-<p><span class="math display">
-N_k(i) = \{j_1, j_2, \ldots, j_k\}
-</span></p>
-<p>donde <span class="math inline">N_k(i)</span> contiene las <span class="math inline">k</span> cuencas más cercanas a <span class="math inline">i</span>, excluyendo la propia cuenca. Esta exclusión es importante: el dominio local debe representar el entorno, no repetir la observación que se está evaluando.</p>
-<p>La contribución de cada vecino se pondera con un kernel gaussiano. Los vecinos más cercanos tienen mayor peso, pero los demás no desaparecen abruptamente:</p>
-<p><span class="math display">
-w_{ij} =
-\exp\!\left(
--\frac{d_{ij}^{2}}{2\sigma_i^{2}}
-\right)
-</span></p>
-<p>donde <span class="math inline">d_{ij}</span> es la distancia entre la cuenca <span class="math inline">i</span> y el vecino <span class="math inline">j</span>. El parámetro de escala se define localmente como:</p>
-<p><span class="math display">
-\sigma_i = \max\left(\text{mediana}\{d_{ij}: j \in N_k(i)\}, 10^{-6}\right)
-</span></p>
-<p>Luego los pesos se normalizan para que sumen uno:</p>
-<p><span class="math display">
-\tilde{w}_{ij} = \frac{w_{ij}}{\sum_{j \in N_k(i)} w_{ij}}
-</span></p>
-<p>Esta normalización permite interpretar cada peso como la participación relativa del vecino <span class="math inline">j</span> en la referencia local de la cuenca <span class="math inline">i</span>.</p>
-</section>
-<section id="sec-dominio-local" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="sec-dominio-local"><span class="header-section-number">7.3</span> Construcción del dominio local</h2>
-<p>La intuición del dominio local puede expresarse como una media ponderada del entorno: una cuenca se compara contra lo que ocurre alrededor de ella. En una versión simplificada, esa idea se escribiría como:</p>
-<p><span class="math display">
-\bar{D}_{local,i,t} =
-\sum_{j \in N_k(i)} \tilde{w}_{ij} D_{j,t}
-</span></p>
-<p>Esta expresión es útil para comunicar la lógica espacial, pero la implementación de la MRCT usa una versión más informativa. En lugar de promediar solo el valor escalar <span class="math inline">D</span> de los vecinos, compara el vector estructural completo de la cuenca con el vector estructural de su vecindad. Así se conserva la información multivariable de vegetación, agua, nieve, humedales y estructura del paisaje.</p>
-<p>Para cada año <span class="math inline">t</span>, se toma la matriz de variables estructurales de los vecinos válidos de la cuenca <span class="math inline">i</span>:</p>
-<p><span class="math display">
-\mathbf{X}_{N_k(i),t} =
-\{\mathbf{x}_{j,t}: j \in N_k(i)\}
-</span></p>
-<p>Con los pesos espaciales normalizados se calcula la media local:</p>
-<p><span class="math display">
-\boldsymbol{\mu}_{local,i,t} =
-\sum_{j \in N_k(i)} \tilde{w}_{ij}\mathbf{x}_{j,t}
-</span></p>
-<p>También se estima una covarianza local regularizada:</p>
-<p><span class="math display">
-\hat{\Sigma}_{local,i,t} =
-\text{Cov}\left(\mathbf{X}_{N_k(i),t}\right) + 10^{-3}\mathbf{I}
-</span></p>
-<p>La regularización diagonal evita que la matriz sea singular cuando los vecinos son muy parecidos entre sí o cuando el número efectivo de observaciones válidas es bajo. Con esa media y esa covarianza, el dominio local se calcula como una distancia de Mahalanobis local:</p>
-<p><span class="math display">
-D_{local,i,t} =
-\sqrt{
-(\mathbf{x}_{i,t} - \boldsymbol{\mu}_{local,i,t})^\top
-\hat{\Sigma}_{local,i,t}^{-1}
-(\mathbf{x}_{i,t} - \boldsymbol{\mu}_{local,i,t})
-}
-</span></p>
-<p>El cálculo se realiza por año, porque la comparación debe hacerse entre cuencas observadas bajo el mismo contexto temporal. Si una cuenca o sus vecinos no tienen datos finitos para todas las variables estructurales requeridas, la observación se marca como no disponible. Además, se exige al menos dos vecinos válidos para estimar la covarianza local.</p>
-</section>
-<section id="sec-divergencia-local" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="sec-divergencia-local"><span class="header-section-number">7.4</span> Divergencia local</h2>
-<p>Además de <span class="math inline">D_{local}</span>, el pipeline calcula una medida auxiliar de divergencia entre la lectura local y la lectura global:</p>
-<p><span class="math display">
-DIV_{i,t} =
-\frac{D_{local,i,t} - D_{i,t}}{D_{i,t} + 10^{-6}}
-</span></p>
-<p>Esta razón ayuda a identificar si la presión local es mayor o menor que la distancia global de la cuenca. Valores positivos indican que la cuenca se diferencia más de sus vecinas que del régimen global. Valores negativos indican que, aunque pueda estar lejos del dominio global, su entorno inmediato presenta una condición similar o incluso más extrema.</p>
-<p>La interpretación debe hacerse con cuidado. <span class="math inline">DIV</span> no reemplaza a <span class="math inline">D</span> ni a <span class="math inline">D_{local}</span>; es una señal comparativa. Su utilidad principal es ordenar casos de contraste para análisis territorial: unidades que parecen normales en la lectura global pero anómalas localmente, o unidades con deterioro regionalizado que no destacan como anomalía espacial.</p>
-</section>
-<section id="sec-interpretacion-espacial" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="sec-interpretacion-espacial"><span class="header-section-number">7.5</span> Interpretación territorial</h2>
-<p>La combinación entre dominio global y dominio local permite construir una matriz cualitativa de lectura territorial:</p>
-<div id="tbl-dominio-local" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sec-estructura-ficha-cuenca" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="sec-estructura-ficha-cuenca"><span class="header-section-number">15.1</span> Estructura de ficha</h2>
+<p>Cada ficha debe incluir:</p>
+<div id="tbl-estructura-ficha-cuencas" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dominio-local-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;7.1: Lectura integrada de dominio global y dominio local.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-estructura-ficha-cuencas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.1: Estructura base para fichas de cuencas seleccionadas.
 </figcaption>
-<div aria-describedby="tbl-dominio-local-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-estructura-ficha-cuencas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Dominio global</th>
-<th>Dominio local</th>
-<th>Lectura territorial</th>
+<th>Bloque</th>
+<th>Contenido</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Bajo</td>
-<td>Bajo</td>
-<td>Cuenca cercana a su referencia histórica y coherente con su entorno.</td>
+<td>Identificación</td>
+<td><code>RID</code>, comuna, prioridad, año crítico, tipo de evento y estado de selección.</td>
 </tr>
 <tr class="even">
-<td>Alto</td>
-<td>Bajo</td>
-<td>Alejamiento general compartido por el entorno; posible señal regional.</td>
+<td>Señal MRCT</td>
+<td>Jerk, percentil, <code>RES</code>, <code>PT</code>, <span class="math inline">D</span>, <span class="math inline">V</span>, <span class="math inline">A</span>, <span class="math inline">SENS</span>, <span class="math inline">D_{local}</span> y clasificación disponible.</td>
 </tr>
 <tr class="odd">
-<td>Bajo</td>
-<td>Alto</td>
-<td>Anomalía local: la cuenca difiere de vecinas aunque no se aleje fuertemente del dominio global.</td>
+<td>Ubicación</td>
+<td>mapa regional, mapa de detalle, coordenada objetivo, distancia a Punta Arenas y anillo logístico.</td>
 </tr>
 <tr class="even">
-<td>Alto</td>
-<td>Alto</td>
-<td>Alejamiento estructural y discontinuidad espacial; caso prioritario de revisión.</td>
+<td>Pregunta de terreno</td>
+<td>Qué condición se espera observar y qué duda debe resolver la visita.</td>
+</tr>
+<tr class="odd">
+<td>Acceso</td>
+<td>ruta preliminar, restricciones, permisos y punto alternativo.</td>
+</tr>
+<tr class="even">
+<td>Registros requeridos</td>
+<td>fotografías, dron, temperatura, humedad, agua, nieve, cobertura y perturbaciones.</td>
+</tr>
+<tr class="odd">
+<td>Resultado esperado</td>
+<td>criterio para clasificar la observación como consistente, parcialmente consistente, no consistente o no evaluable.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Esta tabla no es una regla automática de decisión. Es un marco de interpretación para leer mapas y priorizar preguntas. En la práctica, una cuenca con <span class="math inline">D</span> alto y <span class="math inline">D_{local}</span> bajo puede ser parte de un frente regional de cambio, mientras que una cuenca con <span class="math inline">D</span> bajo y <span class="math inline">D_{local}</span> alto puede revelar una perturbación localizada, un error de medición o una condición ecológica singular que merece revisión.</p>
-<p>El dominio local también cumple una función dentro del Potencial de Transición. En el capítulo siguiente, <span class="math inline">D_{local}</span> entra como un factor multiplicativo que aumenta el PT cuando el contexto espacial refuerza la presión ecosistémica. De este modo, la resiliencia final no depende solo del estado interno de la cuenca, sino también de la estructura territorial en la que se inserta.</p>
 </section>
-<section id="sec-diagrama-integracion-espacial" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="sec-diagrama-integracion-espacial"><span class="header-section-number">7.6</span> Diagrama de integración territorial</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A[Geometrías de cuenca&lt;br/&gt;RID y polígonos] --&gt; B[Punto representativo&lt;br/&gt;por cuenca]
-    B --&gt; C[KNN espacial&lt;br/&gt;k = 8 vecinos]
-    C --&gt; D[Pesos gaussianos&lt;br/&gt;según distancia]
-    E[Vector estructural&lt;br/&gt;por cuenca y año] --&gt; F[Media y covarianza&lt;br/&gt;del vecindario]
-    D --&gt; F
-    F --&gt; G[Dominio local&lt;br/&gt;D_local]
-    H[Dominio global&lt;br/&gt;D] --&gt; I[Lectura integrada&lt;br/&gt;global vs local]
-    G --&gt; I
-    I --&gt; J[PT y resiliencia&lt;br/&gt;capítulos siguientes]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<section id="sec-ficha-tipo-cuenca" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="sec-ficha-tipo-cuenca"><span class="header-section-number">15.2</span> Ficha tipo</h2>
+<section id="cuenca-rid-por-definir" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="cuenca-rid-por-definir"><span class="header-section-number">15.2.1</span> Cuenca <code>RID</code>: por definir</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Prioridad</td>
+<td>Por definir</td>
+</tr>
+<tr class="even">
+<td>Comuna</td>
+<td>Por definir</td>
+</tr>
+<tr class="odd">
+<td>Año crítico</td>
+<td>Por definir</td>
+</tr>
+<tr class="even">
+<td>Tipo de evento</td>
+<td>Por definir</td>
+</tr>
+<tr class="odd">
+<td>Jerk</td>
+<td>Por definir</td>
+</tr>
+<tr class="even">
+<td>Percentil anual</td>
+<td>Por definir</td>
+</tr>
+<tr class="odd">
+<td><code>RES</code> año crítico</td>
+<td>Por definir</td>
+</tr>
+<tr class="even">
+<td>Distancia a Punta Arenas</td>
+<td>Por definir</td>
+</tr>
+<tr class="odd">
+<td>Anillo logístico</td>
+<td>Por definir</td>
+</tr>
+<tr class="even">
+<td>Estado de selección</td>
+<td>Principal / reemplazo / descartada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pregunta de terreno:</strong> por definir.</p>
+<p><strong>Ruta preliminar:</strong> por definir.</p>
+<p><strong>Punto de observación sugerido:</strong> por definir.</p>
+<p><strong>Registros obligatorios:</strong> fotografía terrestre, dron si es posible, temperatura, humedad, observación de agua/nieve/cobertura y comentario de consistencia.</p>
+<p><strong>Riesgos o restricciones:</strong> por definir.</p>
 </section>
-<section id="sec-productos-integracion-espacial" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="sec-productos-integracion-espacial"><span class="header-section-number">7.7</span> Productos esperados</h2>
-<p>La integración territorial genera tres productos principales para análisis y comunicación:</p>
-<ul>
-<li>mapa de <span class="math inline">D_{local}</span> por cuenca y año, especialmente para el año más reciente;</li>
-<li>mapa o tabla de <span class="math inline">DIV</span>, útil para seleccionar casos de contraste entre lectura global y lectura local;</li>
-<li>visualización del vecindario KNN para cuencas seleccionadas, mostrando vecinos, distancias y pesos relativos.</li>
-</ul>
-<p>Estos productos deben leerse junto con los mapas de <span class="math inline">D</span>, velocidad y sensibilidad climática. El valor de la integración territorial no está en producir una capa adicional aislada, sino en conectar la trayectoria ecosistémica con la estructura territorial que la rodea.</p>
+</section>
+<section id="sec-cuencas-principales-fichas" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="sec-cuencas-principales-fichas"><span class="header-section-number">15.3</span> Cuencas principales</h2>
+<p>Esta subsección debe llenarse con las cuencas que entren al itinerario principal.</p>
+</section>
+<section id="sec-cuencas-reemplazo-fichas" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="sec-cuencas-reemplazo-fichas"><span class="header-section-number">15.4</span> Cuencas de reemplazo</h2>
+<p>Esta subsección debe llenarse con alternativas visitables si una cuenca principal no puede ser evaluada.</p>
+</section>
+<section id="sec-cuencas-descartadas-fichas" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="sec-cuencas-descartadas-fichas"><span class="header-section-number">15.5</span> Cuencas descartadas</h2>
+<p>Las cuencas descartadas también deben registrarse, indicando la causa: acceso, permiso, distancia, baja representatividad, riesgo, clima esperado o cambio de prioridad técnica.</p>
 
 
 </section>
@@ -917,13 +873,13 @@ Table&nbsp;7.1: Lectura integrada de dominio global y dominio local.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./trayectoria.html" class="pagination-link" aria-label="Trayectoria del estado">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Trayectoria del estado</span></span>
+      <a href="./protocolo_levantamiento.html" class="pagination-link" aria-label="Protocolo de Levantamiento">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Protocolo de Levantamiento</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./sensibilidad.html" class="pagination-link" aria-label="Sensibilidad del Sistema">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./resultados_terreno.html" class="pagination-link" aria-label="Resultados de Terreno">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Resultados de Terreno</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

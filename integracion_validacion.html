@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Integración Territorial – Guía Técnica MRCT</title>
+<title>17&nbsp; Integración y Validación – Guía Técnica MRCT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./sensibilidad.html" rel="next">
-<link href="./trayectoria.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./resultados_terreno.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -69,53 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -129,7 +83,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./integracion_espacial.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./integracion_validacion.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -198,7 +152,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integracion_espacial.html" class="sidebar-item-text sidebar-link active">
+  <a href="./integracion_espacial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></span></a>
   </div>
 </li>
@@ -267,7 +221,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integracion_validacion.html" class="sidebar-item-text sidebar-link">
+  <a href="./integracion_validacion.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></span></a>
   </div>
 </li>
@@ -295,23 +249,21 @@ window.Quarto = {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#sec-dominio-global-local" id="toc-sec-dominio-global-local" class="nav-link active" data-scroll-target="#sec-dominio-global-local"><span class="header-section-number">7.1</span> Dominio global y dominio local</a></li>
-  <li><a href="#sec-vecindad-knn" id="toc-sec-vecindad-knn" class="nav-link" data-scroll-target="#sec-vecindad-knn"><span class="header-section-number">7.2</span> Vecindad espacial KNN</a></li>
-  <li><a href="#sec-dominio-local" id="toc-sec-dominio-local" class="nav-link" data-scroll-target="#sec-dominio-local"><span class="header-section-number">7.3</span> Construcción del dominio local</a></li>
-  <li><a href="#sec-divergencia-local" id="toc-sec-divergencia-local" class="nav-link" data-scroll-target="#sec-divergencia-local"><span class="header-section-number">7.4</span> Divergencia local</a></li>
-  <li><a href="#sec-interpretacion-espacial" id="toc-sec-interpretacion-espacial" class="nav-link" data-scroll-target="#sec-interpretacion-espacial"><span class="header-section-number">7.5</span> Interpretación territorial</a></li>
-  <li><a href="#sec-diagrama-integracion-espacial" id="toc-sec-diagrama-integracion-espacial" class="nav-link" data-scroll-target="#sec-diagrama-integracion-espacial"><span class="header-section-number">7.6</span> Diagrama de integración territorial</a></li>
-  <li><a href="#sec-productos-integracion-espacial" id="toc-sec-productos-integracion-espacial" class="nav-link" data-scroll-target="#sec-productos-integracion-espacial"><span class="header-section-number">7.7</span> Productos esperados</a></li>
+  <li><a href="#sec-tabla-validacion-mrct-terreno" id="toc-sec-tabla-validacion-mrct-terreno" class="nav-link active" data-scroll-target="#sec-tabla-validacion-mrct-terreno"><span class="header-section-number">17.1</span> Tabla de validación</a></li>
+  <li><a href="#sec-criterios-consistencia-mrct" id="toc-sec-criterios-consistencia-mrct" class="nav-link" data-scroll-target="#sec-criterios-consistencia-mrct"><span class="header-section-number">17.2</span> Criterios de consistencia</a></li>
+  <li><a href="#sec-discrepancias-mrct-terreno" id="toc-sec-discrepancias-mrct-terreno" class="nav-link" data-scroll-target="#sec-discrepancias-mrct-terreno"><span class="header-section-number">17.3</span> Lectura de discrepancias</a></li>
+  <li><a href="#sec-retroalimentacion-metodologica" id="toc-sec-retroalimentacion-metodologica" class="nav-link" data-scroll-target="#sec-retroalimentacion-metodologica"><span class="header-section-number">17.4</span> Retroalimentación metodológica</a></li>
+  <li><a href="#sec-productos-integracion-validacion" id="toc-sec-productos-integracion-validacion" class="nav-link" data-scroll-target="#sec-productos-integracion-validacion"><span class="header-section-number">17.5</span> Productos finales</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./integracion_validacion.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></h1>
-<p class="subtitle lead">Dominio local y coherencia espacial</p>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Integración y Validación</span></h1>
+<p class="subtitle lead">Comparación entre señal analítica y evidencia de terreno</p>
 </div>
 
 
@@ -328,114 +280,104 @@ window.Quarto = {
 </header>
 
 
-<p>Hasta aquí, el modelo ha descrito el estado ecosistémico de cada cuenca y su trayectoria temporal respecto de una línea base. Esa lectura es necesaria, pero todavía incompleta: una unidad territorial no existe aislada. Su condición ecológica se interpreta mejor cuando se compara también con el entorno que la rodea.</p>
-<p>La integración territorial incorpora esa segunda referencia. El dominio global responde a cuánto se aleja una cuenca del régimen histórico del conjunto territorial. El dominio local responde si esa misma cuenca es coherente o anómala respecto de sus vecinas inmediatas. Esta diferencia es relevante para la toma de decisiones, porque permite distinguir entre procesos extendidos, que afectan a un sector territorial completo, y señales localizadas, que pueden requerir intervención focalizada.</p>
+<p>Este capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Para tomadores de decisión
+Objetivo
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Dos cuencas pueden tener el mismo valor de distancia al dominio global, pero representar situaciones territoriales distintas. Si una cuenca degradada está rodeada de cuencas igualmente degradadas, el problema parece formar parte de una condición regional. Si está rodeada de cuencas en mejor estado, la señal apunta a una anomalía local. La MRCT usa el dominio local para separar estas dos lecturas.</p>
+<p>Clasificar la consistencia entre la señal MRCT y la observación de terreno, identificar limitaciones de interpretación y proponer ajustes para futuras campañas o consultas.</p>
 </div>
 </div>
-<section id="sec-dominio-global-local" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="sec-dominio-global-local"><span class="header-section-number">7.1</span> Dominio global y dominio local</h2>
-<p>El dominio global <span class="math inline">D</span> se calcula respecto de la línea base del sistema completo. Para cada observación <span class="math inline">\mathbf{x}_{i,t}</span>, donde <span class="math inline">i</span> identifica la cuenca y <span class="math inline">t</span> el año, <span class="math inline">D</span> mide la distancia al centro y a la estructura de covarianza del régimen de referencia:</p>
-<p><span class="math display">
-D(\mathbf{x}_{i,t}) =
-\frac{
-\sqrt{(\mathbf{x}_{i,t} - \boldsymbol{\mu})^\top \hat{\Sigma}^{-1}(\mathbf{x}_{i,t} - \boldsymbol{\mu})}
-}{\sqrt{d}}
-</span></p>
-<p>donde <span class="math inline">\boldsymbol{\mu}</span> y <span class="math inline">\hat{\Sigma}</span> se estiman durante la línea base, y <span class="math inline">d</span> es el número de variables estructurales incluidas. Esta métrica permite saber si una cuenca se aleja del comportamiento histórico general.</p>
-<p>Sin embargo, el territorio puede tener gradientes naturales muy marcados. En una región extensa, una cuenca de montaña, una cuenca lacustre y una cuenca de transición pueden no ser directamente equivalentes aunque pertenezcan al mismo sistema regional. Por eso se introduce un segundo dominio, construido a partir de las cuencas vecinas. Este dominio no reemplaza al global: lo complementa.</p>
-</section>
-<section id="sec-vecindad-knn" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="sec-vecindad-knn"><span class="header-section-number">7.2</span> Vecindad espacial KNN</h2>
-<p>La vecindad espacial se define mediante los <span class="math inline">k</span> vecinos más cercanos de cada cuenca. En la configuración por defecto se usa:</p>
-<p><span class="math display">
-k = 8
-</span></p>
-<p>El cálculo se realiza sobre puntos representativos de las geometrías de cuenca. Si el archivo vectorial está en coordenadas geográficas, primero se reproyecta a UTM zona 19S (EPSG:32719), de modo que las distancias se calculen en unidades métricas. Luego, para cada cuenca <span class="math inline">i</span>, se identifica el conjunto:</p>
-<p><span class="math display">
-N_k(i) = \{j_1, j_2, \ldots, j_k\}
-</span></p>
-<p>donde <span class="math inline">N_k(i)</span> contiene las <span class="math inline">k</span> cuencas más cercanas a <span class="math inline">i</span>, excluyendo la propia cuenca. Esta exclusión es importante: el dominio local debe representar el entorno, no repetir la observación que se está evaluando.</p>
-<p>La contribución de cada vecino se pondera con un kernel gaussiano. Los vecinos más cercanos tienen mayor peso, pero los demás no desaparecen abruptamente:</p>
-<p><span class="math display">
-w_{ij} =
-\exp\!\left(
--\frac{d_{ij}^{2}}{2\sigma_i^{2}}
-\right)
-</span></p>
-<p>donde <span class="math inline">d_{ij}</span> es la distancia entre la cuenca <span class="math inline">i</span> y el vecino <span class="math inline">j</span>. El parámetro de escala se define localmente como:</p>
-<p><span class="math display">
-\sigma_i = \max\left(\text{mediana}\{d_{ij}: j \in N_k(i)\}, 10^{-6}\right)
-</span></p>
-<p>Luego los pesos se normalizan para que sumen uno:</p>
-<p><span class="math display">
-\tilde{w}_{ij} = \frac{w_{ij}}{\sum_{j \in N_k(i)} w_{ij}}
-</span></p>
-<p>Esta normalización permite interpretar cada peso como la participación relativa del vecino <span class="math inline">j</span> en la referencia local de la cuenca <span class="math inline">i</span>.</p>
-</section>
-<section id="sec-dominio-local" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="sec-dominio-local"><span class="header-section-number">7.3</span> Construcción del dominio local</h2>
-<p>La intuición del dominio local puede expresarse como una media ponderada del entorno: una cuenca se compara contra lo que ocurre alrededor de ella. En una versión simplificada, esa idea se escribiría como:</p>
-<p><span class="math display">
-\bar{D}_{local,i,t} =
-\sum_{j \in N_k(i)} \tilde{w}_{ij} D_{j,t}
-</span></p>
-<p>Esta expresión es útil para comunicar la lógica espacial, pero la implementación de la MRCT usa una versión más informativa. En lugar de promediar solo el valor escalar <span class="math inline">D</span> de los vecinos, compara el vector estructural completo de la cuenca con el vector estructural de su vecindad. Así se conserva la información multivariable de vegetación, agua, nieve, humedales y estructura del paisaje.</p>
-<p>Para cada año <span class="math inline">t</span>, se toma la matriz de variables estructurales de los vecinos válidos de la cuenca <span class="math inline">i</span>:</p>
-<p><span class="math display">
-\mathbf{X}_{N_k(i),t} =
-\{\mathbf{x}_{j,t}: j \in N_k(i)\}
-</span></p>
-<p>Con los pesos espaciales normalizados se calcula la media local:</p>
-<p><span class="math display">
-\boldsymbol{\mu}_{local,i,t} =
-\sum_{j \in N_k(i)} \tilde{w}_{ij}\mathbf{x}_{j,t}
-</span></p>
-<p>También se estima una covarianza local regularizada:</p>
-<p><span class="math display">
-\hat{\Sigma}_{local,i,t} =
-\text{Cov}\left(\mathbf{X}_{N_k(i),t}\right) + 10^{-3}\mathbf{I}
-</span></p>
-<p>La regularización diagonal evita que la matriz sea singular cuando los vecinos son muy parecidos entre sí o cuando el número efectivo de observaciones válidas es bajo. Con esa media y esa covarianza, el dominio local se calcula como una distancia de Mahalanobis local:</p>
-<p><span class="math display">
-D_{local,i,t} =
-\sqrt{
-(\mathbf{x}_{i,t} - \boldsymbol{\mu}_{local,i,t})^\top
-\hat{\Sigma}_{local,i,t}^{-1}
-(\mathbf{x}_{i,t} - \boldsymbol{\mu}_{local,i,t})
-}
-</span></p>
-<p>El cálculo se realiza por año, porque la comparación debe hacerse entre cuencas observadas bajo el mismo contexto temporal. Si una cuenca o sus vecinos no tienen datos finitos para todas las variables estructurales requeridas, la observación se marca como no disponible. Además, se exige al menos dos vecinos válidos para estimar la covarianza local.</p>
-</section>
-<section id="sec-divergencia-local" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="sec-divergencia-local"><span class="header-section-number">7.4</span> Divergencia local</h2>
-<p>Además de <span class="math inline">D_{local}</span>, el pipeline calcula una medida auxiliar de divergencia entre la lectura local y la lectura global:</p>
-<p><span class="math display">
-DIV_{i,t} =
-\frac{D_{local,i,t} - D_{i,t}}{D_{i,t} + 10^{-6}}
-</span></p>
-<p>Esta razón ayuda a identificar si la presión local es mayor o menor que la distancia global de la cuenca. Valores positivos indican que la cuenca se diferencia más de sus vecinas que del régimen global. Valores negativos indican que, aunque pueda estar lejos del dominio global, su entorno inmediato presenta una condición similar o incluso más extrema.</p>
-<p>La interpretación debe hacerse con cuidado. <span class="math inline">DIV</span> no reemplaza a <span class="math inline">D</span> ni a <span class="math inline">D_{local}</span>; es una señal comparativa. Su utilidad principal es ordenar casos de contraste para análisis territorial: unidades que parecen normales en la lectura global pero anómalas localmente, o unidades con deterioro regionalizado que no destacan como anomalía espacial.</p>
-</section>
-<section id="sec-interpretacion-espacial" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="sec-interpretacion-espacial"><span class="header-section-number">7.5</span> Interpretación territorial</h2>
-<p>La combinación entre dominio global y dominio local permite construir una matriz cualitativa de lectura territorial:</p>
-<div id="tbl-dominio-local" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sec-tabla-validacion-mrct-terreno" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="sec-tabla-validacion-mrct-terreno"><span class="header-section-number">17.1</span> Tabla de validación</h2>
+<p>La evidencia de terreno debe integrarse como una tabla por cuenca visitada:</p>
+<div id="tbl-validacion-mrct-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dominio-local-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;7.1: Lectura integrada de dominio global y dominio local.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-validacion-mrct-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;17.1: Variables sugeridas para integrar terreno y MRCT.
 </figcaption>
-<div aria-describedby="tbl-dominio-local-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-validacion-mrct-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>RID</code></td>
+<td>Identificador de cuenca.</td>
+</tr>
+<tr class="even">
+<td><code>visit_date</code></td>
+<td>Fecha de visita.</td>
+</tr>
+<tr class="odd">
+<td><code>field_status</code></td>
+<td>Visitada, no visitada, reemplazada o acceso parcial.</td>
+</tr>
+<tr class="even">
+<td><code>drone_status</code></td>
+<td>Vuelo completo, parcial, suspendido o no aplica.</td>
+</tr>
+<tr class="odd">
+<td><code>photo_count</code></td>
+<td>Número de fotografías útiles.</td>
+</tr>
+<tr class="even">
+<td><code>temp_air_c</code></td>
+<td>Temperatura ambiente.</td>
+</tr>
+<tr class="odd">
+<td><code>humidity_pct</code></td>
+<td>Humedad relativa.</td>
+</tr>
+<tr class="even">
+<td><code>water_present</code></td>
+<td>Presencia de agua visible.</td>
+</tr>
+<tr class="odd">
+<td><code>snow_present</code></td>
+<td>Presencia de nieve o hielo visible.</td>
+</tr>
+<tr class="even">
+<td><code>visible_disturbance</code></td>
+<td>Perturbación visible registrada.</td>
+</tr>
+<tr class="odd">
+<td><code>mrct_consistency</code></td>
+<td>Consistente, parcialmente consistente, no consistente o no evaluable.</td>
+</tr>
+<tr class="even">
+<td><code>field_notes</code></td>
+<td>Síntesis cualitativa.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-criterios-consistencia-mrct" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="sec-criterios-consistencia-mrct"><span class="header-section-number">17.2</span> Criterios de consistencia</h2>
+<p>La comparación debe separar cuatro resultados:</p>
+<div id="tbl-criterios-consistencia-mrct" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-criterios-consistencia-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;17.2: Criterios para clasificar consistencia entre MRCT y terreno.
+</figcaption>
+<div aria-describedby="tbl-criterios-consistencia-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -444,73 +386,76 @@ Table&nbsp;7.1: Lectura integrada de dominio global y dominio local.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Dominio global</th>
-<th>Dominio local</th>
-<th>Lectura territorial</th>
+<th>Resultado</th>
+<th>Interpretación</th>
+<th>Acción recomendada</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Bajo</td>
-<td>Bajo</td>
-<td>Cuenca cercana a su referencia histórica y coherente con su entorno.</td>
+<td>Consistente</td>
+<td>La observación muestra condiciones compatibles con la señal MRCT.</td>
+<td>Documentar evidencia y mantener criterio de priorización.</td>
 </tr>
 <tr class="even">
-<td>Alto</td>
-<td>Bajo</td>
-<td>Alejamiento general compartido por el entorno; posible señal regional.</td>
+<td>Parcialmente consistente</td>
+<td>Se observan algunas señales, pero existen factores locales o limitaciones de observación.</td>
+<td>Revisar series, imágenes y contexto territorial.</td>
 </tr>
 <tr class="odd">
-<td>Bajo</td>
-<td>Alto</td>
-<td>Anomalía local: la cuenca difiere de vecinas aunque no se aleje fuertemente del dominio global.</td>
+<td>No consistente</td>
+<td>La señal MRCT no se refleja en la observación disponible.</td>
+<td>Auditar insumos, fechas, nubes, nieve, clasificación o escala espacial.</td>
 </tr>
 <tr class="even">
-<td>Alto</td>
-<td>Alto</td>
-<td>Alejamiento estructural y discontinuidad espacial; caso prioritario de revisión.</td>
+<td>No evaluable</td>
+<td>No hubo observación suficiente por acceso, clima, vuelo suspendido o baja visibilidad.</td>
+<td>Reprogramar, usar sitio alternativo o marcar limitación.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Esta tabla no es una regla automática de decisión. Es un marco de interpretación para leer mapas y priorizar preguntas. En la práctica, una cuenca con <span class="math inline">D</span> alto y <span class="math inline">D_{local}</span> bajo puede ser parte de un frente regional de cambio, mientras que una cuenca con <span class="math inline">D</span> bajo y <span class="math inline">D_{local}</span> alto puede revelar una perturbación localizada, un error de medición o una condición ecológica singular que merece revisión.</p>
-<p>El dominio local también cumple una función dentro del Potencial de Transición. En el capítulo siguiente, <span class="math inline">D_{local}</span> entra como un factor multiplicativo que aumenta el PT cuando el contexto espacial refuerza la presión ecosistémica. De este modo, la resiliencia final no depende solo del estado interno de la cuenca, sino también de la estructura territorial en la que se inserta.</p>
 </section>
-<section id="sec-diagrama-integracion-espacial" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="sec-diagrama-integracion-espacial"><span class="header-section-number">7.6</span> Diagrama de integración territorial</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A[Geometrías de cuenca&lt;br/&gt;RID y polígonos] --&gt; B[Punto representativo&lt;br/&gt;por cuenca]
-    B --&gt; C[KNN espacial&lt;br/&gt;k = 8 vecinos]
-    C --&gt; D[Pesos gaussianos&lt;br/&gt;según distancia]
-    E[Vector estructural&lt;br/&gt;por cuenca y año] --&gt; F[Media y covarianza&lt;br/&gt;del vecindario]
-    D --&gt; F
-    F --&gt; G[Dominio local&lt;br/&gt;D_local]
-    H[Dominio global&lt;br/&gt;D] --&gt; I[Lectura integrada&lt;br/&gt;global vs local]
-    G --&gt; I
-    I --&gt; J[PT y resiliencia&lt;br/&gt;capítulos siguientes]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="sec-productos-integracion-espacial" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="sec-productos-integracion-espacial"><span class="header-section-number">7.7</span> Productos esperados</h2>
-<p>La integración territorial genera tres productos principales para análisis y comunicación:</p>
+<section id="sec-discrepancias-mrct-terreno" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="sec-discrepancias-mrct-terreno"><span class="header-section-number">17.3</span> Lectura de discrepancias</h2>
+<p>Una discrepancia no debe interpretarse automáticamente como error. Puede deberse a:</p>
 <ul>
-<li>mapa de <span class="math inline">D_{local}</span> por cuenca y año, especialmente para el año más reciente;</li>
-<li>mapa o tabla de <span class="math inline">DIV</span>, útil para seleccionar casos de contraste entre lectura global y lectura local;</li>
-<li>visualización del vecindario KNN para cuencas seleccionadas, mostrando vecinos, distancias y pesos relativos.</li>
+<li>diferencia entre fecha de imagen satelital y fecha de visita;</li>
+<li>heterogeneidad interna de la cuenca;</li>
+<li>punto de observación poco representativo;</li>
+<li>nieve, sombra, nubosidad o mezcla de coberturas;</li>
+<li>evento temporal ya superado;</li>
+<li>señal MRCT asociada a una variable no visible directamente;</li>
+<li>limitaciones del acceso o del registro fotográfico.</li>
 </ul>
-<p>Estos productos deben leerse junto con los mapas de <span class="math inline">D</span>, velocidad y sensibilidad climática. El valor de la integración territorial no está en producir una capa adicional aislada, sino en conectar la trayectoria ecosistémica con la estructura territorial que la rodea.</p>
+</section>
+<section id="sec-retroalimentacion-metodologica" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="sec-retroalimentacion-metodologica"><span class="header-section-number">17.4</span> Retroalimentación metodológica</h2>
+<p>La integración debe producir aprendizajes para mejorar:</p>
+<ul>
+<li>criterios de selección por jerk;</li>
+<li>pesos del puntaje compuesto;</li>
+<li>umbrales de percentil;</li>
+<li>filtros de accesibilidad;</li>
+<li>diseño de fichas;</li>
+<li>variables ambientales medidas;</li>
+<li>selección de cuencas de control;</li>
+<li>visualización futura en aplicaciones o tableros.</li>
+</ul>
+</section>
+<section id="sec-productos-integracion-validacion" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="sec-productos-integracion-validacion"><span class="header-section-number">17.5</span> Productos finales</h2>
+<p>El cierre de validación debe entregar:</p>
+<ul>
+<li>tabla integrada MRCT-terreno;</li>
+<li>mapa de cuencas visitadas y estado de validación;</li>
+<li>síntesis de consistencia;</li>
+<li>casos representativos;</li>
+<li>recomendaciones para nuevas campañas;</li>
+<li>limitaciones y decisiones metodológicas documentadas.</li>
+</ul>
 
 
 </section>
@@ -917,13 +862,13 @@ Table&nbsp;7.1: Lectura integrada de dominio global y dominio local.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./trayectoria.html" class="pagination-link" aria-label="Trayectoria del estado">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Trayectoria del estado</span></span>
+      <a href="./resultados_terreno.html" class="pagination-link" aria-label="Resultados de Terreno">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Resultados de Terreno</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./sensibilidad.html" class="pagination-link" aria-label="Sensibilidad del Sistema">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Bibliografía">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bibliografía</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
