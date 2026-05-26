@@ -1,14 +1,14 @@
 ---
 title: "Protocolo de Levantamiento"
-subtitle: "Registros fotográficos, vuelos de dron y mediciones ambientales"
+subtitle: "Índice de Estado Observado, registros fotográficos y vuelos de dron"
 ---
 
-Este capítulo define el protocolo mínimo para levantar información comparable en las cuencas visitadas. Su contenido puede quedar establecido antes de la campaña, porque describe qué datos registrar y cómo organizarlos, independiente de cuáles sean finalmente las cuencas seleccionadas.
+Este capítulo define el protocolo para levantar información comparable en las cuencas visitadas. El instrumento central es el **Índice de Estado Observado (IEO)**, diseñado para traducir observaciones de terreno en una métrica cuantitativa estandarizada que pueda correlacionarse directamente con las salidas operativas de la MRCT. Su contenido puede quedar establecido antes de la campaña, porque describe qué datos registrar y cómo organizarlos, independiente de cuáles sean las cuencas seleccionadas.
 
 ::: {.callout-note}
 ## Principio operativo
 
-Cada visita debe producir una ficha completa, fotografías georreferenciadas, registro de condiciones ambientales, observaciones cualitativas y respaldo ordenado por `RID`.
+Cada visita debe producir una planilla IEO completa con 5 a 10 puntos de muestreo, fotografías georreferenciadas, vuelo de dron si las condiciones lo permiten, y respaldo ordenado por `RID` al cierre de cada jornada.
 :::
 
 ## Identificación del sitio {#sec-identificacion-sitio-terreno}
@@ -16,19 +16,80 @@ Cada visita debe producir una ficha completa, fotografías georreferenciadas, re
 Cada cuenca visitada debe registrarse con:
 
 - `RID`;
-- comuna;
-- fecha y hora;
-- equipo responsable;
-- coordenada del punto de observación;
-- precisión del GPS si está disponible;
+- cuenca y comuna;
+- fecha, hora e identificador de jornada (AM/PM);
+- investigador a cargo de la planilla;
+- coordenada del punto de observación (X, Y) y precisión GPS si está disponible;
 - condición de acceso;
 - relación entre el punto visitado y la cuenca completa.
 
 Si el punto visitado no representa adecuadamente la cuenca, se debe indicar en la ficha.
 
+## Índice de Estado Observado (IEO) {#sec-ieo-terreno}
+
+El IEO es el instrumento cuantitativo que conecta la observación de terreno con las métricas MRCT. Se calcula como promedio sobre **5 a 10 puntos de muestreo distribuidos espacialmente a lo largo del transecto** dentro de cada cuenca.
+
+### Rúbrica IEO {#sec-rúbrica-ieo}
+
+Cada punto de muestreo recibe cuatro notas de 1 a 5. La rúbrica debe aplicarse observando estrictamente los descriptores físicos, sin que el juicio se vea influenciado por lo que el modelo MRCT predice para la cuenca.
+
+**1. Vegetación** (Vigor y Cobertura)
+
+| Nota | Descriptor |
+|---|---|
+| 1 | Suelo expuesto dominante; vegetación muerta o marchita |
+| 2 | Manchones dispersos amarillentos; estrés hídrico sostenido |
+| 3 | Cobertura moderada; transición visible entre pastizales secos y vivos |
+| 4 | Cobertura casi continua; pastizales verdes; bosque sin daño aparente |
+| 5 | Vigor máximo; follaje verde oscuro y denso; turberas prístinas; sin estrés |
+
+**2. Humedad Superficial / Agua Visible**
+
+| Nota | Descriptor |
+|---|---|
+| 1 | Tierra agrietada o polvorienta; cauces absolutamente secos; sin musgo vivo |
+| 2 | Humedad residual solo bajo piedras o micro depresiones del terreno |
+| 3 | Suelo frío al tacto; musgos vivos; charcos esporádicos |
+| 4 | Hilos de agua activos; vegas hidratadas que ceden notoriamente al pisar |
+| 5 | Cuerpos de agua (lagunas, chorrillos permanentes); saturación total; escorrentía evidente |
+
+**3. Perturbación Antrópica** (Impacto y Daño — *vector negativo*)
+
+| Nota | Descriptor |
+|---|---|
+| 1 | Paisaje prístino; sin cercos, basura ni huellas vehiculares |
+| 2 | Senderos de fauna o huellas peatonales/vehiculares muy antiguas y cubiertas |
+| 3 | Cercos ganaderos; senderos de ovejas; caminos de tierra secundarios de bajo tránsito |
+| 4 | Zanjas de drenaje artificiales; tala selectiva; erosión inducida por sobrepastoreo; caminos anchos |
+| 5 | Movimiento de tierras pesado; infraestructura industrial; bosque rasado; basurales |
+
+**4. Fragmentación** (Continuidad del ecosistema — *vector negativo*)
+
+| Nota | Descriptor |
+|---|---|
+| 1 | Bloque continuo de bosque, humedal o estepa hasta donde alcanza la vista |
+| 2 | Pequeños claros naturales o micro senderos que no cortan la continuidad ecosistémica |
+| 3 | Bosque o vega seccionado claramente en 2 o 3 grandes bloques separados |
+| 4 | Mosaico roto; parches vegetacionales de tamaño medio dispersos y sin conexión física |
+| 5 | Árboles o matorrales aislados y relictos en matriz de suelo desnudo o altamente dañado |
+
+### Fórmula del IEO {#sec-formula-ieo}
+
+Perturbación y Fragmentación actúan como vectores negativos de la resiliencia estructural: su escala se invierte antes del cálculo. La fórmula normaliza todas las variables al rango $[0, 1]$:
+
+$$
+IEO = \frac{\dfrac{V-1}{4} + \dfrac{H-1}{4} + \left(1 - \dfrac{P-1}{4}\right) + \left(1 - \dfrac{F-1}{4}\right)}{4}
+$$
+
+donde $V$, $H$, $P$ y $F$ son las notas asignadas en cada punto de muestreo. El IEO de la cuenca es el promedio de los IEO individuales de todos los puntos del transecto.
+
+### Consistencia psicológica {#sec-consistencia-psicologica}
+
+Lo que el equipo califica como "4" en la primera cuenca del Día 1 debe seguir siendo "4" en la última cuenca del Día 3. Un desvío semántico entre jornadas o entre investigadores destruye la regresión final. La rúbrica descriptiva es la referencia vinculante: ante duda, prevale el descriptor físico sobre la impresión general.
+
 ## Registro fotográfico terrestre {#sec-registro-fotografico-terrestre}
 
-El registro terrestre debe capturar contexto y detalle. Como mínimo:
+El registro terrestre debe capturar contexto y detalle en cada punto de muestreo. Como mínimo:
 
 - fotografía general desde el punto de acceso;
 - fotografías hacia norte, este, sur y oeste;
@@ -36,72 +97,66 @@ El registro terrestre debe capturar contexto y detalle. Como mínimo:
 - detalle de agua, suelo, vegetación, nieve, erosión o perturbación visible;
 - fotografía de restricciones o condiciones relevantes de acceso.
 
-Las fotografías deben nombrarse con una convención estable:
+Las fotografías deben nombrarse con la siguiente convención:
 
 ```text
-RID_YYYYMMDD_HHMM_tipo_registro_numero
+RID_Dia_Foto_numero
 ```
 
 ## Vuelos de dron {#sec-vuelos-dron-terreno}
 
-Los vuelos de dron deben realizarse solo si las condiciones de viento, visibilidad, batería, permisos y seguridad lo permiten. El vuelo debe priorizar evidencia útil para interpretar la señal MRCT.
+Los vuelos de dron deben realizarse solo si las condiciones de viento, visibilidad, batería, permisos y seguridad lo permiten. Si el viento supera las especificaciones técnicas del dron, la misión aérea se aborta inmediatamente. En ese caso, el equipo concentra el esfuerzo en extender el transecto peatonal y enriquecer el archivo fotográfico terrestre, aumentando la densidad de puntos IEO para suplir la visión aérea.
 
-Registros recomendados:
+Registros recomendados cuando el vuelo es posible:
 
-- vista nadiral del punto de observación;
+- mosaico cenital del punto de observación y entorno próximo;
 - vista oblicua del entorno;
 - barrido de continuidad de cobertura;
 - registro de agua, humedales, nieve, cauces, erosión, caminos o intervención antrópica;
 - captura de límites o contrastes visibles entre la cuenca y su entorno.
 
-Si el vuelo se suspende, la ficha debe registrar la causa.
+Los archivos de dron se nombran:
 
-## Mediciones ambientales {#sec-mediciones-ambientales-terreno}
+```text
+RID_Dia_Dron_numero
+```
 
-Las mediciones deben ser simples, repetibles y con unidad explícita. El set mínimo considera:
+Si el vuelo se suspende, la planilla debe registrar la causa.
 
-- temperatura ambiente;
-- humedad relativa;
-- temperatura superficial de suelo si existe sensor;
-- temperatura de agua si hay curso o cuerpo de agua accesible;
+## Condiciones ambientales {#sec-condiciones-ambientales-terreno}
+
+La planilla registra por punto de muestreo:
+
+- temperatura ambiente (°C);
+- nubosidad (%);
+- viento (km/h): si supera el límite operativo del dron, queda anotado como causa de suspensión del vuelo;
 - presencia o ausencia de agua visible;
-- humedad superficial observada;
 - presencia de nieve o hielo;
-- nubosidad, viento, precipitación y visibilidad.
+- observaciones breves sobre contexto local.
 
-Cuando se repita una medición, se debe conservar el valor original y registrar el promedio como dato derivado.
-
-## Observación cualitativa {#sec-observacion-cualitativa-terreno}
-
-La ficha debe registrar condiciones que ayuden a interpretar la MRCT:
-
-- cobertura vegetal dominante;
-- suelo desnudo, erosión o remoción;
-- sectores anegados o secos;
-- humedales, vegas, turberas, matorral o bosque;
-- evidencia de incendio, tala, pastoreo, caminos, drenajes o infraestructura;
-- diferencias visibles entre la cuenca y su entorno;
-- limitaciones de interpretación: sombra, nieve, nubosidad, mezcla de coberturas o baja representatividad del punto.
+Estas variables complementan el IEO y permiten detectar condiciones que limiten la comparabilidad entre cuencas.
 
 ## Respaldo diario {#sec-respaldo-diario-terreno}
 
-Al cierre de cada jornada se debe:
+Al cierre de cada jornada (gabinete nocturno, ~1 hora):
 
-- copiar fotografías, videos, vuelos y formularios a un repositorio común;
-- verificar asociación con `RID`;
+- copiar fotografías, videos y vuelos de SD a notebook;
+- copiar de notebook a disco duro externo y nube (respaldo cruzado);
+- verificar asociación de archivos con `RID` y nomenclatura correcta;
 - revisar que no existan archivos corruptos;
-- respaldar tarjetas antes de reutilizarlas;
+- vaciar planillas físicas IEO a la base Excel del proyecto;
 - consolidar la bitácora diaria;
-- registrar cuencas no visitadas, cambios de ruta y problemas encontrados.
+- registrar cuencas no visitadas, cambios de ruta y problemas encontrados;
+- no reutilizar tarjetas SD antes de verificar el respaldo.
 
 ## Control de completitud {#sec-control-completitud-terreno}
 
 Una visita se considera completa cuando existen:
 
-- ficha de sitio;
-- coordenada;
-- fotografías terrestres;
-- mediciones mínimas;
-- observaciones cualitativas;
-- estado del vuelo de dron;
-- comentario de consistencia preliminar con la señal MRCT.
+- planilla IEO con 5 a 10 puntos de muestreo y nota por cada dimensión (V, H, P, F);
+- IEO calculado por punto y promedio de cuenca;
+- coordenada de cada punto de muestreo;
+- condiciones ambientales (viento, nubosidad, temperatura);
+- fotografías terrestres bajo nomenclatura estándar;
+- estado del vuelo de dron (realizado o causa de suspensión);
+- observaciones breves sobre contexto y consistencia preliminar con la señal MRCT.

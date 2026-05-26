@@ -70,6 +70,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -250,10 +293,15 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-identificacion-sitio-terreno" id="toc-sec-identificacion-sitio-terreno" class="nav-link active" data-scroll-target="#sec-identificacion-sitio-terreno"><span class="header-section-number">14.1</span> Identificación del sitio</a></li>
-  <li><a href="#sec-registro-fotografico-terrestre" id="toc-sec-registro-fotografico-terrestre" class="nav-link" data-scroll-target="#sec-registro-fotografico-terrestre"><span class="header-section-number">14.2</span> Registro fotográfico terrestre</a></li>
-  <li><a href="#sec-vuelos-dron-terreno" id="toc-sec-vuelos-dron-terreno" class="nav-link" data-scroll-target="#sec-vuelos-dron-terreno"><span class="header-section-number">14.3</span> Vuelos de dron</a></li>
-  <li><a href="#sec-mediciones-ambientales-terreno" id="toc-sec-mediciones-ambientales-terreno" class="nav-link" data-scroll-target="#sec-mediciones-ambientales-terreno"><span class="header-section-number">14.4</span> Mediciones ambientales</a></li>
-  <li><a href="#sec-observacion-cualitativa-terreno" id="toc-sec-observacion-cualitativa-terreno" class="nav-link" data-scroll-target="#sec-observacion-cualitativa-terreno"><span class="header-section-number">14.5</span> Observación cualitativa</a></li>
+  <li><a href="#sec-ieo-terreno" id="toc-sec-ieo-terreno" class="nav-link" data-scroll-target="#sec-ieo-terreno"><span class="header-section-number">14.2</span> Índice de Estado Observado (IEO)</a>
+  <ul class="collapse">
+  <li><a href="#sec-rúbrica-ieo" id="toc-sec-rúbrica-ieo" class="nav-link" data-scroll-target="#sec-rúbrica-ieo"><span class="header-section-number">14.2.1</span> Rúbrica IEO</a></li>
+  <li><a href="#sec-formula-ieo" id="toc-sec-formula-ieo" class="nav-link" data-scroll-target="#sec-formula-ieo"><span class="header-section-number">14.2.2</span> Fórmula del IEO</a></li>
+  <li><a href="#sec-consistencia-psicologica" id="toc-sec-consistencia-psicologica" class="nav-link" data-scroll-target="#sec-consistencia-psicologica"><span class="header-section-number">14.2.3</span> Consistencia psicológica</a></li>
+  </ul></li>
+  <li><a href="#sec-registro-fotografico-terrestre" id="toc-sec-registro-fotografico-terrestre" class="nav-link" data-scroll-target="#sec-registro-fotografico-terrestre"><span class="header-section-number">14.3</span> Registro fotográfico terrestre</a></li>
+  <li><a href="#sec-vuelos-dron-terreno" id="toc-sec-vuelos-dron-terreno" class="nav-link" data-scroll-target="#sec-vuelos-dron-terreno"><span class="header-section-number">14.4</span> Vuelos de dron</a></li>
+  <li><a href="#sec-condiciones-ambientales-terreno" id="toc-sec-condiciones-ambientales-terreno" class="nav-link" data-scroll-target="#sec-condiciones-ambientales-terreno"><span class="header-section-number">14.5</span> Condiciones ambientales</a></li>
   <li><a href="#sec-respaldo-diario-terreno" id="toc-sec-respaldo-diario-terreno" class="nav-link" data-scroll-target="#sec-respaldo-diario-terreno"><span class="header-section-number">14.6</span> Respaldo diario</a></li>
   <li><a href="#sec-control-completitud-terreno" id="toc-sec-control-completitud-terreno" class="nav-link" data-scroll-target="#sec-control-completitud-terreno"><span class="header-section-number">14.7</span> Control de completitud</a></li>
   </ul>
@@ -265,7 +313,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./protocolo_levantamiento.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Protocolo de Levantamiento</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Protocolo de Levantamiento</span></h1>
-<p class="subtitle lead">Registros fotográficos, vuelos de dron y mediciones ambientales</p>
+<p class="subtitle lead">Índice de Estado Observado, registros fotográficos y vuelos de dron</p>
 </div>
 
 
@@ -282,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Este capítulo define el protocolo mínimo para levantar información comparable en las cuencas visitadas. Su contenido puede quedar establecido antes de la campaña, porque describe qué datos registrar y cómo organizarlos, independiente de cuáles sean finalmente las cuencas seleccionadas.</p>
+<p>Este capítulo define el protocolo para levantar información comparable en las cuencas visitadas. El instrumento central es el <strong>Índice de Estado Observado (IEO)</strong>, diseñado para traducir observaciones de terreno en una métrica cuantitativa estandarizada que pueda correlacionarse directamente con las salidas operativas de la MRCT. Su contenido puede quedar establecido antes de la campaña, porque describe qué datos registrar y cómo organizarlos, independiente de cuáles sean las cuencas seleccionadas.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -293,7 +341,7 @@ Principio operativo
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Cada visita debe producir una ficha completa, fotografías georreferenciadas, registro de condiciones ambientales, observaciones cualitativas y respaldo ordenado por <code>RID</code>.</p>
+<p>Cada visita debe producir una planilla IEO completa con 5 a 10 puntos de muestreo, fotografías georreferenciadas, vuelo de dron si las condiciones lo permiten, y respaldo ordenado por <code>RID</code> al cierre de cada jornada.</p>
 </div>
 </div>
 <section id="sec-identificacion-sitio-terreno" class="level2" data-number="14.1">
@@ -301,19 +349,178 @@ Principio operativo
 <p>Cada cuenca visitada debe registrarse con:</p>
 <ul>
 <li><code>RID</code>;</li>
-<li>comuna;</li>
-<li>fecha y hora;</li>
-<li>equipo responsable;</li>
-<li>coordenada del punto de observación;</li>
-<li>precisión del GPS si está disponible;</li>
+<li>cuenca y comuna;</li>
+<li>fecha, hora e identificador de jornada (AM/PM);</li>
+<li>investigador a cargo de la planilla;</li>
+<li>coordenada del punto de observación (X, Y) y precisión GPS si está disponible;</li>
 <li>condición de acceso;</li>
 <li>relación entre el punto visitado y la cuenca completa.</li>
 </ul>
 <p>Si el punto visitado no representa adecuadamente la cuenca, se debe indicar en la ficha.</p>
 </section>
-<section id="sec-registro-fotografico-terrestre" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="sec-registro-fotografico-terrestre"><span class="header-section-number">14.2</span> Registro fotográfico terrestre</h2>
-<p>El registro terrestre debe capturar contexto y detalle. Como mínimo:</p>
+<section id="sec-ieo-terreno" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="sec-ieo-terreno"><span class="header-section-number">14.2</span> Índice de Estado Observado (IEO)</h2>
+<p>El IEO es el instrumento cuantitativo que conecta la observación de terreno con las métricas MRCT. Se calcula como promedio sobre <strong>5 a 10 puntos de muestreo distribuidos espacialmente a lo largo del transecto</strong> dentro de cada cuenca.</p>
+<section id="sec-rúbrica-ieo" class="level3" data-number="14.2.1">
+<h3 data-number="14.2.1" class="anchored" data-anchor-id="sec-rúbrica-ieo"><span class="header-section-number">14.2.1</span> Rúbrica IEO</h3>
+<p>Cada punto de muestreo recibe cuatro notas de 1 a 5. La rúbrica debe aplicarse observando estrictamente los descriptores físicos, sin que el juicio se vea influenciado por lo que el modelo MRCT predice para la cuenca.</p>
+<p><strong>1. Vegetación</strong> (Vigor y Cobertura)</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nota</th>
+<th>Descriptor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Suelo expuesto dominante; vegetación muerta o marchita</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Manchones dispersos amarillentos; estrés hídrico sostenido</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Cobertura moderada; transición visible entre pastizales secos y vivos</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Cobertura casi continua; pastizales verdes; bosque sin daño aparente</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Vigor máximo; follaje verde oscuro y denso; turberas prístinas; sin estrés</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Humedad Superficial / Agua Visible</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nota</th>
+<th>Descriptor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Tierra agrietada o polvorienta; cauces absolutamente secos; sin musgo vivo</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Humedad residual solo bajo piedras o micro depresiones del terreno</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Suelo frío al tacto; musgos vivos; charcos esporádicos</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Hilos de agua activos; vegas hidratadas que ceden notoriamente al pisar</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Cuerpos de agua (lagunas, chorrillos permanentes); saturación total; escorrentía evidente</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3. Perturbación Antrópica</strong> (Impacto y Daño — <em>vector negativo</em>)</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nota</th>
+<th>Descriptor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Paisaje prístino; sin cercos, basura ni huellas vehiculares</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Senderos de fauna o huellas peatonales/vehiculares muy antiguas y cubiertas</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Cercos ganaderos; senderos de ovejas; caminos de tierra secundarios de bajo tránsito</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Zanjas de drenaje artificiales; tala selectiva; erosión inducida por sobrepastoreo; caminos anchos</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Movimiento de tierras pesado; infraestructura industrial; bosque rasado; basurales</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4. Fragmentación</strong> (Continuidad del ecosistema — <em>vector negativo</em>)</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nota</th>
+<th>Descriptor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Bloque continuo de bosque, humedal o estepa hasta donde alcanza la vista</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Pequeños claros naturales o micro senderos que no cortan la continuidad ecosistémica</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Bosque o vega seccionado claramente en 2 o 3 grandes bloques separados</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Mosaico roto; parches vegetacionales de tamaño medio dispersos y sin conexión física</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Árboles o matorrales aislados y relictos en matriz de suelo desnudo o altamente dañado</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sec-formula-ieo" class="level3" data-number="14.2.2">
+<h3 data-number="14.2.2" class="anchored" data-anchor-id="sec-formula-ieo"><span class="header-section-number">14.2.2</span> Fórmula del IEO</h3>
+<p>Perturbación y Fragmentación actúan como vectores negativos de la resiliencia estructural: su escala se invierte antes del cálculo. La fórmula normaliza todas las variables al rango <span class="math inline">[0, 1]</span>:</p>
+<p><span class="math display">
+IEO = \frac{\dfrac{V-1}{4} + \dfrac{H-1}{4} + \left(1 - \dfrac{P-1}{4}\right) + \left(1 - \dfrac{F-1}{4}\right)}{4}
+</span></p>
+<p>donde <span class="math inline">V</span>, <span class="math inline">H</span>, <span class="math inline">P</span> y <span class="math inline">F</span> son las notas asignadas en cada punto de muestreo. El IEO de la cuenca es el promedio de los IEO individuales de todos los puntos del transecto.</p>
+</section>
+<section id="sec-consistencia-psicologica" class="level3" data-number="14.2.3">
+<h3 data-number="14.2.3" class="anchored" data-anchor-id="sec-consistencia-psicologica"><span class="header-section-number">14.2.3</span> Consistencia psicológica</h3>
+<p>Lo que el equipo califica como “4” en la primera cuenca del Día 1 debe seguir siendo “4” en la última cuenca del Día 3. Un desvío semántico entre jornadas o entre investigadores destruye la regresión final. La rúbrica descriptiva es la referencia vinculante: ante duda, prevale el descriptor físico sobre la impresión general.</p>
+</section>
+</section>
+<section id="sec-registro-fotografico-terrestre" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="sec-registro-fotografico-terrestre"><span class="header-section-number">14.3</span> Registro fotográfico terrestre</h2>
+<p>El registro terrestre debe capturar contexto y detalle en cada punto de muestreo. Como mínimo:</p>
 <ul>
 <li>fotografía general desde el punto de acceso;</li>
 <li>fotografías hacia norte, este, sur y oeste;</li>
@@ -321,73 +528,62 @@ Principio operativo
 <li>detalle de agua, suelo, vegetación, nieve, erosión o perturbación visible;</li>
 <li>fotografía de restricciones o condiciones relevantes de acceso.</li>
 </ul>
-<p>Las fotografías deben nombrarse con una convención estable:</p>
-<pre class="text"><code>RID_YYYYMMDD_HHMM_tipo_registro_numero</code></pre>
+<p>Las fotografías deben nombrarse con la siguiente convención:</p>
+<pre class="text"><code>RID_Dia_Foto_numero</code></pre>
 </section>
-<section id="sec-vuelos-dron-terreno" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="sec-vuelos-dron-terreno"><span class="header-section-number">14.3</span> Vuelos de dron</h2>
-<p>Los vuelos de dron deben realizarse solo si las condiciones de viento, visibilidad, batería, permisos y seguridad lo permiten. El vuelo debe priorizar evidencia útil para interpretar la señal MRCT.</p>
-<p>Registros recomendados:</p>
+<section id="sec-vuelos-dron-terreno" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="sec-vuelos-dron-terreno"><span class="header-section-number">14.4</span> Vuelos de dron</h2>
+<p>Los vuelos de dron deben realizarse solo si las condiciones de viento, visibilidad, batería, permisos y seguridad lo permiten. Si el viento supera las especificaciones técnicas del dron, la misión aérea se aborta inmediatamente. En ese caso, el equipo concentra el esfuerzo en extender el transecto peatonal y enriquecer el archivo fotográfico terrestre, aumentando la densidad de puntos IEO para suplir la visión aérea.</p>
+<p>Registros recomendados cuando el vuelo es posible:</p>
 <ul>
-<li>vista nadiral del punto de observación;</li>
+<li>mosaico cenital del punto de observación y entorno próximo;</li>
 <li>vista oblicua del entorno;</li>
 <li>barrido de continuidad de cobertura;</li>
 <li>registro de agua, humedales, nieve, cauces, erosión, caminos o intervención antrópica;</li>
 <li>captura de límites o contrastes visibles entre la cuenca y su entorno.</li>
 </ul>
-<p>Si el vuelo se suspende, la ficha debe registrar la causa.</p>
+<p>Los archivos de dron se nombran:</p>
+<pre class="text"><code>RID_Dia_Dron_numero</code></pre>
+<p>Si el vuelo se suspende, la planilla debe registrar la causa.</p>
 </section>
-<section id="sec-mediciones-ambientales-terreno" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="sec-mediciones-ambientales-terreno"><span class="header-section-number">14.4</span> Mediciones ambientales</h2>
-<p>Las mediciones deben ser simples, repetibles y con unidad explícita. El set mínimo considera:</p>
+<section id="sec-condiciones-ambientales-terreno" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="sec-condiciones-ambientales-terreno"><span class="header-section-number">14.5</span> Condiciones ambientales</h2>
+<p>La planilla registra por punto de muestreo:</p>
 <ul>
-<li>temperatura ambiente;</li>
-<li>humedad relativa;</li>
-<li>temperatura superficial de suelo si existe sensor;</li>
-<li>temperatura de agua si hay curso o cuerpo de agua accesible;</li>
+<li>temperatura ambiente (°C);</li>
+<li>nubosidad (%);</li>
+<li>viento (km/h): si supera el límite operativo del dron, queda anotado como causa de suspensión del vuelo;</li>
 <li>presencia o ausencia de agua visible;</li>
-<li>humedad superficial observada;</li>
 <li>presencia de nieve o hielo;</li>
-<li>nubosidad, viento, precipitación y visibilidad.</li>
+<li>observaciones breves sobre contexto local.</li>
 </ul>
-<p>Cuando se repita una medición, se debe conservar el valor original y registrar el promedio como dato derivado.</p>
-</section>
-<section id="sec-observacion-cualitativa-terreno" class="level2" data-number="14.5">
-<h2 data-number="14.5" class="anchored" data-anchor-id="sec-observacion-cualitativa-terreno"><span class="header-section-number">14.5</span> Observación cualitativa</h2>
-<p>La ficha debe registrar condiciones que ayuden a interpretar la MRCT:</p>
-<ul>
-<li>cobertura vegetal dominante;</li>
-<li>suelo desnudo, erosión o remoción;</li>
-<li>sectores anegados o secos;</li>
-<li>humedales, vegas, turberas, matorral o bosque;</li>
-<li>evidencia de incendio, tala, pastoreo, caminos, drenajes o infraestructura;</li>
-<li>diferencias visibles entre la cuenca y su entorno;</li>
-<li>limitaciones de interpretación: sombra, nieve, nubosidad, mezcla de coberturas o baja representatividad del punto.</li>
-</ul>
+<p>Estas variables complementan el IEO y permiten detectar condiciones que limiten la comparabilidad entre cuencas.</p>
 </section>
 <section id="sec-respaldo-diario-terreno" class="level2" data-number="14.6">
 <h2 data-number="14.6" class="anchored" data-anchor-id="sec-respaldo-diario-terreno"><span class="header-section-number">14.6</span> Respaldo diario</h2>
-<p>Al cierre de cada jornada se debe:</p>
+<p>Al cierre de cada jornada (gabinete nocturno, ~1 hora):</p>
 <ul>
-<li>copiar fotografías, videos, vuelos y formularios a un repositorio común;</li>
-<li>verificar asociación con <code>RID</code>;</li>
+<li>copiar fotografías, videos y vuelos de SD a notebook;</li>
+<li>copiar de notebook a disco duro externo y nube (respaldo cruzado);</li>
+<li>verificar asociación de archivos con <code>RID</code> y nomenclatura correcta;</li>
 <li>revisar que no existan archivos corruptos;</li>
-<li>respaldar tarjetas antes de reutilizarlas;</li>
+<li>vaciar planillas físicas IEO a la base Excel del proyecto;</li>
 <li>consolidar la bitácora diaria;</li>
-<li>registrar cuencas no visitadas, cambios de ruta y problemas encontrados.</li>
+<li>registrar cuencas no visitadas, cambios de ruta y problemas encontrados;</li>
+<li>no reutilizar tarjetas SD antes de verificar el respaldo.</li>
 </ul>
 </section>
 <section id="sec-control-completitud-terreno" class="level2" data-number="14.7">
 <h2 data-number="14.7" class="anchored" data-anchor-id="sec-control-completitud-terreno"><span class="header-section-number">14.7</span> Control de completitud</h2>
 <p>Una visita se considera completa cuando existen:</p>
 <ul>
-<li>ficha de sitio;</li>
-<li>coordenada;</li>
-<li>fotografías terrestres;</li>
-<li>mediciones mínimas;</li>
-<li>observaciones cualitativas;</li>
-<li>estado del vuelo de dron;</li>
-<li>comentario de consistencia preliminar con la señal MRCT.</li>
+<li>planilla IEO con 5 a 10 puntos de muestreo y nota por cada dimensión (V, H, P, F);</li>
+<li>IEO calculado por punto y promedio de cuenca;</li>
+<li>coordenada de cada punto de muestreo;</li>
+<li>condiciones ambientales (viento, nubosidad, temperatura);</li>
+<li>fotografías terrestres bajo nomenclatura estándar;</li>
+<li>estado del vuelo de dron (realizado o causa de suspensión);</li>
+<li>observaciones breves sobre contexto y consistencia preliminar con la señal MRCT.</li>
 </ul>
 
 

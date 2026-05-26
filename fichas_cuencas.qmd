@@ -1,15 +1,25 @@
 ---
 title: "Fichas de Cuencas"
-subtitle: "Plantilla para documentar sitios principales y alternativas de terreno"
+subtitle: "Cuencas preseleccionadas y plantilla para documentación de terreno"
 ---
 
-Este capítulo queda preparado para completar las fichas de las cuencas definitivas. Su función es transformar cada `RID` seleccionado en una pregunta de terreno clara, con ubicación, señal MRCT, hipótesis preliminar, acceso y registros requeridos.
+Este capítulo presenta los criterios de selección, las cuencas preseleccionadas y la estructura de fichas para el itinerario de campaña. Las fichas se completan definitivamente cuando la lista final haya sido validada logísticamente con accesos, permisos y fechas confirmados.
 
 ::: {.callout-note}
 ## Estado del capítulo
 
-Este capítulo debe completarse cuando la lista final de cuencas haya sido validada técnica y logísticamente.
+Las cuencas identificadas corresponden a la preselección técnica. Las fichas completas se actualizan una vez que la validación logística esté finalizada.
 :::
+
+## Criterios de selección {#sec-criterios-seleccion-fichas}
+
+La selección de cuencas sigue dos criterios estratégicos no excluyentes:
+
+**A. Tensión dinámica (Jerk ≥ p90)**
+Cuencas dentro del radio operacional de 80 km de Punta Arenas con eventos de Jerk iguales o superiores al percentil 90 anual. Estas cuencas presentan anomalías cinemáticas —reversiones o intensificaciones abruptas— que la campaña debe verificar con el IEO en terreno.
+
+**B. Presión prospectiva H2V**
+Cuencas en buffers de 50 km alrededor de terminales marítimos de Hidrógeno Verde (Muelle Laredo, Terminal Cabo Negro, Terminal San Gregorio). El umbral mínimo es Jerk ≥ p85 anual dentro del buffer. El objetivo es establecer una línea base ecológica sólida antes del inicio de obras de infraestructura.
 
 ## Estructura de ficha {#sec-estructura-ficha-cuenca}
 
@@ -17,13 +27,13 @@ Cada ficha debe incluir:
 
 | Bloque | Contenido |
 |---|---|
-| Identificación | `RID`, comuna, prioridad, año crítico, tipo de evento y estado de selección. |
-| Señal MRCT | Jerk, percentil, `RES`, `PT`, $D$, $V$, $A$, $SENS$, $D_{local}$ y clasificación disponible. |
-| Ubicación | mapa regional, mapa de detalle, coordenada objetivo, distancia a Punta Arenas y anillo logístico. |
+| Identificación | `RID`, comuna, prioridad, criterio de selección, año crítico y tipo de evento. |
+| Señal MRCT | Jerk, percentil, tipo de trayectoria, `RES`, `PT`, $D$, $V$, $A$, $SENS$ y $D_{local}$. |
+| Ubicación | mapa regional, mapa de detalle, coordenada objetivo, distancia a Punta Arenas y eje de campaña. |
 | Pregunta de terreno | Qué condición se espera observar y qué duda debe resolver la visita. |
 | Acceso | ruta preliminar, restricciones, permisos y punto alternativo. |
-| Registros requeridos | fotografías, dron, temperatura, humedad, agua, nieve, cobertura y perturbaciones. |
-| Resultado esperado | criterio para clasificar la observación como consistente, parcialmente consistente, no consistente o no evaluable. |
+| Registros requeridos | planilla IEO (5–10 puntos), fotografías, dron si posible, condiciones ambientales. |
+| Resultado esperado | valor de IEO esperado según `RES` del modelo; criterio de consistencia para la validación empírica. |
 
 : Estructura base para fichas de cuencas seleccionadas. {#tbl-estructura-ficha-cuencas}
 
@@ -33,34 +43,56 @@ Cada ficha debe incluir:
 
 | Campo | Valor |
 |---|---|
+| Criterio de selección | Jerk ≥ p90 / H2V prospectiva |
 | Prioridad | Por definir |
 | Comuna | Por definir |
 | Año crítico | Por definir |
-| Tipo de evento | Por definir |
-| Jerk | Por definir |
-| Percentil anual | Por definir |
+| Tipo de evento | Intensificación / Reversión |
+| Jerk (percentil anual) | Por definir |
+| Tipo de trayectoria | Por definir |
 | `RES` año crítico | Por definir |
 | Distancia a Punta Arenas | Por definir |
-| Anillo logístico | Por definir |
+| Eje de campaña | Norte H2V / Jerk p90 / Periurbano |
 | Estado de selección | Principal / reemplazo / descartada |
 
-**Pregunta de terreno:** por definir.
+**Pregunta de terreno:** ¿El estado estructural observado (IEO) es consistente con el nivel de tensión que la MRCT detecta vía Jerk y `RES`?
 
 **Ruta preliminar:** por definir.
 
 **Punto de observación sugerido:** por definir.
 
-**Registros obligatorios:** fotografía terrestre, dron si es posible, temperatura, humedad, observación de agua/nieve/cobertura y comentario de consistencia.
+**Registros obligatorios:** planilla IEO (5–10 puntos de muestreo por transecto), fotografía terrestre, dron si es posible, condiciones ambientales, nomenclatura `RID_Dia_Foto/Dron`.
+
+**Resultado esperado:** si `RES` es bajo (alta tensión estructural), se espera IEO < 0,5. Si `RES` es alto (resiliencia operativa), se espera IEO > 0,5. La correlación entre `RES` del modelo e IEO agregado de todas las cuencas visitadas constituye el puente de validación empírica de la MRCT.
 
 **Riesgos o restricciones:** por definir.
 
 ## Cuencas principales {#sec-cuencas-principales-fichas}
 
-Esta subsección debe llenarse con las cuencas que entren al itinerario principal.
+### Cuencas por criterio Jerk ≥ p90 (radio 80 km de Punta Arenas)
+
+| RID | Tipo de evento | Percentil | Eje de campaña | Estado |
+|---|---|---|---|---|
+| 1641 | Intensificación fuerte | p97.1 | Jerk p90 | Principal |
+| 1298 | Reversión crítica | > p99 | Jerk p90 | Principal |
+| 1602 | Reversión crítica | > p99 | Jerk p90 | Principal |
+
+: Cuencas preseleccionadas por tensión dinámica. {#tbl-cuencas-jerk}
+
+### Cuencas por criterio H2V (buffer 50 km de terminales marítimos)
+
+| RID | Terminal de referencia | Tipo de evento | Percentil | Estado |
+|---|---|---|---|---|
+| 1808 | Muelle Laredo / Cabo Negro | Intensificación fuerte | > p85 | Principal |
+| 5258 | San Gregorio | Reversión fuerte | Por confirmar | Principal |
+
+: Cuencas preseleccionadas por presión prospectiva H2V. {#tbl-cuencas-h2v}
+
+Las fichas completas de cada cuenca (ruta, coordenada objetivo, métricas MRCT, pregunta de terreno y acceso) se incorporan a este capítulo cuando los accesos y permisos estén confirmados.
 
 ## Cuencas de reemplazo {#sec-cuencas-reemplazo-fichas}
 
-Esta subsección debe llenarse con alternativas visitables si una cuenca principal no puede ser evaluada.
+Esta subsección se completa con alternativas visitables si una cuenca principal no puede ser evaluada por clima, acceso o permiso. Las cuencas de reemplazo deben cumplir al menos uno de los dos criterios de selección (Jerk ≥ p90 en radio 80 km o Jerk ≥ p85 en buffer H2V).
 
 ## Cuencas descartadas {#sec-cuencas-descartadas-fichas}
 

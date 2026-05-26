@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [book-mrct] recent context, 2026-05-14 4:06pm GMT-4
+# [book-mrct] recent context, 2026-05-14 4:34pm GMT-4
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 40 obs (19,090t read) | 602,574t work | 97% savings
+Stats: 42 obs (19,718t read) | 621,223t work | 97% savings
 
 ### May 5, 2026
 70 6:07p ⚖️ MRCT Digital Book — intro.qmd Editorial Revision Requested
@@ -54,6 +54,9 @@ Stats: 40 obs (19,090t read) | 602,574t work | 97% savings
 201 1:24p ⚖️ MRCT Digital Book — jerk.qmd Update Planned with Notebook Diagrams
 202 " 🔵 MRCT_Cuencas_Prioritarias_Jerk.ipynb — Full Cell Map and PNG Inventory Audited
 203 " 🟣 jerk.qmd — 5 Mermaid Flowcharts Added to Illustrate Notebook Workflow
+### May 14, 2026
+212 4:29p ⚖️ MRCT Presentation Planning — 30-Min Keynote Structure Requested
+213 4:32p ⚖️ MRCT Presentation Planning — 30-min Keynote Structure Requested
 
-Access 603k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 621k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>
