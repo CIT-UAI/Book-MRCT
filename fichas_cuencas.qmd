@@ -1,99 +1,79 @@
 ---
 title: "Fichas de Cuencas"
-subtitle: "Cuencas preseleccionadas y plantilla para documentación de terreno"
+subtitle: "Ficha operativa para registro de terreno"
 ---
 
-Este capítulo presenta los criterios de selección, las cuencas preseleccionadas y la estructura de fichas para el itinerario de campaña. Las fichas se completan definitivamente cuando la lista final haya sido validada logísticamente con accesos, permisos y fechas confirmados.
+Este capítulo define la ficha mínima que debe acompañar cada cuenca visitada. Su función es ordenar el registro de terreno, no volver a explicar la selección de cuencas ni la rúbrica IEO. La selección técnica se presenta en @sec-diez-cuencas-jerk y @sec-terminales-h2-jerk; la decisión logística de campaña se define en @sec-decision-cuencas-finales; y la evaluación IEO se rige por @sec-rúbrica-ieo y @sec-formula-ieo.
 
 ::: {.callout-note}
-## Estado del capítulo
+## Uso de la ficha
 
-Las cuencas identificadas corresponden a la preselección técnica. Las fichas completas se actualizan una vez que la validación logística esté finalizada.
+Antes de salir a terreno se precargan los datos MRCT y la ubicación objetivo. En terreno se completan las condiciones ambientales, las observaciones breves y las cuatro notas IEO de cada punto de muestreo.
 :::
 
-## Criterios de selección {#sec-criterios-seleccion-fichas}
+## Variables de la ficha {#sec-variables-obligatorias-fichas}
 
-La selección de cuencas sigue dos criterios estratégicos no excluyentes:
+Cada ficha debe mantener juntas las variables de identificación, precarga MRCT y registro de terreno. La tabla siguiente define los campos reales que deben aparecer en la ficha.
 
-**A. Tensión dinámica (Jerk ≥ p90)**
-Cuencas dentro del radio operacional de 80 km de Punta Arenas con eventos de Jerk iguales o superiores al percentil 90 anual. Estas cuencas presentan anomalías cinemáticas —reversiones o intensificaciones abruptas— que la campaña debe verificar con el IEO en terreno.
+| Bloque | Variable | Llenado | Uso |
+|---|---|---|---|
+| Identificación | ID planilla | Gabinete | Identifica la planilla física o digital. |
+| Identificación | Nombre a cargo de planilla | Gabinete / terreno | Define la persona responsable del registro. |
+| Identificación | Jornada AM/PM | Terreno | Indica el bloque horario del levantamiento. |
+| Registro de punto | `ID` | Terreno | Numera cada punto de muestreo dentro de la cuenca. |
+| Registro de punto | Fecha | Terreno | Registra la fecha de observación. |
+| Registro de punto | Hora | Terreno | Registra la hora local de observación. |
+| Precarga de cuenca | `RID` | Gabinete | Identificador MRCT de la cuenca. |
+| Precarga de cuenca | Cuenca | Gabinete | Nombre o etiqueta operativa de la cuenca. |
+| Precarga de cuenca | Comuna | Gabinete | Comuna asociada al punto o cuenca. |
+| Registro ambiental | Viento km/h | Terreno | Condición ambiental y restricción potencial para dron. |
+| Registro ambiental | Nubosidad % | Terreno | Condición de visibilidad y comparabilidad. |
+| Registro ambiental | `Temp_AmbC` | Terreno | Temperatura ambiente en grados Celsius. |
+| Registro de punto | Observaciones breves | Terreno | Acceso, agua visible, nieve/hielo, perturbaciones, restricciones o representatividad. |
+| IEO | Vegetación (1-5) | Terreno | Nota de vigor y cobertura vegetal según @sec-rúbrica-ieo. |
+| IEO | Humedad (1-5) | Terreno | Nota de humedad superficial o agua visible según @sec-rúbrica-ieo. |
+| IEO | Perturbación (1-5) | Terreno | Nota de impacto antrópico; vector negativo en @sec-formula-ieo. |
+| IEO | Fragmentación (1-5) | Terreno | Nota de continuidad ecosistémica; vector negativo en @sec-formula-ieo. |
+| IEO | IEO calculado | Gabinete / terreno | Índice observado calculado para el punto. |
+| Precarga MRCT | `RES` modelo | Gabinete | Valor de resiliencia estimado por la MRCT. |
+| Precarga MRCT | Jerk modelo | Gabinete | Señal dinámica que justifica o contextualiza la visita. |
+| Precarga MRCT | Tipo trayectoria | Gabinete | Clasificación de trayectoria asociada a la cuenca. |
+| Ubicación | Coordenada X | Gabinete / terreno | Coordenada objetivo o coordenada observada del punto. |
+| Ubicación | Coordenada Y | Gabinete / terreno | Coordenada objetivo o coordenada observada del punto. |
 
-**B. Presión prospectiva H2V**
-Cuencas en buffers de 50 km alrededor de terminales marítimos de Hidrógeno Verde (Muelle Laredo, Terminal Cabo Negro, Terminal San Gregorio). El umbral mínimo es Jerk ≥ p85 anual dentro del buffer. El objetivo es establecer una línea base ecológica sólida antes del inicio de obras de infraestructura.
+: Variables reales de identificación, precarga y registro de terreno. {#tbl-campos-minimos-ficha}
 
-## Estructura de ficha {#sec-estructura-ficha-cuenca}
+Las columnas de terreno deben mantenerse alineadas con el protocolo: viento, nubosidad y temperatura se registran como condiciones ambientales (@sec-condiciones-ambientales-terreno); vegetación, humedad, perturbación y fragmentación se evalúan según la rúbrica IEO (@sec-rúbrica-ieo); y fotografías, dron, acceso, agua visible, nieve/hielo o dudas de representatividad se documentan en observaciones breves cuando no tengan una columna específica.
 
-Cada ficha debe incluir:
+## Ficha tipo por cuenca {#sec-ficha-tipo-cuenca}
 
-| Bloque | Contenido |
-|---|---|
-| Identificación | `RID`, comuna, prioridad, criterio de selección, año crítico y tipo de evento. |
-| Señal MRCT | Jerk, percentil, tipo de trayectoria, `RES`, `PT`, $D$, $V$, $A$, $SENS$ y $D_{local}$. |
-| Ubicación | mapa regional, mapa de detalle, coordenada objetivo, distancia a Punta Arenas y eje de campaña. |
-| Pregunta de terreno | Qué condición se espera observar y qué duda debe resolver la visita. |
-| Acceso | ruta preliminar, restricciones, permisos y punto alternativo. |
-| Registros requeridos | planilla IEO (5–10 puntos), fotografías, dron si posible, condiciones ambientales. |
-| Resultado esperado | valor de IEO esperado según `RES` del modelo; criterio de consistencia para la validación empírica. |
-
-: Estructura base para fichas de cuencas seleccionadas. {#tbl-estructura-ficha-cuencas}
-
-## Ficha tipo {#sec-ficha-tipo-cuenca}
-
-### Cuenca `RID`: por definir
+### Identificación y precarga
 
 | Campo | Valor |
 |---|---|
-| Criterio de selección | Jerk ≥ p90 / H2V prospectiva |
-| Prioridad | Por definir |
+| ID planilla | Por definir |
+| Nombre a cargo de planilla | Por definir |
+| Jornada | AM / PM |
+| `RID` | Por definir |
+| Cuenca | Por definir |
 | Comuna | Por definir |
-| Año crítico | Por definir |
-| Tipo de evento | Intensificación / Reversión |
-| Jerk (percentil anual) | Por definir |
-| Tipo de trayectoria | Por definir |
-| `RES` año crítico | Por definir |
-| Distancia a Punta Arenas | Por definir |
-| Eje de campaña | Norte H2V / Jerk p90 / Periurbano |
-| Estado de selección | Principal / reemplazo / descartada |
+| `RES` modelo | Por definir |
+| Jerk modelo | Por definir |
+| Tipo trayectoria | Por definir |
+| Coordenada X objetivo | Por definir |
+| Coordenada Y objetivo | Por definir |
+| Criterio de selección | Referir a @sec-diez-cuencas-jerk, @sec-terminales-h2-jerk o @sec-decision-cuencas-finales |
 
-**Pregunta de terreno:** ¿El estado estructural observado (IEO) es consistente con el nivel de tensión que la MRCT detecta vía Jerk y `RES`?
+: Identificación y precarga de la ficha de cuenca. {#tbl-ficha-identificacion-mrct}
 
-**Ruta preliminar:** por definir.
+### Registro de terreno
 
-**Punto de observación sugerido:** por definir.
+![Ejemplo de ficha de levantamiento de datos en terreno](images/ficha_levantamiento.png)
 
-**Registros obligatorios:** planilla IEO (5–10 puntos de muestreo por transecto), fotografía terrestre, dron si es posible, condiciones ambientales, nomenclatura `RID_Dia_Foto/Dron`.
+El registro debe completarse con 5 a 10 puntos de muestreo por cuenca, tal como define @sec-ieo-terreno. Al cierre de cada visita se revisa el control de completitud de @sec-control-completitud-terreno y luego la información se consolida en @sec-resultados-por-cuenca-terreno.
 
-**Resultado esperado:** si `RES` es bajo (alta tensión estructural), se espera IEO < 0,5. Si `RES` es alto (resiliencia operativa), se espera IEO > 0,5. La correlación entre `RES` del modelo e IEO agregado de todas las cuencas visitadas constituye el puente de validación empírica de la MRCT.
+## Uso posterior {#sec-uso-posterior-fichas}
 
-**Riesgos o restricciones:** por definir.
+La ficha es la fuente primaria para la integración MRCT-terreno. Sus campos alimentan la síntesis de mediciones de @sec-sintesis-mediciones-terreno y la tabla de validación de @sec-tabla-validacion-mrct-terreno. La clasificación de consistencia no se decide en la ficha: se aplica posteriormente con los criterios de @sec-criterios-consistencia-mrct.
 
-## Cuencas principales {#sec-cuencas-principales-fichas}
-
-### Cuencas por criterio Jerk ≥ p90 (radio 80 km de Punta Arenas)
-
-| RID | Tipo de evento | Percentil | Eje de campaña | Estado |
-|---|---|---|---|---|
-| 1641 | Intensificación fuerte | p97.1 | Jerk p90 | Principal |
-| 1298 | Reversión crítica | > p99 | Jerk p90 | Principal |
-| 1602 | Reversión crítica | > p99 | Jerk p90 | Principal |
-
-: Cuencas preseleccionadas por tensión dinámica. {#tbl-cuencas-jerk}
-
-### Cuencas por criterio H2V (buffer 50 km de terminales marítimos)
-
-| RID | Terminal de referencia | Tipo de evento | Percentil | Estado |
-|---|---|---|---|---|
-| 1808 | Muelle Laredo / Cabo Negro | Intensificación fuerte | > p85 | Principal |
-| 5258 | San Gregorio | Reversión fuerte | Por confirmar | Principal |
-
-: Cuencas preseleccionadas por presión prospectiva H2V. {#tbl-cuencas-h2v}
-
-Las fichas completas de cada cuenca (ruta, coordenada objetivo, métricas MRCT, pregunta de terreno y acceso) se incorporan a este capítulo cuando los accesos y permisos estén confirmados.
-
-## Cuencas de reemplazo {#sec-cuencas-reemplazo-fichas}
-
-Esta subsección se completa con alternativas visitables si una cuenca principal no puede ser evaluada por clima, acceso o permiso. Las cuencas de reemplazo deben cumplir al menos uno de los dos criterios de selección (Jerk ≥ p90 en radio 80 km o Jerk ≥ p85 en buffer H2V).
-
-## Cuencas descartadas {#sec-cuencas-descartadas-fichas}
-
-Las cuencas descartadas también deben registrarse, indicando la causa: acceso, permiso, distancia, baja representatividad, riesgo, clima esperado o cambio de prioridad técnica.
+Las cuencas no visitadas, reemplazadas o descartadas también deben registrarse, indicando la causa principal: acceso, permiso, distancia, baja representatividad, riesgo, clima esperado o cambio de prioridad técnica.

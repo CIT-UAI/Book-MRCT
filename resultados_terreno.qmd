@@ -3,7 +3,7 @@ title: "Resultados de Terreno"
 subtitle: "Evidencia registrada durante la campaña de terreno"
 ---
 
-Este capítulo queda reservado para documentar los resultados de la campaña una vez ejecutada. Debe reunir la evidencia levantada por cuenca, las condiciones de cada jornada y las limitaciones encontradas.
+Este capítulo queda reservado para documentar los resultados de la campaña una vez ejecutada. Debe reunir la evidencia levantada por cuenca, las condiciones de cada jornada y las limitaciones encontradas. La fuente primaria será la ficha definida en @sec-ficha-tipo-cuenca, levantada bajo el protocolo de @sec-ieo-terreno y revisada con el control de completitud de @sec-control-completitud-terreno.
 
 ::: {.callout-note}
 ## Estado del capítulo
@@ -42,24 +42,25 @@ Para cada cuenca visitada se debe reportar:
 - coordenada observada;
 - fotografías disponibles;
 - vuelo de dron completo, parcial o suspendido;
-- mediciones ambientales;
+- condiciones ambientales registradas en la ficha;
+- IEO calculado por punto y promedio de cuenca;
 - observaciones ecológicas principales;
 - problemas de acceso o representatividad;
 - consistencia preliminar con la señal MRCT.
 
 ## Síntesis de mediciones {#sec-sintesis-mediciones-terreno}
 
-La tabla de mediciones deberá consolidar:
+La tabla de mediciones deberá consolidar las mismas variables de la planilla de @sec-variables-obligatorias-fichas, evitando crear campos paralelos que no existan en la ficha:
 
-| `RID` | Fecha | Temperatura aire | Humedad relativa | Agua visible | Nieve visible | Vuelo dron | Estado ficha |
-|---:|---|---:|---:|---|---|---|---|
-| Por definir | Por definir | Por definir | Por definir | Por definir | Por definir | Por definir | Por definir |
+| `RID` | Fecha | Viento km/h | Nubosidad % | `Temp_AmbC` | IEO promedio | Agua/nieve en observaciones | Vuelo dron | Estado ficha |
+|---:|---|---:|---:|---:|---:|---|---|---|
+| Por definir | Por definir | Por definir | Por definir | Por definir | Por definir | Por definir | Por definir | Por definir |
 
 : Plantilla de síntesis de mediciones de terreno. {#tbl-sintesis-mediciones-terreno}
 
 ## Registro fotográfico {#sec-registro-fotografico-resultados}
 
-Esta sección debe incorporar una selección curada de fotografías y capturas de dron. No debe incluir todo el repositorio visual, sino ejemplos que expliquen condiciones observadas y diferencias entre cuencas.
+Esta sección debe incorporar una selección curada de fotografías y capturas de dron registradas con la nomenclatura definida en @sec-registro-fotografico-terrestre y @sec-vuelos-dron-terreno. No debe incluir todo el repositorio visual, sino ejemplos que expliquen condiciones observadas y diferencias entre cuencas.
 
 ## Limitaciones de campaña {#sec-limitaciones-campana-terreno}
 
@@ -73,3 +74,5 @@ Las limitaciones deben registrarse explícitamente:
 - baja visibilidad;
 - puntos poco representativos;
 - restricciones de permiso o seguridad.
+
+Estas limitaciones alimentan directamente la clasificación de consistencia o no evaluabilidad definida en @sec-criterios-consistencia-mrct.

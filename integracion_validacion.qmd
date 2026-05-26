@@ -3,7 +3,7 @@ title: "Integración y Validación"
 subtitle: "Comparación entre señal analítica y evidencia de terreno"
 ---
 
-Este capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico.
+Este capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico: la selección nace en @sec-diez-cuencas-jerk y @sec-terminales-h2-jerk, la campaña se organiza en @sec-decision-cuencas-finales, el registro se levanta con @sec-ficha-tipo-cuenca y los resultados se consolidan en @sec-resultados-por-cuenca-terreno.
 
 ::: {.callout-note}
 ## Objetivo
@@ -13,7 +13,7 @@ Clasificar la consistencia entre la señal MRCT y la observación de terreno, id
 
 ## Tabla de validación {#sec-tabla-validacion-mrct-terreno}
 
-La evidencia de terreno debe integrarse como una tabla por cuenca visitada:
+La evidencia de terreno debe integrarse como una tabla por cuenca visitada. La tabla agrega la planilla de @sec-variables-obligatorias-fichas y no reemplaza el archivo original de terreno.
 
 | Variable | Descripción |
 |---|---|
@@ -22,11 +22,15 @@ La evidencia de terreno debe integrarse como una tabla por cuenca visitada:
 | `field_status` | Visitada, no visitada, reemplazada o acceso parcial. |
 | `drone_status` | Vuelo completo, parcial, suspendido o no aplica. |
 | `photo_count` | Número de fotografías útiles. |
-| `temp_air_c` | Temperatura ambiente. |
-| `humidity_pct` | Humedad relativa. |
-| `water_present` | Presencia de agua visible. |
-| `snow_present` | Presencia de nieve o hielo visible. |
-| `visible_disturbance` | Perturbación visible registrada. |
+| `wind_kmh` | Viento registrado en la ficha. |
+| `cloud_pct` | Nubosidad registrada en la ficha. |
+| `temp_amb_c` | Temperatura ambiente registrada como `Temp_AmbC`. |
+| `ieo_mean` | Promedio de IEO de los puntos de muestreo. |
+| `water_snow_notes` | Evidencia de agua visible, nieve o hielo descrita en observaciones breves. |
+| `visible_disturbance` | Perturbación visible registrada en observaciones y fotografías. |
+| `res_model` | `RES` modelo precargado en la ficha. |
+| `jerk_model` | Jerk modelo precargado en la ficha. |
+| `trajectory_type` | Tipo de trayectoria precargada en la ficha. |
 | `mrct_consistency` | Consistente, parcialmente consistente, no consistente o no evaluable. |
 | `field_notes` | Síntesis cualitativa. |
 
@@ -47,7 +51,7 @@ La comparación debe separar cuatro resultados:
 
 ## Lectura de discrepancias {#sec-discrepancias-mrct-terreno}
 
-Una discrepancia no debe interpretarse automáticamente como error. Puede deberse a:
+Una discrepancia no debe interpretarse automáticamente como error. Debe revisarse contra la ficha original (@sec-ficha-tipo-cuenca), los resultados por cuenca (@sec-resultados-por-cuenca-terreno) y los antecedentes del análisis de jerk (@sec-criterio-jerk). Puede deberse a:
 
 - diferencia entre fecha de imagen satelital y fecha de visita;
 - heterogeneidad interna de la cuenca;

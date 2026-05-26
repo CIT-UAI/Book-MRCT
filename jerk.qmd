@@ -3,7 +3,7 @@ title: "Selección de Cuencas"
 subtitle: "Priorización para trabajo de terreno mediante análisis de jerk y zonas estratégicas"
 ---
 
-Este capítulo actualiza la selección de cuencas candidatas para trabajo de terreno a partir de la nueva versión del notebook `MRCT_Cuencas_Prioritarias_Jerk.ipynb`. El análisis usa el **jerk** de la Matriz de Resiliencia Climática Territorial para detectar cambios abruptos en la trayectoria ecosistémica y concentra la priorización en el entorno operacional de Punta Arenas.
+Este capítulo actualiza la selección de cuencas candidatas para trabajo de terreno mediante el análisis de **jerk** de la Matriz de Resiliencia Climática Territorial. El objetivo es detectar cambios abruptos en la trayectoria ecosistémica y concentrar la priorización en el entorno operacional de Punta Arenas.
 
 La versión actual incorpora una mejora importante: además de seleccionar cuencas para validación general, agrega zonas de búsqueda asociadas a **puertos y terminales estratégicos para hidrógeno verde**. Esta capa permite observar cuencas próximas a infraestructura relevante para la transformación energética regional, donde eventuales nuevas intervenciones podrían interactuar con condiciones ecosistémicas ya inestables.
 
@@ -307,21 +307,9 @@ El producto esperado no es reemplazar el ranking, sino convertirlo en un plan de
 
 ## Fichas de terreno derivadas {#sec-fichas-jerk}
 
-Cada cuenca que avance a terreno debe tener una ficha técnica. La base generada permite poblar automáticamente buena parte de esa ficha.
+Cada cuenca que avance a terreno debe transformarse en una ficha operativa. La base generada por este análisis permite precargar `RID`, comuna, año crítico, tipo de evento, Jerk, `RES`, coordenadas, distancia a Punta Arenas y contexto H2V cuando corresponda.
 
-| Bloque de ficha | Campos sugeridos |
-|---|---|
-| Identificación | `RID`, comuna, prioridad, año crítico, tipo de evento. |
-| Señal MRCT | `Jerk`, percentil anual, `RES`, `RES_STATE`, `RES_TYPE`, `Domain`, `Velocidad`, `Aceleracion`, `SENS`, `Domain_local`. |
-| Ubicación | centroide, distancia a Punta Arenas, anillo, mapa de detalle, ruta preliminar. |
-| Contexto H2 | terminal cercano, distancia al terminal, pertenencia a buffer de 50 km, ranking por terminal. |
-| Pregunta de terreno | Qué condición debería observarse según la señal: intensificación, reversión, baja resiliencia o contraste local. |
-| Observaciones requeridas | fotografías, dron, temperatura, humedad, agua visible, nieve, cobertura, perturbación, accesibilidad. |
-| Estado de validación | consistente, parcialmente consistente, no consistente o no evaluable. |
-
-: Contenido sugerido para fichas de terreno derivadas del ranking de jerk. {#tbl-ficha-jerk}
-
-Estas fichas son el puente entre análisis y campaña. Evitan que el equipo de terreno reciba solo coordenadas y permiten que cada visita tenga una pregunta de validación explícita.
+La estructura única de registro se define en @sec-ficha-tipo-cuenca. Este capítulo aporta la señal analítica; la ficha convierte esa señal en observaciones de terreno comparables mediante el protocolo IEO descrito en @sec-ieo-terreno. Así se evita que el equipo reciba sólo coordenadas y se asegura que cada visita tenga una pregunta de validación explícita.
 
 ## Productos exportados {#sec-productos-jerk}
 

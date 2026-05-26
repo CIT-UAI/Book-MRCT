@@ -280,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Este capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico.</p>
+<p>Este capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico: la selección nace en <a href="jerk.html#sec-diez-cuencas-jerk" class="quarto-xref"><span>Section 12.8</span></a> y <a href="jerk.html#sec-terminales-h2-jerk" class="quarto-xref"><span>Section 12.10</span></a>, la campaña se organiza en <a href="planificacion_terreno.html#sec-decision-cuencas-finales" class="quarto-xref"><span>Section 13.2</span></a>, el registro se levanta con <a href="fichas_cuencas.html#sec-ficha-tipo-cuenca" class="quarto-xref"><span>Section 15.2</span></a> y los resultados se consolidan en <a href="resultados_terreno.html#sec-resultados-por-cuenca-terreno" class="quarto-xref"><span>Section 16.3</span></a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -296,7 +296,7 @@ Objetivo
 </div>
 <section id="sec-tabla-validacion-mrct-terreno" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="sec-tabla-validacion-mrct-terreno"><span class="header-section-number">17.1</span> Tabla de validación</h2>
-<p>La evidencia de terreno debe integrarse como una tabla por cuenca visitada:</p>
+<p>La evidencia de terreno debe integrarse como una tabla por cuenca visitada. La tabla agrega la planilla de <a href="fichas_cuencas.html#sec-variables-obligatorias-fichas" class="quarto-xref"><span>Section 15.1</span></a> y no reemplaza el archivo original de terreno.</p>
 <div id="tbl-validacion-mrct-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-validacion-mrct-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -336,24 +336,40 @@ Table&nbsp;17.1: Variables sugeridas para integrar terreno y MRCT.
 <td>Número de fotografías útiles.</td>
 </tr>
 <tr class="even">
-<td><code>temp_air_c</code></td>
-<td>Temperatura ambiente.</td>
+<td><code>wind_kmh</code></td>
+<td>Viento registrado en la ficha.</td>
 </tr>
 <tr class="odd">
-<td><code>humidity_pct</code></td>
-<td>Humedad relativa.</td>
+<td><code>cloud_pct</code></td>
+<td>Nubosidad registrada en la ficha.</td>
 </tr>
 <tr class="even">
-<td><code>water_present</code></td>
-<td>Presencia de agua visible.</td>
+<td><code>temp_amb_c</code></td>
+<td>Temperatura ambiente registrada como <code>Temp_AmbC</code>.</td>
 </tr>
 <tr class="odd">
-<td><code>snow_present</code></td>
-<td>Presencia de nieve o hielo visible.</td>
+<td><code>ieo_mean</code></td>
+<td>Promedio de IEO de los puntos de muestreo.</td>
 </tr>
 <tr class="even">
+<td><code>water_snow_notes</code></td>
+<td>Evidencia de agua visible, nieve o hielo descrita en observaciones breves.</td>
+</tr>
+<tr class="odd">
 <td><code>visible_disturbance</code></td>
-<td>Perturbación visible registrada.</td>
+<td>Perturbación visible registrada en observaciones y fotografías.</td>
+</tr>
+<tr class="even">
+<td><code>res_model</code></td>
+<td><code>RES</code> modelo precargado en la ficha.</td>
+</tr>
+<tr class="odd">
+<td><code>jerk_model</code></td>
+<td>Jerk modelo precargado en la ficha.</td>
+</tr>
+<tr class="even">
+<td><code>trajectory_type</code></td>
+<td>Tipo de trayectoria precargada en la ficha.</td>
 </tr>
 <tr class="odd">
 <td><code>mrct_consistency</code></td>
@@ -420,7 +436,7 @@ Table&nbsp;17.2: Criterios para clasificar consistencia entre MRCT y terreno.
 </section>
 <section id="sec-discrepancias-mrct-terreno" class="level2" data-number="17.3">
 <h2 data-number="17.3" class="anchored" data-anchor-id="sec-discrepancias-mrct-terreno"><span class="header-section-number">17.3</span> Lectura de discrepancias</h2>
-<p>Una discrepancia no debe interpretarse automáticamente como error. Puede deberse a:</p>
+<p>Una discrepancia no debe interpretarse automáticamente como error. Debe revisarse contra la ficha original (<a href="fichas_cuencas.html#sec-ficha-tipo-cuenca" class="quarto-xref"><span>Section 15.2</span></a>), los resultados por cuenca (<a href="resultados_terreno.html#sec-resultados-por-cuenca-terreno" class="quarto-xref"><span>Section 16.3</span></a>) y los antecedentes del análisis de jerk (<a href="jerk.html#sec-criterio-jerk" class="quarto-xref"><span>Section 12.2</span></a>). Puede deberse a:</p>
 <ul>
 <li>diferencia entre fecha de imagen satelital y fecha de visita;</li>
 <li>heterogeneidad interna de la cuenca;</li>

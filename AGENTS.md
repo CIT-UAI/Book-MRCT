@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [book-mrct] recent context, 2026-05-14 4:34pm GMT-4
+# [book-mrct] recent context, 2026-05-26 1:19pm GMT-4
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 42 obs (19,718t read) | 621,223t work | 97% savings
+Stats: 49 obs (22,679t read) | 1,098,159t work | 98% savings
 
 ### May 5, 2026
 70 6:07p ⚖️ MRCT Digital Book — intro.qmd Editorial Revision Requested
@@ -57,6 +57,16 @@ Stats: 42 obs (19,718t read) | 621,223t work | 97% savings
 ### May 14, 2026
 212 4:29p ⚖️ MRCT Presentation Planning — 30-Min Keynote Structure Requested
 213 4:32p ⚖️ MRCT Presentation Planning — 30-min Keynote Structure Requested
+214 4:34p ⚖️ MRCT Presentation Planning — 30-min Keynote Markdown Requested
+215 4:36p 🔵 MRCT book-mrct Image Asset Inventory Confirmed
+217 4:37p 🟣 MRCT 30-Min Presentation Plan Created — keynote/planificacion_presentacion_mrct.md
+### May 26, 2026
+264 12:17p ⚖️ MRCT Digital Book — "Trabajo en Terreno" Update Scope Defined from New Direction Documents
+265 12:18p ⚖️ MRCT Digital Book — "Trabajo en Terreno" Section Update Scoped from New Reference Documents
+266 12:19p ⚖️ MRCT Digital Book — "Trabajo en Terreno" Section Update Planned from New Directorate Documents
+S233 MRCT Digital Book — "Trabajo en Terreno" Section Update Planned from New Directorate Documents (May 26 at 12:19 PM)
+267 12:30p ⚖️ MRCT Digital Book — planificacion_terreno.qmd Content Based on Informe_Logistico_Operativo.pdf
+S234 MRCT Digital Book — planificacion_terreno.qmd Content Based on Informe_Logistico_Operativo.pdf (May 26 at 12:30 PM)
 
-Access 621k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 1098k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>

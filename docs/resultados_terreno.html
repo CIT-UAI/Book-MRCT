@@ -281,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Este capítulo queda reservado para documentar los resultados de la campaña una vez ejecutada. Debe reunir la evidencia levantada por cuenca, las condiciones de cada jornada y las limitaciones encontradas.</p>
+<p>Este capítulo queda reservado para documentar los resultados de la campaña una vez ejecutada. Debe reunir la evidencia levantada por cuenca, las condiciones de cada jornada y las limitaciones encontradas. La fuente primaria será la ficha definida en <a href="fichas_cuencas.html#sec-ficha-tipo-cuenca" class="quarto-xref"><span>Section 15.2</span></a>, levantada bajo el protocolo de <a href="protocolo_levantamiento.html#sec-ieo-terreno" class="quarto-xref"><span>Section 14.2</span></a> y revisada con el control de completitud de <a href="protocolo_levantamiento.html#sec-control-completitud-terreno" class="quarto-xref"><span>Section 14.7</span></a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -360,7 +360,8 @@ Table&nbsp;16.1: Plantilla de bitácora de jornadas de terreno.
 <li>coordenada observada;</li>
 <li>fotografías disponibles;</li>
 <li>vuelo de dron completo, parcial o suspendido;</li>
-<li>mediciones ambientales;</li>
+<li>condiciones ambientales registradas en la ficha;</li>
+<li>IEO calculado por punto y promedio de cuenca;</li>
 <li>observaciones ecológicas principales;</li>
 <li>problemas de acceso o representatividad;</li>
 <li>consistencia preliminar con la señal MRCT.</li>
@@ -368,7 +369,7 @@ Table&nbsp;16.1: Plantilla de bitácora de jornadas de terreno.
 </section>
 <section id="sec-sintesis-mediciones-terreno" class="level2" data-number="16.4">
 <h2 data-number="16.4" class="anchored" data-anchor-id="sec-sintesis-mediciones-terreno"><span class="header-section-number">16.4</span> Síntesis de mediciones</h2>
-<p>La tabla de mediciones deberá consolidar:</p>
+<p>La tabla de mediciones deberá consolidar las mismas variables de la planilla de <a href="fichas_cuencas.html#sec-variables-obligatorias-fichas" class="quarto-xref"><span>Section 15.1</span></a>, evitando crear campos paralelos que no existan en la ficha:</p>
 <div id="tbl-sintesis-mediciones-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sintesis-mediciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -377,23 +378,25 @@ Table&nbsp;16.2: Plantilla de síntesis de mediciones de terreno.
 <div aria-describedby="tbl-sintesis-mediciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 11%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: right;"><code>RID</code></th>
 <th>Fecha</th>
-<th style="text-align: right;">Temperatura aire</th>
-<th style="text-align: right;">Humedad relativa</th>
-<th>Agua visible</th>
-<th>Nieve visible</th>
+<th style="text-align: right;">Viento km/h</th>
+<th style="text-align: right;">Nubosidad %</th>
+<th style="text-align: right;"><code>Temp_AmbC</code></th>
+<th style="text-align: right;">IEO promedio</th>
+<th>Agua/nieve en observaciones</th>
 <th>Vuelo dron</th>
 <th>Estado ficha</th>
 </tr>
@@ -404,7 +407,8 @@ Table&nbsp;16.2: Plantilla de síntesis de mediciones de terreno.
 <td>Por definir</td>
 <td style="text-align: right;">Por definir</td>
 <td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
+<td style="text-align: right;">Por definir</td>
+<td style="text-align: right;">Por definir</td>
 <td>Por definir</td>
 <td>Por definir</td>
 <td>Por definir</td>
@@ -417,7 +421,7 @@ Table&nbsp;16.2: Plantilla de síntesis de mediciones de terreno.
 </section>
 <section id="sec-registro-fotografico-resultados" class="level2" data-number="16.5">
 <h2 data-number="16.5" class="anchored" data-anchor-id="sec-registro-fotografico-resultados"><span class="header-section-number">16.5</span> Registro fotográfico</h2>
-<p>Esta sección debe incorporar una selección curada de fotografías y capturas de dron. No debe incluir todo el repositorio visual, sino ejemplos que expliquen condiciones observadas y diferencias entre cuencas.</p>
+<p>Esta sección debe incorporar una selección curada de fotografías y capturas de dron registradas con la nomenclatura definida en <a href="protocolo_levantamiento.html#sec-registro-fotografico-terrestre" class="quarto-xref"><span>Section 14.3</span></a> y <a href="protocolo_levantamiento.html#sec-vuelos-dron-terreno" class="quarto-xref"><span>Section 14.4</span></a>. No debe incluir todo el repositorio visual, sino ejemplos que expliquen condiciones observadas y diferencias entre cuencas.</p>
 </section>
 <section id="sec-limitaciones-campana-terreno" class="level2" data-number="16.6">
 <h2 data-number="16.6" class="anchored" data-anchor-id="sec-limitaciones-campana-terreno"><span class="header-section-number">16.6</span> Limitaciones de campaña</h2>
@@ -432,6 +436,7 @@ Table&nbsp;16.2: Plantilla de síntesis de mediciones de terreno.
 <li>puntos poco representativos;</li>
 <li>restricciones de permiso o seguridad.</li>
 </ul>
+<p>Estas limitaciones alimentan directamente la clasificación de consistencia o no evaluabilidad definida en <a href="integracion_validacion.html#sec-criterios-consistencia-mrct" class="quarto-xref"><span>Section 17.2</span></a>.</p>
 
 
 </section>

@@ -336,7 +336,7 @@ window.Quarto = {
 </header>
 
 
-<p>Este capítulo actualiza la selección de cuencas candidatas para trabajo de terreno a partir de la nueva versión del notebook <code>MRCT_Cuencas_Prioritarias_Jerk.ipynb</code>. El análisis usa el <strong>jerk</strong> de la Matriz de Resiliencia Climática Territorial para detectar cambios abruptos en la trayectoria ecosistémica y concentra la priorización en el entorno operacional de Punta Arenas.</p>
+<p>Este capítulo actualiza la selección de cuencas candidatas para trabajo de terreno mediante el análisis de <strong>jerk</strong> de la Matriz de Resiliencia Climática Territorial. El objetivo es detectar cambios abruptos en la trayectoria ecosistémica y concentrar la priorización en el entorno operacional de Punta Arenas.</p>
 <p>La versión actual incorpora una mejora importante: además de seleccionar cuencas para validación general, agrega zonas de búsqueda asociadas a <strong>puertos y terminales estratégicos para hidrógeno verde</strong>. Esta capa permite observar cuencas próximas a infraestructura relevante para la transformación energética regional, donde eventuales nuevas intervenciones podrían interactuar con condiciones ecosistémicas ya inestables.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1488,59 +1488,8 @@ Figure&nbsp;12.10: Cuencas con jerk elevado en buffers de 50 km alrededor de ter
 </section>
 <section id="sec-fichas-jerk" class="level2" data-number="12.12">
 <h2 data-number="12.12" class="anchored" data-anchor-id="sec-fichas-jerk"><span class="header-section-number">12.12</span> Fichas de terreno derivadas</h2>
-<p>Cada cuenca que avance a terreno debe tener una ficha técnica. La base generada permite poblar automáticamente buena parte de esa ficha.</p>
-<div id="tbl-ficha-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ficha-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.13: Contenido sugerido para fichas de terreno derivadas del ranking de jerk.
-</figcaption>
-<div aria-describedby="tbl-ficha-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Bloque de ficha</th>
-<th>Campos sugeridos</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Identificación</td>
-<td><code>RID</code>, comuna, prioridad, año crítico, tipo de evento.</td>
-</tr>
-<tr class="even">
-<td>Señal MRCT</td>
-<td><code>Jerk</code>, percentil anual, <code>RES</code>, <code>RES_STATE</code>, <code>RES_TYPE</code>, <code>Domain</code>, <code>Velocidad</code>, <code>Aceleracion</code>, <code>SENS</code>, <code>Domain_local</code>.</td>
-</tr>
-<tr class="odd">
-<td>Ubicación</td>
-<td>centroide, distancia a Punta Arenas, anillo, mapa de detalle, ruta preliminar.</td>
-</tr>
-<tr class="even">
-<td>Contexto H2</td>
-<td>terminal cercano, distancia al terminal, pertenencia a buffer de 50 km, ranking por terminal.</td>
-</tr>
-<tr class="odd">
-<td>Pregunta de terreno</td>
-<td>Qué condición debería observarse según la señal: intensificación, reversión, baja resiliencia o contraste local.</td>
-</tr>
-<tr class="even">
-<td>Observaciones requeridas</td>
-<td>fotografías, dron, temperatura, humedad, agua visible, nieve, cobertura, perturbación, accesibilidad.</td>
-</tr>
-<tr class="odd">
-<td>Estado de validación</td>
-<td>consistente, parcialmente consistente, no consistente o no evaluable.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p>Estas fichas son el puente entre análisis y campaña. Evitan que el equipo de terreno reciba solo coordenadas y permiten que cada visita tenga una pregunta de validación explícita.</p>
+<p>Cada cuenca que avance a terreno debe transformarse en una ficha operativa. La base generada por este análisis permite precargar <code>RID</code>, comuna, año crítico, tipo de evento, Jerk, <code>RES</code>, coordenadas, distancia a Punta Arenas y contexto H2V cuando corresponda.</p>
+<p>La estructura única de registro se define en <a href="fichas_cuencas.html#sec-ficha-tipo-cuenca" class="quarto-xref"><span>Section 15.2</span></a>. Este capítulo aporta la señal analítica; la ficha convierte esa señal en observaciones de terreno comparables mediante el protocolo IEO descrito en <a href="protocolo_levantamiento.html#sec-ieo-terreno" class="quarto-xref"><span>Section 14.2</span></a>. Así se evita que el equipo reciba sólo coordenadas y se asegura que cada visita tenga una pregunta de validación explícita.</p>
 </section>
 <section id="sec-productos-jerk" class="level2" data-number="12.13">
 <h2 data-number="12.13" class="anchored" data-anchor-id="sec-productos-jerk"><span class="header-section-number">12.13</span> Productos exportados</h2>
@@ -1548,7 +1497,7 @@ Table&nbsp;12.13: Contenido sugerido para fichas de terreno derivadas del rankin
 <div id="tbl-productos-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-productos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;12.14: Productos exportados por el notebook actualizado.
+Table&nbsp;12.13: Productos exportados por el notebook actualizado.
 </figcaption>
 <div aria-describedby="tbl-productos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
