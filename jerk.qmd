@@ -42,11 +42,11 @@ En términos operativos, el jerk identifica una ruptura en la dinámica. Un valo
 %%| label: fig-derivadas-jerk
 %%| fig-cap: "Derivadas temporales usadas para interpretar cambios abruptos en la trayectoria ecosistémica."
 flowchart TB
-  D["Domain (D)<br/>Distancia al <br/>estado de referencia"] --> V["Velocidad (dD/dt)<br/>Direccion y ritmo del cambio"]
-  V --> A["Aceleracion (d2D/dt2)<br/>Cambio en el ritmo"]
-  A --> J["Jerk (d3D/dt3)<br/>Cambio abrupto en la aceleracion"]
-  J --> I["J > 0<br/>Intensificacion"]
-  J --> R["J < 0<br/>Reversion"]
+  D["Domain (D)<br/>Distancia al <br/>estado de referencia"] --> V["Velocidad (dD/dt)<br/>Dirección y ritmo del cambio"]
+  V --> A["Aceleración (d2D/dt2)<br/>Cambio en el ritmo"]
+  A --> J["Jerk (d3D/dt3)<br/>Cambio abrupto <br/>en la aceleración"]
+  J --> I["J > 0<br/>Intensificación"]
+  J --> R["J < 0<br/>Reversión"]
 ```
 
 El signo entrega una primera lectura:
@@ -79,16 +79,16 @@ La geometría fue transformada al sistema EPSG:32719, que permite trabajar en co
 %%| label: fig-flujo-base-jerk
 %%| fig-cap: "Flujo lineal de construcción de la base analítica y productos de priorización."
 flowchart TB
-  config["Configuracion<br/>rutas, coordenadas  <br/>y parametros"] --> data["Datos<br/>MRCT y cuencas"]
-  data --> parquet["Parquet<br/>lectura rapida"]
-  parquet --> duck["DuckDB<br/>base analitica local"]
+  config["Configuración<br/>rutas, coordenadas  <br/>y parámetros"] --> data["Datos<br/>MRCT y cuencas"]
+  data --> parquet["Parquet<br/>lectura rápida"]
+  parquet --> duck["DuckDB<br/>base analítica local"]
   duck --> qc["Control de calidad<br/>cobertura y clases"]
   qc --> events["Eventos de jerk<br/>percentiles anual y global"]
   events --> buffer["Buffer PA<br/>radio adaptativo"]
   buffer --> score["P_score<br/>puntaje compuesto"]
   score --> top10["10 cuencas<br/>prioritarias"]
   top10 --> terminals["Terminales H2<br/>buffers de 50 km"]
-  terminals --> export["Exportacion<br/>Excel, SHP y DuckDB"]
+  terminals --> export["Exportación<br/>Excel, SHP y DuckDB"]
 ```
 
 La base DuckDB queda organizada en seis tablas:

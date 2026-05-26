@@ -383,11 +383,11 @@ Alcance de la selección
 <div aria-describedby="fig-derivadas-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-derivadas-jerk">flowchart TB
-  D["Domain (D)&lt;br/&gt;Distancia al &lt;br/&gt;estado de referencia"] --&gt; V["Velocidad (dD/dt)&lt;br/&gt;Direccion y ritmo del cambio"]
-  V --&gt; A["Aceleracion (d2D/dt2)&lt;br/&gt;Cambio en el ritmo"]
-  A --&gt; J["Jerk (d3D/dt3)&lt;br/&gt;Cambio abrupto en la aceleracion"]
-  J --&gt; I["J &gt; 0&lt;br/&gt;Intensificacion"]
-  J --&gt; R["J &lt; 0&lt;br/&gt;Reversion"]
+  D["Domain (D)&lt;br/&gt;Distancia al &lt;br/&gt;estado de referencia"] --&gt; V["Velocidad (dD/dt)&lt;br/&gt;Dirección y ritmo del cambio"]
+  V --&gt; A["Aceleración (d2D/dt2)&lt;br/&gt;Cambio en el ritmo"]
+  A --&gt; J["Jerk (d3D/dt3)&lt;br/&gt;Cambio abrupto &lt;br/&gt;en la aceleración"]
+  J --&gt; I["J &gt; 0&lt;br/&gt;Intensificación"]
+  J --&gt; R["J &lt; 0&lt;br/&gt;Reversión"]
 </pre>
 </div>
 </div>
@@ -483,16 +483,16 @@ Table&nbsp;12.2: Insumos principales del análisis de cuencas prioritarias por j
 <div aria-describedby="fig-flujo-base-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-flujo-base-jerk">flowchart TB
-  config["Configuracion&lt;br/&gt;rutas, coordenadas  &lt;br/&gt;y parametros"] --&gt; data["Datos&lt;br/&gt;MRCT y cuencas"]
-  data --&gt; parquet["Parquet&lt;br/&gt;lectura rapida"]
-  parquet --&gt; duck["DuckDB&lt;br/&gt;base analitica local"]
+  config["Configuración&lt;br/&gt;rutas, coordenadas  &lt;br/&gt;y parámetros"] --&gt; data["Datos&lt;br/&gt;MRCT y cuencas"]
+  data --&gt; parquet["Parquet&lt;br/&gt;lectura rápida"]
+  parquet --&gt; duck["DuckDB&lt;br/&gt;base analítica local"]
   duck --&gt; qc["Control de calidad&lt;br/&gt;cobertura y clases"]
   qc --&gt; events["Eventos de jerk&lt;br/&gt;percentiles anual y global"]
   events --&gt; buffer["Buffer PA&lt;br/&gt;radio adaptativo"]
   buffer --&gt; score["P_score&lt;br/&gt;puntaje compuesto"]
   score --&gt; top10["10 cuencas&lt;br/&gt;prioritarias"]
   top10 --&gt; terminals["Terminales H2&lt;br/&gt;buffers de 50 km"]
-  terminals --&gt; export["Exportacion&lt;br/&gt;Excel, SHP y DuckDB"]
+  terminals --&gt; export["Exportación&lt;br/&gt;Excel, SHP y DuckDB"]
 </pre>
 </div>
 </div>
