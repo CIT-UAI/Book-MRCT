@@ -56,6 +56,19 @@ Desktop.ini
 .vscode/
 
 # =============================================================
+# Local AI agent instructions and state
+# =============================================================
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+CODEX.md
+.claude/
+.agents/
+.codex/
+.cursor/
+.continue/
+
+# =============================================================
 # Logs and temporary files
 # =============================================================
 *.log
@@ -68,6 +81,7 @@ Desktop.ini
 # Large local data or generated analysis artifacts
 # =============================================================
 data/
+R/
 jupyter-notebook/
 keynote/
 outputs/
