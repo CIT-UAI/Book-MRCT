@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: docs
+  resources:
+    - data/maps/mapa_web_cuencas_terreno.html
 
 
 book:
@@ -36,9 +38,14 @@ book:
     - part: trabajo_terreno.qmd
       chapters:
       - jerk.qmd
-      - planificacion_terreno.qmd
+      - cuencas_seleccionadas.qmd
+      - logistica.qmd
+      - condiciones_terreno.qmd
+      - equipamiento.qmd
+      # - planificacion_terreno.qmd
       - protocolo_levantamiento.qmd
       - fichas_cuencas.qmd
+      - vuelo_drone.qmd
       - resultados_terreno.qmd
       - integracion_validacion.qmd
     # - proyectos.qmd

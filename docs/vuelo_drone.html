@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Sensibilidad del Sistema – Guía Técnica MRCT</title>
+<title>19&nbsp; Planificación Vuelos Drone – Guía Técnica MRCT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pt_resiliencia.html" rel="next">
-<link href="./integracion_espacial.html" rel="prev">
+<link href="./resultados_terreno.html" rel="next">
+<link href="./fichas_cuencas.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -69,53 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -129,7 +83,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sensibilidad.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./vuelo_drone.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -204,7 +158,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sensibilidad.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sensibilidad.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></span></a>
   </div>
 </li>
@@ -279,7 +233,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vuelo_drone.html" class="sidebar-item-text sidebar-link">
+  <a href="./vuelo_drone.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></span></a>
   </div>
 </li>
@@ -319,24 +273,31 @@ window.Quarto = {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#sec-forzantes-climaticos" id="toc-sec-forzantes-climaticos" class="nav-link active" data-scroll-target="#sec-forzantes-climaticos"><span class="header-section-number">8.1</span> Forzantes climáticos usados</a></li>
-  <li><a href="#sec-normalizacion-sensibilidad" id="toc-sec-normalizacion-sensibilidad" class="nav-link" data-scroll-target="#sec-normalizacion-sensibilidad"><span class="header-section-number">8.2</span> Normalización por cuenca</a></li>
-  <li><a href="#sec-modelo-sensibilidad" id="toc-sec-modelo-sensibilidad" class="nav-link" data-scroll-target="#sec-modelo-sensibilidad"><span class="header-section-number">8.3</span> Modelo de sensibilidad</a></li>
-  <li><a href="#sec-sens" id="toc-sec-sens" class="nav-link" data-scroll-target="#sec-sens"><span class="header-section-number">8.4</span> Índice SENS</a></li>
-  <li><a href="#sec-interpretacion-sensibilidad" id="toc-sec-interpretacion-sensibilidad" class="nav-link" data-scroll-target="#sec-interpretacion-sensibilidad"><span class="header-section-number">8.5</span> Interpretación</a></li>
-  <li><a href="#sec-sens-pt" id="toc-sec-sens-pt" class="nav-link" data-scroll-target="#sec-sens-pt"><span class="header-section-number">8.6</span> Uso dentro del Potencial de Transición</a></li>
-  <li><a href="#sec-diagrama-sensibilidad" id="toc-sec-diagrama-sensibilidad" class="nav-link" data-scroll-target="#sec-diagrama-sensibilidad"><span class="header-section-number">8.7</span> Diagrama de sensibilidad</a></li>
-  <li><a href="#sec-productos-sensibilidad" id="toc-sec-productos-sensibilidad" class="nav-link" data-scroll-target="#sec-productos-sensibilidad"><span class="header-section-number">8.8</span> Productos esperados</a></li>
+  <li><a href="#sec-equipo-vuelo-drone" id="toc-sec-equipo-vuelo-drone" class="nav-link active" data-scroll-target="#sec-equipo-vuelo-drone"><span class="header-section-number">19.1</span> Equipo</a></li>
+  <li><a href="#sec-normativa-dgac-drone" id="toc-sec-normativa-dgac-drone" class="nav-link" data-scroll-target="#sec-normativa-dgac-drone"><span class="header-section-number">19.2</span> Normativa DGAC Chile</a></li>
+  <li><a href="#sec-plan-vuelo-por-cuenca" id="toc-sec-plan-vuelo-por-cuenca" class="nav-link" data-scroll-target="#sec-plan-vuelo-por-cuenca"><span class="header-section-number">19.3</span> Plan de Vuelo por Cuenca</a>
+  <ul class="collapse">
+  <li><a href="#sec-plan-vuelo-rid-1885" id="toc-sec-plan-vuelo-rid-1885" class="nav-link" data-scroll-target="#sec-plan-vuelo-rid-1885"><span class="header-section-number">19.3.1</span> Cuenca RID 1885</a></li>
+  <li><a href="#sec-plan-vuelo-rid-2205" id="toc-sec-plan-vuelo-rid-2205" class="nav-link" data-scroll-target="#sec-plan-vuelo-rid-2205"><span class="header-section-number">19.3.2</span> Cuenca RID 2205</a></li>
+  <li><a href="#sec-plan-vuelo-rid-4982" id="toc-sec-plan-vuelo-rid-4982" class="nav-link" data-scroll-target="#sec-plan-vuelo-rid-4982"><span class="header-section-number">19.3.3</span> Cuenca RID 4982</a></li>
+  <li><a href="#sec-plan-vuelo-rid-4996" id="toc-sec-plan-vuelo-rid-4996" class="nav-link" data-scroll-target="#sec-plan-vuelo-rid-4996"><span class="header-section-number">19.3.4</span> Cuenca RID 4996</a></li>
+  <li><a href="#sec-plan-vuelo-rid-1886" id="toc-sec-plan-vuelo-rid-1886" class="nav-link" data-scroll-target="#sec-plan-vuelo-rid-1886"><span class="header-section-number">19.3.5</span> Cuenca RID 1886</a></li>
+  </ul></li>
+  <li><a href="#sec-registro-vuelos-realizados" id="toc-sec-registro-vuelos-realizados" class="nav-link" data-scroll-target="#sec-registro-vuelos-realizados"><span class="header-section-number">19.4</span> Registro de Vuelos Realizados</a></li>
+  <li><a href="#sec-condiciones-minimas-vuelo-drone" id="toc-sec-condiciones-minimas-vuelo-drone" class="nav-link" data-scroll-target="#sec-condiciones-minimas-vuelo-drone"><span class="header-section-number">19.5</span> Condiciones Mínimas para Volar</a></li>
+  <li><a href="#sec-checklist-pre-vuelo-drone" id="toc-sec-checklist-pre-vuelo-drone" class="nav-link" data-scroll-target="#sec-checklist-pre-vuelo-drone"><span class="header-section-number">19.6</span> Checklist Pre-Vuelo</a></li>
+  <li><a href="#sec-checklist-post-vuelo-drone" id="toc-sec-checklist-post-vuelo-drone" class="nav-link" data-scroll-target="#sec-checklist-post-vuelo-drone"><span class="header-section-number">19.7</span> Checklist Post-Vuelo</a></li>
+  <li><a href="#sec-nomenclatura-archivos-drone" id="toc-sec-nomenclatura-archivos-drone" class="nav-link" data-scroll-target="#sec-nomenclatura-archivos-drone"><span class="header-section-number">19.8</span> Nomenclatura de Archivos</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./vuelo_drone.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></h1>
-<p class="subtitle lead">Respuesta del dominio ecosistémico a forzantes climáticos</p>
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></h1>
+<p class="subtitle lead">Orientación operativa para Terreno Magallanes 2026</p>
 </div>
 
 
@@ -353,30 +314,92 @@ window.Quarto = {
 </header>
 
 
-<p>Después de incorporar el contexto espacial, el modelo mide una propiedad distinta: la sensibilidad del sistema. Ya no se pregunta solo qué tan lejos está una cuenca de su dominio de referencia, ni si esa condición es coherente con sus vecinas. La pregunta ahora es cuánto responde esa distancia cuando cambian forzantes persistentes del ambiente físico.</p>
-<p>En la MRCT, la sensibilidad climática resume la relación entre el dominio ecosistémico y tres variables de presión: aridez, albedo y temperatura de brillo. Estas variables no forman parte del dominio estructural de referencia, porque no describen directamente la composición ecológica de la cuenca. En cambio, se usan para estimar qué tan reactivo es el estado ecosistémico frente a condiciones ambientales más secas, más reflectantes o térmicamente más exigentes.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>Esta página orienta el uso del dron durante la campaña Terreno Magallanes 2026. Su función es ordenar la planificación previa, la evaluación de condiciones mínimas, el registro de vuelos realizados y la trazabilidad de archivos asociados a cada cuenca. Debe usarse junto con la ficha de cuenca de <a href="fichas_cuencas.html#sec-ficha-tipo-cuenca" class="quarto-xref"><span>Section 18.2</span></a>, el protocolo de vuelos de <a href="protocolo_levantamiento.html#sec-vuelos-dron-terreno" class="quarto-xref"><span>Section 17.7</span></a> y el checklist de equipamiento de <a href="equipamiento.html#sec-drone-equipamiento-terreno" class="quarto-xref"><span>Section 16.2</span></a>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Para tomadores de decisión
+Criterio de seguridad
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Dos cuencas pueden estar igual de alejadas de su línea base, pero no responder igual ante un año seco o cálido. Una puede cambiar poco porque su estructura amortigua la presión; otra puede desplazarse fuertemente ante el mismo estímulo. La sensibilidad permite reconocer territorios donde una presión climática persistente tiene mayor capacidad de empujar al sistema fuera de su régimen habitual.</p>
+<p>El vuelo se realiza sólo si la zona está habilitada, el viento permite control seguro, existe visibilidad suficiente y el piloto mantiene línea visual directa. Ante duda normativa, climática o de seguridad, se cancela el vuelo y se registra la causa en la ficha de terreno.</p>
 </div>
 </div>
-<section id="sec-forzantes-climaticos" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sec-forzantes-climaticos"><span class="header-section-number">8.1</span> Forzantes climáticos usados</h2>
-<p>La sensibilidad se estima a partir de tres variables anuales:</p>
-<div id="tbl-forzantes-sensibilidad" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sec-equipo-vuelo-drone" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="sec-equipo-vuelo-drone"><span class="header-section-number">19.1</span> Equipo</h2>
+<div id="tbl-equipo-vuelo-drone" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-forzantes-sensibilidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;8.1: Forzantes usados para estimar sensibilidad climática.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-equipo-vuelo-drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.1: Equipo base para vuelos de dron en terreno.
 </figcaption>
-<div aria-describedby="tbl-forzantes-sensibilidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-equipo-vuelo-drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modelo</td>
+<td>DJI Mini 3</td>
+</tr>
+<tr class="even">
+<td>Peso</td>
+<td>249 g</td>
+</tr>
+<tr class="odd">
+<td>Baterías disponibles</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Autonomía por batería</td>
+<td>~38 min en condiciones normales</td>
+</tr>
+<tr class="odd">
+<td>Autonomía en frío (&lt; 5°C)</td>
+<td>~25-30 min estimado</td>
+</tr>
+<tr class="even">
+<td>Resolución foto</td>
+<td>12 MP</td>
+</tr>
+<tr class="odd">
+<td>Resolución video</td>
+<td>4K 30 fps</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Baterías en frío
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A temperatura bajo 0°C, precalentar baterías en bolsillo interno o bolso térmico al menos 10 min antes de cada vuelo. No despegar con batería fría si la app DJI Fly muestra advertencia de temperatura o rendimiento.</p>
+</div>
+</div>
+</section>
+<section id="sec-normativa-dgac-drone" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="sec-normativa-dgac-drone"><span class="header-section-number">19.2</span> Normativa DGAC Chile</h2>
+<p>La tabla siguiente funciona como control operativo previo. Debe actualizarse con la normativa vigente de DGAC Chile, las restricciones activas en DJI Fly y las autorizaciones específicas del sitio.</p>
+<div id="tbl-normativa-dgac-drone" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-normativa-dgac-drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.2: Control normativo preliminar para vuelos de dron.
+</figcaption>
+<div aria-describedby="tbl-normativa-dgac-drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -385,146 +408,573 @@ Table&nbsp;8.1: Forzantes usados para estimar sensibilidad climática.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Variable</th>
-<th>Nombre</th>
-<th>Rol en la sensibilidad</th>
+<th>Requisito</th>
+<th>Estado</th>
+<th>Observación</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>IA</td>
-<td>Índice de aridez</td>
-<td>Representa condiciones de estrés hídrico relativo.</td>
+<td>Registro operador drone</td>
+<td>☐ Verificar</td>
+<td>DJI Mini 3 (&lt; 250 g): confirmar si aplica exención o registro según uso y zona de operación.</td>
 </tr>
 <tr class="even">
-<td>ALB</td>
-<td>Albedo</td>
-<td>Resume cambios en la reflectancia superficial y en el balance radiativo.</td>
+<td>Autorización zonas especiales</td>
+<td>☐ Verificar</td>
+<td>Magallanes: revisar parques nacionales, áreas CONAF, predios privados y zonas con restricción local.</td>
 </tr>
 <tr class="odd">
-<td>TB</td>
-<td>Temperatura de brillo</td>
-<td>Aproxima la señal térmica superficial observada por Landsat.</td>
+<td>Seguro responsabilidad civil</td>
+<td>☐ Verificar</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Distancia mínima aeropuertos</td>
+<td>☐ Verificar</td>
+<td>Verificar radio y restricciones asociadas al Aeropuerto Presidente Carlos Ibáñez del Campo y aeródromos cercanos.</td>
+</tr>
+<tr class="odd">
+<td>Horario vuelo</td>
+<td>Sólo diurno</td>
+<td>Amanecer-anochecer, con visibilidad suficiente.</td>
+</tr>
+<tr class="even">
+<td>Altura máxima</td>
+<td>120 m AGL</td>
+<td>Mantener límite operativo salvo autorización especial aplicable.</td>
+</tr>
+<tr class="odd">
+<td>Zonas prohibidas</td>
+<td>☐ Verificar</td>
+<td>Áreas militares, infraestructura crítica, CONAF, parques, aeródromos y restricciones temporales.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Estas variables se interpretan como presiones o condiciones externas al vector estructural principal. IA captura aridez relativa; ALB registra cambios en la energía reflejada por la superficie; TB representa la señal térmica anual. En conjunto, describen dimensiones del ambiente físico que pueden modificar la posición de una cuenca en el espacio de estados.</p>
-<p>La variable de respuesta es el dominio global:</p>
-<p><span class="math display">
-D_{i,t}
-</span></p>
-<p>donde <span class="math inline">i</span> identifica la cuenca y <span class="math inline">t</span> el año. Usar <span class="math inline">D</span> como respuesta tiene una ventaja metodológica: la sensibilidad se estima sobre el desplazamiento del sistema completo, no sobre un indicador aislado. Así, una respuesta alta significa que la estructura ecosistémica integrada de la cuenca cambia cuando cambian los forzantes.</p>
-</section>
-<section id="sec-normalizacion-sensibilidad" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-normalizacion-sensibilidad"><span class="header-section-number">8.2</span> Normalización por cuenca</h2>
-<p>Antes de ajustar el modelo, IA, ALB y TB se estandarizan dentro de cada cuenca. Para cada forzante <span class="math inline">z \in \{\text{IA}, \text{ALB}, \text{TB}\}</span> se calcula:</p>
-<p><span class="math display">
-\tilde{z}_{i,t} =
-\frac{z_{i,t} - \bar{z}_i}{s_{z,i}}
-</span></p>
-<p>donde <span class="math inline">\bar{z}_i</span> es la media temporal del forzante en la cuenca <span class="math inline">i</span> y <span class="math inline">s_{z,i}</span> es su desviación estándar temporal. Si la desviación estándar es menor que <span class="math inline">10^{-6}</span>, se reemplaza por 1 para evitar divisiones inestables.</p>
-<p>Esta normalización cumple dos funciones. Primero, pone los tres forzantes en unidades comparables, de modo que el tamaño de los coeficientes no dependa de la escala original de cada variable. Segundo, hace que la sensibilidad sea propia de cada cuenca: se mide cómo responde la cuenca frente a variaciones respecto de su propio rango histórico observado.</p>
-</section>
-<section id="sec-modelo-sensibilidad" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="sec-modelo-sensibilidad"><span class="header-section-number">8.3</span> Modelo de sensibilidad</h2>
-<p>Para cada cuenca se ajusta una regresión lineal múltiple entre el dominio global y los tres forzantes estandarizados:</p>
-<p><span class="math display">
-D_{i,t} =
-\beta_{0,i}
-+ \beta_{\text{IA},i}\tilde{\text{IA}}_{i,t}
-+ \beta_{\text{ALB},i}\tilde{\text{ALB}}_{i,t}
-+ \beta_{\text{TB},i}\tilde{\text{TB}}_{i,t}
-+ \varepsilon_{i,t}
-</span></p>
-<p>El intercepto <span class="math inline">\beta_{0,i}</span> representa el nivel medio esperado de <span class="math inline">D</span> para la cuenca cuando los forzantes están en su valor medio estandarizado. Los coeficientes <span class="math inline">\beta_{\text{IA},i}</span>, <span class="math inline">\beta_{\text{ALB},i}</span> y <span class="math inline">\beta_{\text{TB},i}</span> indican cuánto cambia <span class="math inline">D</span> ante una variación de una desviación estándar en cada forzante, manteniendo los otros constantes.</p>
-<p>El ajuste se realiza con mínimos cuadrados ordinarios usando solo observaciones finitas. Si una cuenca tiene menos de cuatro años válidos, la sensibilidad no se estima y queda en cero por defecto en la implementación. Esta regla evita ajustar un modelo con menos información que los parámetros necesarios para representar intercepto y tres coeficientes.</p>
-</section>
-<section id="sec-sens" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="sec-sens"><span class="header-section-number">8.4</span> Índice SENS</h2>
-<p>La sensibilidad climática se resume en un único valor por cuenca:</p>
-<p><span class="math display">
-SENS_i =
-\frac{
-\left\|
-\boldsymbol{\beta}_{1:3,i}
-\right\|_2
-}{
-\sigma_{D,i} + 10^{-9}
-}
-</span></p>
-<p>donde:</p>
-<p><span class="math display">
-\boldsymbol{\beta}_{1:3,i}
-=
-(\beta_{\text{IA},i},\beta_{\text{ALB},i},\beta_{\text{TB},i})
-</span></p>
-<p>y <span class="math inline">\sigma_{D,i}</span> es la desviación estándar temporal del dominio <span class="math inline">D</span> para la cuenca <span class="math inline">i</span>. El término <span class="math inline">10^{-9}</span> evita una división por cero cuando <span class="math inline">D</span> tiene variabilidad prácticamente nula.</p>
-<p>La norma euclidiana <span class="math inline">\|\boldsymbol{\beta}_{1:3,i}\|_2</span> integra la magnitud conjunta de la respuesta frente a los tres forzantes:</p>
-<p><span class="math display">
-\left\|
-\boldsymbol{\beta}_{1:3,i}
-\right\|_2
-=
-\sqrt{
-\beta_{\text{IA},i}^{2}
-+ \beta_{\text{ALB},i}^{2}
-+ \beta_{\text{TB},i}^{2}
-}
-</span></p>
-<p>Dividir por <span class="math inline">\sigma_{D,i}</span> transforma esa magnitud en una medida relativa a la variabilidad propia del dominio de la cuenca. Por eso <span class="math inline">SENS</span> no debe leerse como una unidad física directa, sino como una medida adimensional de reactividad relativa.</p>
-</section>
-<section id="sec-interpretacion-sensibilidad" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="sec-interpretacion-sensibilidad"><span class="header-section-number">8.5</span> Interpretación</h2>
-<p>Una cuenca con <span class="math inline">SENS</span> alto muestra una relación fuerte entre sus cambios de dominio y las variaciones de aridez, albedo y temperatura. En términos prácticos, significa que su estado ecosistémico integrado es más reactivo ante presiones climáticas persistentes.</p>
-<p>Una cuenca con <span class="math inline">SENS</span> bajo no necesariamente está en buen estado. Puede estar degradada, pero no mostrar una relación clara con los forzantes usados. También puede ser una cuenca estable, donde las variaciones de IA, ALB y TB no se traducen en grandes desplazamientos del dominio.</p>
-<p>La lectura correcta combina nivel y sensibilidad. <span class="math inline">D</span> indica posición respecto de la línea base; velocidad indica cambio temporal; <span class="math inline">D_{local}</span> indica coherencia espacial; <span class="math inline">SENS</span> indica cuánto puede amplificarse la trayectoria ante condiciones climáticas. Una cuenca con <span class="math inline">D</span> moderado pero <span class="math inline">SENS</span> alto puede convertirse en prioritaria si además muestra velocidad positiva o se ubica en un entorno local presionado.</p>
-</section>
-<section id="sec-sens-pt" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="sec-sens-pt"><span class="header-section-number">8.6</span> Uso dentro del Potencial de Transición</h2>
-<p>La sensibilidad entra en el Potencial de Transición como un factor de amplificación:</p>
-<p><span class="math display">
-1 + \alpha \cdot SENS_i
-</span></p>
-<p>donde <span class="math inline">\alpha</span> controla el peso de la sensibilidad climática dentro de la síntesis final. Con <span class="math inline">\alpha = 0</span>, el modelo ignora este componente. Con valores mayores, las cuencas más sensibles aumentan su PT incluso si su distancia estructural actual no es extrema.</p>
-<p>Esta forma multiplicativa refleja una idea simple: la sensibilidad no reemplaza al estado ecosistémico, sino que modifica su riesgo de transición. Un sistema alejado, dinámico y sensible acumula mayor potencial de transición que un sistema igualmente alejado pero poco reactivo ante los forzantes climáticos observados.</p>
-</section>
-<section id="sec-diagrama-sensibilidad" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="sec-diagrama-sensibilidad"><span class="header-section-number">8.7</span> Diagrama de sensibilidad</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    A[IA&lt;br/&gt;aridez] --&gt; D[Normalización&lt;br/&gt;por cuenca]
-    B[ALB&lt;br/&gt;albedo] --&gt; D
-    C[TB&lt;br/&gt;temperatura de brillo] --&gt; D
-    D --&gt; E[Regresión anual&lt;br/&gt;Domain ~ IA + ALB + TB]
-    F[Serie temporal&lt;br/&gt;Domain] --&gt; E
-    E --&gt; G[Coeficientes beta&lt;br/&gt;respuesta multivariable]
-    G --&gt; H[SENS&lt;br/&gt;norma beta / sigma Domain]
-    H --&gt; I[Amplificación&lt;br/&gt;del PT]
-</pre>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p></p></figure><p></p>
+<div class="callout-title-container flex-fill">
+Verificación antes de despegar
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consultar el mapa de zonas en DJI Fly antes de cada vuelo. Verificar si la cuenca seleccionada está dentro de zona restringida, parque, área CONAF, zona aeroportuaria, predio privado o área con restricción temporal.</p>
 </div>
 </div>
 </section>
-<section id="sec-productos-sensibilidad" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="sec-productos-sensibilidad"><span class="header-section-number">8.8</span> Productos esperados</h2>
-<p>La etapa de sensibilidad genera un valor <span class="math inline">SENS</span> por cuenca, que puede comunicarse mediante:</p>
-<ul>
-<li>mapa regional de sensibilidad climática;</li>
-<li>distribución de <span class="math inline">SENS</span> para identificar cuencas altamente reactivas;</li>
-<li>tabla de cuencas con mayor sensibilidad;</li>
-<li>gráficos de casos seleccionados entre <span class="math inline">D</span> y los forzantes IA, ALB y TB;</li>
-<li>comparación entre <span class="math inline">SENS</span>, <span class="math inline">D</span>, velocidad y <span class="math inline">D_{local}</span> para priorización integrada.</li>
+<section id="sec-plan-vuelo-por-cuenca" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="sec-plan-vuelo-por-cuenca"><span class="header-section-number">19.3</span> Plan de Vuelo por Cuenca</h2>
+<p>Completar una ficha por cada cuenca con vuelo planificado. El punto de despegue debe elegirse desde un lugar seguro, con visibilidad del dron, distancia prudente a caminos, personas, animales, cables, antenas y superficies inestables.</p>
+<section id="sec-plan-vuelo-rid-1885" class="level3" data-number="19.3.1">
+<h3 data-number="19.3.1" class="anchored" data-anchor-id="sec-plan-vuelo-rid-1885"><span class="header-section-number">19.3.1</span> Cuenca RID 1885</h3>
+<div id="tbl-plan-vuelo-rid-1885" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plan-vuelo-rid-1885-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.3: Plan preliminar de vuelo para cuenca RID 1885.
+</figcaption>
+<div aria-describedby="tbl-plan-vuelo-rid-1885-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fecha vuelo</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Coordenadas punto despegue</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Altitud terreno</td>
+<td><code>pendiente</code> m s.n.m.</td>
+</tr>
+<tr class="even">
+<td>Altura vuelo planificada</td>
+<td><code>pendiente</code> m AGL</td>
+</tr>
+<tr class="odd">
+<td>Tipo vuelo</td>
+<td>Nadir / Oblicuo / 360° / Manual</td>
+</tr>
+<tr class="even">
+<td>Área de cobertura</td>
+<td><code>pendiente</code> ha</td>
+</tr>
+<tr class="odd">
+<td>Duración estimada</td>
+<td><code>pendiente</code> min</td>
+</tr>
+<tr class="even">
+<td>Batería asignada</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Objetivo principal</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Restricciones zona</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Estado</td>
+<td>⏳ Pendiente</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-plan-vuelo-rid-2205" class="level3" data-number="19.3.2">
+<h3 data-number="19.3.2" class="anchored" data-anchor-id="sec-plan-vuelo-rid-2205"><span class="header-section-number">19.3.2</span> Cuenca RID 2205</h3>
+<div id="tbl-plan-vuelo-rid-2205" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plan-vuelo-rid-2205-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.4: Plan preliminar de vuelo para cuenca RID 2205.
+</figcaption>
+<div aria-describedby="tbl-plan-vuelo-rid-2205-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fecha vuelo</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Coordenadas punto despegue</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Altitud terreno</td>
+<td><code>pendiente</code> m s.n.m.</td>
+</tr>
+<tr class="even">
+<td>Altura vuelo planificada</td>
+<td><code>pendiente</code> m AGL</td>
+</tr>
+<tr class="odd">
+<td>Tipo vuelo</td>
+<td>Nadir / Oblicuo / 360° / Manual</td>
+</tr>
+<tr class="even">
+<td>Área de cobertura</td>
+<td><code>pendiente</code> ha</td>
+</tr>
+<tr class="odd">
+<td>Duración estimada</td>
+<td><code>pendiente</code> min</td>
+</tr>
+<tr class="even">
+<td>Batería asignada</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Objetivo principal</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Restricciones zona</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Estado</td>
+<td>⏳ Pendiente</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-plan-vuelo-rid-4982" class="level3" data-number="19.3.3">
+<h3 data-number="19.3.3" class="anchored" data-anchor-id="sec-plan-vuelo-rid-4982"><span class="header-section-number">19.3.3</span> Cuenca RID 4982</h3>
+<div id="tbl-plan-vuelo-rid-4982" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plan-vuelo-rid-4982-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.5: Plan preliminar de vuelo para cuenca RID 4982.
+</figcaption>
+<div aria-describedby="tbl-plan-vuelo-rid-4982-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fecha vuelo</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Coordenadas punto despegue</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Altitud terreno</td>
+<td><code>pendiente</code> m s.n.m.</td>
+</tr>
+<tr class="even">
+<td>Altura vuelo planificada</td>
+<td><code>pendiente</code> m AGL</td>
+</tr>
+<tr class="odd">
+<td>Tipo vuelo</td>
+<td>Nadir / Oblicuo / 360° / Manual</td>
+</tr>
+<tr class="even">
+<td>Área de cobertura</td>
+<td><code>pendiente</code> ha</td>
+</tr>
+<tr class="odd">
+<td>Duración estimada</td>
+<td><code>pendiente</code> min</td>
+</tr>
+<tr class="even">
+<td>Batería asignada</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Objetivo principal</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Restricciones zona</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Estado</td>
+<td>⏳ Pendiente</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-plan-vuelo-rid-4996" class="level3" data-number="19.3.4">
+<h3 data-number="19.3.4" class="anchored" data-anchor-id="sec-plan-vuelo-rid-4996"><span class="header-section-number">19.3.4</span> Cuenca RID 4996</h3>
+<div id="tbl-plan-vuelo-rid-4996" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plan-vuelo-rid-4996-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.6: Plan preliminar de vuelo para cuenca RID 4996.
+</figcaption>
+<div aria-describedby="tbl-plan-vuelo-rid-4996-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fecha vuelo</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Coordenadas punto despegue</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Altitud terreno</td>
+<td><code>pendiente</code> m s.n.m.</td>
+</tr>
+<tr class="even">
+<td>Altura vuelo planificada</td>
+<td><code>pendiente</code> m AGL</td>
+</tr>
+<tr class="odd">
+<td>Tipo vuelo</td>
+<td>Nadir / Oblicuo / 360° / Manual</td>
+</tr>
+<tr class="even">
+<td>Área de cobertura</td>
+<td><code>pendiente</code> ha</td>
+</tr>
+<tr class="odd">
+<td>Duración estimada</td>
+<td><code>pendiente</code> min</td>
+</tr>
+<tr class="even">
+<td>Batería asignada</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Objetivo principal</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Restricciones zona</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Estado</td>
+<td>⏳ Pendiente</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-plan-vuelo-rid-1886" class="level3" data-number="19.3.5">
+<h3 data-number="19.3.5" class="anchored" data-anchor-id="sec-plan-vuelo-rid-1886"><span class="header-section-number">19.3.5</span> Cuenca RID 1886</h3>
+<div id="tbl-plan-vuelo-rid-1886" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plan-vuelo-rid-1886-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.7: Plan preliminar de vuelo para cuenca RID 1886.
+</figcaption>
+<div aria-describedby="tbl-plan-vuelo-rid-1886-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fecha vuelo</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Coordenadas punto despegue</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Altitud terreno</td>
+<td><code>pendiente</code> m s.n.m.</td>
+</tr>
+<tr class="even">
+<td>Altura vuelo planificada</td>
+<td><code>pendiente</code> m AGL</td>
+</tr>
+<tr class="odd">
+<td>Tipo vuelo</td>
+<td>Nadir / Oblicuo / 360° / Manual</td>
+</tr>
+<tr class="even">
+<td>Área de cobertura</td>
+<td><code>pendiente</code> ha</td>
+</tr>
+<tr class="odd">
+<td>Duración estimada</td>
+<td><code>pendiente</code> min</td>
+</tr>
+<tr class="even">
+<td>Batería asignada</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Objetivo principal</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>Restricciones zona</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>Estado</td>
+<td>⏳ Pendiente</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-registro-vuelos-realizados" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="sec-registro-vuelos-realizados"><span class="header-section-number">19.4</span> Registro de Vuelos Realizados</h2>
+<div id="tbl-registro-vuelos-realizados" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-registro-vuelos-realizados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.8: Registro mínimo de vuelos efectivamente realizados.
+</figcaption>
+<div aria-describedby="tbl-registro-vuelos-realizados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">N°</th>
+<th>Cuenca</th>
+<th>Fecha</th>
+<th>Hora</th>
+<th>Altura</th>
+<th style="text-align: right;">Bat inicio %</th>
+<th style="text-align: right;">Bat fin %</th>
+<th>Duración</th>
+<th>Archivos</th>
+<th>Incidencias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-condiciones-minimas-vuelo-drone" class="level2" data-number="19.5">
+<h2 data-number="19.5" class="anchored" data-anchor-id="sec-condiciones-minimas-vuelo-drone"><span class="header-section-number">19.5</span> Condiciones Mínimas para Volar</h2>
+<div id="tbl-condiciones-minimas-vuelo-drone" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-condiciones-minimas-vuelo-drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;19.9: Condiciones mínimas para autorizar un vuelo de dron.
+</figcaption>
+<div aria-describedby="tbl-condiciones-minimas-vuelo-drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Condición</th>
+<th>Mínimo aceptable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Viento</td>
+<td>&lt; 40 km/h, manteniendo margen respecto del límite operacional del equipo.</td>
+</tr>
+<tr class="even">
+<td>Visibilidad</td>
+<td>Sin niebla densa, mínimo 500 m.</td>
+</tr>
+<tr class="odd">
+<td>Temperatura</td>
+<td>&gt; -10°C, con baterías precalentadas y sin advertencias de temperatura.</td>
+</tr>
+<tr class="even">
+<td>Lluvia</td>
+<td>No volar con lluvia activa.</td>
+</tr>
+<tr class="odd">
+<td>Nieve activa</td>
+<td>No volar con nieve activa.</td>
+</tr>
+<tr class="even">
+<td>Luz</td>
+<td>Vuelo diurno y con contraste suficiente para mantener línea visual.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ventanas de viento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En Magallanes durante junio son frecuentes los vientos fuertes. Planificar ventanas de vuelo en horas de mañana cuando el pronóstico y la medición en sitio indiquen menor viento, y cancelar si las ráfagas superan el umbral operativo definido.</p>
+</div>
+</div>
+</section>
+<section id="sec-checklist-pre-vuelo-drone" class="level2" data-number="19.6">
+<h2 data-number="19.6" class="anchored" data-anchor-id="sec-checklist-pre-vuelo-drone"><span class="header-section-number">19.6</span> Checklist Pre-Vuelo</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Verificar zona en DJI Fly y restricciones activas.</label></li>
+<li><label><input type="checkbox">Confirmar permisos locales, CONAF/parques o predio privado si aplica.</label></li>
+<li><label><input type="checkbox">Batería dron &gt; 85%.</label></li>
+<li><label><input type="checkbox">Batería control &gt; 50%.</label></li>
+<li><label><input type="checkbox">Memoria SD disponible y con espacio suficiente.</label></li>
+<li><label><input type="checkbox">Hélices sin daño.</label></li>
+<li><label><input type="checkbox">Calibrar brújula sólo si la app lo solicita.</label></li>
+<li><label><input type="checkbox">Definir punto de retorno home.</label></li>
+<li><label><input type="checkbox">Verificar viento con anemómetro.</label></li>
+<li><label><input type="checkbox">Confirmar visibilidad y línea visual.</label></li>
+<li><label><input type="checkbox">Informar al equipo inicio de vuelo.</label></li>
 </ul>
-<p>Estos productos deben usarse como lectura complementaria, no como diagnóstico aislado. La sensibilidad cobra sentido cuando se interpreta junto con la trayectoria y el contexto espacial del sistema.</p>
+</section>
+<section id="sec-checklist-post-vuelo-drone" class="level2" data-number="19.7">
+<h2 data-number="19.7" class="anchored" data-anchor-id="sec-checklist-post-vuelo-drone"><span class="header-section-number">19.7</span> Checklist Post-Vuelo</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Verificar grabación completa en SD.</label></li>
+<li><label><input type="checkbox">Revisar si las imágenes cubren el objetivo de observación.</label></li>
+<li><label><input type="checkbox">Copiar archivos a laptop al cierre de jornada.</label></li>
+<li><label><input type="checkbox">Respaldar archivos en disco externo.</label></li>
+<li><label><input type="checkbox">Cargar batería usada.</label></li>
+<li><label><input type="checkbox">Registrar vuelo en <a href="#tbl-registro-vuelos-realizados" class="quarto-xref">Tabla&nbsp;<span>19.8</span></a>.</label></li>
+<li><label><input type="checkbox">Registrar incidencias, cancelaciones o restricciones en la ficha de cuenca.</label></li>
+</ul>
+</section>
+<section id="sec-nomenclatura-archivos-drone" class="level2" data-number="19.8">
+<h2 data-number="19.8" class="anchored" data-anchor-id="sec-nomenclatura-archivos-drone"><span class="header-section-number">19.8</span> Nomenclatura de Archivos</h2>
+<p>Formato:</p>
+<pre class="text"><code>RID_YYYYMMDD_DXX_tipo.mp4
+RID_YYYYMMDD_DXX_tipo.jpg</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>RID</code> = identificador de cuenca, por ejemplo <code>RID1885</code>.</li>
+<li><code>YYYYMMDD</code> = fecha del vuelo.</li>
+<li><code>DXX</code> = número de vuelo de dron del día, por ejemplo <code>D01</code>, <code>D02</code>.</li>
+<li><code>tipo</code> = <code>nadir</code>, <code>panorama</code>, <code>oblicuo</code>, <code>360</code> o <code>foto</code>.</li>
+</ul>
+<p>Ejemplos:</p>
+<pre class="text"><code>RID1885_20260616_D01_nadir.mp4
+RID1885_20260616_D01_oblicuo.jpg</code></pre>
+<p>La nomenclatura debe mantenerse consistente con el registro fotográfico de <a href="protocolo_levantamiento.html#sec-registro-fotografico-terrestre" class="quarto-xref"><span>Section 17.6</span></a> y el respaldo diario de <a href="protocolo_levantamiento.html#sec-respaldo-diario-terreno" class="quarto-xref"><span>Section 17.9</span></a>.</p>
 
 
 </section>
@@ -931,13 +1381,13 @@ SENS_i =
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./integracion_espacial.html" class="pagination-link" aria-label="Integración Territorial">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></span>
+      <a href="./fichas_cuencas.html" class="pagination-link" aria-label="Fichas de Cuencas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pt_resiliencia.html" class="pagination-link" aria-label="Potencial de Transición y Resiliencia">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Potencial de Transición y Resiliencia</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./resultados_terreno.html" class="pagination-link" aria-label="Resultados de Terreno">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Resultados de Terreno</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

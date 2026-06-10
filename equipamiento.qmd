@@ -1,0 +1,138 @@
+---
+title: "Equipamiento"
+subtitle: "Checklist operativo para Terreno Magallanes 2026"
+---
+
+Esta hoja consolida el equipamiento mínimo para la campaña Terreno Magallanes 2026. Debe revisarse antes del vuelo, al preparar cada jornada y al cierre diario en base, dejando trazabilidad de los elementos verificados y de los pendientes que puedan afectar navegación, registro, seguridad o respaldo de datos.
+
+::: {.callout-note}
+## Uso operativo
+
+Marcar la columna "Verificado" solo cuando el ítem esté físicamente disponible, cargado cuando corresponda, probado y embalado para salida. Los campos `pendiente` deben cerrarse antes del inicio de la campaña o registrarse como riesgo operativo.
+:::
+
+## Resumen de Estado {#sec-resumen-equipamiento-terreno}
+
+| Categoría | Items | Verificados | Pendientes |
+|---|---:|---:|---:|
+| Drone | 1 | 0 | 1 |
+| Cámaras | 2 | 0 | 1 |
+| GPS / Navegación | 2 | 0 | 2 |
+| Instrumentos ambientales | `pendiente` | 0 | `pendiente` |
+| Seguridad personal | `pendiente` | 0 | `pendiente` |
+| Comunicaciones | `pendiente` | 0 | `pendiente` |
+| Energía / Baterías | `pendiente` | 0 | `pendiente` |
+| Computación / Datos | `pendiente` | 0 | `pendiente` |
+
+: Estado preliminar del equipamiento para Terreno Magallanes 2026. {#tbl-resumen-equipamiento-terreno}
+
+## Drone - DJI Mini 3 {#sec-drone-equipamiento-terreno}
+
+| Item | Cant. | Verificado | Observación |
+|---|---|---|---|
+| DJI Mini 3 (cuerpo) | 1 | ☐ | Verificar firmware actualizado |
+| Batería DJI Mini 3 | 3 | ☐ | Carga completa antes de salir |
+| Cargador hub | 1 | ☐ | + cable USB-C |
+| Hélices de repuesto | 2 pares | ☐ | |
+| Mando RC / control | 1 | ☐ | Verificar pantalla operativa |
+| Bolso/estuche transporte | 1 | ☐ | |
+| Tarjetas microSD | 2 | ☐ | Mín. 64GB cada una, formateadas |
+| Cable OTG / transferencia | 1 | ☐ | |
+
+: Checklist de dron DJI Mini 3 y accesorios. {#tbl-drone-equipamiento-terreno}
+
+::: {.callout-warning}
+## Frío y baterías LiPo
+
+La temperatura mínima en Magallanes en junio puede bajar de 0°C. Las baterías LiPo pierden capacidad en frío; mantenerlas protegidas y precalentarlas antes de cada vuelo.
+:::
+
+## Cámaras {#sec-camaras-equipamiento-terreno}
+
+| Item | Cant. | Verificado | Observación |
+|---|---|---|---|
+| GoPro (modelo `pendiente`) | `pendiente` | ☐ | Firmware actualizado |
+| Baterías GoPro | `pendiente` | ☐ | Carga completa |
+| Cargador GoPro | 1 | ☐ | |
+| Tarjetas microSD GoPro | `pendiente` | ☐ | Formateadas |
+| Funda/estuche impermeable | 1 | ☐ | Condiciones lluviosas probables |
+| Cámara adicional (DSLR/mirrorless) | `pendiente` | ☐ | `pendiente` |
+
+: Checklist de cámaras y accesorios de registro audiovisual. {#tbl-camaras-equipamiento-terreno}
+
+## GPS y Navegación {#sec-gps-navegacion-equipamiento-terreno}
+
+| Item | Cant. | Verificado | Observación |
+|---|---|---|---|
+| GPS Garmin (modelo `pendiente`) | 1 | ☐ | Cargar mapas de Magallanes |
+| Baterías GPS | `pendiente` | ☐ | Pilas AA o batería interna cargada |
+| Smartphone con GPS offline | 1 | ☐ | Descargar mapas offline (Maps.me / OsmAnd) |
+| Waypoints precargados | ☐ | ☐ | Cargar coordenadas de cuencas |
+
+: Checklist de navegación y puntos precargados. {#tbl-gps-navegacion-equipamiento-terreno}
+
+## Instrumentos Ambientales {#sec-instrumentos-ambientales-equipamiento-terreno}
+
+| Item | Cant. | Verificado | Observación |
+|---|---|---|---|
+| Termómetro/higrómetro digital | `pendiente` | ☐ | `pendiente` |
+| Altímetro barométrico | `pendiente` | ☐ | `pendiente` |
+| Anemómetro | `pendiente` | ☐ | Vientos fuertes en Magallanes |
+| Medidor de conductividad agua | `pendiente` | ☐ | `pendiente` |
+| Tubos colectores de muestra agua | `pendiente` | ☐ | `pendiente` |
+| Clinómetro / medidor de pendiente | `pendiente` | ☐ | `pendiente` |
+| Cinta métrica / huincha | 1 | ☐ | |
+| Cuaderno de campo waterproof | 2 | ☐ | Rite in the Rain o similar |
+| Lápices impermeables | `pendiente` | ☐ | |
+
+: Checklist de instrumentos ambientales y materiales de medición. {#tbl-instrumentos-ambientales-equipamiento-terreno}
+
+## Energía y Carga {#sec-energia-carga-equipamiento-terreno}
+
+| Item | Cant. | Verificado | Observación |
+|---|---|---|---|
+| Power bank (mín. 20.000 mAh) | 1 | ☐ | Para GPS, smartphone, dron |
+| Cargador multienchufes | 1 | ☐ | |
+| Cables USB-C / Lightning / micro-USB | `pendiente` | ☐ | Según dispositivos |
+| Panel solar portátil | `pendiente` | ☐ | Opcional, días largos en junio |
+| Baterías AA de respaldo | 8+ | ☐ | Para GPS y linternas |
+
+: Checklist de energía, carga y baterías de respaldo. {#tbl-energia-carga-equipamiento-terreno}
+
+## Computación y Datos {#sec-computacion-datos-equipamiento-terreno}
+
+| Item | Cant. | Verificado | Observación |
+|---|---|---|---|
+| Laptop | 1 | ☐ | Para descarga y revisión de datos en campo |
+| Disco duro externo o SSD | 1 | ☐ | Mín. 1TB para fotos/video drone |
+| USB 3.0 lector de tarjetas | 1 | ☐ | |
+| Acceso a fichas MRCT offline | ☐ | ☐ | Descargar <https://cit-uai.github.io/Book-MRCT/fichas_cuencas.html> |
+
+: Checklist de computación, transferencia y respaldo de datos. {#tbl-computacion-datos-equipamiento-terreno}
+
+## Seguridad Personal {#sec-seguridad-personal-equipamiento-terreno}
+
+| Item | Cant. | Verificado | Observación |
+|---|---|---|---|
+| Ropa de abrigo técnica (capas) | `pendiente` | ☐ | Invierno austral, mín. -5°C |
+| Impermeable / capa exterior | 1 | ☐ | Viento y lluvia frecuentes |
+| Botas de trekking impermeables | 1 par | ☐ | |
+| Casco para terreno irregular | `pendiente` | ☐ | `pendiente` |
+| Linterna frontal + pilas repuesto | 1 | ☐ | Días cortos en junio |
+| Botiquín básico de primeros auxilios | 1 | ☐ | |
+| Protector solar + labial SPF | 1 | ☐ | UV alto incluso en invierno |
+| Snacks / barras energéticas | `pendiente` | ☐ | Para jornadas largas |
+| Agua (termos / botella) | 1 | ☐ | Termo para bebida caliente |
+
+: Checklist de seguridad personal para jornadas de terreno. {#tbl-seguridad-personal-equipamiento-terreno}
+
+## Documentación {#sec-documentacion-equipamiento-terreno}
+
+| Item | Cant. | Verificado | Observación |
+|---|---|---|---|
+| Cédula de identidad / pasaporte | 1 | ☐ | |
+| Autorización vuelo drone DGAC | ☐ | ☐ | Ver @sec-vuelos-dron-terreno |
+| Fichas de terreno impresas | `pendiente` | ☐ | Una por cuenca a visitar |
+| Credenciales CIT-UAI | ☐ | ☐ | `pendiente` |
+
+: Checklist de documentación y permisos asociados al equipamiento. {#tbl-documentacion-equipamiento-terreno}

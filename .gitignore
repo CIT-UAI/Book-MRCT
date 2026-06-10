@@ -62,6 +62,7 @@ AGENTS.md
 CLAUDE.md
 GEMINI.md
 CODEX.md
+graphify-out/
 .claude/
 .agents/
 .codex/
@@ -97,6 +98,19 @@ processed/
 *.prj
 *.cpg
 *.gpkg
+
+# Keep the interactive field map used by cuencas_seleccionadas.qmd,
+# while leaving the rest of data/ ignored.
+!data/
+data/*
+!data/maps/
+data/maps/*
+!data/maps/mapa_web_cuencas_terreno.html
+!docs/data/
+docs/data/*
+!docs/data/maps/
+docs/data/maps/*
+!docs/data/maps/mapa_web_cuencas_terreno.html
 
 # =============================================================
 # GitHub Pages output

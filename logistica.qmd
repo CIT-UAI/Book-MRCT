@@ -1,0 +1,135 @@
+---
+title: "Logística y Traslados"
+subtitle: "Registro operativo de vuelos, alojamiento, transporte y presupuesto para Terreno Magallanes 2026"
+---
+
+Este capítulo funciona como registro vivo de la logística de la campaña Magallanes 2026. Reúne los antecedentes confirmados y los pendientes de cierre para coordinar vuelos, alojamiento, transporte terrestre, combustible, comunicaciones, presupuesto y controles mínimos antes de cada jornada.
+
+::: {.callout-note}
+## Uso operativo
+
+Actualizar esta página cada vez que se confirme una reserva, un contacto, una restricción o un costo. Los campos marcados como `pendiente` deben revisarse antes del inicio de campaña y nuevamente en el gabinete nocturno previo a cada salida.
+:::
+
+## Vuelos {#sec-vuelos-logistica-terreno}
+
+| Tramo | Fecha | Aerolínea | N° Reserva | Estado |
+|---|---|---|---|---|
+| Santiago -> Punta Arenas | 2026-06-15 | SKY AIRLINE S.A. | ESZIKY | ✅ Confirmado |
+| Punta Arenas -> Santiago | 2026-06-15 | SKY AIRLINE S.A. | ESZIKY | ✅ Confirmado|
+
+
+
+### Equipaje {#sec-equipaje-logistica-terreno}
+
+| Tipo | Contenido | Peso estimado |
+|---|---|---|
+| Maleta de mano / cabina | `pendiente` | `pendiente` kg |
+| Mochila | Uso en terreno, computador | `pendiente` kg |
+
+: Equipaje previsto para traslado aéreo. {#tbl-equipaje-logistica-terreno}
+
+::: {.callout-warning}
+## Baterías LiPo y dron
+
+Verificar restricciones de la aerolínea para baterías LiPo del DJI Mini 3 en cabina. Como criterio preliminar, no superar 160 Wh por batería y confirmar el máximo permitido de baterías extra en cabina antes del embarque.
+:::
+
+## Alojamiento {#sec-alojamiento-logistica-terreno}
+
+| Fecha | Lugar | Dirección | Contacto | Estado |
+|---|---|---|---|---|
+| 2026-06-15 al `pendiente` | Base Almasu | Armando Sanhueza 965, Punta Arenas | `pendiente` | ✅ Base confirmada |
+| `pendiente` | `pendiente` | `pendiente` | `pendiente` | ⏳ Pendiente |
+
+: Alojamiento y base operativa de campaña. {#tbl-alojamiento-logistica-terreno}
+
+La base Almasu debe funcionar como punto de carga, respaldo de datos, revisión cartográfica offline y preparación diaria de equipos. Cualquier alojamiento complementario debe evaluarse según distancia real a las cuencas, disponibilidad de estacionamiento seguro, acceso temprano y factibilidad de carga eléctrica.
+
+## Transporte Terrestre {#sec-transporte-terrestre-logistica-terreno}
+
+| Vehículo | Tipo | Tracción | Proveedor | Contacto | Estado |
+|---|---|---|---|---|---|
+| `pendiente` | `pendiente` | 4x4 / AWD | `pendiente` | `pendiente` | ⏳ Pendiente |
+
+: Transporte terrestre requerido para acceso a cuencas rurales. {#tbl-transporte-terrestre-logistica-terreno}
+
+::: {.callout-warning}
+## Condición mínima del vehículo
+
+La zona de Magallanes requiere vehículo 4x4 o AWD con buena altura libre al suelo para acceso a caminos rurales, ripio, barro, nieve o sectores con huellas secundarias. Verificar seguro, asistencia en ruta, cobertura en caminos no pavimentados, neumático de repuesto, kit de emergencia y política de devolución con barro o uso rural.
+:::
+
+## Puntos de Carga de Combustible {#sec-combustible-logistica-terreno}
+
+| Nombre / Ubicación | Coordenadas | Combustible | Horario | Observación |
+|---|---|---|---|---|
+| `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` |
+| `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` |
+
+: Puntos preliminares de carga de combustible. {#tbl-combustible-logistica-terreno}
+
+Completar con estaciones de servicio en ruta a las cuencas seleccionadas. Para jornadas hacia el eje oriental, registrar además punto de carga alternativo, distancia desde base, horario efectivo y margen mínimo de autonomía antes de abandonar zona urbana.
+
+## Comunicaciones {#sec-comunicaciones-logistica-terreno}
+
+| Elemento | Detalle | Estado |
+|---|---|---|
+| Teléfono móvil | `pendiente` - verificar cobertura en terreno | ⏳ |
+| Radio VHF / HF | `pendiente` | ⏳ |
+| GPS tracker / SPOT | `pendiente` | ⏳ |
+| Contacto emergencia en base | `pendiente` | ⏳ |
+
+: Sistemas de comunicación y contacto de emergencia. {#tbl-comunicaciones-logistica-terreno}
+
+Cada jornada debe salir con un plan mínimo de comunicaciones: ruta prevista, cuencas objetivo, horario de retorno estimado, contacto de emergencia, punto de último contacto con señal y criterio de activación si el equipo no reporta retorno.
+
+## Presupuesto de Campaña {#sec-presupuesto-logistica-terreno}
+
+| Ítem | Monto estimado | Estado |
+|---|---|---|
+| Pasajes aéreos | `pendiente` | ✅ |
+| Alojamiento | `pendiente` | ✅ |
+| Arriendo vehículo | `pendiente` | ⏳ |
+| Combustible | `pendiente` | ⏳ |
+| Alimentación | `pendiente` | ⏳ |
+| Imprevistos (10%) | `pendiente` | ⏳ |
+| **Total** | `pendiente` | ⏳ |
+
+: Presupuesto preliminar de campaña. {#tbl-presupuesto-logistica-terreno}
+
+## Documentación y Permisos {#sec-documentacion-permisos-logistica-terreno}
+
+| Documento / gestión | Responsable | Estado | Observación |
+|---|---|---|---|
+| Cédulas / documentos de viaje | Cada integrante | ⏳ | Verificar vigencia antes del vuelo. |
+| Licencia de conducir | `pendiente` | ⏳ | Requisito para retiro de vehículo. |
+| Permisos de acceso predial | `pendiente` | ⏳ | Confirmar portones, propietarios y restricciones. |
+| Autorización / criterio de vuelo dron | Denis Berroeta | ⏳ | Revisar viento, proximidad a infraestructura crítica y restricciones locales. |
+| Seguro / asistencia en ruta | `pendiente` | ⏳ | Confirmar cobertura en caminos rurales y ripiados. |
+
+: Documentación y permisos mínimos antes de salir a terreno. {#tbl-documentacion-permisos-logistica-terreno}
+
+## Navegación y Rutas {#sec-navegacion-rutas-logistica-terreno}
+
+| Recurso | Estado | Observación |
+|---|---|---|
+| Puntos de acceso de cuencas en dispositivo offline | ⏳ | Cargar coordenadas de @tbl-cuencas-seleccionadas-detalle. |
+| Mapas offline / proyecto QGIS o Avenza | ⏳ | Incluir caminos principales, secundarios y puntos de combustible. |
+| Rutas diarias por eje operativo | ⏳ | Definir antes de cada jornada según clima y prioridad. |
+| Ruta alternativa / retorno seguro | ⏳ | Registrar alternativa si hay cierre, barro, nieve o viento extremo. |
+
+: Recursos de navegación requeridos para jornadas de terreno. {#tbl-navegacion-rutas-logistica-terreno}
+
+## Control Diario {#sec-control-diario-logistica-terreno}
+
+| Momento | Control | Estado |
+|---|---|---|
+| Antes de salir | Combustible, clima, baterías, agua, comida, botiquín, capas de abrigo y ruta offline | ⏳ |
+| En ruta | Confirmar accesibilidad, viento, señal móvil y seguridad de detención | ⏳ |
+| En sitio | Registrar hora, coordenada, condiciones, evidencia mínima y estado de vuelo dron | ⏳ |
+| Retorno | Confirmar llegada a base y registrar incidentes o ajustes | ⏳ |
+| Gabinete nocturno | Respaldar datos, cargar equipos y actualizar plan del día siguiente | ⏳ |
+
+: Control logístico diario de la campaña. {#tbl-control-diario-logistica-terreno}
+

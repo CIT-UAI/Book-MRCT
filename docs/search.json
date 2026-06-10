@@ -734,17 +734,77 @@
     "href": "trabajo_terreno.html",
     "title": "Trabajo en Terreno",
     "section": "",
-    "text": "Estructura de la sección\nEsta sección organiza el paso desde la lectura analítica de la MRCT hacia una campaña de observación y validación en territorio. Su función es conectar las señales detectadas en gabinete con decisiones operativas: qué cuencas revisar, cómo planificar la campaña, qué registrar en terreno y cómo devolver esa evidencia al sistema MRCT.\nEl trabajo de terreno no busca confirmar mecánicamente los resultados del modelo. Su aporte es contrastar la señal satelital con evidencia directa: registros fotográficos, vuelos de dron, mediciones ambientales, observación de cobertura, presencia de agua o nieve, humedad superficial, accesibilidad, perturbaciones visibles y condiciones locales que no siempre quedan representadas en los indicadores remotos.\nLa sección se ordena en seis capítulos complementarios.",
+    "text": "Planificación general de campaña\nEsta sección organiza el paso desde la lectura analítica de la MRCT hacia una campaña de observación y validación territorial en cuencas de la Región de Magallanes cercanas al eje operativo de Punta Arenas. Su función es conectar las señales detectadas en gabinete con decisiones operativas: qué cuencas revisar, cómo planificar la campaña, qué registrar en terreno y cómo devolver esa evidencia al sistema MRCT.\nEl trabajo de terreno no busca confirmar mecánicamente los resultados del modelo. Su aporte es contrastar la señal satelital con evidencia directa: registros fotográficos, vuelos de dron, mediciones ambientales, observación de cobertura, presencia de agua o nieve, humedad superficial, accesibilidad, perturbaciones visibles y condiciones locales que no siempre quedan representadas en los indicadores remotos.\nLa campaña Magallanes 2026 corresponde a la validación territorial de la Matriz de Resiliencia Climática Territorial (MRCT) en cuencas seleccionadas por su señal crítica, su relación con cambios dinámicos recientes y su factibilidad preliminar de acceso desde Punta Arenas.\nEl documento matriz de campaña se estructura sobre tres insumos:",
     "crumbs": [
       "Trabajo en Terreno"
     ]
   },
   {
-    "objectID": "trabajo_terreno.html#sec-estructura-trabajo-terreno",
-    "href": "trabajo_terreno.html#sec-estructura-trabajo-terreno",
+    "objectID": "trabajo_terreno.html#sec-planificacion-general-terreno",
+    "href": "trabajo_terreno.html#sec-planificacion-general-terreno",
     "title": "Trabajo en Terreno",
     "section": "",
-    "text": "Table 1: Organización propuesta de la sección Trabajo en Terreno.\n\n\n\n\n\nCapítulo\nFunción\n\n\n\n\nSelección de Cuencas Prioritarias\nPresenta la primera aproximación técnica para identificar cuencas candidatas mediante análisis de jerk.\n\n\nPlanificación de Campaña\nDefine cómo convertir la preselección en una campaña factible: rutas, permisos, equipo, seguridad y coordinación local.\n\n\nProtocolo de Levantamiento\nEstablece qué registrar en terreno y cómo asegurar datos comparables entre cuencas.\n\n\nFichas de Cuencas Seleccionadas\nDeja la estructura de fichas por cuenca para completar cuando se definan los sitios finales.\n\n\nResultados del Levantamiento\nReserva el espacio para documentar cuencas visitadas, mediciones, fotografías, vuelos y hallazgos.\n\n\nIntegración y Validación MRCT\nDefine cómo comparar la evidencia de terreno con la señal MRCT y registrar consistencias, diferencias y aprendizajes.",
+    "text": "la priorización técnica presentada en Buffer operacional de Punta Arenas y Terminales estratégicos de hidrógeno verde;\nla capa de cuencas seleccionadas data/cuencas_seleccionadas/cuencas_seleccionadas_v1.shp;\nla capa de puntos de acceso data/cuencas_seleccionadas/accesos_cuencas_v1.shp.",
+    "crumbs": [
+      "Trabajo en Terreno"
+    ]
+  },
+  {
+    "objectID": "trabajo_terreno.html#sec-objetivo-campana-terreno",
+    "href": "trabajo_terreno.html#sec-objetivo-campana-terreno",
+    "title": "Trabajo en Terreno",
+    "section": "Objetivo de la campaña",
+    "text": "Objetivo de la campaña\nValidar territorialmente las cuencas prioritarias identificadas por el modelo MRCT, contrastando señal satelital con evidencia directa: registros fotográficos, vuelos de dron, mediciones ambientales y observación de cobertura, agua, nieve, humedad superficial, perturbación y fragmentación.\nLa evidencia levantada debe permitir responder al menos cuatro preguntas:\n\nsi la señal MRCT es coherente con el estado observado de la cuenca;\nqué procesos locales explican coincidencias o diferencias entre modelo y terreno;\nqué tan representativo es el punto visitado respecto de la cuenca completa;\nqué ajustes metodológicos o interpretativos deben incorporarse en la validación posterior.",
+    "crumbs": [
+      "Trabajo en Terreno"
+    ]
+  },
+  {
+    "objectID": "trabajo_terreno.html#sec-fechas-clave-terreno",
+    "href": "trabajo_terreno.html#sec-fechas-clave-terreno",
+    "title": "Trabajo en Terreno",
+    "section": "Fechas clave",
+    "text": "Fechas clave\n\n\n\nTable 1: Hitos operativos de la campaña Magallanes 2026.\n\n\n\n\n\nHito\nFecha\nEstado\n\n\n\n\nSelección final de cuencas\n2026-06-09\nConfirmado\n\n\nSalida vuelo Punta Arenas\n2026-06-15\nConfirmado\n\n\nInicio campaña terreno\n2026-06-16\nPendiente\n\n\nTérmino campaña terreno\n2026-06-18\nPendiente\n\n\nRetorno\n2026-06-18 tarde\nConfirmado\n\n\nEntrega informe preliminar\npendiente de definir\nPendiente",
+    "crumbs": [
+      "Trabajo en Terreno"
+    ]
+  },
+  {
+    "objectID": "trabajo_terreno.html#sec-cuencas-objetivo-terreno",
+    "href": "trabajo_terreno.html#sec-cuencas-objetivo-terreno",
+    "title": "Trabajo en Terreno",
+    "section": "Cuencas objetivo y puntos de acceso",
+    "text": "Cuencas objetivo y puntos de acceso\nLa selección operativa contiene 17 cuencas con punto de acceso georreferenciado. La columna “punto de acceso” proviene de la capa de accesos, se presenta como latitud, longitud y debe validarse en navegación offline antes de cada salida.\n\n\n\nTable 2: Cuencas seleccionadas y puntos de acceso para la campaña Magallanes 2026.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRID\nContexto\nEvento\nEstado RES\nRES\nPT\nPunto de acceso\n\n\n\n\n1808\nMuelle Laredo\nIntensificación\nAlta_Resiliencia\n1.000\n0.0\n-53.15925, -71.06570\n\n\n5247\nTerminal Marítimo San Gregorio\nReversión\nResiliencia_Media\n0.472\n1.1\n-52.65109, -70.42263\n\n\n5258\nTerminal Marítimo San Gregorio\nReversión\nResiliencia_Media\n0.588\n0.7\n-52.66603, -70.68678\n\n\n1885\n-\nInestable\nColapso_Potencial\n0.006\n158.1\n-52.79902, -71.04013\n\n\n1886\n-\nTransicion_Acelerada\nColapso_Potencial\n0.020\n48.3\n-52.80270, -70.97234\n\n\n2205\n-\nTransicion_Acelerada\nColapso_Potencial\n0.002\n465.2\n-52.77871, -71.00823\n\n\n3289\n-\nTransicion_Acelerada\nResiliencia_Media\n0.495\n1.0\n-52.61627, -70.94212\n\n\n4982\n-\nTransicion_Acelerada\nColapso_Potencial\n0.005\n217.3\n-52.59760, -70.64358\n\n\n4996\n-\nTransicion_Acelerada\nColapso_Potencial\n0.005\n183.0\n-52.61149, -70.55698\n\n\n5048\n-\nInestable\nColapso_Potencial\n0.026\n37.5\n-52.49928, -69.78303\n\n\n5209\n-\nTransicion_Acelerada\nColapso_Potencial\n0.012\n81.0\n-52.66689, -70.64540\n\n\n5257\n-\nTransicion_Acelerada\nColapso_Potencial\n0.009\n106.4\n-52.69572, -70.87232\n\n\n5263\n-\nTransicion_Acelerada\nResiliencia_Media\n0.559\n0.8\n-52.59156, -70.17194\n\n\n5294\n-\nInestable\nColapso_Potencial\n0.015\n66.3\n-52.49686, -69.88991\n\n\n5623\n-\nRecuperacion\nResiliencia_Media\n0.496\n1.0\n-52.47845, -69.83296\n\n\n5624\n-\nTransicion_Acelerada\nColapso_Potencial\n0.034\n28.8\n-52.49048, -69.88102\n\n\n5626\n-\nTransicion_Acelerada\nResiliencia_Media\n0.408\n1.4\n-52.48203, -69.79322\n\n\n\n\n\n\nLa lista debe leerse como una cartera operativa. No todas las cuencas necesariamente serán visitadas con igual profundidad: las condiciones meteorológicas, los permisos, el tiempo de traslado, la seguridad del vuelo de dron y el estado real de caminos pueden definir subconjuntos principales y reemplazos diarios.",
+    "crumbs": [
+      "Trabajo en Terreno"
+    ]
+  },
+  {
+    "objectID": "trabajo_terreno.html#sec-equipo-campo-terreno",
+    "href": "trabajo_terreno.html#sec-equipo-campo-terreno",
+    "title": "Trabajo en Terreno",
+    "section": "Equipo de campo",
+    "text": "Equipo de campo\n\n\n\nTable 3: Equipo base de la campaña de terreno.\n\n\n\n\n\nNombre\nRol\nContacto\n\n\n\n\nJohn Treimun\nCoordinación técnica y validación MRCT\njohn.treimun.r@uai.cl\n\n\nPaula Altamirano\nApoyo de campaña y registro territorial\npaula.altamirano@uai.cl\n\n\nDenis Berroeta\nPiloto dron, navegación y respaldo de datos\ndenis.berroeta@uai.cl",
+    "crumbs": [
+      "Trabajo en Terreno"
+    ]
+  },
+  {
+    "objectID": "trabajo_terreno.html#sec-base-operaciones-terreno",
+    "href": "trabajo_terreno.html#sec-base-operaciones-terreno",
+    "title": "Trabajo en Terreno",
+    "section": "Base de operaciones",
+    "text": "Base de operaciones\nLa base operativa inicial será Almasu, Punta Arenas.\n\n\n\nTable 4: Base de operaciones para la campaña Magallanes 2026.\n\n\n\n\n\nAtributo\nDetalle\n\n\n\n\nDirección\nArmando Sanhueza 965, Punta Arenas\n\n\nCoordenadas\n-53.160425, -70.910919\n\n\nReferencia\nAbrir ubicación en Google Maps\n\n\n\n\n\n\nDesde esta base se preparan los dispositivos offline, se cargan baterías, se consolidan respaldos diarios y se revisa el plan de salida de cada jornada. La cercanía de algunas cuencas no elimina la necesidad de operar con autonomía: fuera del núcleo urbano pueden existir baja conectividad, viento fuerte, caminos secundarios, portones, barro, nieve o restricciones de ingreso.",
+    "crumbs": [
+      "Trabajo en Terreno"
+    ]
+  },
+  {
+    "objectID": "trabajo_terreno.html#sec-indice-hojas-terreno",
+    "href": "trabajo_terreno.html#sec-indice-hojas-terreno",
+    "title": "Trabajo en Terreno",
+    "section": "Índice de hojas y capítulos operativos",
+    "text": "Índice de hojas y capítulos operativos\nLa campaña se documenta en un conjunto de capítulos y hojas operativas. En el libro, esas hojas se distribuyen de la siguiente manera:\n\n\n\nTable 5: Relación entre hojas operativas de campaña y capítulos del libro.\n\n\n\n\n\nHoja operativa\nCapítulo del libro\nDescripción\n\n\n\n\nPreevaluación de cuencas\nPreevaluación de Cuencas\nCriterios, ranking, señal dinámica y relación con terminales estratégicos.\n\n\nCuencas seleccionadas\nCuencas Seleccionadas\nMapa web, tabla operativa, fichas rápidas y orden preliminar de visita.\n\n\nLogística y traslados\nLogística y Traslados\nVuelos, transporte terrestre, alojamiento, combustible, comunicaciones, presupuesto y pendientes operativos.\n\n\nCondiciones de terreno\nCondiciones de Terreno y Climáticas\nPronóstico, accesos, alertas, criterios de postergación y registro de condiciones observadas.\n\n\nEquipamiento\nEquipamiento\nChecklist de vestuario, navegación, dron, energía, sensores y respaldo.\n\n\nProtocolo de levantamiento\nProtocolo de Levantamiento\nObservación estandarizada, IEO, fotografías, dron y mediciones ambientales.\n\n\nFichas de registro\nFichas de Cuencas Seleccionadas\nFicha por cuenca, punto de acceso, métricas MRCT y evidencia capturada.\n\n\nVuelos de dron\nPlanificación Vuelos Drone\nEquipo DJI Mini 3, normativa a verificar, plan por cuenca, checklist y registro audiovisual.\n\n\nResultados de validación\nResultados del Levantamiento\nHallazgos, bitácora, evidencias y síntesis por cuenca visitada.\n\n\nSeguridad y contingencia\nPlanificación de Campaña\nProtocolos de seguridad, comunicación, suspensión y rutas alternativas.",
     "crumbs": [
       "Trabajo en Terreno"
     ]
@@ -754,7 +814,7 @@
     "href": "trabajo_terreno.html#sec-flujo-trabajo-terreno",
     "title": "Trabajo en Terreno",
     "section": "Flujo operativo",
-    "text": "Flujo operativo\nEl flujo completo tiene tres momentos. Primero, el pre-terreno, donde se seleccionan cuencas candidatas, se revisa su factibilidad y se prepara la campaña. Segundo, el terreno, donde se levantan observaciones, fotografías, vuelos y mediciones bajo un protocolo común. Tercero, el post-terreno, donde se ordenan los datos, se evalúa su calidad y se integran con la MRCT.\nEsta organización permite que la sección pueda completarse progresivamente. Algunos capítulos pueden quedar planteados antes de salir a terreno; otros deberán actualizarse cuando se definan las cuencas finales o cuando la campaña haya sido ejecutada.",
+    "text": "Flujo operativo\nEl flujo completo tiene tres momentos. Primero, el pre-terreno, donde se seleccionan cuencas candidatas, se revisa su factibilidad, se precargan puntos de acceso y se prepara la campaña. Segundo, el terreno, donde se levantan observaciones, fotografías, vuelos y mediciones bajo un protocolo común. Tercero, el post-terreno, donde se ordenan los datos, se evalúa su calidad y se integran con la MRCT.\nEsta organización permite que la sección pueda completarse progresivamente. Algunos capítulos quedan establecidos antes de salir a terreno; otros deberán actualizarse cuando la campaña haya sido ejecutada, cuando se confirmen cuencas efectivamente visitadas o cuando se procesen fotografías, vuelos y planillas IEO.",
     "crumbs": [
       "Trabajo en Terreno"
     ]
@@ -764,7 +824,17 @@
     "href": "trabajo_terreno.html#sec-criterio-lectura-terreno",
     "title": "Trabajo en Terreno",
     "section": "Criterio de lectura",
-    "text": "Criterio de lectura\nLa validación territorial debe leerse como una conversación entre modelo y territorio. Una coincidencia entre MRCT y terreno fortalece la interpretación; una diferencia no invalida automáticamente el modelo, sino que abre una pregunta sobre escala, fecha, calidad de insumos, accesibilidad, heterogeneidad interna o procesos locales no capturados.\nPor eso la sección prioriza trazabilidad: cada observación debe poder conectarse con una cuenca, una fecha, una coordenada, una métrica MRCT y una pregunta de validación.",
+    "text": "Criterio de lectura\nLa validación territorial debe leerse como una conversación entre modelo y territorio. Una coincidencia entre MRCT y terreno fortalece la interpretación; una diferencia no invalida automáticamente el modelo, sino que abre una pregunta sobre escala, fecha, calidad de insumos, accesibilidad, heterogeneidad interna o procesos locales no capturados.\nPor eso la sección prioriza trazabilidad: cada observación debe poder conectarse con una cuenca, una fecha, una coordenada, una métrica MRCT y una pregunta de validación. Para esta campaña, esa trazabilidad empieza en los RID de Tabla 2 y continúa con la nomenclatura de archivos, fichas y respaldos definidos en Respaldo diario.",
+    "crumbs": [
+      "Trabajo en Terreno"
+    ]
+  },
+  {
+    "objectID": "trabajo_terreno.html#sec-recursos-terreno",
+    "href": "trabajo_terreno.html#sec-recursos-terreno",
+    "title": "Trabajo en Terreno",
+    "section": "Recursos",
+    "text": "Recursos\n\nFichas cuencas MRCT: https://cit-uai.github.io/Book-MRCT/fichas_cuencas.html\nProtocolo trabajo de terreno: https://cit-uai.github.io/Book-MRCT/trabajo_terreno.html\nCuencas seleccionadas: data/cuencas_seleccionadas/cuencas_seleccionadas_v1.shp\nPuntos de acceso: data/cuencas_seleccionadas/accesos_cuencas_v1.shp",
     "crumbs": [
       "Trabajo en Terreno"
     ]
@@ -772,582 +842,978 @@
   {
     "objectID": "jerk.html",
     "href": "jerk.html",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "",
     "text": "12.1 Pregunta de trabajo\nEste capítulo actualiza la selección de cuencas candidatas para trabajo de terreno mediante el análisis de jerk de la Matriz de Resiliencia Climática Territorial. El objetivo es detectar cambios abruptos en la trayectoria ecosistémica y concentrar la priorización en el entorno operacional de Punta Arenas.\nLa versión actual incorpora una mejora importante: además de seleccionar cuencas para validación general, agrega zonas de búsqueda asociadas a puertos y terminales estratégicos para hidrógeno verde. Esta capa permite observar cuencas próximas a infraestructura relevante para la transformación energética regional, donde eventuales nuevas intervenciones podrían interactuar con condiciones ecosistémicas ya inestables.\nLa pregunta que orienta esta versión del análisis es:\nLa pregunta se separa en cinco componentes:",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-pregunta-jerk-terreno",
     "href": "jerk.html#sec-pregunta-jerk-terreno",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "",
     "text": "¿Qué cuencas del entorno operacional de Punta Arenas muestran cambios abruptos recientes en su trayectoria ecosistémica, y cuáles de ellas se relacionan espacialmente con zonas portuarias o terminales relevantes para el desarrollo de hidrógeno verde?\n\n\n\nIdentificar eventos abruptos medidos por jerk en la serie MRCT 2013-2025;\ndistinguir entre intensificación y reversión de la trayectoria;\nfiltrar cuencas dentro de un área operacional definida desde Punta Arenas;\nordenar las candidatas mediante un puntaje compuesto robusto a valores extremos;\nrevisar cuencas cercanas a terminales marítimos relevantes para el traslado o exportación de hidrógeno verde y derivados.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-criterio-jerk",
     "href": "jerk.html#sec-criterio-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.2 Qué mide el jerk",
     "text": "12.2 Qué mide el jerk\nLa MRCT calcula para cada cuenca y año una variable de dominio, Domain o D, que representa la distancia de la cuenca respecto de su estado ecosistémico de referencia. A partir de esa trayectoria se calculan derivadas temporales:\n\nD: distancia al régimen de referencia;\nV: velocidad de cambio de esa distancia;\nA: aceleración del cambio;\nJ: cambio de la aceleración, o jerk.\n\nEn términos operativos, el jerk identifica una ruptura en la dinámica. Un valor alto en magnitud indica que la cuenca experimentó un salto abrupto en su trayectoria. Esa señal no debe interpretarse automáticamente como degradación, recuperación o causalidad comprobada: funciona como una alerta para mirar con mayor detalle.\n\n\n\n\n\n\nflowchart TB\n  D[\"Domain (D)&lt;br/&gt;Distancia al &lt;br/&gt;estado de referencia\"] --&gt; V[\"Velocidad (dD/dt)&lt;br/&gt;Dirección y ritmo del cambio\"]\n  V --&gt; A[\"Aceleración (d2D/dt2)&lt;br/&gt;Cambio en el ritmo\"]\n  A --&gt; J[\"Jerk (d3D/dt3)&lt;br/&gt;Cambio abrupto &lt;br/&gt;en la aceleración\"]\n  J --&gt; I[\"J &gt; 0&lt;br/&gt;Intensificación\"]\n  J --&gt; R[\"J &lt; 0&lt;br/&gt;Reversión\"]\n\n\n\n\nFigure 12.1: Derivadas temporales usadas para interpretar cambios abruptos en la trayectoria ecosistémica.\n\n\n\n\n\nEl signo entrega una primera lectura:\n\n\n\nTable 12.1: Lectura básica del signo del jerk para selección de cuencas.\n\n\n\n\n\n\n\n\n\n\nTipo de evento\nCondición\nLectura preliminar\n\n\n\n\nIntensificación\nJ &gt; 0\nAceleración brusca del cambio respecto del dominio de referencia. Puede sugerir presión, perturbación o deterioro emergente.\n\n\nReversión\nJ &lt; 0\nFrenada o inversión brusca de la trayectoria. Puede sugerir recuperación, estabilización, cambio de régimen o artefacto de datos.\n\n\n\n\n\n\nEsta distinción es útil para terreno porque permite formular preguntas distintas. Una cuenca con intensificación puede requerir observar señales de presión reciente; una cuenca con reversión puede requerir revisar si existe recuperación visible, cambio hidrológico, variación de nieve, intervención local o inconsistencia en la serie satelital.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-estructura-datos-jerk",
     "href": "jerk.html#sec-estructura-datos-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.3 Insumos y base analítica",
     "text": "12.3 Insumos y base analítica\nEl flujo usa dos insumos principales:\n\n\n\nTable 12.2: Insumos principales del análisis de cuencas prioritarias por jerk.\n\n\n\n\n\n\n\n\n\n\nInsumo\nContenido\nUso en el análisis\n\n\n\n\nMRCT_v1.xlsx\nPanel MRCT completo, con 273.520 registros, 21.040 cuencas y 13 años.\nBase temporal RID x Year para calcular eventos de jerk y cruzarlos con métricas MRCT.\n\n\nR12_cuencas_nema_v2.shp\nGeometría de 21.040 cuencas de Magallanes.\nBase espacial para centroides, distancias, comunas, buffers y mapas.\n\n\n\n\n\n\nEl panel completo cubre 2013-2025. Los primeros años no tienen jerk válido por definición, porque el cálculo necesita años previos para estimar la tercera derivada discreta. El análisis conserva la serie completa para control de calidad y lectura temporal, y luego usa eventos extremos y filtros espaciales para priorizar terreno.\nLa geometría fue transformada al sistema EPSG:32719, que permite trabajar en coordenadas métricas para calcular distancias aproximadas desde Punta Arenas y desde cada terminal marítimo.\n\n\n\n\n\n\nflowchart TB\n  config[\"Configuración&lt;br/&gt;rutas, coordenadas  &lt;br/&gt;y parámetros\"] --&gt; data[\"Datos&lt;br/&gt;MRCT y cuencas\"]\n  data --&gt; parquet[\"Parquet&lt;br/&gt;lectura rápida\"]\n  parquet --&gt; duck[\"DuckDB&lt;br/&gt;base analítica local\"]\n  duck --&gt; qc[\"Control de calidad&lt;br/&gt;cobertura y clases\"]\n  qc --&gt; events[\"Eventos de jerk&lt;br/&gt;percentiles anual y global\"]\n  events --&gt; buffer[\"Buffer PA&lt;br/&gt;radio adaptativo\"]\n  buffer --&gt; score[\"P_score&lt;br/&gt;puntaje compuesto\"]\n  score --&gt; top10[\"10 cuencas&lt;br/&gt;prioritarias\"]\n  top10 --&gt; terminals[\"Terminales H2&lt;br/&gt;buffers de 50 km\"]\n  terminals --&gt; export[\"Exportación&lt;br/&gt;Excel, SHP y DuckDB\"]\n\n\n\n\nFigure 12.2: Flujo lineal de construcción de la base analítica y productos de priorización.\n\n\n\n\n\nLa base DuckDB queda organizada en seis tablas:\n\n\n\nTable 12.3: Esquema de tablas creado para sostener consultas posteriores.\n\n\n\n\n\n\n\n\n\n\nTabla\nContenido\nUso posterior\n\n\n\n\nmrct_panel\nPanel MRCT completo.\nConsultar trayectorias, resiliencia, dominio, velocidad, aceleración y jerk.\n\n\nbasins\nAtributos y geometría resumida de cuencas.\nConstruir mapas, cruces espaciales y visualizaciones.\n\n\naccessibility\nCentroide, distancia a Punta Arenas, comuna, anillo y pertenencia comunal.\nFiltrar cuencas por factibilidad preliminar.\n\n\njerk_events\nEventos con jerk no nulo, percentiles, signo y clase.\nIdentificar eventos extremos por año, comuna o tipo de evento.\n\n\nfield_priority\nRanking final de las diez cuencas seleccionadas dentro del buffer.\nAlimentar reportes, fichas de terreno y mapas.\n\n\nterminal_results\nCuencas calificadas por terminal de hidrógeno verde.\nRevisar señales ecosistémicas cerca de infraestructura estratégica.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-control-calidad-jerk",
     "href": "jerk.html#sec-control-calidad-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.4 Control de calidad y cobertura",
     "text": "12.4 Control de calidad y cobertura\nAntes de priorizar cuencas se revisó la disponibilidad anual de jerk. La tabla distingue el total regional de cuencas, las cuencas con jerk válido y el porcentaje de cobertura.\n\n\n\nTable 12.4: Disponibilidad regional de jerk en la serie MRCT 2013-2025.\n\n\n\n\n\nAño\nCuencas totales\nCuencas con jerk\nCobertura\n\n\n\n\n2013\n21.040\n0\n0,0%\n\n\n2014\n21.040\n0\n0,0%\n\n\n2015\n21.040\n0\n0,0%\n\n\n2016\n21.040\n7.999\n38,0%\n\n\n2017\n21.040\n6.603\n31,4%\n\n\n2018\n21.040\n6.932\n32,9%\n\n\n2019\n21.040\n6.744\n32,1%\n\n\n2020\n21.040\n6.921\n32,9%\n\n\n2021\n21.040\n8.390\n39,9%\n\n\n2022\n21.040\n4.936\n23,5%\n\n\n2023\n21.040\n3.833\n18,2%\n\n\n2024\n21.040\n3.692\n17,5%\n\n\n2025\n21.040\n3.770\n17,9%\n\n\n\n\n\n\nLa baja cobertura relativa obliga a usar percentiles con cautela. La ausencia de jerk válido en una cuenca no implica estabilidad ecosistémica; puede reflejar falta de datos suficientes, calidad de observación, restricciones de cálculo o problemas de disponibilidad en los insumos anuales.\nLa distribución completa de clases en el panel es:\n\n\n\nTable 12.5: Distribución de clases de jerk en el panel MRCT.\n\n\n\n\n\nClase de jerk\nEventos\n\n\n\n\nNeutro\n227.365\n\n\nIntensificación leve\n12.107\n\n\nReversión leve\n12.000\n\n\nReversión fuerte\n11.205\n\n\nIntensificación fuerte\n10.843",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-eventos-jerk",
     "href": "jerk.html#sec-eventos-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.5 Eventos extremos de jerk",
     "text": "12.5 Eventos extremos de jerk\nEl análisis materializó 59.820 eventos con jerk no nulo en 11.517 cuencas. Para cada evento se calcularon dos percentiles:\n\npercentil anual, que compara una cuenca con otras cuencas del mismo año;\npercentil global, que compara el evento con todos los eventos de la serie.\n\nEl percentil anual es el criterio principal de selección porque permite interpretar cada evento dentro de su contexto temporal. Un evento en p90 anual es relevante aunque el año completo haya sido menos activo que otros.\n\n\n\nTable 12.6: Diez eventos regionales de mayor magnitud absoluta de jerk.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRID\nAño\nJerk\nTipo\nPercentil anual\nRES\nComuna\n\n\n\n\n20780\n2016\n-19,3385\nReversión\n100,0\n0,00202\nTorres del Paine\n\n\n12614\n2024\n-18,1910\nReversión\n100,0\n0,00042\nNatales\n\n\n16666\n2024\n-17,5785\nReversión\n100,0\n0,00047\nNatales\n\n\n16141\n2025\n17,4068\nIntensificación\n100,0\n0,00022\nNatales\n\n\n6537\n2017\n-16,3079\nReversión\n100,0\n0,00321\nCabo de Hornos\n\n\n12521\n2024\n15,8616\nIntensificación\n99,9\n0,00218\nNatales\n\n\n963\n2023\n15,6354\nIntensificación\n100,0\n0,10950\nPunta Arenas\n\n\n19883\n2021\n-15,4961\nReversión\n100,0\n0,00015\nNatales\n\n\n43\n2024\n-15,3694\nReversión\n99,9\n0,00130\nPunta Arenas\n\n\n20069\n2019\n15,3110\nIntensificación\n100,0\n0,02494\nNatales\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 12.3: Eventos regionales de mayor magnitud absoluta de jerk en la serie MRCT.\n\n\n\n\n\n\n\n\n\nFigure 12.4: Eventos regionales de jerk iguales o superiores al percentil 95. El mapa entrega contexto espacial antes de filtrar por el entorno operacional de Punta Arenas.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-cruce-territorial-jerk",
     "href": "jerk.html#sec-cruce-territorial-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.6 Buffer operacional de Punta Arenas",
     "text": "12.6 Buffer operacional de Punta Arenas\nLa nueva versión del análisis abandona la selección regional 5+5 y usa un criterio único: top 10 por P_score dentro del área operacional de Punta Arenas.\nUna cuenca entra al conjunto candidato si cumple al menos una de estas condiciones:\n\npertenece a la comuna de Punta Arenas (CUT_COM = 12101);\nsu centroide está dentro del radio operativo adaptativo desde el centro urbano de Punta Arenas.\n\nEl notebook explora combinaciones de radio y percentil anual. La combinación escogida fue 80 km y jerk igual o superior al p90 anual, porque es el radio más pequeño evaluado que garantiza más de diez cuencas calificadas con el umbral más exigente.\n\n\n\nTable 12.7: Exploración de parámetros para el buffer operativo de Punta Arenas.\n\n\n\n\n\nRadio\nUmbral anual\nCuencas calificadas\n\n\n\n\n80 km\np90\n364\n\n\n80 km\np85\n484\n\n\n120 km\np90\n443\n\n\n150 km\np90\n634\n\n\n200 km\np90\n1.100\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart TB\n  start[\"Parámetros iniciales&lt;br/&gt;radios 80, 120, 150, 200 km&lt;br/&gt;umbrales p90, p85, p80, p75\"] --&gt; count[\"Contar cuencas calificadas\"]\n  count --&gt; decision{\"Hay al menos&lt;br/&gt;10 candidatas?\"}\n  decision -- \"Si\" --&gt; choose[\"Elegir radio menor&lt;br/&gt;con umbral mas exigente\"]\n  decision -- \"No\" --&gt; relax[\"Ampliar radio o relajar umbral\"]\n  relax --&gt; count\n  choose --&gt; result[\"Resultado usado&lt;br/&gt;80 km + p90 anual&lt;br/&gt;364 cuencas\"]\n\n\n\n\nFigure 12.5: Lógica de diagnóstico del buffer operativo y ajuste de parámetros.\n\n\n\n\n\n\n\n\n\n\n\nFigure 12.6: Cuencas calificadas dentro del entorno operacional de Punta Arenas. La visualización se concentra en el área de análisis y no en toda la región.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-puntaje-jerk",
     "href": "jerk.html#sec-puntaje-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.7 Puntaje de priorización",
     "text": "12.7 Puntaje de priorización\nPara pasar desde eventos individuales a cuencas candidatas se construyó un puntaje compuesto, denominado P_score. En esta versión, el puntaje se calcula exclusivamente sobre las 364 cuencas calificadas del buffer, no sobre todo el conjunto regional.\nP = 0,35 \\cdot J^* + 0,20 \\cdot R^* + 0,15 \\cdot E^* + 0,15 \\cdot L^* + 0,15 \\cdot A^*\n\n\n\nTable 12.8: Componentes del puntaje compuesto de prioridad.\n\n\n\n\n\n\n\n\n\n\n\nComponente\nVariable base\nPeso\nQué representa\n\n\n\n\nJ^*\njerk_pct_global\n0,35\nMagnitud relativa del evento abrupto.\n\n\nR^*\nPT\n0,20\nPotencial de transición o vulnerabilidad ecosistémica.\n\n\nE^*\nDomain_local\n0,15\nDiferencia de la cuenca respecto de su entorno local.\n\n\nL^*\nSENS\n0,15\nSensibilidad climática o exposición a forzantes.\n\n\nA^*\n1 - dist_pa_km\n0,15\nAccesibilidad relativa dentro del conjunto candidato.\n\n\n\n\n\n\nLos componentes se normalizan por rango percentil dentro del buffer. Esto evita que valores extremos dominen la escala y hace que las dimensiones sean comparables. El rango observado de P_score fue de 0,078 a 0,886.\n\n\n\n\n\n\nFigure 12.7: Distribución espacial del P_score dentro del buffer operativo de Punta Arenas.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-diez-cuencas-jerk",
     "href": "jerk.html#sec-diez-cuencas-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.8 Diez cuencas candidatas",
     "text": "12.8 Diez cuencas candidatas\nLa tabla siguiente presenta las diez cuencas priorizadas por el flujo actualizado. Todas pertenecen a la comuna de Punta Arenas y fueron seleccionadas por P_score dentro del conjunto candidato.\n\n\n\nTable 12.9: Diez cuencas candidatas para validación en terreno según el flujo actualizado.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrioridad\nRID\nComuna\nAño crítico\nJerk\nPercentil anual\nTipo de evento\nRES\nDistancia a PA (km)\nAnillo\nP_score\n\n\n\n\n1\n1641\nPunta Arenas\n2019\n4,2523\n97,1\nIntensificación\n0,00014\n51,7\nIntermedio\n0,8856\n\n\n2\n1298\nPunta Arenas\n2016\n-4,4038\n99,3\nReversión\n0,00028\n65,7\nIntermedio\n0,8701\n\n\n3\n1602\nPunta Arenas\n2017\n-8,0053\n99,9\nReversión\n0,00050\n37,8\nCercano\n0,8567\n\n\n4\n440\nPunta Arenas\n2018\n6,2027\n98,9\nIntensificación\n0,00099\n83,2\nIntermedio\n0,8539\n\n\n5\n244\nPunta Arenas\n2017\n-5,7977\n99,6\nReversión\n0,00001\n166,4\nExtendido\n0,8485\n\n\n6\n2712\nPunta Arenas\n2018\n4,8345\n98,0\nIntensificación\n0,00144\n83,2\nIntermedio\n0,8271\n\n\n7\n465\nPunta Arenas\n2017\n-4,8793\n99,2\nReversión\n0,00012\n153,9\nExtendido\n0,8043\n\n\n8\n783\nPunta Arenas\n2016\n-3,8285\n98,7\nReversión\n0,00053\n78,4\nIntermedio\n0,8026\n\n\n9\n1553\nPunta Arenas\n2018\n-3,3516\n94,7\nReversión\n0,00049\n59,3\nIntermedio\n0,8025\n\n\n10\n1635\nPunta Arenas\n2020\n-3,2286\n97,1\nReversión\n0,00003\n53,6\nIntermedio\n0,7966\n\n\n\n\n\n\nLa selección muestra una mezcla de intensificaciones y reversiones fuertes, con predominio de cuencas de resiliencia muy baja o Colapso_Potencial. Aunque varias cuencas están en anillo intermedio, dos permanecen en anillo extendido por pertenecer a la comuna de Punta Arenas pese a estar lejos del centro urbano. Esa diferencia debe quedar visible en la planificación logística.\n\n\n\n\n\n\nFigure 12.8: Diez cuencas prioritarias dentro del entorno operacional de Punta Arenas, numeradas según P_score.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-series-temporales-jerk",
     "href": "jerk.html#sec-series-temporales-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.9 Lectura de series temporales",
     "text": "12.9 Lectura de series temporales\nPara las tres cuencas de mayor puntaje se revisaron series temporales completas 2013-2025 de Domain, Velocidad, Aceleracion, Jerk y RES. Esta lectura es necesaria porque un ranking por jerk puede seleccionar picos aislados. La serie permite distinguir si el evento abrupto aparece como una ruptura puntual, una intensificación dentro de una tendencia o una reversión después de varios años de alejamiento del dominio.\n\n\n\n\n\n\nFigure 12.9: Series temporales de las tres cuencas con mayor P_score. La línea vertical roja indica el año crítico de jerk.\n\n\n\nEsta lectura debe repetirse para cualquier cuenca que pase a planificación de terreno. Una cuenca no debería visitarse solo porque aparece en el top 10; debería visitarse porque su serie temporal formula una pregunta territorial clara.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-terminales-h2-jerk",
     "href": "jerk.html#sec-terminales-h2-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.10 Terminales estratégicos de hidrógeno verde",
     "text": "12.10 Terminales estratégicos de hidrógeno verde\nLa nueva versión del notebook agrega una lectura específica para terminales marítimos asociados al potencial traslado o exportación de hidrógeno verde y derivados. La lógica es preventiva: las cuencas cercanas a infraestructura estratégica que ya muestran jerk elevado constituyen zonas donde conviene levantar una línea base territorial más cuidadosa.\n\n\n\nTable 12.10: Terminales estratégicos incorporados al análisis de hidrógeno verde.\n\n\n\n\n\n\n\n\n\n\n\nTerminal\nLatitud\nLongitud\nRol preliminar\n\n\n\n\nMuelle Laredo\n-52,9558\n-70,8202\nPuerto mixto al norte de Punta Arenas; candidato a exportación de hidrógeno o amoníaco.\n\n\nTerminal Cabo Negro\n-52,9394\n-70,8105\nTerminal de combustibles y plataforma potencial para transformación energética.\n\n\nTerminal Marítimo San Gregorio\n-52,6232\n-70,2007\nTerminal en el Estrecho de Magallanes, próximo a zonas de menor intervención antrópica relativa.\n\n\n\n\n\n\nPara cada terminal se construyó un buffer de 50 km. Dentro de ese radio se seleccionaron cuencas con jerk igual o superior al p85 anual y se ordenaron por P_score. Las cuencas compartidas entre terminales se mantienen explícitas, porque Laredo y Cabo Negro están espacialmente próximos y pueden capturar señales similares.\n\n\n\nTable 12.11: Resumen de cuencas calificadas por terminal estratégico.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerminal\nCuencas en buffer\nCuencas con jerk &gt;= p85\nRID superior\nJerk del RID superior\nRES\nClase\n\n\n\n\nMuelle Laredo\n597\n20\n1808\n4,0692\n0,00208\nIntensificación fuerte\n\n\nTerminal Cabo Negro\n607\n20\n1808\n4,0692\n0,00208\nIntensificación fuerte\n\n\nTerminal Marítimo San Gregorio\n693\n11\n5258\n-2,3849\n0,00075\nReversión fuerte\n\n\n\n\n\n\n\n\n\nTable 12.12: Primeras cuencas calificadas por terminal de hidrógeno verde.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerminal\nRanking\nRID\nComuna\nAño crítico\nJerk\nTipo\nDistancia al terminal (km)\nP_score\n\n\n\n\nMuelle Laredo\n1\n1808\nPunta Arenas\n2016\n4,0692\nIntensificación\n30,4\n0,7032\n\n\nMuelle Laredo\n2\n2213\nPunta Arenas\n2023\n3,6748\nIntensificación\n21,4\n0,6766\n\n\nMuelle Laredo\n3\n9116\nPorvenir\n2019\n3,6215\nIntensificación\n33,1\n0,6739\n\n\nTerminal Cabo Negro\n1\n1808\nPunta Arenas\n2016\n4,0692\nIntensificación\n32,2\n0,7032\n\n\nTerminal Cabo Negro\n2\n2213\nPunta Arenas\n2023\n3,6748\nIntensificación\n20,1\n0,6766\n\n\nTerminal Cabo Negro\n3\n9116\nPorvenir\n2019\n3,6215\nIntensificación\n33,3\n0,6739\n\n\nTerminal Marítimo San Gregorio\n1\n5258\nSan Gregorio\n2016\n-2,3849\nReversión\n33,5\n0,5343\n\n\nTerminal Marítimo San Gregorio\n2\n9061\nPorvenir\n2024\n-2,7341\nReversión\n45,3\n0,5010\n\n\nTerminal Marítimo San Gregorio\n3\n5247\nSan Gregorio\n2021\n-3,1516\nReversión\n15,4\n0,3651\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 12.10: Cuencas con jerk elevado en buffers de 50 km alrededor de terminales estratégicos de hidrógeno verde.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-uso-terreno-jerk",
     "href": "jerk.html#sec-uso-terreno-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.11 Uso en planificación de terreno",
     "text": "12.11 Uso en planificación de terreno\nLa selección por jerk debe alimentar una reunión técnica y territorial antes de definir rutas. En esa revisión se recomienda trabajar con cuatro listas:\n\nlista prioritaria, con las diez cuencas del ranking del buffer de Punta Arenas;\nlista logística, con cuencas cercanas o visitables dentro del mismo recorrido;\nlista estratégica H2, con cuencas próximas a Muelle Laredo, Cabo Negro y San Gregorio;\nlista de reemplazo, con cuencas alternativas por si falla el acceso, el clima o el permiso.\n\nLa reunión debe revisar caminos, huellas, portones, predios, restricciones de propiedad, áreas protegidas, infraestructura, posibilidad de vuelo de dron, puntos seguros de medición, pertinencia territorial y antecedentes locales de incendios, inundaciones, sequías, obras, ganadería, extracción, cortes de camino o nieve persistente.\nEl producto esperado no es reemplazar el ranking, sino convertirlo en un plan de campaña realista: qué cuencas se visitan, cuáles quedan como respaldo, qué hipótesis se validan y qué observaciones se necesitan en cada sitio.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-fichas-jerk",
     "href": "jerk.html#sec-fichas-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.12 Fichas de terreno derivadas",
-    "text": "12.12 Fichas de terreno derivadas\nCada cuenca que avance a terreno debe transformarse en una ficha operativa. La base generada por este análisis permite precargar RID, comuna, año crítico, tipo de evento, Jerk, RES, coordenadas, distancia a Punta Arenas y contexto H2V cuando corresponda.\nLa estructura única de registro se define en Section 15.2. Este capítulo aporta la señal analítica; la ficha convierte esa señal en observaciones de terreno comparables mediante el protocolo IEO descrito en Section 14.2. Así se evita que el equipo reciba sólo coordenadas y se asegura que cada visita tenga una pregunta de validación explícita.",
+    "text": "12.12 Fichas de terreno derivadas\nCada cuenca que avance a terreno debe transformarse en una ficha operativa. La base generada por este análisis permite precargar RID, comuna, año crítico, tipo de evento, Jerk, RES, coordenadas, distancia a Punta Arenas y contexto H2V cuando corresponda.\nLa estructura única de registro se define en Section 18.2. Este capítulo aporta la señal analítica; la ficha convierte esa señal en observaciones de terreno comparables mediante el protocolo IEO descrito en Section 17.4. Así se evita que el equipo reciba sólo coordenadas y se asegura que cada visita tenga una pregunta de validación explícita.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-productos-jerk",
     "href": "jerk.html#sec-productos-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.13 Productos exportados",
     "text": "12.13 Productos exportados\nLa nueva versión del flujo exporta productos tabulares, espaciales y consultables:\n\n\n\nTable 12.13: Productos exportados por el notebook actualizado.\n\n\n\n\n\n\n\n\n\n\nProducto\nFormato\nContenido\n\n\n\n\ncuencas_prioritarias_jerk_10.xlsx\nExcel\nHojas Buffer_top10, Terminales_H2 y Eventos_reg_p95.\n\n\ncuencas_prioritarias_top10.shp\nShapefile\nGeometría de las diez cuencas prioritarias.\n\n\ncuencas_terminales_h2.shp\nShapefile\nGeometría de cuencas calificadas por terminal.\n\n\nmrct_jerk_analysis.db\nDuckDB\nTablas analíticas para consulta posterior.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-limitaciones-jerk",
     "href": "jerk.html#sec-limitaciones-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.14 Limitaciones",
     "text": "12.14 Limitaciones\nEl análisis tiene limitaciones que deben mantenerse visibles:\n\nel jerk detecta discontinuidades, no causas;\nun evento extremo puede deberse a cambio ecológico real, ruido, nube, nieve, mosaico débil, cambio de cobertura temporal o efecto metodológico;\nla distancia a Punta Arenas y a terminales se calculó como aproximación euclidiana, no como tiempo real de viaje;\npertenecer a la comuna de Punta Arenas no implica cercanía al centro urbano;\nel análisis de terminales es una lectura espacial preliminar y no reemplaza evaluación ambiental, modelación hidrológica ni línea base de proyecto;\nla selección no incorpora todavía permisos, propiedad, estado de caminos, conocimiento local ni seguridad de vuelo;\nlas coberturas anuales de jerk son incompletas, por lo que los percentiles deben interpretarse como señales de priorización y no como diagnóstico definitivo.\n\nEstas limitaciones no invalidan el análisis. Definen su uso correcto: una herramienta para orientar dónde mirar primero, qué preguntas llevar a terreno y dónde conviene anticipar una línea base más fina.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
     "objectID": "jerk.html#sec-cierre-jerk",
     "href": "jerk.html#sec-cierre-jerk",
-    "title": "12  Selección de Cuencas",
+    "title": "12  Preevaluación de Cuencas",
     "section": "12.15 Cierre operativo",
     "text": "12.15 Cierre operativo\nLa selección actualizada convierte el panel MRCT en una agenda preliminar de validación territorial. El procesamiento identificó eventos abruptos, construyó una base consultable, priorizó diez cuencas del entorno operacional de Punta Arenas y agregó una lectura estratégica para terminales vinculados al hidrógeno verde.\nEl siguiente paso no es salir directamente a esas diez cuencas ni asumir impacto por proximidad a infraestructura. El paso correcto es someter la lista a revisión aplicada: accesibilidad real, conversación con actores locales, evaluación de rutas, permisos, clima, seguridad, pertinencia territorial y contraste con antecedentes de proyectos energéticos. Con esa revisión, el ranking puede transformarse en un plan de terreno con sitios principales, sitios alternativos y preguntas de validación claras.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Selección de Cuencas</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Preevaluación de Cuencas</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html",
-    "href": "planificacion_terreno.html",
-    "title": "13  Planificación de Campaña",
+    "objectID": "cuencas_seleccionadas.html",
+    "href": "cuencas_seleccionadas.html",
+    "title": "13  Cuencas Seleccionadas",
     "section": "",
-    "text": "13.1 Preparación cartográfica e inteligencia de terreno\nLa ejecución de una campaña de validación empírica en la Región de Magallanes impone restricciones operativas superlativas. A los retos climáticos del extremo sur —viento racheado, frío, lluvia repentina— y a las extensas distancias entre cuencas, se suma el cuidado y gestión de herramientas tecnológicas (drones, sensores, computadores) cuya autonomía decae drásticamente a bajas temperaturas.\nEste capítulo detalla el marco logístico y el itinerario crítico que actúa como guía rectora de cada jornada, diseñado para proteger la integridad del equipo humano y maximizar el rendimiento científico de la expedición. La preselección técnica que alimenta esta planificación se presenta en Section 12.8 y Section 12.10; las fichas que se deben llevar a terreno se definen en Section 15.2.\nAl carecer de cobertura celular y señal 4G en extensas zonas rurales y esteparias —fuera del buffer urbano directo—, es obligatorio preparar “inteligencia de terreno” offline:",
+    "text": "13.1 Mapa web operativo\nEste capítulo consolida las cuencas seleccionadas para la campaña Magallanes 2026. Su objetivo es funcionar como una hoja de terreno: permite revisar el mapa web, comparar prioridades, ubicar puntos de acceso y consultar una ficha breve por cuenca antes de salir o durante el gabinete nocturno.\nLa selección proviene de las capas data/cuencas_seleccionadas/cuencas_seleccionadas_v1.shp y data/cuencas_seleccionadas/accesos_cuencas_v1.shp. Las distancias se calculan de manera aproximada desde la base Almasu en Punta Arenas; por lo tanto, deben usarse como referencia logística preliminar y no como tiempo real de conducción.\nEl mapa web integra los polígonos de cuencas y los puntos de acceso. Permite revisar el contexto espacial, activar capas base y abrir los atributos principales de cada cuenca.\n: Mapa web de cuencas seleccionadas y puntos de acceso para terreno. {#fig-mapa-web-cuencas-seleccionadas}",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cuencas Seleccionadas</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-inteligencia-terreno-offline",
-    "href": "planificacion_terreno.html#sec-inteligencia-terreno-offline",
-    "title": "13  Planificación de Campaña",
+    "objectID": "cuencas_seleccionadas.html#sec-criterios-cuencas-seleccionadas",
+    "href": "cuencas_seleccionadas.html#sec-criterios-cuencas-seleccionadas",
+    "title": "13  Cuencas Seleccionadas",
+    "section": "13.2 Criterios de selección",
+    "text": "13.2 Criterios de selección\nLas cuencas candidatas se identifican mediante análisis de jerk, entendido como cambio abrupto en la señal MRCT. La decisión final incorpora además accesibilidad, seguridad y utilidad para la validación territorial.\n\n\n\nTable 13.1: Criterios de selección operativa de cuencas.\n\n\n\n\n\n\n\n\n\n\nCriterio\nDescripción\nPeso\n\n\n\n\nSeñal MRCT\nAnomalía, cambio abrupto o estado de resiliencia crítico observado en la serie MRCT.\nAlta\n\n\nAccesibilidad\nDistancia a Punta Arenas, punto de acceso disponible y posibilidad de navegación offline.\nAlta\n\n\nRepresentatividad\nDiversidad de situaciones MRCT, estados de resiliencia, coberturas y sectores operativos.\nMedia\n\n\nFactibilidad logística\nSeguridad, tiempo de visita, combustible, clima, viento y posibilidad real de detenerse.\nAlta\n\n\nInterés científico\nVariables clave para validar en terreno: nieve, agua, cobertura, humedad, perturbación y fragmentación.\nMedia",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cuencas Seleccionadas</span>"
+    ]
+  },
+  {
+    "objectID": "cuencas_seleccionadas.html#sec-tabla-cuencas-seleccionadas",
+    "href": "cuencas_seleccionadas.html#sec-tabla-cuencas-seleccionadas",
+    "title": "13  Cuencas Seleccionadas",
+    "section": "13.3 Cuencas preseleccionadas",
+    "text": "13.3 Cuencas preseleccionadas\nLa tabla resume las 17 cuencas de la cartera operativa. El campo “prioridad” combina estado MRCT, presión territorial (PT), contexto estratégico y factibilidad preliminar; no reemplaza la decisión diaria, que depende de clima, permisos y seguridad.\n\n\n\nTable 13.2: Cartera operativa de cuencas seleccionadas para terreno.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRID\nContexto\nEvento\nSuperficie km2\nDist. base km\nPrioridad\nAcceso\nSector\n\n\n\n\n1885\nValidación general\nInestable\n37.2\n38.3\nMuy alta\n-52.79902, -71.04013\nNorponiente\n\n\n2205\nValidación general\nTransicion_Acelerada\n3.4\n42.6\nMuy alta\n-52.77871, -71.00823\nNorponiente\n\n\n4982\nValidación general\nTransicion_Acelerada\n11.5\n64.5\nMuy alta\n-52.59760, -70.64358\nEje norte intermedio\n\n\n4996\nValidación general\nTransicion_Acelerada\n6.1\n65.1\nMuy alta\n-52.61149, -70.55698\nEje norte intermedio\n\n\n1886\nValidación general\nTransicion_Acelerada\n4.2\n40.3\nAlta\n-52.80270, -70.97234\nNorponiente\n\n\n5257\nValidación general\nTransicion_Acelerada\n3.3\n51.8\nAlta\n-52.69572, -70.87232\nNorponiente\n\n\n5209\nValidación general\nTransicion_Acelerada\n4.1\n57.7\nAlta\n-52.66689, -70.64540\nEje norte intermedio\n\n\n5294\nValidación general\nInestable\n2.4\n100.1\nAlta\n-52.49686, -69.88991\nEje oriental\n\n\n5624\nValidación general\nTransicion_Acelerada\n6.0\n101.9\nAlta\n-52.49048, -69.88102\nEje oriental\n\n\n5048\nValidación general\nInestable\n7.6\n105.0\nAlta\n-52.49928, -69.78303\nEje oriental\n\n\n1808\nMuelle Laredo\nIntensificación\n18.2\n13.1\nAlta estratégica\n-53.15925, -71.06570\nPunta Arenas / Laredo\n\n\n5258\nTerminal Marítimo San Gregorio\nReversión\n24.7\n55.2\nAlta estratégica\n-52.66603, -70.68678\nEje norte intermedio\n\n\n3289\nValidación general\nTransicion_Acelerada\n4.3\n60.8\nMedia\n-52.61627, -70.94212\nNorponiente\n\n\n5247\nTerminal Marítimo San Gregorio\nReversión\n55.8\n65.5\nAlta estratégica\n-52.65109, -70.42263\nEje norte intermedio\n\n\n5263\nValidación general\nTransicion_Acelerada\n37.1\n80.5\nMedia\n-52.59156, -70.17194\nEje oriental\n\n\n5626\nValidación general\nTransicion_Acelerada\n7.9\n106.1\nMedia\n-52.48203, -69.79322\nEje oriental\n\n\n5623\nValidación general\nRecuperacion\n30.7\n106.1\nMedia\n-52.47845, -69.83296\nEje oriental",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cuencas Seleccionadas</span>"
+    ]
+  },
+  {
+    "objectID": "cuencas_seleccionadas.html#sec-fichas-rapidas-cuencas-seleccionadas",
+    "href": "cuencas_seleccionadas.html#sec-fichas-rapidas-cuencas-seleccionadas",
+    "title": "13  Cuencas Seleccionadas",
+    "section": "13.4 Ficha rápida por cuenca",
+    "text": "13.4 Ficha rápida por cuenca\nLas fichas siguientes están diseñadas para consulta rápida. La coordenada de acceso debe usarse como primer punto de navegación; el centroide sólo orienta la posición relativa del polígono de cuenca.\n\n13.4.1 Cuenca RID 1885\n\nPunto de acceso: -52.79902, -71.04013\nCentroide aproximado: -52.82289, -71.01963\nSuperficie: 37.2 km2\nDistancia a base Almasu: 38.3 km\nSector operativo: Norponiente\nContexto de selección: Validación general\nSeñal MRCT: Muy alta; estado Colapso_Potencial; RES 0.006; PT 158.1; evento Inestable en 2025.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.2 Cuenca RID 2205\n\nPunto de acceso: -52.77871, -71.00823\nCentroide aproximado: -52.78121, -71.00028\nSuperficie: 3.4 km2\nDistancia a base Almasu: 42.6 km\nSector operativo: Norponiente\nContexto de selección: Validación general\nSeñal MRCT: Muy alta; estado Colapso_Potencial; RES 0.002; PT 465.2; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.3 Cuenca RID 4982\n\nPunto de acceso: -52.59760, -70.64358\nCentroide aproximado: -52.60305, -70.64554\nSuperficie: 11.5 km2\nDistancia a base Almasu: 64.5 km\nSector operativo: Eje norte intermedio\nContexto de selección: Validación general\nSeñal MRCT: Muy alta; estado Colapso_Potencial; RES 0.005; PT 217.3; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.4 Cuenca RID 4996\n\nPunto de acceso: -52.61149, -70.55698\nCentroide aproximado: -52.62102, -70.53746\nSuperficie: 6.1 km2\nDistancia a base Almasu: 65.1 km\nSector operativo: Eje norte intermedio\nContexto de selección: Validación general\nSeñal MRCT: Muy alta; estado Colapso_Potencial; RES 0.005; PT 183.0; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.5 Cuenca RID 1886\n\nPunto de acceso: -52.80270, -70.97234\nCentroide aproximado: -52.79965, -70.97108\nSuperficie: 4.2 km2\nDistancia a base Almasu: 40.3 km\nSector operativo: Norponiente\nContexto de selección: Validación general\nSeñal MRCT: Alta; estado Colapso_Potencial; RES 0.020; PT 48.3; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.6 Cuenca RID 5257\n\nPunto de acceso: -52.69572, -70.87232\nCentroide aproximado: -52.69572, -70.87232\nSuperficie: 3.3 km2\nDistancia a base Almasu: 51.8 km\nSector operativo: Norponiente\nContexto de selección: Validación general\nSeñal MRCT: Alta; estado Colapso_Potencial; RES 0.009; PT 106.4; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.7 Cuenca RID 5209\n\nPunto de acceso: -52.66689, -70.64540\nCentroide aproximado: -52.66689, -70.64540\nSuperficie: 4.1 km2\nDistancia a base Almasu: 57.7 km\nSector operativo: Eje norte intermedio\nContexto de selección: Validación general\nSeñal MRCT: Alta; estado Colapso_Potencial; RES 0.012; PT 81.0; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.8 Cuenca RID 5294\n\nPunto de acceso: -52.49686, -69.88991\nCentroide aproximado: -52.49994, -69.90173\nSuperficie: 2.4 km2\nDistancia a base Almasu: 100.1 km\nSector operativo: Eje oriental\nContexto de selección: Validación general\nSeñal MRCT: Alta; estado Colapso_Potencial; RES 0.015; PT 66.3; evento Inestable en 2025.\nTiempo estimado de visita: 4-5 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.9 Cuenca RID 5624\n\nPunto de acceso: -52.49048, -69.88102\nCentroide aproximado: -52.48573, -69.88736\nSuperficie: 6.0 km2\nDistancia a base Almasu: 101.9 km\nSector operativo: Eje oriental\nContexto de selección: Validación general\nSeñal MRCT: Alta; estado Colapso_Potencial; RES 0.034; PT 28.8; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 4-5 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.10 Cuenca RID 5048\n\nPunto de acceso: -52.49928, -69.78303\nCentroide aproximado: -52.50850, -69.78381\nSuperficie: 7.6 km2\nDistancia a base Almasu: 105.0 km\nSector operativo: Eje oriental\nContexto de selección: Validación general\nSeñal MRCT: Alta; estado Colapso_Potencial; RES 0.026; PT 37.5; evento Inestable en 2025.\nTiempo estimado de visita: 4-5 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Priorizar observación de perturbación, fragmentación y humedad superficial.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.11 Cuenca RID 1808\n\nPunto de acceso: -53.15925, -71.06570\nCentroide aproximado: -53.16725, -71.10628\nSuperficie: 18.2 km2\nDistancia a base Almasu: 13.1 km\nSector operativo: Punta Arenas / Laredo\nContexto de selección: Muelle Laredo\nSeñal MRCT: Alta estratégica; estado Alta_Resiliencia; RES 1.000; PT 0.0; evento Intensificación en 2016.\nTiempo estimado de visita: 2-3 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Contrastar resiliencia alta con señales locales de presión o transición.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.12 Cuenca RID 5258\n\nPunto de acceso: -52.66603, -70.68678\nCentroide aproximado: -52.68302, -70.68629\nSuperficie: 24.7 km2\nDistancia a base Almasu: 55.2 km\nSector operativo: Eje norte intermedio\nContexto de selección: Terminal Marítimo San Gregorio\nSeñal MRCT: Alta estratégica; estado Resiliencia_Media; RES 0.588; PT 0.7; evento Reversión en 2016.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Documentar contrastes entre resiliencia media y señal dinámica.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.13 Cuenca RID 3289\n\nPunto de acceso: -52.61627, -70.94212\nCentroide aproximado: -52.61370, -70.92584\nSuperficie: 4.3 km2\nDistancia a base Almasu: 60.8 km\nSector operativo: Norponiente\nContexto de selección: Validación general\nSeñal MRCT: Media; estado Resiliencia_Media; RES 0.495; PT 1.0; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Documentar contrastes entre resiliencia media y señal dinámica.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.14 Cuenca RID 5247\n\nPunto de acceso: -52.65109, -70.42263\nCentroide aproximado: -52.65028, -70.42342\nSuperficie: 55.8 km2\nDistancia a base Almasu: 65.5 km\nSector operativo: Eje norte intermedio\nContexto de selección: Terminal Marítimo San Gregorio\nSeñal MRCT: Alta estratégica; estado Resiliencia_Media; RES 0.472; PT 1.1; evento Reversión en 2021.\nTiempo estimado de visita: 3-4 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Documentar contrastes entre resiliencia media y señal dinámica.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.15 Cuenca RID 5263\n\nPunto de acceso: -52.59156, -70.17194\nCentroide aproximado: -52.58789, -70.18012\nSuperficie: 37.1 km2\nDistancia a base Almasu: 80.5 km\nSector operativo: Eje oriental\nContexto de selección: Validación general\nSeñal MRCT: Media; estado Resiliencia_Media; RES 0.559; PT 0.8; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 4-5 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Documentar contrastes entre resiliencia media y señal dinámica.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.16 Cuenca RID 5626\n\nPunto de acceso: -52.48203, -69.79322\nCentroide aproximado: -52.48581, -69.79895\nSuperficie: 7.9 km2\nDistancia a base Almasu: 106.1 km\nSector operativo: Eje oriental\nContexto de selección: Validación general\nSeñal MRCT: Media; estado Resiliencia_Media; RES 0.408; PT 1.4; evento Transicion_Acelerada en 2025.\nTiempo estimado de visita: 4-5 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Documentar contrastes entre resiliencia media y señal dinámica.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.\n\n\n\n13.4.17 Cuenca RID 5623\n\nPunto de acceso: -52.47845, -69.83296\nCentroide aproximado: -52.45452, -69.85165\nSuperficie: 30.7 km2\nDistancia a base Almasu: 106.1 km\nSector operativo: Eje oriental\nContexto de selección: Validación general\nSeñal MRCT: Media; estado Resiliencia_Media; RES 0.496; PT 1.0; evento Recuperacion en 2025.\nTiempo estimado de visita: 4-5 h en sitio, sujeto a acceso efectivo y clima.\nFoco de observación: Documentar contrastes entre resiliencia media y señal dinámica.\nRegistro mínimo: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cuencas Seleccionadas</span>"
+    ]
+  },
+  {
+    "objectID": "cuencas_seleccionadas.html#sec-orden-visita-cuencas-seleccionadas",
+    "href": "cuencas_seleccionadas.html#sec-orden-visita-cuencas-seleccionadas",
+    "title": "13  Cuencas Seleccionadas",
+    "section": "13.5 Orden de visita propuesto",
+    "text": "13.5 Orden de visita propuesto\nLa ventana real de campaña es corta: llegada a Punta Arenas el 15 de junio, dos días completos de trabajo el 16 y 17 de junio, y medio día operativo el 18 de junio antes del retorno en la tarde. En junio la luz disponible es reducida, por lo que el plan debe privilegiar pocas cuencas por jornada, sectores agrupados y retorno con margen suficiente para respaldo de datos.\nEl orden preliminar agrupa cuencas por sector para reducir traslados y mantener holgura frente a viento, nieve, barro o permisos. La cartera completa tiene 17 cuencas, pero la campaña debe tratarla como una lista principal más reemplazos: en condiciones normales se recomienda levantar 4 a 6 cuencas con buen estándar, no intentar visitar todas.\n\n\n\nTable 13.3: Orden preliminar de visita ajustado a la ventana 15-18 de junio.\n\n\n\n\n\n\n\n\n\n\n\n\nDía\nCuenca(s)\nRuta\nSalida estimada\nRetorno estimado\n\n\n\n\n15 jun.\nSin levantamiento formal; setup y revisión offline\nLlegada, retiro de vehículo, compra logística, carga de baterías y validación de rutas\nPM\nNoche\n\n\n16 jun.\nRID 1808 + RID 1885/1886 o RID 2205\nPunta Arenas / Laredo y eje norponiente cercano; priorizar una cuenca estratégica y una o dos de colapso potencial\n09:00\n17:00\n\n\n17 jun.\nRID 4982, 4996 y/o 5209; alternativa RID 5258/5247\nEje norte intermedio; seleccionar máximo 2 cuencas profundas o 3 visitas rápidas si el clima acompaña\n08:30\n17:00\n\n\n18 jun. AM\nCuenca incompleta o reemplazo cercano: RID 1808, 5257, 3289 o cierre fotográfico\nMedio día operativo cerca de Punta Arenas; evitar rutas largas por retorno en la tarde\n08:30\n12:30\n\n\n18 jun. PM\nCierre de campaña\nRespaldo final, revisión de integridad de datos, devolución logística y traslado a aeropuerto\n13:00\nVuelo tarde",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cuencas Seleccionadas</span>"
+    ]
+  },
+  {
+    "objectID": "cuencas_seleccionadas.html#sec-control-previo-cuencas-seleccionadas",
+    "href": "cuencas_seleccionadas.html#sec-control-previo-cuencas-seleccionadas",
+    "title": "13  Cuencas Seleccionadas",
+    "section": "13.6 Control previo por cuenca",
+    "text": "13.6 Control previo por cuenca\nAntes de confirmar una cuenca para la jornada, verificar:\n\npunto de acceso cargado en dispositivo offline;\nruta vehicular y punto seguro de detención;\npronóstico de viento para vuelo de dron;\npermisos o restricciones de ingreso;\nobjetivo de validación MRCT de la cuenca;\nplan de respaldo si el sitio no es accesible;\nbatería, tarjetas SD, GPS y planilla IEO preparados con RID.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cuencas Seleccionadas</span>"
+    ]
+  },
+  {
+    "objectID": "logistica.html",
+    "href": "logistica.html",
+    "title": "14  Logística y Traslados",
     "section": "",
-    "text": "Mapas y cartas digitales (Tablets/GPS): generar proyectos georreferenciados offline (QGIS, Avenza Maps o similares) que incluyan la topología vial secundaria y terciaria.\nCoberturas y mosaicos MRCT: cargar como capa de fondo en las tablets los mosaicos satelitales MRCT (NDVI, Humedad, Falso Color) de los periodos más recientes. Esto permite contrastar in situ la visión satelital con el paisaje real y planificar rutas de acceso evitando turberas infranqueables que el mosaico evidencie.\nFichas precargadas: las 10 cuencas objetivos (ej. RIDs 1641, 1808, 1298) deben tener sus coordenadas y rutas de aproximación pre-validadas antes de abandonar la base.",
+    "text": "14.1 Vuelos\nEste capítulo funciona como registro vivo de la logística de la campaña Magallanes 2026. Reúne los antecedentes confirmados y los pendientes de cierre para coordinar vuelos, alojamiento, transporte terrestre, combustible, comunicaciones, presupuesto y controles mínimos antes de cada jornada.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-decision-cuencas-finales",
-    "href": "planificacion_terreno.html#sec-decision-cuencas-finales",
-    "title": "13  Planificación de Campaña",
-    "section": "13.2 Decisión de cuencas finales",
-    "text": "13.2 Decisión de cuencas finales\nLa lista final de terreno se decide a partir de dos insumos ya definidos: la priorización por tensión dinámica del análisis de jerk (Section 12.8) y la lectura prospectiva de terminales H2V (Section 12.10). Esta sección no redefine esos criterios; los transforma en una decisión operativa.\nCada cuenca debe mantener una razón de selección explícita y trazable hacia alguno de esos insumos. Las decisiones basadas sólo en cercanía, conveniencia logística o ranking aislado de MRCT se evitan. El resultado esperado es una lista principal y una lista de reemplazo, validadas técnica y logísticamente, que luego se precargan en las fichas de Section 15.2.",
+    "objectID": "logistica.html#sec-vuelos-logistica-terreno",
+    "href": "logistica.html#sec-vuelos-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "",
+    "text": "Tramo\nFecha\nAerolínea\nN° Reserva\nEstado\n\n\n\n\nSantiago -&gt; Punta Arenas\n2026-06-15\nSKY AIRLINE S.A.\nESZIKY\n✅ Confirmado\n\n\nPunta Arenas -&gt; Santiago\n2026-06-15\nSKY AIRLINE S.A.\nESZIKY\n✅ Confirmado\n\n\n\n\n14.1.1 Equipaje\n\n\n\nTable 14.1: Equipaje previsto para traslado aéreo.\n\n\n\n\n\nTipo\nContenido\nPeso estimado\n\n\n\n\nMaleta de mano / cabina\npendiente\npendiente kg\n\n\nMochila\nUso en terreno, computador\npendiente kg\n\n\n\n\n\n\n\n\n\n\n\n\nBaterías LiPo y dron\n\n\n\nVerificar restricciones de la aerolínea para baterías LiPo del DJI Mini 3 en cabina. Como criterio preliminar, no superar 160 Wh por batería y confirmar el máximo permitido de baterías extra en cabina antes del embarque.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-revision-actores-locales",
-    "href": "planificacion_terreno.html#sec-revision-actores-locales",
-    "title": "13  Planificación de Campaña",
-    "section": "13.3 Revisión con actores locales",
-    "text": "13.3 Revisión con actores locales\nAntes de la campaña se recomienda una reunión de revisión con personas o instituciones que conozcan el territorio. Esta instancia debe servir para validar accesos, anticipar restricciones y enriquecer la interpretación de cada cuenca.\nTemas mínimos de revisión:\n\ncaminos disponibles, estado estacional y puntos de cierre;\npropiedad privada, portones, permisos o restricciones de ingreso;\nzonas con viento fuerte, anegamiento, nieve, barro o baja conectividad;\nantecedentes recientes de incendios, crecidas, sequías, obras, ganadería, tala, drenajes o cambios de uso;\nsitios seguros para detenerse, medir y volar dron;\ncuencas alternativas visitables si falla el sitio principal.",
+    "objectID": "logistica.html#sec-alojamiento-logistica-terreno",
+    "href": "logistica.html#sec-alojamiento-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "14.2 Alojamiento",
+    "text": "14.2 Alojamiento\n\n\n\nTable 14.2: Alojamiento y base operativa de campaña.\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nLugar\nDirección\nContacto\nEstado\n\n\n\n\n2026-06-15 al pendiente\nBase Almasu\nArmando Sanhueza 965, Punta Arenas\npendiente\n✅ Base confirmada\n\n\npendiente\npendiente\npendiente\npendiente\n⏳ Pendiente\n\n\n\n\n\n\nLa base Almasu debe funcionar como punto de carga, respaldo de datos, revisión cartográfica offline y preparación diaria de equipos. Cualquier alojamiento complementario debe evaluarse según distancia real a las cuencas, disponibilidad de estacionamiento seguro, acceso temprano y factibilidad de carga eléctrica.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-vestuario-entornos-humedos",
-    "href": "planificacion_terreno.html#sec-vestuario-entornos-humedos",
-    "title": "13  Planificación de Campaña",
-    "section": "13.4 Logística de vestuario y entornos húmedos",
-    "text": "13.4 Logística de vestuario y entornos húmedos\nEl trabajo en terreno demandará cruzar vegas, humedales o cauces estacionales. La pérdida de calor corporal por humedad en los pies puede obligar a abortar prematuramente una jornada crítica.\n\nVestimenta integral: sistema de 3 capas (Térmica de contacto + Polar de abrigo + Chaqueta cortavientos Gore-Tex/Impermeable).\nProtección de piernas y pies: es imprescindible utilizar botas de agua de caña alta (con forro térmico) o calzado de trekking altamente impermeable complementado con polainas. Los pantalones deben ser repelentes al agua.\nManejo de calcetines: cada investigador debe cargar en su mochila de ataque 2 a 3 pares adicionales de calcetines técnicos de secado rápido o lana merino, para garantizar recambios inmediatos en caso de un anegamiento accidental.",
+    "objectID": "logistica.html#sec-transporte-terrestre-logistica-terreno",
+    "href": "logistica.html#sec-transporte-terrestre-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "14.3 Transporte Terrestre",
+    "text": "14.3 Transporte Terrestre\n\n\n\nTable 14.3: Transporte terrestre requerido para acceso a cuencas rurales.\n\n\n\n\n\n\n\n\n\n\n\n\n\nVehículo\nTipo\nTracción\nProveedor\nContacto\nEstado\n\n\n\n\npendiente\npendiente\n4x4 / AWD\npendiente\npendiente\n⏳ Pendiente\n\n\n\n\n\n\n\n\n\n\n\n\nCondición mínima del vehículo\n\n\n\nLa zona de Magallanes requiere vehículo 4x4 o AWD con buena altura libre al suelo para acceso a caminos rurales, ripio, barro, nieve o sectores con huellas secundarias. Verificar seguro, asistencia en ruta, cobertura en caminos no pavimentados, neumático de repuesto, kit de emergencia y política de devolución con barro o uso rural.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-equipo-rigor-observacion",
-    "href": "planificacion_terreno.html#sec-equipo-rigor-observacion",
-    "title": "13  Planificación de Campaña",
-    "section": "13.5 Estructura del equipo y rigor en la observación",
-    "text": "13.5 Estructura del equipo y rigor en la observación\nDado el carácter de esta investigación aplicada, es inviable mantener una ceguera experimental estricta, pues ambos investigadores —como autores y operadores del modelo— conocen íntimamente los resultados, trayectorias y expectativas de la MRCT para cada cuenca.\n\nAdaptación y rigor metodológico: esta falta de ceguera se neutraliza anclando la evaluación de manera inflexible a la rúbrica IEO definida en Section 14.2.1. La nota 1–5 se asignará observando estrictamente los descriptores físicos, prohibiendo que el juicio se vea influenciado por “lo que el modelo dice que debería haber aquí”.\nCompañerismo de campo: en terreno, el trabajo se sincronizará orgánicamente: mientras un investigador pilota el dron evaluando el panorama cenital, el otro avanzará en el transecto peatonal y liderará la captura fotográfica terrestre y el levantamiento en planillas IEO, dialogando constantemente para consolidar la nota.\n\nRoles adicionales que deben estar cubiertos:\n\nresponsable de navegación offline y rutas;\nresponsable de respaldo de datos al cierre de cada jornada;\ncontacto de seguridad externo con comunicación al menos una vez por jornada.",
+    "objectID": "logistica.html#sec-combustible-logistica-terreno",
+    "href": "logistica.html#sec-combustible-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "14.4 Puntos de Carga de Combustible",
+    "text": "14.4 Puntos de Carga de Combustible\n\n\n\nTable 14.4: Puntos preliminares de carga de combustible.\n\n\n\n\n\n\n\n\n\n\n\n\nNombre / Ubicación\nCoordenadas\nCombustible\nHorario\nObservación\n\n\n\n\npendiente\npendiente\npendiente\npendiente\npendiente\n\n\npendiente\npendiente\npendiente\npendiente\npendiente\n\n\n\n\n\n\nCompletar con estaciones de servicio en ruta a las cuencas seleccionadas. Para jornadas hacia el eje oriental, registrar además punto de carga alternativo, distancia desde base, horario efectivo y margen mínimo de autonomía antes de abandonar zona urbana.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-permisos-terreno",
-    "href": "planificacion_terreno.html#sec-permisos-terreno",
-    "title": "13  Planificación de Campaña",
-    "section": "13.6 Permisos y restricciones",
-    "text": "13.6 Permisos y restricciones\nLa carpeta de campaña debe registrar permisos y restricciones antes de salir. Esto incluye propiedad privada, áreas protegidas, infraestructura crítica, caminos interiores, borde costero, vuelos de dron y registro de imágenes sensibles.\nCuando existan dudas sobre ingreso o vuelo, la cuenca debe mantenerse como candidata condicionada hasta resolver la autorización.",
+    "objectID": "logistica.html#sec-comunicaciones-logistica-terreno",
+    "href": "logistica.html#sec-comunicaciones-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "14.5 Comunicaciones",
+    "text": "14.5 Comunicaciones\n\n\n\nTable 14.5: Sistemas de comunicación y contacto de emergencia.\n\n\n\n\n\nElemento\nDetalle\nEstado\n\n\n\n\nTeléfono móvil\npendiente - verificar cobertura en terreno\n⏳\n\n\nRadio VHF / HF\npendiente\n⏳\n\n\nGPS tracker / SPOT\npendiente\n⏳\n\n\nContacto emergencia en base\npendiente\n⏳\n\n\n\n\n\n\nCada jornada debe salir con un plan mínimo de comunicaciones: ruta prevista, cuencas objetivo, horario de retorno estimado, contacto de emergencia, punto de último contacto con señal y criterio de activación si el equipo no reporta retorno.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-itinerario-terreno",
-    "href": "planificacion_terreno.html#sec-itinerario-terreno",
-    "title": "13  Planificación de Campaña",
-    "section": "13.7 Itinerario detallado (5 días)",
-    "text": "13.7 Itinerario detallado (5 días)\nLa campaña está diseñada con un límite operativo de 250 a 300 km diarios y un máximo de 2 cuencas de validación profunda al día, salvaguardando tiempos esenciales para logística energética.\n\n13.7.1 Día 1: Inserción, setup logístico y cartográfico (Punta Arenas)\nAM:\n\nVuelo de llegada, desembarque y arriendo/retiro inmediato de camioneta 4x4.\nVisita a supermercado para aprovisionamiento pesado: raciones de marcha calóricas, almuerzos de terreno tipo sándwiches/frutos secos y abundante agua potable.\n\nPM (en la base de operaciones):\n\nRevisión cartográfica offline: verificación de que todas las capas MRCT, mosaicos y rutas de acceso de las RIDs priorizadas abren correctamente en los dispositivos desconectados de internet.\nSetup de baterías: carga masiva y al 100% de baterías de drones, cargadores portátiles, controles y celulares.\nCalibración vehicular: prueba e instalación del inversor de corriente 12V a 220V en la toma de la camioneta (vital para los días 2 y 3).\n\n\n\n13.7.2 Día 2: Eje Norte — Terminales Estratégicos Hidrógeno Verde (Laredo / Cabo Negro)\nPropósito: zonas de presión prospectiva H2V en un buffer de 50 km.\n\n08:30 – 09:30: traslado desde Punta Arenas hacia el cuadrante norte (Ruta 9). El trayecto es de fácil acceso vehicular, pero requiere atención a bifurcaciones menores.\n09:30 – 12:00 (Cuenca RID 1808 o aledañas):\n\nArribo y check de seguridad: evaluación del viento dominante. Si las ráfagas son tolerables, despliegue inmediato del dron para captura de mosaicos y videos cenitales.\nTransecto IEO: caminata de 45–60 min penetrando la cuenca. Foco visual exhaustivo en buscar marcas tempranas de perturbación o estrés hídrico que el MRCT capturó como Intensificación.\n\n12:00 – 14:00 (Hito Crítico Logístico): almuerzo protegido de la intemperie (cabina de camioneta o infraestructura cercana). Se conectan inmediatamente todas las baterías del dron descargadas al inversor 12V del vehículo.\n14:00 – 17:00 (Cuenca H2V N°2): desplazamiento a la segunda cuenca del área —aprovechando las baterías recién estabilizadas— y ejecución del mismo ciclo (Dron + Transecto Peatonal + Rúbrica IEO).\n17:00 – 18:30: retorno vial a Punta Arenas.\n20:00 – 21:00 (Gabinete Nocturno): consolidación de datos. Etiquetado ordenado de los archivos multimedia bajo nomenclatura RID_Dia_Foto/Dron. Vaciado de planillas físicas IEO a la base Excel.\n\n\n\n13.7.3 Día 3: Eje Anomalías Cinemáticas (Jerk Elevado p90)\nPropósito: cuencas con mayores quiebres temporales estructurales (ej. RID 1641, 1298, 1602) dentro del radio de 80 km.\n\n08:00 – 10:30: traslado hacia cuadrantes con cuencas de mayor prioridad dinámica. Las rutas pueden contemplar sectores esteparios expuestos donde el viento arreciará.\n10:30 – 12:30 (Cuenca Dinámica 1):\n\nSi el viento supera las especificaciones técnicas del dron, la misión aérea se aborta inmediatamente por seguridad.\nEl equipo concentra el 100% del esfuerzo en extender el transecto peatonal y enriquecer el archivo fotográfico terrestre, aumentando la toma de puntos IEO para suplir la visión aérea.\n\n12:30 – 14:30: almuerzo en tránsito. Carga constante de equipos electrónicos mediante la camioneta en movimiento. Cambio de calcetines preventivo si se atravesaron zonas anegadas.\n14:30 – 17:00 (Cuenca Dinámica 2): repetición del protocolo de evaluación visual directa (Fragmentación y Perturbación con máximo rigor, ya que suelen explicar los quiebres del Jerk).\n17:00 – 19:30: largo recorrido de regreso a la base matriz.\nNoche (Gabinete): respaldo cruzado (SD a notebook, notebook a Disco Duro/Nube).\n\n\n\n13.7.4 Día 4: Eje Remanente / Periurbano y Holguras\nPropósito: evaluar zonas colindantes al desarrollo urbano o absorber cuencas de reemplazo si hubo fallas climáticas los días previos.\n\n09:00 – 10:00: desplazamiento corto hacia humedales periurbanos o cuencas costeras limítrofes.\n10:00 – 12:30 (Cuenca 5): focalización en detectar fragmentación por subdivisiones prediales, zanjas clandestinas o perturbación histórica. El transecto se orienta hacia estas micro-rupturas.\n12:30 – 14:00: almuerzo ágil. La cercanía urbana facilita, en caso de extrema necesidad, buscar cafeterías o estaciones para cargar equipos pesados.\n14:00 – 16:30 (Cuenca 6 — Levantamiento de Cierre): última ejecución del IEO. Se busca el consenso final entre ambos investigadores para el cierre del catálogo.\n16:30 – 18:00: retorno final y limpieza gruesa del equipamiento (drones, calzado con barro).\n20:00 – 22:00 (Gabinete Final): primer cruce paramétrico in situ. Con los IEOs de las 6 cuencas listos, se puede trazar el primer gráfico de validación empírica preliminar.\n\n\n\n13.7.5 Día 5: Extracción y Retorno\n\nAM: doble auditoría de seguridad. Se verifica la redundancia de los datos guardados en distintos formatos (discos físicos y cloud). Inspección final del vehículo arrendado, lavado y devolución en el aeropuerto.\nPM: embarque de retorno, cerrando la campaña con la tranquilidad metodológica y técnica de haber documentado la verdad material del territorio magallánico.",
+    "objectID": "logistica.html#sec-presupuesto-logistica-terreno",
+    "href": "logistica.html#sec-presupuesto-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "14.6 Presupuesto de Campaña",
+    "text": "14.6 Presupuesto de Campaña\n\n\n\nTable 14.6: Presupuesto preliminar de campaña.\n\n\n\n\n\nÍtem\nMonto estimado\nEstado\n\n\n\n\nPasajes aéreos\npendiente\n✅\n\n\nAlojamiento\npendiente\n✅\n\n\nArriendo vehículo\npendiente\n⏳\n\n\nCombustible\npendiente\n⏳\n\n\nAlimentación\npendiente\n⏳\n\n\nImprevistos (10%)\npendiente\n⏳\n\n\nTotal\npendiente\n⏳",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-checklist-previo-terreno",
-    "href": "planificacion_terreno.html#sec-checklist-previo-terreno",
-    "title": "13  Planificación de Campaña",
-    "section": "13.8 Checklist previo",
-    "text": "13.8 Checklist previo\nAntes de salir:\n\ncuencas principales y reemplazos definidos;\nproyectos offline (QGIS / Avenza Maps) con mosaicos MRCT y rutas verificados en dispositivos desconectados;\nfichas precargadas con RID, comuna, coordenadas y métricas MRCT;\npermisos revisados;\npronóstico meteorológico revisado;\ndron, baterías (100%), hélices y tarjetas verificadas;\ninversor 12V instalado y probado en camioneta;\nsensores y GPS revisados;\n2–3 pares de calcetines adicionales por persona (mochila de ataque);\nbotiquín, sistema de 3 capas, botas impermeables, agua y comunicación disponibles;\nestructura de carpetas y nomenclatura de archivos definida (RID_Dia_Foto/Dron).",
+    "objectID": "logistica.html#sec-documentacion-permisos-logistica-terreno",
+    "href": "logistica.html#sec-documentacion-permisos-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "14.7 Documentación y Permisos",
+    "text": "14.7 Documentación y Permisos\n\n\n\nTable 14.7: Documentación y permisos mínimos antes de salir a terreno.\n\n\n\n\n\n\n\n\n\n\n\nDocumento / gestión\nResponsable\nEstado\nObservación\n\n\n\n\nCédulas / documentos de viaje\nCada integrante\n⏳\nVerificar vigencia antes del vuelo.\n\n\nLicencia de conducir\npendiente\n⏳\nRequisito para retiro de vehículo.\n\n\nPermisos de acceso predial\npendiente\n⏳\nConfirmar portones, propietarios y restricciones.\n\n\nAutorización / criterio de vuelo dron\nDenis Berroeta\n⏳\nRevisar viento, proximidad a infraestructura crítica y restricciones locales.\n\n\nSeguro / asistencia en ruta\npendiente\n⏳\nConfirmar cobertura en caminos rurales y ripiados.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
     ]
   },
   {
-    "objectID": "planificacion_terreno.html#sec-producto-planificacion-terreno",
-    "href": "planificacion_terreno.html#sec-producto-planificacion-terreno",
-    "title": "13  Planificación de Campaña",
-    "section": "13.9 Producto esperado",
-    "text": "13.9 Producto esperado\nEste capítulo deberá actualizarse cuando la campaña esté definida con:\n\ntabla de cuencas principales;\ntabla de cuencas de reemplazo;\nmapa de rutas por eje;\ncalendario definitivo (5 días);\nresponsables;\npermisos requeridos;\nriesgos principales y medidas de control;\nfichas precargadas según Section 15.2.",
+    "objectID": "logistica.html#sec-navegacion-rutas-logistica-terreno",
+    "href": "logistica.html#sec-navegacion-rutas-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "14.8 Navegación y Rutas",
+    "text": "14.8 Navegación y Rutas\n\n\n\nTable 14.8: Recursos de navegación requeridos para jornadas de terreno.\n\n\n\n\n\n\n\n\n\n\nRecurso\nEstado\nObservación\n\n\n\n\nPuntos de acceso de cuencas en dispositivo offline\n⏳\nCargar coordenadas de Tabla 13.2.\n\n\nMapas offline / proyecto QGIS o Avenza\n⏳\nIncluir caminos principales, secundarios y puntos de combustible.\n\n\nRutas diarias por eje operativo\n⏳\nDefinir antes de cada jornada según clima y prioridad.\n\n\nRuta alternativa / retorno seguro\n⏳\nRegistrar alternativa si hay cierre, barro, nieve o viento extremo.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Planificación de Campaña</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
+    ]
+  },
+  {
+    "objectID": "logistica.html#sec-control-diario-logistica-terreno",
+    "href": "logistica.html#sec-control-diario-logistica-terreno",
+    "title": "14  Logística y Traslados",
+    "section": "14.9 Control Diario",
+    "text": "14.9 Control Diario\n\n\n\nTable 14.9: Control logístico diario de la campaña.\n\n\n\n\n\n\n\n\n\n\nMomento\nControl\nEstado\n\n\n\n\nAntes de salir\nCombustible, clima, baterías, agua, comida, botiquín, capas de abrigo y ruta offline\n⏳\n\n\nEn ruta\nConfirmar accesibilidad, viento, señal móvil y seguridad de detención\n⏳\n\n\nEn sitio\nRegistrar hora, coordenada, condiciones, evidencia mínima y estado de vuelo dron\n⏳\n\n\nRetorno\nConfirmar llegada a base y registrar incidentes o ajustes\n⏳\n\n\nGabinete nocturno\nRespaldar datos, cargar equipos y actualizar plan del día siguiente\n⏳",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Logística y Traslados</span>"
+    ]
+  },
+  {
+    "objectID": "condiciones_terreno.html",
+    "href": "condiciones_terreno.html",
+    "title": "15  Condiciones de Terreno y Climáticas",
+    "section": "",
+    "text": "15.1 Contexto climático de junio\nEsta página concentra la revisión climática, el estado de accesos y las condiciones observadas en campo. Su función es apoyar decisiones diarias de salida, seguridad y vuelo de dron durante la campaña Magallanes 2026.\nJunio corresponde al inicio del invierno austral en Magallanes. Las condiciones pueden cambiar rápido entre Punta Arenas, sectores abiertos de estepa, pasos interiores y cuencas más altas.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Condiciones de Terreno y Climáticas</span>"
+    ]
+  },
+  {
+    "objectID": "condiciones_terreno.html#sec-contexto-climatico-junio",
+    "href": "condiciones_terreno.html#sec-contexto-climatico-junio",
+    "title": "15  Condiciones de Terreno y Climáticas",
+    "section": "",
+    "text": "Table 15.1: Condiciones climáticas esperadas para trabajo de terreno en junio.\n\n\n\n\n\n\n\n\n\n\nVariable\nRango esperado Punta Arenas\nCuencas cordilleranas o altas\n\n\n\n\nTemperatura media\n1 a 5 °C\n-5 a 0 °C\n\n\nTemperatura mínima\nHasta -5 °C\n-10 °C o menos\n\n\nPrecipitación\nAlta, lluvia o nieve\nNieve probable\n\n\nViento\n50 a 80 km/h frecuente\nHasta 100 km/h en pasos expuestos\n\n\nHoras de luz\n~9 horas/día\n~9 horas/día\n\n\nAmanecer / anochecer\n~09:00 / ~18:00\nSimilar\n\n\nNieve en cuencas altas\nMuy probable\nCobertura alta",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Condiciones de Terreno y Climáticas</span>"
+    ]
+  },
+  {
+    "objectID": "condiciones_terreno.html#sec-seguimiento-pronosticos",
+    "href": "condiciones_terreno.html#sec-seguimiento-pronosticos",
+    "title": "15  Condiciones de Terreno y Climáticas",
+    "section": "15.2 Seguimiento de pronósticos",
+    "text": "15.2 Seguimiento de pronósticos\nLa revisión de pronóstico debe hacerse cada noche y actualizarse antes de salir. Para decisiones de dron, el viento observado en sitio prevalece sobre el pronóstico.\n\n\n\nTable 15.2: Fuentes recomendadas para seguimiento climático y operativo.\n\n\n\n\n\nFuente\nURL / App\nResolución\nUso principal\n\n\n\n\nMeteochile\nhttps://www.meteochile.gob.cl\nProvincial\nAlertas oficiales\n\n\nWindy\nhttps://www.windy.com/?-53.197,-70.933,9\nAlta resolución\nViento, lluvia, nieve y ventanas horarias\n\n\nDJI Fly\nApp DJI Fly\nLocal\nCondiciones y restricciones de vuelo dron\n\n\nDGAC / DMC\nhttps://archivos.meteochile.gob.cl/portaldmc/metaer/metaer_wrf_estacion.php?codigo=PARENAS\nProvincial\nTemperatura, precipitación, viento y dirección del viento\n\n\n\n\n\n\n\n15.2.1 Registro diario de pronóstico\n\n\n\nTable 15.3: Registro de pronóstico por jornada.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nFuente\nT min °C\nT max °C\nViento km/h\nPrecipitación\nVentana de vuelo\n\n\n\n\n2026-06-15\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\n\n\n2026-06-16\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\n\n\n2026-06-17\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\n\n\n2026-06-18\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\n\n\n2026-06-19\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Condiciones de Terreno y Climáticas</span>"
+    ]
+  },
+  {
+    "objectID": "condiciones_terreno.html#sec-condiciones-acceso-cuenca",
+    "href": "condiciones_terreno.html#sec-condiciones-acceso-cuenca",
+    "title": "15  Condiciones de Terreno y Climáticas",
+    "section": "15.3 Condiciones de acceso por cuenca",
+    "text": "15.3 Condiciones de acceso por cuenca\nEsta tabla usa la cartera de cuencas seleccionadas de Tabla 13.2. Antes de cada salida se completa con el pronóstico específico de temperatura y viento, porque esas variables condicionan la seguridad del acceso y la posibilidad de vuelo de dron. Se asume uso de vehículo 4x4 durante toda la campaña.\n\n\n\nTable 15.4: Condiciones de acceso por cuenca priorizada.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRID\nSector\nDist. base km\nPunto de acceso\nTipo de vía\nT esperada °C\nViento esperado km/h\nCruce de agua\nObservaciones\n\n\n\n\n1885\nNorponiente\n38.3\n-52.79902, -71.04013\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n2205\nNorponiente\n42.6\n-52.77871, -71.00823\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n4982\nEje norte intermedio\n64.5\n-52.59760, -70.64358\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n4996\nEje norte intermedio\n65.1\n-52.61149, -70.55698\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n1886\nNorponiente\n40.3\n-52.80270, -70.97234\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5257\nNorponiente\n51.8\n-52.69572, -70.87232\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5209\nEje norte intermedio\n57.7\n-52.66689, -70.64540\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5294\nEje oriental\n100.1\n-52.49686, -69.88991\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5624\nEje oriental\n101.9\n-52.49048, -69.88102\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5048\nEje oriental\n105.0\n-52.49928, -69.78303\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n1808\nPunta Arenas / Laredo\n13.1\n-53.15925, -71.06570\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5258\nEje norte intermedio\n55.2\n-52.66603, -70.68678\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n3289\nNorponiente\n60.8\n-52.61627, -70.94212\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5247\nEje norte intermedio\n65.5\n-52.65109, -70.42263\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5263\nEje oriental\n80.5\n-52.59156, -70.17194\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5626\nEje oriental\n106.1\n-52.48203, -69.79322\npendiente\npendiente\npendiente\nSí / No\npendiente\n\n\n5623\nEje oriental\n106.1\n-52.47845, -69.83296\npendiente\npendiente\npendiente\nSí / No\npendiente",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Condiciones de Terreno y Climáticas</span>"
+    ]
+  },
+  {
+    "objectID": "condiciones_terreno.html#sec-alertas-restricciones-acceso",
+    "href": "condiciones_terreno.html#sec-alertas-restricciones-acceso",
+    "title": "15  Condiciones de Terreno y Climáticas",
+    "section": "15.4 Alertas y restricciones de acceso",
+    "text": "15.4 Alertas y restricciones de acceso\n\n\n\nTable 15.5: Alertas y restricciones relevantes para la campaña.\n\n\n\n\n\nAlerta o restricción\nFuente\nVigencia\nImpacto en campaña\n\n\n\n\npendiente\npendiente\npendiente\npendiente\n\n\n\n\n\n\nAntes de cada salida se debe verificar el estado de caminos, áreas protegidas y accesos con las instituciones o actores correspondientes:\n\nVialidad Magallanes: pendiente;\nCONAF Magallanes: pendiente;\npropietarios, administradores o encargados locales, si aplica.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Condiciones de Terreno y Climáticas</span>"
+    ]
+  },
+  {
+    "objectID": "condiciones_terreno.html#sec-criterios-cancelacion-terreno",
+    "href": "condiciones_terreno.html#sec-criterios-cancelacion-terreno",
+    "title": "15  Condiciones de Terreno y Climáticas",
+    "section": "15.5 Criterios de cancelación o postergación",
+    "text": "15.5 Criterios de cancelación o postergación\nLa visita a una cuenca se cancela o posterga si se cumple cualquiera de estas condiciones:\n\nviento sostenido mayor a 60 km/h en el sitio;\nvisibilidad menor a 100 m por niebla o nevada intensa;\ncamino de acceso cerrado por Vialidad, CONAF u otra autoridad competente;\ntemperatura menor a -15 °C;\nalerta meteorológica oficial activa para el sector;\ncruce de agua no seguro por crecida, hielo, profundidad o corriente;\ncualquier condición que impida retorno seguro a la base.\n\nPara el vuelo de dron aplican además los criterios específicos de Section 19.5. Puede haber visita terrestre sin vuelo si el acceso es seguro pero el viento, la lluvia, la nieve o la visibilidad impiden operar el equipo.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Condiciones de Terreno y Climáticas</span>"
+    ]
+  },
+  {
+    "objectID": "condiciones_terreno.html#sec-registro-condiciones-observadas",
+    "href": "condiciones_terreno.html#sec-registro-condiciones-observadas",
+    "title": "15  Condiciones de Terreno y Climáticas",
+    "section": "15.6 Registro de condiciones observadas en campo",
+    "text": "15.6 Registro de condiciones observadas en campo\nEsta tabla resume la condición real encontrada en cada cuenca. Debe completarse aunque la visita se suspenda, porque permite distinguir entre una cuenca no visitada por falta de tiempo y una cuenca no visitada por restricción climática o de acceso.\n\n\n\nTable 15.6: Registro de condiciones observadas durante la campaña.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nCuenca / RID\nT °C\nViento\nPrecipitación\nCobertura nieve\nAcceso real\nDron posible\n\n\n\n\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\nSí / No",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Condiciones de Terreno y Climáticas</span>"
+    ]
+  },
+  {
+    "objectID": "condiciones_terreno.html#sec-decision-diaria-salida",
+    "href": "condiciones_terreno.html#sec-decision-diaria-salida",
+    "title": "15  Condiciones de Terreno y Climáticas",
+    "section": "15.7 Decisión diaria de salida",
+    "text": "15.7 Decisión diaria de salida\nAl cierre de cada jornada se deja definida una decisión preliminar para el día siguiente:\n\n\n\nTable 15.7: Decisión operativa diaria según pronóstico, accesos y seguridad.\n\n\n\n\n\n\n\n\n\n\n\n\nFecha salida\nCuencas objetivo\nCuencas alternativa\nRiesgo principal\nDecisión\n\n\n\n\npendiente\npendiente\npendiente\npendiente\nSalir / Postergar / Cambiar ruta",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Condiciones de Terreno y Climáticas</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html",
+    "href": "equipamiento.html",
+    "title": "16  Equipamiento",
+    "section": "",
+    "text": "16.1 Resumen de Estado\nEsta hoja consolida el equipamiento mínimo para la campaña Terreno Magallanes 2026. Debe revisarse antes del vuelo, al preparar cada jornada y al cierre diario en base, dejando trazabilidad de los elementos verificados y de los pendientes que puedan afectar navegación, registro, seguridad o respaldo de datos.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-resumen-equipamiento-terreno",
+    "href": "equipamiento.html#sec-resumen-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "",
+    "text": "Table 16.1: Estado preliminar del equipamiento para Terreno Magallanes 2026.\n\n\n\n\n\nCategoría\nItems\nVerificados\nPendientes\n\n\n\n\nDrone\n1\n0\n1\n\n\nCámaras\n2\n0\n1\n\n\nGPS / Navegación\n2\n0\n2\n\n\nInstrumentos ambientales\npendiente\n0\npendiente\n\n\nSeguridad personal\npendiente\n0\npendiente\n\n\nComunicaciones\npendiente\n0\npendiente\n\n\nEnergía / Baterías\npendiente\n0\npendiente\n\n\nComputación / Datos\npendiente\n0\npendiente",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-drone-equipamiento-terreno",
+    "href": "equipamiento.html#sec-drone-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "16.2 Drone - DJI Mini 3",
+    "text": "16.2 Drone - DJI Mini 3\n\n\n\nTable 16.2: Checklist de dron DJI Mini 3 y accesorios.\n\n\n\n\n\nItem\nCant.\nVerificado\nObservación\n\n\n\n\nDJI Mini 3 (cuerpo)\n1\n☐\nVerificar firmware actualizado\n\n\nBatería DJI Mini 3\n3\n☐\nCarga completa antes de salir\n\n\nCargador hub\n1\n☐\n+ cable USB-C\n\n\nHélices de repuesto\n2 pares\n☐\n\n\n\nMando RC / control\n1\n☐\nVerificar pantalla operativa\n\n\nBolso/estuche transporte\n1\n☐\n\n\n\nTarjetas microSD\n2\n☐\nMín. 64GB cada una, formateadas\n\n\nCable OTG / transferencia\n1\n☐\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrío y baterías LiPo\n\n\n\nLa temperatura mínima en Magallanes en junio puede bajar de 0°C. Las baterías LiPo pierden capacidad en frío; mantenerlas protegidas y precalentarlas antes de cada vuelo.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-camaras-equipamiento-terreno",
+    "href": "equipamiento.html#sec-camaras-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "16.3 Cámaras",
+    "text": "16.3 Cámaras\n\n\n\nTable 16.3: Checklist de cámaras y accesorios de registro audiovisual.\n\n\n\n\n\nItem\nCant.\nVerificado\nObservación\n\n\n\n\nGoPro (modelo pendiente)\npendiente\n☐\nFirmware actualizado\n\n\nBaterías GoPro\npendiente\n☐\nCarga completa\n\n\nCargador GoPro\n1\n☐\n\n\n\nTarjetas microSD GoPro\npendiente\n☐\nFormateadas\n\n\nFunda/estuche impermeable\n1\n☐\nCondiciones lluviosas probables\n\n\nCámara adicional (DSLR/mirrorless)\npendiente\n☐\npendiente",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-gps-navegacion-equipamiento-terreno",
+    "href": "equipamiento.html#sec-gps-navegacion-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "16.4 GPS y Navegación",
+    "text": "16.4 GPS y Navegación\n\n\n\nTable 16.4: Checklist de navegación y puntos precargados.\n\n\n\n\n\n\n\n\n\n\n\nItem\nCant.\nVerificado\nObservación\n\n\n\n\nGPS Garmin (modelo pendiente)\n1\n☐\nCargar mapas de Magallanes\n\n\nBaterías GPS\npendiente\n☐\nPilas AA o batería interna cargada\n\n\nSmartphone con GPS offline\n1\n☐\nDescargar mapas offline (Maps.me / OsmAnd)\n\n\nWaypoints precargados\n☐\n☐\nCargar coordenadas de cuencas",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-instrumentos-ambientales-equipamiento-terreno",
+    "href": "equipamiento.html#sec-instrumentos-ambientales-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "16.5 Instrumentos Ambientales",
+    "text": "16.5 Instrumentos Ambientales\n\n\n\nTable 16.5: Checklist de instrumentos ambientales y materiales de medición.\n\n\n\n\n\nItem\nCant.\nVerificado\nObservación\n\n\n\n\nTermómetro/higrómetro digital\npendiente\n☐\npendiente\n\n\nAltímetro barométrico\npendiente\n☐\npendiente\n\n\nAnemómetro\npendiente\n☐\nVientos fuertes en Magallanes\n\n\nMedidor de conductividad agua\npendiente\n☐\npendiente\n\n\nTubos colectores de muestra agua\npendiente\n☐\npendiente\n\n\nClinómetro / medidor de pendiente\npendiente\n☐\npendiente\n\n\nCinta métrica / huincha\n1\n☐\n\n\n\nCuaderno de campo waterproof\n2\n☐\nRite in the Rain o similar\n\n\nLápices impermeables\npendiente\n☐",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-energia-carga-equipamiento-terreno",
+    "href": "equipamiento.html#sec-energia-carga-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "16.6 Energía y Carga",
+    "text": "16.6 Energía y Carga\n\n\n\nTable 16.6: Checklist de energía, carga y baterías de respaldo.\n\n\n\n\n\n\n\n\n\n\n\nItem\nCant.\nVerificado\nObservación\n\n\n\n\nPower bank (mín. 20.000 mAh)\n1\n☐\nPara GPS, smartphone, dron\n\n\nCargador multienchufes\n1\n☐\n\n\n\nCables USB-C / Lightning / micro-USB\npendiente\n☐\nSegún dispositivos\n\n\nPanel solar portátil\npendiente\n☐\nOpcional, días largos en junio\n\n\nBaterías AA de respaldo\n8+\n☐\nPara GPS y linternas",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-computacion-datos-equipamiento-terreno",
+    "href": "equipamiento.html#sec-computacion-datos-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "16.7 Computación y Datos",
+    "text": "16.7 Computación y Datos\n\n\n\nTable 16.7: Checklist de computación, transferencia y respaldo de datos.\n\n\n\n\n\nItem\nCant.\nVerificado\nObservación\n\n\n\n\nLaptop\n1\n☐\nPara descarga y revisión de datos en campo\n\n\nDisco duro externo o SSD\n1\n☐\nMín. 1TB para fotos/video drone\n\n\nUSB 3.0 lector de tarjetas\n1\n☐\n\n\n\nAcceso a fichas MRCT offline\n☐\n☐\nDescargar https://cit-uai.github.io/Book-MRCT/fichas_cuencas.html",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-seguridad-personal-equipamiento-terreno",
+    "href": "equipamiento.html#sec-seguridad-personal-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "16.8 Seguridad Personal",
+    "text": "16.8 Seguridad Personal\n\n\n\nTable 16.8: Checklist de seguridad personal para jornadas de terreno.\n\n\n\n\n\n\n\n\n\n\n\nItem\nCant.\nVerificado\nObservación\n\n\n\n\nRopa de abrigo técnica (capas)\npendiente\n☐\nInvierno austral, mín. -5°C\n\n\nImpermeable / capa exterior\n1\n☐\nViento y lluvia frecuentes\n\n\nBotas de trekking impermeables\n1 par\n☐\n\n\n\nCasco para terreno irregular\npendiente\n☐\npendiente\n\n\nLinterna frontal + pilas repuesto\n1\n☐\nDías cortos en junio\n\n\nBotiquín básico de primeros auxilios\n1\n☐\n\n\n\nProtector solar + labial SPF\n1\n☐\nUV alto incluso en invierno\n\n\nSnacks / barras energéticas\npendiente\n☐\nPara jornadas largas\n\n\nAgua (termos / botella)\n1\n☐\nTermo para bebida caliente",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
+    ]
+  },
+  {
+    "objectID": "equipamiento.html#sec-documentacion-equipamiento-terreno",
+    "href": "equipamiento.html#sec-documentacion-equipamiento-terreno",
+    "title": "16  Equipamiento",
+    "section": "16.9 Documentación",
+    "text": "16.9 Documentación\n\n\n\nTable 16.9: Checklist de documentación y permisos asociados al equipamiento.\n\n\n\n\n\n\n\n\n\n\n\nItem\nCant.\nVerificado\nObservación\n\n\n\n\nCédula de identidad / pasaporte\n1\n☐\n\n\n\nAutorización vuelo drone DGAC\n☐\n☐\nVer Section 17.7\n\n\nFichas de terreno impresas\npendiente\n☐\nUna por cuenca a visitar\n\n\nCredenciales CIT-UAI\n☐\n☐\npendiente",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Equipamiento</span>"
     ]
   },
   {
     "objectID": "protocolo_levantamiento.html",
     "href": "protocolo_levantamiento.html",
-    "title": "14  Protocolo de Levantamiento",
+    "title": "17  Protocolo de Levantamiento",
     "section": "",
-    "text": "14.1 Identificación del sitio\nEste capítulo define el protocolo para levantar información comparable en las cuencas visitadas. El instrumento central es el Índice de Estado Observado (IEO), diseñado para traducir observaciones de terreno en una métrica cuantitativa estandarizada que pueda correlacionarse directamente con las salidas operativas de la MRCT. Su contenido puede quedar establecido antes de la campaña, porque describe qué datos registrar y cómo organizarlos, independiente de cuáles sean las cuencas seleccionadas.\nCada cuenca visitada debe registrarse con:\nSi el punto visitado no representa adecuadamente la cuenca, se debe indicar en la ficha.",
+    "text": "17.1 Flujo de trabajo por cuenca\nEste protocolo organiza el levantamiento de terreno de la campaña Magallanes 2026. Su objetivo es que todas las cuencas visitadas tengan datos comparables, trazables y útiles para validar la señal MRCT. Cada observación debe quedar vinculada a un RID, coordenada, fecha, hora, registro fotográfico y ficha de terreno.\nEl orden recomendado es simple y debe adaptarse a las condiciones reales del sitio:",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+    ]
+  },
+  {
+    "objectID": "protocolo_levantamiento.html#sec-flujo-trabajo-cuenca",
+    "href": "protocolo_levantamiento.html#sec-flujo-trabajo-cuenca",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "",
+    "text": "Llegar al punto de acceso y confirmar seguridad.\nRegistrar ubicación, fecha, hora, clima y vía de acceso.\nHacer una evaluación general del sitio.\nRecorrer el transecto y levantar los puntos IEO.\nTomar mediciones ambientales disponibles.\nRealizar vuelo de dron solo si las condiciones lo permiten.\nCompletar el registro fotográfico mínimo.\nResponder las preguntas de validación MRCT.\nDescargar y respaldar los datos al cierre de la jornada.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
     ]
   },
   {
     "objectID": "protocolo_levantamiento.html#sec-identificacion-sitio-terreno",
     "href": "protocolo_levantamiento.html#sec-identificacion-sitio-terreno",
-    "title": "14  Protocolo de Levantamiento",
-    "section": "",
-    "text": "RID;\ncuenca y comuna;\nfecha, hora e identificador de jornada (AM/PM);\ninvestigador a cargo de la planilla;\ncoordenada del punto de observación (X, Y) y precisión GPS si está disponible;\ncondición de acceso;\nrelación entre el punto visitado y la cuenca completa.",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.2 Registro inicial del sitio",
+    "text": "17.2 Registro inicial del sitio\nCada cuenca visitada debe registrarse con:\n\nRID;\ncuenca y comuna;\nfecha, hora e identificador de jornada;\ninvestigador a cargo de la planilla;\ncoordenada GPS del punto de entrada u observación principal, incluyendo altitud y precisión si están disponibles;\ncondición climática al arribo: temperatura, viento, nubosidad y visibilidad;\nvía de acceso utilizada y dificultad observada;\nrelación entre el punto visitado y la cuenca completa.\n\nSi el punto visitado no representa adecuadamente la cuenca, se debe indicar en la ficha.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+    ]
+  },
+  {
+    "objectID": "protocolo_levantamiento.html#sec-evaluacion-general-sitio",
+    "href": "protocolo_levantamiento.html#sec-evaluacion-general-sitio",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.3 Evaluación general del sitio",
+    "text": "17.3 Evaluación general del sitio\nAntes de iniciar el transecto se registra una descripción breve del contexto. No se busca escribir un informe largo en terreno, sino dejar evidencia suficiente para interpretar después los datos.\n\n\n\n\n\n\n\nVariable\nQué registrar\n\n\n\n\nAccesibilidad\nTipo de acceso, dificultad y tiempo desde la base o ruta principal\n\n\nPerturbaciones visibles\nIncendios, cortes de vegetación, erosión, obras, basura, caminos o huellas\n\n\nCobertura dominante\nBosque, matorral, pradera, bofedal, suelo desnudo, nieve o hielo\n\n\nAgua superficial\nRíos, lagunas, humedales, charcos, cauces secos o estado del caudal\n\n\nNieve o hielo\nPresencia, cobertura aproximada y señales de fusión\n\n\nHumedad superficial\nSeco, húmedo o saturado, según observación visual y tacto\n\n\nFauna o rastros\nEspecies observadas, huellas, fecas, madrigueras u otros indicios",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
     ]
   },
   {
     "objectID": "protocolo_levantamiento.html#sec-ieo-terreno",
     "href": "protocolo_levantamiento.html#sec-ieo-terreno",
-    "title": "14  Protocolo de Levantamiento",
-    "section": "14.2 Índice de Estado Observado (IEO)",
-    "text": "14.2 Índice de Estado Observado (IEO)\nEl IEO es el instrumento cuantitativo que conecta la observación de terreno con las métricas MRCT. Se calcula como promedio sobre 5 a 10 puntos de muestreo distribuidos espacialmente a lo largo del transecto dentro de cada cuenca.\n\n14.2.1 Rúbrica IEO\nCada punto de muestreo recibe cuatro notas de 1 a 5. La rúbrica debe aplicarse observando estrictamente los descriptores físicos, sin que el juicio se vea influenciado por lo que el modelo MRCT predice para la cuenca.\n1. Vegetación (Vigor y Cobertura)\n\n\n\n\n\n\n\nNota\nDescriptor\n\n\n\n\n1\nSuelo expuesto dominante; vegetación muerta o marchita\n\n\n2\nManchones dispersos amarillentos; estrés hídrico sostenido\n\n\n3\nCobertura moderada; transición visible entre pastizales secos y vivos\n\n\n4\nCobertura casi continua; pastizales verdes; bosque sin daño aparente\n\n\n5\nVigor máximo; follaje verde oscuro y denso; turberas prístinas; sin estrés\n\n\n\n2. Humedad Superficial / Agua Visible\n\n\n\n\n\n\n\nNota\nDescriptor\n\n\n\n\n1\nTierra agrietada o polvorienta; cauces absolutamente secos; sin musgo vivo\n\n\n2\nHumedad residual solo bajo piedras o micro depresiones del terreno\n\n\n3\nSuelo frío al tacto; musgos vivos; charcos esporádicos\n\n\n4\nHilos de agua activos; vegas hidratadas que ceden notoriamente al pisar\n\n\n5\nCuerpos de agua (lagunas, chorrillos permanentes); saturación total; escorrentía evidente\n\n\n\n3. Perturbación Antrópica (Impacto y Daño — vector negativo)\n\n\n\n\n\n\n\nNota\nDescriptor\n\n\n\n\n1\nPaisaje prístino; sin cercos, basura ni huellas vehiculares\n\n\n2\nSenderos de fauna o huellas peatonales/vehiculares muy antiguas y cubiertas\n\n\n3\nCercos ganaderos; senderos de ovejas; caminos de tierra secundarios de bajo tránsito\n\n\n4\nZanjas de drenaje artificiales; tala selectiva; erosión inducida por sobrepastoreo; caminos anchos\n\n\n5\nMovimiento de tierras pesado; infraestructura industrial; bosque rasado; basurales\n\n\n\n4. Fragmentación (Continuidad del ecosistema — vector negativo)\n\n\n\n\n\n\n\nNota\nDescriptor\n\n\n\n\n1\nBloque continuo de bosque, humedal o estepa hasta donde alcanza la vista\n\n\n2\nPequeños claros naturales o micro senderos que no cortan la continuidad ecosistémica\n\n\n3\nBosque o vega seccionado claramente en 2 o 3 grandes bloques separados\n\n\n4\nMosaico roto; parches vegetacionales de tamaño medio dispersos y sin conexión física\n\n\n5\nÁrboles o matorrales aislados y relictos en matriz de suelo desnudo o altamente dañado\n\n\n\n\n\n14.2.2 Fórmula del IEO\nPerturbación y Fragmentación actúan como vectores negativos de la resiliencia estructural: su escala se invierte antes del cálculo. La fórmula normaliza todas las variables al rango [0, 1]:\n\nIEO = \\frac{\\dfrac{V-1}{4} + \\dfrac{H-1}{4} + \\left(1 - \\dfrac{P-1}{4}\\right) + \\left(1 - \\dfrac{F-1}{4}\\right)}{4}\n\ndonde V, H, P y F son las notas asignadas en cada punto de muestreo. El IEO de la cuenca es el promedio de los IEO individuales de todos los puntos del transecto.\n\n\n14.2.3 Consistencia psicológica\nLo que el equipo califica como “4” en la primera cuenca del Día 1 debe seguir siendo “4” en la última cuenca del Día 3. Un desvío semántico entre jornadas o entre investigadores destruye la regresión final. La rúbrica descriptiva es la referencia vinculante: ante duda, prevale el descriptor físico sobre la impresión general.",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.4 Índice de Estado Observado (IEO)",
+    "text": "17.4 Índice de Estado Observado (IEO)\nEl Índice de Estado Observado (IEO) es el instrumento cuantitativo que conecta la observación de terreno con las métricas MRCT. Se calcula sobre 5 a 10 puntos de muestreo distribuidos espacialmente a lo largo de un transecto dentro de cada cuenca.\nPara cada transecto se debe registrar:\n\ndirección general del recorrido;\nlongitud aproximada;\ndistancia aproximada entre puntos;\ncoordenada de cada punto de muestreo;\ncobertura, suelo, humedad, agua, nieve o perturbaciones relevantes.\n\nLa dirección y longitud exactas se definen en terreno según acceso, seguridad y representatividad de la cuenca.\n\n17.4.1 Rúbrica IEO\nCada punto de muestreo recibe cuatro notas de 1 a 5. La rúbrica debe aplicarse observando estrictamente los descriptores físicos, sin que el juicio se vea influenciado por lo que el modelo MRCT predice para la cuenca.\n1. Vegetación (Vigor y Cobertura)\n\n\n\n\n\n\n\nNota\nDescriptor\n\n\n\n\n1\nSuelo expuesto dominante; vegetación muerta o marchita\n\n\n2\nManchones dispersos amarillentos; estrés hídrico sostenido\n\n\n3\nCobertura moderada; transición visible entre pastizales secos y vivos\n\n\n4\nCobertura casi continua; pastizales verdes; bosque sin daño aparente\n\n\n5\nVigor máximo; follaje verde oscuro y denso; turberas prístinas; sin estrés\n\n\n\n2. Humedad Superficial / Agua Visible\n\n\n\n\n\n\n\nNota\nDescriptor\n\n\n\n\n1\nTierra agrietada o polvorienta; cauces absolutamente secos; sin musgo vivo\n\n\n2\nHumedad residual solo bajo piedras o micro depresiones del terreno\n\n\n3\nSuelo frío al tacto; musgos vivos; charcos esporádicos\n\n\n4\nHilos de agua activos; vegas hidratadas que ceden notoriamente al pisar\n\n\n5\nCuerpos de agua (lagunas, chorrillos permanentes); saturación total; escorrentía evidente\n\n\n\n3. Perturbación Antrópica (Impacto y Daño — vector negativo)\n\n\n\n\n\n\n\nNota\nDescriptor\n\n\n\n\n1\nPaisaje prístino; sin cercos, basura ni huellas vehiculares\n\n\n2\nSenderos de fauna o huellas peatonales/vehiculares muy antiguas y cubiertas\n\n\n3\nCercos ganaderos; senderos de ovejas; caminos de tierra secundarios de bajo tránsito\n\n\n4\nZanjas de drenaje artificiales; tala selectiva; erosión inducida por sobrepastoreo; caminos anchos\n\n\n5\nMovimiento de tierras pesado; infraestructura industrial; bosque rasado; basurales\n\n\n\n4. Fragmentación (Continuidad del ecosistema — vector negativo)\n\n\n\n\n\n\n\nNota\nDescriptor\n\n\n\n\n1\nBloque continuo de bosque, humedal o estepa hasta donde alcanza la vista\n\n\n2\nPequeños claros naturales o micro senderos que no cortan la continuidad ecosistémica\n\n\n3\nBosque o vega seccionado claramente en 2 o 3 grandes bloques separados\n\n\n4\nMosaico roto; parches vegetacionales de tamaño medio dispersos y sin conexión física\n\n\n5\nÁrboles o matorrales aislados y relictos en matriz de suelo desnudo o altamente dañado\n\n\n\n\n\n17.4.2 Fórmula del IEO\nPerturbación y Fragmentación actúan como vectores negativos de la resiliencia estructural: su escala se invierte antes del cálculo. La fórmula normaliza todas las variables al rango [0, 1]:\n\nIEO = \\frac{\\dfrac{V-1}{4} + \\dfrac{H-1}{4} + \\left(1 - \\dfrac{P-1}{4}\\right) + \\left(1 - \\dfrac{F-1}{4}\\right)}{4}\n\ndonde V, H, P y F son las notas asignadas en cada punto de muestreo. El IEO de la cuenca es el promedio de los IEO individuales de todos los puntos del transecto.\n\n\n17.4.3 Consistencia psicológica\nLo que el equipo califica como “4” en la primera cuenca debe seguir siendo “4” en la última. La rúbrica descriptiva es la referencia vinculante: ante duda, prevalece el descriptor físico sobre la impresión general.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
-    ]
-  },
-  {
-    "objectID": "protocolo_levantamiento.html#sec-registro-fotografico-terrestre",
-    "href": "protocolo_levantamiento.html#sec-registro-fotografico-terrestre",
-    "title": "14  Protocolo de Levantamiento",
-    "section": "14.3 Registro fotográfico terrestre",
-    "text": "14.3 Registro fotográfico terrestre\nEl registro terrestre debe capturar contexto y detalle en cada punto de muestreo. Como mínimo:\n\nfotografía general desde el punto de acceso;\nfotografías hacia norte, este, sur y oeste;\nfotografía del punto de medición;\ndetalle de agua, suelo, vegetación, nieve, erosión o perturbación visible;\nfotografía de restricciones o condiciones relevantes de acceso.\n\nLas fotografías deben nombrarse con la siguiente convención:\nRID_Dia_Foto_numero",
-    "crumbs": [
-      "Trabajo en Terreno",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
-    ]
-  },
-  {
-    "objectID": "protocolo_levantamiento.html#sec-vuelos-dron-terreno",
-    "href": "protocolo_levantamiento.html#sec-vuelos-dron-terreno",
-    "title": "14  Protocolo de Levantamiento",
-    "section": "14.4 Vuelos de dron",
-    "text": "14.4 Vuelos de dron\nLos vuelos de dron deben realizarse solo si las condiciones de viento, visibilidad, batería, permisos y seguridad lo permiten. Si el viento supera las especificaciones técnicas del dron, la misión aérea se aborta inmediatamente. En ese caso, el equipo concentra el esfuerzo en extender el transecto peatonal y enriquecer el archivo fotográfico terrestre, aumentando la densidad de puntos IEO para suplir la visión aérea.\nRegistros recomendados cuando el vuelo es posible:\n\nmosaico cenital del punto de observación y entorno próximo;\nvista oblicua del entorno;\nbarrido de continuidad de cobertura;\nregistro de agua, humedales, nieve, cauces, erosión, caminos o intervención antrópica;\ncaptura de límites o contrastes visibles entre la cuenca y su entorno.\n\nLos archivos de dron se nombran:\nRID_Dia_Dron_numero\nSi el vuelo se suspende, la planilla debe registrar la causa.",
-    "crumbs": [
-      "Trabajo en Terreno",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
     ]
   },
   {
     "objectID": "protocolo_levantamiento.html#sec-condiciones-ambientales-terreno",
     "href": "protocolo_levantamiento.html#sec-condiciones-ambientales-terreno",
-    "title": "14  Protocolo de Levantamiento",
-    "section": "14.5 Condiciones ambientales",
-    "text": "14.5 Condiciones ambientales\nLa planilla registra por punto de muestreo:\n\ntemperatura ambiente (°C);\nnubosidad (%);\nviento (km/h): si supera el límite operativo del dron, queda anotado como causa de suspensión del vuelo;\npresencia o ausencia de agua visible;\npresencia de nieve o hielo;\nobservaciones breves sobre contexto local.\n\nEstas variables complementan el IEO y permiten detectar condiciones que limiten la comparabilidad entre cuencas.",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.5 Mediciones ambientales",
+    "text": "17.5 Mediciones ambientales\nLas mediciones ambientales complementan el IEO y ayudan a interpretar diferencias entre cuencas. Se registran según los instrumentos disponibles.\n\n\n\n\n\n\n\n\n\nVariable\nInstrumento\nUnidad\nCuándo registrar\n\n\n\n\nTemperatura del aire\nTermómetro o higrómetro\n°C\nInicio, mitad y fin del transecto\n\n\nHumedad relativa\nTermómetro o higrómetro\n%\nInicio, mitad y fin del transecto\n\n\nVelocidad del viento\nAnemómetro\nkm/h\nInicio, mitad y fin del transecto\n\n\nAltitud\nGPS o altímetro\nm s.n.m.\nEn cada punto de muestreo, si está disponible\n\n\nConductividad del agua\nMedidor EC\nµS/cm\nSolo si existe punto de agua medible\n\n\nNubosidad\nObservación visual\n% o categoría\nAl inicio del levantamiento\n\n\n\nSi una medición no puede realizarse, se deja indicado como “sin instrumento”, “sin acceso” o “no aplica”.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+    ]
+  },
+  {
+    "objectID": "protocolo_levantamiento.html#sec-registro-fotografico-terrestre",
+    "href": "protocolo_levantamiento.html#sec-registro-fotografico-terrestre",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.6 Registro fotográfico terrestre",
+    "text": "17.6 Registro fotográfico terrestre\nEl registro fotográfico debe permitir reconstruir el estado general de la cuenca y verificar los puntos IEO. Como mínimo, cada cuenca debe tener:\n\n\n\n\n\n\n\n\nCódigo\nFotografía\nOrientación o criterio\n\n\n\n\nP01\nPanorámica general\nNorte\n\n\nP02\nPanorámica general\nSur\n\n\nP03\nPanorámica general\nEste\n\n\nP04\nPanorámica general\nOeste\n\n\nP05\nCobertura vegetal dominante\nMejor encuadre disponible\n\n\nP06\nAgua superficial, si existe\nRío, laguna, bofedal, cauce o charco\n\n\nP07\nNieve o hielo, si aplica\nMejor encuadre disponible\n\n\nP08\nPerturbación visible, si aplica\nObra, erosión, basura, tala, huella o camino\n\n\nP09\nPunto de mayor interés científico\nSegún criterio del equipo\n\n\nP10\nEquipo o referencia de escala\nPersona, bastón, mochila u otro elemento\n\n\n\nLas fotografías deben nombrarse con la siguiente convención:\nRID_YYYYMMDD_PXX_descripcion.jpg\nEjemplo: RID1808_20260616_P01_panoramica_norte.jpg.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+    ]
+  },
+  {
+    "objectID": "protocolo_levantamiento.html#sec-vuelos-dron-terreno",
+    "href": "protocolo_levantamiento.html#sec-vuelos-dron-terreno",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.7 Vuelos de dron",
+    "text": "17.7 Vuelos de dron\nLos vuelos de dron se realizan solo si las condiciones de viento, visibilidad, batería, permisos y seguridad lo permiten. Si el viento supera las especificaciones técnicas del equipo, la misión se suspende y se registra la causa.\nCuando el vuelo es posible, se recomienda capturar:\n\nvista cenital del punto de observación y su entorno;\nvideo panorámico o barrido de 360 grados;\ncobertura de la zona de mayor interés científico;\nregistro de agua, humedales, nieve, cauces, erosión, caminos o intervención antrópica;\nlímites o contrastes visibles entre la cuenca y su entorno.\n\nSi el vuelo se suspende, el equipo debe compensar con más fotografías terrestres y, cuando sea posible, mayor densidad de puntos IEO.\nLos archivos de dron se nombran:\nRID_YYYYMMDD_DXX_descripcion",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+    ]
+  },
+  {
+    "objectID": "protocolo_levantamiento.html#sec-validacion-mrct-cierre",
+    "href": "protocolo_levantamiento.html#sec-validacion-mrct-cierre",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.8 Validación MRCT al cierre de la visita",
+    "text": "17.8 Validación MRCT al cierre de la visita\nAl terminar cada cuenca, el equipo responde cinco preguntas breves. La respuesta puede ser sintética, pero debe quedar conectada con las evidencias observadas.\n\n¿La señal MRCT es consistente con lo observado en terreno?\n¿Qué variables observadas confirman la señal y cuáles la contradicen?\n¿Existe alguna perturbación no capturada por el modelo satelital?\n¿La cuenca muestra señales de estrés hídrico, degradación o resiliencia?\n¿Qué recomendación de seguimiento o monitoreo tiene el sitio?",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
     ]
   },
   {
     "objectID": "protocolo_levantamiento.html#sec-respaldo-diario-terreno",
     "href": "protocolo_levantamiento.html#sec-respaldo-diario-terreno",
-    "title": "14  Protocolo de Levantamiento",
-    "section": "14.6 Respaldo diario",
-    "text": "14.6 Respaldo diario\nAl cierre de cada jornada (gabinete nocturno, ~1 hora):\n\ncopiar fotografías, videos y vuelos de SD a notebook;\ncopiar de notebook a disco duro externo y nube (respaldo cruzado);\nverificar asociación de archivos con RID y nomenclatura correcta;\nrevisar que no existan archivos corruptos;\nvaciar planillas físicas IEO a la base Excel del proyecto;\nconsolidar la bitácora diaria;\nregistrar cuencas no visitadas, cambios de ruta y problemas encontrados;\nno reutilizar tarjetas SD antes de verificar el respaldo.",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.9 Respaldo diario",
+    "text": "17.9 Respaldo diario\nAl cierre de cada jornada se hace una copia ordenada de todos los datos. La regla es no borrar ni reutilizar tarjetas antes de verificar el respaldo.\n\ndescargar fotografías y videos de dron a notebook;\ndescargar fotografías de cámara, celular o GoPro;\nexportar puntos GPS del día;\ndigitalizar o revisar fichas de terreno;\ncopiar notebook a disco duro externo y nube, si hay conectividad;\nverificar asociación de archivos con RID y nomenclatura correcta;\nrevisar que no existan archivos corruptos;\nregistrar cuencas no visitadas, cambios de ruta y problemas encontrados.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
     ]
   },
   {
     "objectID": "protocolo_levantamiento.html#sec-control-completitud-terreno",
     "href": "protocolo_levantamiento.html#sec-control-completitud-terreno",
-    "title": "14  Protocolo de Levantamiento",
-    "section": "14.7 Control de completitud",
-    "text": "14.7 Control de completitud\nUna visita se considera completa cuando existen:\n\nplanilla IEO con 5 a 10 puntos de muestreo y nota por cada dimensión (V, H, P, F);\nIEO calculado por punto y promedio de cuenca;\ncoordenada de cada punto de muestreo;\ncondiciones ambientales (viento, nubosidad, temperatura);\nfotografías terrestres bajo nomenclatura estándar;\nestado del vuelo de dron (realizado o causa de suspensión);\nobservaciones breves sobre contexto y consistencia preliminar con la señal MRCT.",
+    "title": "17  Protocolo de Levantamiento",
+    "section": "17.10 Control de completitud",
+    "text": "17.10 Control de completitud\nUna visita se considera completa cuando existen:\n\nficha de cuenca con identificación, acceso y contexto general;\ncoordenada del punto de entrada y de cada punto IEO;\nplanilla IEO con 5 a 10 puntos y nota por cada dimensión (V, H, P, F);\nIEO calculado por punto y promedio de cuenca;\ncondiciones ambientales disponibles;\nfotografías terrestres bajo nomenclatura estándar;\nestado del vuelo de dron, realizado o suspendido con causa;\nrespuestas de validación MRCT;\nrespaldo diario verificado.\n\nSi falta algún elemento, se debe indicar explícitamente en la ficha para no confundir ausencia de evidencia con ausencia del fenómeno observado.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Protocolo de Levantamiento</span>"
     ]
   },
   {
     "objectID": "fichas_cuencas.html",
     "href": "fichas_cuencas.html",
-    "title": "15  Fichas de Cuencas",
+    "title": "18  Fichas de Cuencas",
     "section": "",
-    "text": "15.1 Variables de la ficha\nEste capítulo define la ficha mínima que debe acompañar cada cuenca visitada. Su función es ordenar el registro de terreno, no volver a explicar la selección de cuencas ni la rúbrica IEO. La selección técnica se presenta en Section 12.8 y Section 12.10; la decisión logística de campaña se define en Section 13.2; y la evaluación IEO se rige por Section 14.2.1 y Section 14.2.2.\nCada ficha debe mantener juntas las variables de identificación, precarga MRCT y registro de terreno. La tabla siguiente define los campos reales que deben aparecer en la ficha.\nLas columnas de terreno deben mantenerse alineadas con el protocolo: viento, nubosidad y temperatura se registran como condiciones ambientales (Section 14.5); vegetación, humedad, perturbación y fragmentación se evalúan según la rúbrica IEO (Section 14.2.1); y fotografías, dron, acceso, agua visible, nieve/hielo o dudas de representatividad se documentan en observaciones breves cuando no tengan una columna específica.",
+    "text": "18.1 Variables de la ficha\nEste capítulo define la ficha mínima que debe acompañar cada cuenca visitada. Su función es ordenar el registro de terreno, no volver a explicar la selección de cuencas ni la rúbrica IEO. La selección técnica se presenta en Section 12.8 y Section 12.10; la decisión logística de campaña se define en ?sec-decision-cuencas-finales; y la evaluación IEO se rige por Section 17.4.1 y Section 17.4.2.\nCada ficha debe mantener juntas las variables de identificación, precarga MRCT y registro de terreno. La tabla siguiente define los campos reales que deben aparecer en la ficha.\nLas columnas de terreno deben mantenerse alineadas con el protocolo: viento, nubosidad y temperatura se registran como condiciones ambientales (Section 17.5); vegetación, humedad, perturbación y fragmentación se evalúan según la rúbrica IEO (Section 17.4.1); y fotografías, dron, acceso, agua visible, nieve/hielo o dudas de representatividad se documentan en observaciones breves cuando no tengan una columna específica.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Fichas de Cuencas</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Fichas de Cuencas</span>"
     ]
   },
   {
     "objectID": "fichas_cuencas.html#sec-variables-obligatorias-fichas",
     "href": "fichas_cuencas.html#sec-variables-obligatorias-fichas",
-    "title": "15  Fichas de Cuencas",
+    "title": "18  Fichas de Cuencas",
     "section": "",
-    "text": "Table 15.1: Variables reales de identificación, precarga y registro de terreno.\n\n\n\n\n\n\n\n\n\n\n\nBloque\nVariable\nLlenado\nUso\n\n\n\n\nIdentificación\nID planilla\nGabinete\nIdentifica la planilla física o digital.\n\n\nIdentificación\nNombre a cargo de planilla\nGabinete / terreno\nDefine la persona responsable del registro.\n\n\nIdentificación\nJornada AM/PM\nTerreno\nIndica el bloque horario del levantamiento.\n\n\nRegistro de punto\nID\nTerreno\nNumera cada punto de muestreo dentro de la cuenca.\n\n\nRegistro de punto\nFecha\nTerreno\nRegistra la fecha de observación.\n\n\nRegistro de punto\nHora\nTerreno\nRegistra la hora local de observación.\n\n\nPrecarga de cuenca\nRID\nGabinete\nIdentificador MRCT de la cuenca.\n\n\nPrecarga de cuenca\nCuenca\nGabinete\nNombre o etiqueta operativa de la cuenca.\n\n\nPrecarga de cuenca\nComuna\nGabinete\nComuna asociada al punto o cuenca.\n\n\nRegistro ambiental\nViento km/h\nTerreno\nCondición ambiental y restricción potencial para dron.\n\n\nRegistro ambiental\nNubosidad %\nTerreno\nCondición de visibilidad y comparabilidad.\n\n\nRegistro ambiental\nTemp_AmbC\nTerreno\nTemperatura ambiente en grados Celsius.\n\n\nRegistro de punto\nObservaciones breves\nTerreno\nAcceso, agua visible, nieve/hielo, perturbaciones, restricciones o representatividad.\n\n\nIEO\nVegetación (1-5)\nTerreno\nNota de vigor y cobertura vegetal según Section 14.2.1.\n\n\nIEO\nHumedad (1-5)\nTerreno\nNota de humedad superficial o agua visible según Section 14.2.1.\n\n\nIEO\nPerturbación (1-5)\nTerreno\nNota de impacto antrópico; vector negativo en Section 14.2.2.\n\n\nIEO\nFragmentación (1-5)\nTerreno\nNota de continuidad ecosistémica; vector negativo en Section 14.2.2.\n\n\nIEO\nIEO calculado\nGabinete / terreno\nÍndice observado calculado para el punto.\n\n\nPrecarga MRCT\nRES modelo\nGabinete\nValor de resiliencia estimado por la MRCT.\n\n\nPrecarga MRCT\nJerk modelo\nGabinete\nSeñal dinámica que justifica o contextualiza la visita.\n\n\nPrecarga MRCT\nTipo trayectoria\nGabinete\nClasificación de trayectoria asociada a la cuenca.\n\n\nUbicación\nCoordenada X\nGabinete / terreno\nCoordenada objetivo o coordenada observada del punto.\n\n\nUbicación\nCoordenada Y\nGabinete / terreno\nCoordenada objetivo o coordenada observada del punto.",
+    "text": "Table 18.1: Variables reales de identificación, precarga y registro de terreno.\n\n\n\n\n\n\n\n\n\n\n\nBloque\nVariable\nLlenado\nUso\n\n\n\n\nIdentificación\nID planilla\nGabinete\nIdentifica la planilla física o digital.\n\n\nIdentificación\nNombre a cargo de planilla\nGabinete / terreno\nDefine la persona responsable del registro.\n\n\nIdentificación\nJornada AM/PM\nTerreno\nIndica el bloque horario del levantamiento.\n\n\nRegistro de punto\nID\nTerreno\nNumera cada punto de muestreo dentro de la cuenca.\n\n\nRegistro de punto\nFecha\nTerreno\nRegistra la fecha de observación.\n\n\nRegistro de punto\nHora\nTerreno\nRegistra la hora local de observación.\n\n\nPrecarga de cuenca\nRID\nGabinete\nIdentificador MRCT de la cuenca.\n\n\nPrecarga de cuenca\nCuenca\nGabinete\nNombre o etiqueta operativa de la cuenca.\n\n\nPrecarga de cuenca\nComuna\nGabinete\nComuna asociada al punto o cuenca.\n\n\nRegistro ambiental\nViento km/h\nTerreno\nCondición ambiental y restricción potencial para dron.\n\n\nRegistro ambiental\nNubosidad %\nTerreno\nCondición de visibilidad y comparabilidad.\n\n\nRegistro ambiental\nTemp_AmbC\nTerreno\nTemperatura ambiente en grados Celsius.\n\n\nRegistro de punto\nObservaciones breves\nTerreno\nAcceso, agua visible, nieve/hielo, perturbaciones, restricciones o representatividad.\n\n\nIEO\nVegetación (1-5)\nTerreno\nNota de vigor y cobertura vegetal según Section 17.4.1.\n\n\nIEO\nHumedad (1-5)\nTerreno\nNota de humedad superficial o agua visible según Section 17.4.1.\n\n\nIEO\nPerturbación (1-5)\nTerreno\nNota de impacto antrópico; vector negativo en Section 17.4.2.\n\n\nIEO\nFragmentación (1-5)\nTerreno\nNota de continuidad ecosistémica; vector negativo en Section 17.4.2.\n\n\nIEO\nIEO calculado\nGabinete / terreno\nÍndice observado calculado para el punto.\n\n\nPrecarga MRCT\nRES modelo\nGabinete\nValor de resiliencia estimado por la MRCT.\n\n\nPrecarga MRCT\nJerk modelo\nGabinete\nSeñal dinámica que justifica o contextualiza la visita.\n\n\nPrecarga MRCT\nTipo trayectoria\nGabinete\nClasificación de trayectoria asociada a la cuenca.\n\n\nUbicación\nCoordenada X\nGabinete / terreno\nCoordenada objetivo o coordenada observada del punto.\n\n\nUbicación\nCoordenada Y\nGabinete / terreno\nCoordenada objetivo o coordenada observada del punto.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Fichas de Cuencas</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Fichas de Cuencas</span>"
     ]
   },
   {
     "objectID": "fichas_cuencas.html#sec-ficha-tipo-cuenca",
     "href": "fichas_cuencas.html#sec-ficha-tipo-cuenca",
-    "title": "15  Fichas de Cuencas",
-    "section": "15.2 Ficha tipo por cuenca",
-    "text": "15.2 Ficha tipo por cuenca\n\n15.2.1 Identificación y precarga\n\n\n\nTable 15.2: Identificación y precarga de la ficha de cuenca.\n\n\n\n\n\n\n\n\n\nCampo\nValor\n\n\n\n\nID planilla\nPor definir\n\n\nNombre a cargo de planilla\nPor definir\n\n\nJornada\nAM / PM\n\n\nRID\nPor definir\n\n\nCuenca\nPor definir\n\n\nComuna\nPor definir\n\n\nRES modelo\nPor definir\n\n\nJerk modelo\nPor definir\n\n\nTipo trayectoria\nPor definir\n\n\nCoordenada X objetivo\nPor definir\n\n\nCoordenada Y objetivo\nPor definir\n\n\nCriterio de selección\nReferir a Section 12.8, Section 12.10 o Section 13.2\n\n\n\n\n\n\n\n\n15.2.2 Registro de terreno\n\n\n\nEjemplo de ficha de levantamiento de datos en terreno\n\n\nEl registro debe completarse con 5 a 10 puntos de muestreo por cuenca, tal como define Section 14.2. Al cierre de cada visita se revisa el control de completitud de Section 14.7 y luego la información se consolida en Section 16.3.",
+    "title": "18  Fichas de Cuencas",
+    "section": "18.2 Ficha tipo por cuenca",
+    "text": "18.2 Ficha tipo por cuenca\n\n18.2.1 Identificación y precarga\n\n\n\nTable 18.2: Identificación y precarga de la ficha de cuenca.\n\n\n\n\n\n\n\n\n\nCampo\nValor\n\n\n\n\nID planilla\nPor definir\n\n\nNombre a cargo de planilla\nPor definir\n\n\nJornada\nAM / PM\n\n\nRID\nPor definir\n\n\nCuenca\nPor definir\n\n\nComuna\nPor definir\n\n\nRES modelo\nPor definir\n\n\nJerk modelo\nPor definir\n\n\nTipo trayectoria\nPor definir\n\n\nCoordenada X objetivo\nPor definir\n\n\nCoordenada Y objetivo\nPor definir\n\n\nCriterio de selección\nReferir a Section 12.8, Section 12.10 o ?sec-decision-cuencas-finales\n\n\n\n\n\n\n\n\n18.2.2 Registro de terreno\n\n\n\nEjemplo de ficha de levantamiento de datos en terreno\n\n\nEl registro debe completarse con 5 a 10 puntos de muestreo por cuenca, tal como define Section 17.4. Al cierre de cada visita se revisa el control de completitud de Section 17.10 y luego la información se consolida en Section 20.3.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Fichas de Cuencas</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Fichas de Cuencas</span>"
     ]
   },
   {
     "objectID": "fichas_cuencas.html#sec-uso-posterior-fichas",
     "href": "fichas_cuencas.html#sec-uso-posterior-fichas",
-    "title": "15  Fichas de Cuencas",
-    "section": "15.3 Uso posterior",
-    "text": "15.3 Uso posterior\nLa ficha es la fuente primaria para la integración MRCT-terreno. Sus campos alimentan la síntesis de mediciones de Section 16.4 y la tabla de validación de Section 17.1. La clasificación de consistencia no se decide en la ficha: se aplica posteriormente con los criterios de Section 17.2.\nLas cuencas no visitadas, reemplazadas o descartadas también deben registrarse, indicando la causa principal: acceso, permiso, distancia, baja representatividad, riesgo, clima esperado o cambio de prioridad técnica.",
+    "title": "18  Fichas de Cuencas",
+    "section": "18.3 Uso posterior",
+    "text": "18.3 Uso posterior\nLa ficha es la fuente primaria para la integración MRCT-terreno. Sus campos alimentan la síntesis de mediciones de Section 20.4 y la tabla de validación de Section 21.1. La clasificación de consistencia no se decide en la ficha: se aplica posteriormente con los criterios de Section 21.2.\nLas cuencas no visitadas, reemplazadas o descartadas también deben registrarse, indicando la causa principal: acceso, permiso, distancia, baja representatividad, riesgo, clima esperado o cambio de prioridad técnica.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Fichas de Cuencas</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Fichas de Cuencas</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html",
+    "href": "vuelo_drone.html",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "",
+    "text": "19.1 Equipo\nEsta página orienta el uso del dron durante la campaña Terreno Magallanes 2026. Su función es ordenar la planificación previa, la evaluación de condiciones mínimas, el registro de vuelos realizados y la trazabilidad de archivos asociados a cada cuenca. Debe usarse junto con la ficha de cuenca de Section 18.2, el protocolo de vuelos de Section 17.7 y el checklist de equipamiento de Section 16.2.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html#sec-equipo-vuelo-drone",
+    "href": "vuelo_drone.html#sec-equipo-vuelo-drone",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "",
+    "text": "Table 19.1: Equipo base para vuelos de dron en terreno.\n\n\n\n\n\nItem\nDetalle\n\n\n\n\nModelo\nDJI Mini 3\n\n\nPeso\n249 g\n\n\nBaterías disponibles\n3\n\n\nAutonomía por batería\n~38 min en condiciones normales\n\n\nAutonomía en frío (&lt; 5°C)\n~25-30 min estimado\n\n\nResolución foto\n12 MP\n\n\nResolución video\n4K 30 fps\n\n\n\n\n\n\n\n\n\n\n\n\nBaterías en frío\n\n\n\nA temperatura bajo 0°C, precalentar baterías en bolsillo interno o bolso térmico al menos 10 min antes de cada vuelo. No despegar con batería fría si la app DJI Fly muestra advertencia de temperatura o rendimiento.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html#sec-normativa-dgac-drone",
+    "href": "vuelo_drone.html#sec-normativa-dgac-drone",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "19.2 Normativa DGAC Chile",
+    "text": "19.2 Normativa DGAC Chile\nLa tabla siguiente funciona como control operativo previo. Debe actualizarse con la normativa vigente de DGAC Chile, las restricciones activas en DJI Fly y las autorizaciones específicas del sitio.\n\n\n\nTable 19.2: Control normativo preliminar para vuelos de dron.\n\n\n\n\n\n\n\n\n\n\nRequisito\nEstado\nObservación\n\n\n\n\nRegistro operador drone\n☐ Verificar\nDJI Mini 3 (&lt; 250 g): confirmar si aplica exención o registro según uso y zona de operación.\n\n\nAutorización zonas especiales\n☐ Verificar\nMagallanes: revisar parques nacionales, áreas CONAF, predios privados y zonas con restricción local.\n\n\nSeguro responsabilidad civil\n☐ Verificar\npendiente\n\n\nDistancia mínima aeropuertos\n☐ Verificar\nVerificar radio y restricciones asociadas al Aeropuerto Presidente Carlos Ibáñez del Campo y aeródromos cercanos.\n\n\nHorario vuelo\nSólo diurno\nAmanecer-anochecer, con visibilidad suficiente.\n\n\nAltura máxima\n120 m AGL\nMantener límite operativo salvo autorización especial aplicable.\n\n\nZonas prohibidas\n☐ Verificar\nÁreas militares, infraestructura crítica, CONAF, parques, aeródromos y restricciones temporales.\n\n\n\n\n\n\n\n\n\n\n\n\nVerificación antes de despegar\n\n\n\nConsultar el mapa de zonas en DJI Fly antes de cada vuelo. Verificar si la cuenca seleccionada está dentro de zona restringida, parque, área CONAF, zona aeroportuaria, predio privado o área con restricción temporal.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html#sec-plan-vuelo-por-cuenca",
+    "href": "vuelo_drone.html#sec-plan-vuelo-por-cuenca",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "19.3 Plan de Vuelo por Cuenca",
+    "text": "19.3 Plan de Vuelo por Cuenca\nCompletar una ficha por cada cuenca con vuelo planificado. El punto de despegue debe elegirse desde un lugar seguro, con visibilidad del dron, distancia prudente a caminos, personas, animales, cables, antenas y superficies inestables.\n\n19.3.1 Cuenca RID 1885\n\n\n\nTable 19.3: Plan preliminar de vuelo para cuenca RID 1885.\n\n\n\n\n\nCampo\nValor\n\n\n\n\nFecha vuelo\npendiente\n\n\nCoordenadas punto despegue\npendiente\n\n\nAltitud terreno\npendiente m s.n.m.\n\n\nAltura vuelo planificada\npendiente m AGL\n\n\nTipo vuelo\nNadir / Oblicuo / 360° / Manual\n\n\nÁrea de cobertura\npendiente ha\n\n\nDuración estimada\npendiente min\n\n\nBatería asignada\npendiente\n\n\nObjetivo principal\npendiente\n\n\nRestricciones zona\npendiente\n\n\nEstado\n⏳ Pendiente\n\n\n\n\n\n\n\n\n19.3.2 Cuenca RID 2205\n\n\n\nTable 19.4: Plan preliminar de vuelo para cuenca RID 2205.\n\n\n\n\n\nCampo\nValor\n\n\n\n\nFecha vuelo\npendiente\n\n\nCoordenadas punto despegue\npendiente\n\n\nAltitud terreno\npendiente m s.n.m.\n\n\nAltura vuelo planificada\npendiente m AGL\n\n\nTipo vuelo\nNadir / Oblicuo / 360° / Manual\n\n\nÁrea de cobertura\npendiente ha\n\n\nDuración estimada\npendiente min\n\n\nBatería asignada\npendiente\n\n\nObjetivo principal\npendiente\n\n\nRestricciones zona\npendiente\n\n\nEstado\n⏳ Pendiente\n\n\n\n\n\n\n\n\n19.3.3 Cuenca RID 4982\n\n\n\nTable 19.5: Plan preliminar de vuelo para cuenca RID 4982.\n\n\n\n\n\nCampo\nValor\n\n\n\n\nFecha vuelo\npendiente\n\n\nCoordenadas punto despegue\npendiente\n\n\nAltitud terreno\npendiente m s.n.m.\n\n\nAltura vuelo planificada\npendiente m AGL\n\n\nTipo vuelo\nNadir / Oblicuo / 360° / Manual\n\n\nÁrea de cobertura\npendiente ha\n\n\nDuración estimada\npendiente min\n\n\nBatería asignada\npendiente\n\n\nObjetivo principal\npendiente\n\n\nRestricciones zona\npendiente\n\n\nEstado\n⏳ Pendiente\n\n\n\n\n\n\n\n\n19.3.4 Cuenca RID 4996\n\n\n\nTable 19.6: Plan preliminar de vuelo para cuenca RID 4996.\n\n\n\n\n\nCampo\nValor\n\n\n\n\nFecha vuelo\npendiente\n\n\nCoordenadas punto despegue\npendiente\n\n\nAltitud terreno\npendiente m s.n.m.\n\n\nAltura vuelo planificada\npendiente m AGL\n\n\nTipo vuelo\nNadir / Oblicuo / 360° / Manual\n\n\nÁrea de cobertura\npendiente ha\n\n\nDuración estimada\npendiente min\n\n\nBatería asignada\npendiente\n\n\nObjetivo principal\npendiente\n\n\nRestricciones zona\npendiente\n\n\nEstado\n⏳ Pendiente\n\n\n\n\n\n\n\n\n19.3.5 Cuenca RID 1886\n\n\n\nTable 19.7: Plan preliminar de vuelo para cuenca RID 1886.\n\n\n\n\n\nCampo\nValor\n\n\n\n\nFecha vuelo\npendiente\n\n\nCoordenadas punto despegue\npendiente\n\n\nAltitud terreno\npendiente m s.n.m.\n\n\nAltura vuelo planificada\npendiente m AGL\n\n\nTipo vuelo\nNadir / Oblicuo / 360° / Manual\n\n\nÁrea de cobertura\npendiente ha\n\n\nDuración estimada\npendiente min\n\n\nBatería asignada\npendiente\n\n\nObjetivo principal\npendiente\n\n\nRestricciones zona\npendiente\n\n\nEstado\n⏳ Pendiente",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html#sec-registro-vuelos-realizados",
+    "href": "vuelo_drone.html#sec-registro-vuelos-realizados",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "19.4 Registro de Vuelos Realizados",
+    "text": "19.4 Registro de Vuelos Realizados\n\n\n\nTable 19.8: Registro mínimo de vuelos efectivamente realizados.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN°\nCuenca\nFecha\nHora\nAltura\nBat inicio %\nBat fin %\nDuración\nArchivos\nIncidencias\n\n\n\n\n1\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\n\n\n2\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente\npendiente",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html#sec-condiciones-minimas-vuelo-drone",
+    "href": "vuelo_drone.html#sec-condiciones-minimas-vuelo-drone",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "19.5 Condiciones Mínimas para Volar",
+    "text": "19.5 Condiciones Mínimas para Volar\n\n\n\nTable 19.9: Condiciones mínimas para autorizar un vuelo de dron.\n\n\n\n\n\n\n\n\n\nCondición\nMínimo aceptable\n\n\n\n\nViento\n&lt; 40 km/h, manteniendo margen respecto del límite operacional del equipo.\n\n\nVisibilidad\nSin niebla densa, mínimo 500 m.\n\n\nTemperatura\n&gt; -10°C, con baterías precalentadas y sin advertencias de temperatura.\n\n\nLluvia\nNo volar con lluvia activa.\n\n\nNieve activa\nNo volar con nieve activa.\n\n\nLuz\nVuelo diurno y con contraste suficiente para mantener línea visual.\n\n\n\n\n\n\n\n\n\n\n\n\nVentanas de viento\n\n\n\nEn Magallanes durante junio son frecuentes los vientos fuertes. Planificar ventanas de vuelo en horas de mañana cuando el pronóstico y la medición en sitio indiquen menor viento, y cancelar si las ráfagas superan el umbral operativo definido.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html#sec-checklist-pre-vuelo-drone",
+    "href": "vuelo_drone.html#sec-checklist-pre-vuelo-drone",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "19.6 Checklist Pre-Vuelo",
+    "text": "19.6 Checklist Pre-Vuelo\n\nVerificar zona en DJI Fly y restricciones activas.\nConfirmar permisos locales, CONAF/parques o predio privado si aplica.\nBatería dron &gt; 85%.\nBatería control &gt; 50%.\nMemoria SD disponible y con espacio suficiente.\nHélices sin daño.\nCalibrar brújula sólo si la app lo solicita.\nDefinir punto de retorno home.\nVerificar viento con anemómetro.\nConfirmar visibilidad y línea visual.\nInformar al equipo inicio de vuelo.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html#sec-checklist-post-vuelo-drone",
+    "href": "vuelo_drone.html#sec-checklist-post-vuelo-drone",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "19.7 Checklist Post-Vuelo",
+    "text": "19.7 Checklist Post-Vuelo\n\nVerificar grabación completa en SD.\nRevisar si las imágenes cubren el objetivo de observación.\nCopiar archivos a laptop al cierre de jornada.\nRespaldar archivos en disco externo.\nCargar batería usada.\nRegistrar vuelo en Tabla 19.8.\nRegistrar incidencias, cancelaciones o restricciones en la ficha de cuenca.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
+    ]
+  },
+  {
+    "objectID": "vuelo_drone.html#sec-nomenclatura-archivos-drone",
+    "href": "vuelo_drone.html#sec-nomenclatura-archivos-drone",
+    "title": "19  Planificación Vuelos Drone",
+    "section": "19.8 Nomenclatura de Archivos",
+    "text": "19.8 Nomenclatura de Archivos\nFormato:\nRID_YYYYMMDD_DXX_tipo.mp4\nRID_YYYYMMDD_DXX_tipo.jpg\nDonde:\n\nRID = identificador de cuenca, por ejemplo RID1885.\nYYYYMMDD = fecha del vuelo.\nDXX = número de vuelo de dron del día, por ejemplo D01, D02.\ntipo = nadir, panorama, oblicuo, 360 o foto.\n\nEjemplos:\nRID1885_20260616_D01_nadir.mp4\nRID1885_20260616_D01_oblicuo.jpg\nLa nomenclatura debe mantenerse consistente con el registro fotográfico de Section 17.6 y el respaldo diario de Section 17.9.",
+    "crumbs": [
+      "Trabajo en Terreno",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Planificación Vuelos Drone</span>"
     ]
   },
   {
     "objectID": "resultados_terreno.html",
     "href": "resultados_terreno.html",
-    "title": "16  Resultados de Terreno",
+    "title": "20  Resultados de Terreno",
     "section": "",
-    "text": "16.1 Resumen de campaña\nEste capítulo queda reservado para documentar los resultados de la campaña una vez ejecutada. Debe reunir la evidencia levantada por cuenca, las condiciones de cada jornada y las limitaciones encontradas. La fuente primaria será la ficha definida en Section 15.2, levantada bajo el protocolo de Section 14.2 y revisada con el control de completitud de Section 14.7.\nLa sección deberá indicar:",
+    "text": "20.1 Resumen de campaña\nEste capítulo queda reservado para documentar los resultados de la campaña una vez ejecutada. Debe reunir la evidencia levantada por cuenca, las condiciones de cada jornada y las limitaciones encontradas. La fuente primaria será la ficha definida en Section 18.2, levantada bajo el protocolo de Section 17.4 y revisada con el control de completitud de Section 17.10.\nLa sección deberá indicar:",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Resultados de Terreno</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Resultados de Terreno</span>"
     ]
   },
   {
     "objectID": "resultados_terreno.html#sec-resumen-campana-terreno",
     "href": "resultados_terreno.html#sec-resumen-campana-terreno",
-    "title": "16  Resultados de Terreno",
+    "title": "20  Resultados de Terreno",
     "section": "",
     "text": "fechas de salida;\nequipo participante;\nbase logística;\ncomunas visitadas;\ncuencas visitadas;\ncuencas no visitadas;\ncuencas reemplazadas;\ncondiciones generales de clima y acceso.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Resultados de Terreno</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Resultados de Terreno</span>"
     ]
   },
   {
     "objectID": "resultados_terreno.html#sec-bitacora-jornadas-terreno",
     "href": "resultados_terreno.html#sec-bitacora-jornadas-terreno",
-    "title": "16  Resultados de Terreno",
-    "section": "16.2 Bitácora de jornadas",
-    "text": "16.2 Bitácora de jornadas\nCada jornada debe resumirse en una tabla:\n\n\n\nTable 16.1: Plantilla de bitácora de jornadas de terreno.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nRuta\nCuencas previstas\nCuencas visitadas\nIncidencias\nObservación general\n\n\n\n\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir",
+    "title": "20  Resultados de Terreno",
+    "section": "20.2 Bitácora de jornadas",
+    "text": "20.2 Bitácora de jornadas\nCada jornada debe resumirse en una tabla:\n\n\n\nTable 20.1: Plantilla de bitácora de jornadas de terreno.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFecha\nRuta\nCuencas previstas\nCuencas visitadas\nIncidencias\nObservación general\n\n\n\n\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Resultados de Terreno</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Resultados de Terreno</span>"
     ]
   },
   {
     "objectID": "resultados_terreno.html#sec-resultados-por-cuenca-terreno",
     "href": "resultados_terreno.html#sec-resultados-por-cuenca-terreno",
-    "title": "16  Resultados de Terreno",
-    "section": "16.3 Resultados por cuenca",
-    "text": "16.3 Resultados por cuenca\nPara cada cuenca visitada se debe reportar:\n\nestado de visita;\ncoordenada observada;\nfotografías disponibles;\nvuelo de dron completo, parcial o suspendido;\ncondiciones ambientales registradas en la ficha;\nIEO calculado por punto y promedio de cuenca;\nobservaciones ecológicas principales;\nproblemas de acceso o representatividad;\nconsistencia preliminar con la señal MRCT.",
+    "title": "20  Resultados de Terreno",
+    "section": "20.3 Resultados por cuenca",
+    "text": "20.3 Resultados por cuenca\nPara cada cuenca visitada se debe reportar:\n\nestado de visita;\ncoordenada observada;\nfotografías disponibles;\nvuelo de dron completo, parcial o suspendido;\ncondiciones ambientales registradas en la ficha;\nIEO calculado por punto y promedio de cuenca;\nobservaciones ecológicas principales;\nproblemas de acceso o representatividad;\nconsistencia preliminar con la señal MRCT.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Resultados de Terreno</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Resultados de Terreno</span>"
     ]
   },
   {
     "objectID": "resultados_terreno.html#sec-sintesis-mediciones-terreno",
     "href": "resultados_terreno.html#sec-sintesis-mediciones-terreno",
-    "title": "16  Resultados de Terreno",
-    "section": "16.4 Síntesis de mediciones",
-    "text": "16.4 Síntesis de mediciones\nLa tabla de mediciones deberá consolidar las mismas variables de la planilla de Section 15.1, evitando crear campos paralelos que no existan en la ficha:\n\n\n\nTable 16.2: Plantilla de síntesis de mediciones de terreno.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRID\nFecha\nViento km/h\nNubosidad %\nTemp_AmbC\nIEO promedio\nAgua/nieve en observaciones\nVuelo dron\nEstado ficha\n\n\n\n\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir",
+    "title": "20  Resultados de Terreno",
+    "section": "20.4 Síntesis de mediciones",
+    "text": "20.4 Síntesis de mediciones\nLa tabla de mediciones deberá consolidar las mismas variables de la planilla de Section 18.1, evitando crear campos paralelos que no existan en la ficha:\n\n\n\nTable 20.2: Plantilla de síntesis de mediciones de terreno.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRID\nFecha\nViento km/h\nNubosidad %\nTemp_AmbC\nIEO promedio\nAgua/nieve en observaciones\nVuelo dron\nEstado ficha\n\n\n\n\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir\nPor definir",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Resultados de Terreno</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Resultados de Terreno</span>"
     ]
   },
   {
     "objectID": "resultados_terreno.html#sec-registro-fotografico-resultados",
     "href": "resultados_terreno.html#sec-registro-fotografico-resultados",
-    "title": "16  Resultados de Terreno",
-    "section": "16.5 Registro fotográfico",
-    "text": "16.5 Registro fotográfico\nEsta sección debe incorporar una selección curada de fotografías y capturas de dron registradas con la nomenclatura definida en Section 14.3 y Section 14.4. No debe incluir todo el repositorio visual, sino ejemplos que expliquen condiciones observadas y diferencias entre cuencas.",
+    "title": "20  Resultados de Terreno",
+    "section": "20.5 Registro fotográfico",
+    "text": "20.5 Registro fotográfico\nEsta sección debe incorporar una selección curada de fotografías y capturas de dron registradas con la nomenclatura definida en Section 17.6 y Section 17.7. No debe incluir todo el repositorio visual, sino ejemplos que expliquen condiciones observadas y diferencias entre cuencas.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Resultados de Terreno</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Resultados de Terreno</span>"
     ]
   },
   {
     "objectID": "resultados_terreno.html#sec-limitaciones-campana-terreno",
     "href": "resultados_terreno.html#sec-limitaciones-campana-terreno",
-    "title": "16  Resultados de Terreno",
-    "section": "16.6 Limitaciones de campaña",
-    "text": "16.6 Limitaciones de campaña\nLas limitaciones deben registrarse explícitamente:\n\ncuencas no visitadas;\nvuelos suspendidos;\nmediciones incompletas;\nproblemas de clima;\nproblemas de acceso;\nbaja visibilidad;\npuntos poco representativos;\nrestricciones de permiso o seguridad.\n\nEstas limitaciones alimentan directamente la clasificación de consistencia o no evaluabilidad definida en Section 17.2.",
+    "title": "20  Resultados de Terreno",
+    "section": "20.6 Limitaciones de campaña",
+    "text": "20.6 Limitaciones de campaña\nLas limitaciones deben registrarse explícitamente:\n\ncuencas no visitadas;\nvuelos suspendidos;\nmediciones incompletas;\nproblemas de clima;\nproblemas de acceso;\nbaja visibilidad;\npuntos poco representativos;\nrestricciones de permiso o seguridad.\n\nEstas limitaciones alimentan directamente la clasificación de consistencia o no evaluabilidad definida en Section 21.2.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Resultados de Terreno</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Resultados de Terreno</span>"
     ]
   },
   {
     "objectID": "integracion_validacion.html",
     "href": "integracion_validacion.html",
-    "title": "17  Integración y Validación",
+    "title": "21  Integración y Validación",
     "section": "",
-    "text": "17.1 Tabla de validación\nEste capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico: la selección nace en Section 12.8 y Section 12.10, la campaña se organiza en Section 13.2, el registro se levanta con Section 15.2 y los resultados se consolidan en Section 16.3.\nLa evidencia de terreno debe integrarse como una tabla por cuenca visitada. La tabla agrega la planilla de Section 15.1 y no reemplaza el archivo original de terreno.",
+    "text": "21.1 Tabla de validación\nEste capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico: la selección nace en Section 12.8 y Section 12.10, la campaña se organiza en ?sec-decision-cuencas-finales, el registro se levanta con Section 18.2 y los resultados se consolidan en Section 20.3.\nLa evidencia de terreno debe integrarse como una tabla por cuenca visitada. La tabla agrega la planilla de Section 18.1 y no reemplaza el archivo original de terreno.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Integración y Validación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Integración y Validación</span>"
     ]
   },
   {
     "objectID": "integracion_validacion.html#sec-tabla-validacion-mrct-terreno",
     "href": "integracion_validacion.html#sec-tabla-validacion-mrct-terreno",
-    "title": "17  Integración y Validación",
+    "title": "21  Integración y Validación",
     "section": "",
-    "text": "Table 17.1: Variables sugeridas para integrar terreno y MRCT.\n\n\n\n\n\n\n\n\n\nVariable\nDescripción\n\n\n\n\nRID\nIdentificador de cuenca.\n\n\nvisit_date\nFecha de visita.\n\n\nfield_status\nVisitada, no visitada, reemplazada o acceso parcial.\n\n\ndrone_status\nVuelo completo, parcial, suspendido o no aplica.\n\n\nphoto_count\nNúmero de fotografías útiles.\n\n\nwind_kmh\nViento registrado en la ficha.\n\n\ncloud_pct\nNubosidad registrada en la ficha.\n\n\ntemp_amb_c\nTemperatura ambiente registrada como Temp_AmbC.\n\n\nieo_mean\nPromedio de IEO de los puntos de muestreo.\n\n\nwater_snow_notes\nEvidencia de agua visible, nieve o hielo descrita en observaciones breves.\n\n\nvisible_disturbance\nPerturbación visible registrada en observaciones y fotografías.\n\n\nres_model\nRES modelo precargado en la ficha.\n\n\njerk_model\nJerk modelo precargado en la ficha.\n\n\ntrajectory_type\nTipo de trayectoria precargada en la ficha.\n\n\nmrct_consistency\nConsistente, parcialmente consistente, no consistente o no evaluable.\n\n\nfield_notes\nSíntesis cualitativa.",
+    "text": "Table 21.1: Variables sugeridas para integrar terreno y MRCT.\n\n\n\n\n\n\n\n\n\nVariable\nDescripción\n\n\n\n\nRID\nIdentificador de cuenca.\n\n\nvisit_date\nFecha de visita.\n\n\nfield_status\nVisitada, no visitada, reemplazada o acceso parcial.\n\n\ndrone_status\nVuelo completo, parcial, suspendido o no aplica.\n\n\nphoto_count\nNúmero de fotografías útiles.\n\n\nwind_kmh\nViento registrado en la ficha.\n\n\ncloud_pct\nNubosidad registrada en la ficha.\n\n\ntemp_amb_c\nTemperatura ambiente registrada como Temp_AmbC.\n\n\nieo_mean\nPromedio de IEO de los puntos de muestreo.\n\n\nwater_snow_notes\nEvidencia de agua visible, nieve o hielo descrita en observaciones breves.\n\n\nvisible_disturbance\nPerturbación visible registrada en observaciones y fotografías.\n\n\nres_model\nRES modelo precargado en la ficha.\n\n\njerk_model\nJerk modelo precargado en la ficha.\n\n\ntrajectory_type\nTipo de trayectoria precargada en la ficha.\n\n\nmrct_consistency\nConsistente, parcialmente consistente, no consistente o no evaluable.\n\n\nfield_notes\nSíntesis cualitativa.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Integración y Validación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Integración y Validación</span>"
     ]
   },
   {
     "objectID": "integracion_validacion.html#sec-criterios-consistencia-mrct",
     "href": "integracion_validacion.html#sec-criterios-consistencia-mrct",
-    "title": "17  Integración y Validación",
-    "section": "17.2 Criterios de consistencia",
-    "text": "17.2 Criterios de consistencia\nLa comparación debe separar cuatro resultados:\n\n\n\nTable 17.2: Criterios para clasificar consistencia entre MRCT y terreno.\n\n\n\n\n\n\n\n\n\n\nResultado\nInterpretación\nAcción recomendada\n\n\n\n\nConsistente\nLa observación muestra condiciones compatibles con la señal MRCT.\nDocumentar evidencia y mantener criterio de priorización.\n\n\nParcialmente consistente\nSe observan algunas señales, pero existen factores locales o limitaciones de observación.\nRevisar series, imágenes y contexto territorial.\n\n\nNo consistente\nLa señal MRCT no se refleja en la observación disponible.\nAuditar insumos, fechas, nubes, nieve, clasificación o escala espacial.\n\n\nNo evaluable\nNo hubo observación suficiente por acceso, clima, vuelo suspendido o baja visibilidad.\nReprogramar, usar sitio alternativo o marcar limitación.",
+    "title": "21  Integración y Validación",
+    "section": "21.2 Criterios de consistencia",
+    "text": "21.2 Criterios de consistencia\nLa comparación debe separar cuatro resultados:\n\n\n\nTable 21.2: Criterios para clasificar consistencia entre MRCT y terreno.\n\n\n\n\n\n\n\n\n\n\nResultado\nInterpretación\nAcción recomendada\n\n\n\n\nConsistente\nLa observación muestra condiciones compatibles con la señal MRCT.\nDocumentar evidencia y mantener criterio de priorización.\n\n\nParcialmente consistente\nSe observan algunas señales, pero existen factores locales o limitaciones de observación.\nRevisar series, imágenes y contexto territorial.\n\n\nNo consistente\nLa señal MRCT no se refleja en la observación disponible.\nAuditar insumos, fechas, nubes, nieve, clasificación o escala espacial.\n\n\nNo evaluable\nNo hubo observación suficiente por acceso, clima, vuelo suspendido o baja visibilidad.\nReprogramar, usar sitio alternativo o marcar limitación.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Integración y Validación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Integración y Validación</span>"
     ]
   },
   {
     "objectID": "integracion_validacion.html#sec-discrepancias-mrct-terreno",
     "href": "integracion_validacion.html#sec-discrepancias-mrct-terreno",
-    "title": "17  Integración y Validación",
-    "section": "17.3 Lectura de discrepancias",
-    "text": "17.3 Lectura de discrepancias\nUna discrepancia no debe interpretarse automáticamente como error. Debe revisarse contra la ficha original (Section 15.2), los resultados por cuenca (Section 16.3) y los antecedentes del análisis de jerk (Section 12.2). Puede deberse a:\n\ndiferencia entre fecha de imagen satelital y fecha de visita;\nheterogeneidad interna de la cuenca;\npunto de observación poco representativo;\nnieve, sombra, nubosidad o mezcla de coberturas;\nevento temporal ya superado;\nseñal MRCT asociada a una variable no visible directamente;\nlimitaciones del acceso o del registro fotográfico.",
+    "title": "21  Integración y Validación",
+    "section": "21.3 Lectura de discrepancias",
+    "text": "21.3 Lectura de discrepancias\nUna discrepancia no debe interpretarse automáticamente como error. Debe revisarse contra la ficha original (Section 18.2), los resultados por cuenca (Section 20.3) y los antecedentes del análisis de jerk (Section 12.2). Puede deberse a:\n\ndiferencia entre fecha de imagen satelital y fecha de visita;\nheterogeneidad interna de la cuenca;\npunto de observación poco representativo;\nnieve, sombra, nubosidad o mezcla de coberturas;\nevento temporal ya superado;\nseñal MRCT asociada a una variable no visible directamente;\nlimitaciones del acceso o del registro fotográfico.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Integración y Validación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Integración y Validación</span>"
     ]
   },
   {
     "objectID": "integracion_validacion.html#sec-retroalimentacion-metodologica",
     "href": "integracion_validacion.html#sec-retroalimentacion-metodologica",
-    "title": "17  Integración y Validación",
-    "section": "17.4 Retroalimentación metodológica",
-    "text": "17.4 Retroalimentación metodológica\nLa integración debe producir aprendizajes para mejorar:\n\ncriterios de selección por jerk;\npesos del puntaje compuesto;\numbrales de percentil;\nfiltros de accesibilidad;\ndiseño de fichas;\nvariables ambientales medidas;\nselección de cuencas de control;\nvisualización futura en aplicaciones o tableros.",
+    "title": "21  Integración y Validación",
+    "section": "21.4 Retroalimentación metodológica",
+    "text": "21.4 Retroalimentación metodológica\nLa integración debe producir aprendizajes para mejorar:\n\ncriterios de selección por jerk;\npesos del puntaje compuesto;\numbrales de percentil;\nfiltros de accesibilidad;\ndiseño de fichas;\nvariables ambientales medidas;\nselección de cuencas de control;\nvisualización futura en aplicaciones o tableros.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Integración y Validación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Integración y Validación</span>"
     ]
   },
   {
     "objectID": "integracion_validacion.html#sec-productos-integracion-validacion",
     "href": "integracion_validacion.html#sec-productos-integracion-validacion",
-    "title": "17  Integración y Validación",
-    "section": "17.5 Productos finales",
-    "text": "17.5 Productos finales\nEl cierre de validación debe entregar:\n\ntabla integrada MRCT-terreno;\nmapa de cuencas visitadas y estado de validación;\nsíntesis de consistencia;\ncasos representativos;\nrecomendaciones para nuevas campañas;\nlimitaciones y decisiones metodológicas documentadas.",
+    "title": "21  Integración y Validación",
+    "section": "21.5 Productos finales",
+    "text": "21.5 Productos finales\nEl cierre de validación debe entregar:\n\ntabla integrada MRCT-terreno;\nmapa de cuencas visitadas y estado de validación;\nsíntesis de consistencia;\ncasos representativos;\nrecomendaciones para nuevas campañas;\nlimitaciones y decisiones metodológicas documentadas.",
     "crumbs": [
       "Trabajo en Terreno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Integración y Validación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Integración y Validación</span>"
     ]
   },
   {
     "objectID": "references.html",
     "href": "references.html",
-    "title": "18  Bibliografía",
+    "title": "22  Bibliografía",
     "section": "",
     "text": "Biblioteca del Congreso Nacional de Chile. 2026a.\n“Hidrografía Región de\nMagallanes.” https://www.bcn.cl/siit/nuestropais/region12/hidrografia.htm.\n\n\n———. 2026b. “Región de Magallanes y\nAntártica Chilena.” https://www.bcn.cl/siit/siit/nuestropais/region12.\n\n\nCorporación Nacional Forestal. 2020. “Sistema de\nInformación Territorial SIT CONAF.” https://sit.conaf.cl/.\n\n\nDirección General de Aguas. 2026a. “DGA Magallanes Destaca\nCrecimiento de La Red de Estaciones de Monitoreo de Aguas\nSubterráneas y Glaciares En La Región.”\nhttps://dga.mop.gob.cl/dga-magallanes-destaca-crecimiento-de-la-red-de-estaciones-de-monitoreo-de-aguas-subterraneas-y-glaciares-en-la-region/.\n\n\n———. 2026b. “Inventario público de Cuencas\nHidrográficas y Lagos.” https://dga.mop.gob.cl/servicios-de-informacion/catastro-publico-de-aguas/inventario-publico-de-cuencas-hidrograficas-y-lagos/.\n\n\nGu, Yingxin, Jesslyn F. Brown, James P. Verdin, and Brian Wardlow. 2007.\n“A Five-Year Analysis of MODIS NDVI and NDWI for Grassland Drought\nAssessment over the Central Great Plains of the United States.”\nGeophysical Research Letters 34 (6): L06407. https://doi.org/10.1029/2006GL029127.\n\n\nInstituto Nacional de Estadísticas. 2025. “Resultados Regionales\nCenso 2024: Magallanes y de La Antártica Chilena.”\nhttps://censo2024.ine.gob.cl/wp-content/uploads/2025/04/12.-Infografia_Magallanes.pdf.\n\n\nLedoit, Olivier, and Michael Wolf. 2004. “A Well-Conditioned\nEstimator for Large-Dimensional Covariance Matrices.” Journal\nof Multivariate Analysis 88 (2): 365–411. https://doi.org/10.1016/S0047-259X(03)00096-4.\n\n\nLiang, Shunlin. 2001. “Narrowband to Broadband Conversions of Land\nSurface Albedo i: Algorithms.” Remote Sensing of\nEnvironment 76 (2): 213–38. https://doi.org/10.1016/S0034-4257(00)00205-4.\n\n\nMinisterio de Vivienda y Urbanismo. 2021. “Continuo de\nConstrucciones Urbanas.” https://ide.minvu.cl/maps/MINVU::continuo-de-construcciones-urbanas/about.\n\n\nMinisterio del Medio Ambiente. 2015. “Región de\nMagallanes y Antártica Chilena: Información\nGeneral.” https://sinca.mma.gob.cl/index.php/region/info/id/XII.\n\n\n———. 2026. “GEOPORTAL SIMBIO.” https://apps.mma.gob.cl/visorsimbio.\n\n\nServicio de Biodiversidad y Áreas Protegidas. 2026. “Servicio de\nBiodiversidad y Áreas Protegidas Comienza a Operar En La\nRegión de Magallanes.” https://sbap.gob.cl/sala-de-prensa/noticias-y-comunicados/detalle/2026/02/10/servicio-de-biodiversidad-y-%C3%A1reas-protegidas-comienza-a-operar-en-la-regi%C3%B3n-de-magallanes.\n\n\nU.S. Geological Survey. 2025. “What Are the Band Designations for\nthe Landsat Satellites?” https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites.\n\n\n———. 2026. “Using the USGS Landsat Level-1 Data Product.”\nhttps://www.usgs.gov/landsat-missions/using-usgs-landsat-level-1-data-product.",
     "crumbs": [
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
     "objectID": "anexos.html",
     "href": "anexos.html",
-    "title": "19  Anexos",
+    "title": "23  Anexos",
     "section": "",
-    "text": "19.1 Fichas",
+    "text": "23.1 Fichas",
     "crumbs": [
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Anexos</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Anexos</span>"
     ]
   }
 ]

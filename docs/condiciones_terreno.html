@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Sensibilidad del Sistema – Guía Técnica MRCT</title>
+<title>15&nbsp; Condiciones de Terreno y Climáticas – Guía Técnica MRCT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pt_resiliencia.html" rel="next">
-<link href="./integracion_espacial.html" rel="prev">
+<link href="./equipamiento.html" rel="next">
+<link href="./logistica.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -69,53 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -129,7 +83,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sensibilidad.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./condiciones_terreno.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Condiciones de Terreno y Climáticas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -204,7 +158,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sensibilidad.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sensibilidad.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></span></a>
   </div>
 </li>
@@ -255,7 +209,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./condiciones_terreno.html" class="sidebar-item-text sidebar-link">
+  <a href="./condiciones_terreno.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Condiciones de Terreno y Climáticas</span></span></a>
   </div>
 </li>
@@ -319,24 +273,26 @@ window.Quarto = {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#sec-forzantes-climaticos" id="toc-sec-forzantes-climaticos" class="nav-link active" data-scroll-target="#sec-forzantes-climaticos"><span class="header-section-number">8.1</span> Forzantes climáticos usados</a></li>
-  <li><a href="#sec-normalizacion-sensibilidad" id="toc-sec-normalizacion-sensibilidad" class="nav-link" data-scroll-target="#sec-normalizacion-sensibilidad"><span class="header-section-number">8.2</span> Normalización por cuenca</a></li>
-  <li><a href="#sec-modelo-sensibilidad" id="toc-sec-modelo-sensibilidad" class="nav-link" data-scroll-target="#sec-modelo-sensibilidad"><span class="header-section-number">8.3</span> Modelo de sensibilidad</a></li>
-  <li><a href="#sec-sens" id="toc-sec-sens" class="nav-link" data-scroll-target="#sec-sens"><span class="header-section-number">8.4</span> Índice SENS</a></li>
-  <li><a href="#sec-interpretacion-sensibilidad" id="toc-sec-interpretacion-sensibilidad" class="nav-link" data-scroll-target="#sec-interpretacion-sensibilidad"><span class="header-section-number">8.5</span> Interpretación</a></li>
-  <li><a href="#sec-sens-pt" id="toc-sec-sens-pt" class="nav-link" data-scroll-target="#sec-sens-pt"><span class="header-section-number">8.6</span> Uso dentro del Potencial de Transición</a></li>
-  <li><a href="#sec-diagrama-sensibilidad" id="toc-sec-diagrama-sensibilidad" class="nav-link" data-scroll-target="#sec-diagrama-sensibilidad"><span class="header-section-number">8.7</span> Diagrama de sensibilidad</a></li>
-  <li><a href="#sec-productos-sensibilidad" id="toc-sec-productos-sensibilidad" class="nav-link" data-scroll-target="#sec-productos-sensibilidad"><span class="header-section-number">8.8</span> Productos esperados</a></li>
+  <li><a href="#sec-contexto-climatico-junio" id="toc-sec-contexto-climatico-junio" class="nav-link active" data-scroll-target="#sec-contexto-climatico-junio"><span class="header-section-number">15.1</span> Contexto climático de junio</a></li>
+  <li><a href="#sec-seguimiento-pronosticos" id="toc-sec-seguimiento-pronosticos" class="nav-link" data-scroll-target="#sec-seguimiento-pronosticos"><span class="header-section-number">15.2</span> Seguimiento de pronósticos</a>
+  <ul class="collapse">
+  <li><a href="#sec-registro-diario-pronostico" id="toc-sec-registro-diario-pronostico" class="nav-link" data-scroll-target="#sec-registro-diario-pronostico"><span class="header-section-number">15.2.1</span> Registro diario de pronóstico</a></li>
+  </ul></li>
+  <li><a href="#sec-condiciones-acceso-cuenca" id="toc-sec-condiciones-acceso-cuenca" class="nav-link" data-scroll-target="#sec-condiciones-acceso-cuenca"><span class="header-section-number">15.3</span> Condiciones de acceso por cuenca</a></li>
+  <li><a href="#sec-alertas-restricciones-acceso" id="toc-sec-alertas-restricciones-acceso" class="nav-link" data-scroll-target="#sec-alertas-restricciones-acceso"><span class="header-section-number">15.4</span> Alertas y restricciones de acceso</a></li>
+  <li><a href="#sec-criterios-cancelacion-terreno" id="toc-sec-criterios-cancelacion-terreno" class="nav-link" data-scroll-target="#sec-criterios-cancelacion-terreno"><span class="header-section-number">15.5</span> Criterios de cancelación o postergación</a></li>
+  <li><a href="#sec-registro-condiciones-observadas" id="toc-sec-registro-condiciones-observadas" class="nav-link" data-scroll-target="#sec-registro-condiciones-observadas"><span class="header-section-number">15.6</span> Registro de condiciones observadas en campo</a></li>
+  <li><a href="#sec-decision-diaria-salida" id="toc-sec-decision-diaria-salida" class="nav-link" data-scroll-target="#sec-decision-diaria-salida"><span class="header-section-number">15.7</span> Decisión diaria de salida</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./condiciones_terreno.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Condiciones de Terreno y Climáticas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sensibilidad del Sistema</span></h1>
-<p class="subtitle lead">Respuesta del dominio ecosistémico a forzantes climáticos</p>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Condiciones de Terreno y Climáticas</span></h1>
+<p class="subtitle lead">Registro operativo para Terreno Magallanes 2026</p>
 </div>
 
 
@@ -353,30 +309,29 @@ window.Quarto = {
 </header>
 
 
-<p>Después de incorporar el contexto espacial, el modelo mide una propiedad distinta: la sensibilidad del sistema. Ya no se pregunta solo qué tan lejos está una cuenca de su dominio de referencia, ni si esa condición es coherente con sus vecinas. La pregunta ahora es cuánto responde esa distancia cuando cambian forzantes persistentes del ambiente físico.</p>
-<p>En la MRCT, la sensibilidad climática resume la relación entre el dominio ecosistémico y tres variables de presión: aridez, albedo y temperatura de brillo. Estas variables no forman parte del dominio estructural de referencia, porque no describen directamente la composición ecológica de la cuenca. En cambio, se usan para estimar qué tan reactivo es el estado ecosistémico frente a condiciones ambientales más secas, más reflectantes o térmicamente más exigentes.</p>
+<p>Esta página concentra la revisión climática, el estado de accesos y las condiciones observadas en campo. Su función es apoyar decisiones diarias de salida, seguridad y vuelo de dron durante la campaña Magallanes 2026.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Para tomadores de decisión
+Uso operativo
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Dos cuencas pueden estar igual de alejadas de su línea base, pero no responder igual ante un año seco o cálido. Una puede cambiar poco porque su estructura amortigua la presión; otra puede desplazarse fuertemente ante el mismo estímulo. La sensibilidad permite reconocer territorios donde una presión climática persistente tiene mayor capacidad de empujar al sistema fuera de su régimen habitual.</p>
+<p>Antes de salir se revisan pronósticos, alertas y accesos. En terreno se registra la condición real de cada cuenca. Si las condiciones superan los criterios de seguridad, la visita o el vuelo de dron se postergan.</p>
 </div>
 </div>
-<section id="sec-forzantes-climaticos" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sec-forzantes-climaticos"><span class="header-section-number">8.1</span> Forzantes climáticos usados</h2>
-<p>La sensibilidad se estima a partir de tres variables anuales:</p>
-<div id="tbl-forzantes-sensibilidad" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sec-contexto-climatico-junio" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="sec-contexto-climatico-junio"><span class="header-section-number">15.1</span> Contexto climático de junio</h2>
+<p>Junio corresponde al inicio del invierno austral en Magallanes. Las condiciones pueden cambiar rápido entre Punta Arenas, sectores abiertos de estepa, pasos interiores y cuencas más altas.</p>
+<div id="tbl-contexto-climatico-junio" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-forzantes-sensibilidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;8.1: Forzantes usados para estimar sensibilidad climática.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-contexto-climatico-junio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.1: Condiciones climáticas esperadas para trabajo de terreno en junio.
 </figcaption>
-<div aria-describedby="tbl-forzantes-sensibilidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-contexto-climatico-junio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -386,145 +341,548 @@ Table&nbsp;8.1: Forzantes usados para estimar sensibilidad climática.
 <thead>
 <tr class="header">
 <th>Variable</th>
-<th>Nombre</th>
-<th>Rol en la sensibilidad</th>
+<th>Rango esperado Punta Arenas</th>
+<th>Cuencas cordilleranas o altas</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>IA</td>
-<td>Índice de aridez</td>
-<td>Representa condiciones de estrés hídrico relativo.</td>
+<td>Temperatura media</td>
+<td>1 a 5 °C</td>
+<td>-5 a 0 °C</td>
 </tr>
 <tr class="even">
-<td>ALB</td>
-<td>Albedo</td>
-<td>Resume cambios en la reflectancia superficial y en el balance radiativo.</td>
+<td>Temperatura mínima</td>
+<td>Hasta -5 °C</td>
+<td>-10 °C o menos</td>
 </tr>
 <tr class="odd">
-<td>TB</td>
-<td>Temperatura de brillo</td>
-<td>Aproxima la señal térmica superficial observada por Landsat.</td>
+<td>Precipitación</td>
+<td>Alta, lluvia o nieve</td>
+<td>Nieve probable</td>
+</tr>
+<tr class="even">
+<td>Viento</td>
+<td>50 a 80 km/h frecuente</td>
+<td>Hasta 100 km/h en pasos expuestos</td>
+</tr>
+<tr class="odd">
+<td>Horas de luz</td>
+<td>~9 horas/día</td>
+<td>~9 horas/día</td>
+</tr>
+<tr class="even">
+<td>Amanecer / anochecer</td>
+<td>~09:00 / ~18:00</td>
+<td>Similar</td>
+</tr>
+<tr class="odd">
+<td>Nieve en cuencas altas</td>
+<td>Muy probable</td>
+<td>Cobertura alta</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Estas variables se interpretan como presiones o condiciones externas al vector estructural principal. IA captura aridez relativa; ALB registra cambios en la energía reflejada por la superficie; TB representa la señal térmica anual. En conjunto, describen dimensiones del ambiente físico que pueden modificar la posición de una cuenca en el espacio de estados.</p>
-<p>La variable de respuesta es el dominio global:</p>
-<p><span class="math display">
-D_{i,t}
-</span></p>
-<p>donde <span class="math inline">i</span> identifica la cuenca y <span class="math inline">t</span> el año. Usar <span class="math inline">D</span> como respuesta tiene una ventaja metodológica: la sensibilidad se estima sobre el desplazamiento del sistema completo, no sobre un indicador aislado. Así, una respuesta alta significa que la estructura ecosistémica integrada de la cuenca cambia cuando cambian los forzantes.</p>
 </section>
-<section id="sec-normalizacion-sensibilidad" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-normalizacion-sensibilidad"><span class="header-section-number">8.2</span> Normalización por cuenca</h2>
-<p>Antes de ajustar el modelo, IA, ALB y TB se estandarizan dentro de cada cuenca. Para cada forzante <span class="math inline">z \in \{\text{IA}, \text{ALB}, \text{TB}\}</span> se calcula:</p>
-<p><span class="math display">
-\tilde{z}_{i,t} =
-\frac{z_{i,t} - \bar{z}_i}{s_{z,i}}
-</span></p>
-<p>donde <span class="math inline">\bar{z}_i</span> es la media temporal del forzante en la cuenca <span class="math inline">i</span> y <span class="math inline">s_{z,i}</span> es su desviación estándar temporal. Si la desviación estándar es menor que <span class="math inline">10^{-6}</span>, se reemplaza por 1 para evitar divisiones inestables.</p>
-<p>Esta normalización cumple dos funciones. Primero, pone los tres forzantes en unidades comparables, de modo que el tamaño de los coeficientes no dependa de la escala original de cada variable. Segundo, hace que la sensibilidad sea propia de cada cuenca: se mide cómo responde la cuenca frente a variaciones respecto de su propio rango histórico observado.</p>
-</section>
-<section id="sec-modelo-sensibilidad" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="sec-modelo-sensibilidad"><span class="header-section-number">8.3</span> Modelo de sensibilidad</h2>
-<p>Para cada cuenca se ajusta una regresión lineal múltiple entre el dominio global y los tres forzantes estandarizados:</p>
-<p><span class="math display">
-D_{i,t} =
-\beta_{0,i}
-+ \beta_{\text{IA},i}\tilde{\text{IA}}_{i,t}
-+ \beta_{\text{ALB},i}\tilde{\text{ALB}}_{i,t}
-+ \beta_{\text{TB},i}\tilde{\text{TB}}_{i,t}
-+ \varepsilon_{i,t}
-</span></p>
-<p>El intercepto <span class="math inline">\beta_{0,i}</span> representa el nivel medio esperado de <span class="math inline">D</span> para la cuenca cuando los forzantes están en su valor medio estandarizado. Los coeficientes <span class="math inline">\beta_{\text{IA},i}</span>, <span class="math inline">\beta_{\text{ALB},i}</span> y <span class="math inline">\beta_{\text{TB},i}</span> indican cuánto cambia <span class="math inline">D</span> ante una variación de una desviación estándar en cada forzante, manteniendo los otros constantes.</p>
-<p>El ajuste se realiza con mínimos cuadrados ordinarios usando solo observaciones finitas. Si una cuenca tiene menos de cuatro años válidos, la sensibilidad no se estima y queda en cero por defecto en la implementación. Esta regla evita ajustar un modelo con menos información que los parámetros necesarios para representar intercepto y tres coeficientes.</p>
-</section>
-<section id="sec-sens" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="sec-sens"><span class="header-section-number">8.4</span> Índice SENS</h2>
-<p>La sensibilidad climática se resume en un único valor por cuenca:</p>
-<p><span class="math display">
-SENS_i =
-\frac{
-\left\|
-\boldsymbol{\beta}_{1:3,i}
-\right\|_2
-}{
-\sigma_{D,i} + 10^{-9}
-}
-</span></p>
-<p>donde:</p>
-<p><span class="math display">
-\boldsymbol{\beta}_{1:3,i}
-=
-(\beta_{\text{IA},i},\beta_{\text{ALB},i},\beta_{\text{TB},i})
-</span></p>
-<p>y <span class="math inline">\sigma_{D,i}</span> es la desviación estándar temporal del dominio <span class="math inline">D</span> para la cuenca <span class="math inline">i</span>. El término <span class="math inline">10^{-9}</span> evita una división por cero cuando <span class="math inline">D</span> tiene variabilidad prácticamente nula.</p>
-<p>La norma euclidiana <span class="math inline">\|\boldsymbol{\beta}_{1:3,i}\|_2</span> integra la magnitud conjunta de la respuesta frente a los tres forzantes:</p>
-<p><span class="math display">
-\left\|
-\boldsymbol{\beta}_{1:3,i}
-\right\|_2
-=
-\sqrt{
-\beta_{\text{IA},i}^{2}
-+ \beta_{\text{ALB},i}^{2}
-+ \beta_{\text{TB},i}^{2}
-}
-</span></p>
-<p>Dividir por <span class="math inline">\sigma_{D,i}</span> transforma esa magnitud en una medida relativa a la variabilidad propia del dominio de la cuenca. Por eso <span class="math inline">SENS</span> no debe leerse como una unidad física directa, sino como una medida adimensional de reactividad relativa.</p>
-</section>
-<section id="sec-interpretacion-sensibilidad" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="sec-interpretacion-sensibilidad"><span class="header-section-number">8.5</span> Interpretación</h2>
-<p>Una cuenca con <span class="math inline">SENS</span> alto muestra una relación fuerte entre sus cambios de dominio y las variaciones de aridez, albedo y temperatura. En términos prácticos, significa que su estado ecosistémico integrado es más reactivo ante presiones climáticas persistentes.</p>
-<p>Una cuenca con <span class="math inline">SENS</span> bajo no necesariamente está en buen estado. Puede estar degradada, pero no mostrar una relación clara con los forzantes usados. También puede ser una cuenca estable, donde las variaciones de IA, ALB y TB no se traducen en grandes desplazamientos del dominio.</p>
-<p>La lectura correcta combina nivel y sensibilidad. <span class="math inline">D</span> indica posición respecto de la línea base; velocidad indica cambio temporal; <span class="math inline">D_{local}</span> indica coherencia espacial; <span class="math inline">SENS</span> indica cuánto puede amplificarse la trayectoria ante condiciones climáticas. Una cuenca con <span class="math inline">D</span> moderado pero <span class="math inline">SENS</span> alto puede convertirse en prioritaria si además muestra velocidad positiva o se ubica en un entorno local presionado.</p>
-</section>
-<section id="sec-sens-pt" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="sec-sens-pt"><span class="header-section-number">8.6</span> Uso dentro del Potencial de Transición</h2>
-<p>La sensibilidad entra en el Potencial de Transición como un factor de amplificación:</p>
-<p><span class="math display">
-1 + \alpha \cdot SENS_i
-</span></p>
-<p>donde <span class="math inline">\alpha</span> controla el peso de la sensibilidad climática dentro de la síntesis final. Con <span class="math inline">\alpha = 0</span>, el modelo ignora este componente. Con valores mayores, las cuencas más sensibles aumentan su PT incluso si su distancia estructural actual no es extrema.</p>
-<p>Esta forma multiplicativa refleja una idea simple: la sensibilidad no reemplaza al estado ecosistémico, sino que modifica su riesgo de transición. Un sistema alejado, dinámico y sensible acumula mayor potencial de transición que un sistema igualmente alejado pero poco reactivo ante los forzantes climáticos observados.</p>
-</section>
-<section id="sec-diagrama-sensibilidad" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="sec-diagrama-sensibilidad"><span class="header-section-number">8.7</span> Diagrama de sensibilidad</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    A[IA&lt;br/&gt;aridez] --&gt; D[Normalización&lt;br/&gt;por cuenca]
-    B[ALB&lt;br/&gt;albedo] --&gt; D
-    C[TB&lt;br/&gt;temperatura de brillo] --&gt; D
-    D --&gt; E[Regresión anual&lt;br/&gt;Domain ~ IA + ALB + TB]
-    F[Serie temporal&lt;br/&gt;Domain] --&gt; E
-    E --&gt; G[Coeficientes beta&lt;br/&gt;respuesta multivariable]
-    G --&gt; H[SENS&lt;br/&gt;norma beta / sigma Domain]
-    H --&gt; I[Amplificación&lt;br/&gt;del PT]
-</pre>
+<section id="sec-seguimiento-pronosticos" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="sec-seguimiento-pronosticos"><span class="header-section-number">15.2</span> Seguimiento de pronósticos</h2>
+<p>La revisión de pronóstico debe hacerse cada noche y actualizarse antes de salir. Para decisiones de dron, el viento observado en sitio prevalece sobre el pronóstico.</p>
+<div id="tbl-fuentes-pronostico-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fuentes-pronostico-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.2: Fuentes recomendadas para seguimiento climático y operativo.
+</figcaption>
+<div aria-describedby="tbl-fuentes-pronostico-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Fuente</th>
+<th>URL / App</th>
+<th>Resolución</th>
+<th>Uso principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Meteochile</td>
+<td><a href="https://www.meteochile.gob.cl" class="uri">https://www.meteochile.gob.cl</a></td>
+<td>Provincial</td>
+<td>Alertas oficiales</td>
+</tr>
+<tr class="even">
+<td>Windy</td>
+<td><a href="https://www.windy.com/?-53.197,-70.933,9" class="uri">https://www.windy.com/?-53.197,-70.933,9</a></td>
+<td>Alta resolución</td>
+<td>Viento, lluvia, nieve y ventanas horarias</td>
+</tr>
+<tr class="odd">
+<td>DJI Fly</td>
+<td>App DJI Fly</td>
+<td>Local</td>
+<td>Condiciones y restricciones de vuelo dron</td>
+</tr>
+<tr class="even">
+<td>DGAC / DMC</td>
+<td><a href="https://archivos.meteochile.gob.cl/portaldmc/metaer/metaer_wrf_estacion.php?codigo=PARENAS" class="uri">https://archivos.meteochile.gob.cl/portaldmc/metaer/metaer_wrf_estacion.php?codigo=PARENAS</a></td>
+<td>Provincial</td>
+<td>Temperatura, precipitación, viento y dirección del viento</td>
+</tr>
+</tbody>
+</table>
 </div>
-<p></p></figure><p></p>
+</figure>
 </div>
+<section id="sec-registro-diario-pronostico" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="sec-registro-diario-pronostico"><span class="header-section-number">15.2.1</span> Registro diario de pronóstico</h3>
+<div id="tbl-registro-pronostico-diario" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-registro-pronostico-diario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.3: Registro de pronóstico por jornada.
+</figcaption>
+<div aria-describedby="tbl-registro-pronostico-diario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fecha</th>
+<th>Fuente</th>
+<th style="text-align: right;">T min °C</th>
+<th style="text-align: right;">T max °C</th>
+<th>Viento km/h</th>
+<th>Precipitación</th>
+<th>Ventana de vuelo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2026-06-15</td>
+<td><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>2026-06-16</td>
+<td><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>2026-06-17</td>
+<td><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td>2026-06-18</td>
+<td><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td>2026-06-19</td>
+<td><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+</tr>
+</tbody>
+</table>
 </div>
+</figure>
 </div>
 </section>
-<section id="sec-productos-sensibilidad" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="sec-productos-sensibilidad"><span class="header-section-number">8.8</span> Productos esperados</h2>
-<p>La etapa de sensibilidad genera un valor <span class="math inline">SENS</span> por cuenca, que puede comunicarse mediante:</p>
+</section>
+<section id="sec-condiciones-acceso-cuenca" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="sec-condiciones-acceso-cuenca"><span class="header-section-number">15.3</span> Condiciones de acceso por cuenca</h2>
+<p>Esta tabla usa la cartera de cuencas seleccionadas de <a href="cuencas_seleccionadas.html#tbl-cuencas-seleccionadas-detalle" class="quarto-xref">Tabla&nbsp;<span>13.2</span></a>. Antes de cada salida se completa con el pronóstico específico de temperatura y viento, porque esas variables condicionan la seguridad del acceso y la posibilidad de vuelo de dron. Se asume uso de vehículo 4x4 durante toda la campaña.</p>
+<div id="tbl-condiciones-acceso-cuenca" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-condiciones-acceso-cuenca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.4: Condiciones de acceso por cuenca priorizada.
+</figcaption>
+<div aria-describedby="tbl-condiciones-acceso-cuenca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">RID</th>
+<th>Sector</th>
+<th style="text-align: right;">Dist. base km</th>
+<th>Punto de acceso</th>
+<th>Tipo de vía</th>
+<th>T esperada °C</th>
+<th>Viento esperado km/h</th>
+<th>Cruce de agua</th>
+<th>Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1885</td>
+<td>Norponiente</td>
+<td style="text-align: right;">38.3</td>
+<td>-52.79902, -71.04013</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2205</td>
+<td>Norponiente</td>
+<td style="text-align: right;">42.6</td>
+<td>-52.77871, -71.00823</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4982</td>
+<td>Eje norte intermedio</td>
+<td style="text-align: right;">64.5</td>
+<td>-52.59760, -70.64358</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4996</td>
+<td>Eje norte intermedio</td>
+<td style="text-align: right;">65.1</td>
+<td>-52.61149, -70.55698</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1886</td>
+<td>Norponiente</td>
+<td style="text-align: right;">40.3</td>
+<td>-52.80270, -70.97234</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5257</td>
+<td>Norponiente</td>
+<td style="text-align: right;">51.8</td>
+<td>-52.69572, -70.87232</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5209</td>
+<td>Eje norte intermedio</td>
+<td style="text-align: right;">57.7</td>
+<td>-52.66689, -70.64540</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5294</td>
+<td>Eje oriental</td>
+<td style="text-align: right;">100.1</td>
+<td>-52.49686, -69.88991</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5624</td>
+<td>Eje oriental</td>
+<td style="text-align: right;">101.9</td>
+<td>-52.49048, -69.88102</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5048</td>
+<td>Eje oriental</td>
+<td style="text-align: right;">105.0</td>
+<td>-52.49928, -69.78303</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1808</td>
+<td>Punta Arenas / Laredo</td>
+<td style="text-align: right;">13.1</td>
+<td>-53.15925, -71.06570</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5258</td>
+<td>Eje norte intermedio</td>
+<td style="text-align: right;">55.2</td>
+<td>-52.66603, -70.68678</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3289</td>
+<td>Norponiente</td>
+<td style="text-align: right;">60.8</td>
+<td>-52.61627, -70.94212</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5247</td>
+<td>Eje norte intermedio</td>
+<td style="text-align: right;">65.5</td>
+<td>-52.65109, -70.42263</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5263</td>
+<td>Eje oriental</td>
+<td style="text-align: right;">80.5</td>
+<td>-52.59156, -70.17194</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5626</td>
+<td>Eje oriental</td>
+<td style="text-align: right;">106.1</td>
+<td>-52.48203, -69.79322</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5623</td>
+<td>Eje oriental</td>
+<td style="text-align: right;">106.1</td>
+<td>-52.47845, -69.83296</td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+<td><code>pendiente</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-alertas-restricciones-acceso" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="sec-alertas-restricciones-acceso"><span class="header-section-number">15.4</span> Alertas y restricciones de acceso</h2>
+<div id="tbl-alertas-restricciones-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-alertas-restricciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.5: Alertas y restricciones relevantes para la campaña.
+</figcaption>
+<div aria-describedby="tbl-alertas-restricciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Alerta o restricción</th>
+<th>Fuente</th>
+<th>Vigencia</th>
+<th>Impacto en campaña</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Antes de cada salida se debe verificar el estado de caminos, áreas protegidas y accesos con las instituciones o actores correspondientes:</p>
 <ul>
-<li>mapa regional de sensibilidad climática;</li>
-<li>distribución de <span class="math inline">SENS</span> para identificar cuencas altamente reactivas;</li>
-<li>tabla de cuencas con mayor sensibilidad;</li>
-<li>gráficos de casos seleccionados entre <span class="math inline">D</span> y los forzantes IA, ALB y TB;</li>
-<li>comparación entre <span class="math inline">SENS</span>, <span class="math inline">D</span>, velocidad y <span class="math inline">D_{local}</span> para priorización integrada.</li>
+<li>Vialidad Magallanes: <code>pendiente</code>;</li>
+<li>CONAF Magallanes: <code>pendiente</code>;</li>
+<li>propietarios, administradores o encargados locales, si aplica.</li>
 </ul>
-<p>Estos productos deben usarse como lectura complementaria, no como diagnóstico aislado. La sensibilidad cobra sentido cuando se interpreta junto con la trayectoria y el contexto espacial del sistema.</p>
+</section>
+<section id="sec-criterios-cancelacion-terreno" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="sec-criterios-cancelacion-terreno"><span class="header-section-number">15.5</span> Criterios de cancelación o postergación</h2>
+<p>La visita a una cuenca se cancela o posterga si se cumple cualquiera de estas condiciones:</p>
+<ul>
+<li>viento sostenido mayor a 60 km/h en el sitio;</li>
+<li>visibilidad menor a 100 m por niebla o nevada intensa;</li>
+<li>camino de acceso cerrado por Vialidad, CONAF u otra autoridad competente;</li>
+<li>temperatura menor a -15 °C;</li>
+<li>alerta meteorológica oficial activa para el sector;</li>
+<li>cruce de agua no seguro por crecida, hielo, profundidad o corriente;</li>
+<li>cualquier condición que impida retorno seguro a la base.</li>
+</ul>
+<p>Para el vuelo de dron aplican además los criterios específicos de <a href="vuelo_drone.html#sec-condiciones-minimas-vuelo-drone" class="quarto-xref"><span>Section 19.5</span></a>. Puede haber visita terrestre sin vuelo si el acceso es seguro pero el viento, la lluvia, la nieve o la visibilidad impiden operar el equipo.</p>
+</section>
+<section id="sec-registro-condiciones-observadas" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="sec-registro-condiciones-observadas"><span class="header-section-number">15.6</span> Registro de condiciones observadas en campo</h2>
+<p>Esta tabla resume la condición real encontrada en cada cuenca. Debe completarse aunque la visita se suspenda, porque permite distinguir entre una cuenca no visitada por falta de tiempo y una cuenca no visitada por restricción climática o de acceso.</p>
+<div id="tbl-registro-condiciones-observadas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-registro-condiciones-observadas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.6: Registro de condiciones observadas durante la campaña.
+</figcaption>
+<div aria-describedby="tbl-registro-condiciones-observadas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fecha</th>
+<th>Cuenca / RID</th>
+<th style="text-align: right;">T °C</th>
+<th>Viento</th>
+<th>Precipitación</th>
+<th>Cobertura nieve</th>
+<th>Acceso real</th>
+<th>Dron posible</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td style="text-align: right;"><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Sí / No</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-decision-diaria-salida" class="level2" data-number="15.7">
+<h2 data-number="15.7" class="anchored" data-anchor-id="sec-decision-diaria-salida"><span class="header-section-number">15.7</span> Decisión diaria de salida</h2>
+<p>Al cierre de cada jornada se deja definida una decisión preliminar para el día siguiente:</p>
+<div id="tbl-decision-diaria-salida" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-decision-diaria-salida-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.7: Decisión operativa diaria según pronóstico, accesos y seguridad.
+</figcaption>
+<div aria-describedby="tbl-decision-diaria-salida-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fecha salida</th>
+<th>Cuencas objetivo</th>
+<th>Cuencas alternativa</th>
+<th>Riesgo principal</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td><code>pendiente</code></td>
+<td>Salir / Postergar / Cambiar ruta</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 
 
 </section>
@@ -931,13 +1289,13 @@ SENS_i =
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./integracion_espacial.html" class="pagination-link" aria-label="Integración Territorial">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integración Territorial</span></span>
+      <a href="./logistica.html" class="pagination-link" aria-label="Logística y Traslados">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Logística y Traslados</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pt_resiliencia.html" class="pagination-link" aria-label="Potencial de Transición y Resiliencia">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Potencial de Transición y Resiliencia</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./equipamiento.html" class="pagination-link" aria-label="Equipamiento">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Equipamiento</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
