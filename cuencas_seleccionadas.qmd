@@ -5,7 +5,7 @@ subtitle: "Mapa operativo, tabla de priorización y fichas rápidas para terreno
 
 Este capítulo consolida las cuencas seleccionadas para la campaña Magallanes 2026. Su objetivo es funcionar como una hoja de terreno: permite revisar el mapa web, comparar prioridades, ubicar puntos de acceso y consultar una ficha breve por cuenca antes de salir o durante el gabinete nocturno.
 
-La selección proviene de las capas `data/cuencas_seleccionadas/cuencas_seleccionadas_v1.shp` y `data/cuencas_seleccionadas/accesos_cuencas_v1.shp`. Las distancias se calculan de manera aproximada desde la base Almasu en Punta Arenas; por lo tanto, deben usarse como referencia logística preliminar y no como tiempo real de conducción.
+La selección proviene de las capas de cuencas seleccionadas y puntos de acceso disponibles en el repositorio oficial [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv). Las distancias se calculan de manera aproximada desde la base Almasu en Punta Arenas; por lo tanto, deben usarse como referencia logística preliminar y no como tiempo real de conducción.
 
 ::: {.callout-note}
 ## Uso en terreno
@@ -43,31 +43,58 @@ La tabla resume las 17 cuencas de la cartera operativa. El campo "prioridad" com
 
 | RID | Contexto | Evento | Superficie km2 | Dist. base km | Prioridad | Acceso | Sector |
 |---:|---|---|---:|---:|---|---|---|
-| 1885 | Validación general | Inestable | 37.2 | 38.3 | Muy alta | -52.79902, -71.04013 | Norponiente |
-| 2205 | Validación general | Transicion_Acelerada | 3.4 | 42.6 | Muy alta | -52.77871, -71.00823 | Norponiente |
-| 4982 | Validación general | Transicion_Acelerada | 11.5 | 64.5 | Muy alta | -52.59760, -70.64358 | Eje norte intermedio |
-| 4996 | Validación general | Transicion_Acelerada | 6.1 | 65.1 | Muy alta | -52.61149, -70.55698 | Eje norte intermedio |
-| 1886 | Validación general | Transicion_Acelerada | 4.2 | 40.3 | Alta | -52.80270, -70.97234 | Norponiente |
-| 5257 | Validación general | Transicion_Acelerada | 3.3 | 51.8 | Alta | -52.69572, -70.87232 | Norponiente |
-| 5209 | Validación general | Transicion_Acelerada | 4.1 | 57.7 | Alta | -52.66689, -70.64540 | Eje norte intermedio |
-| 5294 | Validación general | Inestable | 2.4 | 100.1 | Alta | -52.49686, -69.88991 | Eje oriental |
-| 5624 | Validación general | Transicion_Acelerada | 6.0 | 101.9 | Alta | -52.49048, -69.88102 | Eje oriental |
-| 5048 | Validación general | Inestable | 7.6 | 105.0 | Alta | -52.49928, -69.78303 | Eje oriental |
-| 1808 | Muelle Laredo | Intensificación | 18.2 | 13.1 | Alta estratégica | -53.15925, -71.06570 | Punta Arenas / Laredo |
-| 5258 | Terminal Marítimo San Gregorio | Reversión | 24.7 | 55.2 | Alta estratégica | -52.66603, -70.68678 | Eje norte intermedio |
-| 3289 | Validación general | Transicion_Acelerada | 4.3 | 60.8 | Media | -52.61627, -70.94212 | Norponiente |
-| 5247 | Terminal Marítimo San Gregorio | Reversión | 55.8 | 65.5 | Alta estratégica | -52.65109, -70.42263 | Eje norte intermedio |
-| 5263 | Validación general | Transicion_Acelerada | 37.1 | 80.5 | Media | -52.59156, -70.17194 | Eje oriental |
-| 5626 | Validación general | Transicion_Acelerada | 7.9 | 106.1 | Media | -52.48203, -69.79322 | Eje oriental |
-| 5623 | Validación general | Recuperacion | 30.7 | 106.1 | Media | -52.47845, -69.83296 | Eje oriental |
+| 1808 | Muelle Laredo | Intensificación | 18.2 | 13.1 | Alta estratégica | [-53.15925, -71.06570](https://maps.app.goo.gl/EFCRtErdv1HMWW7P7) | Punta Arenas / Laredo |
+| 1885 | Validación general | Inestable | 37.2 | 38.3 | Muy alta | [-52.79902, -71.04013](https://maps.app.goo.gl/7oHpGrEtfeuQszv57) | Norponiente |
+| 2205 | Validación general | Transicion_Acelerada | 3.4 | 42.6 | Muy alta | [-52.77871, -71.00823](https://maps.app.goo.gl/v5ZtqBPgoDgXBkGy8) | Norponiente |
+| 1886 | Validación general | Transicion_Acelerada | 4.2 | 40.3 | Alta | [-52.80270, -70.97234](https://maps.app.goo.gl/dnR41q6jWZyXHSBE6) | Norponiente |
+| 5257 | Validación general | Transicion_Acelerada | 3.3 | 51.8 | Alta | [-52.69572, -70.87232](https://maps.app.goo.gl/668KPQxsRyGxr7XM8) | Norponiente |
+| 3289 | Validación general | Transicion_Acelerada | 4.3 | 60.8 | Media | [-52.61627, -70.94212](https://maps.app.goo.gl/5cykSwB5M9McrxTe8) | Norponiente |
+| 4982 | Validación general | Transicion_Acelerada | 11.5 | 64.5 | Muy alta | [-52.59760, -70.64358](https://maps.app.goo.gl/AQqcoyer7uJraZHG6) | Eje norte intermedio |
+| 4996 | Validación general | Transicion_Acelerada | 6.1 | 65.1 | Muy alta | [-52.61149, -70.55698](https://maps.app.goo.gl/qAY4ZprTJGk8cpxb9) | Eje norte intermedio |
+| 5209 | Validación general | Transicion_Acelerada | 4.1 | 57.7 | Alta | [-52.66689, -70.64540](https://maps.app.goo.gl/nHcnSe5Hn81P9Ksw5) | Eje norte intermedio |
+| 5258 | Terminal Marítimo San Gregorio | Reversión | 24.7 | 55.2 | Alta estratégica | [-52.66603, -70.68678](https://maps.app.goo.gl/8EqymaaSRnaVhK5h6) | Eje norte intermedio |
+| 5247 | Terminal Marítimo San Gregorio | Reversión | 55.8 | 65.5 | Alta estratégica | [-52.65109, -70.42263](https://maps.app.goo.gl/qjTwB8bZPt5t3L1K9) | Eje norte intermedio |
+| 5294 | Validación general | Inestable | 2.4 | 100.1 | Alta | [-52.49686, -69.88991](https://maps.app.goo.gl/7t782qrTNb4VYdGr7) | Eje oriental |
+| 5624 | Validación general | Transicion_Acelerada | 6.0 | 101.9 | Alta | [-52.49048, -69.88102](https://maps.app.goo.gl/dtmBVuQkfKpYLdpV9) | Eje oriental |
+| 5048 | Validación general | Inestable | 7.6 | 105.0 | Alta | [-52.49928, -69.78303](https://maps.app.goo.gl/7n8cZvPUWYXURLk26) | Eje oriental |
+| 5263 | Validación general | Transicion_Acelerada | 37.1 | 80.5 | Media | [-52.59156, -70.17194](https://maps.app.goo.gl/trrvLenKKQNJVjw9A) | Eje oriental |
+| 5626 | Validación general | Transicion_Acelerada | 7.9 | 106.1 | Media | [-52.48203, -69.79322](https://maps.app.goo.gl/vZoYWrmqV42PKEDr9) | Eje oriental |
+| 5623 | Validación general | Recuperacion | 30.7 | 106.1 | Media | [-52.47845, -69.83296](https://maps.app.goo.gl/QDLW8XxAZer6VrQf7) | Eje oriental |
 
 : Cartera operativa de cuencas seleccionadas para terreno. {#tbl-cuencas-seleccionadas-detalle}
 
 ## Ficha rápida por cuenca {#sec-fichas-rapidas-cuencas-seleccionadas}
 
-Las fichas siguientes están diseñadas para consulta rápida. La coordenada de acceso debe usarse como primer punto de navegación; el centroide sólo orienta la posición relativa del polígono de cuenca.
+Las fichas siguientes están diseñadas para consulta rápida. La coordenada de acceso debe usarse como primer punto de navegación; el centroide sólo orienta la posición relativa del polígono de cuenca. Las pestañas agrupan las fichas por sector operativo para facilitar la planificación diaria.
 
-### Cuenca RID 1885 {#cuenca-rid-1885}
+::: {.panel-tabset}
+
+### Punta Arenas / Laredo
+
+```{=html}
+<iframe src="data/maps/mapa_sector_punta_arenas_laredo.html" title="Mapa sector Punta Arenas / Laredo" style="width: 100%; height: 560px; border: 1px solid #d0d0d0; border-radius: 6px;"></iframe>
+```
+
+#### Cuenca RID 1808 {#cuenca-rid-1808 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-53.15925, -71.06570](https://maps.app.goo.gl/EFCRtErdv1HMWW7P7)
+- **Centroide aproximado**: -53.16725, -71.10628
+- **Superficie**: 18.2 km2
+- **Distancia a base Almasu**: 13.1 km
+- **Sector operativo**: Punta Arenas / Laredo
+- **Contexto de selección**: Muelle Laredo
+- **Señal MRCT**: Alta estratégica; estado Alta_Resiliencia; RES 1.000; PT 0.0; evento Intensificación en 2016.
+- **Tiempo estimado de visita**: 2-3 h en sitio, sujeto a acceso efectivo y clima.
+- **Foco de observación**: Contrastar resiliencia alta con señales locales de presión o transición.
+- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+### Norponiente
+
+```{=html}
+<iframe src="data/maps/mapa_sector_norponiente.html" title="Mapa sector Norponiente" style="width: 100%; height: 560px; border: 1px solid #d0d0d0; border-radius: 6px;"></iframe>
+```
+
+#### Cuenca RID 1885 {#cuenca-rid-1885 .unnumbered .cuenca-ficha-title}
 
 - **Punto de acceso**: [-52.79902, -71.04013](https://maps.app.goo.gl/7oHpGrEtfeuQszv57)
 - **Centroide aproximado**: -52.82289, -71.01963
@@ -80,9 +107,9 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
 
-### Cuenca RID 2205 {#cuenca-rid-2205}
+#### Cuenca RID 2205 {#cuenca-rid-2205 .unnumbered .cuenca-ficha-title}
 
-- **Punto de acceso**: -52.77871, -71.00823
+- **Punto de acceso**: [-52.77871, -71.00823](https://maps.app.goo.gl/v5ZtqBPgoDgXBkGy8)
 - **Centroide aproximado**: -52.78121, -71.00028
 - **Superficie**: 3.4 km2
 - **Distancia a base Almasu**: 42.6 km
@@ -93,35 +120,9 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
 
-### Cuenca RID 4982 {#cuenca-rid-4982}
+#### Cuenca RID 1886 {#cuenca-rid-1886 .unnumbered .cuenca-ficha-title}
 
-- **Punto de acceso**: -52.59760, -70.64358
-- **Centroide aproximado**: -52.60305, -70.64554
-- **Superficie**: 11.5 km2
-- **Distancia a base Almasu**: 64.5 km
-- **Sector operativo**: Eje norte intermedio
-- **Contexto de selección**: Validación general
-- **Señal MRCT**: Muy alta; estado Colapso_Potencial; RES 0.005; PT 217.3; evento Transicion_Acelerada en 2025.
-- **Tiempo estimado de visita**: 3-4 h en sitio, sujeto a acceso efectivo y clima.
-- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
-- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
-
-### Cuenca RID 4996 {#cuenca-rid-4996}
-
-- **Punto de acceso**: -52.61149, -70.55698
-- **Centroide aproximado**: -52.62102, -70.53746
-- **Superficie**: 6.1 km2
-- **Distancia a base Almasu**: 65.1 km
-- **Sector operativo**: Eje norte intermedio
-- **Contexto de selección**: Validación general
-- **Señal MRCT**: Muy alta; estado Colapso_Potencial; RES 0.005; PT 183.0; evento Transicion_Acelerada en 2025.
-- **Tiempo estimado de visita**: 3-4 h en sitio, sujeto a acceso efectivo y clima.
-- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
-- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
-
-### Cuenca RID 1886 {#cuenca-rid-1886}
-
-- **Punto de acceso**: -52.80270, -70.97234
+- **Punto de acceso**: [-52.80270, -70.97234](https://maps.app.goo.gl/dnR41q6jWZyXHSBE6)
 - **Centroide aproximado**: -52.79965, -70.97108
 - **Superficie**: 4.2 km2
 - **Distancia a base Almasu**: 40.3 km
@@ -132,9 +133,9 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
 
-### Cuenca RID 5257 {#cuenca-rid-5257}
+#### Cuenca RID 5257 {#cuenca-rid-5257 .unnumbered .cuenca-ficha-title}
 
-- **Punto de acceso**: -52.69572, -70.87232
+- **Punto de acceso**: [-52.69572, -70.87232](https://maps.app.goo.gl/668KPQxsRyGxr7XM8)
 - **Centroide aproximado**: -52.69572, -70.87232
 - **Superficie**: 3.3 km2
 - **Distancia a base Almasu**: 51.8 km
@@ -145,87 +146,9 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
 
-### Cuenca RID 5209 {#cuenca-rid-5209}
+#### Cuenca RID 3289 {#cuenca-rid-3289 .unnumbered .cuenca-ficha-title}
 
-- **Punto de acceso**: -52.66689, -70.64540
-- **Centroide aproximado**: -52.66689, -70.64540
-- **Superficie**: 4.1 km2
-- **Distancia a base Almasu**: 57.7 km
-- **Sector operativo**: Eje norte intermedio
-- **Contexto de selección**: Validación general
-- **Señal MRCT**: Alta; estado Colapso_Potencial; RES 0.012; PT 81.0; evento Transicion_Acelerada en 2025.
-- **Tiempo estimado de visita**: 3-4 h en sitio, sujeto a acceso efectivo y clima.
-- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
-- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
-
-### Cuenca RID 5294 {#cuenca-rid-5294}
-
-- **Punto de acceso**: -52.49686, -69.88991
-- **Centroide aproximado**: -52.49994, -69.90173
-- **Superficie**: 2.4 km2
-- **Distancia a base Almasu**: 100.1 km
-- **Sector operativo**: Eje oriental
-- **Contexto de selección**: Validación general
-- **Señal MRCT**: Alta; estado Colapso_Potencial; RES 0.015; PT 66.3; evento Inestable en 2025.
-- **Tiempo estimado de visita**: 4-5 h en sitio, sujeto a acceso efectivo y clima.
-- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
-- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
-
-### Cuenca RID 5624 {#cuenca-rid-5624}
-
-- **Punto de acceso**: -52.49048, -69.88102
-- **Centroide aproximado**: -52.48573, -69.88736
-- **Superficie**: 6.0 km2
-- **Distancia a base Almasu**: 101.9 km
-- **Sector operativo**: Eje oriental
-- **Contexto de selección**: Validación general
-- **Señal MRCT**: Alta; estado Colapso_Potencial; RES 0.034; PT 28.8; evento Transicion_Acelerada en 2025.
-- **Tiempo estimado de visita**: 4-5 h en sitio, sujeto a acceso efectivo y clima.
-- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
-- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
-
-### Cuenca RID 5048 {#cuenca-rid-5048}
-
-- **Punto de acceso**: -52.49928, -69.78303
-- **Centroide aproximado**: -52.50850, -69.78381
-- **Superficie**: 7.6 km2
-- **Distancia a base Almasu**: 105.0 km
-- **Sector operativo**: Eje oriental
-- **Contexto de selección**: Validación general
-- **Señal MRCT**: Alta; estado Colapso_Potencial; RES 0.026; PT 37.5; evento Inestable en 2025.
-- **Tiempo estimado de visita**: 4-5 h en sitio, sujeto a acceso efectivo y clima.
-- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
-- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
-
-### Cuenca RID 1808 {#cuenca-rid-1808}
-
-- **Punto de acceso**: -53.15925, -71.06570
-- **Centroide aproximado**: -53.16725, -71.10628
-- **Superficie**: 18.2 km2
-- **Distancia a base Almasu**: 13.1 km
-- **Sector operativo**: Punta Arenas / Laredo
-- **Contexto de selección**: Muelle Laredo
-- **Señal MRCT**: Alta estratégica; estado Alta_Resiliencia; RES 1.000; PT 0.0; evento Intensificación en 2016.
-- **Tiempo estimado de visita**: 2-3 h en sitio, sujeto a acceso efectivo y clima.
-- **Foco de observación**: Contrastar resiliencia alta con señales locales de presión o transición.
-- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
-
-### Cuenca RID 5258 {#cuenca-rid-5258}
-
-- **Punto de acceso**: -52.66603, -70.68678
-- **Centroide aproximado**: -52.68302, -70.68629
-- **Superficie**: 24.7 km2
-- **Distancia a base Almasu**: 55.2 km
-- **Sector operativo**: Eje norte intermedio
-- **Contexto de selección**: Terminal Marítimo San Gregorio
-- **Señal MRCT**: Alta estratégica; estado Resiliencia_Media; RES 0.588; PT 0.7; evento Reversión en 2016.
-- **Tiempo estimado de visita**: 3-4 h en sitio, sujeto a acceso efectivo y clima.
-- **Foco de observación**: Documentar contrastes entre resiliencia media y señal dinámica.
-- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
-
-### Cuenca RID 3289 {#cuenca-rid-3289}
-
-- **Punto de acceso**: -52.61627, -70.94212
+- **Punto de acceso**: [-52.61627, -70.94212](https://maps.app.goo.gl/5cykSwB5M9McrxTe8)
 - **Centroide aproximado**: -52.61370, -70.92584
 - **Superficie**: 4.3 km2
 - **Distancia a base Almasu**: 60.8 km
@@ -236,9 +159,67 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Foco de observación**: Documentar contrastes entre resiliencia media y señal dinámica.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
 
-### Cuenca RID 5247 {#cuenca-rid-5247}
+### Eje norte intermedio
 
-- **Punto de acceso**: -52.65109, -70.42263
+```{=html}
+<iframe src="data/maps/mapa_sector_eje_norte_intermedio.html" title="Mapa sector Eje norte intermedio" style="width: 100%; height: 560px; border: 1px solid #d0d0d0; border-radius: 6px;"></iframe>
+```
+
+#### Cuenca RID 4982 {#cuenca-rid-4982 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.59760, -70.64358](https://maps.app.goo.gl/AQqcoyer7uJraZHG6)
+- **Centroide aproximado**: -52.60305, -70.64554
+- **Superficie**: 11.5 km2
+- **Distancia a base Almasu**: 64.5 km
+- **Sector operativo**: Eje norte intermedio
+- **Contexto de selección**: Validación general
+- **Señal MRCT**: Muy alta; estado Colapso_Potencial; RES 0.005; PT 217.3; evento Transicion_Acelerada en 2025.
+- **Tiempo estimado de visita**: 3-4 h en sitio, sujeto a acceso efectivo y clima.
+- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
+- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+#### Cuenca RID 4996 {#cuenca-rid-4996 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.61149, -70.55698](https://maps.app.goo.gl/qAY4ZprTJGk8cpxb9)
+- **Centroide aproximado**: -52.62102, -70.53746
+- **Superficie**: 6.1 km2
+- **Distancia a base Almasu**: 65.1 km
+- **Sector operativo**: Eje norte intermedio
+- **Contexto de selección**: Validación general
+- **Señal MRCT**: Muy alta; estado Colapso_Potencial; RES 0.005; PT 183.0; evento Transicion_Acelerada en 2025.
+- **Tiempo estimado de visita**: 3-4 h en sitio, sujeto a acceso efectivo y clima.
+- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
+- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+#### Cuenca RID 5209 {#cuenca-rid-5209 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.66689, -70.64540](https://maps.app.goo.gl/nHcnSe5Hn81P9Ksw5)
+- **Centroide aproximado**: -52.66689, -70.64540
+- **Superficie**: 4.1 km2
+- **Distancia a base Almasu**: 57.7 km
+- **Sector operativo**: Eje norte intermedio
+- **Contexto de selección**: Validación general
+- **Señal MRCT**: Alta; estado Colapso_Potencial; RES 0.012; PT 81.0; evento Transicion_Acelerada en 2025.
+- **Tiempo estimado de visita**: 3-4 h en sitio, sujeto a acceso efectivo y clima.
+- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
+- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+#### Cuenca RID 5258 {#cuenca-rid-5258 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.66603, -70.68678](https://maps.app.goo.gl/8EqymaaSRnaVhK5h6)
+- **Centroide aproximado**: -52.68302, -70.68629
+- **Superficie**: 24.7 km2
+- **Distancia a base Almasu**: 55.2 km
+- **Sector operativo**: Eje norte intermedio
+- **Contexto de selección**: Terminal Marítimo San Gregorio
+- **Señal MRCT**: Alta estratégica; estado Resiliencia_Media; RES 0.588; PT 0.7; evento Reversión en 2016.
+- **Tiempo estimado de visita**: 3-4 h en sitio, sujeto a acceso efectivo y clima.
+- **Foco de observación**: Documentar contrastes entre resiliencia media y señal dinámica.
+- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+#### Cuenca RID 5247 {#cuenca-rid-5247 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.65109, -70.42263](https://maps.app.goo.gl/qjTwB8bZPt5t3L1K9)
 - **Centroide aproximado**: -52.65028, -70.42342
 - **Superficie**: 55.8 km2
 - **Distancia a base Almasu**: 65.5 km
@@ -249,9 +230,54 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Foco de observación**: Documentar contrastes entre resiliencia media y señal dinámica.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
 
-### Cuenca RID 5263 {#cuenca-rid-5263}
+### Eje oriental
 
-- **Punto de acceso**: -52.59156, -70.17194
+```{=html}
+<iframe src="data/maps/mapa_sector_eje_oriental.html" title="Mapa sector Eje oriental" style="width: 100%; height: 560px; border: 1px solid #d0d0d0; border-radius: 6px;"></iframe>
+```
+
+#### Cuenca RID 5294 {#cuenca-rid-5294 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.49686, -69.88991](https://maps.app.goo.gl/7t782qrTNb4VYdGr7)
+- **Centroide aproximado**: -52.49994, -69.90173
+- **Superficie**: 2.4 km2
+- **Distancia a base Almasu**: 100.1 km
+- **Sector operativo**: Eje oriental
+- **Contexto de selección**: Validación general
+- **Señal MRCT**: Alta; estado Colapso_Potencial; RES 0.015; PT 66.3; evento Inestable en 2025.
+- **Tiempo estimado de visita**: 4-5 h en sitio, sujeto a acceso efectivo y clima.
+- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
+- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+#### Cuenca RID 5624 {#cuenca-rid-5624 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.49048, -69.88102](https://maps.app.goo.gl/dtmBVuQkfKpYLdpV9)
+- **Centroide aproximado**: -52.48573, -69.88736
+- **Superficie**: 6.0 km2
+- **Distancia a base Almasu**: 101.9 km
+- **Sector operativo**: Eje oriental
+- **Contexto de selección**: Validación general
+- **Señal MRCT**: Alta; estado Colapso_Potencial; RES 0.034; PT 28.8; evento Transicion_Acelerada en 2025.
+- **Tiempo estimado de visita**: 4-5 h en sitio, sujeto a acceso efectivo y clima.
+- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
+- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+#### Cuenca RID 5048 {#cuenca-rid-5048 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.49928, -69.78303](https://maps.app.goo.gl/7n8cZvPUWYXURLk26)
+- **Centroide aproximado**: -52.50850, -69.78381
+- **Superficie**: 7.6 km2
+- **Distancia a base Almasu**: 105.0 km
+- **Sector operativo**: Eje oriental
+- **Contexto de selección**: Validación general
+- **Señal MRCT**: Alta; estado Colapso_Potencial; RES 0.026; PT 37.5; evento Inestable en 2025.
+- **Tiempo estimado de visita**: 4-5 h en sitio, sujeto a acceso efectivo y clima.
+- **Foco de observación**: Priorizar observación de perturbación, fragmentación y humedad superficial.
+- **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+#### Cuenca RID 5263 {#cuenca-rid-5263 .unnumbered .cuenca-ficha-title}
+
+- **Punto de acceso**: [-52.59156, -70.17194](https://maps.app.goo.gl/trrvLenKKQNJVjw9A)
 - **Centroide aproximado**: -52.58789, -70.18012
 - **Superficie**: 37.1 km2
 - **Distancia a base Almasu**: 80.5 km
@@ -262,9 +288,9 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Foco de observación**: Documentar contrastes entre resiliencia media y señal dinámica.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
 
-### Cuenca RID 5626 {#cuenca-rid-5626}
+#### Cuenca RID 5626 {#cuenca-rid-5626 .unnumbered .cuenca-ficha-title}
 
-- **Punto de acceso**: -52.48203, -69.79322
+- **Punto de acceso**: [-52.48203, -69.79322](https://maps.app.goo.gl/vZoYWrmqV42PKEDr9)
 - **Centroide aproximado**: -52.48581, -69.79895
 - **Superficie**: 7.9 km2
 - **Distancia a base Almasu**: 106.1 km
@@ -275,9 +301,9 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Foco de observación**: Documentar contrastes entre resiliencia media y señal dinámica.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
 
-### Cuenca RID 5623 {#cuenca-rid-5623}
+#### Cuenca RID 5623 {#cuenca-rid-5623 .unnumbered .cuenca-ficha-title}
 
-- **Punto de acceso**: -52.47845, -69.83296
+- **Punto de acceso**: [-52.47845, -69.83296](https://maps.app.goo.gl/QDLW8XxAZer6VrQf7)
 - **Centroide aproximado**: -52.45452, -69.85165
 - **Superficie**: 30.7 km2
 - **Distancia a base Almasu**: 106.1 km
@@ -287,6 +313,8 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 - **Tiempo estimado de visita**: 4-5 h en sitio, sujeto a acceso efectivo y clima.
 - **Foco de observación**: Documentar contrastes entre resiliencia media y señal dinámica.
 - **Registro mínimo**: punto de acceso, transecto IEO, fotografías cardinales, evidencia de agua/nieve/humedad, perturbación, fragmentación y estado de vuelo dron.
+
+:::
 
 ## Orden de visita propuesto {#sec-orden-visita-cuencas-seleccionadas}
 

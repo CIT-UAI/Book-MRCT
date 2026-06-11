@@ -20,8 +20,8 @@ La campaña Magallanes 2026 corresponde a la validación territorial de la **Mat
 El documento matriz de campaña se estructura sobre tres insumos:
 
 - la priorización técnica presentada en @sec-cruce-territorial-jerk y @sec-terminales-h2-jerk;
-- la capa de cuencas seleccionadas `data/cuencas_seleccionadas/cuencas_seleccionadas_v1.shp`;
-- la capa de puntos de acceso `data/cuencas_seleccionadas/accesos_cuencas_v1.shp`.
+- la capa de cuencas seleccionadas disponible en el repositorio oficial [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv);
+- la capa de puntos de acceso disponible en el repositorio oficial [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv).
 
 ## Objetivo de la campaña {#sec-objetivo-campana-terreno}
 
@@ -134,5 +134,5 @@ Por eso la sección prioriza trazabilidad: cada observación debe poder conectar
 
 - Fichas cuencas MRCT: <https://cit-uai.github.io/Book-MRCT/fichas_cuencas.html>
 - Protocolo trabajo de terreno: <https://cit-uai.github.io/Book-MRCT/trabajo_terreno.html>
-- Cuencas seleccionadas: `data/cuencas_seleccionadas/cuencas_seleccionadas_v1.shp`
-- Puntos de acceso: `data/cuencas_seleccionadas/accesos_cuencas_v1.shp`
+- Cuencas seleccionadas: [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv)
+- Puntos de acceso: [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv)

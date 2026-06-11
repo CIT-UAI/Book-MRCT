@@ -76,7 +76,6 @@ Completar con estaciones de servicio en ruta a las cuencas seleccionadas. Para j
 | Elemento | Detalle | Estado |
 |---|---|---|
 | Teléfono móvil | `pendiente` - verificar cobertura en terreno | ⏳ |
-| Radio VHF / HF | `pendiente` | ⏳ |
 | GPS tracker / SPOT | `pendiente` | ⏳ |
 | Contacto emergencia en base | `pendiente` | ⏳ |
 

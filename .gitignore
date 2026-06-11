@@ -83,6 +83,9 @@ graphify-out/
 # =============================================================
 data/
 R/
+!R/
+R/*
+!R/make_sector_maps.R
 jupyter-notebook/
 keynote/
 outputs/
@@ -106,11 +109,19 @@ data/*
 !data/maps/
 data/maps/*
 !data/maps/mapa_web_cuencas_terreno.html
+!data/maps/mapa_sector_punta_arenas_laredo.html
+!data/maps/mapa_sector_norponiente.html
+!data/maps/mapa_sector_eje_norte_intermedio.html
+!data/maps/mapa_sector_eje_oriental.html
 !docs/data/
 docs/data/*
 !docs/data/maps/
 docs/data/maps/*
 !docs/data/maps/mapa_web_cuencas_terreno.html
+!docs/data/maps/mapa_sector_punta_arenas_laredo.html
+!docs/data/maps/mapa_sector_norponiente.html
+!docs/data/maps/mapa_sector_eje_norte_intermedio.html
+!docs/data/maps/mapa_sector_eje_oriental.html
 
 # =============================================================
 # GitHub Pages output

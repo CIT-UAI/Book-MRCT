@@ -56,6 +56,18 @@ h3{
 h4{
   font-size: 18px
 }
+
+h4.cuenca-ficha-title {
+  color: #20B2AA;
+  font-weight: 700;
+}
+
+#tbl-cuencas-seleccionadas-detalle table th:nth-child(7),
+#tbl-cuencas-seleccionadas-detalle table td:nth-child(7) {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
 figcaption.figure-caption{
   font-size: 15px
 }
