@@ -10,6 +10,15 @@ p{
   font-size: 16px
 }
 
+table,
+.table,
+table th,
+table td,
+.table th,
+.table td {
+  font-size: 16px;
+}
+
 
 dl {
   font-size: 13px
@@ -47,6 +56,18 @@ h3{
 h4{
   font-size: 18px
 }
+
+h4.cuenca-ficha-title {
+  color: #20B2AA;
+  font-weight: 700;
+}
+
+#tbl-cuencas-seleccionadas-detalle table th:nth-child(7),
+#tbl-cuencas-seleccionadas-detalle table td:nth-child(7) {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
 figcaption.figure-caption{
   font-size: 15px
 }
@@ -69,14 +90,14 @@ figcaption.figure-caption{
 .tabla-indicador td:first-child,
 .tabla-indicador th:first-child {
   width: 75%;            /* Etapa: más ancha */
-  font-size: 15px;    /* opcional: ajustar tamaño de letra */
+  font-size: 16px;
 }
 
 .tabla-indicador td:last-child,
 .tabla-indicador th:last-child {
   width: 25%;           /* Estado: más angosta */
   text-align: center;
-  font-size: 15px;   /* íconos emoji más visibles */
+  font-size: 16px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -87,7 +108,7 @@ figcaption.figure-caption{
   margin: 1em auto;
   border-collapse: collapse;
   width: 100%;
-  font-size: 15px
+  font-size: 16px;
   table-layout: fixed; /* importante para forzar anchos */
 }
 
@@ -105,11 +126,10 @@ figcaption.figure-caption{
 
 /* Aplica a tablas con clase 'tabla-avance' */
 .tabla-avance td {
-  font-size: 13px;        /* Tamaño general del texto */
+  font-size: 16px;
 }
 
 .tabla-avance thead th {
-  font-size: 14px;        /* Tamaño de letra del encabezado */
+  font-size: 16px;
   font-weight: bold;
 }
-
