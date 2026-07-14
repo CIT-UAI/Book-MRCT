@@ -23,7 +23,7 @@ book:
       affiliation: Centro de Inteligencia Territorial
       affiliation-url: https://cit.uai.cl
       email: denis.berroeta@uai.cl
-  date: "2026-04-28"
+  date: "2026-07-14"
   page-footer:
     left: "Copyright 2026, {{< var cit.name >}}"
   chapters:
@@ -46,22 +46,12 @@ book:
       - logistica.qmd
       - condiciones_terreno.qmd
       - equipamiento.qmd
-      # - planificacion_terreno.qmd
       - protocolo_levantamiento.qmd
       - fichas_cuencas.qmd
       - vuelo_drone.qmd
       - resultados_terreno.qmd
       - integracion_validacion.qmd
-    # - proyectos.qmd
-    # - recomendaciones.qmd
-    # - part: "Marco de Referencia"
-      # chapters:
-        # - marco_ref.qmd
-        # - def_claves.qmd
-        # - dim_mbht.qmd
-        # - clas_institucionales.qmd
     - references.qmd
-    - anexos.qmd
 
 bibliography: references.bib
 
