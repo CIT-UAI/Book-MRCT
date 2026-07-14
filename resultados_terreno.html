@@ -70,11 +70,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -234,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vuelo_drone.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Operación de Dron</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -274,21 +317,26 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-resumen-campana-terreno" id="toc-sec-resumen-campana-terreno" class="nav-link active" data-scroll-target="#sec-resumen-campana-terreno"><span class="header-section-number">20.1</span> Resumen de campaña</a></li>
-  <li><a href="#sec-bitacora-jornadas-terreno" id="toc-sec-bitacora-jornadas-terreno" class="nav-link" data-scroll-target="#sec-bitacora-jornadas-terreno"><span class="header-section-number">20.2</span> Bitácora de jornadas</a></li>
+  <li><a href="#sec-condiciones-levantamiento-terreno" id="toc-sec-condiciones-levantamiento-terreno" class="nav-link" data-scroll-target="#sec-condiciones-levantamiento-terreno"><span class="header-section-number">20.2</span> Condiciones de levantamiento</a></li>
   <li><a href="#sec-resultados-por-cuenca-terreno" id="toc-sec-resultados-por-cuenca-terreno" class="nav-link" data-scroll-target="#sec-resultados-por-cuenca-terreno"><span class="header-section-number">20.3</span> Resultados por cuenca</a></li>
-  <li><a href="#sec-sintesis-mediciones-terreno" id="toc-sec-sintesis-mediciones-terreno" class="nav-link" data-scroll-target="#sec-sintesis-mediciones-terreno"><span class="header-section-number">20.4</span> Síntesis de mediciones</a></li>
-  <li><a href="#sec-registro-fotografico-resultados" id="toc-sec-registro-fotografico-resultados" class="nav-link" data-scroll-target="#sec-registro-fotografico-resultados"><span class="header-section-number">20.5</span> Registro fotográfico</a></li>
-  <li><a href="#sec-limitaciones-campana-terreno" id="toc-sec-limitaciones-campana-terreno" class="nav-link" data-scroll-target="#sec-limitaciones-campana-terreno"><span class="header-section-number">20.6</span> Limitaciones de campaña</a></li>
+  <li><a href="#sec-evidencia-visual-rid-terreno" id="toc-sec-evidencia-visual-rid-terreno" class="nav-link" data-scroll-target="#sec-evidencia-visual-rid-terreno"><span class="header-section-number">20.4</span> Evidencia visual por RID</a></li>
+  <li><a href="#sec-contraste-ieo-res-terreno" id="toc-sec-contraste-ieo-res-terreno" class="nav-link" data-scroll-target="#sec-contraste-ieo-res-terreno"><span class="header-section-number">20.5</span> Contraste estadístico IEO-RES</a></li>
+  <li><a href="#sec-sintesis-mediciones-terreno" id="toc-sec-sintesis-mediciones-terreno" class="nav-link" data-scroll-target="#sec-sintesis-mediciones-terreno"><span class="header-section-number">20.6</span> Síntesis de mediciones</a></li>
+  <li><a href="#sec-coherencias-terreno" id="toc-sec-coherencias-terreno" class="nav-link" data-scroll-target="#sec-coherencias-terreno"><span class="header-section-number">20.7</span> Coherencias encontradas</a></li>
+  <li><a href="#sec-inconsistencias-terreno" id="toc-sec-inconsistencias-terreno" class="nav-link" data-scroll-target="#sec-inconsistencias-terreno"><span class="header-section-number">20.8</span> Inconsistencias y tensiones interpretativas</a></li>
+  <li><a href="#sec-lectura-esperado-encontrado" id="toc-sec-lectura-esperado-encontrado" class="nav-link" data-scroll-target="#sec-lectura-esperado-encontrado"><span class="header-section-number">20.9</span> Lectura metodológica de lo esperado y lo encontrado</a></li>
+  <li><a href="#sec-limitaciones-campana-terreno" id="toc-sec-limitaciones-campana-terreno" class="nav-link" data-scroll-target="#sec-limitaciones-campana-terreno"><span class="header-section-number">20.10</span> Limitaciones de campaña</a></li>
+  <li><a href="#sec-cierre-resultados-terreno" id="toc-sec-cierre-resultados-terreno" class="nav-link" data-scroll-target="#sec-cierre-resultados-terreno"><span class="header-section-number">20.11</span> Cierre de resultados</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./resultados_terreno.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Resultados de Terreno</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Resultados de Terreno</span></h1>
-<p class="subtitle lead">Evidencia registrada durante la campaña de terreno</p>
+<p class="subtitle lead">Validación empírica de la MRCT en Magallanes 2026</p>
 </div>
 
 
@@ -305,70 +353,164 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Este capítulo queda reservado para documentar los resultados de la campaña una vez ejecutada. Debe reunir la evidencia levantada por cuenca, las condiciones de cada jornada y las limitaciones encontradas. La fuente primaria será la ficha definida en <a href="fichas_cuencas.html#sec-ficha-tipo-cuenca" class="quarto-xref"><span>Section 18.2</span></a>, levantada bajo el protocolo de <a href="protocolo_levantamiento.html#sec-ieo-terreno" class="quarto-xref"><span>Section 17.4</span></a> y revisada con el control de completitud de <a href="protocolo_levantamiento.html#sec-control-completitud-terreno" class="quarto-xref"><span>Section 17.10</span></a>.</p>
+<p>Este capítulo consolida los resultados de la campaña de levantamiento territorial realizada en la Provincia de Magallanes durante junio de 2026. Su función es cerrar el ciclo iniciado en la selección de cuencas, el protocolo IEO y la planificación logística: contrastar la señal satelital de resiliencia operativa (<code>RES</code>) con evidencia directa observada en terreno.</p>
+<p>La campaña no se interpreta como una verificación mecánica del modelo. Se entiende como una prueba de coherencia entre dos escalas de observación: la MRCT, construida desde series satelitales anuales y métricas multivariadas, y el Índice de Estado Observado (IEO), levantado en sitio mediante rúbrica de vegetación, humedad, perturbación antrópica y fragmentación. En ese sentido, los resultados son relevantes tanto por las coincidencias como por las diferencias encontradas.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Estado del capítulo
+Lectura general
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Este capítulo se completará después del trabajo de terreno. Por ahora define la estructura de reporte para ordenar la evidencia futura.</p>
+<p>El contraste IEO-<code>RES</code> muestra una consistencia estadística alta para las cuencas comparables: <span class="math inline">r = 0{,}7869</span>, <span class="math inline">R^2 = 0{,}6192</span> y <span class="math inline">p = 0{,}0069</span> sobre 10 cuencas con valor satelital disponible. Esto valida la utilidad operativa de la MRCT como sistema de priorización, pero no elimina la necesidad de revisar escala, acceso, fecha de observación y condiciones locales en cada caso.</p>
 </div>
 </div>
 <section id="sec-resumen-campana-terreno" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="sec-resumen-campana-terreno"><span class="header-section-number">20.1</span> Resumen de campaña</h2>
-<p>La sección deberá indicar:</p>
-<ul>
-<li>fechas de salida;</li>
-<li>equipo participante;</li>
-<li>base logística;</li>
-<li>comunas visitadas;</li>
-<li>cuencas visitadas;</li>
-<li>cuencas no visitadas;</li>
-<li>cuencas reemplazadas;</li>
-<li>condiciones generales de clima y acceso.</li>
-</ul>
-</section>
-<section id="sec-bitacora-jornadas-terreno" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="sec-bitacora-jornadas-terreno"><span class="header-section-number">20.2</span> Bitácora de jornadas</h2>
-<p>Cada jornada debe resumirse en una tabla:</p>
-<div id="tbl-bitacora-jornadas-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>La campaña se ejecutó en condiciones invernales severas, con jornadas de observación entre el 16 y el 18 de junio de 2026 y una ventana operativa general comprendida entre el 15 y el 19 de junio. El equipo base estuvo compuesto por John Treimun, Paula Altamirano y Denis Berroeta, con roles diferenciados de observación, operación de dron, navegación, registro y soporte logístico.</p>
+<p>El diseño de levantamiento mantuvo una separación entre observación de terreno y conocimiento del modelo. El observador responsable de aplicar la rúbrica IEO no debía conocer los valores <code>RES</code>, jerk o clasificación MRCT antes de cerrar la ficha. Esta decisión metodológica es importante: reduce el riesgo de sesgo de confirmación y permite que la correlación posterior entre IEO y <code>RES</code> sea una prueba más exigente.</p>
+<p>La cartera inicial contenía 17 cuencas preseleccionadas en <a href="cuencas_seleccionadas.html#tbl-cuencas-seleccionadas-detalle" class="quarto-xref">Tabla&nbsp;<span>13.2</span></a>. La campaña levantó 13 estaciones efectivas: 10 cuencas hidrográficas comparables con el modelo MRCT y 3 puntos urbanos o periurbanos usados como contraste territorial, pero sin valor <code>RES</code> comparable dentro del modelo de cuencas biofísicas.</p>
+<div id="tbl-cobertura-campana-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bitacora-jornadas-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;20.1: Plantilla de bitácora de jornadas de terreno.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cobertura-campana-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;20.1: Síntesis de cobertura de la campaña de terreno.
 </figcaption>
-<div aria-describedby="tbl-bitacora-jornadas-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-cobertura-campana-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Fecha</th>
-<th>Ruta</th>
-<th>Cuencas previstas</th>
-<th>Cuencas visitadas</th>
-<th>Incidencias</th>
-<th>Observación general</th>
+<th>Grupo</th>
+<th style="text-align: right;">Resultado de campaña</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
+<td>Cuencas preseleccionadas para la campaña</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr class="even">
+<td>Estaciones medidas en terreno</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td>Cuencas con comparación IEO-<code>RES</code></td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td>Puntos urbanos o periurbanos sin <code>RES</code> comparable</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td>Cuencas de la cartera no visitadas en esta ventana</td>
+<td style="text-align: right;">7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Las cuencas comparables fueron <code>RID</code> 5263, 5623, 5624, 5294, 5247, 4996, 4982, 5257, 2205 y 1808. Las cuencas planificadas que no quedaron medidas en esta ventana fueron <code>RID</code> 5258, 1885, 1886, 3289, 5048, 5209 y 5626. Los puntos <code>RID</code> 0001, 2077 y 1928 corresponden a registros urbanos o de borde urbano donde el modelo de cuencas no entrega <code>RES</code> por dominancia de superficies impermeables o porque no corresponden a una cuenca biofísica comparable.</p>
+</section>
+<section id="sec-condiciones-levantamiento-terreno" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="sec-condiciones-levantamiento-terreno"><span class="header-section-number">20.2</span> Condiciones de levantamiento</h2>
+<p>La campaña funcionó como una prueba de esfuerzo para el protocolo. Se levantó información durante el invierno austral, con baja radiación, nubosidad alta, presencia de nieve en algunos sectores, temperaturas superficiales bajo cero y vientos fuertes. En San Gregorio se registraron condiciones de operación particularmente exigentes para el dron, con velocidades reportadas entre 50 y 100 km/h en varias estaciones. En Punta Arenas y Laredo las condiciones de viento fueron más favorables, aunque la nubosidad alcanzó 90-100% en los registros urbanos y periurbanos.</p>
+<p>Esta condición invernal importa metodológicamente. La MRCT usa señales satelitales anuales y no pretende reproducir una fotografía instantánea del sitio. Por lo tanto, una observación hecha en junio puede mostrar nieve, senescencia, humedad congelada o baja actividad vegetal que no necesariamente equivale al estado promedio anual. Aun así, el contraste estadístico fue alto, lo que sugiere que la señal <code>RES</code> conserva capacidad de discriminar condiciones biofísicas incluso bajo ruido estacional.</p>
+<div id="tbl-condiciones-operativas-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-condiciones-operativas-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;20.2: Condiciones ambientales y operativas de las cuencas comparables con MRCT.
+</figcaption>
+<div aria-describedby="tbl-condiciones-operativas-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;"><code>RID</code></th>
+<th>Fecha / hora</th>
+<th>Viento y operación dron</th>
+<th style="text-align: right;">Nubosidad</th>
+<th>Observación operativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5263</td>
+<td>2026-06-16 / 11:35</td>
+<td>Dron con dificultad, 60 km/h</td>
+<td style="text-align: right;">1%</td>
+<td>Condición ventosa pero registrable.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5623</td>
+<td>2026-06-16 / 12:32</td>
+<td>Dron con mayor dificultad, 80 km/h</td>
+<td style="text-align: right;">1%</td>
+<td>Vuelo exigente; evidencia útil con cautela.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5624</td>
+<td>2026-06-16 / 12:46</td>
+<td>Dron con mucha dificultad, 100 km/h</td>
+<td style="text-align: right;">1%</td>
+<td>Caso crítico para imagen aérea estable.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5294</td>
+<td>2026-06-16 / 12:55</td>
+<td>Dron con mayor dificultad, 80 km/h</td>
+<td style="text-align: right;">1%</td>
+<td>Levantamiento condicionado por viento.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5247</td>
+<td>2026-06-16 / 13:45</td>
+<td>Vuelo normal, 30 km/h</td>
+<td style="text-align: right;">25%</td>
+<td>Buena condición relativa.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4996</td>
+<td>2026-06-16 / 14:02</td>
+<td>Dron con dificultad, 60 km/h</td>
+<td style="text-align: right;">35%</td>
+<td>Registro posible con limitación de viento.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4982</td>
+<td>2026-06-16 / 14:17</td>
+<td>Dron con dificultad, 50 km/h</td>
+<td style="text-align: right;">40%</td>
+<td>Registro posible con limitación de viento.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5257</td>
+<td>2026-06-16 / 14:35</td>
+<td>Dron con dificultad, 60 km/h</td>
+<td style="text-align: right;">60%</td>
+<td>Registro posible con nubosidad creciente.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2205</td>
+<td>2026-06-16 / 14:50</td>
+<td>Vuelo normal, 30 km/h</td>
+<td style="text-align: right;">70%</td>
+<td>Registro operativo aceptable.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1808</td>
+<td>2026-06-17 / 09:12</td>
+<td>Vuelo normal, 10 km/h</td>
+<td style="text-align: right;">100%</td>
+<td>Condición favorable de viento; nubosidad total.</td>
 </tr>
 </tbody>
 </table>
@@ -378,64 +520,313 @@ Table&nbsp;20.1: Plantilla de bitácora de jornadas de terreno.
 </section>
 <section id="sec-resultados-por-cuenca-terreno" class="level2" data-number="20.3">
 <h2 data-number="20.3" class="anchored" data-anchor-id="sec-resultados-por-cuenca-terreno"><span class="header-section-number">20.3</span> Resultados por cuenca</h2>
-<p>Para cada cuenca visitada se debe reportar:</p>
-<ul>
-<li>estado de visita;</li>
-<li>coordenada observada;</li>
-<li>fotografías disponibles;</li>
-<li>vuelo de dron completo, parcial o suspendido;</li>
-<li>condiciones ambientales registradas en la ficha;</li>
-<li>IEO calculado por punto y promedio de cuenca;</li>
-<li>observaciones ecológicas principales;</li>
-<li>problemas de acceso o representatividad;</li>
-<li>consistencia preliminar con la señal MRCT.</li>
-</ul>
-</section>
-<section id="sec-sintesis-mediciones-terreno" class="level2" data-number="20.4">
-<h2 data-number="20.4" class="anchored" data-anchor-id="sec-sintesis-mediciones-terreno"><span class="header-section-number">20.4</span> Síntesis de mediciones</h2>
-<p>La tabla de mediciones deberá consolidar las mismas variables de la planilla de <a href="fichas_cuencas.html#sec-variables-obligatorias-fichas" class="quarto-xref"><span>Section 18.1</span></a>, evitando crear campos paralelos que no existan en la ficha:</p>
-<div id="tbl-sintesis-mediciones-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>La tabla siguiente resume la base comparable entre el IEO observado y la resiliencia operativa <code>RES</code> del modelo. El IEO se calculó con la misma lógica definida en <a href="protocolo_levantamiento.html#sec-formula-ieo" class="quarto-xref"><span>Section 17.4.2</span></a>: vegetación y humedad suman como atributos positivos, mientras perturbación y fragmentación actúan como vectores negativos.</p>
+<div id="tbl-ieo-res-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sintesis-mediciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;20.2: Plantilla de síntesis de mediciones de terreno.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ieo-res-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;20.3: Base de validación IEO-<code>RES</code> para cuencas hidrográficas comparables.
 </figcaption>
-<div aria-describedby="tbl-sintesis-mediciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-ieo-res-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 9%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: right;"><code>RID</code></th>
-<th>Fecha</th>
-<th style="text-align: right;">Viento km/h</th>
-<th style="text-align: right;">Nubosidad %</th>
-<th style="text-align: right;"><code>Temp_AmbC</code></th>
-<th style="text-align: right;">IEO promedio</th>
-<th>Agua/nieve en observaciones</th>
-<th>Vuelo dron</th>
-<th>Estado ficha</th>
+<th>Comuna</th>
+<th style="text-align: right;">V</th>
+<th style="text-align: right;">H</th>
+<th style="text-align: right;">P</th>
+<th style="text-align: right;">F</th>
+<th style="text-align: right;">IEO observado</th>
+<th style="text-align: right;"><code>RES</code> modelo</th>
+<th>Clave</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td style="text-align: right;">Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
-<td>Por definir</td>
+<td style="text-align: right;">5263</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.3125</td>
+<td style="text-align: right;">0.5593</td>
+<td>O</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5623</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.3438</td>
+<td style="text-align: right;">0.4959</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5624</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.2813</td>
+<td style="text-align: right;">0.0335</td>
+<td>J</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5294</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.3125</td>
+<td style="text-align: right;">0.0149</td>
+<td>G</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5247</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.4375</td>
+<td style="text-align: right;">0.4720</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4996</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.2500</td>
+<td style="text-align: right;">0.0054</td>
+<td>O</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4982</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.2500</td>
+<td style="text-align: right;">0.0046</td>
+<td>O</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5257</td>
+<td>San Gregorio</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.3438</td>
+<td style="text-align: right;">0.0093</td>
+<td>O</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2205</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.4063</td>
+<td style="text-align: right;">0.0021</td>
+<td>O</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1808</td>
+<td>Punta Arenas</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">0.8125</td>
+<td style="text-align: right;">1.0000</td>
+<td>K</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El patrón principal es claro. Las cuencas con <code>RES</code> muy bajo tendieron a presentar IEO bajo o medio-bajo, con vegetación pobre a media, humedad limitada, perturbación antrópica moderada a alta y fragmentación visible. En contraste, <code>RID</code> 1808 mostró simultáneamente el mayor IEO observado y el valor máximo de <code>RES</code>, consistente con una señal de alta resiliencia operativa.</p>
+<p>La relación no es perfecta, y no debe esperarse que lo sea. El IEO captura una condición local observada en una fecha específica y desde puntos accesibles. La MRCT sintetiza una trayectoria anual de cuenca completa. Aun así, la dirección general entre ambas mediciones es coherente y estadísticamente significativa.</p>
+</section>
+<section id="sec-evidencia-visual-rid-terreno" class="level2 page-columns page-full" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="sec-evidencia-visual-rid-terreno"><span class="header-section-number">20.4</span> Evidencia visual por RID</h2>
+<p>Las imágenes siguientes complementan la ficha y la tabla IEO-<code>RES</code>. Muestran el entorno accesible desde el cual se obtuvo el registro, por lo que sirven para documentar cobertura, infraestructura y condiciones visibles, pero no representan por sí solas el polígono completo de cada cuenca. Cada lectura visual se vincula brevemente con el resultado, sin reemplazar el IEO ni la señal anual del modelo.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">RID 2205</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">RID 5257</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">RID 5294</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">RID 1808</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="fig-rid-2205-evidencia" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-rid-2205-evidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/RID-2205/1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-rid-2205-evidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.1: Vista aérea del entorno accesible de RID 2205: corredor vial pavimentado, obras de drenaje laterales, postes de tendido y una matriz continua de vegetación baja.
+</figcaption>
+</figure>
+</div>
+<p>La imagen muestra una ruta pavimentada que atraviesa una matriz abierta de vegetación baja. Se distinguen cunetas o zanjas paralelas al camino, postes de tendido y una franja de borde intervenida por la infraestructura vial. Hacia el exterior del corredor predomina una cobertura baja y relativamente continua, sin elementos arbóreos visibles en el encuadre. Esta evidencia contextualiza la observación de perturbación y fragmentación registradas para la cuenca, sin asumir que el punto de acceso describe toda su extensión. En relación con el IEO medio-bajo (0.4063) y el <code>RES</code> muy bajo (0.0021), la escena muestra presiones visibles de borde, pero no un colapso visual uniforme; esa diferencia es coherente con la tensión de escala e intensidad discutida para el sitio.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="fig-rid-5257-evidencia" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-rid-5257-evidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/RID-5257/1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-rid-5257-evidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.2: Vista aérea del entorno accesible de RID 5257: pradera abierta con cercos, ganado, huellas de tránsito y sectores de humedad superficial junto al corredor vial.
+</figcaption>
+</figure>
+</div>
+<p>La imagen registra un paisaje de pradera abierta, delimitado por cercos y atravesado por un corredor vial. Se observan animales en pastoreo, huellas de tránsito sobre el terreno y pequeños sectores con agua o humedad superficial próximos al borde del camino. La cobertura es predominantemente baja y el uso ganadero es visible; estos rasgos aportan contexto a la condición intermedia de humedad y a la perturbación observada, sin convertir la fotografía en una medición de la cuenca completa. Junto con el IEO de 0.3438 y el <code>RES</code> de 0.0093, la imagen ayuda a explicar una condición observada baja pero no homogéneamente degradada: combina señales de uso y fragmentación con sectores que conservan humedad superficial.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="fig-rid-5294-evidencia" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-rid-5294-evidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/RID-5294/1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-rid-5294-evidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.3: Vista aérea del entorno accesible de RID 5294: camino pavimentado, cercos longitudinales y cobertura baja discontinua en una planicie expuesta.
+</figcaption>
+</figure>
+</div>
+<p>La fotografía muestra una planicie expuesta con vegetación baja, un camino pavimentado y cercos paralelos a la ruta. En los bordes se aprecian superficies de suelo más desnudo o con cobertura rala, además de una geometría lineal asociada al corredor vial. La escena hace visible la proximidad entre la observación y la infraestructura de transporte; por ello, la evidencia debe leerse junto con la ficha de sitio y no como una caracterización total de la cuenca. La baja cobertura visible y el corredor lineal son compatibles con el IEO bajo (0.3125) y el <code>RES</code> muy bajo (0.0149); al mismo tiempo, la imagen recuerda que un valor crítico del modelo no equivale necesariamente a una imagen de deterioro total en un único punto de acceso.</p>
+</div>
+<div id="tabset-1-4" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div id="fig-rid-1808-evidencia" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-rid-1808-evidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/RID-1808/1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-rid-1808-evidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.4: Vista aérea del entorno accesible de RID 1808: ladera con cobertura arbórea, parches de nieve, camino sinuoso y vista hacia el área urbana o costera al fondo.
+</figcaption>
+</figure>
+</div>
+<p>La imagen muestra una ladera con cobertura arbórea, parches de nieve y un camino sinuoso que desciende hacia un área urbanizada o costera visible al fondo. También se distingue una franja abierta en la ladera y la cercanía entre bosque, camino y ocupación del borde. En este encuadre se observan elementos coherentes con una cobertura más densa y húmeda que la de las praderas abiertas; la interpretación final sigue correspondiendo a la ficha y al IEO de la cuenca, no sólo a la fotografía. Esta lectura visual se alinea con el IEO más alto de la campaña (0.8125) y <code>RES = 1.0000</code>: el caso de control positivo conserva una cobertura arbórea continua en el encuadre, aun bajo condiciones invernales y junto a un camino de acceso.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-contraste-ieo-res-terreno" class="level2" data-number="20.5">
+<h2 data-number="20.5" class="anchored" data-anchor-id="sec-contraste-ieo-res-terreno"><span class="header-section-number">20.5</span> Contraste estadístico IEO-RES</h2>
+<p>El contraste lineal entre IEO observado y <code>RES</code> modelo se calculó sobre las 10 cuencas con ambos datos disponibles. Los tres puntos urbanos o periurbanos sin <code>RES</code> no fueron incluidos, porque no pertenecen al mismo dominio de inferencia del modelo de cuencas.</p>
+<div id="tbl-contraste-estadistico-ieo-res" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-contraste-estadistico-ieo-res-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;20.4: Resultados del contraste estadístico entre IEO observado y <code>RES</code> modelo.
+</figcaption>
+<div aria-describedby="tbl-contraste-estadistico-ieo-res-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrica</th>
+<th style="text-align: right;">Valor</th>
+<th>Lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>N comparable</td>
+<td style="text-align: right;">10</td>
+<td>Muestra de cuencas con IEO y <code>RES</code>.</td>
+</tr>
+<tr class="even">
+<td>Correlación de Pearson</td>
+<td style="text-align: right;">0.7869</td>
+<td>Asociación positiva alta entre observación y modelo.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">R^2</span></td>
+<td style="text-align: right;">0.6192</td>
+<td>Aproximadamente 62% de la variación del IEO queda explicada por <code>RES</code> en el ajuste lineal.</td>
+</tr>
+<tr class="even">
+<td>Valor p</td>
+<td style="text-align: right;">0.0069</td>
+<td>Relación estadísticamente significativa bajo <span class="math inline">p &lt; 0.01</span>.</td>
+</tr>
+<tr class="odd">
+<td>Error estándar</td>
+<td style="text-align: right;">0.1194</td>
+<td>Magnitud del desajuste esperado alrededor de la recta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Estos valores permiten sostener una validación empírica fuerte para el uso de la MRCT como herramienta de priorización territorial. La evidencia no prueba causalidad ni reemplaza el análisis ecológico de detalle, pero sí confirma que la resiliencia operativa estimada por el modelo se ordena de manera compatible con condiciones físicas observadas en terreno.</p>
+</section>
+<section id="sec-sintesis-mediciones-terreno" class="level2" data-number="20.6">
+<h2 data-number="20.6" class="anchored" data-anchor-id="sec-sintesis-mediciones-terreno"><span class="header-section-number">20.6</span> Síntesis de mediciones</h2>
+<p>La síntesis de mediciones muestra que el levantamiento produjo una base integrada suficiente para comparar cuencas en tres planos: condición biofísica observada, restricción operativa de campaña y señal satelital. Para el cierre del libro, la variable central es el IEO promedio por cuenca; las condiciones de viento, nubosidad y operación de dron se usan como metadatos de interpretación.</p>
+<div id="tbl-sintesis-mediciones-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sintesis-mediciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;20.5: Síntesis operativa de mediciones de terreno para integración MRCT.
+</figcaption>
+<div aria-describedby="tbl-sintesis-mediciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimensión</th>
+<th>Resultado integrado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Condición observada</td>
+<td>IEO entre 0.2500 y 0.8125 en las cuencas comparables.</td>
+</tr>
+<tr class="even">
+<td>Señal satelital</td>
+<td><code>RES</code> entre 0.0021 y 1.0000.</td>
+</tr>
+<tr class="odd">
+<td>Restricción de vuelo</td>
+<td>Viento crítico en varias cuencas de San Gregorio; condición más favorable en Punta Arenas / Laredo.</td>
+</tr>
+<tr class="even">
+<td>Comparabilidad</td>
+<td>10 cuencas comparables con MRCT; 3 puntos urbanos o periurbanos registrados como evidencia territorial no comparable con <code>RES</code>.</td>
+</tr>
+<tr class="odd">
+<td>Uso metodológico</td>
+<td>Validación estadística, clasificación de consistencia y lectura de discrepancias.</td>
 </tr>
 </tbody>
 </table>
@@ -443,24 +834,40 @@ Table&nbsp;20.2: Plantilla de síntesis de mediciones de terreno.
 </figure>
 </div>
 </section>
-<section id="sec-registro-fotografico-resultados" class="level2" data-number="20.5">
-<h2 data-number="20.5" class="anchored" data-anchor-id="sec-registro-fotografico-resultados"><span class="header-section-number">20.5</span> Registro fotográfico</h2>
-<p>Esta sección debe incorporar una selección curada de fotografías y capturas de dron registradas con la nomenclatura definida en <a href="protocolo_levantamiento.html#sec-registro-fotografico-terrestre" class="quarto-xref"><span>Section 17.6</span></a> y <a href="protocolo_levantamiento.html#sec-vuelos-dron-terreno" class="quarto-xref"><span>Section 17.7</span></a>. No debe incluir todo el repositorio visual, sino ejemplos que expliquen condiciones observadas y diferencias entre cuencas.</p>
+<section id="sec-coherencias-terreno" class="level2" data-number="20.7">
+<h2 data-number="20.7" class="anchored" data-anchor-id="sec-coherencias-terreno"><span class="header-section-number">20.7</span> Coherencias encontradas</h2>
+<p>Las principales coherencias entre lo esperado por la MRCT y lo observado en terreno son las siguientes.</p>
+<p>Primero, la dirección general de la señal fue correcta. Las cuencas clasificadas con resiliencia operativa muy baja se asociaron con IEO bajo, perturbación antrópica visible, fragmentación y menor vigor de cobertura. Esto es consistente con la lectura de <a href="pt_resiliencia.html#sec-resiliencia-operativa" class="quarto-xref"><span>Section 9.3</span></a>: <code>RES</code> no declara un estado ecológico absoluto, pero ordena unidades territoriales según presión de transición.</p>
+<p>Segundo, los casos de resiliencia media se ubicaron en posiciones intermedias. <code>RID</code> 5247, 5623 y 5263 no mostraron condiciones tan críticas como las cuencas de <code>RES</code> cercano a cero, pero tampoco aparecieron como sitios de alta integridad. Esta gradación es importante porque confirma que el modelo no sólo separa extremos, sino que también captura estados intermedios.</p>
+<p>Tercero, <code>RID</code> 1808 funcionó como caso de control positivo. El terreno mostró alta vegetación, humedad relevante, baja perturbación relativa y menor fragmentación, mientras el modelo entregó <code>RES = 1.0000</code>. La coincidencia es metodológicamente útil porque evita que la campaña sólo valide cuencas críticas; también prueba que la MRCT reconoce condiciones favorables.</p>
+<p>Cuarto, la exclusión de puntos urbanos sin <code>RES</code> es coherente con el alcance del modelo. En superficies impermeabilizadas o urbanas consolidadas, la lógica de cuenca biofísica pierde comparabilidad directa. Que esos puntos aparezcan como <code>N/A</code> no es una falla de la MRCT, sino una delimitación correcta de su dominio de aplicación.</p>
 </section>
-<section id="sec-limitaciones-campana-terreno" class="level2" data-number="20.6">
-<h2 data-number="20.6" class="anchored" data-anchor-id="sec-limitaciones-campana-terreno"><span class="header-section-number">20.6</span> Limitaciones de campaña</h2>
-<p>Las limitaciones deben registrarse explícitamente:</p>
-<ul>
-<li>cuencas no visitadas;</li>
-<li>vuelos suspendidos;</li>
-<li>mediciones incompletas;</li>
-<li>problemas de clima;</li>
-<li>problemas de acceso;</li>
-<li>baja visibilidad;</li>
-<li>puntos poco representativos;</li>
-<li>restricciones de permiso o seguridad.</li>
-</ul>
-<p>Estas limitaciones alimentan directamente la clasificación de consistencia o no evaluabilidad definida en <a href="integracion_validacion.html#sec-criterios-consistencia-mrct" class="quarto-xref"><span>Section 21.2</span></a>.</p>
+<section id="sec-inconsistencias-terreno" class="level2" data-number="20.8">
+<h2 data-number="20.8" class="anchored" data-anchor-id="sec-inconsistencias-terreno"><span class="header-section-number">20.8</span> Inconsistencias y tensiones interpretativas</h2>
+<p>Las diferencias más relevantes no invalidan el modelo, pero sí afinan su lectura.</p>
+<p>La primera tensión aparece en cuencas con IEO medio-bajo pero <code>RES</code> extremadamente bajo, como <code>RID</code> 2205, 5257 o 5294. En esos casos, el terreno no necesariamente mostró un colapso visual total, pero sí condiciones compatibles con presión: perturbación, fragmentación, baja cobertura o humedad parcial. La diferencia sugiere que <code>RES</code> puede estar capturando trayectoria, sensibilidad o alejamiento multivariado acumulado que no siempre se ve como deterioro extremo en una sola visita.</p>
+<p>La segunda tensión se relaciona con la fecha de observación. La campaña se realizó en invierno, mientras la MRCT integra señales anuales. Nieve, senescencia, suelo congelado, baja luz y nubosidad pueden modificar la apariencia instantánea del paisaje. Por eso, una discrepancia puntual debe revisarse contra la serie temporal, el año crítico de jerk, la imagen satelital usada y la estacionalidad de la cobertura.</p>
+<p>La tercera tensión es espacial. El punto accesible no siempre representa la cuenca completa. Varias cuencas fueron observadas desde bordes, caminos o sectores seguros de detención. En cuencas heterogéneas, el IEO local puede subestimar o sobreestimar procesos que la MRCT calcula para el polígono completo.</p>
+<p>La cuarta tensión es logística. El viento condicionó la calidad y estabilidad del registro aéreo, especialmente en <code>RID</code> 5624. Esto no afecta necesariamente el IEO peatonal, pero sí reduce la capacidad de leer continuidad espacial, cauces, fragmentación y estructura de cobertura desde dron.</p>
+</section>
+<section id="sec-lectura-esperado-encontrado" class="level2" data-number="20.9">
+<h2 data-number="20.9" class="anchored" data-anchor-id="sec-lectura-esperado-encontrado"><span class="header-section-number">20.9</span> Lectura metodológica de lo esperado y lo encontrado</h2>
+<p>Antes de la campaña, la MRCT esperaba encontrar un conjunto de cuencas útil para contrastar tres situaciones: resiliencia alta, resiliencia media y colapso potencial o transición acelerada. También se esperaba que la validación no dependiera de una sola variable visible, sino de la combinación entre vegetación, humedad, perturbación y fragmentación.</p>
+<p>Lo encontrado confirma esa expectativa general. La campaña no produjo una correspondencia perfecta punto a punto, pero sí una relación fuerte entre el ordenamiento satelital y la condición observada. En términos prácticos, la MRCT acertó en la pregunta más importante para planificación: dónde mirar primero y qué sitios merecen revisión prioritaria.</p>
+<p>La inconsistencia más valiosa es conceptual: un <code>RES</code> bajo no siempre se ve en terreno como una imagen simple de degradación absoluta. Puede expresarse como presión acumulada, fragmentación, pérdida de humedad, trayectoria acelerada, contraste con la línea base o sensibilidad a forzantes. Esto refuerza una idea ya planteada en el libro: la MRCT no debe leerse como sentencia visual, sino como sistema de preguntas territorialmente trazables.</p>
+</section>
+<section id="sec-limitaciones-campana-terreno" class="level2" data-number="20.10">
+<h2 data-number="20.10" class="anchored" data-anchor-id="sec-limitaciones-campana-terreno"><span class="header-section-number">20.10</span> Limitaciones de campaña</h2>
+<p>La campaña deja cuatro limitaciones principales para la lectura final.</p>
+<p>Primero, la muestra comparable es pequeña. Diez cuencas permiten una validación inicial sólida, pero no reemplazan una campaña ampliada con más comunas, estaciones y tipos de cobertura.</p>
+<p>Segundo, la ventana temporal fue invernal. Esto es una fortaleza como prueba de esfuerzo, pero también impone cautela para interpretar vigor vegetal, nieve, agua superficial y temperatura de coberturas.</p>
+<p>Tercero, no todas las cuencas preseleccionadas fueron visitadas. La priorización logística redujo la cartera inicial a un subconjunto efectivo; por lo tanto, las cuencas no visitadas deben mantenerse como candidatas para una segunda campaña o para validación remota complementaria.</p>
+<p>Cuarto, las condiciones de viento afectaron la operación de dron. En general se obtuvo evidencia funcional, pero la calidad del registro aéreo fue variable y en <code>RID</code> 5624 el viento limitó la estabilización de cámara.</p>
+</section>
+<section id="sec-cierre-resultados-terreno" class="level2" data-number="20.11">
+<h2 data-number="20.11" class="anchored" data-anchor-id="sec-cierre-resultados-terreno"><span class="header-section-number">20.11</span> Cierre de resultados</h2>
+<p>El resultado central de la campaña es que la MRCT mostró consistencia empírica bajo condiciones difíciles. El modelo ordenó las cuencas de manera compatible con el estado observado y mantuvo una asociación estadísticamente significativa con el IEO, aun cuando el levantamiento se realizó en invierno, con vientos intensos y sobre una muestra operacionalmente acotada.</p>
+<p>La conclusión metodológica no es que la MRCT reemplaza al terreno. Es lo contrario: el terreno confirma que la MRCT sirve para focalizar la observación, distinguir prioridades y formular hipótesis verificables. Las coincidencias fortalecen la confianza en el modelo; las diferencias entregan información para mejorar su interpretación, ajustar campañas futuras y evitar lecturas simplistas de una métrica que, por diseño, sintetiza procesos multivariados, espaciales y temporales.</p>
 
 
 </section>
@@ -867,8 +1274,8 @@ Table&nbsp;20.2: Plantilla de síntesis de mediciones de terreno.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./vuelo_drone.html" class="pagination-link" aria-label="Planificación Vuelos Drone">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></span>
+      <a href="./vuelo_drone.html" class="pagination-link" aria-label="Operación de Dron">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Operación de Dron</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

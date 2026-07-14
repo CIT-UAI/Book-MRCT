@@ -234,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vuelo_drone.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Operación de Dron</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -273,12 +273,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#sec-variables-obligatorias-fichas" id="toc-sec-variables-obligatorias-fichas" class="nav-link active" data-scroll-target="#sec-variables-obligatorias-fichas"><span class="header-section-number">18.1</span> Variables de la ficha</a></li>
-  <li><a href="#sec-ficha-tipo-cuenca" id="toc-sec-ficha-tipo-cuenca" class="nav-link" data-scroll-target="#sec-ficha-tipo-cuenca"><span class="header-section-number">18.2</span> Ficha tipo por cuenca</a>
-  <ul class="collapse">
-  <li><a href="#identificación-y-precarga" id="toc-identificación-y-precarga" class="nav-link" data-scroll-target="#identificación-y-precarga"><span class="header-section-number">18.2.1</span> Identificación y precarga</a></li>
-  <li><a href="#registro-de-terreno" id="toc-registro-de-terreno" class="nav-link" data-scroll-target="#registro-de-terreno"><span class="header-section-number">18.2.2</span> Registro de terreno</a></li>
-  </ul></li>
+  <li><a href="#sec-variables-obligatorias-fichas" id="toc-sec-variables-obligatorias-fichas" class="nav-link active" data-scroll-target="#sec-variables-obligatorias-fichas"><span class="header-section-number">18.1</span> Uso de la ficha</a></li>
+  <li><a href="#sec-ficha-tipo-cuenca" id="toc-sec-ficha-tipo-cuenca" class="nav-link" data-scroll-target="#sec-ficha-tipo-cuenca"><span class="header-section-number">18.2</span> Ficha tipo por cuenca</a></li>
   <li><a href="#sec-uso-posterior-fichas" id="toc-sec-uso-posterior-fichas" class="nav-link" data-scroll-target="#sec-uso-posterior-fichas"><span class="header-section-number">18.3</span> Uso posterior</a></li>
   </ul>
 </nav>
@@ -289,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./fichas_cuencas.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Fichas de Cuencas</span></h1>
-<p class="subtitle lead">Ficha operativa para registro de terreno</p>
+<p class="subtitle lead">Estructura de registro para la validación territorial</p>
 </div>
 
 
@@ -306,198 +302,62 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Este capítulo define la ficha mínima que debe acompañar cada cuenca visitada. Su función es ordenar el registro de terreno, no volver a explicar la selección de cuencas ni la rúbrica IEO. La selección técnica se presenta en <a href="jerk.html#sec-diez-cuencas-jerk" class="quarto-xref"><span>Section 12.8</span></a> y <a href="jerk.html#sec-terminales-h2-jerk" class="quarto-xref"><span>Section 12.10</span></a>; la decisión logística de campaña se define en <span class="quarto-unresolved-ref">?sec-decision-cuencas-finales</span>; y la evaluación IEO se rige por <a href="protocolo_levantamiento.html#sec-rúbrica-ieo" class="quarto-xref"><span>Section 17.4.1</span></a> y <a href="protocolo_levantamiento.html#sec-formula-ieo" class="quarto-xref"><span>Section 17.4.2</span></a>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Uso de la ficha
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Antes de salir a terreno se precargan los datos MRCT y la ubicación objetivo. En terreno se completan las condiciones ambientales, las observaciones breves y las cuatro notas IEO de cada punto de muestreo.</p>
-</div>
-</div>
+<p>La ficha es el vínculo entre la cuenca, la observación y el resultado. Reúne la precarga MRCT y el registro de terreno sin repetir la selección de cuencas (<a href="cuencas_seleccionadas.html#sec-tabla-cuencas-seleccionadas" class="quarto-xref"><span>Section 13.3</span></a>) ni la rúbrica IEO (<a href="protocolo_levantamiento.html#sec-rúbrica-ieo" class="quarto-xref"><span>Section 17.4.1</span></a>).</p>
 <section id="sec-variables-obligatorias-fichas" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="sec-variables-obligatorias-fichas"><span class="header-section-number">18.1</span> Variables de la ficha</h2>
-<p>Cada ficha debe mantener juntas las variables de identificación, precarga MRCT y registro de terreno. La tabla siguiente define los campos reales que deben aparecer en la ficha.</p>
+<h2 data-number="18.1" class="anchored" data-anchor-id="sec-variables-obligatorias-fichas"><span class="header-section-number">18.1</span> Uso de la ficha</h2>
+<p>Cada ficha conserva cuatro bloques de información. Los campos se completan desde la cartera operativa y desde la visita, de modo que ningún dato se interpreta fuera de su <code>RID</code> y fecha.</p>
 <div id="tbl-campos-minimos-ficha" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-campos-minimos-ficha-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;18.1: Variables reales de identificación, precarga y registro de terreno.
+Table&nbsp;18.1: Campos mínimos de una ficha de cuenca.
 </figcaption>
 <div aria-describedby="tbl-campos-minimos-ficha-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Bloque</th>
-<th>Variable</th>
-<th>Llenado</th>
-<th>Uso</th>
+<th>Campos esenciales</th>
+<th>Fuente</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Identificación</td>
-<td>ID planilla</td>
-<td>Gabinete</td>
-<td>Identifica la planilla física o digital.</td>
-</tr>
-<tr class="even">
-<td>Identificación</td>
-<td>Nombre a cargo de planilla</td>
-<td>Gabinete / terreno</td>
-<td>Define la persona responsable del registro.</td>
-</tr>
-<tr class="odd">
-<td>Identificación</td>
-<td>Jornada AM/PM</td>
-<td>Terreno</td>
-<td>Indica el bloque horario del levantamiento.</td>
-</tr>
-<tr class="even">
-<td>Registro de punto</td>
-<td><code>ID</code></td>
-<td>Terreno</td>
-<td>Numera cada punto de muestreo dentro de la cuenca.</td>
-</tr>
-<tr class="odd">
-<td>Registro de punto</td>
-<td>Fecha</td>
-<td>Terreno</td>
-<td>Registra la fecha de observación.</td>
-</tr>
-<tr class="even">
-<td>Registro de punto</td>
-<td>Hora</td>
-<td>Terreno</td>
-<td>Registra la hora local de observación.</td>
-</tr>
-<tr class="odd">
-<td>Precarga de cuenca</td>
-<td><code>RID</code></td>
-<td>Gabinete</td>
-<td>Identificador MRCT de la cuenca.</td>
-</tr>
-<tr class="even">
-<td>Precarga de cuenca</td>
-<td>Cuenca</td>
-<td>Gabinete</td>
-<td>Nombre o etiqueta operativa de la cuenca.</td>
-</tr>
-<tr class="odd">
-<td>Precarga de cuenca</td>
-<td>Comuna</td>
-<td>Gabinete</td>
-<td>Comuna asociada al punto o cuenca.</td>
-</tr>
-<tr class="even">
-<td>Registro ambiental</td>
-<td>Viento km/h</td>
-<td>Terreno</td>
-<td>Condición ambiental y restricción potencial para dron.</td>
-</tr>
-<tr class="odd">
-<td>Registro ambiental</td>
-<td>Nubosidad %</td>
-<td>Terreno</td>
-<td>Condición de visibilidad y comparabilidad.</td>
-</tr>
-<tr class="even">
-<td>Registro ambiental</td>
-<td><code>Temp_AmbC</code></td>
-<td>Terreno</td>
-<td>Temperatura ambiente en grados Celsius.</td>
-</tr>
-<tr class="odd">
-<td>Registro de punto</td>
-<td>Observaciones breves</td>
-<td>Terreno</td>
-<td>Acceso, agua visible, nieve/hielo, perturbaciones, restricciones o representatividad.</td>
-</tr>
-<tr class="even">
-<td>IEO</td>
-<td>Vegetación (1-5)</td>
-<td>Terreno</td>
-<td>Nota de vigor y cobertura vegetal según <a href="protocolo_levantamiento.html#sec-rúbrica-ieo" class="quarto-xref"><span>Section 17.4.1</span></a>.</td>
-</tr>
-<tr class="odd">
-<td>IEO</td>
-<td>Humedad (1-5)</td>
-<td>Terreno</td>
-<td>Nota de humedad superficial o agua visible según <a href="protocolo_levantamiento.html#sec-rúbrica-ieo" class="quarto-xref"><span>Section 17.4.1</span></a>.</td>
-</tr>
-<tr class="even">
-<td>IEO</td>
-<td>Perturbación (1-5)</td>
-<td>Terreno</td>
-<td>Nota de impacto antrópico; vector negativo en <a href="protocolo_levantamiento.html#sec-formula-ieo" class="quarto-xref"><span>Section 17.4.2</span></a>.</td>
-</tr>
-<tr class="odd">
-<td>IEO</td>
-<td>Fragmentación (1-5)</td>
-<td>Terreno</td>
-<td>Nota de continuidad ecosistémica; vector negativo en <a href="protocolo_levantamiento.html#sec-formula-ieo" class="quarto-xref"><span>Section 17.4.2</span></a>.</td>
-</tr>
-<tr class="even">
-<td>IEO</td>
-<td>IEO calculado</td>
-<td>Gabinete / terreno</td>
-<td>Índice observado calculado para el punto.</td>
-</tr>
-<tr class="odd">
-<td>Precarga MRCT</td>
-<td><code>RES</code> modelo</td>
-<td>Gabinete</td>
-<td>Valor de resiliencia estimado por la MRCT.</td>
+<td><code>RID</code>, cuenca, comuna, fecha, hora, responsable y jornada</td>
+<td>Cartera operativa y registro de sitio.</td>
 </tr>
 <tr class="even">
 <td>Precarga MRCT</td>
-<td>Jerk modelo</td>
-<td>Gabinete</td>
-<td>Señal dinámica que justifica o contextualiza la visita.</td>
+<td><code>RES</code>, jerk, trayectoria, coordenada objetivo y criterio de selección</td>
+<td>Análisis MRCT y fichas de cuencas seleccionadas.</td>
 </tr>
 <tr class="odd">
-<td>Precarga MRCT</td>
-<td>Tipo trayectoria</td>
-<td>Gabinete</td>
-<td>Clasificación de trayectoria asociada a la cuenca.</td>
+<td>Observación</td>
+<td>Coordenada observada, acceso, clima, representatividad y observaciones breves</td>
+<td>Terreno.</td>
 </tr>
 <tr class="even">
-<td>Ubicación</td>
-<td>Coordenada X</td>
-<td>Gabinete / terreno</td>
-<td>Coordenada objetivo o coordenada observada del punto.</td>
-</tr>
-<tr class="odd">
-<td>Ubicación</td>
-<td>Coordenada Y</td>
-<td>Gabinete / terreno</td>
-<td>Coordenada objetivo o coordenada observada del punto.</td>
+<td>IEO y evidencia</td>
+<td>Puntos de muestreo, V-H-P-F, fotografías, estado de dron y respaldo</td>
+<td>Terreno y gabinete.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Las columnas de terreno deben mantenerse alineadas con el protocolo: viento, nubosidad y temperatura se registran como condiciones ambientales (<a href="protocolo_levantamiento.html#sec-condiciones-ambientales-terreno" class="quarto-xref"><span>Section 17.5</span></a>); vegetación, humedad, perturbación y fragmentación se evalúan según la rúbrica IEO (<a href="protocolo_levantamiento.html#sec-rúbrica-ieo" class="quarto-xref"><span>Section 17.4.1</span></a>); y fotografías, dron, acceso, agua visible, nieve/hielo o dudas de representatividad se documentan en observaciones breves cuando no tengan una columna específica.</p>
 </section>
 <section id="sec-ficha-tipo-cuenca" class="level2 page-columns page-full" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="sec-ficha-tipo-cuenca"><span class="header-section-number">18.2</span> Ficha tipo por cuenca</h2>
-<section id="identificación-y-precarga" class="level3" data-number="18.2.1">
-<h3 data-number="18.2.1" class="anchored" data-anchor-id="identificación-y-precarga"><span class="header-section-number">18.2.1</span> Identificación y precarga</h3>
 <div id="tbl-ficha-identificacion-mrct" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ficha-identificacion-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;18.2: Identificación y precarga de la ficha de cuenca.
+Table&nbsp;18.2: Estructura de la ficha utilizada para cada cuenca.
 </figcaption>
 <div aria-describedby="tbl-ficha-identificacion-mrct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -508,79 +368,53 @@ Table&nbsp;18.2: Identificación y precarga de la ficha de cuenca.
 <thead>
 <tr class="header">
 <th>Campo</th>
-<th>Valor</th>
+<th>Cómo se registra</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>ID planilla</td>
-<td>Por definir</td>
+<td>Identificador de planilla</td>
+<td>Código único asociado al <code>RID</code> y a la fecha.</td>
 </tr>
 <tr class="even">
-<td>Nombre a cargo de planilla</td>
-<td>Por definir</td>
+<td>Ubicación</td>
+<td>Coordenada objetivo y coordenada efectiva del punto de observación.</td>
 </tr>
 <tr class="odd">
-<td>Jornada</td>
-<td>AM / PM</td>
+<td>Condiciones de visita</td>
+<td>Viento, nubosidad, temperatura, acceso y visibilidad.</td>
 </tr>
 <tr class="even">
-<td><code>RID</code></td>
-<td>Por definir</td>
+<td>Representatividad</td>
+<td>Relación entre el punto visitado y el polígono completo de la cuenca.</td>
 </tr>
 <tr class="odd">
-<td>Cuenca</td>
-<td>Por definir</td>
+<td>Índice IEO</td>
+<td>Entre 5 y 10 puntos con notas de vegetación, humedad, perturbación y fragmentación.</td>
 </tr>
 <tr class="even">
-<td>Comuna</td>
-<td>Por definir</td>
+<td>Evidencia</td>
+<td>Fotografías, operación o suspensión de dron, y observaciones relevantes.</td>
 </tr>
 <tr class="odd">
-<td><code>RES</code> modelo</td>
-<td>Por definir</td>
-</tr>
-<tr class="even">
-<td>Jerk modelo</td>
-<td>Por definir</td>
-</tr>
-<tr class="odd">
-<td>Tipo trayectoria</td>
-<td>Por definir</td>
-</tr>
-<tr class="even">
-<td>Coordenada X objetivo</td>
-<td>Por definir</td>
-</tr>
-<tr class="odd">
-<td>Coordenada Y objetivo</td>
-<td>Por definir</td>
-</tr>
-<tr class="even">
-<td>Criterio de selección</td>
-<td>Referir a <a href="jerk.html#sec-diez-cuencas-jerk" class="quarto-xref"><span>Section 12.8</span></a>, <a href="jerk.html#sec-terminales-h2-jerk" class="quarto-xref"><span>Section 12.10</span></a> o <span class="quarto-unresolved-ref">?sec-decision-cuencas-finales</span></td>
+<td>Cierre</td>
+<td>Preguntas de validación, incidencias y confirmación de respaldo.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-</section>
-<section id="registro-de-terreno" class="level3 page-columns page-full" data-number="18.2.2">
-<h3 data-number="18.2.2" class="anchored" data-anchor-id="registro-de-terreno"><span class="header-section-number">18.2.2</span> Registro de terreno</h3>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/ficha_levantamiento.png" class="img-fluid figure-img"></p>
 <figcaption class="margin-caption">Ejemplo de ficha de levantamiento de datos en terreno</figcaption>
 </figure>
 </div>
-<p>El registro debe completarse con 5 a 10 puntos de muestreo por cuenca, tal como define <a href="protocolo_levantamiento.html#sec-ieo-terreno" class="quarto-xref"><span>Section 17.4</span></a>. Al cierre de cada visita se revisa el control de completitud de <a href="protocolo_levantamiento.html#sec-control-completitud-terreno" class="quarto-xref"><span>Section 17.10</span></a> y luego la información se consolida en <a href="resultados_terreno.html#sec-resultados-por-cuenca-terreno" class="quarto-xref"><span>Section 20.3</span></a>.</p>
-</section>
 </section>
 <section id="sec-uso-posterior-fichas" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="sec-uso-posterior-fichas"><span class="header-section-number">18.3</span> Uso posterior</h2>
-<p>La ficha es la fuente primaria para la integración MRCT-terreno. Sus campos alimentan la síntesis de mediciones de <a href="resultados_terreno.html#sec-sintesis-mediciones-terreno" class="quarto-xref"><span>Section 20.4</span></a> y la tabla de validación de <a href="integracion_validacion.html#sec-tabla-validacion-mrct-terreno" class="quarto-xref"><span>Section 21.1</span></a>. La clasificación de consistencia no se decide en la ficha: se aplica posteriormente con los criterios de <a href="integracion_validacion.html#sec-criterios-consistencia-mrct" class="quarto-xref"><span>Section 21.2</span></a>.</p>
-<p>Las cuencas no visitadas, reemplazadas o descartadas también deben registrarse, indicando la causa principal: acceso, permiso, distancia, baja representatividad, riesgo, clima esperado o cambio de prioridad técnica.</p>
+<p>La ficha alimenta la síntesis de <a href="resultados_terreno.html#sec-resultados-por-cuenca-terreno" class="quarto-xref"><span>Section 20.3</span></a> y la lectura de consistencia de <a href="integracion_validacion.html#sec-criterios-consistencia-mrct" class="quarto-xref"><span>Section 21.2</span></a>. También permite distinguir una cuenca no visitada, un sitio con acceso restringido y una observación realizada con evidencia parcial, sin confundir esas situaciones con la condición ambiental de la cuenca.</p>
 
 
 </section>
@@ -992,8 +826,8 @@ Table&nbsp;18.2: Identificación y precarga de la ficha de cuenca.
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./vuelo_drone.html" class="pagination-link" aria-label="Planificación Vuelos Drone">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./vuelo_drone.html" class="pagination-link" aria-label="Operación de Dron">
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Operación de Dron</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

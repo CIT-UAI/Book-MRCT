@@ -234,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vuelo_drone.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Operación de Dron</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -273,16 +273,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#sec-contexto-climatico-junio" id="toc-sec-contexto-climatico-junio" class="nav-link active" data-scroll-target="#sec-contexto-climatico-junio"><span class="header-section-number">15.1</span> Contexto climático de junio</a></li>
-  <li><a href="#sec-seguimiento-pronosticos" id="toc-sec-seguimiento-pronosticos" class="nav-link" data-scroll-target="#sec-seguimiento-pronosticos"><span class="header-section-number">15.2</span> Seguimiento de pronósticos</a>
-  <ul class="collapse">
-  <li><a href="#sec-registro-diario-pronostico" id="toc-sec-registro-diario-pronostico" class="nav-link" data-scroll-target="#sec-registro-diario-pronostico"><span class="header-section-number">15.2.1</span> Registro diario de pronóstico</a></li>
-  </ul></li>
-  <li><a href="#sec-condiciones-acceso-cuenca" id="toc-sec-condiciones-acceso-cuenca" class="nav-link" data-scroll-target="#sec-condiciones-acceso-cuenca"><span class="header-section-number">15.3</span> Condiciones de acceso por cuenca</a></li>
-  <li><a href="#sec-alertas-restricciones-acceso" id="toc-sec-alertas-restricciones-acceso" class="nav-link" data-scroll-target="#sec-alertas-restricciones-acceso"><span class="header-section-number">15.4</span> Alertas y restricciones de acceso</a></li>
+  <li><a href="#sec-contexto-climatico-junio" id="toc-sec-contexto-climatico-junio" class="nav-link active" data-scroll-target="#sec-contexto-climatico-junio"><span class="header-section-number">15.1</span> Contexto invernal</a></li>
+  <li><a href="#sec-seguimiento-pronosticos" id="toc-sec-seguimiento-pronosticos" class="nav-link" data-scroll-target="#sec-seguimiento-pronosticos"><span class="header-section-number">15.2</span> Criterios de decisión</a></li>
+  <li><a href="#sec-condiciones-acceso-cuenca" id="toc-sec-condiciones-acceso-cuenca" class="nav-link" data-scroll-target="#sec-condiciones-acceso-cuenca"><span class="header-section-number">15.3</span> Acceso y representatividad</a></li>
+  <li><a href="#sec-alertas-restricciones-acceso" id="toc-sec-alertas-restricciones-acceso" class="nav-link" data-scroll-target="#sec-alertas-restricciones-acceso"><span class="header-section-number">15.4</span> Alertas y restricciones</a></li>
   <li><a href="#sec-criterios-cancelacion-terreno" id="toc-sec-criterios-cancelacion-terreno" class="nav-link" data-scroll-target="#sec-criterios-cancelacion-terreno"><span class="header-section-number">15.5</span> Criterios de cancelación o postergación</a></li>
-  <li><a href="#sec-registro-condiciones-observadas" id="toc-sec-registro-condiciones-observadas" class="nav-link" data-scroll-target="#sec-registro-condiciones-observadas"><span class="header-section-number">15.6</span> Registro de condiciones observadas en campo</a></li>
-  <li><a href="#sec-decision-diaria-salida" id="toc-sec-decision-diaria-salida" class="nav-link" data-scroll-target="#sec-decision-diaria-salida"><span class="header-section-number">15.7</span> Decisión diaria de salida</a></li>
+  <li><a href="#sec-registro-condiciones-observadas" id="toc-sec-registro-condiciones-observadas" class="nav-link" data-scroll-target="#sec-registro-condiciones-observadas"><span class="header-section-number">15.6</span> Condiciones observadas y su uso</a></li>
+  <li><a href="#sec-decision-diaria-salida" id="toc-sec-decision-diaria-salida" class="nav-link" data-scroll-target="#sec-decision-diaria-salida"><span class="header-section-number">15.7</span> Decisión de salida</a></li>
   </ul>
 </nav>
     </div>
@@ -292,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trabajo_terreno.html">Trabajo en Terreno</a></li><li class="breadcrumb-item"><a href="./condiciones_terreno.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Condiciones de Terreno y Climáticas</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Condiciones de Terreno y Climáticas</span></h1>
-<p class="subtitle lead">Registro operativo para Terreno Magallanes 2026</p>
+<p class="subtitle lead">Contexto operativo de la campaña Magallanes 2026</p>
 </div>
 
 
@@ -309,27 +306,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Esta página concentra la revisión climática, el estado de accesos y las condiciones observadas en campo. Su función es apoyar decisiones diarias de salida, seguridad y vuelo de dron durante la campaña Magallanes 2026.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Uso operativo
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Antes de salir se revisan pronósticos, alertas y accesos. En terreno se registra la condición real de cada cuenca. Si las condiciones superan los criterios de seguridad, la visita o el vuelo de dron se postergan.</p>
-</div>
-</div>
+<p>Las condiciones de terreno fueron parte de la evidencia de la campaña, no un antecedente accesorio. Este capítulo resume los factores que afectaron el acceso y la operación; el registro por cuenca se conserva en <a href="resultados_terreno.html#tbl-condiciones-operativas-terreno" class="quarto-xref">Tabla&nbsp;<span>20.2</span></a> para no duplicar datos.</p>
 <section id="sec-contexto-climatico-junio" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="sec-contexto-climatico-junio"><span class="header-section-number">15.1</span> Contexto climático de junio</h2>
-<p>Junio corresponde al inicio del invierno austral en Magallanes. Las condiciones pueden cambiar rápido entre Punta Arenas, sectores abiertos de estepa, pasos interiores y cuencas más altas.</p>
+<h2 data-number="15.1" class="anchored" data-anchor-id="sec-contexto-climatico-junio"><span class="header-section-number">15.1</span> Contexto invernal</h2>
+<p>La campaña se realizó en invierno austral, con baja radiación, nubosidad variable, nieve en algunos sectores y temperaturas superficiales bajo cero. El principal condicionante operativo fue el viento, especialmente en el eje de San Gregorio. Estas condiciones obligan a distinguir entre una visita terrestre factible y un vuelo de dron seguro.</p>
 <div id="tbl-contexto-climatico-junio" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-contexto-climatico-junio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;15.1: Condiciones climáticas esperadas para trabajo de terreno en junio.
+Table&nbsp;15.1: Síntesis de condiciones observadas durante el levantamiento.
 </figcaption>
 <div aria-describedby="tbl-contexto-climatico-junio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -340,46 +324,26 @@ Table&nbsp;15.1: Condiciones climáticas esperadas para trabajo de terreno en ju
 </colgroup>
 <thead>
 <tr class="header">
-<th>Variable</th>
-<th>Rango esperado Punta Arenas</th>
-<th>Cuencas cordilleranas o altas</th>
+<th>Sector de observación</th>
+<th>Condición predominante</th>
+<th>Consecuencia operativa</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Temperatura media</td>
-<td>1 a 5 °C</td>
-<td>-5 a 0 °C</td>
+<td>San Gregorio / eje oriental</td>
+<td>Viento reportado entre 50 y 100 km/h en varias estaciones</td>
+<td>Registro aéreo exigente y menor estabilidad de cámara.</td>
 </tr>
 <tr class="even">
-<td>Temperatura mínima</td>
-<td>Hasta -5 °C</td>
-<td>-10 °C o menos</td>
+<td>Eje norte intermedio</td>
+<td>Viento entre 30 y 60 km/h en las cuencas comparables</td>
+<td>Operación posible con evaluación local.</td>
 </tr>
 <tr class="odd">
-<td>Precipitación</td>
-<td>Alta, lluvia o nieve</td>
-<td>Nieve probable</td>
-</tr>
-<tr class="even">
-<td>Viento</td>
-<td>50 a 80 km/h frecuente</td>
-<td>Hasta 100 km/h en pasos expuestos</td>
-</tr>
-<tr class="odd">
-<td>Horas de luz</td>
-<td>~9 horas/día</td>
-<td>~9 horas/día</td>
-</tr>
-<tr class="even">
-<td>Amanecer / anochecer</td>
-<td>~09:00 / ~18:00</td>
-<td>Similar</td>
-</tr>
-<tr class="odd">
-<td>Nieve en cuencas altas</td>
-<td>Muy probable</td>
-<td>Cobertura alta</td>
+<td>Punta Arenas / Laredo</td>
+<td>Viento más favorable; nubosidad alta</td>
+<td>Mejor condición relativa para vuelo, con visibilidad condicionada por nubosidad.</td>
 </tr>
 </tbody>
 </table>
@@ -388,501 +352,63 @@ Table&nbsp;15.1: Condiciones climáticas esperadas para trabajo de terreno en ju
 </div>
 </section>
 <section id="sec-seguimiento-pronosticos" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="sec-seguimiento-pronosticos"><span class="header-section-number">15.2</span> Seguimiento de pronósticos</h2>
-<p>La revisión de pronóstico debe hacerse cada noche y actualizarse antes de salir. Para decisiones de dron, el viento observado en sitio prevalece sobre el pronóstico.</p>
-<div id="tbl-fuentes-pronostico-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fuentes-pronostico-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;15.2: Fuentes recomendadas para seguimiento climático y operativo.
-</figcaption>
-<div aria-describedby="tbl-fuentes-pronostico-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Fuente</th>
-<th>URL / App</th>
-<th>Resolución</th>
-<th>Uso principal</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Meteochile</td>
-<td><a href="https://www.meteochile.gob.cl" class="uri">https://www.meteochile.gob.cl</a></td>
-<td>Provincial</td>
-<td>Alertas oficiales</td>
-</tr>
-<tr class="even">
-<td>Windy</td>
-<td><a href="https://www.windy.com/?-53.197,-70.933,9" class="uri">https://www.windy.com/?-53.197,-70.933,9</a></td>
-<td>Alta resolución</td>
-<td>Viento, lluvia, nieve y ventanas horarias</td>
-</tr>
-<tr class="odd">
-<td>DJI Fly</td>
-<td>App DJI Fly</td>
-<td>Local</td>
-<td>Condiciones y restricciones de vuelo dron</td>
-</tr>
-<tr class="even">
-<td>DGAC / DMC</td>
-<td><a href="https://archivos.meteochile.gob.cl/portaldmc/metaer/metaer_wrf_estacion.php?codigo=PARENAS" class="uri">https://archivos.meteochile.gob.cl/portaldmc/metaer/metaer_wrf_estacion.php?codigo=PARENAS</a></td>
-<td>Provincial</td>
-<td>Temperatura, precipitación, viento y dirección del viento</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<section id="sec-registro-diario-pronostico" class="level3" data-number="15.2.1">
-<h3 data-number="15.2.1" class="anchored" data-anchor-id="sec-registro-diario-pronostico"><span class="header-section-number">15.2.1</span> Registro diario de pronóstico</h3>
+<h2 data-number="15.2" class="anchored" data-anchor-id="sec-seguimiento-pronosticos"><span class="header-section-number">15.2</span> Criterios de decisión</h2>
+<p>El pronóstico orienta la salida, pero la condición observada en el sitio prevalece. La decisión se toma combinando viento, visibilidad, precipitación, acceso, disponibilidad de luz y retorno seguro. Para la evidencia aérea se aplican además los criterios de <a href="vuelo_drone.html#sec-condiciones-minimas-vuelo-drone" class="quarto-xref"><span>Section 19.3</span></a>.</p>
 <div id="tbl-registro-pronostico-diario" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-registro-pronostico-diario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;15.3: Registro de pronóstico por jornada.
+Table&nbsp;15.2: Criterios de uso durante la campaña.
 </figcaption>
 <div aria-describedby="tbl-registro-pronostico-diario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Fecha</th>
-<th>Fuente</th>
-<th style="text-align: right;">T min °C</th>
-<th style="text-align: right;">T max °C</th>
-<th>Viento km/h</th>
-<th>Precipitación</th>
-<th>Ventana de vuelo</th>
+<th>Situación</th>
+<th>Decisión operativa</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>2026-06-15</td>
-<td><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
+<td>Acceso seguro y condiciones aéreas desfavorables</td>
+<td>Levantamiento terrestre sin vuelo de dron.</td>
 </tr>
 <tr class="even">
-<td>2026-06-16</td>
-<td><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
+<td>Viento, visibilidad o superficie insegura</td>
+<td>Ajustar el sitio, la ruta o interrumpir la visita.</td>
 </tr>
 <tr class="odd">
-<td>2026-06-17</td>
-<td><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td>2026-06-18</td>
-<td><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td>2026-06-19</td>
-<td><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
+<td>Restricción de ingreso o retorno sin margen</td>
+<td>No ingresar y registrar la causa en la ficha.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-</section>
 </section>
 <section id="sec-condiciones-acceso-cuenca" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="sec-condiciones-acceso-cuenca"><span class="header-section-number">15.3</span> Condiciones de acceso por cuenca</h2>
-<p>Esta tabla usa la cartera de cuencas seleccionadas de <a href="cuencas_seleccionadas.html#tbl-cuencas-seleccionadas-detalle" class="quarto-xref">Tabla&nbsp;<span>13.2</span></a>. Antes de cada salida se completa con el pronóstico específico de temperatura y viento, porque esas variables condicionan la seguridad del acceso y la posibilidad de vuelo de dron. Se asume uso de vehículo 4x4 durante toda la campaña.</p>
-<div id="tbl-condiciones-acceso-cuenca" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-condiciones-acceso-cuenca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;15.4: Condiciones de acceso por cuenca priorizada.
-</figcaption>
-<div aria-describedby="tbl-condiciones-acceso-cuenca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 10%">
-<col style="width: 13%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;">RID</th>
-<th>Sector</th>
-<th style="text-align: right;">Dist. base km</th>
-<th>Punto de acceso</th>
-<th>Tipo de vía</th>
-<th>T esperada °C</th>
-<th>Viento esperado km/h</th>
-<th>Cruce de agua</th>
-<th>Observaciones</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1885</td>
-<td>Norponiente</td>
-<td style="text-align: right;">38.3</td>
-<td>-52.79902, -71.04013</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2205</td>
-<td>Norponiente</td>
-<td style="text-align: right;">42.6</td>
-<td>-52.77871, -71.00823</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">4982</td>
-<td>Eje norte intermedio</td>
-<td style="text-align: right;">64.5</td>
-<td>-52.59760, -70.64358</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4996</td>
-<td>Eje norte intermedio</td>
-<td style="text-align: right;">65.1</td>
-<td>-52.61149, -70.55698</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">1886</td>
-<td>Norponiente</td>
-<td style="text-align: right;">40.3</td>
-<td>-52.80270, -70.97234</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">5257</td>
-<td>Norponiente</td>
-<td style="text-align: right;">51.8</td>
-<td>-52.69572, -70.87232</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5209</td>
-<td>Eje norte intermedio</td>
-<td style="text-align: right;">57.7</td>
-<td>-52.66689, -70.64540</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">5294</td>
-<td>Eje oriental</td>
-<td style="text-align: right;">100.1</td>
-<td>-52.49686, -69.88991</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5624</td>
-<td>Eje oriental</td>
-<td style="text-align: right;">101.9</td>
-<td>-52.49048, -69.88102</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">5048</td>
-<td>Eje oriental</td>
-<td style="text-align: right;">105.0</td>
-<td>-52.49928, -69.78303</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">1808</td>
-<td>Punta Arenas / Laredo</td>
-<td style="text-align: right;">13.1</td>
-<td>-53.15925, -71.06570</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">5258</td>
-<td>Eje norte intermedio</td>
-<td style="text-align: right;">55.2</td>
-<td>-52.66603, -70.68678</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3289</td>
-<td>Norponiente</td>
-<td style="text-align: right;">60.8</td>
-<td>-52.61627, -70.94212</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">5247</td>
-<td>Eje norte intermedio</td>
-<td style="text-align: right;">65.5</td>
-<td>-52.65109, -70.42263</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5263</td>
-<td>Eje oriental</td>
-<td style="text-align: right;">80.5</td>
-<td>-52.59156, -70.17194</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">5626</td>
-<td>Eje oriental</td>
-<td style="text-align: right;">106.1</td>
-<td>-52.48203, -69.79322</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5623</td>
-<td>Eje oriental</td>
-<td style="text-align: right;">106.1</td>
-<td>-52.47845, -69.83296</td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-<td><code>pendiente</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
+<h2 data-number="15.3" class="anchored" data-anchor-id="sec-condiciones-acceso-cuenca"><span class="header-section-number">15.3</span> Acceso y representatividad</h2>
+<p>La cartera de 17 cuencas y sus puntos de acceso se presenta en <a href="cuencas_seleccionadas.html#tbl-cuencas-seleccionadas-detalle" class="quarto-xref">Tabla&nbsp;<span>13.2</span></a>. La coordenada de acceso no equivale necesariamente al centro ni a la condición completa de la cuenca: muchas observaciones se realizaron desde bordes, caminos o lugares seguros de detención. Esta diferencia de escala se considera explícitamente al interpretar la validación (<a href="integracion_validacion.html#sec-discrepancias-mrct-terreno" class="quarto-xref"><span>Section 21.3</span></a>).</p>
 </section>
 <section id="sec-alertas-restricciones-acceso" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="sec-alertas-restricciones-acceso"><span class="header-section-number">15.4</span> Alertas y restricciones de acceso</h2>
-<div id="tbl-alertas-restricciones-terreno" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-alertas-restricciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;15.5: Alertas y restricciones relevantes para la campaña.
-</figcaption>
-<div aria-describedby="tbl-alertas-restricciones-terreno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Alerta o restricción</th>
-<th>Fuente</th>
-<th>Vigencia</th>
-<th>Impacto en campaña</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p>Antes de cada salida se debe verificar el estado de caminos, áreas protegidas y accesos con las instituciones o actores correspondientes:</p>
-<ul>
-<li>Vialidad Magallanes: <code>pendiente</code>;</li>
-<li>CONAF Magallanes: <code>pendiente</code>;</li>
-<li>propietarios, administradores o encargados locales, si aplica.</li>
-</ul>
+<h2 data-number="15.4" class="anchored" data-anchor-id="sec-alertas-restricciones-acceso"><span class="header-section-number">15.4</span> Alertas y restricciones</h2>
+<p>Las restricciones relevantes son aquellas que afectan la seguridad o la autorización de acceso: cierres de camino, áreas protegidas, predios privados, infraestructura sensible, visibilidad insuficiente y condiciones meteorológicas adversas. Se registran en la ficha de cuenca cuando condicionan el levantamiento.</p>
 </section>
 <section id="sec-criterios-cancelacion-terreno" class="level2" data-number="15.5">
 <h2 data-number="15.5" class="anchored" data-anchor-id="sec-criterios-cancelacion-terreno"><span class="header-section-number">15.5</span> Criterios de cancelación o postergación</h2>
-<p>La visita a una cuenca se cancela o posterga si se cumple cualquiera de estas condiciones:</p>
-<ul>
-<li>viento sostenido mayor a 60 km/h en el sitio;</li>
-<li>visibilidad menor a 100 m por niebla o nevada intensa;</li>
-<li>camino de acceso cerrado por Vialidad, CONAF u otra autoridad competente;</li>
-<li>temperatura menor a -15 °C;</li>
-<li>alerta meteorológica oficial activa para el sector;</li>
-<li>cruce de agua no seguro por crecida, hielo, profundidad o corriente;</li>
-<li>cualquier condición que impida retorno seguro a la base.</li>
-</ul>
-<p>Para el vuelo de dron aplican además los criterios específicos de <a href="vuelo_drone.html#sec-condiciones-minimas-vuelo-drone" class="quarto-xref"><span>Section 19.5</span></a>. Puede haber visita terrestre sin vuelo si el acceso es seguro pero el viento, la lluvia, la nieve o la visibilidad impiden operar el equipo.</p>
+<p>Una visita se interrumpe cuando el viento, la visibilidad, la superficie, el acceso o el retorno dejan de ser seguros. El vuelo de dron se suspende antes que la visita terrestre cuando no hay margen para controlar el equipo con seguridad. Esta separación evitó confundir una limitación de la evidencia aérea con una ausencia de observación territorial.</p>
 </section>
 <section id="sec-registro-condiciones-observadas" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="sec-registro-condiciones-observadas"><span class="header-section-number">15.6</span> Registro de condiciones observadas en campo</h2>
-<p>Esta tabla resume la condición real encontrada en cada cuenca. Debe completarse aunque la visita se suspenda, porque permite distinguir entre una cuenca no visitada por falta de tiempo y una cuenca no visitada por restricción climática o de acceso.</p>
-<div id="tbl-registro-condiciones-observadas" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-registro-condiciones-observadas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;15.6: Registro de condiciones observadas durante la campaña.
-</figcaption>
-<div aria-describedby="tbl-registro-condiciones-observadas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 16%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Fecha</th>
-<th>Cuenca / RID</th>
-<th style="text-align: right;">T °C</th>
-<th>Viento</th>
-<th>Precipitación</th>
-<th>Cobertura nieve</th>
-<th>Acceso real</th>
-<th>Dron posible</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td style="text-align: right;"><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Sí / No</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
+<h2 data-number="15.6" class="anchored" data-anchor-id="sec-registro-condiciones-observadas"><span class="header-section-number">15.6</span> Condiciones observadas y su uso</h2>
+<p>Las condiciones efectivas de las diez cuencas comparables —fecha, hora, viento, nubosidad y operación de dron— están consolidadas en <a href="resultados_terreno.html#tbl-condiciones-operativas-terreno" class="quarto-xref">Tabla&nbsp;<span>20.2</span></a>. En los resultados, estas variables se usan como metadatos para interpretar diferencias entre el IEO local y la señal <code>RES</code> anual; no forman parte del cálculo del índice.</p>
 </section>
 <section id="sec-decision-diaria-salida" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="sec-decision-diaria-salida"><span class="header-section-number">15.7</span> Decisión diaria de salida</h2>
-<p>Al cierre de cada jornada se deja definida una decisión preliminar para el día siguiente:</p>
-<div id="tbl-decision-diaria-salida" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-decision-diaria-salida-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;15.7: Decisión operativa diaria según pronóstico, accesos y seguridad.
-</figcaption>
-<div aria-describedby="tbl-decision-diaria-salida-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Fecha salida</th>
-<th>Cuencas objetivo</th>
-<th>Cuencas alternativa</th>
-<th>Riesgo principal</th>
-<th>Decisión</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td><code>pendiente</code></td>
-<td>Salir / Postergar / Cambiar ruta</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
+<h2 data-number="15.7" class="anchored" data-anchor-id="sec-decision-diaria-salida"><span class="header-section-number">15.7</span> Decisión de salida</h2>
+<p>La decisión diaria combinó prioridad técnica, condiciones del sitio y margen de seguridad. Por eso la campaña se interpreta como una cartera de observación adaptativa y no como una ruta rígida: se priorizó la calidad y trazabilidad del registro sobre el número de cuencas visitadas.</p>
 
 
 </section>
