@@ -280,7 +280,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vuelo_drone.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Planificación Vuelos Drone</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Operación de Dron</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -360,7 +360,7 @@ window.Quarto = {
 </header>
 
 
-<p>Este capítulo actualiza la selección de cuencas candidatas para trabajo de terreno mediante el análisis de <strong>jerk</strong> de la Matriz de Resiliencia Climática Territorial. El objetivo es detectar cambios abruptos en la trayectoria ecosistémica y concentrar la priorización en el entorno operacional de Punta Arenas.</p>
+<p>Este capítulo presenta una preevaluación analítica de cuencas candidatas mediante el análisis de <strong>jerk</strong> de la Matriz de Resiliencia Climática Territorial. Su objetivo es detectar cambios abruptos en la trayectoria ecosistémica y formular preguntas de validación para el entorno operacional de Punta Arenas.</p>
 <p>La versión actual incorpora una mejora importante: además de seleccionar cuencas para validación general, agrega zonas de búsqueda asociadas a <strong>puertos y terminales estratégicos para hidrógeno verde</strong>. Esta capa permite observar cuencas próximas a infraestructura relevante para la transformación energética regional, donde eventuales nuevas intervenciones podrían interactuar con condiciones ecosistémicas ya inestables.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -372,7 +372,7 @@ Alcance de la selección
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>La lista de cuencas prioritarias es una <strong>preselección técnica</strong>. No equivale a una ruta final de terreno ni a una evaluación de impacto ambiental. Antes de definir una campaña deben revisarse accesos reales, permisos, seguridad, clima, propiedad, restricciones operativas y conocimiento local.</p>
+<p>La lista de cuencas prioritarias es una <strong>preselección técnica</strong>. No equivale a una ruta final de terreno ni a una evaluación de impacto ambiental. En este libro, la cartera operativa de la campaña se presenta por separado en <a href="cuencas_seleccionadas.html#sec-tabla-cuencas-seleccionadas" class="quarto-xref"><span>Section 13.3</span></a>; por ello, el ranking de jerk debe leerse como una capa de análisis y no como el listado de sitios efectivamente levantados.</p>
 </div>
 </div>
 <section id="sec-pregunta-jerk-terreno" class="level2" data-number="12.1">
@@ -584,7 +584,7 @@ Table&nbsp;12.3: Esquema de tablas creado para sostener consultas posteriores.
 </figure>
 </div>
 </section>
-<section id="sec-control-calidad-jerk" class="level2" data-number="12.4">
+<section id="sec-control-calidad-jerk" class="level2 page-columns page-full" data-number="12.4">
 <h2 data-number="12.4" class="anchored" data-anchor-id="sec-control-calidad-jerk"><span class="header-section-number">12.4</span> Control de calidad y cobertura</h2>
 <p>Antes de priorizar cuencas se revisó la disponibilidad anual de jerk. La tabla distingue el total regional de cuencas, las cuencas con jerk válido y el porcentaje de cobertura.</p>
 <div id="tbl-disponibilidad-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -687,6 +687,16 @@ Table&nbsp;12.4: Disponibilidad regional de jerk en la serie MRCT 2013-2025.
 </figure>
 </div>
 <p>La baja cobertura relativa obliga a usar percentiles con cautela. La ausencia de jerk válido en una cuenca no implica estabilidad ecosistémica; puede reflejar falta de datos suficientes, calidad de observación, restricciones de cálculo o problemas de disponibilidad en los insumos anuales.</p>
+<div id="fig-disponibilidad-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-disponibilidad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_12_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-disponibilidad-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.3: Disponibilidad de jerk por año entre 2020 y 2025.
+</figcaption>
+</figure>
+</div>
 <p>La distribución completa de clases en el panel es:</p>
 <div id="tbl-clases-jerk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -725,6 +735,16 @@ Table&nbsp;12.5: Distribución de clases de jerk en el panel MRCT.
 </tbody>
 </table>
 </div>
+</figure>
+</div>
+<div id="fig-distribucion-anual-jerk" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-distribucion-anual-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_18_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-distribucion-anual-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.4: Distribución anual de magnitud de jerk para percentiles iguales o superiores a 50%.
+</figcaption>
 </figure>
 </div>
 </section>
@@ -865,7 +885,7 @@ Table&nbsp;12.6: Diez eventos regionales de mayor magnitud absoluta de jerk.
 <img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_11_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-top-eventos-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.3: Eventos regionales de mayor magnitud absoluta de jerk en la serie MRCT.
+Figure&nbsp;12.5: Eventos regionales de mayor magnitud absoluta de jerk en la serie MRCT.
 </figcaption>
 </figure>
 </div>
@@ -875,7 +895,7 @@ Figure&nbsp;12.3: Eventos regionales de mayor magnitud absoluta de jerk en la se
 <img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_11_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-eventos-regionales-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.4: Eventos regionales de jerk iguales o superiores al percentil 95. El mapa entrega contexto espacial antes de filtrar por el entorno operacional de Punta Arenas.
+Figure&nbsp;12.6: Eventos regionales de jerk iguales o superiores al percentil 95. El mapa entrega contexto espacial antes de filtrar por el entorno operacional de Punta Arenas.
 </figcaption>
 </figure>
 </div>
@@ -951,7 +971,7 @@ Table&nbsp;12.7: Exploración de parámetros para el buffer operativo de Punta A
 </div>
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-ajuste-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.5: Lógica de diagnóstico del buffer operativo y ajuste de parámetros.
+Figure&nbsp;12.7: Lógica de diagnóstico del buffer operativo y ajuste de parámetros.
 </figcaption>
 </figure>
 </div>
@@ -963,7 +983,7 @@ Figure&nbsp;12.5: Lógica de diagnóstico del buffer operativo y ajuste de pará
 <img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_14_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.6: Cuencas calificadas dentro del entorno operacional de Punta Arenas. La visualización se concentra en el área de análisis y no en toda la región.
+Figure&nbsp;12.8: Cuencas calificadas dentro del entorno operacional de Punta Arenas. La visualización se concentra en el área de análisis y no en toda la región.
 </figcaption>
 </figure>
 </div>
@@ -1036,7 +1056,7 @@ Table&nbsp;12.8: Componentes del puntaje compuesto de prioridad.
 <img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_17_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-pscore-buffer-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.7: Distribución espacial del <code>P_score</code> dentro del buffer operativo de Punta Arenas.
+Figure&nbsp;12.9: Distribución espacial del <code>P_score</code> dentro del buffer operativo de Punta Arenas.
 </figcaption>
 </figure>
 </div>
@@ -1222,7 +1242,7 @@ Table&nbsp;12.9: Diez cuencas candidatas para validación en terreno según el f
 <img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_20_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-top10-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.8: Diez cuencas prioritarias dentro del entorno operacional de Punta Arenas, numeradas según <code>P_score</code>.
+Figure&nbsp;12.10: Diez cuencas prioritarias dentro del entorno operacional de Punta Arenas, numeradas según <code>P_score</code>.
 </figcaption>
 </figure>
 </div>
@@ -1236,7 +1256,7 @@ Figure&nbsp;12.8: Diez cuencas prioritarias dentro del entorno operacional de Pu
 <img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_21_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-series-top3-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.9: Series temporales de las tres cuencas con mayor <code>P_score</code>. La línea vertical roja indica el año crítico de jerk.
+Figure&nbsp;12.11: Series temporales de las tres cuencas con mayor <code>P_score</code>. La línea vertical roja indica el año crítico de jerk.
 </figcaption>
 </figure>
 </div>
@@ -1493,22 +1513,15 @@ Table&nbsp;12.12: Primeras cuencas calificadas por terminal de hidrógeno verde.
 <img src="images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_25_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-terminales-h2-jerk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.10: Cuencas con jerk elevado en buffers de 50 km alrededor de terminales estratégicos de hidrógeno verde.
+Figure&nbsp;12.12: Cuencas con jerk elevado en buffers de 50 km alrededor de terminales estratégicos de hidrógeno verde.
 </figcaption>
 </figure>
 </div>
 </section>
 <section id="sec-uso-terreno-jerk" class="level2" data-number="12.11">
 <h2 data-number="12.11" class="anchored" data-anchor-id="sec-uso-terreno-jerk"><span class="header-section-number">12.11</span> Uso en planificación de terreno</h2>
-<p>La selección por jerk debe alimentar una reunión técnica y territorial antes de definir rutas. En esa revisión se recomienda trabajar con cuatro listas:</p>
-<ul>
-<li><strong>lista prioritaria</strong>, con las diez cuencas del ranking del buffer de Punta Arenas;</li>
-<li><strong>lista logística</strong>, con cuencas cercanas o visitables dentro del mismo recorrido;</li>
-<li><strong>lista estratégica H2</strong>, con cuencas próximas a Muelle Laredo, Cabo Negro y San Gregorio;</li>
-<li><strong>lista de reemplazo</strong>, con cuencas alternativas por si falla el acceso, el clima o el permiso.</li>
-</ul>
-<p>La reunión debe revisar caminos, huellas, portones, predios, restricciones de propiedad, áreas protegidas, infraestructura, posibilidad de vuelo de dron, puntos seguros de medición, pertinencia territorial y antecedentes locales de incendios, inundaciones, sequías, obras, ganadería, extracción, cortes de camino o nieve persistente.</p>
-<p>El producto esperado no es reemplazar el ranking, sino convertirlo en un plan de campaña realista: qué cuencas se visitan, cuáles quedan como respaldo, qué hipótesis se validan y qué observaciones se necesitan en cada sitio.</p>
+<p>El jerk aporta una pregunta territorial, no una ruta fija. Para cada cuenca que se considere, el análisis permite revisar el tipo de evento, su año crítico, el valor de <code>RES</code> y el contexto espacial. Esa lectura se contrasta con acceso, seguridad, clima y representatividad antes de incorporarla a una cartera de observación.</p>
+<p>La campaña documentada en este libro utilizó su propia cartera de 17 cuencas (<a href="cuencas_seleccionadas.html#tbl-cuencas-seleccionadas-detalle" class="quarto-xref">Tabla&nbsp;<span>13.2</span></a>). Mantener ambas listas separadas hace visible la diferencia entre un ranking exploratorio y los sitios que finalmente ofrecieron condiciones para un levantamiento comparable.</p>
 </section>
 <section id="sec-fichas-jerk" class="level2" data-number="12.12">
 <h2 data-number="12.12" class="anchored" data-anchor-id="sec-fichas-jerk"><span class="header-section-number">12.12</span> Fichas de terreno derivadas</h2>
@@ -1580,8 +1593,7 @@ Table&nbsp;12.13: Productos exportados por el notebook actualizado.
 </section>
 <section id="sec-cierre-jerk" class="level2" data-number="12.15">
 <h2 data-number="12.15" class="anchored" data-anchor-id="sec-cierre-jerk"><span class="header-section-number">12.15</span> Cierre operativo</h2>
-<p>La selección actualizada convierte el panel MRCT en una agenda preliminar de validación territorial. El procesamiento identificó eventos abruptos, construyó una base consultable, priorizó diez cuencas del entorno operacional de Punta Arenas y agregó una lectura estratégica para terminales vinculados al hidrógeno verde.</p>
-<p>El siguiente paso no es salir directamente a esas diez cuencas ni asumir impacto por proximidad a infraestructura. El paso correcto es someter la lista a revisión aplicada: accesibilidad real, conversación con actores locales, evaluación de rutas, permisos, clima, seguridad, pertinencia territorial y contraste con antecedentes de proyectos energéticos. Con esa revisión, el ranking puede transformarse en un plan de terreno con sitios principales, sitios alternativos y preguntas de validación claras.</p>
+<p>El análisis de jerk convierte la serie MRCT en una herramienta de búsqueda: identifica rupturas temporales, mantiene una base consultable y añade contexto territorial para terminales estratégicos. Su aporte al libro es explicar dónde surgen preguntas de validación; los resultados de las visitas y su contraste con <code>RES</code> se reportan en <a href="resultados_terreno.html#sec-resultados-por-cuenca-terreno" class="quarto-xref"><span>Section 20.3</span></a>.</p>
 
 
 </section>

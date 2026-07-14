@@ -316,30 +316,12 @@ Las fichas siguientes están diseñadas para consulta rápida. La coordenada de 
 
 :::
 
-## Orden de visita propuesto {#sec-orden-visita-cuencas-seleccionadas}
+## Cobertura lograda {#sec-orden-visita-cuencas-seleccionadas}
 
-La ventana real de campaña es corta: llegada a Punta Arenas el **15 de junio**, dos días completos de trabajo el **16 y 17 de junio**, y medio día operativo el **18 de junio** antes del retorno en la tarde. En junio la luz disponible es reducida, por lo que el plan debe privilegiar pocas cuencas por jornada, sectores agrupados y retorno con margen suficiente para respaldo de datos.
+La cartera funcionó como un marco de priorización adaptable. La campaña levantó 13 estaciones: 10 cuencas comparables con `RES` y tres puntos urbanos o periurbanos de contraste. Las siete cuencas de la cartera que no se midieron en esta ventana se conservan en la tabla de selección como parte del universo de análisis, sin alterar la lectura de los resultados.
 
-El orden preliminar agrupa cuencas por sector para reducir traslados y mantener holgura frente a viento, nieve, barro o permisos. La cartera completa tiene 17 cuencas, pero la campaña debe tratarla como una lista principal más reemplazos: en condiciones normales se recomienda levantar **4 a 6 cuencas con buen estándar**, no intentar visitar todas.
+La cobertura efectiva y la lista de cuencas comparables se presentan en @sec-resumen-campana-terreno. Esta separación evita confundir la selección inicial con las observaciones finalmente disponibles.
 
-| Día | Cuenca(s) | Ruta | Salida estimada | Retorno estimado |
-|---|---|---|---|---|
-| 15 jun. | Sin levantamiento formal; setup y revisión offline | Llegada, retiro de vehículo, compra logística, carga de baterías y validación de rutas | PM | Noche |
-| 16 jun. | RID 1808 + RID 1885/1886 o RID 2205 | Punta Arenas / Laredo y eje norponiente cercano; priorizar una cuenca estratégica y una o dos de colapso potencial | 09:00 | 17:00 |
-| 17 jun. | RID 4982, 4996 y/o 5209; alternativa RID 5258/5247 | Eje norte intermedio; seleccionar máximo 2 cuencas profundas o 3 visitas rápidas si el clima acompaña | 08:30 | 17:00 |
-| 18 jun. AM | Cuenca incompleta o reemplazo cercano: RID 1808, 5257, 3289 o cierre fotográfico | Medio día operativo cerca de Punta Arenas; evitar rutas largas por retorno en la tarde | 08:30 | 12:30 |
-| 18 jun. PM | Cierre de campaña | Respaldo final, revisión de integridad de datos, devolución logística y traslado a aeropuerto | 13:00 | Vuelo tarde |
+## Criterios de salida por cuenca {#sec-control-previo-cuencas-seleccionadas}
 
-: Orden preliminar de visita ajustado a la ventana 15-18 de junio. {#tbl-orden-visita-cuencas-seleccionadas}
-
-## Control previo por cuenca {#sec-control-previo-cuencas-seleccionadas}
-
-Antes de confirmar una cuenca para la jornada, verificar:
-
-- punto de acceso cargado en dispositivo offline;
-- ruta vehicular y punto seguro de detención;
-- pronóstico de viento para vuelo de dron;
-- permisos o restricciones de ingreso;
-- objetivo de validación MRCT de la cuenca;
-- plan de respaldo si el sitio no es accesible;
-- batería, tarjetas SD, GPS y planilla IEO preparados con `RID`.
+La decisión de visitar una cuenca combinó punto de acceso offline, ruta y detención segura, condiciones de viento, restricciones de ingreso, objetivo MRCT y disponibilidad de energía, GPS y ficha asociada al `RID`. Estos criterios explican por qué la cartera se gestionó por sectores y no como una secuencia fija.

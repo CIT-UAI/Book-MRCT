@@ -9,6 +9,8 @@ El resultado es una metodología que permite observar el territorio como un sist
 
 El cierre metodológico del libro debe leerse con una precaución central: la MRCT mide patrones observables y relaciones operativas dentro de un marco estadístico definido. No reemplaza la validación ecológica de terreno, ni identifica causalidad por sí sola. Su valor está en ordenar evidencia territorial, detectar contrastes, priorizar preguntas y apoyar decisiones con una base reproducible.
 
+La campaña de terreno Magallanes 2026 permite cerrar esa precaución con evidencia empírica. El contraste entre el Índice de Estado Observado (IEO) y la resiliencia operativa `RES` mostró una asociación alta y significativa en las cuencas comparables ($r = 0{,}7869$, $R^2 = 0{,}6192$, $p = 0{,}0069$). Este resultado no convierte a la MRCT en una verdad autosuficiente, pero sí respalda su uso como instrumento de priorización: las cuencas que el modelo identifica como más presionadas tendieron a mostrar menor condición observada en vegetación, humedad, perturbación y fragmentación.
+
 ::: {.callout-note}
 ## Para tomadores de decisión
 
@@ -73,6 +75,7 @@ Cada capítulo aporta una pieza de la arquitectura metodológica. La utilidad de
 | [Integración espacial](integracion_espacial.qmd#sec-dominio-global-local) | $D_{local}$ y $DIV$ | Incorpora vecindad y coherencia territorial. |
 | [Sensibilidad del sistema](sensibilidad.qmd#sec-forzantes-climaticos) | $SENS$ | Estima respuesta frente a aridez, albedo y temperatura. |
 | [Potencial de transición y resiliencia](pt_resiliencia.qmd#sec-potencial-transicion) | $PT$, $RES$, `RES_STATE`, `RES_TYPE` y `RES_GRAD` | Sintetiza transición y resiliencia operativa. |
+| [Trabajo en terreno](trabajo_terreno.qmd) | IEO, fichas, fotografías, vuelos de dron y contraste IEO-`RES` | Valida empíricamente la señal MRCT y documenta coherencias, discrepancias y límites de interpretación. |
 | [Conclusiones](conclusiones.qmd#sec-que-construye-mrct) | Síntesis metodológica y operativa | Ordena alcances, límites y recomendaciones de lectura. |
 
 : Relación entre capítulos, productos y función metodológica. {#tbl-capitulos-productos}
@@ -88,6 +91,8 @@ La integración territorial debe usarse para separar señales locales de patrone
 La sensibilidad debe interpretarse como reactividad estadística, no como causalidad cerrada. Su función principal es identificar cuencas donde las variaciones de aridez, albedo y temperatura se asocian con cambios importantes en el dominio ecosistémico.
 
 Finalmente, $PT$ y $RES$ deben usarse como síntesis operativa. Son útiles para ordenar prioridades, comparar cuencas y comunicar resultados en escala común. Sin embargo, siempre deben volver a leerse junto con sus componentes: $D$, $V$, $SENS$ y $D_{local}$.
+
+La validación de terreno agrega una regla práctica: una discrepancia entre `RES` e IEO no debe cerrarse de inmediato como error. Puede indicar diferencia de escala, observación invernal, punto de acceso poco representativo, heterogeneidad interna o una señal temporal que el ojo no captura en una visita breve. Por eso las inconsistencias parciales son parte del aprendizaje metodológico: señalan dónde revisar series, imágenes, fichas y contexto territorial.
 
 ## Aplicaciones territoriales {#sec-aplicaciones-territoriales}
 
@@ -117,5 +122,7 @@ Por esta razón, la MRCT puede funcionar como un puente entre monitoreo ambienta
 ## Cierre {#sec-cierre}
 
 La MRCT propone una forma ordenada de transformar observaciones satelitales en lectura territorial. Su fortaleza está en combinar evidencia multivariada, comparación histórica, dinámica temporal, contexto espacial y sensibilidad climática dentro de un mismo flujo.
+
+La campaña de Magallanes muestra que ese flujo no queda encerrado en gabinete. Bajo condiciones invernales exigentes, con viento, nubosidad, nieve y restricciones de acceso, la señal satelital mantuvo una relación significativa con la observación directa. Las coherencias fortalecen la confianza en el modelo; las inconsistencias parciales delimitan mejor su uso y evitan lecturas simplistas.
 
 Como toda herramienta de modelación, su utilidad depende de una lectura disciplinada. Los mapas y métricas no deben interpretarse como verdades aisladas, sino como señales organizadas para orientar análisis, priorización y conversación técnica. En ese sentido, la MRCT no sustituye el juicio experto ni el trabajo de terreno; los hace más focalizados, trazables y comparables.

@@ -1,219 +1,67 @@
 ---
-title: "Planificación Vuelos Drone"
-subtitle: "Orientación operativa para Terreno Magallanes 2026"
+title: "Operación de Dron"
+subtitle: "Criterios de seguridad y trazabilidad para Magallanes 2026"
 ---
 
-Esta página orienta el uso del dron durante la campaña Terreno Magallanes 2026. Su función es ordenar la planificación previa, la evaluación de condiciones mínimas, el registro de vuelos realizados y la trazabilidad de archivos asociados a cada cuenca. Debe usarse junto con la ficha de cuenca de @sec-ficha-tipo-cuenca, el protocolo de vuelos de @sec-vuelos-dron-terreno y el checklist de equipamiento de @sec-drone-equipamiento-terreno.
+El dron fue una fuente complementaria de evidencia territorial. Esta página concentra la decisión de vuelo, el registro mínimo y la organización de archivos; no repite el protocolo IEO ni intenta reconstruir planes de vuelo sin datos observados.
 
 ::: {.callout-warning}
 ## Criterio de seguridad
 
-El vuelo se realiza sólo si la zona está habilitada, el viento permite control seguro, existe visibilidad suficiente y el piloto mantiene línea visual directa. Ante duda normativa, climática o de seguridad, se cancela el vuelo y se registra la causa en la ficha de terreno.
+Se vuela sólo con visibilidad suficiente, control seguro del equipo, línea visual directa y autorización aplicable al sitio. Ante duda normativa, climática o de seguridad, se suspende el vuelo y la visita puede continuar con evidencia terrestre.
 :::
 
 ## Equipo {#sec-equipo-vuelo-drone}
 
-| Item | Detalle |
+| Recurso | Especificación de campaña |
 |---|---|
 | Modelo | DJI Mini 3 |
-| Peso | 249 g |
 | Baterías disponibles | 3 |
-| Autonomía por batería | ~38 min en condiciones normales |
-| Autonomía en frío (< 5°C) | ~25-30 min estimado |
-| Resolución foto | 12 MP |
-| Resolución video | 4K 30 fps |
+| Registro | Fotografía y video de apoyo a la observación |
+| Respaldo | Copia al cierre de cada jornada antes de reutilizar la tarjeta |
 
-: Equipo base para vuelos de dron en terreno. {#tbl-equipo-vuelo-drone}
+: Equipo base para el registro aéreo. {#tbl-equipo-vuelo-drone}
 
-::: {.callout-warning}
-## Baterías en frío
+## Verificación de sitio y condiciones {#sec-normativa-dgac-drone}
 
-A temperatura bajo 0°C, precalentar baterías en bolsillo interno o bolso térmico al menos 10 min antes de cada vuelo. No despegar con batería fría si la app DJI Fly muestra advertencia de temperatura o rendimiento.
-:::
+Antes de despegar se revisan las restricciones aplicables al lugar de operación, incluidos espacios protegidos, predios privados, infraestructura sensible, aeródromos y restricciones temporales. La condición local se evalúa junto con la normativa vigente y con la información de la aplicación de vuelo; esta verificación se realiza para cada sitio, no se infiere a partir de la cuenca.
 
-## Normativa DGAC Chile {#sec-normativa-dgac-drone}
+## Condiciones mínimas para volar {#sec-condiciones-minimas-vuelo-drone}
 
-La tabla siguiente funciona como control operativo previo. Debe actualizarse con la normativa vigente de DGAC Chile, las restricciones activas en DJI Fly y las autorizaciones específicas del sitio.
-
-| Requisito | Estado | Observación |
-|---|---|---|
-| Registro operador drone | ☐ Verificar | DJI Mini 3 (< 250 g): confirmar si aplica exención o registro según uso y zona de operación. |
-| Autorización zonas especiales | ☐ Verificar | Magallanes: revisar parques nacionales, áreas CONAF, predios privados y zonas con restricción local. |
-| Seguro responsabilidad civil | ☐ Verificar | `pendiente` |
-| Distancia mínima aeropuertos | ☐ Verificar | Verificar radio y restricciones asociadas al Aeropuerto Presidente Carlos Ibáñez del Campo y aeródromos cercanos. |
-| Horario vuelo | Sólo diurno | Amanecer-anochecer, con visibilidad suficiente. |
-| Altura máxima | 120 m AGL | Mantener límite operativo salvo autorización especial aplicable. |
-| Zonas prohibidas | ☐ Verificar | Áreas militares, infraestructura crítica, CONAF, parques, aeródromos y restricciones temporales. |
-
-: Control normativo preliminar para vuelos de dron. {#tbl-normativa-dgac-drone}
-
-::: {.callout-warning}
-## Verificación antes de despegar
-
-Consultar el mapa de zonas en DJI Fly antes de cada vuelo. Verificar si la cuenca seleccionada está dentro de zona restringida, parque, área CONAF, zona aeroportuaria, predio privado o área con restricción temporal.
-:::
-
-## Plan de Vuelo por Cuenca {#sec-plan-vuelo-por-cuenca}
-
-Completar una ficha por cada cuenca con vuelo planificado. El punto de despegue debe elegirse desde un lugar seguro, con visibilidad del dron, distancia prudente a caminos, personas, animales, cables, antenas y superficies inestables.
-
-### Cuenca RID 1885 {#sec-plan-vuelo-rid-1885}
-
-| Campo | Valor |
+| Condición | Criterio de operación |
 |---|---|
-| Fecha vuelo | `pendiente` |
-| Coordenadas punto despegue | `pendiente` |
-| Altitud terreno | `pendiente` m s.n.m. |
-| Altura vuelo planificada | `pendiente` m AGL |
-| Tipo vuelo | Nadir / Oblicuo / 360° / Manual |
-| Área de cobertura | `pendiente` ha |
-| Duración estimada | `pendiente` min |
-| Batería asignada | `pendiente` |
-| Objetivo principal | `pendiente` |
-| Restricciones zona | `pendiente` |
-| Estado | ⏳ Pendiente |
+| Viento | Debe permitir control estable y conservar margen de seguridad. |
+| Visibilidad | Debe permitir mantener línea visual directa y distinguir el entorno. |
+| Precipitación | No se opera con lluvia o nieve activa. |
+| Temperatura y batería | Baterías protegidas del frío, sin advertencias de rendimiento. |
+| Sitio | Despegue y retorno desde una superficie estable, alejada de personas, vehículos y obstáculos. |
 
-: Plan preliminar de vuelo para cuenca RID 1885. {#tbl-plan-vuelo-rid-1885}
+: Condiciones mínimas para autorizar evidencia aérea. {#tbl-condiciones-minimas-vuelo-drone}
 
-### Cuenca RID 2205 {#sec-plan-vuelo-rid-2205}
+En la campaña, el viento fue el factor más restrictivo. La condición de vuelo de cada cuenca comparable se reporta en @tbl-condiciones-operativas-terreno; `RID` 5624 presentó la mayor dificultad para obtener imagen aérea estable.
 
-| Campo | Valor |
-|---|---|
-| Fecha vuelo | `pendiente` |
-| Coordenadas punto despegue | `pendiente` |
-| Altitud terreno | `pendiente` m s.n.m. |
-| Altura vuelo planificada | `pendiente` m AGL |
-| Tipo vuelo | Nadir / Oblicuo / 360° / Manual |
-| Área de cobertura | `pendiente` ha |
-| Duración estimada | `pendiente` min |
-| Batería asignada | `pendiente` |
-| Objetivo principal | `pendiente` |
-| Restricciones zona | `pendiente` |
-| Estado | ⏳ Pendiente |
+## Secuencia de vuelo {#sec-plan-vuelo-por-cuenca}
 
-: Plan preliminar de vuelo para cuenca RID 2205. {#tbl-plan-vuelo-rid-2205}
+1. Identificar el `RID`, objetivo de observación y punto de despegue seguro.
+2. Evaluar viento, visibilidad, batería, memoria y restricciones del sitio.
+3. Definir punto de retorno y comunicar el inicio de la operación al equipo.
+4. Capturar sólo la evidencia necesaria: vista cenital, panorámica, oblicuas o detalles de agua, nieve, cobertura, erosión o intervención.
+5. Revisar el archivo antes de abandonar el sitio y registrar cualquier incidencia en la ficha de cuenca.
 
-### Cuenca RID 4982 {#sec-plan-vuelo-rid-4982}
+## Registro de evidencia aérea {#sec-registro-vuelos-realizados}
 
-| Campo | Valor |
-|---|---|
-| Fecha vuelo | `pendiente` |
-| Coordenadas punto despegue | `pendiente` |
-| Altitud terreno | `pendiente` m s.n.m. |
-| Altura vuelo planificada | `pendiente` m AGL |
-| Tipo vuelo | Nadir / Oblicuo / 360° / Manual |
-| Área de cobertura | `pendiente` ha |
-| Duración estimada | `pendiente` min |
-| Batería asignada | `pendiente` |
-| Objetivo principal | `pendiente` |
-| Restricciones zona | `pendiente` |
-| Estado | ⏳ Pendiente |
+El registro de cada operación vincula `RID`, fecha, hora, punto de despegue, duración, condición de viento y archivos generados. Cuando el vuelo no es seguro, se registra la causa y se refuerza la evidencia terrestre mediante fotografías y puntos IEO. Esta regla evita que la falta de video se interprete como falta de observación.
 
-: Plan preliminar de vuelo para cuenca RID 4982. {#tbl-plan-vuelo-rid-4982}
-
-### Cuenca RID 4996 {#sec-plan-vuelo-rid-4996}
-
-| Campo | Valor |
-|---|---|
-| Fecha vuelo | `pendiente` |
-| Coordenadas punto despegue | `pendiente` |
-| Altitud terreno | `pendiente` m s.n.m. |
-| Altura vuelo planificada | `pendiente` m AGL |
-| Tipo vuelo | Nadir / Oblicuo / 360° / Manual |
-| Área de cobertura | `pendiente` ha |
-| Duración estimada | `pendiente` min |
-| Batería asignada | `pendiente` |
-| Objetivo principal | `pendiente` |
-| Restricciones zona | `pendiente` |
-| Estado | ⏳ Pendiente |
-
-: Plan preliminar de vuelo para cuenca RID 4996. {#tbl-plan-vuelo-rid-4996}
-
-### Cuenca RID 1886 {#sec-plan-vuelo-rid-1886}
-
-| Campo | Valor |
-|---|---|
-| Fecha vuelo | `pendiente` |
-| Coordenadas punto despegue | `pendiente` |
-| Altitud terreno | `pendiente` m s.n.m. |
-| Altura vuelo planificada | `pendiente` m AGL |
-| Tipo vuelo | Nadir / Oblicuo / 360° / Manual |
-| Área de cobertura | `pendiente` ha |
-| Duración estimada | `pendiente` min |
-| Batería asignada | `pendiente` |
-| Objetivo principal | `pendiente` |
-| Restricciones zona | `pendiente` |
-| Estado | ⏳ Pendiente |
-
-: Plan preliminar de vuelo para cuenca RID 1886. {#tbl-plan-vuelo-rid-1886}
-
-## Registro de Vuelos Realizados {#sec-registro-vuelos-realizados}
-
-| N° | Cuenca | Fecha | Hora | Altura | Bat inicio % | Bat fin % | Duración | Archivos | Incidencias |
-|---:|---|---|---|---|---:|---:|---|---|---|
-| 1 | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` |
-| 2 | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` | `pendiente` |
-
-: Registro mínimo de vuelos efectivamente realizados. {#tbl-registro-vuelos-realizados}
-
-## Condiciones Mínimas para Volar {#sec-condiciones-minimas-vuelo-drone}
-
-| Condición | Mínimo aceptable |
-|---|---|
-| Viento | < 40 km/h, manteniendo margen respecto del límite operacional del equipo. |
-| Visibilidad | Sin niebla densa, mínimo 500 m. |
-| Temperatura | > -10°C, con baterías precalentadas y sin advertencias de temperatura. |
-| Lluvia | No volar con lluvia activa. |
-| Nieve activa | No volar con nieve activa. |
-| Luz | Vuelo diurno y con contraste suficiente para mantener línea visual. |
-
-: Condiciones mínimas para autorizar un vuelo de dron. {#tbl-condiciones-minimas-vuelo-drone}
-
-::: {.callout-note}
-## Ventanas de viento
-
-En Magallanes durante junio son frecuentes los vientos fuertes. Planificar ventanas de vuelo en horas de mañana cuando el pronóstico y la medición en sitio indiquen menor viento, y cancelar si las ráfagas superan el umbral operativo definido.
-:::
-
-## Checklist Pre-Vuelo {#sec-checklist-pre-vuelo-drone}
-
-- [ ] Verificar zona en DJI Fly y restricciones activas.
-- [ ] Confirmar permisos locales, CONAF/parques o predio privado si aplica.
-- [ ] Batería dron > 85%.
-- [ ] Batería control > 50%.
-- [ ] Memoria SD disponible y con espacio suficiente.
-- [ ] Hélices sin daño.
-- [ ] Calibrar brújula sólo si la app lo solicita.
-- [ ] Definir punto de retorno home.
-- [ ] Verificar viento con anemómetro.
-- [ ] Confirmar visibilidad y línea visual.
-- [ ] Informar al equipo inicio de vuelo.
-
-## Checklist Post-Vuelo {#sec-checklist-post-vuelo-drone}
-
-- [ ] Verificar grabación completa en SD.
-- [ ] Revisar si las imágenes cubren el objetivo de observación.
-- [ ] Copiar archivos a laptop al cierre de jornada.
-- [ ] Respaldar archivos en disco externo.
-- [ ] Cargar batería usada.
-- [ ] Registrar vuelo en @tbl-registro-vuelos-realizados.
-- [ ] Registrar incidencias, cancelaciones o restricciones en la ficha de cuenca.
-
-## Nomenclatura de Archivos {#sec-nomenclatura-archivos-drone}
-
-Formato:
+## Nomenclatura de archivos {#sec-nomenclatura-archivos-drone}
 
 ```text
-RID_YYYYMMDD_DXX_tipo.mp4
-RID_YYYYMMDD_DXX_tipo.jpg
+RID_YYYYMMDD_DXX_tipo.ext
 ```
 
-Donde:
-
-- `RID` = identificador de cuenca, por ejemplo `RID1885`.
-- `YYYYMMDD` = fecha del vuelo.
-- `DXX` = número de vuelo de dron del día, por ejemplo `D01`, `D02`.
-- `tipo` = `nadir`, `panorama`, `oblicuo`, `360` o `foto`.
+- `RID`: identificador de la cuenca, por ejemplo `RID1885`.
+- `YYYYMMDD`: fecha del registro.
+- `DXX`: secuencia de vuelo del día, por ejemplo `D01`.
+- `tipo`: `nadir`, `panorama`, `oblicuo`, `360` o `foto`.
 
 Ejemplos:
 
@@ -222,4 +70,4 @@ RID1885_20260616_D01_nadir.mp4
 RID1885_20260616_D01_oblicuo.jpg
 ```
 
-La nomenclatura debe mantenerse consistente con el registro fotográfico de @sec-registro-fotografico-terrestre y el respaldo diario de @sec-respaldo-diario-terreno.
+La nomenclatura se mantiene consistente con @sec-registro-fotografico-terrestre y @sec-respaldo-diario-terreno.

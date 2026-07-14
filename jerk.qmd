@@ -3,14 +3,14 @@ title: "Preevaluación de Cuencas"
 subtitle: "Priorización para trabajo de terreno mediante análisis de jerk y zonas estratégicas"
 ---
 
-Este capítulo actualiza la selección de cuencas candidatas para trabajo de terreno mediante el análisis de **jerk** de la Matriz de Resiliencia Climática Territorial. El objetivo es detectar cambios abruptos en la trayectoria ecosistémica y concentrar la priorización en el entorno operacional de Punta Arenas.
+Este capítulo presenta una preevaluación analítica de cuencas candidatas mediante el análisis de **jerk** de la Matriz de Resiliencia Climática Territorial. Su objetivo es detectar cambios abruptos en la trayectoria ecosistémica y formular preguntas de validación para el entorno operacional de Punta Arenas.
 
 La versión actual incorpora una mejora importante: además de seleccionar cuencas para validación general, agrega zonas de búsqueda asociadas a **puertos y terminales estratégicos para hidrógeno verde**. Esta capa permite observar cuencas próximas a infraestructura relevante para la transformación energética regional, donde eventuales nuevas intervenciones podrían interactuar con condiciones ecosistémicas ya inestables.
 
 ::: {.callout-note}
 ## Alcance de la selección
 
-La lista de cuencas prioritarias es una **preselección técnica**. No equivale a una ruta final de terreno ni a una evaluación de impacto ambiental. Antes de definir una campaña deben revisarse accesos reales, permisos, seguridad, clima, propiedad, restricciones operativas y conocimiento local.
+La lista de cuencas prioritarias es una **preselección técnica**. No equivale a una ruta final de terreno ni a una evaluación de impacto ambiental. En este libro, la cartera operativa de la campaña se presenta por separado en @sec-tabla-cuencas-seleccionadas; por ello, el ranking de jerk debe leerse como una capa de análisis y no como el listado de sitios efectivamente levantados.
 :::
 
 ## Pregunta de trabajo {#sec-pregunta-jerk-terreno}
@@ -128,6 +128,8 @@ Antes de priorizar cuencas se revisó la disponibilidad anual de jerk. La tabla 
 
 La baja cobertura relativa obliga a usar percentiles con cautela. La ausencia de jerk válido en una cuenca no implica estabilidad ecosistémica; puede reflejar falta de datos suficientes, calidad de observación, restricciones de cálculo o problemas de disponibilidad en los insumos anuales.
 
+![Disponibilidad de jerk por año entre 2020 y 2025.](images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_12_1.png){#fig-disponibilidad-jerk fig-align="center" width="90%"}
+
 La distribución completa de clases en el panel es:
 
 | Clase de jerk | Eventos |
@@ -139,6 +141,8 @@ La distribución completa de clases en el panel es:
 | Intensificación fuerte | 10.843 |
 
 : Distribución de clases de jerk en el panel MRCT. {#tbl-clases-jerk}
+
+![Distribución anual de magnitud de jerk para percentiles iguales o superiores a 50%.](images/trabajo_terreno/MRCT_Cuencas_Prioritarias_Jerk_18_0.png){#fig-distribucion-anual-jerk fig-align="center" width="90%"}
 
 ## Eventos extremos de jerk {#sec-eventos-jerk}
 
@@ -294,16 +298,9 @@ Para cada terminal se construyó un buffer de **50 km**. Dentro de ese radio se 
 
 ## Uso en planificación de terreno {#sec-uso-terreno-jerk}
 
-La selección por jerk debe alimentar una reunión técnica y territorial antes de definir rutas. En esa revisión se recomienda trabajar con cuatro listas:
+El jerk aporta una pregunta territorial, no una ruta fija. Para cada cuenca que se considere, el análisis permite revisar el tipo de evento, su año crítico, el valor de `RES` y el contexto espacial. Esa lectura se contrasta con acceso, seguridad, clima y representatividad antes de incorporarla a una cartera de observación.
 
-- **lista prioritaria**, con las diez cuencas del ranking del buffer de Punta Arenas;
-- **lista logística**, con cuencas cercanas o visitables dentro del mismo recorrido;
-- **lista estratégica H2**, con cuencas próximas a Muelle Laredo, Cabo Negro y San Gregorio;
-- **lista de reemplazo**, con cuencas alternativas por si falla el acceso, el clima o el permiso.
-
-La reunión debe revisar caminos, huellas, portones, predios, restricciones de propiedad, áreas protegidas, infraestructura, posibilidad de vuelo de dron, puntos seguros de medición, pertinencia territorial y antecedentes locales de incendios, inundaciones, sequías, obras, ganadería, extracción, cortes de camino o nieve persistente.
-
-El producto esperado no es reemplazar el ranking, sino convertirlo en un plan de campaña realista: qué cuencas se visitan, cuáles quedan como respaldo, qué hipótesis se validan y qué observaciones se necesitan en cada sitio.
+La campaña documentada en este libro utilizó su propia cartera de 17 cuencas (@tbl-cuencas-seleccionadas-detalle). Mantener ambas listas separadas hace visible la diferencia entre un ranking exploratorio y los sitios que finalmente ofrecieron condiciones para un levantamiento comparable.
 
 ## Fichas de terreno derivadas {#sec-fichas-jerk}
 
@@ -340,6 +337,4 @@ Estas limitaciones no invalidan el análisis. Definen su uso correcto: una herra
 
 ## Cierre operativo {#sec-cierre-jerk}
 
-La selección actualizada convierte el panel MRCT en una agenda preliminar de validación territorial. El procesamiento identificó eventos abruptos, construyó una base consultable, priorizó diez cuencas del entorno operacional de Punta Arenas y agregó una lectura estratégica para terminales vinculados al hidrógeno verde.
-
-El siguiente paso no es salir directamente a esas diez cuencas ni asumir impacto por proximidad a infraestructura. El paso correcto es someter la lista a revisión aplicada: accesibilidad real, conversación con actores locales, evaluación de rutas, permisos, clima, seguridad, pertinencia territorial y contraste con antecedentes de proyectos energéticos. Con esa revisión, el ranking puede transformarse en un plan de terreno con sitios principales, sitios alternativos y preguntas de validación claras.
+El análisis de jerk convierte la serie MRCT en una herramienta de búsqueda: identifica rupturas temporales, mantiene una base consultable y añade contexto territorial para terminales estratégicos. Su aporte al libro es explicar dónde surgen preguntas de validación; los resultados de las visitas y su contraste con `RES` se reportan en @sec-resultados-por-cuenca-terreno.

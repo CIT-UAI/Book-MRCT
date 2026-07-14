@@ -1,86 +1,73 @@
 ---
 title: "Integración y Validación"
-subtitle: "Comparación entre señal analítica y evidencia de terreno"
+subtitle: "Cierre metodológico entre señal analítica y evidencia de terreno"
 ---
 
-Este capítulo define cómo integrar la evidencia de terreno con la MRCT. Su función es cerrar el ciclo entre priorización, observación y aprendizaje metodológico: la selección nace en @sec-diez-cuencas-jerk y @sec-terminales-h2-jerk, la campaña se organiza en @sec-decision-cuencas-finales, el registro se levanta con @sec-ficha-tipo-cuenca y los resultados se consolidan en @sec-resultados-por-cuenca-terreno.
+Este capítulo cierra el ciclo de validación entre la MRCT y la evidencia levantada en Magallanes 2026. La selección de cuencas nace en @sec-diez-cuencas-jerk y @sec-terminales-h2-jerk; la cartera operativa se presenta en @sec-tabla-cuencas-seleccionadas; el registro se levanta con @sec-ficha-tipo-cuenca y @sec-ieo-terreno; y los resultados se consolidan en @sec-resultados-por-cuenca-terreno.
+
+La integración no busca decidir si el modelo "acierta" o "falla" en términos binarios. Busca entender qué parte de la señal MRCT se confirma en terreno, qué parte requiere una lectura de escala o temporalidad, y qué aprendizajes deben incorporarse para futuras campañas.
 
 ::: {.callout-note}
-## Objetivo
+## Resultado metodológico
 
-Clasificar la consistencia entre la señal MRCT y la observación de terreno, identificar limitaciones de interpretación y proponer ajustes para futuras campañas o consultas.
+La validación empírica muestra una correlación alta y significativa entre IEO observado y `RES` modelo ($r = 0{,}7869$, $R^2 = 0{,}6192$, $p = 0{,}0069$). La MRCT queda validada como herramienta de priorización y lectura territorial, manteniendo explícitos sus límites: escala de cuenca, síntesis anual, dependencia de insumos satelitales y necesidad de interpretación experta.
 :::
 
-## Tabla de validación {#sec-tabla-validacion-mrct-terreno}
+## Síntesis de validación {#sec-tabla-validacion-mrct-terreno}
 
-La evidencia de terreno debe integrarse como una tabla por cuenca visitada. La tabla agrega la planilla de @sec-variables-obligatorias-fichas y no reemplaza el archivo original de terreno.
+La comparación detallada por `RID`, con IEO y `RES`, se presenta una sola vez en @tbl-ieo-res-terreno. Aquí se conserva la lectura de cierre: seis de las diez cuencas comparables fueron consistentes y cuatro parcialmente consistentes. No se clasificó ningún caso como no consistente, porque los desacoples mantuvieron la dirección general de presión, aunque con distinta intensidad entre el punto observado y la señal anual de cuenca.
 
-| Variable | Descripción |
-|---|---|
-| `RID` | Identificador de cuenca. |
-| `visit_date` | Fecha de visita. |
-| `field_status` | Visitada, no visitada, reemplazada o acceso parcial. |
-| `drone_status` | Vuelo completo, parcial, suspendido o no aplica. |
-| `photo_count` | Número de fotografías útiles. |
-| `wind_kmh` | Viento registrado en la ficha. |
-| `cloud_pct` | Nubosidad registrada en la ficha. |
-| `temp_amb_c` | Temperatura ambiente registrada como `Temp_AmbC`. |
-| `ieo_mean` | Promedio de IEO de los puntos de muestreo. |
-| `water_snow_notes` | Evidencia de agua visible, nieve o hielo descrita en observaciones breves. |
-| `visible_disturbance` | Perturbación visible registrada en observaciones y fotografías. |
-| `res_model` | `RES` modelo precargado en la ficha. |
-| `jerk_model` | Jerk modelo precargado en la ficha. |
-| `trajectory_type` | Tipo de trayectoria precargada en la ficha. |
-| `mrct_consistency` | Consistente, parcialmente consistente, no consistente o no evaluable. |
-| `field_notes` | Síntesis cualitativa. |
+| Resultado | Casos | Lectura |
+|---|---:|---|
+| Consistente | 6 | La condición observada es compatible con la señal MRCT. |
+| Parcialmente consistente | 4 | La dirección coincide, pero la intensidad exige revisar escala, estacionalidad o representatividad. |
+| No consistente | 0 | No se observó un desacople que invirtiera la lectura general. |
 
-: Variables sugeridas para integrar terreno y MRCT. {#tbl-validacion-mrct-terreno}
+: Síntesis de consistencia entre MRCT y terreno. {#tbl-validacion-integrada-mrct-terreno}
 
 ## Criterios de consistencia {#sec-criterios-consistencia-mrct}
 
-La comparación debe separar cuatro resultados:
+La comparación final usa cuatro clases. Estas clases deben mantenerse en futuras campañas para no confundir limitaciones de observación con errores del modelo.
 
 | Resultado | Interpretación | Acción recomendada |
 |---|---|---|
-| Consistente | La observación muestra condiciones compatibles con la señal MRCT. | Documentar evidencia y mantener criterio de priorización. |
-| Parcialmente consistente | Se observan algunas señales, pero existen factores locales o limitaciones de observación. | Revisar series, imágenes y contexto territorial. |
-| No consistente | La señal MRCT no se refleja en la observación disponible. | Auditar insumos, fechas, nubes, nieve, clasificación o escala espacial. |
-| No evaluable | No hubo observación suficiente por acceso, clima, vuelo suspendido o baja visibilidad. | Reprogramar, usar sitio alternativo o marcar limitación. |
+| Consistente | La observación muestra condiciones compatibles con la señal MRCT. | Documentar evidencia, mantener criterio de priorización y usar como caso de referencia. |
+| Parcialmente consistente | Se observan algunas señales compatibles, pero existen diferencias de escala, intensidad o representatividad. | Revisar serie temporal, imagen anual, punto de acceso, heterogeneidad interna y condiciones de visita. |
+| No consistente | La señal MRCT no se refleja en la observación disponible. | Auditar insumos, fechas, nubes, nieve, clasificación, umbrales y geometría de cuenca. |
+| No evaluable | No hubo observación suficiente por acceso, clima, vuelo suspendido o baja visibilidad. | Reprogramar, usar sitio alternativo o marcar limitación explícita. |
 
 : Criterios para clasificar consistencia entre MRCT y terreno. {#tbl-criterios-consistencia-mrct}
 
+En esta campaña no se recomienda clasificar ningún caso comparable como "no consistente" en sentido fuerte. Los desacoples observados son mejor interpretados como consistencias parciales, porque conservan la dirección general de presión, pero con distinta intensidad entre observación puntual e integración satelital anual.
+
 ## Lectura de discrepancias {#sec-discrepancias-mrct-terreno}
 
-Una discrepancia no debe interpretarse automáticamente como error. Debe revisarse contra la ficha original (@sec-ficha-tipo-cuenca), los resultados por cuenca (@sec-resultados-por-cuenca-terreno) y los antecedentes del análisis de jerk (@sec-criterio-jerk). Puede deberse a:
+Las discrepancias encontradas se agrupan en tres tipos.
 
-- diferencia entre fecha de imagen satelital y fecha de visita;
-- heterogeneidad interna de la cuenca;
-- punto de observación poco representativo;
-- nieve, sombra, nubosidad o mezcla de coberturas;
-- evento temporal ya superado;
-- señal MRCT asociada a una variable no visible directamente;
-- limitaciones del acceso o del registro fotográfico.
+El primer tipo corresponde a diferencias de intensidad. Algunas cuencas con `RES` cercano a cero presentaron IEO bajo o medio-bajo, no necesariamente una imagen de degradación total. Esto es esperable porque `RES` integra distancia al dominio, trayectoria, sensibilidad y contexto espacial; no mide sólo cobertura visible al momento de la visita.
+
+El segundo tipo corresponde a diferencias temporales. La visita de junio captura una condición invernal específica. La MRCT trabaja sobre síntesis anuales y líneas de base históricas. Si una cuenca tuvo un evento de jerk en años previos, el terreno puede mostrar la consecuencia residual, una recuperación parcial o una condición temporalmente distinta.
+
+El tercer tipo corresponde a diferencias espaciales. El IEO se levanta desde puntos accesibles y seguros; la MRCT resume el polígono completo de cuenca. En unidades heterogéneas, la observación de borde puede no capturar el gradiente interno completo.
 
 ## Retroalimentación metodológica {#sec-retroalimentacion-metodologica}
 
-La integración debe producir aprendizajes para mejorar:
+La campaña confirma cinco ajustes para futuras validaciones.
 
-- criterios de selección por jerk;
-- pesos del puntaje compuesto;
-- umbrales de percentil;
-- filtros de accesibilidad;
-- diseño de fichas;
-- variables ambientales medidas;
-- selección de cuencas de control;
-- visualización futura en aplicaciones o tableros.
+Primero, mantener el protocolo de observación ciega al modelo. La correlación obtenida es más robusta porque el observador no ajustó su juicio para coincidir con `RES`.
 
-## Productos finales {#sec-productos-integracion-validacion}
+Segundo, incorporar explícitamente cuencas de control positivo y no sólo cuencas críticas. `RID` 1808 fue clave para demostrar que la MRCT discrimina tanto condiciones favorables como condiciones presionadas.
 
-El cierre de validación debe entregar:
+Tercero, ampliar la muestra en una segunda campaña. La validación inicial es sólida, pero 10 cuencas comparables no agotan la variabilidad regional de Magallanes.
 
-- tabla integrada MRCT-terreno;
-- mapa de cuencas visitadas y estado de validación;
-- síntesis de consistencia;
-- casos representativos;
-- recomendaciones para nuevas campañas;
-- limitaciones y decisiones metodológicas documentadas.
+Cuarto, registrar representatividad del punto de observación como variable obligatoria. En cada ficha debe quedar claro si el punto visitado representa la cuenca, un borde accesible, un acceso vial o una subunidad particular.
+
+Quinto, separar validación biofísica y validación urbana. Los puntos urbanos o periurbanos son útiles para el MTBR y la lectura de interfaz urbano-rural, pero no deben mezclarse estadísticamente con el modelo de cuencas biofísicas cuando `RES` no aplica.
+
+## Cierre metodológico {#sec-cierre-metodologico-validacion}
+
+El aprendizaje principal es que la MRCT funciona mejor como sistema de priorización y conversación técnica que como sentencia aislada. El terreno confirma que la señal `RES` tiene correspondencia empírica con condiciones observables de vegetación, humedad, perturbación y fragmentación. Al mismo tiempo, muestra que la interpretación responsable exige mirar la trayectoria, la escala de cuenca y las condiciones de levantamiento.
+
+Las coherencias fortalecen el uso de la MRCT para orientar monitoreo, gestión y planificación. Las inconsistencias parciales no debilitan el modelo; lo vuelven más útil, porque indican dónde revisar con mayor detalle, dónde la señal satelital está capturando procesos no evidentes a simple vista y dónde el diseño de campaña debe mejorar.
+
+Con esta integración, el libro cierra metodológicamente en una posición equilibrada: la MRCT queda empíricamente respaldada, pero no se presenta como sustituto del conocimiento territorial. Su valor está en ordenar la evidencia, priorizar preguntas, hacer trazable la comparación entre gabinete y terreno, y permitir que nuevas campañas acumulen validación sobre una misma arquitectura reproducible.

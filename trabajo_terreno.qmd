@@ -3,136 +3,82 @@ title: "Trabajo en Terreno"
 subtitle: "Validación territorial de cuencas prioritarias en Magallanes 2026"
 ---
 
-Esta sección organiza el paso desde la lectura analítica de la MRCT hacia una campaña de observación y validación territorial en cuencas de la Región de Magallanes cercanas al eje operativo de Punta Arenas. Su función es conectar las señales detectadas en gabinete con decisiones operativas: qué cuencas revisar, cómo planificar la campaña, qué registrar en terreno y cómo devolver esa evidencia al sistema MRCT.
+Esta sección documenta la validación territorial de la **Matriz de Resiliencia Climática Territorial (MRCT)** en Magallanes. Conecta la selección analítica de cuencas con el levantamiento en sitio y con la comparación final entre la señal satelital y el **Índice de Estado Observado (IEO)**.
 
-El trabajo de terreno no busca confirmar mecánicamente los resultados del modelo. Su aporte es contrastar la señal satelital con evidencia directa: registros fotográficos, vuelos de dron, mediciones ambientales, observación de cobertura, presencia de agua o nieve, humedad superficial, accesibilidad, perturbaciones visibles y condiciones locales que no siempre quedan representadas en los indicadores remotos.
+El terreno no se utiliza para confirmar mecánicamente el modelo. Aporta evidencia situada —cobertura, humedad, nieve, accesibilidad, perturbaciones y registros fotográficos o aéreos— que permite interpretar coincidencias y diferencias entre la escala de la cuenca y la observación directa.
 
 ::: {.callout-note}
-## Rol de esta sección
+## Cómo leer esta sección
 
-El trabajo en terreno se plantea como un ciclo completo: selección final de cuencas, planificación de campaña, levantamiento estandarizado, fichas por sitio, resultados de terreno e integración posterior con la MRCT.
+La lectura sigue un ciclo cerrado: selección de cuencas, organización operativa, levantamiento estandarizado, resultados e integración metodológica. Cada capítulo cumple una función distinta para evitar repetir la misma información.
 :::
 
-## Planificación general de campaña {#sec-planificacion-general-terreno}
+## Alcance de la campaña {#sec-planificacion-general-terreno}
 
-La campaña Magallanes 2026 corresponde a la validación territorial de la **Matriz de Resiliencia Climática Territorial (MRCT)** en cuencas seleccionadas por su señal crítica, su relación con cambios dinámicos recientes y su factibilidad preliminar de acceso desde Punta Arenas.
-
-El documento matriz de campaña se estructura sobre tres insumos:
-
-- la priorización técnica presentada en @sec-cruce-territorial-jerk y @sec-terminales-h2-jerk;
-- la capa de cuencas seleccionadas disponible en el repositorio oficial [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv);
-- la capa de puntos de acceso disponible en el repositorio oficial [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv).
+La campaña se realizó entre el 16 y el 18 de junio de 2026, dentro de una ventana operativa comprendida entre el 15 y el 19 de junio. El equipo base estuvo integrado por John Treimun, Paula Altamirano y Denis Berroeta. La selección técnica se apoyó en el análisis de jerk (@sec-cruce-territorial-jerk y @sec-terminales-h2-jerk), las capas de cuencas y los puntos de acceso disponibles en [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv).
 
 ## Objetivo de la campaña {#sec-objetivo-campana-terreno}
 
-Validar territorialmente las cuencas prioritarias identificadas por el modelo MRCT, contrastando señal satelital con evidencia directa: registros fotográficos, vuelos de dron, mediciones ambientales y observación de cobertura, agua, nieve, humedad superficial, perturbación y fragmentación.
+El objetivo fue contrastar la señal MRCT con evidencia directa de vegetación, humedad, perturbación, fragmentación y condiciones de acceso. La evidencia permite responder cuatro preguntas:
 
-La evidencia levantada debe permitir responder al menos cuatro preguntas:
+- ¿la señal MRCT es compatible con la condición observada?
+- ¿qué procesos locales ayudan a explicar esa lectura?
+- ¿qué tan representativo fue el punto observado respecto de la cuenca?
+- ¿qué límites de escala o estacionalidad deben considerarse al interpretar el resultado?
 
-- si la señal MRCT es coherente con el estado observado de la cuenca;
-- qué procesos locales explican coincidencias o diferencias entre modelo y terreno;
-- qué tan representativo es el punto visitado respecto de la cuenca completa;
-- qué ajustes metodológicos o interpretativos deben incorporarse en la validación posterior.
+## Hitos y cobertura {#sec-fechas-clave-terreno}
 
-## Fechas clave {#sec-fechas-clave-terreno}
+| Hito | Fecha o resultado |
+|---|---|
+| Selección de la cartera operativa | 9 de junio de 2026 |
+| Jornadas de observación | 16 al 18 de junio de 2026 |
+| Cuencas preseleccionadas | 17 |
+| Estaciones levantadas | 13 |
+| Cuencas comparables con IEO y `RES` | 10 |
 
-| Hito | Fecha | Estado |
-|---|---|---|
-| Selección final de cuencas | 2026-06-09 | Confirmado |
-| Salida vuelo Punta Arenas | 2026-06-15 | Confirmado |
-| Inicio campaña terreno | 2026-06-16 | Pendiente |
-| Término campaña terreno | 2026-06-18 | Pendiente |
-| Retorno | 2026-06-18 tarde | Confirmado |
-| Entrega informe preliminar | pendiente de definir | Pendiente |
+: Hitos y cobertura de la campaña Magallanes 2026. {#tbl-fechas-clave-terreno}
 
-: Hitos operativos de la campaña Magallanes 2026. {#tbl-fechas-clave-terreno}
+La cartera completa, los puntos de acceso y las fichas por `RID` se presentan en @sec-tabla-cuencas-seleccionadas. La cobertura efectiva y las cuencas comparables se detallan en @sec-resumen-campana-terreno.
 
-## Cuencas objetivo y puntos de acceso {#sec-cuencas-objetivo-terreno}
+## Equipo y base de operaciones {#sec-equipo-campo-terreno}
 
-La selección operativa contiene **17 cuencas** con punto de acceso georreferenciado. La columna "punto de acceso" proviene de la capa de accesos, se presenta como latitud, longitud y debe validarse en navegación offline antes de cada salida.
-
-| RID | Contexto | Evento | Estado RES | RES | PT | Punto de acceso |
-|---:|---|---|---|---:|---:|---|
-| 1808 | Muelle Laredo | Intensificación | Alta_Resiliencia | 1.000 | 0.0 | -53.15925, -71.06570 |
-| 5247 | Terminal Marítimo San Gregorio | Reversión | Resiliencia_Media | 0.472 | 1.1 | -52.65109, -70.42263 |
-| 5258 | Terminal Marítimo San Gregorio | Reversión | Resiliencia_Media | 0.588 | 0.7 | -52.66603, -70.68678 |
-| 1885 | - | Inestable | Colapso_Potencial | 0.006 | 158.1 | -52.79902, -71.04013 |
-| 1886 | - | Transicion_Acelerada | Colapso_Potencial | 0.020 | 48.3 | -52.80270, -70.97234 |
-| 2205 | - | Transicion_Acelerada | Colapso_Potencial | 0.002 | 465.2 | -52.77871, -71.00823 |
-| 3289 | - | Transicion_Acelerada | Resiliencia_Media | 0.495 | 1.0 | -52.61627, -70.94212 |
-| 4982 | - | Transicion_Acelerada | Colapso_Potencial | 0.005 | 217.3 | -52.59760, -70.64358 |
-| 4996 | - | Transicion_Acelerada | Colapso_Potencial | 0.005 | 183.0 | -52.61149, -70.55698 |
-| 5048 | - | Inestable | Colapso_Potencial | 0.026 | 37.5 | -52.49928, -69.78303 |
-| 5209 | - | Transicion_Acelerada | Colapso_Potencial | 0.012 | 81.0 | -52.66689, -70.64540 |
-| 5257 | - | Transicion_Acelerada | Colapso_Potencial | 0.009 | 106.4 | -52.69572, -70.87232 |
-| 5263 | - | Transicion_Acelerada | Resiliencia_Media | 0.559 | 0.8 | -52.59156, -70.17194 |
-| 5294 | - | Inestable | Colapso_Potencial | 0.015 | 66.3 | -52.49686, -69.88991 |
-| 5623 | - | Recuperacion | Resiliencia_Media | 0.496 | 1.0 | -52.47845, -69.83296 |
-| 5624 | - | Transicion_Acelerada | Colapso_Potencial | 0.034 | 28.8 | -52.49048, -69.88102 |
-| 5626 | - | Transicion_Acelerada | Resiliencia_Media | 0.408 | 1.4 | -52.48203, -69.79322 |
-
-: Cuencas seleccionadas y puntos de acceso para la campaña Magallanes 2026. {#tbl-cuencas-objetivo-terreno}
-
-La lista debe leerse como una cartera operativa. No todas las cuencas necesariamente serán visitadas con igual profundidad: las condiciones meteorológicas, los permisos, el tiempo de traslado, la seguridad del vuelo de dron y el estado real de caminos pueden definir subconjuntos principales y reemplazos diarios.
-
-## Equipo de campo {#sec-equipo-campo-terreno}
-
-| Nombre | Rol | Contacto |
-|---|---|---|
-| John Treimun | Coordinación técnica y validación MRCT | <john.treimun.r@uai.cl> |
-| Paula Altamirano | Apoyo de campaña y registro territorial | <paula.altamirano@uai.cl>|
-| Denis Berroeta | Piloto dron, navegación y respaldo de datos | <denis.berroeta@uai.cl> |
+| Integrante | Función en campaña |
+|---|---|
+| John Treimun | Coordinación técnica y validación MRCT |
+| Paula Altamirano | Registro territorial y apoyo de campaña |
+| Denis Berroeta | Operación de dron, navegación y respaldo de datos |
 
 : Equipo base de la campaña de terreno. {#tbl-equipo-campo-terreno}
 
-## Base de operaciones {#sec-base-operaciones-terreno}
+La base de operaciones fue Almasu, en Punta Arenas. Desde allí se organizaron la navegación offline, la carga de equipos y el respaldo diario. La distancia a la base es sólo una referencia logística: el acceso real dependió de clima, viento, caminos y condiciones de seguridad.
 
-La base operativa inicial será **Almasu, Punta Arenas**.
+## Índice de capítulos operativos {#sec-indice-hojas-terreno}
 
-| Atributo | Detalle |
-|---|---|
-| Dirección | Armando Sanhueza 965, Punta Arenas |
-| Coordenadas | -53.160425, -70.910919 |
-| Referencia | [Abrir ubicación en Google Maps](https://maps.app.goo.gl/9UWVBjeqkdLyqAwJ8) |
-
-: Base de operaciones para la campaña Magallanes 2026. {#tbl-base-operaciones-terreno}
-
-Desde esta base se preparan los dispositivos offline, se cargan baterías, se consolidan respaldos diarios y se revisa el plan de salida de cada jornada. La cercanía de algunas cuencas no elimina la necesidad de operar con autonomía: fuera del núcleo urbano pueden existir baja conectividad, viento fuerte, caminos secundarios, portones, barro, nieve o restricciones de ingreso.
-
-## Índice de hojas y capítulos operativos {#sec-indice-hojas-terreno}
-
-La campaña se documenta en un conjunto de capítulos y hojas operativas. En el libro, esas hojas se distribuyen de la siguiente manera:
-
-| Hoja operativa | Capítulo del libro | Descripción |
+| Función | Capítulo | Qué aporta |
 |---|---|---|
-| Preevaluación de cuencas | [Preevaluación de Cuencas](jerk.qmd) | Criterios, ranking, señal dinámica y relación con terminales estratégicos. |
-| Cuencas seleccionadas | [Cuencas Seleccionadas](cuencas_seleccionadas.qmd) | Mapa web, tabla operativa, fichas rápidas y orden preliminar de visita. |
-| Logística y traslados | [Logística y Traslados](logistica.qmd) | Vuelos, transporte terrestre, alojamiento, combustible, comunicaciones, presupuesto y pendientes operativos. |
-| Condiciones de terreno | [Condiciones de Terreno y Climáticas](condiciones_terreno.qmd) | Pronóstico, accesos, alertas, criterios de postergación y registro de condiciones observadas. |
-| Equipamiento | [Equipamiento](equipamiento.qmd) | Checklist de vestuario, navegación, dron, energía, sensores y respaldo. |
-| Protocolo de levantamiento | [Protocolo de Levantamiento](protocolo_levantamiento.qmd) | Observación estandarizada, IEO, fotografías, dron y mediciones ambientales. |
-| Fichas de registro | [Fichas de Cuencas Seleccionadas](fichas_cuencas.qmd) | Ficha por cuenca, punto de acceso, métricas MRCT y evidencia capturada. |
-| Vuelos de dron | [Planificación Vuelos Drone](vuelo_drone.qmd) | Equipo DJI Mini 3, normativa a verificar, plan por cuenca, checklist y registro audiovisual. |
-| Resultados de validación | [Resultados del Levantamiento](resultados_terreno.qmd) | Hallazgos, bitácora, evidencias y síntesis por cuenca visitada. |
-| Seguridad y contingencia | [Planificación de Campaña](planificacion_terreno.qmd) | Protocolos de seguridad, comunicación, suspensión y rutas alternativas. |
+| Selección | [Preevaluación de Cuencas](jerk.qmd) | Señal dinámica, ranking y contexto territorial. |
+| Cartera y accesos | [Cuencas Seleccionadas](cuencas_seleccionadas.qmd) | Mapa, priorización y fichas rápidas por `RID`. |
+| Organización de campaña | [Logística y Traslados](logistica.qmd) | Base operativa, criterios de ruta, comunicaciones y respaldo. |
+| Condiciones de operación | [Condiciones de Terreno y Climáticas](condiciones_terreno.qmd) | Contexto invernal, decisiones de seguridad y condiciones registradas. |
+| Recursos | [Equipamiento](equipamiento.qmd) | Conjunto mínimo para observación, navegación y respaldo. |
+| Método | [Protocolo de Levantamiento](protocolo_levantamiento.qmd) | IEO, fotografías, mediciones y trazabilidad. |
+| Ficha de registro | [Fichas de Cuencas Seleccionadas](fichas_cuencas.qmd) | Campos que vinculan cada observación con su `RID`. |
+| Evidencia aérea | [Operación de Dron](vuelo_drone.qmd) | Criterios de seguridad, registro y nomenclatura. |
+| Resultados | [Resultados del Levantamiento](resultados_terreno.qmd) | Base IEO-`RES`, hallazgos y límites de campaña. |
+| Integración | [Integración y Validación](integracion_validacion.qmd) | Lectura final de consistencia y aprendizajes metodológicos. |
 
-: Relación entre hojas operativas de campaña y capítulos del libro. {#tbl-indice-hojas-terreno}
+: Organización de la sección de trabajo en terreno. {#tbl-indice-hojas-terreno}
 
-## Flujo operativo {#sec-flujo-trabajo-terreno}
+## Flujo de trabajo {#sec-flujo-trabajo-terreno}
 
-El flujo completo tiene tres momentos. Primero, el **pre-terreno**, donde se seleccionan cuencas candidatas, se revisa su factibilidad, se precargan puntos de acceso y se prepara la campaña. Segundo, el **terreno**, donde se levantan observaciones, fotografías, vuelos y mediciones bajo un protocolo común. Tercero, el **post-terreno**, donde se ordenan los datos, se evalúa su calidad y se integran con la MRCT.
-
-Esta organización permite que la sección pueda completarse progresivamente. Algunos capítulos quedan establecidos antes de salir a terreno; otros deberán actualizarse cuando la campaña haya sido ejecutada, cuando se confirmen cuencas efectivamente visitadas o cuando se procesen fotografías, vuelos y planillas IEO.
+El flujo tiene tres momentos: **pre-terreno**, para priorizar y preparar rutas; **terreno**, para aplicar un protocolo común de observación; y **post-terreno**, para respaldar, revisar e integrar la evidencia. La trazabilidad conecta cada registro con un `RID`, fecha, coordenada, evidencia visual y pregunta de validación.
 
 ## Criterio de lectura {#sec-criterio-lectura-terreno}
 
-La validación territorial debe leerse como una conversación entre modelo y territorio. Una coincidencia entre MRCT y terreno fortalece la interpretación; una diferencia no invalida automáticamente el modelo, sino que abre una pregunta sobre escala, fecha, calidad de insumos, accesibilidad, heterogeneidad interna o procesos locales no capturados.
-
-Por eso la sección prioriza trazabilidad: cada observación debe poder conectarse con una cuenca, una fecha, una coordenada, una métrica MRCT y una pregunta de validación. Para esta campaña, esa trazabilidad empieza en los `RID` de @tbl-cuencas-objetivo-terreno y continúa con la nomenclatura de archivos, fichas y respaldos definidos en @sec-respaldo-diario-terreno.
+Una coincidencia entre MRCT y terreno fortalece la interpretación, pero una diferencia no invalida automáticamente el modelo. Puede reflejar fecha de observación, heterogeneidad interna, condiciones locales o una diferencia entre el punto accesible y la cuenca completa. Esta lectura se desarrolla en @sec-inconsistencias-terreno y @sec-discrepancias-mrct-terreno.
 
 ## Recursos {#sec-recursos-terreno}
 
 - Fichas cuencas MRCT: <https://cit-uai.github.io/Book-MRCT/fichas_cuencas.html>
-- Protocolo trabajo de terreno: <https://cit-uai.github.io/Book-MRCT/trabajo_terreno.html>
-- Cuencas seleccionadas: [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv)
-- Puntos de acceso: [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv)
+- Protocolo de trabajo de terreno: <https://cit-uai.github.io/Book-MRCT/trabajo_terreno.html>
+- Cartografía y puntos de acceso: [SharePoint CIT: Cartografía base](https://alumnosuaicl.sharepoint.com/:f:/s/CentrodeInteligenciaTerritorial/IgC1fX5j-2wZQKWU8KaCYSiCAQOVaaVIrGM2R0LPfPmS8X8?e=jsaxyv)
